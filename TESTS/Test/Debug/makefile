@@ -75,8 +75,8 @@ all: main-build
 main-build: Test.elf secondary-outputs
 
 # Tool invocations
-Test.elf Test.map: $(OBJS) $(USER_OBJS) C:\Users\Morroway\STM32CubeIDE\workspace_1.10.1\Test\STM32L4P5ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "Test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Morroway\STM32CubeIDE\workspace_1.10.1\Test\STM32L4P5ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Test.elf Test.map: $(OBJS) $(USER_OBJS) C:\Users\Morroway\Documents\.A\Projects\3D-PRINTER\TESTS\Test\STM32L4P5ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "Test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Morroway\Documents\.A\Projects\3D-PRINTER\TESTS\Test\STM32L4P5ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
