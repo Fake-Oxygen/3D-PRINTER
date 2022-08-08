@@ -1,40 +1,10 @@
-16:15:18 **** Incremental Build of configuration Debug for project Test ****
+14:57:07 **** Incremental Build of configuration Debug for project Test ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4P5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4P5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32l4xx.d" -MT"Core/Src/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32l4xx.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:8: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-  123 |        sprintf(msg, "%hu , %f , %f\r\n", raw, temp, resistance);
-      |        ^~~~~~~
-../Core/Src/main.c:123:8: warning: incompatible implicit declaration of built-in function 'sprintf'
-../Core/Src/main.c:26:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-   25 | #include <math.h>
-  +++ |+#include <stdio.h>
-   26 | /* USER CODE END Includes */
-../Core/Src/main.c:106:7: warning: unused variable 'pin' [-Wunused-variable]
-  106 |   int pin;
-      |       ^~~
-../Core/Src/main.c:123:28: warning: '%f' directive writing between 3 and 317 bytes into a region of size between 2 and 6 [-Wformat-overflow=]
-  123 |        sprintf(msg, "%hu , %f , %f\r\n", raw, temp, resistance);
-      |                            ^~
-../Core/Src/main.c:123:21: note: assuming directive output of 8 bytes
-  123 |        sprintf(msg, "%hu , %f , %f\r\n", raw, temp, resistance);
-      |                     ^~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:123:21: note: assuming directive output of 8 bytes
-../Core/Src/main.c:123:8: note: 'sprintf' output between 16 and 648 bytes into a destination of size 10
-  123 |        sprintf(msg, "%hu , %f , %f\r\n", raw, temp, resistance);
-      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-g++ -o "Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Morroway\Documents\.A\Projects\3D-PRINTER\TESTS\Test\STM32L4P5ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: Test.elf
- 
 arm-none-eabi-size   Test.elf 
-arm-none-eabi-objdump -h -S  Test.elf  > "Test.list"
    text	   data	    bss	    dec	    hex	filename
-  43448	    484	   3132	  47064	   b7d8	Test.elf
+  55124	    488	   9696	  65308	   ff1c	Test.elf
 Finished building: default.size.stdout
  
-Finished building: Test.list
- 
 
-16:15:21 Build Finished. 0 errors, 4 warnings. (took 2s.861ms)
+14:57:07 Build Finished. 0 errors, 0 warnings. (took 285ms)
 
