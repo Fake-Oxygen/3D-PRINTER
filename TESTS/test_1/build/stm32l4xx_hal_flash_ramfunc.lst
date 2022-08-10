@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 1
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c **** 
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****     *** GNU Compiler ***
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****     --------------------
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s 			page 2
 
 
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****     [..] RAM functions are defined using a specific toolchain attribute
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 1
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c **** 
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c **** /**
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****   * @brief   Enable the Power down in Run Mode
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s 			page 3
 
 
   88:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****   * @note    This function should be called and executed from SRAM memory
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 1
  105:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c **** __RAM_FUNC HAL_StatusTypeDef HAL_FLASHEx_DisableRunPowerDown(void)
  106:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c **** {
   68              		.loc 1 106 1 is_stmt 1 view -0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s 			page 4
 
 
   69              		.cfi_startproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 1
  124:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****   *            @arg OB_DBANK_128_BITS: Single-bank with 128-bits data
  125:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****   *            @arg OB_DBANK_64_BITS: Dual-bank with 64-bits data
  126:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****   *
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s 			page 5
 
 
  127:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****   * @retval HAL status
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 1
  146 006a 9342     		cmp	r3, r2
  147 006c 80F08880 		bcs	.L9
  143:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****     {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s 			page 6
 
 
  144:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****       /* Disable Flash prefetch */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 1
  186 00a8 1A68     		ldr	r2, [r3]
  187 00aa 22F48062 		bic	r2, r2, #1024
  188 00ae 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s 			page 7
 
 
  160:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 1
  226              		.loc 1 175 7 is_stmt 1 view .LVU60
  227              		.loc 1 175 44 is_stmt 0 view .LVU61
  228 00e2 03F07F02 		and	r2, r3, #127
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s 			page 8
 
 
  176:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****           ((reg & FLASH_WRP1BR_WRP1B_END) >> FLASH_WRP1BR_WRP1B_END_Pos))
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 1
  266 011c 1B6D     		ldr	r3, [r3, #80]
  267              	.LVL10:
  191:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****       if (((reg & FLASH_WRP2BR_WRP2B_STRT) >> FLASH_WRP2BR_WRP2B_STRT_Pos) <=
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s 			page 9
 
 
  268              		.loc 1 191 7 is_stmt 1 view .LVU74
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 1
  306              		.loc 1 206 7 is_stmt 1 view .LVU84
  207:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****       {
  208:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****         if (count == 0U)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s 			page 10
 
 
  307              		.loc 1 208 9 view .LVU85
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 1
  343              	.LVL15:
  344              		.loc 1 226 10 view .LVU100
  345 0188 7047     		bx	lr
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s 			page 11
 
 
  346              	.LVL16:
@@ -628,20 +628,20 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 1
  369              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
  370              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h"
  371              		.file 8 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_flash_ramfunc.c
-C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s:20     .RamFunc:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s:26     .RamFunc:0000000000000000 HAL_FLASHEx_EnableRunPowerDown
-C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s:54     .RamFunc:0000000000000018 $d
-C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s:60     .RamFunc:0000000000000024 $t
-C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s:66     .RamFunc:0000000000000024 HAL_FLASHEx_DisableRunPowerDown
-C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s:93     .RamFunc:000000000000003c $d
-C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s:99     .RamFunc:0000000000000048 $t
-C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s:105    .RamFunc:0000000000000048 HAL_FLASHEx_OB_DBankConfig
-C:\Users\Morroway\AppData\Local\Temp\cc8IsHqK.s:356    .RamFunc:0000000000000190 $d
+C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s:20     .RamFunc:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s:26     .RamFunc:0000000000000000 HAL_FLASHEx_EnableRunPowerDown
+C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s:54     .RamFunc:0000000000000018 $d
+C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s:60     .RamFunc:0000000000000024 $t
+C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s:66     .RamFunc:0000000000000024 HAL_FLASHEx_DisableRunPowerDown
+C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s:93     .RamFunc:000000000000003c $d
+C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s:99     .RamFunc:0000000000000048 $t
+C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s:105    .RamFunc:0000000000000048 HAL_FLASHEx_OB_DBankConfig
+C:\Users\Morroway\AppData\Local\Temp\ccB1lKNE.s:356    .RamFunc:0000000000000190 $d
 
 UNDEFINED SYMBOLS
 pFlash

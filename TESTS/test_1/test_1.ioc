@@ -1,9 +1,11 @@
 #MicroXplorer Configuration settings - do not modify
 ADC1.Channel-0\#ChannelRegularConversion=ADC_CHANNEL_1
-ADC1.IPParameters=Rank-0\#ChannelRegularConversion,master,Channel-0\#ChannelRegularConversion,SamplingTime-0\#ChannelRegularConversion,OffsetNumber-0\#ChannelRegularConversion,NbrOfConversionFlag
+ADC1.IPParameters=Rank-0\#ChannelRegularConversion,master,Channel-0\#ChannelRegularConversion,SamplingTime-0\#ChannelRegularConversion,OffsetNumber-0\#ChannelRegularConversion,NbrOfConversionFlag,OversamplingMode,Ratio
 ADC1.NbrOfConversionFlag=1
 ADC1.OffsetNumber-0\#ChannelRegularConversion=ADC_OFFSET_NONE
+ADC1.OversamplingMode=ENABLE
 ADC1.Rank-0\#ChannelRegularConversion=1
+ADC1.Ratio=ADC_OVERSAMPLING_RATIO_16
 ADC1.SamplingTime-0\#ChannelRegularConversion=ADC_SAMPLETIME_2CYCLES_5
 ADC1.master=1
 File.Version=6
@@ -185,7 +187,7 @@ ProjectManager.StackSize=0x400
 ProjectManager.TargetToolchain=Makefile
 ProjectManager.ToolChainLocation=
 ProjectManager.UnderRoot=false
-ProjectManager.functionlistsort=1-SystemClock_Config-RCC-false-HAL-false,2-MX_GPIO_Init-GPIO-false-HAL-true,3-MX_LPUART1_UART_Init-LPUART1-false-HAL-true,4-MX_USB_OTG_FS_PCD_Init-USB_OTG_FS-false-HAL-true
+ProjectManager.functionlistsort=1-SystemClock_Config-RCC-false-HAL-false,2-MX_GPIO_Init-GPIO-false-HAL-true,3-MX_LPUART1_UART_Init-LPUART1-false-HAL-true,4-MX_USB_OTG_FS_PCD_Init-USB_OTG_FS-false-HAL-true,5-MX_ADC1_Init-ADC1-false-HAL-true,6-MX_TIM3_Init-TIM3-false-HAL-true,7-MX_TIM4_Init-TIM4-false-HAL-true
 RCC.48MHZClocksFreq_Value=24000000
 RCC.ADC12outputFreq_Value=72000000
 RCC.ADC34outputFreq_Value=72000000
