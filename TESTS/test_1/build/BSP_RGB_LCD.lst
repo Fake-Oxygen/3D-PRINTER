@@ -1,0 +1,1462 @@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"BSP_RGB_LCD.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.LL_FillBuffer,"ax",%progbits
+  20              		.align	1
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  25              	LL_FillBuffer:
+  26              	.LVL0:
+  27              	.LFB337:
+  28              		.file 1 "Core/Src/BSP_RGB_LCD.c"
+   1:Core/Src/BSP_RGB_LCD.c **** /**
+   2:Core/Src/BSP_RGB_LCD.c ****   ******************************************************************************
+   3:Core/Src/BSP_RGB_LCD.c ****   * @file    stm32746g_discovery_lcd.c
+   4:Core/Src/BSP_RGB_LCD.c ****   * @author  MCD Application Team
+   5:Core/Src/BSP_RGB_LCD.c ****   * @version V1.0.0
+   6:Core/Src/BSP_RGB_LCD.c ****   * @date    25-June-2015
+   7:Core/Src/BSP_RGB_LCD.c ****   * @brief   This file includes the driver for Liquid Crystal Display (LCD) module
+   8:Core/Src/BSP_RGB_LCD.c ****   *          mounted on STM32746G-Discovery board.
+   9:Core/Src/BSP_RGB_LCD.c **** 	*
+  10:Core/Src/BSP_RGB_LCD.c ****   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  11:Core/Src/BSP_RGB_LCD.c ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  12:Core/Src/BSP_RGB_LCD.c ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  13:Core/Src/BSP_RGB_LCD.c ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  14:Core/Src/BSP_RGB_LCD.c ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  15:Core/Src/BSP_RGB_LCD.c ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  16:Core/Src/BSP_RGB_LCD.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  17:Core/Src/BSP_RGB_LCD.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  18:Core/Src/BSP_RGB_LCD.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  19:Core/Src/BSP_RGB_LCD.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  20:Core/Src/BSP_RGB_LCD.c ****   *
+  21:Core/Src/BSP_RGB_LCD.c ****   ******************************************************************************
+  22:Core/Src/BSP_RGB_LCD.c ****   */ 
+  23:Core/Src/BSP_RGB_LCD.c **** 
+  24:Core/Src/BSP_RGB_LCD.c **** /* Includes ------------------------------------------------------------------*/
+  25:Core/Src/BSP_RGB_LCD.c **** #include "BSP_RGB_LCD.h"
+  26:Core/Src/BSP_RGB_LCD.c **** 
+  27:Core/Src/BSP_RGB_LCD.c **** 
+  28:Core/Src/BSP_RGB_LCD.c **** //#include "dma2d.h"
+  29:Core/Src/BSP_RGB_LCD.c **** //#include "ltdc.h"
+  30:Core/Src/BSP_RGB_LCD.c **** /** @addtogroup BSP
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 2
+
+
+  31:Core/Src/BSP_RGB_LCD.c ****   * @{
+  32:Core/Src/BSP_RGB_LCD.c ****   */
+  33:Core/Src/BSP_RGB_LCD.c **** #define XSIZE_PHYS 1024
+  34:Core/Src/BSP_RGB_LCD.c **** #define YSIZE_PHYS 600
+  35:Core/Src/BSP_RGB_LCD.c **** 
+  36:Core/Src/BSP_RGB_LCD.c **** #define HBP  2
+  37:Core/Src/BSP_RGB_LCD.c **** #define VBP  2
+  38:Core/Src/BSP_RGB_LCD.c **** 
+  39:Core/Src/BSP_RGB_LCD.c **** #define HSW  10
+  40:Core/Src/BSP_RGB_LCD.c **** #define VSW  2
+  41:Core/Src/BSP_RGB_LCD.c **** 
+  42:Core/Src/BSP_RGB_LCD.c **** #define HFP  2
+  43:Core/Src/BSP_RGB_LCD.c **** #define VFP  2
+  44:Core/Src/BSP_RGB_LCD.c **** 
+  45:Core/Src/BSP_RGB_LCD.c **** /** @addtogroup STM32746G_DISCOVERY
+  46:Core/Src/BSP_RGB_LCD.c ****   * @{
+  47:Core/Src/BSP_RGB_LCD.c ****   */
+  48:Core/Src/BSP_RGB_LCD.c ****     
+  49:Core/Src/BSP_RGB_LCD.c **** /** @addtogroup STM32746G_DISCOVERY_LCD
+  50:Core/Src/BSP_RGB_LCD.c ****   * @{
+  51:Core/Src/BSP_RGB_LCD.c ****   */ 
+  52:Core/Src/BSP_RGB_LCD.c **** 
+  53:Core/Src/BSP_RGB_LCD.c **** /** @defgroup STM32746G_DISCOVERY_LCD_Private_TypesDefinitions STM32746G_DISCOVERY_LCD Private Type
+  54:Core/Src/BSP_RGB_LCD.c ****   * @{
+  55:Core/Src/BSP_RGB_LCD.c ****   */ 
+  56:Core/Src/BSP_RGB_LCD.c **** /**
+  57:Core/Src/BSP_RGB_LCD.c ****   * @}
+  58:Core/Src/BSP_RGB_LCD.c ****   */ 
+  59:Core/Src/BSP_RGB_LCD.c **** 
+  60:Core/Src/BSP_RGB_LCD.c **** /** @defgroup STM32746G_DISCOVERY_LCD_Private_Defines STM32746G_DISCOVERY LCD Private Defines
+  61:Core/Src/BSP_RGB_LCD.c ****   * @{
+  62:Core/Src/BSP_RGB_LCD.c ****   */
+  63:Core/Src/BSP_RGB_LCD.c **** #define POLY_X(Z)              ((int32_t)((Points + Z)->X))
+  64:Core/Src/BSP_RGB_LCD.c **** #define POLY_Y(Z)              ((int32_t)((Points + Z)->Y))      
+  65:Core/Src/BSP_RGB_LCD.c **** /**
+  66:Core/Src/BSP_RGB_LCD.c ****   * @}
+  67:Core/Src/BSP_RGB_LCD.c ****   */ 
+  68:Core/Src/BSP_RGB_LCD.c **** 
+  69:Core/Src/BSP_RGB_LCD.c **** /** @defgroup STM32746G_DISCOVERY_LCD_Private_Macros STM32746G_DISCOVERY_LCD Private Macros
+  70:Core/Src/BSP_RGB_LCD.c ****   * @{
+  71:Core/Src/BSP_RGB_LCD.c ****   */
+  72:Core/Src/BSP_RGB_LCD.c **** #define ABS(X)  ((X) > 0 ? (X) : -(X))      
+  73:Core/Src/BSP_RGB_LCD.c **** /**
+  74:Core/Src/BSP_RGB_LCD.c ****   * @}
+  75:Core/Src/BSP_RGB_LCD.c ****   */ 
+  76:Core/Src/BSP_RGB_LCD.c ****     
+  77:Core/Src/BSP_RGB_LCD.c **** /** @defgroup STM32746G_DISCOVERY_LCD_Private_Variables STM32746G_DISCOVERY_LCD Private Variables
+  78:Core/Src/BSP_RGB_LCD.c ****   * @{
+  79:Core/Src/BSP_RGB_LCD.c ****   */ 
+  80:Core/Src/BSP_RGB_LCD.c ****  #define hltdc hltdc  
+  81:Core/Src/BSP_RGB_LCD.c **** #define hDma2dHandler hdma2d
+  82:Core/Src/BSP_RGB_LCD.c **** static LTDC_HandleTypeDef  hltdc;
+  83:Core/Src/BSP_RGB_LCD.c **** static DMA2D_HandleTypeDef hDma2dHandler;
+  84:Core/Src/BSP_RGB_LCD.c **** 
+  85:Core/Src/BSP_RGB_LCD.c **** 
+  86:Core/Src/BSP_RGB_LCD.c **** /* Default LCD configuration with LCD Layer 1 */
+  87:Core/Src/BSP_RGB_LCD.c **** static uint32_t            ActiveLayer = 0;
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 3
+
+
+  88:Core/Src/BSP_RGB_LCD.c **** /**
+  89:Core/Src/BSP_RGB_LCD.c ****   * @}
+  90:Core/Src/BSP_RGB_LCD.c ****   */ 
+  91:Core/Src/BSP_RGB_LCD.c **** 
+  92:Core/Src/BSP_RGB_LCD.c **** /** @defgroup STM32746G_DISCOVERY_LCD_Private_FunctionPrototypes STM32746G_DISCOVERY_LCD Private Fu
+  93:Core/Src/BSP_RGB_LCD.c ****   * @{
+  94:Core/Src/BSP_RGB_LCD.c ****   */ 
+  95:Core/Src/BSP_RGB_LCD.c **** static void LL_FillBuffer(uint32_t LayerIndex, void *pDst, uint32_t xSize, uint32_t ySize, uint32_t
+  96:Core/Src/BSP_RGB_LCD.c **** /**
+  97:Core/Src/BSP_RGB_LCD.c ****   * @}
+  98:Core/Src/BSP_RGB_LCD.c ****   */ 
+  99:Core/Src/BSP_RGB_LCD.c **** 
+ 100:Core/Src/BSP_RGB_LCD.c **** /** @defgroup STM32746G_DISCOVERY_LCD_Exported_Functions STM32746G_DISCOVERY_LCD Exported Functions
+ 101:Core/Src/BSP_RGB_LCD.c ****   * @{
+ 102:Core/Src/BSP_RGB_LCD.c ****   */
+ 103:Core/Src/BSP_RGB_LCD.c **** 
+ 104:Core/Src/BSP_RGB_LCD.c **** /**
+ 105:Core/Src/BSP_RGB_LCD.c ****   * @brief  Initializes the LCD.
+ 106:Core/Src/BSP_RGB_LCD.c ****   * @retval LCD state
+ 107:Core/Src/BSP_RGB_LCD.c ****   */
+ 108:Core/Src/BSP_RGB_LCD.c **** uint8_t BSP_LCD_Init(void)
+ 109:Core/Src/BSP_RGB_LCD.c **** {  
+ 110:Core/Src/BSP_RGB_LCD.c ****   /* Initialize the SDRAM */
+ 111:Core/Src/BSP_RGB_LCD.c ****  // BSP_SDRAM_Init();
+ 112:Core/Src/BSP_RGB_LCD.c **** 	BSP_LCD_SelectLayer(1);
+ 113:Core/Src/BSP_RGB_LCD.c ****   /* Clear the LCD Foreground layer */
+ 114:Core/Src/BSP_RGB_LCD.c ****   BSP_LCD_SetLayerVisible(1, DISABLE);
+ 115:Core/Src/BSP_RGB_LCD.c ****   /* Set Foreground Layer */
+ 116:Core/Src/BSP_RGB_LCD.c ****   BSP_LCD_SelectLayer(0);
+ 117:Core/Src/BSP_RGB_LCD.c **** 
+ 118:Core/Src/BSP_RGB_LCD.c ****   return LCD_OK;
+ 119:Core/Src/BSP_RGB_LCD.c **** }
+ 120:Core/Src/BSP_RGB_LCD.c **** 
+ 121:Core/Src/BSP_RGB_LCD.c **** /**
+ 122:Core/Src/BSP_RGB_LCD.c ****   * @brief  Gets the LCD X size.
+ 123:Core/Src/BSP_RGB_LCD.c ****   * @retval Used LCD X size
+ 124:Core/Src/BSP_RGB_LCD.c ****   */
+ 125:Core/Src/BSP_RGB_LCD.c **** uint32_t BSP_LCD_GetXSize(void)
+ 126:Core/Src/BSP_RGB_LCD.c **** {
+ 127:Core/Src/BSP_RGB_LCD.c ****   return hltdc.LayerCfg[ActiveLayer].ImageWidth;
+ 128:Core/Src/BSP_RGB_LCD.c **** }
+ 129:Core/Src/BSP_RGB_LCD.c **** 
+ 130:Core/Src/BSP_RGB_LCD.c **** /**
+ 131:Core/Src/BSP_RGB_LCD.c ****   * @brief  Gets the LCD Y size.
+ 132:Core/Src/BSP_RGB_LCD.c ****   * @retval Used LCD Y size
+ 133:Core/Src/BSP_RGB_LCD.c ****   */
+ 134:Core/Src/BSP_RGB_LCD.c **** uint32_t BSP_LCD_GetYSize(void)
+ 135:Core/Src/BSP_RGB_LCD.c **** {
+ 136:Core/Src/BSP_RGB_LCD.c ****   return hltdc.LayerCfg[ActiveLayer].ImageHeight;
+ 137:Core/Src/BSP_RGB_LCD.c **** }
+ 138:Core/Src/BSP_RGB_LCD.c **** 
+ 139:Core/Src/BSP_RGB_LCD.c **** 
+ 140:Core/Src/BSP_RGB_LCD.c **** /**
+ 141:Core/Src/BSP_RGB_LCD.c ****   * @brief  Selects the LCD Layer.
+ 142:Core/Src/BSP_RGB_LCD.c ****   * @param  LayerIndex: Layer foreground or background
+ 143:Core/Src/BSP_RGB_LCD.c ****   * @retval None
+ 144:Core/Src/BSP_RGB_LCD.c ****   */
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 4
+
+
+ 145:Core/Src/BSP_RGB_LCD.c **** void BSP_LCD_SelectLayer(uint32_t LayerIndex)
+ 146:Core/Src/BSP_RGB_LCD.c **** {
+ 147:Core/Src/BSP_RGB_LCD.c ****   ActiveLayer = LayerIndex;
+ 148:Core/Src/BSP_RGB_LCD.c **** } 
+ 149:Core/Src/BSP_RGB_LCD.c **** 
+ 150:Core/Src/BSP_RGB_LCD.c **** /**
+ 151:Core/Src/BSP_RGB_LCD.c ****   * @brief  Sets an LCD Layer visible
+ 152:Core/Src/BSP_RGB_LCD.c ****   * @param  LayerIndex: Visible Layer
+ 153:Core/Src/BSP_RGB_LCD.c ****   * @param  State: New state of the specified layer
+ 154:Core/Src/BSP_RGB_LCD.c ****   *          This parameter can be one of the following values:
+ 155:Core/Src/BSP_RGB_LCD.c ****   *            @arg  ENABLE
+ 156:Core/Src/BSP_RGB_LCD.c ****   *            @arg  DISABLE 
+ 157:Core/Src/BSP_RGB_LCD.c ****   * @retval None
+ 158:Core/Src/BSP_RGB_LCD.c ****   */
+ 159:Core/Src/BSP_RGB_LCD.c **** void BSP_LCD_SetLayerVisible(uint32_t LayerIndex, FunctionalState State)
+ 160:Core/Src/BSP_RGB_LCD.c **** {
+ 161:Core/Src/BSP_RGB_LCD.c ****   if(State == ENABLE)
+ 162:Core/Src/BSP_RGB_LCD.c ****   {
+ 163:Core/Src/BSP_RGB_LCD.c ****     __HAL_LTDC_LAYER_ENABLE(&hltdc, LayerIndex);
+ 164:Core/Src/BSP_RGB_LCD.c ****   }
+ 165:Core/Src/BSP_RGB_LCD.c ****   else
+ 166:Core/Src/BSP_RGB_LCD.c ****   {
+ 167:Core/Src/BSP_RGB_LCD.c ****     __HAL_LTDC_LAYER_DISABLE(&hltdc, LayerIndex);
+ 168:Core/Src/BSP_RGB_LCD.c ****   }
+ 169:Core/Src/BSP_RGB_LCD.c ****   __HAL_LTDC_RELOAD_CONFIG(&hltdc);
+ 170:Core/Src/BSP_RGB_LCD.c **** } 
+ 171:Core/Src/BSP_RGB_LCD.c **** 
+ 172:Core/Src/BSP_RGB_LCD.c **** /**
+ 173:Core/Src/BSP_RGB_LCD.c ****   * @brief  Configures the transparency.
+ 174:Core/Src/BSP_RGB_LCD.c ****   * @param  LayerIndex: Layer foreground or background.
+ 175:Core/Src/BSP_RGB_LCD.c ****   * @param  Transparency: Transparency
+ 176:Core/Src/BSP_RGB_LCD.c ****   *           This parameter must be a number between Min_Data = 0x00 and Max_Data = 0xFF 
+ 177:Core/Src/BSP_RGB_LCD.c ****   * @retval None
+ 178:Core/Src/BSP_RGB_LCD.c ****   */
+ 179:Core/Src/BSP_RGB_LCD.c **** void BSP_LCD_SetTransparency(uint32_t LayerIndex, uint8_t Transparency)
+ 180:Core/Src/BSP_RGB_LCD.c **** {    
+ 181:Core/Src/BSP_RGB_LCD.c ****   HAL_LTDC_SetAlpha(&hltdc, Transparency, LayerIndex);
+ 182:Core/Src/BSP_RGB_LCD.c **** }
+ 183:Core/Src/BSP_RGB_LCD.c **** 
+ 184:Core/Src/BSP_RGB_LCD.c **** /**
+ 185:Core/Src/BSP_RGB_LCD.c ****   * @brief  Sets an LCD layer frame buffer address.
+ 186:Core/Src/BSP_RGB_LCD.c ****   * @param  LayerIndex: Layer foreground or background
+ 187:Core/Src/BSP_RGB_LCD.c ****   * @param  Address: New LCD frame buffer value      
+ 188:Core/Src/BSP_RGB_LCD.c ****   * @retval None
+ 189:Core/Src/BSP_RGB_LCD.c ****   */
+ 190:Core/Src/BSP_RGB_LCD.c **** void BSP_LCD_SetLayerAddress(uint32_t LayerIndex, uint32_t Address)
+ 191:Core/Src/BSP_RGB_LCD.c **** {
+ 192:Core/Src/BSP_RGB_LCD.c ****   HAL_LTDC_SetAddress(&hltdc, Address, LayerIndex);
+ 193:Core/Src/BSP_RGB_LCD.c **** }
+ 194:Core/Src/BSP_RGB_LCD.c **** 
+ 195:Core/Src/BSP_RGB_LCD.c **** /**
+ 196:Core/Src/BSP_RGB_LCD.c ****   * @brief  Sets display window.
+ 197:Core/Src/BSP_RGB_LCD.c ****   * @param  LayerIndex: Layer index
+ 198:Core/Src/BSP_RGB_LCD.c ****   * @param  Xpos: LCD X position
+ 199:Core/Src/BSP_RGB_LCD.c ****   * @param  Ypos: LCD Y position
+ 200:Core/Src/BSP_RGB_LCD.c ****   * @param  Width: LCD window width
+ 201:Core/Src/BSP_RGB_LCD.c ****   * @param  Height: LCD window height  
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 5
+
+
+ 202:Core/Src/BSP_RGB_LCD.c ****   * @retval None
+ 203:Core/Src/BSP_RGB_LCD.c ****   */
+ 204:Core/Src/BSP_RGB_LCD.c **** void BSP_LCD_SetLayerWindow(uint16_t LayerIndex, uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint
+ 205:Core/Src/BSP_RGB_LCD.c **** {
+ 206:Core/Src/BSP_RGB_LCD.c ****   /* Reconfigure the layer size */
+ 207:Core/Src/BSP_RGB_LCD.c ****   HAL_LTDC_SetWindowSize(&hltdc, Width, Height, LayerIndex);
+ 208:Core/Src/BSP_RGB_LCD.c ****   
+ 209:Core/Src/BSP_RGB_LCD.c ****   /* Reconfigure the layer position */
+ 210:Core/Src/BSP_RGB_LCD.c ****   HAL_LTDC_SetWindowPosition(&hltdc, Xpos, Ypos, LayerIndex); 
+ 211:Core/Src/BSP_RGB_LCD.c **** }
+ 212:Core/Src/BSP_RGB_LCD.c **** 
+ 213:Core/Src/BSP_RGB_LCD.c **** /**
+ 214:Core/Src/BSP_RGB_LCD.c ****   * @brief  Configures and sets the color keying.
+ 215:Core/Src/BSP_RGB_LCD.c ****   * @param  LayerIndex: Layer foreground or background
+ 216:Core/Src/BSP_RGB_LCD.c ****   * @param  RGBValue: Color reference
+ 217:Core/Src/BSP_RGB_LCD.c ****   * @retval None
+ 218:Core/Src/BSP_RGB_LCD.c ****   */
+ 219:Core/Src/BSP_RGB_LCD.c **** void BSP_LCD_SetColorKeying(uint32_t LayerIndex, uint32_t RGBValue)
+ 220:Core/Src/BSP_RGB_LCD.c **** {  
+ 221:Core/Src/BSP_RGB_LCD.c ****   /* Configure and Enable the color Keying for LCD Layer */
+ 222:Core/Src/BSP_RGB_LCD.c ****   HAL_LTDC_ConfigColorKeying(&hltdc, RGBValue, LayerIndex);
+ 223:Core/Src/BSP_RGB_LCD.c ****   HAL_LTDC_EnableColorKeying(&hltdc, LayerIndex);
+ 224:Core/Src/BSP_RGB_LCD.c **** }
+ 225:Core/Src/BSP_RGB_LCD.c **** 
+ 226:Core/Src/BSP_RGB_LCD.c **** /**
+ 227:Core/Src/BSP_RGB_LCD.c ****   * @brief  Disables the color keying.
+ 228:Core/Src/BSP_RGB_LCD.c ****   * @param  LayerIndex: Layer foreground or background
+ 229:Core/Src/BSP_RGB_LCD.c ****   * @retval None
+ 230:Core/Src/BSP_RGB_LCD.c ****   */
+ 231:Core/Src/BSP_RGB_LCD.c **** void BSP_LCD_ResetColorKeying(uint32_t LayerIndex)
+ 232:Core/Src/BSP_RGB_LCD.c **** {   
+ 233:Core/Src/BSP_RGB_LCD.c ****   /* Disable the color Keying for LCD Layer */
+ 234:Core/Src/BSP_RGB_LCD.c ****   HAL_LTDC_DisableColorKeying(&hltdc, LayerIndex);
+ 235:Core/Src/BSP_RGB_LCD.c **** }
+ 236:Core/Src/BSP_RGB_LCD.c **** 
+ 237:Core/Src/BSP_RGB_LCD.c **** /**
+ 238:Core/Src/BSP_RGB_LCD.c ****   * @brief  Reads an LCD pixel.
+ 239:Core/Src/BSP_RGB_LCD.c ****   * @param  Xpos: X position 
+ 240:Core/Src/BSP_RGB_LCD.c ****   * @param  Ypos: Y position 
+ 241:Core/Src/BSP_RGB_LCD.c ****   * @retval RGB pixel color
+ 242:Core/Src/BSP_RGB_LCD.c ****   */
+ 243:Core/Src/BSP_RGB_LCD.c **** uint32_t BSP_LCD_ReadPixel(uint16_t Xpos, uint16_t Ypos)
+ 244:Core/Src/BSP_RGB_LCD.c **** {
+ 245:Core/Src/BSP_RGB_LCD.c ****   uint32_t ret = 0;
+ 246:Core/Src/BSP_RGB_LCD.c ****   
+ 247:Core/Src/BSP_RGB_LCD.c ****   if(hltdc.LayerCfg[ActiveLayer].PixelFormat == LTDC_PIXEL_FORMAT_ARGB8888)
+ 248:Core/Src/BSP_RGB_LCD.c ****   {
+ 249:Core/Src/BSP_RGB_LCD.c ****     /* Read data value from SDRAM memory */
+ 250:Core/Src/BSP_RGB_LCD.c ****     ret = *(__IO uint32_t*) (hltdc.LayerCfg[ActiveLayer].FBStartAdress + (2*(Ypos*BSP_LCD_GetXSize(
+ 251:Core/Src/BSP_RGB_LCD.c ****   }
+ 252:Core/Src/BSP_RGB_LCD.c ****   else if(hltdc.LayerCfg[ActiveLayer].PixelFormat == LTDC_PIXEL_FORMAT_RGB888)
+ 253:Core/Src/BSP_RGB_LCD.c ****   {
+ 254:Core/Src/BSP_RGB_LCD.c ****     /* Read data value from SDRAM memory */
+ 255:Core/Src/BSP_RGB_LCD.c ****     ret = (*(__IO uint32_t*) (hltdc.LayerCfg[ActiveLayer].FBStartAdress + (2*(Ypos*BSP_LCD_GetXSize
+ 256:Core/Src/BSP_RGB_LCD.c ****   }
+ 257:Core/Src/BSP_RGB_LCD.c ****   else if((hltdc.LayerCfg[ActiveLayer].PixelFormat == LTDC_PIXEL_FORMAT_RGB565) || \
+ 258:Core/Src/BSP_RGB_LCD.c ****           (hltdc.LayerCfg[ActiveLayer].PixelFormat == LTDC_PIXEL_FORMAT_ARGB4444) || \
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 6
+
+
+ 259:Core/Src/BSP_RGB_LCD.c ****           (hltdc.LayerCfg[ActiveLayer].PixelFormat == LTDC_PIXEL_FORMAT_AL88))  
+ 260:Core/Src/BSP_RGB_LCD.c ****   {
+ 261:Core/Src/BSP_RGB_LCD.c ****     /* Read data value from SDRAM memory */
+ 262:Core/Src/BSP_RGB_LCD.c ****     ret = *(__IO uint16_t*) (hltdc.LayerCfg[ActiveLayer].FBStartAdress + (2*(Ypos*BSP_LCD_GetXSize(
+ 263:Core/Src/BSP_RGB_LCD.c ****   }
+ 264:Core/Src/BSP_RGB_LCD.c ****   else
+ 265:Core/Src/BSP_RGB_LCD.c ****   {
+ 266:Core/Src/BSP_RGB_LCD.c ****     /* Read data value from SDRAM memory */
+ 267:Core/Src/BSP_RGB_LCD.c ****     ret = *(__IO uint8_t*) (hltdc.LayerCfg[ActiveLayer].FBStartAdress + (2*(Ypos*BSP_LCD_GetXSize()
+ 268:Core/Src/BSP_RGB_LCD.c ****   }
+ 269:Core/Src/BSP_RGB_LCD.c ****   
+ 270:Core/Src/BSP_RGB_LCD.c ****   return ret;
+ 271:Core/Src/BSP_RGB_LCD.c **** }
+ 272:Core/Src/BSP_RGB_LCD.c **** 
+ 273:Core/Src/BSP_RGB_LCD.c **** /**
+ 274:Core/Src/BSP_RGB_LCD.c ****   * @brief  Clears the hole LCD.
+ 275:Core/Src/BSP_RGB_LCD.c ****   * @param  Color: Color of the background
+ 276:Core/Src/BSP_RGB_LCD.c ****   * @retval None
+ 277:Core/Src/BSP_RGB_LCD.c ****   */
+ 278:Core/Src/BSP_RGB_LCD.c **** void BSP_LCD_Clear(uint32_t Color)
+ 279:Core/Src/BSP_RGB_LCD.c **** { 
+ 280:Core/Src/BSP_RGB_LCD.c ****   /* Clear the LCD */ 
+ 281:Core/Src/BSP_RGB_LCD.c ****   LL_FillBuffer(ActiveLayer, (uint32_t *)(hltdc.LayerCfg[ActiveLayer].FBStartAdress), BSP_LCD_GetXS
+ 282:Core/Src/BSP_RGB_LCD.c **** }
+ 283:Core/Src/BSP_RGB_LCD.c **** 
+ 284:Core/Src/BSP_RGB_LCD.c **** 
+ 285:Core/Src/BSP_RGB_LCD.c **** /**
+ 286:Core/Src/BSP_RGB_LCD.c ****   * @brief  Draws a pixel on LCD.
+ 287:Core/Src/BSP_RGB_LCD.c ****   * @param  Xpos: X position
+ 288:Core/Src/BSP_RGB_LCD.c ****   * @param  Ypos: Y position
+ 289:Core/Src/BSP_RGB_LCD.c ****   * @param  RGB_Code: Pixel color in ARGB mode (8-8-8-8)
+ 290:Core/Src/BSP_RGB_LCD.c ****   * @retval None
+ 291:Core/Src/BSP_RGB_LCD.c ****   */
+ 292:Core/Src/BSP_RGB_LCD.c **** void BSP_LCD_DrawPixel(uint16_t Xpos, uint16_t Ypos, uint32_t RGB_Code)
+ 293:Core/Src/BSP_RGB_LCD.c **** {
+ 294:Core/Src/BSP_RGB_LCD.c ****   /* Write data value to all SDRAM memory */
+ 295:Core/Src/BSP_RGB_LCD.c ****   if(hltdc.LayerCfg[ActiveLayer].PixelFormat == LTDC_PIXEL_FORMAT_RGB565)
+ 296:Core/Src/BSP_RGB_LCD.c ****   { /* RGB565 format */
+ 297:Core/Src/BSP_RGB_LCD.c ****     *(__IO uint16_t*) (hltdc.LayerCfg[ActiveLayer].FBStartAdress + (2*(Ypos*BSP_LCD_GetXSize() + Xp
+ 298:Core/Src/BSP_RGB_LCD.c ****   }
+ 299:Core/Src/BSP_RGB_LCD.c ****   else
+ 300:Core/Src/BSP_RGB_LCD.c ****   { /* ARGB8888 format */
+ 301:Core/Src/BSP_RGB_LCD.c ****     *(__IO uint32_t*) (hltdc.LayerCfg[ActiveLayer].FBStartAdress + (4*(Ypos*BSP_LCD_GetXSize() + Xp
+ 302:Core/Src/BSP_RGB_LCD.c ****   }
+ 303:Core/Src/BSP_RGB_LCD.c **** }
+ 304:Core/Src/BSP_RGB_LCD.c **** 
+ 305:Core/Src/BSP_RGB_LCD.c **** /**
+ 306:Core/Src/BSP_RGB_LCD.c ****   * @brief  Fills a buffer.
+ 307:Core/Src/BSP_RGB_LCD.c ****   * @param  LayerIndex: Layer index
+ 308:Core/Src/BSP_RGB_LCD.c ****   * @param  pDst: Pointer to destination buffer
+ 309:Core/Src/BSP_RGB_LCD.c ****   * @param  xSize: Buffer width
+ 310:Core/Src/BSP_RGB_LCD.c ****   * @param  ySize: Buffer height
+ 311:Core/Src/BSP_RGB_LCD.c ****   * @param  OffLine: Offset
+ 312:Core/Src/BSP_RGB_LCD.c ****   * @param  ColorIndex: Color index
+ 313:Core/Src/BSP_RGB_LCD.c ****   * @retval None
+ 314:Core/Src/BSP_RGB_LCD.c ****   */
+ 315:Core/Src/BSP_RGB_LCD.c **** static void LL_FillBuffer(uint32_t LayerIndex, void *pDst, uint32_t xSize, uint32_t ySize, uint32_t
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 7
+
+
+ 316:Core/Src/BSP_RGB_LCD.c **** {
+  29              		.loc 1 316 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 8, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		.loc 1 316 1 is_stmt 0 view .LVU1
+  34 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+  35              		.cfi_def_cfa_offset 28
+  36              		.cfi_offset 4, -28
+  37              		.cfi_offset 5, -24
+  38              		.cfi_offset 6, -20
+  39              		.cfi_offset 7, -16
+  40              		.cfi_offset 8, -12
+  41              		.cfi_offset 9, -8
+  42              		.cfi_offset 14, -4
+  43 0004 83B0     		sub	sp, sp, #12
+  44              		.cfi_def_cfa_offset 40
+  45 0006 0646     		mov	r6, r0
+  46 0008 0F46     		mov	r7, r1
+  47 000a 9046     		mov	r8, r2
+  48 000c 9946     		mov	r9, r3
+  49 000e 0B9D     		ldr	r5, [sp, #44]
+ 317:Core/Src/BSP_RGB_LCD.c ****   /* Register to memory mode with ARGB8888 as color Mode */ 
+ 318:Core/Src/BSP_RGB_LCD.c ****   hDma2dHandler.Init.Mode         = DMA2D_R2M;
+  50              		.loc 1 318 3 is_stmt 1 view .LVU2
+  51              		.loc 1 318 35 is_stmt 0 view .LVU3
+  52 0010 1F4B     		ldr	r3, .L8
+  53              	.LVL1:
+  54              		.loc 1 318 35 view .LVU4
+  55 0012 4FF44032 		mov	r2, #196608
+  56              	.LVL2:
+  57              		.loc 1 318 35 view .LVU5
+  58 0016 5A60     		str	r2, [r3, #4]
+ 319:Core/Src/BSP_RGB_LCD.c ****   if(hltdc.LayerCfg[ActiveLayer].PixelFormat == LTDC_PIXEL_FORMAT_RGB565)
+  59              		.loc 1 319 3 is_stmt 1 view .LVU6
+  60              		.loc 1 319 33 is_stmt 0 view .LVU7
+  61 0018 1E4B     		ldr	r3, .L8+4
+  62 001a 1B68     		ldr	r3, [r3]
+  63 001c 1E4C     		ldr	r4, .L8+8
+  64 001e 3422     		movs	r2, #52
+  65 0020 02FB034C 		mla	ip, r2, r3, r4
+  66 0024 DCF84830 		ldr	r3, [ip, #72]
+  67              		.loc 1 319 5 view .LVU8
+  68 0028 022B     		cmp	r3, #2
+  69 002a 0DD0     		beq	.L6
+ 320:Core/Src/BSP_RGB_LCD.c ****   { /* RGB565 format */ 
+ 321:Core/Src/BSP_RGB_LCD.c ****     hDma2dHandler.Init.ColorMode    = DMA2D_RGB565;
+ 322:Core/Src/BSP_RGB_LCD.c **** 		ColorIndex = ((ColorIndex & LCD_COLOR_RED)<<8) | ((ColorIndex & LCD_COLOR_GREEN )<<5) | ((ColorIn
+ 323:Core/Src/BSP_RGB_LCD.c ****   }
+ 324:Core/Src/BSP_RGB_LCD.c ****   else
+ 325:Core/Src/BSP_RGB_LCD.c ****   { /* ARGB8888 format */
+ 326:Core/Src/BSP_RGB_LCD.c ****     hDma2dHandler.Init.ColorMode    = DMA2D_ARGB8888;
+  70              		.loc 1 326 5 is_stmt 1 view .LVU9
+  71              		.loc 1 326 37 is_stmt 0 view .LVU10
+  72 002c 184B     		ldr	r3, .L8
+  73 002e 0022     		movs	r2, #0
+  74 0030 9A60     		str	r2, [r3, #8]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 8
+
+
+  75              	.LVL3:
+  76              	.L3:
+ 327:Core/Src/BSP_RGB_LCD.c ****   }
+ 328:Core/Src/BSP_RGB_LCD.c ****   hDma2dHandler.Init.OutputOffset = OffLine;      
+  77              		.loc 1 328 3 is_stmt 1 view .LVU11
+  78              		.loc 1 328 35 is_stmt 0 view .LVU12
+  79 0032 1748     		ldr	r0, .L8
+  80              	.LVL4:
+  81              		.loc 1 328 35 view .LVU13
+  82 0034 0A9B     		ldr	r3, [sp, #40]
+  83 0036 C360     		str	r3, [r0, #12]
+ 329:Core/Src/BSP_RGB_LCD.c ****   
+ 330:Core/Src/BSP_RGB_LCD.c ****   hDma2dHandler.Instance = DMA2D;
+  84              		.loc 1 330 3 is_stmt 1 view .LVU14
+  85              		.loc 1 330 26 is_stmt 0 view .LVU15
+  86 0038 184B     		ldr	r3, .L8+12
+  87 003a 0360     		str	r3, [r0]
+ 331:Core/Src/BSP_RGB_LCD.c ****   
+ 332:Core/Src/BSP_RGB_LCD.c ****   /* DMA2D Initialization */
+ 333:Core/Src/BSP_RGB_LCD.c ****   if(HAL_DMA2D_Init(&hDma2dHandler) == HAL_OK) 
+  88              		.loc 1 333 3 is_stmt 1 view .LVU16
+  89              		.loc 1 333 6 is_stmt 0 view .LVU17
+  90 003c FFF7FEFF 		bl	HAL_DMA2D_Init
+  91              	.LVL5:
+  92              		.loc 1 333 5 view .LVU18
+  93 0040 80B1     		cbz	r0, .L7
+  94              	.L1:
+ 334:Core/Src/BSP_RGB_LCD.c ****   {
+ 335:Core/Src/BSP_RGB_LCD.c ****     if(HAL_DMA2D_ConfigLayer(&hDma2dHandler, LayerIndex) == HAL_OK) 
+ 336:Core/Src/BSP_RGB_LCD.c ****     {
+ 337:Core/Src/BSP_RGB_LCD.c ****       if (HAL_DMA2D_Start(&hDma2dHandler, ColorIndex, (uint32_t)pDst, xSize, ySize) == HAL_OK)
+ 338:Core/Src/BSP_RGB_LCD.c ****       {
+ 339:Core/Src/BSP_RGB_LCD.c ****         /* Polling For DMA transfer */  
+ 340:Core/Src/BSP_RGB_LCD.c ****         HAL_DMA2D_PollForTransfer(&hDma2dHandler, 10);
+ 341:Core/Src/BSP_RGB_LCD.c ****       }
+ 342:Core/Src/BSP_RGB_LCD.c ****     }
+ 343:Core/Src/BSP_RGB_LCD.c ****   } 
+ 344:Core/Src/BSP_RGB_LCD.c **** }    
+  95              		.loc 1 344 1 view .LVU19
+  96 0042 03B0     		add	sp, sp, #12
+  97              		.cfi_remember_state
+  98              		.cfi_def_cfa_offset 28
+  99              		@ sp needed
+ 100 0044 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 101              	.LVL6:
+ 102              	.L6:
+ 103              		.cfi_restore_state
+ 321:Core/Src/BSP_RGB_LCD.c **** 		ColorIndex = ((ColorIndex & LCD_COLOR_RED)<<8) | ((ColorIndex & LCD_COLOR_GREEN )<<5) | ((ColorIn
+ 104              		.loc 1 321 5 is_stmt 1 view .LVU20
+ 321:Core/Src/BSP_RGB_LCD.c **** 		ColorIndex = ((ColorIndex & LCD_COLOR_RED)<<8) | ((ColorIndex & LCD_COLOR_GREEN )<<5) | ((ColorIn
+ 105              		.loc 1 321 37 is_stmt 0 view .LVU21
+ 106 0048 114B     		ldr	r3, .L8
+ 107 004a 0222     		movs	r2, #2
+ 108 004c 9A60     		str	r2, [r3, #8]
+ 322:Core/Src/BSP_RGB_LCD.c ****   }
+ 109              		.loc 1 322 3 is_stmt 1 view .LVU22
+ 322:Core/Src/BSP_RGB_LCD.c ****   }
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 9
+
+
+ 110              		.loc 1 322 45 is_stmt 0 view .LVU23
+ 111 004e 2B02     		lsls	r3, r5, #8
+ 112 0050 03F47803 		and	r3, r3, #16252928
+ 322:Core/Src/BSP_RGB_LCD.c ****   }
+ 113              		.loc 1 322 84 view .LVU24
+ 114 0054 6A01     		lsls	r2, r5, #5
+ 115 0056 02F47C42 		and	r2, r2, #64512
+ 322:Core/Src/BSP_RGB_LCD.c ****   }
+ 116              		.loc 1 322 50 view .LVU25
+ 117 005a 1343     		orrs	r3, r3, r2
+ 322:Core/Src/BSP_RGB_LCD.c ****   }
+ 118              		.loc 1 322 122 view .LVU26
+ 119 005c ED00     		lsls	r5, r5, #3
+ 120 005e EDB2     		uxtb	r5, r5
+ 322:Core/Src/BSP_RGB_LCD.c ****   }
+ 121              		.loc 1 322 14 view .LVU27
+ 122 0060 1D43     		orrs	r5, r5, r3
+ 123              	.LVL7:
+ 322:Core/Src/BSP_RGB_LCD.c ****   }
+ 124              		.loc 1 322 14 view .LVU28
+ 125 0062 E6E7     		b	.L3
+ 126              	.LVL8:
+ 127              	.L7:
+ 335:Core/Src/BSP_RGB_LCD.c ****     {
+ 128              		.loc 1 335 5 is_stmt 1 view .LVU29
+ 335:Core/Src/BSP_RGB_LCD.c ****     {
+ 129              		.loc 1 335 8 is_stmt 0 view .LVU30
+ 130 0064 3146     		mov	r1, r6
+ 131 0066 0A48     		ldr	r0, .L8
+ 132 0068 FFF7FEFF 		bl	HAL_DMA2D_ConfigLayer
+ 133              	.LVL9:
+ 335:Core/Src/BSP_RGB_LCD.c ****     {
+ 134              		.loc 1 335 7 view .LVU31
+ 135 006c 0028     		cmp	r0, #0
+ 136 006e E8D1     		bne	.L1
+ 337:Core/Src/BSP_RGB_LCD.c ****       {
+ 137              		.loc 1 337 7 is_stmt 1 view .LVU32
+ 337:Core/Src/BSP_RGB_LCD.c ****       {
+ 138              		.loc 1 337 11 is_stmt 0 view .LVU33
+ 139 0070 CDF80090 		str	r9, [sp]
+ 140 0074 4346     		mov	r3, r8
+ 141 0076 3A46     		mov	r2, r7
+ 142 0078 2946     		mov	r1, r5
+ 143 007a 0548     		ldr	r0, .L8
+ 144 007c FFF7FEFF 		bl	HAL_DMA2D_Start
+ 145              	.LVL10:
+ 337:Core/Src/BSP_RGB_LCD.c ****       {
+ 146              		.loc 1 337 10 view .LVU34
+ 147 0080 0028     		cmp	r0, #0
+ 148 0082 DED1     		bne	.L1
+ 340:Core/Src/BSP_RGB_LCD.c ****       }
+ 149              		.loc 1 340 9 is_stmt 1 view .LVU35
+ 150 0084 0A21     		movs	r1, #10
+ 151 0086 0248     		ldr	r0, .L8
+ 152 0088 FFF7FEFF 		bl	HAL_DMA2D_PollForTransfer
+ 153              	.LVL11:
+ 154              		.loc 1 344 1 is_stmt 0 view .LVU36
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 10
+
+
+ 155 008c D9E7     		b	.L1
+ 156              	.L9:
+ 157 008e 00BF     		.align	2
+ 158              	.L8:
+ 159 0090 00000000 		.word	.LANCHOR0
+ 160 0094 00000000 		.word	.LANCHOR2
+ 161 0098 00000000 		.word	.LANCHOR1
+ 162 009c 00B00240 		.word	1073917952
+ 163              		.cfi_endproc
+ 164              	.LFE337:
+ 166              		.section	.text.BSP_LCD_GetXSize,"ax",%progbits
+ 167              		.align	1
+ 168              		.global	BSP_LCD_GetXSize
+ 169              		.syntax unified
+ 170              		.thumb
+ 171              		.thumb_func
+ 173              	BSP_LCD_GetXSize:
+ 174              	.LFB325:
+ 126:Core/Src/BSP_RGB_LCD.c ****   return hltdc.LayerCfg[ActiveLayer].ImageWidth;
+ 175              		.loc 1 126 1 is_stmt 1 view -0
+ 176              		.cfi_startproc
+ 177              		@ args = 0, pretend = 0, frame = 0
+ 178              		@ frame_needed = 0, uses_anonymous_args = 0
+ 179              		@ link register save eliminated.
+ 127:Core/Src/BSP_RGB_LCD.c **** }
+ 180              		.loc 1 127 3 view .LVU38
+ 127:Core/Src/BSP_RGB_LCD.c **** }
+ 181              		.loc 1 127 37 is_stmt 0 view .LVU39
+ 182 0000 034B     		ldr	r3, .L11
+ 183 0002 1A68     		ldr	r2, [r3]
+ 184 0004 034B     		ldr	r3, .L11+4
+ 185 0006 3421     		movs	r1, #52
+ 186 0008 01FB0233 		mla	r3, r1, r2, r3
+ 128:Core/Src/BSP_RGB_LCD.c **** 
+ 187              		.loc 1 128 1 view .LVU40
+ 188 000c 186E     		ldr	r0, [r3, #96]
+ 189 000e 7047     		bx	lr
+ 190              	.L12:
+ 191              		.align	2
+ 192              	.L11:
+ 193 0010 00000000 		.word	.LANCHOR2
+ 194 0014 00000000 		.word	.LANCHOR1
+ 195              		.cfi_endproc
+ 196              	.LFE325:
+ 198              		.section	.text.BSP_LCD_GetYSize,"ax",%progbits
+ 199              		.align	1
+ 200              		.global	BSP_LCD_GetYSize
+ 201              		.syntax unified
+ 202              		.thumb
+ 203              		.thumb_func
+ 205              	BSP_LCD_GetYSize:
+ 206              	.LFB326:
+ 135:Core/Src/BSP_RGB_LCD.c ****   return hltdc.LayerCfg[ActiveLayer].ImageHeight;
+ 207              		.loc 1 135 1 is_stmt 1 view -0
+ 208              		.cfi_startproc
+ 209              		@ args = 0, pretend = 0, frame = 0
+ 210              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 11
+
+
+ 211              		@ link register save eliminated.
+ 136:Core/Src/BSP_RGB_LCD.c **** }
+ 212              		.loc 1 136 3 view .LVU42
+ 136:Core/Src/BSP_RGB_LCD.c **** }
+ 213              		.loc 1 136 37 is_stmt 0 view .LVU43
+ 214 0000 034B     		ldr	r3, .L14
+ 215 0002 1A68     		ldr	r2, [r3]
+ 216 0004 034B     		ldr	r3, .L14+4
+ 217 0006 3421     		movs	r1, #52
+ 218 0008 01FB0233 		mla	r3, r1, r2, r3
+ 137:Core/Src/BSP_RGB_LCD.c **** 
+ 219              		.loc 1 137 1 view .LVU44
+ 220 000c 586E     		ldr	r0, [r3, #100]
+ 221 000e 7047     		bx	lr
+ 222              	.L15:
+ 223              		.align	2
+ 224              	.L14:
+ 225 0010 00000000 		.word	.LANCHOR2
+ 226 0014 00000000 		.word	.LANCHOR1
+ 227              		.cfi_endproc
+ 228              	.LFE326:
+ 230              		.section	.text.BSP_LCD_SelectLayer,"ax",%progbits
+ 231              		.align	1
+ 232              		.global	BSP_LCD_SelectLayer
+ 233              		.syntax unified
+ 234              		.thumb
+ 235              		.thumb_func
+ 237              	BSP_LCD_SelectLayer:
+ 238              	.LVL12:
+ 239              	.LFB327:
+ 146:Core/Src/BSP_RGB_LCD.c ****   ActiveLayer = LayerIndex;
+ 240              		.loc 1 146 1 is_stmt 1 view -0
+ 241              		.cfi_startproc
+ 242              		@ args = 0, pretend = 0, frame = 0
+ 243              		@ frame_needed = 0, uses_anonymous_args = 0
+ 244              		@ link register save eliminated.
+ 147:Core/Src/BSP_RGB_LCD.c **** } 
+ 245              		.loc 1 147 3 view .LVU46
+ 147:Core/Src/BSP_RGB_LCD.c **** } 
+ 246              		.loc 1 147 15 is_stmt 0 view .LVU47
+ 247 0000 014B     		ldr	r3, .L17
+ 248 0002 1860     		str	r0, [r3]
+ 148:Core/Src/BSP_RGB_LCD.c **** 
+ 249              		.loc 1 148 1 view .LVU48
+ 250 0004 7047     		bx	lr
+ 251              	.L18:
+ 252 0006 00BF     		.align	2
+ 253              	.L17:
+ 254 0008 00000000 		.word	.LANCHOR2
+ 255              		.cfi_endproc
+ 256              	.LFE327:
+ 258              		.section	.text.BSP_LCD_SetLayerVisible,"ax",%progbits
+ 259              		.align	1
+ 260              		.global	BSP_LCD_SetLayerVisible
+ 261              		.syntax unified
+ 262              		.thumb
+ 263              		.thumb_func
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 12
+
+
+ 265              	BSP_LCD_SetLayerVisible:
+ 266              	.LVL13:
+ 267              	.LFB328:
+ 160:Core/Src/BSP_RGB_LCD.c ****   if(State == ENABLE)
+ 268              		.loc 1 160 1 is_stmt 1 view -0
+ 269              		.cfi_startproc
+ 270              		@ args = 0, pretend = 0, frame = 0
+ 271              		@ frame_needed = 0, uses_anonymous_args = 0
+ 272              		@ link register save eliminated.
+ 161:Core/Src/BSP_RGB_LCD.c ****   {
+ 273              		.loc 1 161 3 view .LVU50
+ 161:Core/Src/BSP_RGB_LCD.c ****   {
+ 274              		.loc 1 161 5 is_stmt 0 view .LVU51
+ 275 0000 0129     		cmp	r1, #1
+ 276 0002 10D0     		beq	.L22
+ 167:Core/Src/BSP_RGB_LCD.c ****   }
+ 277              		.loc 1 167 5 is_stmt 1 view .LVU52
+ 278 0004 0D4B     		ldr	r3, .L23
+ 279 0006 1B68     		ldr	r3, [r3]
+ 280 0008 03EBC013 		add	r3, r3, r0, lsl #7
+ 281 000c D3F88420 		ldr	r2, [r3, #132]
+ 282 0010 22F00102 		bic	r2, r2, #1
+ 283 0014 C3F88420 		str	r2, [r3, #132]
+ 284              	.L21:
+ 169:Core/Src/BSP_RGB_LCD.c **** } 
+ 285              		.loc 1 169 3 view .LVU53
+ 286 0018 084B     		ldr	r3, .L23
+ 287 001a 1A68     		ldr	r2, [r3]
+ 288 001c 536A     		ldr	r3, [r2, #36]
+ 289 001e 43F00103 		orr	r3, r3, #1
+ 290 0022 5362     		str	r3, [r2, #36]
+ 170:Core/Src/BSP_RGB_LCD.c **** 
+ 291              		.loc 1 170 1 is_stmt 0 view .LVU54
+ 292 0024 7047     		bx	lr
+ 293              	.L22:
+ 163:Core/Src/BSP_RGB_LCD.c ****   }
+ 294              		.loc 1 163 5 is_stmt 1 view .LVU55
+ 295 0026 054B     		ldr	r3, .L23
+ 296 0028 1B68     		ldr	r3, [r3]
+ 297 002a 03EBC013 		add	r3, r3, r0, lsl #7
+ 298 002e D3F88420 		ldr	r2, [r3, #132]
+ 299 0032 42F00102 		orr	r2, r2, #1
+ 300 0036 C3F88420 		str	r2, [r3, #132]
+ 301 003a EDE7     		b	.L21
+ 302              	.L24:
+ 303              		.align	2
+ 304              	.L23:
+ 305 003c 00000000 		.word	.LANCHOR1
+ 306              		.cfi_endproc
+ 307              	.LFE328:
+ 309              		.section	.text.BSP_LCD_Init,"ax",%progbits
+ 310              		.align	1
+ 311              		.global	BSP_LCD_Init
+ 312              		.syntax unified
+ 313              		.thumb
+ 314              		.thumb_func
+ 316              	BSP_LCD_Init:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 13
+
+
+ 317              	.LFB324:
+ 109:Core/Src/BSP_RGB_LCD.c ****   /* Initialize the SDRAM */
+ 318              		.loc 1 109 1 view -0
+ 319              		.cfi_startproc
+ 320              		@ args = 0, pretend = 0, frame = 0
+ 321              		@ frame_needed = 0, uses_anonymous_args = 0
+ 322 0000 08B5     		push	{r3, lr}
+ 323              		.cfi_def_cfa_offset 8
+ 324              		.cfi_offset 3, -8
+ 325              		.cfi_offset 14, -4
+ 112:Core/Src/BSP_RGB_LCD.c ****   /* Clear the LCD Foreground layer */
+ 326              		.loc 1 112 2 view .LVU57
+ 327 0002 0120     		movs	r0, #1
+ 328 0004 FFF7FEFF 		bl	BSP_LCD_SelectLayer
+ 329              	.LVL14:
+ 114:Core/Src/BSP_RGB_LCD.c ****   /* Set Foreground Layer */
+ 330              		.loc 1 114 3 view .LVU58
+ 331 0008 0021     		movs	r1, #0
+ 332 000a 0120     		movs	r0, #1
+ 333 000c FFF7FEFF 		bl	BSP_LCD_SetLayerVisible
+ 334              	.LVL15:
+ 116:Core/Src/BSP_RGB_LCD.c **** 
+ 335              		.loc 1 116 3 view .LVU59
+ 336 0010 0020     		movs	r0, #0
+ 337 0012 FFF7FEFF 		bl	BSP_LCD_SelectLayer
+ 338              	.LVL16:
+ 118:Core/Src/BSP_RGB_LCD.c **** }
+ 339              		.loc 1 118 3 view .LVU60
+ 119:Core/Src/BSP_RGB_LCD.c **** 
+ 340              		.loc 1 119 1 is_stmt 0 view .LVU61
+ 341 0016 0020     		movs	r0, #0
+ 342 0018 08BD     		pop	{r3, pc}
+ 343              		.cfi_endproc
+ 344              	.LFE324:
+ 346              		.section	.text.BSP_LCD_SetTransparency,"ax",%progbits
+ 347              		.align	1
+ 348              		.global	BSP_LCD_SetTransparency
+ 349              		.syntax unified
+ 350              		.thumb
+ 351              		.thumb_func
+ 353              	BSP_LCD_SetTransparency:
+ 354              	.LVL17:
+ 355              	.LFB329:
+ 180:Core/Src/BSP_RGB_LCD.c ****   HAL_LTDC_SetAlpha(&hltdc, Transparency, LayerIndex);
+ 356              		.loc 1 180 1 is_stmt 1 view -0
+ 357              		.cfi_startproc
+ 358              		@ args = 0, pretend = 0, frame = 0
+ 359              		@ frame_needed = 0, uses_anonymous_args = 0
+ 180:Core/Src/BSP_RGB_LCD.c ****   HAL_LTDC_SetAlpha(&hltdc, Transparency, LayerIndex);
+ 360              		.loc 1 180 1 is_stmt 0 view .LVU63
+ 361 0000 08B5     		push	{r3, lr}
+ 362              		.cfi_def_cfa_offset 8
+ 363              		.cfi_offset 3, -8
+ 364              		.cfi_offset 14, -4
+ 365 0002 0246     		mov	r2, r0
+ 181:Core/Src/BSP_RGB_LCD.c **** }
+ 366              		.loc 1 181 3 is_stmt 1 view .LVU64
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 14
+
+
+ 367 0004 0148     		ldr	r0, .L29
+ 368              	.LVL18:
+ 181:Core/Src/BSP_RGB_LCD.c **** }
+ 369              		.loc 1 181 3 is_stmt 0 view .LVU65
+ 370 0006 FFF7FEFF 		bl	HAL_LTDC_SetAlpha
+ 371              	.LVL19:
+ 182:Core/Src/BSP_RGB_LCD.c **** 
+ 372              		.loc 1 182 1 view .LVU66
+ 373 000a 08BD     		pop	{r3, pc}
+ 374              	.L30:
+ 375              		.align	2
+ 376              	.L29:
+ 377 000c 00000000 		.word	.LANCHOR1
+ 378              		.cfi_endproc
+ 379              	.LFE329:
+ 381              		.section	.text.BSP_LCD_SetLayerAddress,"ax",%progbits
+ 382              		.align	1
+ 383              		.global	BSP_LCD_SetLayerAddress
+ 384              		.syntax unified
+ 385              		.thumb
+ 386              		.thumb_func
+ 388              	BSP_LCD_SetLayerAddress:
+ 389              	.LVL20:
+ 390              	.LFB330:
+ 191:Core/Src/BSP_RGB_LCD.c ****   HAL_LTDC_SetAddress(&hltdc, Address, LayerIndex);
+ 391              		.loc 1 191 1 is_stmt 1 view -0
+ 392              		.cfi_startproc
+ 393              		@ args = 0, pretend = 0, frame = 0
+ 394              		@ frame_needed = 0, uses_anonymous_args = 0
+ 191:Core/Src/BSP_RGB_LCD.c ****   HAL_LTDC_SetAddress(&hltdc, Address, LayerIndex);
+ 395              		.loc 1 191 1 is_stmt 0 view .LVU68
+ 396 0000 08B5     		push	{r3, lr}
+ 397              		.cfi_def_cfa_offset 8
+ 398              		.cfi_offset 3, -8
+ 399              		.cfi_offset 14, -4
+ 400 0002 0246     		mov	r2, r0
+ 192:Core/Src/BSP_RGB_LCD.c **** }
+ 401              		.loc 1 192 3 is_stmt 1 view .LVU69
+ 402 0004 0148     		ldr	r0, .L33
+ 403              	.LVL21:
+ 192:Core/Src/BSP_RGB_LCD.c **** }
+ 404              		.loc 1 192 3 is_stmt 0 view .LVU70
+ 405 0006 FFF7FEFF 		bl	HAL_LTDC_SetAddress
+ 406              	.LVL22:
+ 193:Core/Src/BSP_RGB_LCD.c **** 
+ 407              		.loc 1 193 1 view .LVU71
+ 408 000a 08BD     		pop	{r3, pc}
+ 409              	.L34:
+ 410              		.align	2
+ 411              	.L33:
+ 412 000c 00000000 		.word	.LANCHOR1
+ 413              		.cfi_endproc
+ 414              	.LFE330:
+ 416              		.section	.text.BSP_LCD_SetLayerWindow,"ax",%progbits
+ 417              		.align	1
+ 418              		.global	BSP_LCD_SetLayerWindow
+ 419              		.syntax unified
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 15
+
+
+ 420              		.thumb
+ 421              		.thumb_func
+ 423              	BSP_LCD_SetLayerWindow:
+ 424              	.LVL23:
+ 425              	.LFB331:
+ 205:Core/Src/BSP_RGB_LCD.c ****   /* Reconfigure the layer size */
+ 426              		.loc 1 205 1 is_stmt 1 view -0
+ 427              		.cfi_startproc
+ 428              		@ args = 4, pretend = 0, frame = 0
+ 429              		@ frame_needed = 0, uses_anonymous_args = 0
+ 205:Core/Src/BSP_RGB_LCD.c ****   /* Reconfigure the layer size */
+ 430              		.loc 1 205 1 is_stmt 0 view .LVU73
+ 431 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 432              		.cfi_def_cfa_offset 24
+ 433              		.cfi_offset 3, -24
+ 434              		.cfi_offset 4, -20
+ 435              		.cfi_offset 5, -16
+ 436              		.cfi_offset 6, -12
+ 437              		.cfi_offset 7, -8
+ 438              		.cfi_offset 14, -4
+ 439 0002 0446     		mov	r4, r0
+ 440 0004 0D46     		mov	r5, r1
+ 441 0006 1646     		mov	r6, r2
+ 442 0008 1946     		mov	r1, r3
+ 443              	.LVL24:
+ 207:Core/Src/BSP_RGB_LCD.c ****   
+ 444              		.loc 1 207 3 is_stmt 1 view .LVU74
+ 445 000a 074F     		ldr	r7, .L37
+ 446 000c 0346     		mov	r3, r0
+ 447              	.LVL25:
+ 207:Core/Src/BSP_RGB_LCD.c ****   
+ 448              		.loc 1 207 3 is_stmt 0 view .LVU75
+ 449 000e BDF81820 		ldrh	r2, [sp, #24]
+ 450              	.LVL26:
+ 207:Core/Src/BSP_RGB_LCD.c ****   
+ 451              		.loc 1 207 3 view .LVU76
+ 452 0012 3846     		mov	r0, r7
+ 453              	.LVL27:
+ 207:Core/Src/BSP_RGB_LCD.c ****   
+ 454              		.loc 1 207 3 view .LVU77
+ 455 0014 FFF7FEFF 		bl	HAL_LTDC_SetWindowSize
+ 456              	.LVL28:
+ 210:Core/Src/BSP_RGB_LCD.c **** }
+ 457              		.loc 1 210 3 is_stmt 1 view .LVU78
+ 458 0018 2346     		mov	r3, r4
+ 459 001a 3246     		mov	r2, r6
+ 460 001c 2946     		mov	r1, r5
+ 461 001e 3846     		mov	r0, r7
+ 462 0020 FFF7FEFF 		bl	HAL_LTDC_SetWindowPosition
+ 463              	.LVL29:
+ 211:Core/Src/BSP_RGB_LCD.c **** 
+ 464              		.loc 1 211 1 is_stmt 0 view .LVU79
+ 465 0024 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 466              	.LVL30:
+ 467              	.L38:
+ 211:Core/Src/BSP_RGB_LCD.c **** 
+ 468              		.loc 1 211 1 view .LVU80
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 16
+
+
+ 469 0026 00BF     		.align	2
+ 470              	.L37:
+ 471 0028 00000000 		.word	.LANCHOR1
+ 472              		.cfi_endproc
+ 473              	.LFE331:
+ 475              		.section	.text.BSP_LCD_SetColorKeying,"ax",%progbits
+ 476              		.align	1
+ 477              		.global	BSP_LCD_SetColorKeying
+ 478              		.syntax unified
+ 479              		.thumb
+ 480              		.thumb_func
+ 482              	BSP_LCD_SetColorKeying:
+ 483              	.LVL31:
+ 484              	.LFB332:
+ 220:Core/Src/BSP_RGB_LCD.c ****   /* Configure and Enable the color Keying for LCD Layer */
+ 485              		.loc 1 220 1 is_stmt 1 view -0
+ 486              		.cfi_startproc
+ 487              		@ args = 0, pretend = 0, frame = 0
+ 488              		@ frame_needed = 0, uses_anonymous_args = 0
+ 220:Core/Src/BSP_RGB_LCD.c ****   /* Configure and Enable the color Keying for LCD Layer */
+ 489              		.loc 1 220 1 is_stmt 0 view .LVU82
+ 490 0000 38B5     		push	{r3, r4, r5, lr}
+ 491              		.cfi_def_cfa_offset 16
+ 492              		.cfi_offset 3, -16
+ 493              		.cfi_offset 4, -12
+ 494              		.cfi_offset 5, -8
+ 495              		.cfi_offset 14, -4
+ 496 0002 0446     		mov	r4, r0
+ 222:Core/Src/BSP_RGB_LCD.c ****   HAL_LTDC_EnableColorKeying(&hltdc, LayerIndex);
+ 497              		.loc 1 222 3 is_stmt 1 view .LVU83
+ 498 0004 044D     		ldr	r5, .L41
+ 499 0006 0246     		mov	r2, r0
+ 500 0008 2846     		mov	r0, r5
+ 501              	.LVL32:
+ 222:Core/Src/BSP_RGB_LCD.c ****   HAL_LTDC_EnableColorKeying(&hltdc, LayerIndex);
+ 502              		.loc 1 222 3 is_stmt 0 view .LVU84
+ 503 000a FFF7FEFF 		bl	HAL_LTDC_ConfigColorKeying
+ 504              	.LVL33:
+ 223:Core/Src/BSP_RGB_LCD.c **** }
+ 505              		.loc 1 223 3 is_stmt 1 view .LVU85
+ 506 000e 2146     		mov	r1, r4
+ 507 0010 2846     		mov	r0, r5
+ 508 0012 FFF7FEFF 		bl	HAL_LTDC_EnableColorKeying
+ 509              	.LVL34:
+ 224:Core/Src/BSP_RGB_LCD.c **** 
+ 510              		.loc 1 224 1 is_stmt 0 view .LVU86
+ 511 0016 38BD     		pop	{r3, r4, r5, pc}
+ 512              	.LVL35:
+ 513              	.L42:
+ 224:Core/Src/BSP_RGB_LCD.c **** 
+ 514              		.loc 1 224 1 view .LVU87
+ 515              		.align	2
+ 516              	.L41:
+ 517 0018 00000000 		.word	.LANCHOR1
+ 518              		.cfi_endproc
+ 519              	.LFE332:
+ 521              		.section	.text.BSP_LCD_ResetColorKeying,"ax",%progbits
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 17
+
+
+ 522              		.align	1
+ 523              		.global	BSP_LCD_ResetColorKeying
+ 524              		.syntax unified
+ 525              		.thumb
+ 526              		.thumb_func
+ 528              	BSP_LCD_ResetColorKeying:
+ 529              	.LVL36:
+ 530              	.LFB333:
+ 232:Core/Src/BSP_RGB_LCD.c ****   /* Disable the color Keying for LCD Layer */
+ 531              		.loc 1 232 1 is_stmt 1 view -0
+ 532              		.cfi_startproc
+ 533              		@ args = 0, pretend = 0, frame = 0
+ 534              		@ frame_needed = 0, uses_anonymous_args = 0
+ 232:Core/Src/BSP_RGB_LCD.c ****   /* Disable the color Keying for LCD Layer */
+ 535              		.loc 1 232 1 is_stmt 0 view .LVU89
+ 536 0000 08B5     		push	{r3, lr}
+ 537              		.cfi_def_cfa_offset 8
+ 538              		.cfi_offset 3, -8
+ 539              		.cfi_offset 14, -4
+ 540 0002 0146     		mov	r1, r0
+ 234:Core/Src/BSP_RGB_LCD.c **** }
+ 541              		.loc 1 234 3 is_stmt 1 view .LVU90
+ 542 0004 0148     		ldr	r0, .L45
+ 543              	.LVL37:
+ 234:Core/Src/BSP_RGB_LCD.c **** }
+ 544              		.loc 1 234 3 is_stmt 0 view .LVU91
+ 545 0006 FFF7FEFF 		bl	HAL_LTDC_DisableColorKeying
+ 546              	.LVL38:
+ 235:Core/Src/BSP_RGB_LCD.c **** 
+ 547              		.loc 1 235 1 view .LVU92
+ 548 000a 08BD     		pop	{r3, pc}
+ 549              	.L46:
+ 550              		.align	2
+ 551              	.L45:
+ 552 000c 00000000 		.word	.LANCHOR1
+ 553              		.cfi_endproc
+ 554              	.LFE333:
+ 556              		.section	.text.BSP_LCD_ReadPixel,"ax",%progbits
+ 557              		.align	1
+ 558              		.global	BSP_LCD_ReadPixel
+ 559              		.syntax unified
+ 560              		.thumb
+ 561              		.thumb_func
+ 563              	BSP_LCD_ReadPixel:
+ 564              	.LVL39:
+ 565              	.LFB334:
+ 244:Core/Src/BSP_RGB_LCD.c ****   uint32_t ret = 0;
+ 566              		.loc 1 244 1 is_stmt 1 view -0
+ 567              		.cfi_startproc
+ 568              		@ args = 0, pretend = 0, frame = 0
+ 569              		@ frame_needed = 0, uses_anonymous_args = 0
+ 244:Core/Src/BSP_RGB_LCD.c ****   uint32_t ret = 0;
+ 570              		.loc 1 244 1 is_stmt 0 view .LVU94
+ 571 0000 70B5     		push	{r4, r5, r6, lr}
+ 572              		.cfi_def_cfa_offset 16
+ 573              		.cfi_offset 4, -16
+ 574              		.cfi_offset 5, -12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 18
+
+
+ 575              		.cfi_offset 6, -8
+ 576              		.cfi_offset 14, -4
+ 577 0002 0446     		mov	r4, r0
+ 578 0004 0D46     		mov	r5, r1
+ 245:Core/Src/BSP_RGB_LCD.c ****   
+ 579              		.loc 1 245 3 is_stmt 1 view .LVU95
+ 580              	.LVL40:
+ 247:Core/Src/BSP_RGB_LCD.c ****   {
+ 581              		.loc 1 247 3 view .LVU96
+ 247:Core/Src/BSP_RGB_LCD.c ****   {
+ 582              		.loc 1 247 33 is_stmt 0 view .LVU97
+ 583 0006 224B     		ldr	r3, .L55
+ 584 0008 1A68     		ldr	r2, [r3]
+ 585 000a 224B     		ldr	r3, .L55+4
+ 586 000c 3421     		movs	r1, #52
+ 587              	.LVL41:
+ 247:Core/Src/BSP_RGB_LCD.c ****   {
+ 588              		.loc 1 247 33 view .LVU98
+ 589 000e 01FB0233 		mla	r3, r1, r2, r3
+ 590 0012 9B6C     		ldr	r3, [r3, #72]
+ 247:Core/Src/BSP_RGB_LCD.c ****   {
+ 591              		.loc 1 247 5 view .LVU99
+ 592 0014 53B9     		cbnz	r3, .L48
+ 250:Core/Src/BSP_RGB_LCD.c ****   }
+ 593              		.loc 1 250 5 is_stmt 1 view .LVU100
+ 250:Core/Src/BSP_RGB_LCD.c ****   }
+ 594              		.loc 1 250 57 is_stmt 0 view .LVU101
+ 595 0016 1F4B     		ldr	r3, .L55+4
+ 596 0018 01FB0233 		mla	r3, r1, r2, r3
+ 597 001c DE6D     		ldr	r6, [r3, #92]
+ 250:Core/Src/BSP_RGB_LCD.c ****   }
+ 598              		.loc 1 250 83 view .LVU102
+ 599 001e FFF7FEFF 		bl	BSP_LCD_GetXSize
+ 600              	.LVL42:
+ 250:Core/Src/BSP_RGB_LCD.c ****   }
+ 601              		.loc 1 250 102 view .LVU103
+ 602 0022 00FB0540 		mla	r0, r0, r5, r4
+ 250:Core/Src/BSP_RGB_LCD.c ****   }
+ 603              		.loc 1 250 9 view .LVU104
+ 604 0026 56F81000 		ldr	r0, [r6, r0, lsl #1]
+ 605              	.LVL43:
+ 606              	.L47:
+ 271:Core/Src/BSP_RGB_LCD.c **** 
+ 607              		.loc 1 271 1 view .LVU105
+ 608 002a 70BD     		pop	{r4, r5, r6, pc}
+ 609              	.LVL44:
+ 610              	.L48:
+ 252:Core/Src/BSP_RGB_LCD.c ****   {
+ 611              		.loc 1 252 8 is_stmt 1 view .LVU106
+ 612 002c 013B     		subs	r3, r3, #1
+ 613 002e 062B     		cmp	r3, #6
+ 614 0030 20D8     		bhi	.L50
+ 615 0032 DFE803F0 		tbb	[pc, r3]
+ 616              	.L52:
+ 617 0036 04       		.byte	(.L53-.L52)/2
+ 618 0037 12       		.byte	(.L51-.L52)/2
+ 619 0038 1F       		.byte	(.L50-.L52)/2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 19
+
+
+ 620 0039 12       		.byte	(.L51-.L52)/2
+ 621 003a 1F       		.byte	(.L50-.L52)/2
+ 622 003b 1F       		.byte	(.L50-.L52)/2
+ 623 003c 12       		.byte	(.L51-.L52)/2
+ 624 003d 00       		.p2align 1
+ 625              	.L53:
+ 255:Core/Src/BSP_RGB_LCD.c ****   }
+ 626              		.loc 1 255 5 view .LVU107
+ 255:Core/Src/BSP_RGB_LCD.c ****   }
+ 627              		.loc 1 255 58 is_stmt 0 view .LVU108
+ 628 003e 154B     		ldr	r3, .L55+4
+ 629 0040 3421     		movs	r1, #52
+ 630 0042 01FB0233 		mla	r3, r1, r2, r3
+ 631 0046 DE6D     		ldr	r6, [r3, #92]
+ 255:Core/Src/BSP_RGB_LCD.c ****   }
+ 632              		.loc 1 255 84 view .LVU109
+ 633 0048 FFF7FEFF 		bl	BSP_LCD_GetXSize
+ 634              	.LVL45:
+ 255:Core/Src/BSP_RGB_LCD.c ****   }
+ 635              		.loc 1 255 103 view .LVU110
+ 636 004c 00FB0540 		mla	r0, r0, r5, r4
+ 255:Core/Src/BSP_RGB_LCD.c ****   }
+ 637              		.loc 1 255 12 view .LVU111
+ 638 0050 56F81000 		ldr	r0, [r6, r0, lsl #1]
+ 255:Core/Src/BSP_RGB_LCD.c ****   }
+ 639              		.loc 1 255 9 view .LVU112
+ 640 0054 20F07F40 		bic	r0, r0, #-16777216
+ 641              	.LVL46:
+ 255:Core/Src/BSP_RGB_LCD.c ****   }
+ 642              		.loc 1 255 9 view .LVU113
+ 643 0058 E7E7     		b	.L47
+ 644              	.LVL47:
+ 645              	.L51:
+ 262:Core/Src/BSP_RGB_LCD.c ****   }
+ 646              		.loc 1 262 5 is_stmt 1 view .LVU114
+ 262:Core/Src/BSP_RGB_LCD.c ****   }
+ 647              		.loc 1 262 57 is_stmt 0 view .LVU115
+ 648 005a 0E4B     		ldr	r3, .L55+4
+ 649 005c 3421     		movs	r1, #52
+ 650 005e 01FB0233 		mla	r3, r1, r2, r3
+ 651 0062 DE6D     		ldr	r6, [r3, #92]
+ 262:Core/Src/BSP_RGB_LCD.c ****   }
+ 652              		.loc 1 262 83 view .LVU116
+ 653 0064 FFF7FEFF 		bl	BSP_LCD_GetXSize
+ 654              	.LVL48:
+ 262:Core/Src/BSP_RGB_LCD.c ****   }
+ 655              		.loc 1 262 102 view .LVU117
+ 656 0068 00FB0540 		mla	r0, r0, r5, r4
+ 262:Core/Src/BSP_RGB_LCD.c ****   }
+ 657              		.loc 1 262 11 view .LVU118
+ 658 006c 36F81000 		ldrh	r0, [r6, r0, lsl #1]
+ 659 0070 80B2     		uxth	r0, r0
+ 660              	.LVL49:
+ 262:Core/Src/BSP_RGB_LCD.c ****   }
+ 661              		.loc 1 262 9 view .LVU119
+ 662 0072 DAE7     		b	.L47
+ 663              	.LVL50:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 20
+
+
+ 664              	.L50:
+ 267:Core/Src/BSP_RGB_LCD.c ****   }
+ 665              		.loc 1 267 5 is_stmt 1 view .LVU120
+ 267:Core/Src/BSP_RGB_LCD.c ****   }
+ 666              		.loc 1 267 56 is_stmt 0 view .LVU121
+ 667 0074 074B     		ldr	r3, .L55+4
+ 668 0076 3421     		movs	r1, #52
+ 669 0078 01FB0233 		mla	r3, r1, r2, r3
+ 670 007c DE6D     		ldr	r6, [r3, #92]
+ 267:Core/Src/BSP_RGB_LCD.c ****   }
+ 671              		.loc 1 267 82 view .LVU122
+ 672 007e FFF7FEFF 		bl	BSP_LCD_GetXSize
+ 673              	.LVL51:
+ 267:Core/Src/BSP_RGB_LCD.c ****   }
+ 674              		.loc 1 267 101 view .LVU123
+ 675 0082 00FB0544 		mla	r4, r0, r5, r4
+ 267:Core/Src/BSP_RGB_LCD.c ****   }
+ 676              		.loc 1 267 11 view .LVU124
+ 677 0086 16F81400 		ldrb	r0, [r6, r4, lsl #1]	@ zero_extendqisi2
+ 678 008a C0B2     		uxtb	r0, r0
+ 679              	.LVL52:
+ 270:Core/Src/BSP_RGB_LCD.c **** }
+ 680              		.loc 1 270 3 is_stmt 1 view .LVU125
+ 270:Core/Src/BSP_RGB_LCD.c **** }
+ 681              		.loc 1 270 10 is_stmt 0 view .LVU126
+ 682 008c CDE7     		b	.L47
+ 683              	.L56:
+ 684 008e 00BF     		.align	2
+ 685              	.L55:
+ 686 0090 00000000 		.word	.LANCHOR2
+ 687 0094 00000000 		.word	.LANCHOR1
+ 688              		.cfi_endproc
+ 689              	.LFE334:
+ 691              		.section	.text.BSP_LCD_Clear,"ax",%progbits
+ 692              		.align	1
+ 693              		.global	BSP_LCD_Clear
+ 694              		.syntax unified
+ 695              		.thumb
+ 696              		.thumb_func
+ 698              	BSP_LCD_Clear:
+ 699              	.LVL53:
+ 700              	.LFB335:
+ 279:Core/Src/BSP_RGB_LCD.c ****   /* Clear the LCD */ 
+ 701              		.loc 1 279 1 is_stmt 1 view -0
+ 702              		.cfi_startproc
+ 703              		@ args = 0, pretend = 0, frame = 0
+ 704              		@ frame_needed = 0, uses_anonymous_args = 0
+ 279:Core/Src/BSP_RGB_LCD.c ****   /* Clear the LCD */ 
+ 705              		.loc 1 279 1 is_stmt 0 view .LVU128
+ 706 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 707              		.cfi_def_cfa_offset 20
+ 708              		.cfi_offset 4, -20
+ 709              		.cfi_offset 5, -16
+ 710              		.cfi_offset 6, -12
+ 711              		.cfi_offset 7, -8
+ 712              		.cfi_offset 14, -4
+ 713 0002 83B0     		sub	sp, sp, #12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 21
+
+
+ 714              		.cfi_def_cfa_offset 32
+ 715 0004 0546     		mov	r5, r0
+ 281:Core/Src/BSP_RGB_LCD.c **** }
+ 716              		.loc 1 281 3 is_stmt 1 view .LVU129
+ 717 0006 0B4B     		ldr	r3, .L59
+ 718 0008 1E68     		ldr	r6, [r3]
+ 281:Core/Src/BSP_RGB_LCD.c **** }
+ 719              		.loc 1 281 70 is_stmt 0 view .LVU130
+ 720 000a 0B4B     		ldr	r3, .L59+4
+ 721 000c 3422     		movs	r2, #52
+ 722 000e 02FB0633 		mla	r3, r2, r6, r3
+ 723 0012 DF6D     		ldr	r7, [r3, #92]
+ 281:Core/Src/BSP_RGB_LCD.c **** }
+ 724              		.loc 1 281 3 view .LVU131
+ 725 0014 FFF7FEFF 		bl	BSP_LCD_GetXSize
+ 726              	.LVL54:
+ 281:Core/Src/BSP_RGB_LCD.c **** }
+ 727              		.loc 1 281 3 view .LVU132
+ 728 0018 0446     		mov	r4, r0
+ 729 001a FFF7FEFF 		bl	BSP_LCD_GetYSize
+ 730              	.LVL55:
+ 731 001e 0346     		mov	r3, r0
+ 732 0020 0195     		str	r5, [sp, #4]
+ 733 0022 0022     		movs	r2, #0
+ 734 0024 0092     		str	r2, [sp]
+ 735 0026 2246     		mov	r2, r4
+ 736 0028 3946     		mov	r1, r7
+ 737 002a 3046     		mov	r0, r6
+ 738 002c FFF7FEFF 		bl	LL_FillBuffer
+ 739              	.LVL56:
+ 282:Core/Src/BSP_RGB_LCD.c **** 
+ 740              		.loc 1 282 1 view .LVU133
+ 741 0030 03B0     		add	sp, sp, #12
+ 742              		.cfi_def_cfa_offset 20
+ 743              		@ sp needed
+ 744 0032 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 745              	.LVL57:
+ 746              	.L60:
+ 282:Core/Src/BSP_RGB_LCD.c **** 
+ 747              		.loc 1 282 1 view .LVU134
+ 748              		.align	2
+ 749              	.L59:
+ 750 0034 00000000 		.word	.LANCHOR2
+ 751 0038 00000000 		.word	.LANCHOR1
+ 752              		.cfi_endproc
+ 753              	.LFE335:
+ 755              		.section	.text.BSP_LCD_DrawPixel,"ax",%progbits
+ 756              		.align	1
+ 757              		.global	BSP_LCD_DrawPixel
+ 758              		.syntax unified
+ 759              		.thumb
+ 760              		.thumb_func
+ 762              	BSP_LCD_DrawPixel:
+ 763              	.LVL58:
+ 764              	.LFB336:
+ 293:Core/Src/BSP_RGB_LCD.c ****   /* Write data value to all SDRAM memory */
+ 765              		.loc 1 293 1 is_stmt 1 view -0
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 22
+
+
+ 766              		.cfi_startproc
+ 767              		@ args = 0, pretend = 0, frame = 0
+ 768              		@ frame_needed = 0, uses_anonymous_args = 0
+ 293:Core/Src/BSP_RGB_LCD.c ****   /* Write data value to all SDRAM memory */
+ 769              		.loc 1 293 1 is_stmt 0 view .LVU136
+ 770 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 771              		.cfi_def_cfa_offset 24
+ 772              		.cfi_offset 3, -24
+ 773              		.cfi_offset 4, -20
+ 774              		.cfi_offset 5, -16
+ 775              		.cfi_offset 6, -12
+ 776              		.cfi_offset 7, -8
+ 777              		.cfi_offset 14, -4
+ 778 0002 0446     		mov	r4, r0
+ 779 0004 0D46     		mov	r5, r1
+ 780 0006 1646     		mov	r6, r2
+ 295:Core/Src/BSP_RGB_LCD.c ****   { /* RGB565 format */
+ 781              		.loc 1 295 3 is_stmt 1 view .LVU137
+ 295:Core/Src/BSP_RGB_LCD.c ****   { /* RGB565 format */
+ 782              		.loc 1 295 33 is_stmt 0 view .LVU138
+ 783 0008 104B     		ldr	r3, .L66
+ 784 000a 1A68     		ldr	r2, [r3]
+ 785              	.LVL59:
+ 295:Core/Src/BSP_RGB_LCD.c ****   { /* RGB565 format */
+ 786              		.loc 1 295 33 view .LVU139
+ 787 000c 104B     		ldr	r3, .L66+4
+ 788 000e 3421     		movs	r1, #52
+ 789              	.LVL60:
+ 295:Core/Src/BSP_RGB_LCD.c ****   { /* RGB565 format */
+ 790              		.loc 1 295 33 view .LVU140
+ 791 0010 01FB0233 		mla	r3, r1, r2, r3
+ 792 0014 9B6C     		ldr	r3, [r3, #72]
+ 295:Core/Src/BSP_RGB_LCD.c ****   { /* RGB565 format */
+ 793              		.loc 1 295 5 view .LVU141
+ 794 0016 022B     		cmp	r3, #2
+ 795 0018 0BD0     		beq	.L65
+ 301:Core/Src/BSP_RGB_LCD.c ****   }
+ 796              		.loc 1 301 5 is_stmt 1 view .LVU142
+ 301:Core/Src/BSP_RGB_LCD.c ****   }
+ 797              		.loc 1 301 51 is_stmt 0 view .LVU143
+ 798 001a 0D4B     		ldr	r3, .L66+4
+ 799 001c 3421     		movs	r1, #52
+ 800 001e 01FB0233 		mla	r3, r1, r2, r3
+ 801 0022 DF6D     		ldr	r7, [r3, #92]
+ 301:Core/Src/BSP_RGB_LCD.c ****   }
+ 802              		.loc 1 301 77 view .LVU144
+ 803 0024 FFF7FEFF 		bl	BSP_LCD_GetXSize
+ 804              	.LVL61:
+ 301:Core/Src/BSP_RGB_LCD.c ****   }
+ 805              		.loc 1 301 96 view .LVU145
+ 806 0028 00FB0544 		mla	r4, r0, r5, r4
+ 301:Core/Src/BSP_RGB_LCD.c ****   }
+ 807              		.loc 1 301 106 view .LVU146
+ 808 002c 47F82460 		str	r6, [r7, r4, lsl #2]
+ 809              	.LVL62:
+ 810              	.L61:
+ 303:Core/Src/BSP_RGB_LCD.c **** 
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 23
+
+
+ 811              		.loc 1 303 1 view .LVU147
+ 812 0030 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 813              	.LVL63:
+ 814              	.L65:
+ 297:Core/Src/BSP_RGB_LCD.c ****   }
+ 815              		.loc 1 297 5 is_stmt 1 view .LVU148
+ 297:Core/Src/BSP_RGB_LCD.c ****   }
+ 816              		.loc 1 297 51 is_stmt 0 view .LVU149
+ 817 0032 074B     		ldr	r3, .L66+4
+ 818 0034 01FB0233 		mla	r3, r1, r2, r3
+ 819 0038 DF6D     		ldr	r7, [r3, #92]
+ 297:Core/Src/BSP_RGB_LCD.c ****   }
+ 820              		.loc 1 297 77 view .LVU150
+ 821 003a FFF7FEFF 		bl	BSP_LCD_GetXSize
+ 822              	.LVL64:
+ 297:Core/Src/BSP_RGB_LCD.c ****   }
+ 823              		.loc 1 297 96 view .LVU151
+ 824 003e 00FB0540 		mla	r0, r0, r5, r4
+ 297:Core/Src/BSP_RGB_LCD.c ****   }
+ 825              		.loc 1 297 108 view .LVU152
+ 826 0042 B6B2     		uxth	r6, r6
+ 827              	.LVL65:
+ 297:Core/Src/BSP_RGB_LCD.c ****   }
+ 828              		.loc 1 297 106 view .LVU153
+ 829 0044 27F81060 		strh	r6, [r7, r0, lsl #1]	@ movhi
+ 830 0048 F2E7     		b	.L61
+ 831              	.L67:
+ 832 004a 00BF     		.align	2
+ 833              	.L66:
+ 834 004c 00000000 		.word	.LANCHOR2
+ 835 0050 00000000 		.word	.LANCHOR1
+ 836              		.cfi_endproc
+ 837              	.LFE336:
+ 839              		.section	.bss.ActiveLayer,"aw",%nobits
+ 840              		.align	2
+ 841              		.set	.LANCHOR2,. + 0
+ 844              	ActiveLayer:
+ 845 0000 00000000 		.space	4
+ 846              		.section	.bss.hdma2d,"aw",%nobits
+ 847              		.align	2
+ 848              		.set	.LANCHOR0,. + 0
+ 851              	hdma2d:
+ 852 0000 00000000 		.space	96
+ 852      00000000 
+ 852      00000000 
+ 852      00000000 
+ 852      00000000 
+ 853              		.section	.bss.hltdc,"aw",%nobits
+ 854              		.align	2
+ 855              		.set	.LANCHOR1,. + 0
+ 858              	hltdc:
+ 859 0000 00000000 		.space	116
+ 859      00000000 
+ 859      00000000 
+ 859      00000000 
+ 859      00000000 
+ 860              		.text
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 24
+
+
+ 861              	.Letext0:
+ 862              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 863              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 864              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+ 865              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h"
+ 866              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 867              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma2d.h"
+ 868              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_ltdc.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 25
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 BSP_RGB_LCD.c
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:20     .text.LL_FillBuffer:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:25     .text.LL_FillBuffer:0000000000000000 LL_FillBuffer
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:159    .text.LL_FillBuffer:0000000000000090 $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:167    .text.BSP_LCD_GetXSize:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:173    .text.BSP_LCD_GetXSize:0000000000000000 BSP_LCD_GetXSize
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:193    .text.BSP_LCD_GetXSize:0000000000000010 $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:199    .text.BSP_LCD_GetYSize:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:205    .text.BSP_LCD_GetYSize:0000000000000000 BSP_LCD_GetYSize
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:225    .text.BSP_LCD_GetYSize:0000000000000010 $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:231    .text.BSP_LCD_SelectLayer:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:237    .text.BSP_LCD_SelectLayer:0000000000000000 BSP_LCD_SelectLayer
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:254    .text.BSP_LCD_SelectLayer:0000000000000008 $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:259    .text.BSP_LCD_SetLayerVisible:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:265    .text.BSP_LCD_SetLayerVisible:0000000000000000 BSP_LCD_SetLayerVisible
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:305    .text.BSP_LCD_SetLayerVisible:000000000000003c $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:310    .text.BSP_LCD_Init:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:316    .text.BSP_LCD_Init:0000000000000000 BSP_LCD_Init
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:347    .text.BSP_LCD_SetTransparency:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:353    .text.BSP_LCD_SetTransparency:0000000000000000 BSP_LCD_SetTransparency
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:377    .text.BSP_LCD_SetTransparency:000000000000000c $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:382    .text.BSP_LCD_SetLayerAddress:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:388    .text.BSP_LCD_SetLayerAddress:0000000000000000 BSP_LCD_SetLayerAddress
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:412    .text.BSP_LCD_SetLayerAddress:000000000000000c $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:417    .text.BSP_LCD_SetLayerWindow:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:423    .text.BSP_LCD_SetLayerWindow:0000000000000000 BSP_LCD_SetLayerWindow
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:471    .text.BSP_LCD_SetLayerWindow:0000000000000028 $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:476    .text.BSP_LCD_SetColorKeying:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:482    .text.BSP_LCD_SetColorKeying:0000000000000000 BSP_LCD_SetColorKeying
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:517    .text.BSP_LCD_SetColorKeying:0000000000000018 $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:522    .text.BSP_LCD_ResetColorKeying:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:528    .text.BSP_LCD_ResetColorKeying:0000000000000000 BSP_LCD_ResetColorKeying
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:552    .text.BSP_LCD_ResetColorKeying:000000000000000c $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:557    .text.BSP_LCD_ReadPixel:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:563    .text.BSP_LCD_ReadPixel:0000000000000000 BSP_LCD_ReadPixel
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:617    .text.BSP_LCD_ReadPixel:0000000000000036 $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:686    .text.BSP_LCD_ReadPixel:0000000000000090 $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:692    .text.BSP_LCD_Clear:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:698    .text.BSP_LCD_Clear:0000000000000000 BSP_LCD_Clear
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:750    .text.BSP_LCD_Clear:0000000000000034 $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:756    .text.BSP_LCD_DrawPixel:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:762    .text.BSP_LCD_DrawPixel:0000000000000000 BSP_LCD_DrawPixel
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:834    .text.BSP_LCD_DrawPixel:000000000000004c $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:840    .bss.ActiveLayer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:844    .bss.ActiveLayer:0000000000000000 ActiveLayer
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:847    .bss.hdma2d:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:851    .bss.hdma2d:0000000000000000 hdma2d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:854    .bss.hltdc:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:858    .bss.hltdc:0000000000000000 hltdc
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:624    .text.BSP_LCD_ReadPixel:000000000000003d $d
+C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s:624    .text.BSP_LCD_ReadPixel:000000000000003e $t
+
+UNDEFINED SYMBOLS
+HAL_DMA2D_Init
+HAL_DMA2D_ConfigLayer
+HAL_DMA2D_Start
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccR6lJLP.s 			page 26
+
+
+HAL_DMA2D_PollForTransfer
+HAL_LTDC_SetAlpha
+HAL_LTDC_SetAddress
+HAL_LTDC_SetWindowSize
+HAL_LTDC_SetWindowPosition
+HAL_LTDC_ConfigColorKeying
+HAL_LTDC_EnableColorKeying
+HAL_LTDC_DisableColorKeying

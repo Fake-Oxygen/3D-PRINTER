@@ -1,0 +1,982 @@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"Analog_I2C.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.rodata.I2C_Start.str1.4,"aMS",%progbits,1
+  20              		.align	2
+  21              	.LC0:
+  22 0000 4400     		.ascii	"D\000"
+  23              		.section	.text.I2C_Start,"ax",%progbits
+  24              		.align	1
+  25              		.global	I2C_Start
+  26              		.syntax unified
+  27              		.thumb
+  28              		.thumb_func
+  30              	I2C_Start:
+  31              	.LFB324:
+  32              		.file 1 "Core/Src/Analog_I2C.c"
+   1:Core/Src/Analog_I2C.c **** /*****************************************************************************
+   2:Core/Src/Analog_I2C.c **** * | File      	:   Analog_I2C.c
+   3:Core/Src/Analog_I2C.c **** * | Author      :   Waveshare team
+   4:Core/Src/Analog_I2C.c **** * | Function    :   Analog I2C driver
+   5:Core/Src/Analog_I2C.c **** * | Info        :
+   6:Core/Src/Analog_I2C.c **** *               Analog I2C driver
+   7:Core/Src/Analog_I2C.c **** *----------------
+   8:Core/Src/Analog_I2C.c **** * |	This version:   V1.0
+   9:Core/Src/Analog_I2C.c **** * | Date        :   2019-3-5
+  10:Core/Src/Analog_I2C.c **** * | Info        :
+  11:Core/Src/Analog_I2C.c **** 
+  12:Core/Src/Analog_I2C.c **** # Permission is hereby granted, free of charge, to any person obtaining a copy
+  13:Core/Src/Analog_I2C.c **** # of this software and associated documnetation files (the "Software"), to deal
+  14:Core/Src/Analog_I2C.c **** # in the Software without restriction, including without limitation the rights
+  15:Core/Src/Analog_I2C.c **** # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  16:Core/Src/Analog_I2C.c **** # copies of the Software, and to permit persons to  whom the Software is
+  17:Core/Src/Analog_I2C.c **** # furished to do so, subject to the following conditions:
+  18:Core/Src/Analog_I2C.c **** #
+  19:Core/Src/Analog_I2C.c **** # The above copyright notice and this permission notice shall be included in
+  20:Core/Src/Analog_I2C.c **** # all copies or substantial portions of the Software.
+  21:Core/Src/Analog_I2C.c **** #
+  22:Core/Src/Analog_I2C.c **** # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  23:Core/Src/Analog_I2C.c **** # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  24:Core/Src/Analog_I2C.c **** # FITNESS OR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  25:Core/Src/Analog_I2C.c **** # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  26:Core/Src/Analog_I2C.c **** # LIABILITY WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 2
+
+
+  27:Core/Src/Analog_I2C.c **** # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  28:Core/Src/Analog_I2C.c **** # THE SOFTWARE.
+  29:Core/Src/Analog_I2C.c **** #
+  30:Core/Src/Analog_I2C.c **** ******************************************************************************/
+  31:Core/Src/Analog_I2C.c **** #include "Analog_I2C.h"
+  32:Core/Src/Analog_I2C.c **** 
+  33:Core/Src/Analog_I2C.c **** /******************************************************************************
+  34:Core/Src/Analog_I2C.c **** function:	Subtle level delay
+  35:Core/Src/Analog_I2C.c **** parameter:
+  36:Core/Src/Analog_I2C.c **** 			us	�� Waiting time unit us
+  37:Core/Src/Analog_I2C.c **** ******************************************************************************/
+  38:Core/Src/Analog_I2C.c **** 
+  39:Core/Src/Analog_I2C.c **** 
+  40:Core/Src/Analog_I2C.c **** /******************************************************************************
+  41:Core/Src/Analog_I2C.c **** function:	I2C protocol start signal
+  42:Core/Src/Analog_I2C.c **** ******************************************************************************/
+  43:Core/Src/Analog_I2C.c **** void I2C_Start(void)
+  44:Core/Src/Analog_I2C.c **** {
+  33              		.loc 1 44 1 view -0
+  34              		.cfi_startproc
+  35              		@ args = 0, pretend = 0, frame = 0
+  36              		@ frame_needed = 0, uses_anonymous_args = 0
+  37 0000 10B5     		push	{r4, lr}
+  38              		.cfi_def_cfa_offset 8
+  39              		.cfi_offset 4, -8
+  40              		.cfi_offset 14, -4
+  45:Core/Src/Analog_I2C.c **** 	DEV_Set_GPIOMode(DEV_SDA_PIN, 0);
+  41              		.loc 1 45 2 view .LVU1
+  42 0002 0022     		movs	r2, #0
+  43 0004 0D21     		movs	r1, #13
+  44 0006 1248     		ldr	r0, .L3
+  45 0008 FFF7FEFF 		bl	DEV_Set_GPIOMode
+  46              	.LVL0:
+  46:Core/Src/Analog_I2C.c **** 	
+  47:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 13, 1);
+  47              		.loc 1 47 2 view .LVU2
+  48 000c 114C     		ldr	r4, .L3+4
+  49 000e 0122     		movs	r2, #1
+  50 0010 0D21     		movs	r1, #13
+  51 0012 2046     		mov	r0, r4
+  52 0014 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  53              	.LVL1:
+  48:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);	
+  54              		.loc 1 48 2 view .LVU3
+  55 0018 0120     		movs	r0, #1
+  56 001a FFF7FEFF 		bl	DEV_Delay_us
+  57              	.LVL2:
+  49:Core/Src/Analog_I2C.c **** 	
+  50:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 12, 1);
+  58              		.loc 1 50 2 view .LVU4
+  59 001e 0122     		movs	r2, #1
+  60 0020 0C21     		movs	r1, #12
+  61 0022 2046     		mov	r0, r4
+  62 0024 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  63              	.LVL3:
+  51:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);
+  64              		.loc 1 51 2 view .LVU5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 3
+
+
+  65 0028 0120     		movs	r0, #1
+  66 002a FFF7FEFF 		bl	DEV_Delay_us
+  67              	.LVL4:
+  52:Core/Src/Analog_I2C.c **** 	
+  53:Core/Src/Analog_I2C.c ****  	DEV_Digital_Write(GPIOD, 13, 0);
+  68              		.loc 1 53 3 view .LVU6
+  69 002e 0022     		movs	r2, #0
+  70 0030 0D21     		movs	r1, #13
+  71 0032 2046     		mov	r0, r4
+  72 0034 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  73              	.LVL5:
+  54:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);
+  74              		.loc 1 54 2 view .LVU7
+  75 0038 0120     		movs	r0, #1
+  76 003a FFF7FEFF 		bl	DEV_Delay_us
+  77              	.LVL6:
+  55:Core/Src/Analog_I2C.c **** 	
+  56:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 12, 0);
+  78              		.loc 1 56 2 view .LVU8
+  79 003e 0022     		movs	r2, #0
+  80 0040 0C21     		movs	r1, #12
+  81 0042 2046     		mov	r0, r4
+  82 0044 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  83              	.LVL7:
+  57:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);
+  84              		.loc 1 57 2 view .LVU9
+  85 0048 0120     		movs	r0, #1
+  86 004a FFF7FEFF 		bl	DEV_Delay_us
+  87              	.LVL8:
+  58:Core/Src/Analog_I2C.c **** }	  
+  88              		.loc 1 58 1 is_stmt 0 view .LVU10
+  89 004e 10BD     		pop	{r4, pc}
+  90              	.L4:
+  91              		.align	2
+  92              	.L3:
+  93 0050 00000000 		.word	.LC0
+  94 0054 000C0048 		.word	1207962624
+  95              		.cfi_endproc
+  96              	.LFE324:
+  98              		.section	.text.I2C_Stop,"ax",%progbits
+  99              		.align	1
+ 100              		.global	I2C_Stop
+ 101              		.syntax unified
+ 102              		.thumb
+ 103              		.thumb_func
+ 105              	I2C_Stop:
+ 106              	.LFB325:
+  59:Core/Src/Analog_I2C.c **** 
+  60:Core/Src/Analog_I2C.c **** /******************************************************************************
+  61:Core/Src/Analog_I2C.c **** function:	I2C protocol end signal
+  62:Core/Src/Analog_I2C.c **** ******************************************************************************/
+  63:Core/Src/Analog_I2C.c **** void I2C_Stop(void)
+  64:Core/Src/Analog_I2C.c **** {
+ 107              		.loc 1 64 1 is_stmt 1 view -0
+ 108              		.cfi_startproc
+ 109              		@ args = 0, pretend = 0, frame = 0
+ 110              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 4
+
+
+ 111 0000 10B5     		push	{r4, lr}
+ 112              		.cfi_def_cfa_offset 8
+ 113              		.cfi_offset 4, -8
+ 114              		.cfi_offset 14, -4
+  65:Core/Src/Analog_I2C.c **** 	DEV_Set_GPIOMode(DEV_SDA_PIN, 0);
+ 115              		.loc 1 65 2 view .LVU12
+ 116 0002 0022     		movs	r2, #0
+ 117 0004 0D21     		movs	r1, #13
+ 118 0006 0E48     		ldr	r0, .L7
+ 119 0008 FFF7FEFF 		bl	DEV_Set_GPIOMode
+ 120              	.LVL9:
+  66:Core/Src/Analog_I2C.c **** 	
+  67:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 13, 0);
+ 121              		.loc 1 67 2 view .LVU13
+ 122 000c 0D4C     		ldr	r4, .L7+4
+ 123 000e 0022     		movs	r2, #0
+ 124 0010 0D21     		movs	r1, #13
+ 125 0012 2046     		mov	r0, r4
+ 126 0014 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 127              	.LVL10:
+  68:Core/Src/Analog_I2C.c ****  	DEV_Delay_us(1);
+ 128              		.loc 1 68 3 view .LVU14
+ 129 0018 0120     		movs	r0, #1
+ 130 001a FFF7FEFF 		bl	DEV_Delay_us
+ 131              	.LVL11:
+  69:Core/Src/Analog_I2C.c **** 	
+  70:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 12, 1);
+ 132              		.loc 1 70 2 view .LVU15
+ 133 001e 0122     		movs	r2, #1
+ 134 0020 0C21     		movs	r1, #12
+ 135 0022 2046     		mov	r0, r4
+ 136 0024 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 137              	.LVL12:
+  71:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);
+ 138              		.loc 1 71 2 view .LVU16
+ 139 0028 0120     		movs	r0, #1
+ 140 002a FFF7FEFF 		bl	DEV_Delay_us
+ 141              	.LVL13:
+  72:Core/Src/Analog_I2C.c **** 	
+  73:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 13, 1);
+ 142              		.loc 1 73 2 view .LVU17
+ 143 002e 0122     		movs	r2, #1
+ 144 0030 0D21     		movs	r1, #13
+ 145 0032 2046     		mov	r0, r4
+ 146 0034 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 147              	.LVL14:
+  74:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);							   	
+ 148              		.loc 1 74 2 view .LVU18
+ 149 0038 0120     		movs	r0, #1
+ 150 003a FFF7FEFF 		bl	DEV_Delay_us
+ 151              	.LVL15:
+  75:Core/Src/Analog_I2C.c **** }
+ 152              		.loc 1 75 1 is_stmt 0 view .LVU19
+ 153 003e 10BD     		pop	{r4, pc}
+ 154              	.L8:
+ 155              		.align	2
+ 156              	.L7:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 5
+
+
+ 157 0040 00000000 		.word	.LC0
+ 158 0044 000C0048 		.word	1207962624
+ 159              		.cfi_endproc
+ 160              	.LFE325:
+ 162              		.section	.text.I2C_Send_Byte,"ax",%progbits
+ 163              		.align	1
+ 164              		.global	I2C_Send_Byte
+ 165              		.syntax unified
+ 166              		.thumb
+ 167              		.thumb_func
+ 169              	I2C_Send_Byte:
+ 170              	.LVL16:
+ 171              	.LFB326:
+  76:Core/Src/Analog_I2C.c **** 
+  77:Core/Src/Analog_I2C.c **** /******************************************************************************
+  78:Core/Src/Analog_I2C.c **** function:	I2C protocol sends a byte
+  79:Core/Src/Analog_I2C.c **** parameter:
+  80:Core/Src/Analog_I2C.c **** 			data	�� Sent data
+  81:Core/Src/Analog_I2C.c **** ******************************************************************************/
+  82:Core/Src/Analog_I2C.c **** void I2C_Send_Byte(UBYTE data)
+  83:Core/Src/Analog_I2C.c **** {                        
+ 172              		.loc 1 83 1 is_stmt 1 view -0
+ 173              		.cfi_startproc
+ 174              		@ args = 0, pretend = 0, frame = 0
+ 175              		@ frame_needed = 0, uses_anonymous_args = 0
+ 176              		.loc 1 83 1 is_stmt 0 view .LVU21
+ 177 0000 70B5     		push	{r4, r5, r6, lr}
+ 178              		.cfi_def_cfa_offset 16
+ 179              		.cfi_offset 4, -16
+ 180              		.cfi_offset 5, -12
+ 181              		.cfi_offset 6, -8
+ 182              		.cfi_offset 14, -4
+ 183 0002 0446     		mov	r4, r0
+  84:Core/Src/Analog_I2C.c **** 	UBYTE t; 
+ 184              		.loc 1 84 2 is_stmt 1 view .LVU22
+  85:Core/Src/Analog_I2C.c ****   
+  86:Core/Src/Analog_I2C.c **** 	DEV_Set_GPIOMode(GPIOD, 13, 0);   
+ 185              		.loc 1 86 2 view .LVU23
+ 186 0004 234D     		ldr	r5, .L16
+ 187 0006 0022     		movs	r2, #0
+ 188 0008 0D21     		movs	r1, #13
+ 189 000a 2846     		mov	r0, r5
+ 190              	.LVL17:
+ 191              		.loc 1 86 2 is_stmt 0 view .LVU24
+ 192 000c FFF7FEFF 		bl	DEV_Set_GPIOMode
+ 193              	.LVL18:
+  87:Core/Src/Analog_I2C.c ****   DEV_Digital_Write(GPIOD, 12, 0);
+ 194              		.loc 1 87 3 is_stmt 1 view .LVU25
+ 195 0010 0022     		movs	r2, #0
+ 196 0012 0C21     		movs	r1, #12
+ 197 0014 2846     		mov	r0, r5
+ 198 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 199              	.LVL19:
+  88:Core/Src/Analog_I2C.c **** 		
+  89:Core/Src/Analog_I2C.c **** 	for(t = 0; t < 8; t++){              
+ 200              		.loc 1 89 2 view .LVU26
+ 201              		.loc 1 89 8 is_stmt 0 view .LVU27
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 6
+
+
+ 202 001a 0025     		movs	r5, #0
+ 203              		.loc 1 89 2 view .LVU28
+ 204 001c 1CE0     		b	.L10
+ 205              	.LVL20:
+ 206              	.L11:
+  90:Core/Src/Analog_I2C.c **** 		if(data & 0x80){
+  91:Core/Src/Analog_I2C.c **** 			DEV_Digital_Write(GPIOD, 13, 1);
+  92:Core/Src/Analog_I2C.c **** 		}else{
+  93:Core/Src/Analog_I2C.c **** 			DEV_Digital_Write(GPIOD, 13, 0);
+ 207              		.loc 1 93 4 is_stmt 1 view .LVU29
+ 208 001e 0022     		movs	r2, #0
+ 209 0020 0D21     		movs	r1, #13
+ 210 0022 1C48     		ldr	r0, .L16
+ 211 0024 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 212              	.LVL21:
+ 213              	.L12:
+  94:Core/Src/Analog_I2C.c **** 		}
+  95:Core/Src/Analog_I2C.c **** 		data <<= 1; 	  
+ 214              		.loc 1 95 3 discriminator 2 view .LVU30
+ 215              		.loc 1 95 8 is_stmt 0 discriminator 2 view .LVU31
+ 216 0028 6400     		lsls	r4, r4, #1
+ 217              	.LVL22:
+ 218              		.loc 1 95 8 discriminator 2 view .LVU32
+ 219 002a E4B2     		uxtb	r4, r4
+ 220              	.LVL23:
+  96:Core/Src/Analog_I2C.c **** 		DEV_Delay_us(1); 
+ 221              		.loc 1 96 3 is_stmt 1 discriminator 2 view .LVU33
+ 222 002c 0120     		movs	r0, #1
+ 223 002e FFF7FEFF 		bl	DEV_Delay_us
+ 224              	.LVL24:
+  97:Core/Src/Analog_I2C.c **** 
+  98:Core/Src/Analog_I2C.c **** 		DEV_Digital_Write(GPIOD, 12, 1);
+ 225              		.loc 1 98 3 discriminator 2 view .LVU34
+ 226 0032 184E     		ldr	r6, .L16
+ 227 0034 0122     		movs	r2, #1
+ 228 0036 0C21     		movs	r1, #12
+ 229 0038 3046     		mov	r0, r6
+ 230 003a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 231              	.LVL25:
+  99:Core/Src/Analog_I2C.c **** 		DEV_Delay_us(1); 
+ 232              		.loc 1 99 3 discriminator 2 view .LVU35
+ 233 003e 0120     		movs	r0, #1
+ 234 0040 FFF7FEFF 		bl	DEV_Delay_us
+ 235              	.LVL26:
+ 100:Core/Src/Analog_I2C.c **** 		DEV_Digital_Write(GPIOD, 12, 0);
+ 236              		.loc 1 100 3 discriminator 2 view .LVU36
+ 237 0044 0022     		movs	r2, #0
+ 238 0046 0C21     		movs	r1, #12
+ 239 0048 3046     		mov	r0, r6
+ 240 004a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 241              	.LVL27:
+ 101:Core/Src/Analog_I2C.c **** 		DEV_Delay_us(1);
+ 242              		.loc 1 101 3 discriminator 2 view .LVU37
+ 243 004e 0120     		movs	r0, #1
+ 244 0050 FFF7FEFF 		bl	DEV_Delay_us
+ 245              	.LVL28:
+  89:Core/Src/Analog_I2C.c **** 		if(data & 0x80){
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 7
+
+
+ 246              		.loc 1 89 21 discriminator 2 view .LVU38
+ 247 0054 0135     		adds	r5, r5, #1
+ 248              	.LVL29:
+  89:Core/Src/Analog_I2C.c **** 		if(data & 0x80){
+ 249              		.loc 1 89 21 is_stmt 0 discriminator 2 view .LVU39
+ 250 0056 EDB2     		uxtb	r5, r5
+ 251              	.LVL30:
+ 252              	.L10:
+  89:Core/Src/Analog_I2C.c **** 		if(data & 0x80){
+ 253              		.loc 1 89 15 is_stmt 1 discriminator 1 view .LVU40
+ 254 0058 072D     		cmp	r5, #7
+ 255 005a 08D8     		bhi	.L15
+  90:Core/Src/Analog_I2C.c **** 			DEV_Digital_Write(GPIOD, 13, 1);
+ 256              		.loc 1 90 3 view .LVU41
+  90:Core/Src/Analog_I2C.c **** 			DEV_Digital_Write(GPIOD, 13, 1);
+ 257              		.loc 1 90 5 is_stmt 0 view .LVU42
+ 258 005c 14F0800F 		tst	r4, #128
+ 259 0060 DDD0     		beq	.L11
+  91:Core/Src/Analog_I2C.c **** 		}else{
+ 260              		.loc 1 91 4 is_stmt 1 view .LVU43
+ 261 0062 0122     		movs	r2, #1
+ 262 0064 0D21     		movs	r1, #13
+ 263 0066 0B48     		ldr	r0, .L16
+ 264 0068 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 265              	.LVL31:
+ 266 006c DCE7     		b	.L12
+ 267              	.L15:
+ 102:Core/Src/Analog_I2C.c **** 	}	 
+ 103:Core/Src/Analog_I2C.c **** 
+ 104:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 13, 1);
+ 268              		.loc 1 104 2 view .LVU44
+ 269 006e 094C     		ldr	r4, .L16
+ 270              	.LVL32:
+ 271              		.loc 1 104 2 is_stmt 0 view .LVU45
+ 272 0070 0122     		movs	r2, #1
+ 273 0072 0D21     		movs	r1, #13
+ 274 0074 2046     		mov	r0, r4
+ 275 0076 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 276              	.LVL33:
+ 105:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);
+ 277              		.loc 1 105 2 is_stmt 1 view .LVU46
+ 278 007a 0120     		movs	r0, #1
+ 279 007c FFF7FEFF 		bl	DEV_Delay_us
+ 280              	.LVL34:
+ 106:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 12, 0);
+ 281              		.loc 1 106 2 view .LVU47
+ 282 0080 0022     		movs	r2, #0
+ 283 0082 0C21     		movs	r1, #12
+ 284 0084 2046     		mov	r0, r4
+ 285 0086 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 286              	.LVL35:
+ 107:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);
+ 287              		.loc 1 107 2 view .LVU48
+ 288 008a 0120     		movs	r0, #1
+ 289 008c FFF7FEFF 		bl	DEV_Delay_us
+ 290              	.LVL36:
+ 108:Core/Src/Analog_I2C.c **** } 
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 8
+
+
+ 291              		.loc 1 108 1 is_stmt 0 view .LVU49
+ 292 0090 70BD     		pop	{r4, r5, r6, pc}
+ 293              	.LVL37:
+ 294              	.L17:
+ 295              		.loc 1 108 1 view .LVU50
+ 296 0092 00BF     		.align	2
+ 297              	.L16:
+ 298 0094 000C0048 		.word	1207962624
+ 299              		.cfi_endproc
+ 300              	.LFE326:
+ 302              		.section	.text.I2C_Wait_Ack,"ax",%progbits
+ 303              		.align	1
+ 304              		.global	I2C_Wait_Ack
+ 305              		.syntax unified
+ 306              		.thumb
+ 307              		.thumb_func
+ 309              	I2C_Wait_Ack:
+ 310              	.LFB328:
+ 109:Core/Src/Analog_I2C.c **** 
+ 110:Core/Src/Analog_I2C.c **** /******************************************************************************
+ 111:Core/Src/Analog_I2C.c **** function:	I2C protocol reads one byte
+ 112:Core/Src/Analog_I2C.c **** parameter:
+ 113:Core/Src/Analog_I2C.c **** 			ack	�� Whether to answer 1 Answer ,0 Not answering
+ 114:Core/Src/Analog_I2C.c **** return:
+ 115:Core/Src/Analog_I2C.c **** 			Read data
+ 116:Core/Src/Analog_I2C.c **** ******************************************************************************/
+ 117:Core/Src/Analog_I2C.c **** UBYTE I2C_Read_Byte(unsigned char ack)
+ 118:Core/Src/Analog_I2C.c **** {
+ 119:Core/Src/Analog_I2C.c **** 	UBYTE i,receive=0;
+ 120:Core/Src/Analog_I2C.c **** 
+ 121:Core/Src/Analog_I2C.c ****  	DEV_Set_GPIOMode(DEV_SDA_PIN, 1);
+ 122:Core/Src/Analog_I2C.c **** 
+ 123:Core/Src/Analog_I2C.c ****   for(i = 0; i < 8; i++ ){
+ 124:Core/Src/Analog_I2C.c ****     DEV_Digital_Write(GPIOD, 12, 0); 
+ 125:Core/Src/Analog_I2C.c **** 		DEV_Delay_us(1);
+ 126:Core/Src/Analog_I2C.c **** 		DEV_Digital_Write(GPIOD, 12, 1);
+ 127:Core/Src/Analog_I2C.c ****     receive <<= 1;
+ 128:Core/Src/Analog_I2C.c ****     if(DEV_Digital_Read(DEV_SDA_PIN))receive++;   
+ 129:Core/Src/Analog_I2C.c **** 		DEV_Delay_us(1);
+ 130:Core/Src/Analog_I2C.c **** 	}	
+ 131:Core/Src/Analog_I2C.c **** 
+ 132:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 12, 0); 	
+ 133:Core/Src/Analog_I2C.c **** 	if (!ack){
+ 134:Core/Src/Analog_I2C.c **** 		I2C_NAck();
+ 135:Core/Src/Analog_I2C.c **** 	}else {
+ 136:Core/Src/Analog_I2C.c **** 		I2C_Ack(); 
+ 137:Core/Src/Analog_I2C.c **** 	}
+ 138:Core/Src/Analog_I2C.c ****  
+ 139:Core/Src/Analog_I2C.c **** 	return receive;
+ 140:Core/Src/Analog_I2C.c **** }
+ 141:Core/Src/Analog_I2C.c **** 
+ 142:Core/Src/Analog_I2C.c **** /******************************************************************************
+ 143:Core/Src/Analog_I2C.c **** function:	I2C protocol waits for a response
+ 144:Core/Src/Analog_I2C.c **** return:
+ 145:Core/Src/Analog_I2C.c **** 			1��No answer
+ 146:Core/Src/Analog_I2C.c **** 			0��Have a response
+ 147:Core/Src/Analog_I2C.c **** ******************************************************************************/
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 9
+
+
+ 148:Core/Src/Analog_I2C.c **** UBYTE I2C_Wait_Ack(void)
+ 149:Core/Src/Analog_I2C.c **** {
+ 311              		.loc 1 149 1 is_stmt 1 view -0
+ 312              		.cfi_startproc
+ 313              		@ args = 0, pretend = 0, frame = 0
+ 314              		@ frame_needed = 0, uses_anonymous_args = 0
+ 315 0000 38B5     		push	{r3, r4, r5, lr}
+ 316              		.cfi_def_cfa_offset 16
+ 317              		.cfi_offset 3, -16
+ 318              		.cfi_offset 4, -12
+ 319              		.cfi_offset 5, -8
+ 320              		.cfi_offset 14, -4
+ 150:Core/Src/Analog_I2C.c **** 	UBYTE ucErrTime=0;
+ 321              		.loc 1 150 2 view .LVU52
+ 322              	.LVL38:
+ 151:Core/Src/Analog_I2C.c **** 
+ 152:Core/Src/Analog_I2C.c **** 	DEV_Set_GPIOMode(DEV_SDA_PIN, 1);  
+ 323              		.loc 1 152 2 view .LVU53
+ 324 0002 0122     		movs	r2, #1
+ 325 0004 0D21     		movs	r1, #13
+ 326 0006 1548     		ldr	r0, .L24
+ 327 0008 FFF7FEFF 		bl	DEV_Set_GPIOMode
+ 328              	.LVL39:
+ 153:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 13, 1);
+ 329              		.loc 1 153 2 view .LVU54
+ 330 000c 144C     		ldr	r4, .L24+4
+ 331 000e 0122     		movs	r2, #1
+ 332 0010 0D21     		movs	r1, #13
+ 333 0012 2046     		mov	r0, r4
+ 334 0014 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 335              	.LVL40:
+ 154:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);	   
+ 336              		.loc 1 154 2 view .LVU55
+ 337 0018 0120     		movs	r0, #1
+ 338 001a FFF7FEFF 		bl	DEV_Delay_us
+ 339              	.LVL41:
+ 155:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 12, 1);
+ 340              		.loc 1 155 2 view .LVU56
+ 341 001e 0122     		movs	r2, #1
+ 342 0020 0C21     		movs	r1, #12
+ 343 0022 2046     		mov	r0, r4
+ 344 0024 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 345              	.LVL42:
+ 156:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);	
+ 346              		.loc 1 156 2 view .LVU57
+ 347 0028 0120     		movs	r0, #1
+ 348 002a FFF7FEFF 		bl	DEV_Delay_us
+ 349              	.LVL43:
+ 157:Core/Src/Analog_I2C.c **** 	
+ 158:Core/Src/Analog_I2C.c **** 	while(DEV_Digital_Read(DEV_SDA_PIN)){
+ 350              		.loc 1 158 2 view .LVU58
+ 150:Core/Src/Analog_I2C.c **** 
+ 351              		.loc 1 150 8 is_stmt 0 view .LVU59
+ 352 002e 0024     		movs	r4, #0
+ 353              	.LVL44:
+ 354              	.L19:
+ 355              		.loc 1 158 8 is_stmt 1 view .LVU60
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 10
+
+
+ 356 0030 0D21     		movs	r1, #13
+ 357 0032 0A48     		ldr	r0, .L24
+ 358 0034 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 359              	.LVL45:
+ 360 0038 0546     		mov	r5, r0
+ 361 003a 38B1     		cbz	r0, .L23
+ 159:Core/Src/Analog_I2C.c **** 		ucErrTime++;
+ 362              		.loc 1 159 3 view .LVU61
+ 363              		.loc 1 159 12 is_stmt 0 view .LVU62
+ 364 003c 0134     		adds	r4, r4, #1
+ 365              	.LVL46:
+ 366              		.loc 1 159 12 view .LVU63
+ 367 003e E4B2     		uxtb	r4, r4
+ 368              	.LVL47:
+ 160:Core/Src/Analog_I2C.c **** 		if(ucErrTime > 250){
+ 369              		.loc 1 160 3 is_stmt 1 view .LVU64
+ 370              		.loc 1 160 5 is_stmt 0 view .LVU65
+ 371 0040 FA2C     		cmp	r4, #250
+ 372 0042 F5D9     		bls	.L19
+ 161:Core/Src/Analog_I2C.c **** 			I2C_Stop();
+ 373              		.loc 1 161 4 is_stmt 1 view .LVU66
+ 374 0044 FFF7FEFF 		bl	I2C_Stop
+ 375              	.LVL48:
+ 162:Core/Src/Analog_I2C.c **** 			return 1;
+ 376              		.loc 1 162 4 view .LVU67
+ 377              		.loc 1 162 11 is_stmt 0 view .LVU68
+ 378 0048 0125     		movs	r5, #1
+ 379 004a 04E0     		b	.L20
+ 380              	.L23:
+ 163:Core/Src/Analog_I2C.c **** 		}
+ 164:Core/Src/Analog_I2C.c **** 	}
+ 165:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 12, 0);
+ 381              		.loc 1 165 2 is_stmt 1 view .LVU69
+ 382 004c 0022     		movs	r2, #0
+ 383 004e 0C21     		movs	r1, #12
+ 384 0050 0348     		ldr	r0, .L24+4
+ 385 0052 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 386              	.LVL49:
+ 166:Core/Src/Analog_I2C.c **** 	return 0;  
+ 387              		.loc 1 166 2 view .LVU70
+ 388              	.L20:
+ 167:Core/Src/Analog_I2C.c **** } 
+ 389              		.loc 1 167 1 is_stmt 0 view .LVU71
+ 390 0056 2846     		mov	r0, r5
+ 391 0058 38BD     		pop	{r3, r4, r5, pc}
+ 392              	.LVL50:
+ 393              	.L25:
+ 394              		.loc 1 167 1 view .LVU72
+ 395 005a 00BF     		.align	2
+ 396              	.L24:
+ 397 005c 00000000 		.word	.LC0
+ 398 0060 000C0048 		.word	1207962624
+ 399              		.cfi_endproc
+ 400              	.LFE328:
+ 402              		.section	.text.I2C_Ack,"ax",%progbits
+ 403              		.align	1
+ 404              		.global	I2C_Ack
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 11
+
+
+ 405              		.syntax unified
+ 406              		.thumb
+ 407              		.thumb_func
+ 409              	I2C_Ack:
+ 410              	.LFB329:
+ 168:Core/Src/Analog_I2C.c **** 
+ 169:Core/Src/Analog_I2C.c **** /******************************************************************************
+ 170:Core/Src/Analog_I2C.c **** function:	I2C response signal
+ 171:Core/Src/Analog_I2C.c **** ******************************************************************************/
+ 172:Core/Src/Analog_I2C.c **** void I2C_Ack(void)
+ 173:Core/Src/Analog_I2C.c **** {
+ 411              		.loc 1 173 1 is_stmt 1 view -0
+ 412              		.cfi_startproc
+ 413              		@ args = 0, pretend = 0, frame = 0
+ 414              		@ frame_needed = 0, uses_anonymous_args = 0
+ 415 0000 10B5     		push	{r4, lr}
+ 416              		.cfi_def_cfa_offset 8
+ 417              		.cfi_offset 4, -8
+ 418              		.cfi_offset 14, -4
+ 174:Core/Src/Analog_I2C.c **** 	DEV_Set_GPIOMode(DEV_SDA_PIN, 0);
+ 419              		.loc 1 174 2 view .LVU74
+ 420 0002 0022     		movs	r2, #0
+ 421 0004 0D21     		movs	r1, #13
+ 422 0006 1148     		ldr	r0, .L28
+ 423 0008 FFF7FEFF 		bl	DEV_Set_GPIOMode
+ 424              	.LVL51:
+ 175:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 12, 0);
+ 425              		.loc 1 175 2 view .LVU75
+ 426 000c 104C     		ldr	r4, .L28+4
+ 427 000e 0022     		movs	r2, #0
+ 428 0010 0C21     		movs	r1, #12
+ 429 0012 2046     		mov	r0, r4
+ 430 0014 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 431              	.LVL52:
+ 176:Core/Src/Analog_I2C.c **** 	
+ 177:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 13, 0);
+ 432              		.loc 1 177 2 view .LVU76
+ 433 0018 0022     		movs	r2, #0
+ 434 001a 0D21     		movs	r1, #13
+ 435 001c 2046     		mov	r0, r4
+ 436 001e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 437              	.LVL53:
+ 178:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);
+ 438              		.loc 1 178 2 view .LVU77
+ 439 0022 0120     		movs	r0, #1
+ 440 0024 FFF7FEFF 		bl	DEV_Delay_us
+ 441              	.LVL54:
+ 179:Core/Src/Analog_I2C.c **** 	
+ 180:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 12, 1);
+ 442              		.loc 1 180 2 view .LVU78
+ 443 0028 0122     		movs	r2, #1
+ 444 002a 0C21     		movs	r1, #12
+ 445 002c 2046     		mov	r0, r4
+ 446 002e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 447              	.LVL55:
+ 181:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);
+ 448              		.loc 1 181 2 view .LVU79
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 12
+
+
+ 449 0032 0120     		movs	r0, #1
+ 450 0034 FFF7FEFF 		bl	DEV_Delay_us
+ 451              	.LVL56:
+ 182:Core/Src/Analog_I2C.c **** 	
+ 183:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 12, 0);
+ 452              		.loc 1 183 2 view .LVU80
+ 453 0038 0022     		movs	r2, #0
+ 454 003a 0C21     		movs	r1, #12
+ 455 003c 2046     		mov	r0, r4
+ 456 003e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 457              	.LVL57:
+ 184:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);
+ 458              		.loc 1 184 2 view .LVU81
+ 459 0042 0120     		movs	r0, #1
+ 460 0044 FFF7FEFF 		bl	DEV_Delay_us
+ 461              	.LVL58:
+ 185:Core/Src/Analog_I2C.c **** }
+ 462              		.loc 1 185 1 is_stmt 0 view .LVU82
+ 463 0048 10BD     		pop	{r4, pc}
+ 464              	.L29:
+ 465 004a 00BF     		.align	2
+ 466              	.L28:
+ 467 004c 00000000 		.word	.LC0
+ 468 0050 000C0048 		.word	1207962624
+ 469              		.cfi_endproc
+ 470              	.LFE329:
+ 472              		.section	.text.I2C_NAck,"ax",%progbits
+ 473              		.align	1
+ 474              		.global	I2C_NAck
+ 475              		.syntax unified
+ 476              		.thumb
+ 477              		.thumb_func
+ 479              	I2C_NAck:
+ 480              	.LFB330:
+ 186:Core/Src/Analog_I2C.c **** 
+ 187:Core/Src/Analog_I2C.c **** /******************************************************************************
+ 188:Core/Src/Analog_I2C.c **** function:	I2C no response signal
+ 189:Core/Src/Analog_I2C.c **** ******************************************************************************/
+ 190:Core/Src/Analog_I2C.c **** void I2C_NAck(void)
+ 191:Core/Src/Analog_I2C.c **** {
+ 481              		.loc 1 191 1 is_stmt 1 view -0
+ 482              		.cfi_startproc
+ 483              		@ args = 0, pretend = 0, frame = 0
+ 484              		@ frame_needed = 0, uses_anonymous_args = 0
+ 485 0000 10B5     		push	{r4, lr}
+ 486              		.cfi_def_cfa_offset 8
+ 487              		.cfi_offset 4, -8
+ 488              		.cfi_offset 14, -4
+ 192:Core/Src/Analog_I2C.c **** 	DEV_Set_GPIOMode(DEV_SDA_PIN, 0);
+ 489              		.loc 1 192 2 view .LVU84
+ 490 0002 0022     		movs	r2, #0
+ 491 0004 0D21     		movs	r1, #13
+ 492 0006 0E48     		ldr	r0, .L32
+ 493 0008 FFF7FEFF 		bl	DEV_Set_GPIOMode
+ 494              	.LVL59:
+ 193:Core/Src/Analog_I2C.c **** 
+ 194:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 13, 1);
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 13
+
+
+ 495              		.loc 1 194 2 view .LVU85
+ 496 000c 0D4C     		ldr	r4, .L32+4
+ 497 000e 0122     		movs	r2, #1
+ 498 0010 0D21     		movs	r1, #13
+ 499 0012 2046     		mov	r0, r4
+ 500 0014 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 501              	.LVL60:
+ 195:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);
+ 502              		.loc 1 195 2 view .LVU86
+ 503 0018 0120     		movs	r0, #1
+ 504 001a FFF7FEFF 		bl	DEV_Delay_us
+ 505              	.LVL61:
+ 196:Core/Src/Analog_I2C.c **** 	
+ 197:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 12, 1);
+ 506              		.loc 1 197 2 view .LVU87
+ 507 001e 0122     		movs	r2, #1
+ 508 0020 0C21     		movs	r1, #12
+ 509 0022 2046     		mov	r0, r4
+ 510 0024 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 511              	.LVL62:
+ 198:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);
+ 512              		.loc 1 198 2 view .LVU88
+ 513 0028 0120     		movs	r0, #1
+ 514 002a FFF7FEFF 		bl	DEV_Delay_us
+ 515              	.LVL63:
+ 199:Core/Src/Analog_I2C.c **** 	
+ 200:Core/Src/Analog_I2C.c **** 	DEV_Digital_Write(GPIOD, 12, 0);
+ 516              		.loc 1 200 2 view .LVU89
+ 517 002e 0022     		movs	r2, #0
+ 518 0030 0C21     		movs	r1, #12
+ 519 0032 2046     		mov	r0, r4
+ 520 0034 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 521              	.LVL64:
+ 201:Core/Src/Analog_I2C.c **** 	DEV_Delay_us(1);
+ 522              		.loc 1 201 2 view .LVU90
+ 523 0038 0120     		movs	r0, #1
+ 524 003a FFF7FEFF 		bl	DEV_Delay_us
+ 525              	.LVL65:
+ 202:Core/Src/Analog_I2C.c **** }					 				     
+ 526              		.loc 1 202 1 is_stmt 0 view .LVU91
+ 527 003e 10BD     		pop	{r4, pc}
+ 528              	.L33:
+ 529              		.align	2
+ 530              	.L32:
+ 531 0040 00000000 		.word	.LC0
+ 532 0044 000C0048 		.word	1207962624
+ 533              		.cfi_endproc
+ 534              	.LFE330:
+ 536              		.section	.text.I2C_Read_Byte,"ax",%progbits
+ 537              		.align	1
+ 538              		.global	I2C_Read_Byte
+ 539              		.syntax unified
+ 540              		.thumb
+ 541              		.thumb_func
+ 543              	I2C_Read_Byte:
+ 544              	.LVL66:
+ 545              	.LFB327:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 14
+
+
+ 118:Core/Src/Analog_I2C.c **** 	UBYTE i,receive=0;
+ 546              		.loc 1 118 1 is_stmt 1 view -0
+ 547              		.cfi_startproc
+ 548              		@ args = 0, pretend = 0, frame = 0
+ 549              		@ frame_needed = 0, uses_anonymous_args = 0
+ 118:Core/Src/Analog_I2C.c **** 	UBYTE i,receive=0;
+ 550              		.loc 1 118 1 is_stmt 0 view .LVU93
+ 551 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 552              		.cfi_def_cfa_offset 24
+ 553              		.cfi_offset 3, -24
+ 554              		.cfi_offset 4, -20
+ 555              		.cfi_offset 5, -16
+ 556              		.cfi_offset 6, -12
+ 557              		.cfi_offset 7, -8
+ 558              		.cfi_offset 14, -4
+ 559 0002 0746     		mov	r7, r0
+ 119:Core/Src/Analog_I2C.c **** 
+ 560              		.loc 1 119 2 is_stmt 1 view .LVU94
+ 561              	.LVL67:
+ 121:Core/Src/Analog_I2C.c **** 
+ 562              		.loc 1 121 3 view .LVU95
+ 563 0004 0122     		movs	r2, #1
+ 564 0006 0D21     		movs	r1, #13
+ 565 0008 1948     		ldr	r0, .L42
+ 566              	.LVL68:
+ 121:Core/Src/Analog_I2C.c **** 
+ 567              		.loc 1 121 3 is_stmt 0 view .LVU96
+ 568 000a FFF7FEFF 		bl	DEV_Set_GPIOMode
+ 569              	.LVL69:
+ 123:Core/Src/Analog_I2C.c ****     DEV_Digital_Write(GPIOD, 12, 0); 
+ 570              		.loc 1 123 3 is_stmt 1 view .LVU97
+ 119:Core/Src/Analog_I2C.c **** 
+ 571              		.loc 1 119 10 is_stmt 0 view .LVU98
+ 572 000e 0024     		movs	r4, #0
+ 123:Core/Src/Analog_I2C.c ****     DEV_Digital_Write(GPIOD, 12, 0); 
+ 573              		.loc 1 123 9 view .LVU99
+ 574 0010 2546     		mov	r5, r4
+ 123:Core/Src/Analog_I2C.c ****     DEV_Digital_Write(GPIOD, 12, 0); 
+ 575              		.loc 1 123 3 view .LVU100
+ 576 0012 04E0     		b	.L35
+ 577              	.LVL70:
+ 578              	.L36:
+ 129:Core/Src/Analog_I2C.c **** 	}	
+ 579              		.loc 1 129 3 is_stmt 1 discriminator 2 view .LVU101
+ 580 0014 0120     		movs	r0, #1
+ 581 0016 FFF7FEFF 		bl	DEV_Delay_us
+ 582              	.LVL71:
+ 123:Core/Src/Analog_I2C.c ****     DEV_Digital_Write(GPIOD, 12, 0); 
+ 583              		.loc 1 123 22 discriminator 2 view .LVU102
+ 584 001a 0135     		adds	r5, r5, #1
+ 585              	.LVL72:
+ 123:Core/Src/Analog_I2C.c ****     DEV_Digital_Write(GPIOD, 12, 0); 
+ 586              		.loc 1 123 22 is_stmt 0 discriminator 2 view .LVU103
+ 587 001c EDB2     		uxtb	r5, r5
+ 588              	.LVL73:
+ 589              	.L35:
+ 123:Core/Src/Analog_I2C.c ****     DEV_Digital_Write(GPIOD, 12, 0); 
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 15
+
+
+ 590              		.loc 1 123 16 is_stmt 1 discriminator 1 view .LVU104
+ 591 001e 072D     		cmp	r5, #7
+ 592 0020 18D8     		bhi	.L41
+ 124:Core/Src/Analog_I2C.c **** 		DEV_Delay_us(1);
+ 593              		.loc 1 124 5 view .LVU105
+ 594 0022 144E     		ldr	r6, .L42+4
+ 595 0024 0022     		movs	r2, #0
+ 596 0026 0C21     		movs	r1, #12
+ 597 0028 3046     		mov	r0, r6
+ 598 002a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 599              	.LVL74:
+ 125:Core/Src/Analog_I2C.c **** 		DEV_Digital_Write(GPIOD, 12, 1);
+ 600              		.loc 1 125 3 view .LVU106
+ 601 002e 0120     		movs	r0, #1
+ 602 0030 FFF7FEFF 		bl	DEV_Delay_us
+ 603              	.LVL75:
+ 126:Core/Src/Analog_I2C.c ****     receive <<= 1;
+ 604              		.loc 1 126 3 view .LVU107
+ 605 0034 0122     		movs	r2, #1
+ 606 0036 0C21     		movs	r1, #12
+ 607 0038 3046     		mov	r0, r6
+ 608 003a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 609              	.LVL76:
+ 127:Core/Src/Analog_I2C.c ****     if(DEV_Digital_Read(DEV_SDA_PIN))receive++;   
+ 610              		.loc 1 127 5 view .LVU108
+ 127:Core/Src/Analog_I2C.c ****     if(DEV_Digital_Read(DEV_SDA_PIN))receive++;   
+ 611              		.loc 1 127 13 is_stmt 0 view .LVU109
+ 612 003e 6400     		lsls	r4, r4, #1
+ 613              	.LVL77:
+ 127:Core/Src/Analog_I2C.c ****     if(DEV_Digital_Read(DEV_SDA_PIN))receive++;   
+ 614              		.loc 1 127 13 view .LVU110
+ 615 0040 E4B2     		uxtb	r4, r4
+ 616              	.LVL78:
+ 128:Core/Src/Analog_I2C.c **** 		DEV_Delay_us(1);
+ 617              		.loc 1 128 5 is_stmt 1 view .LVU111
+ 128:Core/Src/Analog_I2C.c **** 		DEV_Delay_us(1);
+ 618              		.loc 1 128 8 is_stmt 0 view .LVU112
+ 619 0042 0D21     		movs	r1, #13
+ 620 0044 0A48     		ldr	r0, .L42
+ 621 0046 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 622              	.LVL79:
+ 128:Core/Src/Analog_I2C.c **** 		DEV_Delay_us(1);
+ 623              		.loc 1 128 7 view .LVU113
+ 624 004a 0028     		cmp	r0, #0
+ 625 004c E2D0     		beq	.L36
+ 128:Core/Src/Analog_I2C.c **** 		DEV_Delay_us(1);
+ 626              		.loc 1 128 38 is_stmt 1 discriminator 1 view .LVU114
+ 128:Core/Src/Analog_I2C.c **** 		DEV_Delay_us(1);
+ 627              		.loc 1 128 45 is_stmt 0 discriminator 1 view .LVU115
+ 628 004e 0134     		adds	r4, r4, #1
+ 629              	.LVL80:
+ 128:Core/Src/Analog_I2C.c **** 		DEV_Delay_us(1);
+ 630              		.loc 1 128 45 discriminator 1 view .LVU116
+ 631 0050 E4B2     		uxtb	r4, r4
+ 632              	.LVL81:
+ 128:Core/Src/Analog_I2C.c **** 		DEV_Delay_us(1);
+ 633              		.loc 1 128 45 discriminator 1 view .LVU117
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 16
+
+
+ 634 0052 DFE7     		b	.L36
+ 635              	.L41:
+ 132:Core/Src/Analog_I2C.c **** 	if (!ack){
+ 636              		.loc 1 132 2 is_stmt 1 view .LVU118
+ 637 0054 0022     		movs	r2, #0
+ 638 0056 0C21     		movs	r1, #12
+ 639 0058 0648     		ldr	r0, .L42+4
+ 640 005a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 641              	.LVL82:
+ 133:Core/Src/Analog_I2C.c **** 		I2C_NAck();
+ 642              		.loc 1 133 2 view .LVU119
+ 133:Core/Src/Analog_I2C.c **** 		I2C_NAck();
+ 643              		.loc 1 133 5 is_stmt 0 view .LVU120
+ 644 005e 1FB9     		cbnz	r7, .L38
+ 134:Core/Src/Analog_I2C.c **** 	}else {
+ 645              		.loc 1 134 3 is_stmt 1 view .LVU121
+ 646 0060 FFF7FEFF 		bl	I2C_NAck
+ 647              	.LVL83:
+ 648              	.L39:
+ 139:Core/Src/Analog_I2C.c **** }
+ 649              		.loc 1 139 2 view .LVU122
+ 140:Core/Src/Analog_I2C.c **** 
+ 650              		.loc 1 140 1 is_stmt 0 view .LVU123
+ 651 0064 2046     		mov	r0, r4
+ 652 0066 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 653              	.LVL84:
+ 654              	.L38:
+ 136:Core/Src/Analog_I2C.c **** 	}
+ 655              		.loc 1 136 3 is_stmt 1 view .LVU124
+ 656 0068 FFF7FEFF 		bl	I2C_Ack
+ 657              	.LVL85:
+ 658 006c FAE7     		b	.L39
+ 659              	.L43:
+ 660 006e 00BF     		.align	2
+ 661              	.L42:
+ 662 0070 00000000 		.word	.LC0
+ 663 0074 000C0048 		.word	1207962624
+ 664              		.cfi_endproc
+ 665              	.LFE327:
+ 667              		.text
+ 668              	.Letext0:
+ 669              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 670              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 671              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+ 672              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 673              		.file 6 "Core/Inc/DEV_Config.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s 			page 17
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 Analog_I2C.c
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:20     .rodata.I2C_Start.str1.4:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:24     .text.I2C_Start:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:30     .text.I2C_Start:0000000000000000 I2C_Start
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:93     .text.I2C_Start:0000000000000050 $d
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:99     .text.I2C_Stop:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:105    .text.I2C_Stop:0000000000000000 I2C_Stop
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:157    .text.I2C_Stop:0000000000000040 $d
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:163    .text.I2C_Send_Byte:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:169    .text.I2C_Send_Byte:0000000000000000 I2C_Send_Byte
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:298    .text.I2C_Send_Byte:0000000000000094 $d
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:303    .text.I2C_Wait_Ack:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:309    .text.I2C_Wait_Ack:0000000000000000 I2C_Wait_Ack
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:397    .text.I2C_Wait_Ack:000000000000005c $d
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:403    .text.I2C_Ack:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:409    .text.I2C_Ack:0000000000000000 I2C_Ack
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:467    .text.I2C_Ack:000000000000004c $d
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:473    .text.I2C_NAck:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:479    .text.I2C_NAck:0000000000000000 I2C_NAck
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:531    .text.I2C_NAck:0000000000000040 $d
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:537    .text.I2C_Read_Byte:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:543    .text.I2C_Read_Byte:0000000000000000 I2C_Read_Byte
+C:\Users\Morroway\AppData\Local\Temp\ccupuxGw.s:662    .text.I2C_Read_Byte:0000000000000070 $d
+
+UNDEFINED SYMBOLS
+DEV_Set_GPIOMode
+HAL_GPIO_WritePin
+DEV_Delay_us
+HAL_GPIO_ReadPin

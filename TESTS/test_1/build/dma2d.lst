@@ -1,0 +1,355 @@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"dma2d.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.MX_DMA2D_Init,"ax",%progbits
+  20              		.align	1
+  21              		.global	MX_DMA2D_Init
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	MX_DMA2D_Init:
+  27              	.LFB321:
+  28              		.file 1 "Core/Src/dma2d.c"
+   1:Core/Src/dma2d.c **** /**
+   2:Core/Src/dma2d.c ****   ******************************************************************************
+   3:Core/Src/dma2d.c ****   * File Name          : DMA2D.c
+   4:Core/Src/dma2d.c ****   * Description        : This file provides code for the configuration
+   5:Core/Src/dma2d.c ****   *                      of the DMA2D instances.
+   6:Core/Src/dma2d.c ****   ******************************************************************************
+   7:Core/Src/dma2d.c ****   ** This notice applies to any and all portions of this file
+   8:Core/Src/dma2d.c ****   * that are not between comment pairs USER CODE BEGIN and
+   9:Core/Src/dma2d.c ****   * USER CODE END. Other portions of this file, whether 
+  10:Core/Src/dma2d.c ****   * inserted by the user or by software development tools
+  11:Core/Src/dma2d.c ****   * are owned by their respective copyright owners.
+  12:Core/Src/dma2d.c ****   *
+  13:Core/Src/dma2d.c ****   * COPYRIGHT(c) 2019 STMicroelectronics
+  14:Core/Src/dma2d.c ****   *
+  15:Core/Src/dma2d.c ****   * Redistribution and use in source and binary forms, with or without modification,
+  16:Core/Src/dma2d.c ****   * are permitted provided that the following conditions are met:
+  17:Core/Src/dma2d.c ****   *   1. Redistributions of source code must retain the above copyright notice,
+  18:Core/Src/dma2d.c ****   *      this list of conditions and the following disclaimer.
+  19:Core/Src/dma2d.c ****   *   2. Redistributions in binary form must reproduce the above copyright notice,
+  20:Core/Src/dma2d.c ****   *      this list of conditions and the following disclaimer in the documentation
+  21:Core/Src/dma2d.c ****   *      and/or other materials provided with the distribution.
+  22:Core/Src/dma2d.c ****   *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  23:Core/Src/dma2d.c ****   *      may be used to endorse or promote products derived from this software
+  24:Core/Src/dma2d.c ****   *      without specific prior written permission.
+  25:Core/Src/dma2d.c ****   *
+  26:Core/Src/dma2d.c ****   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  27:Core/Src/dma2d.c ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  28:Core/Src/dma2d.c ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  29:Core/Src/dma2d.c ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  30:Core/Src/dma2d.c ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s 			page 2
+
+
+  31:Core/Src/dma2d.c ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  32:Core/Src/dma2d.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  33:Core/Src/dma2d.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  34:Core/Src/dma2d.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  35:Core/Src/dma2d.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  36:Core/Src/dma2d.c ****   *
+  37:Core/Src/dma2d.c ****   ******************************************************************************
+  38:Core/Src/dma2d.c ****   */
+  39:Core/Src/dma2d.c **** 
+  40:Core/Src/dma2d.c **** /* Includes ------------------------------------------------------------------*/
+  41:Core/Src/dma2d.c **** #include "dma2d.h"
+  42:Core/Src/dma2d.c **** 
+  43:Core/Src/dma2d.c **** /* USER CODE BEGIN 0 */
+  44:Core/Src/dma2d.c **** 
+  45:Core/Src/dma2d.c **** /* USER CODE END 0 */
+  46:Core/Src/dma2d.c **** 
+  47:Core/Src/dma2d.c **** DMA2D_HandleTypeDef hdma2d;
+  48:Core/Src/dma2d.c **** 
+  49:Core/Src/dma2d.c **** /* DMA2D init function */
+  50:Core/Src/dma2d.c **** void MX_DMA2D_Init(void)
+  51:Core/Src/dma2d.c **** {
+  29              		.loc 1 51 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 3, -8
+  36              		.cfi_offset 14, -4
+  52:Core/Src/dma2d.c **** 
+  53:Core/Src/dma2d.c ****   hdma2d.Instance = DMA2D;
+  37              		.loc 1 53 3 view .LVU1
+  38              		.loc 1 53 19 is_stmt 0 view .LVU2
+  39 0002 0D48     		ldr	r0, .L7
+  40 0004 0D4B     		ldr	r3, .L7+4
+  41 0006 0360     		str	r3, [r0]
+  54:Core/Src/dma2d.c ****   hdma2d.Init.Mode = DMA2D_M2M;
+  42              		.loc 1 54 3 is_stmt 1 view .LVU3
+  43              		.loc 1 54 20 is_stmt 0 view .LVU4
+  44 0008 0023     		movs	r3, #0
+  45 000a 4360     		str	r3, [r0, #4]
+  55:Core/Src/dma2d.c ****   hdma2d.Init.ColorMode = DMA2D_OUTPUT_RGB565;
+  46              		.loc 1 55 3 is_stmt 1 view .LVU5
+  47              		.loc 1 55 25 is_stmt 0 view .LVU6
+  48 000c 0222     		movs	r2, #2
+  49 000e 8260     		str	r2, [r0, #8]
+  56:Core/Src/dma2d.c ****   hdma2d.Init.OutputOffset = 0;
+  50              		.loc 1 56 3 is_stmt 1 view .LVU7
+  51              		.loc 1 56 28 is_stmt 0 view .LVU8
+  52 0010 C360     		str	r3, [r0, #12]
+  57:Core/Src/dma2d.c ****   hdma2d.LayerCfg[1].InputOffset = 0;
+  53              		.loc 1 57 3 is_stmt 1 view .LVU9
+  54              		.loc 1 57 34 is_stmt 0 view .LVU10
+  55 0012 0364     		str	r3, [r0, #64]
+  58:Core/Src/dma2d.c ****   hdma2d.LayerCfg[1].InputColorMode = DMA2D_INPUT_RGB565;
+  56              		.loc 1 58 3 is_stmt 1 view .LVU11
+  57              		.loc 1 58 37 is_stmt 0 view .LVU12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s 			page 3
+
+
+  58 0014 4264     		str	r2, [r0, #68]
+  59:Core/Src/dma2d.c ****   hdma2d.LayerCfg[1].AlphaMode = DMA2D_NO_MODIF_ALPHA;
+  59              		.loc 1 59 3 is_stmt 1 view .LVU13
+  60              		.loc 1 59 32 is_stmt 0 view .LVU14
+  61 0016 8364     		str	r3, [r0, #72]
+  60:Core/Src/dma2d.c ****   hdma2d.LayerCfg[1].InputAlpha = 0;
+  62              		.loc 1 60 3 is_stmt 1 view .LVU15
+  63              		.loc 1 60 33 is_stmt 0 view .LVU16
+  64 0018 C364     		str	r3, [r0, #76]
+  61:Core/Src/dma2d.c ****   if (HAL_DMA2D_Init(&hdma2d) != HAL_OK)
+  65              		.loc 1 61 3 is_stmt 1 view .LVU17
+  66              		.loc 1 61 7 is_stmt 0 view .LVU18
+  67 001a FFF7FEFF 		bl	HAL_DMA2D_Init
+  68              	.LVL0:
+  69              		.loc 1 61 6 view .LVU19
+  70 001e 28B9     		cbnz	r0, .L5
+  71              	.L2:
+  62:Core/Src/dma2d.c ****   {
+  63:Core/Src/dma2d.c ****     Error_Handler();
+  64:Core/Src/dma2d.c ****   }
+  65:Core/Src/dma2d.c ****   if (HAL_DMA2D_ConfigLayer(&hdma2d, 1) != HAL_OK)
+  72              		.loc 1 65 3 is_stmt 1 view .LVU20
+  73              		.loc 1 65 7 is_stmt 0 view .LVU21
+  74 0020 0121     		movs	r1, #1
+  75 0022 0548     		ldr	r0, .L7
+  76 0024 FFF7FEFF 		bl	HAL_DMA2D_ConfigLayer
+  77              	.LVL1:
+  78              		.loc 1 65 6 view .LVU22
+  79 0028 18B9     		cbnz	r0, .L6
+  80              	.L1:
+  66:Core/Src/dma2d.c ****   {
+  67:Core/Src/dma2d.c ****     Error_Handler();
+  68:Core/Src/dma2d.c ****   }
+  69:Core/Src/dma2d.c **** 
+  70:Core/Src/dma2d.c **** }
+  81              		.loc 1 70 1 view .LVU23
+  82 002a 08BD     		pop	{r3, pc}
+  83              	.L5:
+  63:Core/Src/dma2d.c ****   }
+  84              		.loc 1 63 5 is_stmt 1 view .LVU24
+  85 002c FFF7FEFF 		bl	Error_Handler
+  86              	.LVL2:
+  87 0030 F6E7     		b	.L2
+  88              	.L6:
+  67:Core/Src/dma2d.c ****   }
+  89              		.loc 1 67 5 view .LVU25
+  90 0032 FFF7FEFF 		bl	Error_Handler
+  91              	.LVL3:
+  92              		.loc 1 70 1 is_stmt 0 view .LVU26
+  93 0036 F8E7     		b	.L1
+  94              	.L8:
+  95              		.align	2
+  96              	.L7:
+  97 0038 00000000 		.word	.LANCHOR0
+  98 003c 00B00240 		.word	1073917952
+  99              		.cfi_endproc
+ 100              	.LFE321:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s 			page 4
+
+
+ 102              		.section	.text.HAL_DMA2D_MspInit,"ax",%progbits
+ 103              		.align	1
+ 104              		.global	HAL_DMA2D_MspInit
+ 105              		.syntax unified
+ 106              		.thumb
+ 107              		.thumb_func
+ 109              	HAL_DMA2D_MspInit:
+ 110              	.LVL4:
+ 111              	.LFB322:
+  71:Core/Src/dma2d.c **** 
+  72:Core/Src/dma2d.c **** void HAL_DMA2D_MspInit(DMA2D_HandleTypeDef* dma2dHandle)
+  73:Core/Src/dma2d.c **** {
+ 112              		.loc 1 73 1 is_stmt 1 view -0
+ 113              		.cfi_startproc
+ 114              		@ args = 0, pretend = 0, frame = 8
+ 115              		@ frame_needed = 0, uses_anonymous_args = 0
+ 116              		@ link register save eliminated.
+  74:Core/Src/dma2d.c **** 
+  75:Core/Src/dma2d.c ****   if(dma2dHandle->Instance==DMA2D)
+ 117              		.loc 1 75 3 view .LVU28
+ 118              		.loc 1 75 17 is_stmt 0 view .LVU29
+ 119 0000 0268     		ldr	r2, [r0]
+ 120              		.loc 1 75 5 view .LVU30
+ 121 0002 094B     		ldr	r3, .L16
+ 122 0004 9A42     		cmp	r2, r3
+ 123 0006 00D0     		beq	.L15
+ 124 0008 7047     		bx	lr
+ 125              	.L15:
+  73:Core/Src/dma2d.c **** 
+ 126              		.loc 1 73 1 view .LVU31
+ 127 000a 82B0     		sub	sp, sp, #8
+ 128              		.cfi_def_cfa_offset 8
+  76:Core/Src/dma2d.c ****   {
+  77:Core/Src/dma2d.c ****   /* USER CODE BEGIN DMA2D_MspInit 0 */
+  78:Core/Src/dma2d.c **** 
+  79:Core/Src/dma2d.c ****   /* USER CODE END DMA2D_MspInit 0 */
+  80:Core/Src/dma2d.c ****     /* DMA2D clock enable */
+  81:Core/Src/dma2d.c ****     __HAL_RCC_DMA2D_CLK_ENABLE();
+ 129              		.loc 1 81 5 is_stmt 1 view .LVU32
+ 130              	.LBB2:
+ 131              		.loc 1 81 5 view .LVU33
+ 132              		.loc 1 81 5 view .LVU34
+ 133 000c A3F52043 		sub	r3, r3, #40960
+ 134 0010 9A6C     		ldr	r2, [r3, #72]
+ 135 0012 42F40032 		orr	r2, r2, #131072
+ 136 0016 9A64     		str	r2, [r3, #72]
+ 137              		.loc 1 81 5 view .LVU35
+ 138 0018 9B6C     		ldr	r3, [r3, #72]
+ 139 001a 03F40033 		and	r3, r3, #131072
+ 140 001e 0193     		str	r3, [sp, #4]
+ 141              		.loc 1 81 5 view .LVU36
+ 142 0020 019B     		ldr	r3, [sp, #4]
+ 143              	.LBE2:
+ 144              		.loc 1 81 5 view .LVU37
+  82:Core/Src/dma2d.c ****   /* USER CODE BEGIN DMA2D_MspInit 1 */
+  83:Core/Src/dma2d.c **** 
+  84:Core/Src/dma2d.c ****   /* USER CODE END DMA2D_MspInit 1 */
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s 			page 5
+
+
+  85:Core/Src/dma2d.c ****   }
+  86:Core/Src/dma2d.c **** }
+ 145              		.loc 1 86 1 is_stmt 0 view .LVU38
+ 146 0022 02B0     		add	sp, sp, #8
+ 147              		.cfi_def_cfa_offset 0
+ 148              		@ sp needed
+ 149 0024 7047     		bx	lr
+ 150              	.L17:
+ 151 0026 00BF     		.align	2
+ 152              	.L16:
+ 153 0028 00B00240 		.word	1073917952
+ 154              		.cfi_endproc
+ 155              	.LFE322:
+ 157              		.section	.text.HAL_DMA2D_MspDeInit,"ax",%progbits
+ 158              		.align	1
+ 159              		.global	HAL_DMA2D_MspDeInit
+ 160              		.syntax unified
+ 161              		.thumb
+ 162              		.thumb_func
+ 164              	HAL_DMA2D_MspDeInit:
+ 165              	.LVL5:
+ 166              	.LFB323:
+  87:Core/Src/dma2d.c **** 
+  88:Core/Src/dma2d.c **** void HAL_DMA2D_MspDeInit(DMA2D_HandleTypeDef* dma2dHandle)
+  89:Core/Src/dma2d.c **** {
+ 167              		.loc 1 89 1 is_stmt 1 view -0
+ 168              		.cfi_startproc
+ 169              		@ args = 0, pretend = 0, frame = 0
+ 170              		@ frame_needed = 0, uses_anonymous_args = 0
+ 171              		@ link register save eliminated.
+  90:Core/Src/dma2d.c **** 
+  91:Core/Src/dma2d.c ****   if(dma2dHandle->Instance==DMA2D)
+ 172              		.loc 1 91 3 view .LVU40
+ 173              		.loc 1 91 17 is_stmt 0 view .LVU41
+ 174 0000 0268     		ldr	r2, [r0]
+ 175              		.loc 1 91 5 view .LVU42
+ 176 0002 054B     		ldr	r3, .L21
+ 177 0004 9A42     		cmp	r2, r3
+ 178 0006 00D0     		beq	.L20
+ 179              	.L18:
+  92:Core/Src/dma2d.c ****   {
+  93:Core/Src/dma2d.c ****   /* USER CODE BEGIN DMA2D_MspDeInit 0 */
+  94:Core/Src/dma2d.c **** 
+  95:Core/Src/dma2d.c ****   /* USER CODE END DMA2D_MspDeInit 0 */
+  96:Core/Src/dma2d.c ****     /* Peripheral clock disable */
+  97:Core/Src/dma2d.c ****     __HAL_RCC_DMA2D_CLK_DISABLE();
+  98:Core/Src/dma2d.c ****   /* USER CODE BEGIN DMA2D_MspDeInit 1 */
+  99:Core/Src/dma2d.c **** 
+ 100:Core/Src/dma2d.c ****   /* USER CODE END DMA2D_MspDeInit 1 */
+ 101:Core/Src/dma2d.c ****   }
+ 102:Core/Src/dma2d.c **** } 
+ 180              		.loc 1 102 1 view .LVU43
+ 181 0008 7047     		bx	lr
+ 182              	.L20:
+  97:Core/Src/dma2d.c ****   /* USER CODE BEGIN DMA2D_MspDeInit 1 */
+ 183              		.loc 1 97 5 is_stmt 1 view .LVU44
+ 184 000a 044A     		ldr	r2, .L21+4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s 			page 6
+
+
+ 185 000c 936C     		ldr	r3, [r2, #72]
+ 186 000e 23F40033 		bic	r3, r3, #131072
+ 187 0012 9364     		str	r3, [r2, #72]
+ 188              		.loc 1 102 1 is_stmt 0 view .LVU45
+ 189 0014 F8E7     		b	.L18
+ 190              	.L22:
+ 191 0016 00BF     		.align	2
+ 192              	.L21:
+ 193 0018 00B00240 		.word	1073917952
+ 194 001c 00100240 		.word	1073876992
+ 195              		.cfi_endproc
+ 196              	.LFE323:
+ 198              		.global	hdma2d
+ 199              		.section	.bss.hdma2d,"aw",%nobits
+ 200              		.align	2
+ 201              		.set	.LANCHOR0,. + 0
+ 204              	hdma2d:
+ 205 0000 00000000 		.space	96
+ 205      00000000 
+ 205      00000000 
+ 205      00000000 
+ 205      00000000 
+ 206              		.text
+ 207              	.Letext0:
+ 208              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 209              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 210              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+ 211              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 212              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma2d.h"
+ 213              		.file 7 "Core/Inc/dma2d.h"
+ 214              		.file 8 "Core/Inc/main.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 dma2d.c
+C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s:20     .text.MX_DMA2D_Init:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s:26     .text.MX_DMA2D_Init:0000000000000000 MX_DMA2D_Init
+C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s:97     .text.MX_DMA2D_Init:0000000000000038 $d
+C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s:103    .text.HAL_DMA2D_MspInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s:109    .text.HAL_DMA2D_MspInit:0000000000000000 HAL_DMA2D_MspInit
+C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s:153    .text.HAL_DMA2D_MspInit:0000000000000028 $d
+C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s:158    .text.HAL_DMA2D_MspDeInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s:164    .text.HAL_DMA2D_MspDeInit:0000000000000000 HAL_DMA2D_MspDeInit
+C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s:193    .text.HAL_DMA2D_MspDeInit:0000000000000018 $d
+C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s:204    .bss.hdma2d:0000000000000000 hdma2d
+C:\Users\Morroway\AppData\Local\Temp\ccdnr6Qa.s:200    .bss.hdma2d:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_DMA2D_Init
+HAL_DMA2D_ConfigLayer
+Error_Handler

@@ -1,0 +1,229 @@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOZWxTb.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"image1.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	gImage_wu
+  20              		.section	.rodata.gImage_wu,"a"
+  21              		.align	2
+  24              	gImage_wu:
+  25 0000 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  25      FFFFFFFF 
+  25      FFFFFFFF 
+  25      FF
+  26 000d FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  26      FFFFFFFF 
+  26      FFFFFFFF 
+  26      FF
+  27 001a FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  27      FFFFFFFF 
+  27      FFFFFFFF 
+  27      FF
+  28 0027 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  28      FFFFFFFF 
+  28      FFFFFFFF 
+  28      FF
+  29 0034 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  29      FFFFFFFF 
+  29      FFFFFFFF 
+  29      FF
+  30 0041 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  30      FFFFFFFF 
+  30      FFFFFFFF 
+  30      FF
+  31 004e FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377(Jc\352c\352"
+  31      FFFFFFFF 
+  31      FFFF284A 
+  31      63EA63EA 
+  32 005e 63EA82E2 		.ascii	"c\352\202\342\377\377\377\377#\352c\352c\352c\352\206"
+  32      FFFFFFFF 
+  32      23EA63EA 
+  32      63EA63EA 
+  32      86
+  33 006f DAFFFFFF 		.ascii	"\332\377\377\377\377\377\377\377\377\377\377\377\377"
+  33      FFFFFFFF 
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOZWxTb.s 			page 2
+
+
+  33      FFFFFFFF 
+  33      FF
+  34 007c FFFFA5CA 		.ascii	"\377\377\245\312c\352c\352c\352c\352c\352d\352b\352"
+  34      63EA63EA 
+  34      63EA63EA 
+  34      63EA64EA 
+  34      62EA
+  35 008e 63EA63EA 		.ascii	"c\352c\352c\352c\352c\352b\352\377\377\377\377\377\377"
+  35      63EA63EA 
+  35      63EA62EA 
+  35      FFFFFFFF 
+  35      FFFF
+  36 00a0 FFFFFFFF 		.ascii	"\377\377\377\377\377\377c\352c\352c\352c\352c\352c\352"
+  36      FFFF63EA 
+  36      63EA63EA 
+  36      63EA63EA 
+  36      63EA
+  37 00b2 63EA63EA 		.ascii	"c\352c\352c\352c\352c\352c\352c\352c\352\377\377\377"
+  37      63EA63EA 
+  37      63EA63EA 
+  37      63EA63EA 
+  37      FFFFFF
+  38 00c5 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377c\352c\352c\352"
+  38      FFFFFFFF 
+  38      FF63EA63 
+  38      EA63EA
+  39 00d4 63EA63EA 		.ascii	"c\352c\352c\352c\352c\352c\352c\352c\352c\352c\352c"
+  39      63EA63EA 
+  39      63EA63EA 
+  39      63EA63EA 
+  39      63EA63EA 
+  40 00e9 EA7EDFFF 		.ascii	"\352~\337\377\377\377\377\377\377\377\377\377\377c\352"
+  40      FFFFFFFF 
+  40      FFFFFFFF 
+  40      FF63EA
+  41 00f8 63EA63EA 		.ascii	"c\352c\352c\352c\352c\352c\352c\352c\352c\352c\352c"
+  41      63EA63EA 
+  41      63EA63EA 
+  41      63EA63EA 
+  41      63EA63EA 
+  42 010d EA63EA63 		.ascii	"\352c\352c\352\336\377\377\377\377\377\377\377\377\377"
+  42      EADEFFFF 
+  42      FFFFFFFF 
+  42      FFFFFF
+  43 011c FFFF63EA 		.ascii	"\377\377c\352c\352c\352c\352c\352c\352c\352c\352c\352"
+  43      63EA63EA 
+  43      63EA63EA 
+  43      63EA63EA 
+  43      63EA63EA 
+  44 0130 63EA63EA 		.ascii	"c\352c\352c\352c\352c\352\377\377\377\377\377\377\377"
+  44      63EA63EA 
+  44      63EAFFFF 
+  44      FFFFFFFF 
+  44      FF
+  45 0141 FFFFFFFF 		.ascii	"\377\377\377\377\377\274\306c\352c\352c\352c\352c\352"
+  45      FFBCC663 
+  45      EA63EA63 
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOZWxTb.s 			page 3
+
+
+  45      EA63EA63 
+  45      EA
+  46 0152 63EA63EA 		.ascii	"c\352c\352c\352c\352c\352c\352c\352\204\342\377\377"
+  46      63EA63EA 
+  46      63EA63EA 
+  46      63EA84E2 
+  46      FFFF
+  47 0164 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377#\372"
+  47      FFFFFFFF 
+  47      FFFFFFFF 
+  47      23FA
+  48 0172 63EA63EA 		.ascii	"c\352c\352c\352c\352c\352c\352c\352c\352c\352c\352c"
+  48      63EA63EA 
+  48      63EA63EA 
+  48      63EA63EA 
+  48      63EA63EA 
+  49 0187 EAFFFFFF 		.ascii	"\352\377\377\377\377\377\377\377\377\377\377\377\377"
+  49      FFFFFFFF 
+  49      FFFFFFFF 
+  49      FF
+  50 0194 FFFFFFFF 		.ascii	"\377\377\377\377\377\377c\352c\352c\352c\352c\352c\352"
+  50      FFFF63EA 
+  50      63EA63EA 
+  50      63EA63EA 
+  50      63EA
+  51 01a6 63EA63EA 		.ascii	"c\352c\352c\352c\352\323K\377\377\377\377\377\377\377"
+  51      63EA63EA 
+  51      D34BFFFF 
+  51      FFFFFFFF 
+  51      FF
+  52 01b7 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  52      FFFFFFFF 
+  52      FFFFFFFF 
+  52      FF
+  53 01c4 63EA63EA 		.ascii	"c\352c\352c\352c\352c\352c\352c\352c\352I\212\377\377"
+  53      63EA63EA 
+  53      63EA63EA 
+  53      63EA63EA 
+  53      498AFFFF 
+  54 01d8 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  54      FFFFFFFF 
+  54      FFFFFFFF 
+  54      FF
+  55 01e5 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377c\352c\352c\352"
+  55      FFFFFFFF 
+  55      FF63EA63 
+  55      EA63EA
+  56 01f4 63EA63EA 		.ascii	"c\352c\352c\352\351I\377\377\377\377\377\377\377\377"
+  56      63EAE949 
+  56      FFFFFFFF 
+  56      FFFFFFFF 
+  57 0204 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  57      FFFFFFFF 
+  57      FFFFFFFF 
+  57      FF
+  58 0211 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377c\352c\352c\352c\352\277"
+  58      FFFFFF63 
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOZWxTb.s 			page 4
+
+
+  58      EA63EA63 
+  58      EA63EABF 
+  59 0221 E7FFFFFF 		.ascii	"\347\377\377\377\377\377\377\377\377\377\377\377\377"
+  59      FFFFFFFF 
+  59      FFFFFFFF 
+  59      FF
+  60 022e FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  60      FFFFFFFF 
+  60      FFFFFFFF 
+  60      FF
+  61 023b FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377e\352c\352\377\377\377\377"
+  61      FFFFFF65 
+  61      EA63EAFF 
+  61      FFFFFF
+  62 024a FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  62      FFFFFFFF 
+  62      FFFFFFFF 
+  62      FF
+  63 0257 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  63      FFFFFFFF 
+  63      FFFFFFFF 
+  63      FF
+  64 0264 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  64      FFFFFFFF 
+  64      FFFFFFFF 
+  64      FF
+  65 0271 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377\377\377\377\377"
+  65      FFFFFFFF 
+  65      FFFFFFFF 
+  65      FF
+  66 027e FFFF00   		.ascii	"\377\377\000"
+  67 0281 00000000 		.space	7
+  67      000000
+  68              		.text
+  69              	.Letext0:
+  70              		.file 1 "Core/Inc/image.h"
+  71              		.file 2 "Core/Src/image1.c"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOZWxTb.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 image1.c
+C:\Users\Morroway\AppData\Local\Temp\ccOZWxTb.s:24     .rodata.gImage_wu:0000000000000000 gImage_wu
+C:\Users\Morroway\AppData\Local\Temp\ccOZWxTb.s:21     .rodata.gImage_wu:0000000000000000 $d
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,1621 @@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"GT911.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.GT911_WR_Reg,"ax",%progbits
+  20              		.align	1
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  25              	GT911_WR_Reg:
+  26              	.LVL0:
+  27              	.LFB325:
+  28              		.file 1 "Core/Src/GT911.c"
+   1:Core/Src/GT911.c **** /*****************************************************************************
+   2:Core/Src/GT911.c **** * | File      	:   GT911.c
+   3:Core/Src/GT911.c **** * | Author      :   Waveshare team
+   4:Core/Src/GT911.c **** * | Function    :   GT911 driver
+   5:Core/Src/GT911.c **** * | Info        :
+   6:Core/Src/GT911.c **** *               GT911 driver and data processing
+   7:Core/Src/GT911.c **** *----------------
+   8:Core/Src/GT911.c **** * |	This version:   V1.0
+   9:Core/Src/GT911.c **** * | Date        :   2019-3-5
+  10:Core/Src/GT911.c **** * | Info        :
+  11:Core/Src/GT911.c **** 
+  12:Core/Src/GT911.c **** # Permission is hereby granted, free of charge, to any person obtaining a copy
+  13:Core/Src/GT911.c **** # of this software and associated documnetation files (the "Software"), to deal
+  14:Core/Src/GT911.c **** # in the Software without restriction, including without limitation the rights
+  15:Core/Src/GT911.c **** # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  16:Core/Src/GT911.c **** # copies of the Software, and to permit persons to  whom the Software is
+  17:Core/Src/GT911.c **** # furished to do so, subject to the following conditions:
+  18:Core/Src/GT911.c **** #
+  19:Core/Src/GT911.c **** # The above copyright notice and this permission notice shall be included in
+  20:Core/Src/GT911.c **** # all copies or substantial portions of the Software.
+  21:Core/Src/GT911.c **** #
+  22:Core/Src/GT911.c **** # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  23:Core/Src/GT911.c **** # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  24:Core/Src/GT911.c **** # FITNESS OR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  25:Core/Src/GT911.c **** # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  26:Core/Src/GT911.c **** # LIABILITY WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  27:Core/Src/GT911.c **** # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  28:Core/Src/GT911.c **** # THE SOFTWARE.
+  29:Core/Src/GT911.c **** #
+  30:Core/Src/GT911.c **** ******************************************************************************/
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 2
+
+
+  31:Core/Src/GT911.c **** #include "GT911.h"
+  32:Core/Src/GT911.c **** 
+  33:Core/Src/GT911.c **** 
+  34:Core/Src/GT911.c **** UWORD x[CT_MAX_TOUCH] = {0}, y[CT_MAX_TOUCH] = {0}, z=0;
+  35:Core/Src/GT911.c **** UWORD Color[CT_MAX_TOUCH] = {BLACK, BRED, BLUE, RED, BROWN};
+  36:Core/Src/GT911.c **** UWORD temp=0;
+  37:Core/Src/GT911.c **** GT911_Dev Dev_Now,Dev_Backup;
+  38:Core/Src/GT911.c **** 
+  39:Core/Src/GT911.c **** /******************************************************************************
+  40:Core/Src/GT911.c **** function:	GT911 reset
+  41:Core/Src/GT911.c **** ******************************************************************************/
+  42:Core/Src/GT911.c **** static void GT911_Reset()
+  43:Core/Src/GT911.c **** {
+  44:Core/Src/GT911.c **** 	/*GPIO_InitTypeDef GPIO_InitStruct;
+  45:Core/Src/GT911.c **** 
+  46:Core/Src/GT911.c **** 	DEV_Set_GPIOMode(DEV_INT_PIN, 0);
+  47:Core/Src/GT911.c **** 	
+  48:Core/Src/GT911.c **** 	HAL_GPIO_WritePin(DEV_RST_PIN, GPIO_PIN_RESET);    
+  49:Core/Src/GT911.c **** 	DEV_Delay_ms(100);
+  50:Core/Src/GT911.c **** 	HAL_GPIO_WritePin(DEV_INT_PIN, GPIO_PIN_RESET);    
+  51:Core/Src/GT911.c **** 	DEV_Delay_ms(100);
+  52:Core/Src/GT911.c **** 	HAL_GPIO_WritePin(DEV_RST_PIN, GPIO_PIN_SET);    
+  53:Core/Src/GT911.c **** 	DEV_Delay_ms(200);
+  54:Core/Src/GT911.c **** 	
+  55:Core/Src/GT911.c **** 	GPIO_InitStruct.Pin = INT_Pin;
+  56:Core/Src/GT911.c ****   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  57:Core/Src/GT911.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+  58:Core/Src/GT911.c ****   HAL_GPIO_Init(INT_GPIO_Port, &GPIO_InitStruct);
+  59:Core/Src/GT911.c **** 	
+  60:Core/Src/GT911.c **** 	DEV_Delay_ms(100);*/
+  61:Core/Src/GT911.c **** }
+  62:Core/Src/GT911.c **** 
+  63:Core/Src/GT911.c **** /******************************************************************************
+  64:Core/Src/GT911.c **** function:	Write data to the GT911 register
+  65:Core/Src/GT911.c **** parameter:
+  66:Core/Src/GT911.c ****     reg   :   Register address
+  67:Core/Src/GT911.c **** 		buf		��	Data to send
+  68:Core/Src/GT911.c **** 		len		��	Length of data sent
+  69:Core/Src/GT911.c **** ******************************************************************************/
+  70:Core/Src/GT911.c **** static uint8_t GT911_WR_Reg(uint16_t reg,uint8_t *buf,uint8_t len)
+  71:Core/Src/GT911.c **** {
+  29              		.loc 1 71 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		.loc 1 71 1 is_stmt 0 view .LVU1
+  34 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  35              		.cfi_def_cfa_offset 24
+  36              		.cfi_offset 3, -24
+  37              		.cfi_offset 4, -20
+  38              		.cfi_offset 5, -16
+  39              		.cfi_offset 6, -12
+  40              		.cfi_offset 7, -8
+  41              		.cfi_offset 14, -4
+  42 0002 0446     		mov	r4, r0
+  43 0004 0F46     		mov	r7, r1
+  44 0006 1546     		mov	r5, r2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 3
+
+
+  72:Core/Src/GT911.c **** 	uint8_t i;
+  45              		.loc 1 72 2 is_stmt 1 view .LVU2
+  73:Core/Src/GT911.c **** 	uint8_t ret=0;
+  46              		.loc 1 73 2 view .LVU3
+  47              	.LVL1:
+  74:Core/Src/GT911.c **** 	I2C_Start();	
+  48              		.loc 1 74 2 view .LVU4
+  49 0008 FFF7FEFF 		bl	I2C_Start
+  50              	.LVL2:
+  75:Core/Src/GT911.c ****   I2C_Send_Byte(CT_CMD_WR);   
+  51              		.loc 1 75 3 view .LVU5
+  52 000c BA20     		movs	r0, #186
+  53 000e FFF7FEFF 		bl	I2C_Send_Byte
+  54              	.LVL3:
+  76:Core/Src/GT911.c **** 	I2C_Wait_Ack();
+  55              		.loc 1 76 2 view .LVU6
+  56 0012 FFF7FEFF 		bl	I2C_Wait_Ack
+  57              	.LVL4:
+  77:Core/Src/GT911.c **** 	I2C_Send_Byte(reg>>8);   	
+  58              		.loc 1 77 2 view .LVU7
+  59 0016 200A     		lsrs	r0, r4, #8
+  60 0018 FFF7FEFF 		bl	I2C_Send_Byte
+  61              	.LVL5:
+  78:Core/Src/GT911.c **** 	I2C_Wait_Ack(); 	 										  		   
+  62              		.loc 1 78 2 view .LVU8
+  63 001c FFF7FEFF 		bl	I2C_Wait_Ack
+  64              	.LVL6:
+  79:Core/Src/GT911.c **** 	I2C_Send_Byte(reg&0XFF);   	
+  65              		.loc 1 79 2 view .LVU9
+  66 0020 E0B2     		uxtb	r0, r4
+  67 0022 FFF7FEFF 		bl	I2C_Send_Byte
+  68              	.LVL7:
+  80:Core/Src/GT911.c **** 	I2C_Wait_Ack();  
+  69              		.loc 1 80 2 view .LVU10
+  70 0026 FFF7FEFF 		bl	I2C_Wait_Ack
+  71              	.LVL8:
+  81:Core/Src/GT911.c **** 	for(i=0;i<len;i++)
+  72              		.loc 1 81 2 view .LVU11
+  73:Core/Src/GT911.c **** 	I2C_Start();	
+  73              		.loc 1 73 10 is_stmt 0 view .LVU12
+  74 002a 0026     		movs	r6, #0
+  75              		.loc 1 81 7 view .LVU13
+  76 002c 3446     		mov	r4, r6
+  77              		.loc 1 81 2 view .LVU14
+  78 002e 01E0     		b	.L2
+  79              	.LVL9:
+  80              	.L6:
+  81              		.loc 1 81 17 is_stmt 1 discriminator 2 view .LVU15
+  82 0030 0134     		adds	r4, r4, #1
+  83              	.LVL10:
+  84              		.loc 1 81 17 is_stmt 0 discriminator 2 view .LVU16
+  85 0032 E4B2     		uxtb	r4, r4
+  86              	.LVL11:
+  87              	.L2:
+  88              		.loc 1 81 11 is_stmt 1 discriminator 1 view .LVU17
+  89 0034 AC42     		cmp	r4, r5
+  90 0036 07D2     		bcs	.L3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 4
+
+
+  82:Core/Src/GT911.c **** 	{	   
+  83:Core/Src/GT911.c ****     I2C_Send_Byte(buf[i]);  
+  91              		.loc 1 83 5 view .LVU18
+  92 0038 385D     		ldrb	r0, [r7, r4]	@ zero_extendqisi2
+  93 003a FFF7FEFF 		bl	I2C_Send_Byte
+  94              	.LVL12:
+  84:Core/Src/GT911.c **** 		ret=I2C_Wait_Ack();
+  95              		.loc 1 84 3 view .LVU19
+  96              		.loc 1 84 7 is_stmt 0 view .LVU20
+  97 003e FFF7FEFF 		bl	I2C_Wait_Ack
+  98              	.LVL13:
+  85:Core/Src/GT911.c **** 		if(ret)break;  
+  99              		.loc 1 85 3 is_stmt 1 view .LVU21
+ 100              		.loc 1 85 5 is_stmt 0 view .LVU22
+ 101 0042 0646     		mov	r6, r0
+ 102 0044 0028     		cmp	r0, #0
+ 103 0046 F3D0     		beq	.L6
+ 104              	.LVL14:
+ 105              	.L3:
+  86:Core/Src/GT911.c **** 	}
+  87:Core/Src/GT911.c ****   I2C_Stop();					
+ 106              		.loc 1 87 3 is_stmt 1 view .LVU23
+ 107 0048 FFF7FEFF 		bl	I2C_Stop
+ 108              	.LVL15:
+  88:Core/Src/GT911.c **** 	return ret; 
+ 109              		.loc 1 88 2 view .LVU24
+  89:Core/Src/GT911.c **** }
+ 110              		.loc 1 89 1 is_stmt 0 view .LVU25
+ 111 004c 3046     		mov	r0, r6
+ 112 004e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 113              		.loc 1 89 1 view .LVU26
+ 114              		.cfi_endproc
+ 115              	.LFE325:
+ 117              		.section	.text.GT911_RD_Reg,"ax",%progbits
+ 118              		.align	1
+ 119              		.syntax unified
+ 120              		.thumb
+ 121              		.thumb_func
+ 123              	GT911_RD_Reg:
+ 124              	.LVL16:
+ 125              	.LFB326:
+  90:Core/Src/GT911.c **** 
+  91:Core/Src/GT911.c **** /******************************************************************************
+  92:Core/Src/GT911.c **** function:	Read data from the GT911 register
+  93:Core/Src/GT911.c **** parameter:
+  94:Core/Src/GT911.c ****     reg   :   Register address
+  95:Core/Src/GT911.c **** 		buf		��	Read data
+  96:Core/Src/GT911.c **** 		len		��	Read the length of the data
+  97:Core/Src/GT911.c **** ******************************************************************************/
+  98:Core/Src/GT911.c **** static void GT911_RD_Reg(uint16_t reg,uint8_t *buf,uint8_t len)
+  99:Core/Src/GT911.c **** {
+ 126              		.loc 1 99 1 is_stmt 1 view -0
+ 127              		.cfi_startproc
+ 128              		@ args = 0, pretend = 0, frame = 0
+ 129              		@ frame_needed = 0, uses_anonymous_args = 0
+ 130              		.loc 1 99 1 is_stmt 0 view .LVU28
+ 131 0000 70B5     		push	{r4, r5, r6, lr}
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 5
+
+
+ 132              		.cfi_def_cfa_offset 16
+ 133              		.cfi_offset 4, -16
+ 134              		.cfi_offset 5, -12
+ 135              		.cfi_offset 6, -8
+ 136              		.cfi_offset 14, -4
+ 137 0002 0446     		mov	r4, r0
+ 138 0004 0E46     		mov	r6, r1
+ 139 0006 1546     		mov	r5, r2
+ 100:Core/Src/GT911.c **** 	uint8_t i;
+ 140              		.loc 1 100 2 is_stmt 1 view .LVU29
+ 101:Core/Src/GT911.c ****  	I2C_Start();	
+ 141              		.loc 1 101 3 view .LVU30
+ 142 0008 FFF7FEFF 		bl	I2C_Start
+ 143              	.LVL17:
+ 102:Core/Src/GT911.c ****  	I2C_Send_Byte(CT_CMD_WR);  
+ 144              		.loc 1 102 3 view .LVU31
+ 145 000c BA20     		movs	r0, #186
+ 146 000e FFF7FEFF 		bl	I2C_Send_Byte
+ 147              	.LVL18:
+ 103:Core/Src/GT911.c **** 	I2C_Wait_Ack();
+ 148              		.loc 1 103 2 view .LVU32
+ 149 0012 FFF7FEFF 		bl	I2C_Wait_Ack
+ 150              	.LVL19:
+ 104:Core/Src/GT911.c ****  	I2C_Send_Byte(reg>>8);   
+ 151              		.loc 1 104 3 view .LVU33
+ 152 0016 200A     		lsrs	r0, r4, #8
+ 153 0018 FFF7FEFF 		bl	I2C_Send_Byte
+ 154              	.LVL20:
+ 105:Core/Src/GT911.c **** 	I2C_Wait_Ack(); 	 										  		   
+ 155              		.loc 1 105 2 view .LVU34
+ 156 001c FFF7FEFF 		bl	I2C_Wait_Ack
+ 157              	.LVL21:
+ 106:Core/Src/GT911.c ****  	I2C_Send_Byte(reg&0XFF);   	
+ 158              		.loc 1 106 3 view .LVU35
+ 159 0020 E0B2     		uxtb	r0, r4
+ 160 0022 FFF7FEFF 		bl	I2C_Send_Byte
+ 161              	.LVL22:
+ 107:Core/Src/GT911.c **** 	I2C_Wait_Ack();  
+ 162              		.loc 1 107 2 view .LVU36
+ 163 0026 FFF7FEFF 		bl	I2C_Wait_Ack
+ 164              	.LVL23:
+ 108:Core/Src/GT911.c ****  	I2C_Stop();  
+ 165              		.loc 1 108 3 view .LVU37
+ 166 002a FFF7FEFF 		bl	I2C_Stop
+ 167              	.LVL24:
+ 109:Core/Src/GT911.c **** 	
+ 110:Core/Src/GT911.c ****  	I2C_Start();  	 	   
+ 168              		.loc 1 110 3 view .LVU38
+ 169 002e FFF7FEFF 		bl	I2C_Start
+ 170              	.LVL25:
+ 111:Core/Src/GT911.c **** 	I2C_Send_Byte(CT_CMD_RD);     
+ 171              		.loc 1 111 2 view .LVU39
+ 172 0032 BB20     		movs	r0, #187
+ 173 0034 FFF7FEFF 		bl	I2C_Send_Byte
+ 174              	.LVL26:
+ 112:Core/Src/GT911.c **** 	I2C_Wait_Ack();	   
+ 175              		.loc 1 112 2 view .LVU40
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 6
+
+
+ 176 0038 FFF7FEFF 		bl	I2C_Wait_Ack
+ 177              	.LVL27:
+ 113:Core/Src/GT911.c **** 	for(i=0;i<len;i++)
+ 178              		.loc 1 113 2 view .LVU41
+ 179              		.loc 1 113 7 is_stmt 0 view .LVU42
+ 180 003c 0024     		movs	r4, #0
+ 181              		.loc 1 113 2 view .LVU43
+ 182 003e 08E0     		b	.L8
+ 183              	.LVL28:
+ 184              	.L9:
+ 114:Core/Src/GT911.c **** 	{	   
+ 115:Core/Src/GT911.c **** 		buf[i]=I2C_Read_Byte(i==(len-1)?0:1); 
+ 185              		.loc 1 115 3 is_stmt 1 discriminator 3 view .LVU44
+ 186              		.loc 1 115 31 is_stmt 0 discriminator 3 view .LVU45
+ 187 0040 681E     		subs	r0, r5, #1
+ 188              		.loc 1 115 10 discriminator 3 view .LVU46
+ 189 0042 201A     		subs	r0, r4, r0
+ 190 0044 18BF     		it	ne
+ 191 0046 0120     		movne	r0, #1
+ 192 0048 FFF7FEFF 		bl	I2C_Read_Byte
+ 193              	.LVL29:
+ 194              		.loc 1 115 9 discriminator 3 view .LVU47
+ 195 004c 3055     		strb	r0, [r6, r4]
+ 113:Core/Src/GT911.c **** 	for(i=0;i<len;i++)
+ 196              		.loc 1 113 17 is_stmt 1 discriminator 3 view .LVU48
+ 197 004e 0134     		adds	r4, r4, #1
+ 198              	.LVL30:
+ 113:Core/Src/GT911.c **** 	for(i=0;i<len;i++)
+ 199              		.loc 1 113 17 is_stmt 0 discriminator 3 view .LVU49
+ 200 0050 E4B2     		uxtb	r4, r4
+ 201              	.LVL31:
+ 202              	.L8:
+ 113:Core/Src/GT911.c **** 	for(i=0;i<len;i++)
+ 203              		.loc 1 113 11 is_stmt 1 discriminator 1 view .LVU50
+ 204 0052 AC42     		cmp	r4, r5
+ 205 0054 F4D3     		bcc	.L9
+ 116:Core/Src/GT911.c **** 	} 
+ 117:Core/Src/GT911.c ****   I2C_Stop();   
+ 206              		.loc 1 117 3 view .LVU51
+ 207 0056 FFF7FEFF 		bl	I2C_Stop
+ 208              	.LVL32:
+ 118:Core/Src/GT911.c **** }
+ 209              		.loc 1 118 1 is_stmt 0 view .LVU52
+ 210 005a 70BD     		pop	{r4, r5, r6, pc}
+ 211              		.loc 1 118 1 view .LVU53
+ 212              		.cfi_endproc
+ 213              	.LFE326:
+ 215              		.section	.rodata.GT911_Read_ID.str1.4,"aMS",%progbits,1
+ 216              		.align	2
+ 217              	.LC0:
+ 218 0000 546F7563 		.ascii	"TouchPad_ID:%c,%c,%c\015\012TouchPad_Config_Version"
+ 218      68506164 
+ 218      5F49443A 
+ 218      25632C25 
+ 218      632C2563 
+ 219 002d 3A253278 		.ascii	":%2x\015\012\000"
+ 219      0D0A00
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 7
+
+
+ 220              		.section	.text.GT911_Read_ID,"ax",%progbits
+ 221              		.align	1
+ 222              		.syntax unified
+ 223              		.thumb
+ 224              		.thumb_func
+ 226              	GT911_Read_ID:
+ 227              	.LFB327:
+ 119:Core/Src/GT911.c **** 
+ 120:Core/Src/GT911.c **** /******************************************************************************
+ 121:Core/Src/GT911.c **** function:	Read the ID of the GT911
+ 122:Core/Src/GT911.c **** ******************************************************************************/
+ 123:Core/Src/GT911.c **** static uint8_t GT911_Read_ID(void)
+ 124:Core/Src/GT911.c **** {
+ 228              		.loc 1 124 1 is_stmt 1 view -0
+ 229              		.cfi_startproc
+ 230              		@ args = 0, pretend = 0, frame = 8
+ 231              		@ frame_needed = 0, uses_anonymous_args = 0
+ 232 0000 00B5     		push	{lr}
+ 233              		.cfi_def_cfa_offset 4
+ 234              		.cfi_offset 14, -4
+ 235 0002 85B0     		sub	sp, sp, #20
+ 236              		.cfi_def_cfa_offset 24
+ 125:Core/Src/GT911.c **** 	uint8_t buf[4];
+ 237              		.loc 1 125 2 view .LVU55
+ 126:Core/Src/GT911.c **** 	GT911_RD_Reg(GT911_PRODUCT_ID_REG, (uint8_t *)&buf[0], 3);
+ 238              		.loc 1 126 2 view .LVU56
+ 239 0004 0322     		movs	r2, #3
+ 240 0006 03A9     		add	r1, sp, #12
+ 241 0008 48F24010 		movw	r0, #33088
+ 242 000c FFF7FEFF 		bl	GT911_RD_Reg
+ 243              	.LVL33:
+ 127:Core/Src/GT911.c **** 	GT911_RD_Reg(GT911_CONFIG_REG, (uint8_t *)&buf[3], 1);
+ 244              		.loc 1 127 2 view .LVU57
+ 245 0010 0122     		movs	r2, #1
+ 246 0012 0DF10F01 		add	r1, sp, #15
+ 247 0016 48F24700 		movw	r0, #32839
+ 248 001a FFF7FEFF 		bl	GT911_RD_Reg
+ 249              	.LVL34:
+ 128:Core/Src/GT911.c **** 	printf("TouchPad_ID:%c,%c,%c\r\nTouchPad_Config_Version:%2x\r\n",buf[0],buf[1],buf[2],buf[3]);
+ 250              		.loc 1 128 2 view .LVU58
+ 251              		.loc 1 128 91 is_stmt 0 view .LVU59
+ 252 001e 9DF80F30 		ldrb	r3, [sp, #15]	@ zero_extendqisi2
+ 253              		.loc 1 128 2 view .LVU60
+ 254 0022 0093     		str	r3, [sp]
+ 255 0024 9DF80E30 		ldrb	r3, [sp, #14]	@ zero_extendqisi2
+ 256 0028 9DF80D20 		ldrb	r2, [sp, #13]	@ zero_extendqisi2
+ 257 002c 9DF80C10 		ldrb	r1, [sp, #12]	@ zero_extendqisi2
+ 258 0030 0348     		ldr	r0, .L13
+ 259 0032 FFF7FEFF 		bl	printf
+ 260              	.LVL35:
+ 129:Core/Src/GT911.c **** 	return buf[3];
+ 261              		.loc 1 129 2 is_stmt 1 view .LVU61
+ 130:Core/Src/GT911.c **** }
+ 262              		.loc 1 130 1 is_stmt 0 view .LVU62
+ 263 0036 9DF80F00 		ldrb	r0, [sp, #15]	@ zero_extendqisi2
+ 264 003a 05B0     		add	sp, sp, #20
+ 265              		.cfi_def_cfa_offset 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 8
+
+
+ 266              		@ sp needed
+ 267 003c 5DF804FB 		ldr	pc, [sp], #4
+ 268              	.L14:
+ 269              		.align	2
+ 270              	.L13:
+ 271 0040 00000000 		.word	.LC0
+ 272              		.cfi_endproc
+ 273              	.LFE327:
+ 275              		.section	.rodata.GT911_Read_FirmwareVersion.str1.4,"aMS",%progbits,1
+ 276              		.align	2
+ 277              	.LC1:
+ 278 0000 4669726D 		.ascii	"FirmwareVersion:%2x\015\012\000"
+ 278      77617265 
+ 278      56657273 
+ 278      696F6E3A 
+ 278      2532780D 
+ 279              		.section	.text.GT911_Read_FirmwareVersion,"ax",%progbits
+ 280              		.align	1
+ 281              		.syntax unified
+ 282              		.thumb
+ 283              		.thumb_func
+ 285              	GT911_Read_FirmwareVersion:
+ 286              	.LFB328:
+ 131:Core/Src/GT911.c **** 
+ 132:Core/Src/GT911.c **** /******************************************************************************
+ 133:Core/Src/GT911.c **** function:	Read the firmware version of the GT911
+ 134:Core/Src/GT911.c **** ******************************************************************************/
+ 135:Core/Src/GT911.c **** static uint16_t GT911_Read_FirmwareVersion(void)
+ 136:Core/Src/GT911.c **** {
+ 287              		.loc 1 136 1 is_stmt 1 view -0
+ 288              		.cfi_startproc
+ 289              		@ args = 0, pretend = 0, frame = 8
+ 290              		@ frame_needed = 0, uses_anonymous_args = 0
+ 291 0000 00B5     		push	{lr}
+ 292              		.cfi_def_cfa_offset 4
+ 293              		.cfi_offset 14, -4
+ 294 0002 83B0     		sub	sp, sp, #12
+ 295              		.cfi_def_cfa_offset 16
+ 137:Core/Src/GT911.c **** 	uint8_t buf[2];
+ 296              		.loc 1 137 2 view .LVU64
+ 138:Core/Src/GT911.c **** 
+ 139:Core/Src/GT911.c **** 	GT911_RD_Reg(GT911_FIRMWARE_VERSION_REG, buf, 2);
+ 297              		.loc 1 139 2 view .LVU65
+ 298 0004 0222     		movs	r2, #2
+ 299 0006 01A9     		add	r1, sp, #4
+ 300 0008 48F24410 		movw	r0, #33092
+ 301 000c FFF7FEFF 		bl	GT911_RD_Reg
+ 302              	.LVL36:
+ 140:Core/Src/GT911.c **** 
+ 141:Core/Src/GT911.c **** 	printf("FirmwareVersion:%2x\r\n",(((uint16_t)buf[1] << 8) + buf[0]));
+ 303              		.loc 1 141 2 view .LVU66
+ 304              		.loc 1 141 50 is_stmt 0 view .LVU67
+ 305 0010 9DF80510 		ldrb	r1, [sp, #5]	@ zero_extendqisi2
+ 306              		.loc 1 141 65 view .LVU68
+ 307 0014 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
+ 308              		.loc 1 141 2 view .LVU69
+ 309 0018 03EB0121 		add	r1, r3, r1, lsl #8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 9
+
+
+ 310 001c 0648     		ldr	r0, .L17
+ 311 001e FFF7FEFF 		bl	printf
+ 312              	.LVL37:
+ 142:Core/Src/GT911.c **** 	return ((uint16_t)buf[1] << 8) + buf[0];
+ 313              		.loc 1 142 2 is_stmt 1 view .LVU70
+ 314              		.loc 1 142 23 is_stmt 0 view .LVU71
+ 315 0022 9DF80530 		ldrb	r3, [sp, #5]	@ zero_extendqisi2
+ 316              		.loc 1 142 38 view .LVU72
+ 317 0026 9DF80400 		ldrb	r0, [sp, #4]	@ zero_extendqisi2
+ 318              		.loc 1 142 33 view .LVU73
+ 319 002a 00EB0320 		add	r0, r0, r3, lsl #8
+ 143:Core/Src/GT911.c **** }
+ 320              		.loc 1 143 1 view .LVU74
+ 321 002e 80B2     		uxth	r0, r0
+ 322 0030 03B0     		add	sp, sp, #12
+ 323              		.cfi_def_cfa_offset 4
+ 324              		@ sp needed
+ 325 0032 5DF804FB 		ldr	pc, [sp], #4
+ 326              	.L18:
+ 327 0036 00BF     		.align	2
+ 328              	.L17:
+ 329 0038 00000000 		.word	.LC1
+ 330              		.cfi_endproc
+ 331              	.LFE328:
+ 333              		.section	.rodata.GT911_Scan.str1.4,"aMS",%progbits,1
+ 334              		.align	2
+ 335              	.LC2:
+ 336 0000 78203D20 		.ascii	"x = %d   y=  %d \015\012\000"
+ 336      25642020 
+ 336      20793D20 
+ 336      20256420 
+ 336      0D0A00
+ 337              		.section	.text.GT911_Scan,"ax",%progbits
+ 338              		.align	1
+ 339              		.global	GT911_Scan
+ 340              		.syntax unified
+ 341              		.thumb
+ 342              		.thumb_func
+ 344              	GT911_Scan:
+ 345              	.LFB329:
+ 144:Core/Src/GT911.c **** 
+ 145:Core/Src/GT911.c **** /******************************************************************************
+ 146:Core/Src/GT911.c **** function:	Read the firmware version of the GT911
+ 147:Core/Src/GT911.c **** ******************************************************************************/
+ 148:Core/Src/GT911.c **** void GT911_Scan(void)
+ 149:Core/Src/GT911.c **** {
+ 346              		.loc 1 149 1 is_stmt 1 view -0
+ 347              		.cfi_startproc
+ 348              		@ args = 0, pretend = 0, frame = 48
+ 349              		@ frame_needed = 0, uses_anonymous_args = 0
+ 350 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 351              		.cfi_def_cfa_offset 36
+ 352              		.cfi_offset 4, -36
+ 353              		.cfi_offset 5, -32
+ 354              		.cfi_offset 6, -28
+ 355              		.cfi_offset 7, -24
+ 356              		.cfi_offset 8, -20
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 10
+
+
+ 357              		.cfi_offset 9, -16
+ 358              		.cfi_offset 10, -12
+ 359              		.cfi_offset 11, -8
+ 360              		.cfi_offset 14, -4
+ 361 0004 91B0     		sub	sp, sp, #68
+ 362              		.cfi_def_cfa_offset 104
+ 150:Core/Src/GT911.c **** 	uint8_t buf[41];
+ 363              		.loc 1 150 2 view .LVU76
+ 151:Core/Src/GT911.c ****   uint8_t Clearbuf = 0;
+ 364              		.loc 1 151 3 view .LVU77
+ 365              		.loc 1 151 11 is_stmt 0 view .LVU78
+ 366 0006 0023     		movs	r3, #0
+ 367 0008 8DF81330 		strb	r3, [sp, #19]
+ 152:Core/Src/GT911.c **** 	uint8_t i;
+ 368              		.loc 1 152 2 is_stmt 1 view .LVU79
+ 153:Core/Src/GT911.c **** 
+ 154:Core/Src/GT911.c **** 	//Determine if the interruption is generated
+ 155:Core/Src/GT911.c **** 	if (Dev_Now.Touch == 1)
+ 369              		.loc 1 155 2 view .LVU80
+ 370              		.loc 1 155 13 is_stmt 0 view .LVU81
+ 371 000c 834B     		ldr	r3, .L39
+ 372 000e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 373              		.loc 1 155 5 view .LVU82
+ 374 0010 012B     		cmp	r3, #1
+ 375 0012 02D0     		beq	.L35
+ 376              	.L19:
+ 156:Core/Src/GT911.c **** 	{
+ 157:Core/Src/GT911.c **** 		Dev_Now.Touch = 0;
+ 158:Core/Src/GT911.c **** 		GT911_RD_Reg(GT911_READ_XY_REG, buf, 1);		
+ 159:Core/Src/GT911.c **** 		
+ 160:Core/Src/GT911.c **** 		if ((buf[0]&0x80) == 0x00)
+ 161:Core/Src/GT911.c **** 		{
+ 162:Core/Src/GT911.c **** 			GT911_WR_Reg(GT911_READ_XY_REG, (uint8_t *)&Clearbuf, 1);
+ 163:Core/Src/GT911.c **** 			DEV_Delay_ms(10);
+ 164:Core/Src/GT911.c **** 		}
+ 165:Core/Src/GT911.c **** 		else
+ 166:Core/Src/GT911.c **** 		{
+ 167:Core/Src/GT911.c **** 			Dev_Now.TouchpointFlag = buf[0];
+ 168:Core/Src/GT911.c **** 			Dev_Now.TouchCount = buf[0]&0x0f;
+ 169:Core/Src/GT911.c **** 			if (Dev_Now.TouchCount > 5 || Dev_Now.TouchCount  == 0)
+ 170:Core/Src/GT911.c **** 			{
+ 171:Core/Src/GT911.c **** 				GT911_WR_Reg(GT911_READ_XY_REG, (uint8_t *)&Clearbuf, 1);
+ 172:Core/Src/GT911.c **** 				return ;
+ 173:Core/Src/GT911.c **** 			}
+ 174:Core/Src/GT911.c **** 			
+ 175:Core/Src/GT911.c **** 			if(temp < 5){//Prevent misjudgment
+ 176:Core/Src/GT911.c **** 				temp = 1 + temp;
+ 177:Core/Src/GT911.c **** 				if(temp == 4)
+ 178:Core/Src/GT911.c **** 					Paint_Clear(WHITE);
+ 179:Core/Src/GT911.c **** 				return;
+ 180:Core/Src/GT911.c **** 			}
+ 181:Core/Src/GT911.c **** 			
+ 182:Core/Src/GT911.c **** 			GT911_RD_Reg(GT911_READ_XY_REG+1, &buf[1], Dev_Now.TouchCount*8);
+ 183:Core/Src/GT911.c **** 			GT911_WR_Reg(GT911_READ_XY_REG, (uint8_t *)&Clearbuf, 1);
+ 184:Core/Src/GT911.c **** 			
+ 185:Core/Src/GT911.c **** 			Dev_Now.Touchkeytrackid[0] = buf[1];
+ 186:Core/Src/GT911.c **** 			Dev_Now.X[0] = ((uint16_t)buf[3] << 8) + buf[2];
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 11
+
+
+ 187:Core/Src/GT911.c **** 			Dev_Now.Y[0] = ((uint16_t)buf[5] << 8) + buf[4];
+ 188:Core/Src/GT911.c **** 			Dev_Now.S[0] = ((uint16_t)buf[7] << 8) + buf[6];
+ 189:Core/Src/GT911.c **** 
+ 190:Core/Src/GT911.c **** 			Dev_Now.Touchkeytrackid[1] = buf[9];
+ 191:Core/Src/GT911.c **** 			Dev_Now.X[1] = ((uint16_t)buf[11] << 8) + buf[10];
+ 192:Core/Src/GT911.c **** 			Dev_Now.Y[1] = ((uint16_t)buf[13] << 8) + buf[12];
+ 193:Core/Src/GT911.c **** 			Dev_Now.S[1] = ((uint16_t)buf[15] << 8) + buf[14];
+ 194:Core/Src/GT911.c **** 
+ 195:Core/Src/GT911.c **** 			Dev_Now.Touchkeytrackid[2] = buf[17];
+ 196:Core/Src/GT911.c **** 			Dev_Now.X[2] = ((uint16_t)buf[19] << 8) + buf[18];
+ 197:Core/Src/GT911.c **** 			Dev_Now.Y[2] = ((uint16_t)buf[21] << 8) + buf[20];
+ 198:Core/Src/GT911.c **** 			Dev_Now.S[2] = ((uint16_t)buf[23] << 8) + buf[22];
+ 199:Core/Src/GT911.c **** 
+ 200:Core/Src/GT911.c **** 			Dev_Now.Touchkeytrackid[3] = buf[25];
+ 201:Core/Src/GT911.c **** 			Dev_Now.X[3] = ((uint16_t)buf[27] << 8) + buf[26];
+ 202:Core/Src/GT911.c **** 			Dev_Now.Y[3] = ((uint16_t)buf[29] << 8) + buf[28];
+ 203:Core/Src/GT911.c **** 			Dev_Now.S[3] = ((uint16_t)buf[31] << 8) + buf[30];
+ 204:Core/Src/GT911.c **** 
+ 205:Core/Src/GT911.c **** 			Dev_Now.Touchkeytrackid[4] = buf[33];
+ 206:Core/Src/GT911.c **** 			Dev_Now.X[4] = ((uint16_t)buf[35] << 8) + buf[34];
+ 207:Core/Src/GT911.c **** 			Dev_Now.Y[4] = ((uint16_t)buf[37] << 8) + buf[36];
+ 208:Core/Src/GT911.c **** 			Dev_Now.S[4] = ((uint16_t)buf[39] << 8) + buf[38];
+ 209:Core/Src/GT911.c **** 			
+ 210:Core/Src/GT911.c **** 			//Get coordinates and display coordinates
+ 211:Core/Src/GT911.c **** 			
+ 212:Core/Src/GT911.c **** 			//Clear the last redundant display coordinates
+ 213:Core/Src/GT911.c **** 			if(z > Dev_Now.TouchCount){
+ 214:Core/Src/GT911.c **** 				for(i = z; i != Dev_Now.TouchCount; i--){
+ 215:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i-1]+3, 800, y[i-1]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 216:Core/Src/GT911.c **** 					Paint_DrawLine(x[i-1]+3, 0, x[i-1]+3, 480, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 217:Core/Src/GT911.c **** 					Paint_DrawCircle( x[i-1]+3 , y[i-1]+3 , 8, WHITE, DRAW_FILL_FULL, DOT_PIXEL_1X1);
+ 218:Core/Src/GT911.c **** 				}
+ 219:Core/Src/GT911.c **** 			}
+ 220:Core/Src/GT911.c **** 			
+ 221:Core/Src/GT911.c **** 			for (i=0;i<Dev_Now.TouchCount;i++)
+ 222:Core/Src/GT911.c **** 			{			
+ 223:Core/Src/GT911.c **** 				Dev_Backup.X[i] = Dev_Now.X[i];
+ 224:Core/Src/GT911.c **** 				Dev_Backup.Y[i] = Dev_Now.Y[i];
+ 225:Core/Src/GT911.c **** 				Dev_Backup.TouchCount = Dev_Now.TouchCount;		
+ 226:Core/Src/GT911.c **** 				printf("x = %d   y=  %d \r\n",Dev_Now.X[i], Dev_Now.Y[i]);
+ 227:Core/Src/GT911.c **** 
+ 228:Core/Src/GT911.c **** 				//Clear the last displayed coordinates
+ 229:Core/Src/GT911.c **** 				if(x[i] != Dev_Now.X[i] || y[i]  != Dev_Now.Y[i]){
+ 230:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i]+3, 800, y[i]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 231:Core/Src/GT911.c **** 					Paint_DrawLine(x[i]+3, 0, x[i]+3, 480, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 232:Core/Src/GT911.c **** 					Paint_DrawCircle( x[i]+3 , y[i]+3 , 8, WHITE, DRAW_FILL_FULL, DOT_PIXEL_1X1);
+ 233:Core/Src/GT911.c **** 				}
+ 234:Core/Src/GT911.c **** 				//Display coordinates
+ 235:Core/Src/GT911.c **** 				Paint_DrawLine(Dev_Now.X[i]+3, 0, Dev_Now.X[i]+3, 480, Color[i], LINE_STYLE_SOLID, DOT_PIXEL_1X
+ 236:Core/Src/GT911.c **** 				Paint_DrawLine(0 , Dev_Now.Y[i]+3, 800, Dev_Now.Y[i]+3, Color[i], LINE_STYLE_SOLID, DOT_PIXEL_1
+ 237:Core/Src/GT911.c **** 				Paint_DrawCircle(Dev_Now.X[i]+3 , Dev_Now.Y[i]+3 , 8, Color[i], DRAW_FILL_FULL, DOT_PIXEL_1X1);
+ 238:Core/Src/GT911.c **** 				
+ 239:Core/Src/GT911.c **** 				x[i]  = Dev_Now.X[i];
+ 240:Core/Src/GT911.c **** 				y[i]  = Dev_Now.Y[i];
+ 241:Core/Src/GT911.c **** 			}
+ 242:Core/Src/GT911.c **** 			z = Dev_Now.TouchCount;
+ 243:Core/Src/GT911.c **** 		}
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 12
+
+
+ 244:Core/Src/GT911.c **** 	}
+ 245:Core/Src/GT911.c **** }
+ 377              		.loc 1 245 1 view .LVU83
+ 378 0014 11B0     		add	sp, sp, #68
+ 379              		.cfi_remember_state
+ 380              		.cfi_def_cfa_offset 36
+ 381              		@ sp needed
+ 382 0016 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 383              	.L35:
+ 384              		.cfi_restore_state
+ 157:Core/Src/GT911.c **** 		GT911_RD_Reg(GT911_READ_XY_REG, buf, 1);		
+ 385              		.loc 1 157 3 is_stmt 1 view .LVU84
+ 157:Core/Src/GT911.c **** 		GT911_RD_Reg(GT911_READ_XY_REG, buf, 1);		
+ 386              		.loc 1 157 17 is_stmt 0 view .LVU85
+ 387 001a 804B     		ldr	r3, .L39
+ 388 001c 0022     		movs	r2, #0
+ 389 001e 1A70     		strb	r2, [r3]
+ 158:Core/Src/GT911.c **** 		
+ 390              		.loc 1 158 3 is_stmt 1 view .LVU86
+ 391 0020 0122     		movs	r2, #1
+ 392 0022 05A9     		add	r1, sp, #20
+ 393 0024 48F24E10 		movw	r0, #33102
+ 394 0028 FFF7FEFF 		bl	GT911_RD_Reg
+ 395              	.LVL38:
+ 160:Core/Src/GT911.c **** 		{
+ 396              		.loc 1 160 3 view .LVU87
+ 160:Core/Src/GT911.c **** 		{
+ 397              		.loc 1 160 11 is_stmt 0 view .LVU88
+ 398 002c 9DF81420 		ldrb	r2, [sp, #20]	@ zero_extendqisi2
+ 160:Core/Src/GT911.c **** 		{
+ 399              		.loc 1 160 21 view .LVU89
+ 400 0030 9DF91430 		ldrsb	r3, [sp, #20]
+ 160:Core/Src/GT911.c **** 		{
+ 401              		.loc 1 160 6 view .LVU90
+ 402 0034 002B     		cmp	r3, #0
+ 403 0036 17DA     		bge	.L36
+ 167:Core/Src/GT911.c **** 			Dev_Now.TouchCount = buf[0]&0x0f;
+ 404              		.loc 1 167 4 is_stmt 1 view .LVU91
+ 167:Core/Src/GT911.c **** 			Dev_Now.TouchCount = buf[0]&0x0f;
+ 405              		.loc 1 167 27 is_stmt 0 view .LVU92
+ 406 0038 784B     		ldr	r3, .L39
+ 407 003a 5A70     		strb	r2, [r3, #1]
+ 168:Core/Src/GT911.c **** 			if (Dev_Now.TouchCount > 5 || Dev_Now.TouchCount  == 0)
+ 408              		.loc 1 168 4 is_stmt 1 view .LVU93
+ 168:Core/Src/GT911.c **** 			if (Dev_Now.TouchCount > 5 || Dev_Now.TouchCount  == 0)
+ 409              		.loc 1 168 31 is_stmt 0 view .LVU94
+ 410 003c 02F00F02 		and	r2, r2, #15
+ 168:Core/Src/GT911.c **** 			if (Dev_Now.TouchCount > 5 || Dev_Now.TouchCount  == 0)
+ 411              		.loc 1 168 23 view .LVU95
+ 412 0040 9A70     		strb	r2, [r3, #2]
+ 169:Core/Src/GT911.c **** 			{
+ 413              		.loc 1 169 4 is_stmt 1 view .LVU96
+ 169:Core/Src/GT911.c **** 			{
+ 414              		.loc 1 169 31 is_stmt 0 view .LVU97
+ 415 0042 531E     		subs	r3, r2, #1
+ 416 0044 DBB2     		uxtb	r3, r3
+ 169:Core/Src/GT911.c **** 			{
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 13
+
+
+ 417              		.loc 1 169 7 view .LVU98
+ 418 0046 042B     		cmp	r3, #4
+ 419 0048 19D8     		bhi	.L37
+ 175:Core/Src/GT911.c **** 				temp = 1 + temp;
+ 420              		.loc 1 175 4 is_stmt 1 view .LVU99
+ 175:Core/Src/GT911.c **** 				temp = 1 + temp;
+ 421              		.loc 1 175 12 is_stmt 0 view .LVU100
+ 422 004a 754B     		ldr	r3, .L39+4
+ 423 004c 1B88     		ldrh	r3, [r3]
+ 175:Core/Src/GT911.c **** 				temp = 1 + temp;
+ 424              		.loc 1 175 6 view .LVU101
+ 425 004e 042B     		cmp	r3, #4
+ 426 0050 1DD8     		bhi	.L24
+ 176:Core/Src/GT911.c **** 				if(temp == 4)
+ 427              		.loc 1 176 5 is_stmt 1 view .LVU102
+ 176:Core/Src/GT911.c **** 				if(temp == 4)
+ 428              		.loc 1 176 14 is_stmt 0 view .LVU103
+ 429 0052 0133     		adds	r3, r3, #1
+ 430 0054 9BB2     		uxth	r3, r3
+ 176:Core/Src/GT911.c **** 				if(temp == 4)
+ 431              		.loc 1 176 10 view .LVU104
+ 432 0056 724A     		ldr	r2, .L39+4
+ 433 0058 1380     		strh	r3, [r2]	@ movhi
+ 177:Core/Src/GT911.c **** 					Paint_Clear(WHITE);
+ 434              		.loc 1 177 5 is_stmt 1 view .LVU105
+ 177:Core/Src/GT911.c **** 					Paint_Clear(WHITE);
+ 435              		.loc 1 177 7 is_stmt 0 view .LVU106
+ 436 005a 042B     		cmp	r3, #4
+ 437 005c DAD1     		bne	.L19
+ 178:Core/Src/GT911.c **** 				return;
+ 438              		.loc 1 178 6 is_stmt 1 view .LVU107
+ 439 005e 4FF6FF70 		movw	r0, #65535
+ 440 0062 FFF7FEFF 		bl	Paint_Clear
+ 441              	.LVL39:
+ 179:Core/Src/GT911.c **** 			}
+ 442              		.loc 1 179 5 view .LVU108
+ 443 0066 D5E7     		b	.L19
+ 444              	.L36:
+ 162:Core/Src/GT911.c **** 			DEV_Delay_ms(10);
+ 445              		.loc 1 162 4 view .LVU109
+ 446 0068 0122     		movs	r2, #1
+ 447 006a 0DF11301 		add	r1, sp, #19
+ 448 006e 48F24E10 		movw	r0, #33102
+ 449 0072 FFF7FEFF 		bl	GT911_WR_Reg
+ 450              	.LVL40:
+ 163:Core/Src/GT911.c **** 		}
+ 451              		.loc 1 163 4 view .LVU110
+ 452 0076 0A20     		movs	r0, #10
+ 453 0078 FFF7FEFF 		bl	HAL_Delay
+ 454              	.LVL41:
+ 455 007c CAE7     		b	.L19
+ 456              	.L37:
+ 171:Core/Src/GT911.c **** 				return ;
+ 457              		.loc 1 171 5 view .LVU111
+ 458 007e 0122     		movs	r2, #1
+ 459 0080 0DF11301 		add	r1, sp, #19
+ 460 0084 48F24E10 		movw	r0, #33102
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 14
+
+
+ 461 0088 FFF7FEFF 		bl	GT911_WR_Reg
+ 462              	.LVL42:
+ 172:Core/Src/GT911.c **** 			}
+ 463              		.loc 1 172 5 view .LVU112
+ 464 008c C2E7     		b	.L19
+ 465              	.L24:
+ 182:Core/Src/GT911.c **** 			GT911_WR_Reg(GT911_READ_XY_REG, (uint8_t *)&Clearbuf, 1);
+ 466              		.loc 1 182 4 view .LVU113
+ 467 008e D200     		lsls	r2, r2, #3
+ 468 0090 0DF11501 		add	r1, sp, #21
+ 469 0094 48F24F10 		movw	r0, #33103
+ 470 0098 FFF7FEFF 		bl	GT911_RD_Reg
+ 471              	.LVL43:
+ 183:Core/Src/GT911.c **** 			
+ 472              		.loc 1 183 4 view .LVU114
+ 473 009c 0122     		movs	r2, #1
+ 474 009e 0DF11301 		add	r1, sp, #19
+ 475 00a2 48F24E10 		movw	r0, #33102
+ 476 00a6 FFF7FEFF 		bl	GT911_WR_Reg
+ 477              	.LVL44:
+ 185:Core/Src/GT911.c **** 			Dev_Now.X[0] = ((uint16_t)buf[3] << 8) + buf[2];
+ 478              		.loc 1 185 4 view .LVU115
+ 185:Core/Src/GT911.c **** 			Dev_Now.X[0] = ((uint16_t)buf[3] << 8) + buf[2];
+ 479              		.loc 1 185 36 is_stmt 0 view .LVU116
+ 480 00aa 9DF81520 		ldrb	r2, [sp, #21]	@ zero_extendqisi2
+ 185:Core/Src/GT911.c **** 			Dev_Now.X[0] = ((uint16_t)buf[3] << 8) + buf[2];
+ 481              		.loc 1 185 31 view .LVU117
+ 482 00ae 5B4B     		ldr	r3, .L39
+ 483 00b0 DA70     		strb	r2, [r3, #3]
+ 186:Core/Src/GT911.c **** 			Dev_Now.Y[0] = ((uint16_t)buf[5] << 8) + buf[4];
+ 484              		.loc 1 186 4 is_stmt 1 view .LVU118
+ 186:Core/Src/GT911.c **** 			Dev_Now.Y[0] = ((uint16_t)buf[5] << 8) + buf[4];
+ 485              		.loc 1 186 33 is_stmt 0 view .LVU119
+ 486 00b2 9DF81710 		ldrb	r1, [sp, #23]	@ zero_extendqisi2
+ 186:Core/Src/GT911.c **** 			Dev_Now.Y[0] = ((uint16_t)buf[5] << 8) + buf[4];
+ 487              		.loc 1 186 48 view .LVU120
+ 488 00b6 9DF81620 		ldrb	r2, [sp, #22]	@ zero_extendqisi2
+ 186:Core/Src/GT911.c **** 			Dev_Now.Y[0] = ((uint16_t)buf[5] << 8) + buf[4];
+ 489              		.loc 1 186 43 view .LVU121
+ 490 00ba 02EB0122 		add	r2, r2, r1, lsl #8
+ 186:Core/Src/GT911.c **** 			Dev_Now.Y[0] = ((uint16_t)buf[5] << 8) + buf[4];
+ 491              		.loc 1 186 17 view .LVU122
+ 492 00be 1A81     		strh	r2, [r3, #8]	@ movhi
+ 187:Core/Src/GT911.c **** 			Dev_Now.S[0] = ((uint16_t)buf[7] << 8) + buf[6];
+ 493              		.loc 1 187 4 is_stmt 1 view .LVU123
+ 187:Core/Src/GT911.c **** 			Dev_Now.S[0] = ((uint16_t)buf[7] << 8) + buf[6];
+ 494              		.loc 1 187 33 is_stmt 0 view .LVU124
+ 495 00c0 9DF81910 		ldrb	r1, [sp, #25]	@ zero_extendqisi2
+ 187:Core/Src/GT911.c **** 			Dev_Now.S[0] = ((uint16_t)buf[7] << 8) + buf[6];
+ 496              		.loc 1 187 48 view .LVU125
+ 497 00c4 9DF81820 		ldrb	r2, [sp, #24]	@ zero_extendqisi2
+ 187:Core/Src/GT911.c **** 			Dev_Now.S[0] = ((uint16_t)buf[7] << 8) + buf[6];
+ 498              		.loc 1 187 43 view .LVU126
+ 499 00c8 02EB0122 		add	r2, r2, r1, lsl #8
+ 187:Core/Src/GT911.c **** 			Dev_Now.S[0] = ((uint16_t)buf[7] << 8) + buf[6];
+ 500              		.loc 1 187 17 view .LVU127
+ 501 00cc 5A82     		strh	r2, [r3, #18]	@ movhi
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 15
+
+
+ 188:Core/Src/GT911.c **** 
+ 502              		.loc 1 188 4 is_stmt 1 view .LVU128
+ 188:Core/Src/GT911.c **** 
+ 503              		.loc 1 188 33 is_stmt 0 view .LVU129
+ 504 00ce 9DF81B10 		ldrb	r1, [sp, #27]	@ zero_extendqisi2
+ 188:Core/Src/GT911.c **** 
+ 505              		.loc 1 188 48 view .LVU130
+ 506 00d2 9DF81A20 		ldrb	r2, [sp, #26]	@ zero_extendqisi2
+ 188:Core/Src/GT911.c **** 
+ 507              		.loc 1 188 43 view .LVU131
+ 508 00d6 02EB0122 		add	r2, r2, r1, lsl #8
+ 188:Core/Src/GT911.c **** 
+ 509              		.loc 1 188 17 view .LVU132
+ 510 00da 9A83     		strh	r2, [r3, #28]	@ movhi
+ 190:Core/Src/GT911.c **** 			Dev_Now.X[1] = ((uint16_t)buf[11] << 8) + buf[10];
+ 511              		.loc 1 190 4 is_stmt 1 view .LVU133
+ 190:Core/Src/GT911.c **** 			Dev_Now.X[1] = ((uint16_t)buf[11] << 8) + buf[10];
+ 512              		.loc 1 190 36 is_stmt 0 view .LVU134
+ 513 00dc 9DF81D20 		ldrb	r2, [sp, #29]	@ zero_extendqisi2
+ 190:Core/Src/GT911.c **** 			Dev_Now.X[1] = ((uint16_t)buf[11] << 8) + buf[10];
+ 514              		.loc 1 190 31 view .LVU135
+ 515 00e0 1A71     		strb	r2, [r3, #4]
+ 191:Core/Src/GT911.c **** 			Dev_Now.Y[1] = ((uint16_t)buf[13] << 8) + buf[12];
+ 516              		.loc 1 191 4 is_stmt 1 view .LVU136
+ 191:Core/Src/GT911.c **** 			Dev_Now.Y[1] = ((uint16_t)buf[13] << 8) + buf[12];
+ 517              		.loc 1 191 33 is_stmt 0 view .LVU137
+ 518 00e2 9DF81F10 		ldrb	r1, [sp, #31]	@ zero_extendqisi2
+ 191:Core/Src/GT911.c **** 			Dev_Now.Y[1] = ((uint16_t)buf[13] << 8) + buf[12];
+ 519              		.loc 1 191 49 view .LVU138
+ 520 00e6 9DF81E20 		ldrb	r2, [sp, #30]	@ zero_extendqisi2
+ 191:Core/Src/GT911.c **** 			Dev_Now.Y[1] = ((uint16_t)buf[13] << 8) + buf[12];
+ 521              		.loc 1 191 44 view .LVU139
+ 522 00ea 02EB0122 		add	r2, r2, r1, lsl #8
+ 191:Core/Src/GT911.c **** 			Dev_Now.Y[1] = ((uint16_t)buf[13] << 8) + buf[12];
+ 523              		.loc 1 191 17 view .LVU140
+ 524 00ee 5A81     		strh	r2, [r3, #10]	@ movhi
+ 192:Core/Src/GT911.c **** 			Dev_Now.S[1] = ((uint16_t)buf[15] << 8) + buf[14];
+ 525              		.loc 1 192 4 is_stmt 1 view .LVU141
+ 192:Core/Src/GT911.c **** 			Dev_Now.S[1] = ((uint16_t)buf[15] << 8) + buf[14];
+ 526              		.loc 1 192 33 is_stmt 0 view .LVU142
+ 527 00f0 9DF82110 		ldrb	r1, [sp, #33]	@ zero_extendqisi2
+ 192:Core/Src/GT911.c **** 			Dev_Now.S[1] = ((uint16_t)buf[15] << 8) + buf[14];
+ 528              		.loc 1 192 49 view .LVU143
+ 529 00f4 9DF82020 		ldrb	r2, [sp, #32]	@ zero_extendqisi2
+ 192:Core/Src/GT911.c **** 			Dev_Now.S[1] = ((uint16_t)buf[15] << 8) + buf[14];
+ 530              		.loc 1 192 44 view .LVU144
+ 531 00f8 02EB0122 		add	r2, r2, r1, lsl #8
+ 192:Core/Src/GT911.c **** 			Dev_Now.S[1] = ((uint16_t)buf[15] << 8) + buf[14];
+ 532              		.loc 1 192 17 view .LVU145
+ 533 00fc 9A82     		strh	r2, [r3, #20]	@ movhi
+ 193:Core/Src/GT911.c **** 
+ 534              		.loc 1 193 4 is_stmt 1 view .LVU146
+ 193:Core/Src/GT911.c **** 
+ 535              		.loc 1 193 33 is_stmt 0 view .LVU147
+ 536 00fe 9DF82310 		ldrb	r1, [sp, #35]	@ zero_extendqisi2
+ 193:Core/Src/GT911.c **** 
+ 537              		.loc 1 193 49 view .LVU148
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 16
+
+
+ 538 0102 9DF82220 		ldrb	r2, [sp, #34]	@ zero_extendqisi2
+ 193:Core/Src/GT911.c **** 
+ 539              		.loc 1 193 44 view .LVU149
+ 540 0106 02EB0122 		add	r2, r2, r1, lsl #8
+ 193:Core/Src/GT911.c **** 
+ 541              		.loc 1 193 17 view .LVU150
+ 542 010a DA83     		strh	r2, [r3, #30]	@ movhi
+ 195:Core/Src/GT911.c **** 			Dev_Now.X[2] = ((uint16_t)buf[19] << 8) + buf[18];
+ 543              		.loc 1 195 4 is_stmt 1 view .LVU151
+ 195:Core/Src/GT911.c **** 			Dev_Now.X[2] = ((uint16_t)buf[19] << 8) + buf[18];
+ 544              		.loc 1 195 36 is_stmt 0 view .LVU152
+ 545 010c 9DF82520 		ldrb	r2, [sp, #37]	@ zero_extendqisi2
+ 195:Core/Src/GT911.c **** 			Dev_Now.X[2] = ((uint16_t)buf[19] << 8) + buf[18];
+ 546              		.loc 1 195 31 view .LVU153
+ 547 0110 5A71     		strb	r2, [r3, #5]
+ 196:Core/Src/GT911.c **** 			Dev_Now.Y[2] = ((uint16_t)buf[21] << 8) + buf[20];
+ 548              		.loc 1 196 4 is_stmt 1 view .LVU154
+ 196:Core/Src/GT911.c **** 			Dev_Now.Y[2] = ((uint16_t)buf[21] << 8) + buf[20];
+ 549              		.loc 1 196 33 is_stmt 0 view .LVU155
+ 550 0112 9DF82710 		ldrb	r1, [sp, #39]	@ zero_extendqisi2
+ 196:Core/Src/GT911.c **** 			Dev_Now.Y[2] = ((uint16_t)buf[21] << 8) + buf[20];
+ 551              		.loc 1 196 49 view .LVU156
+ 552 0116 9DF82620 		ldrb	r2, [sp, #38]	@ zero_extendqisi2
+ 196:Core/Src/GT911.c **** 			Dev_Now.Y[2] = ((uint16_t)buf[21] << 8) + buf[20];
+ 553              		.loc 1 196 44 view .LVU157
+ 554 011a 02EB0122 		add	r2, r2, r1, lsl #8
+ 196:Core/Src/GT911.c **** 			Dev_Now.Y[2] = ((uint16_t)buf[21] << 8) + buf[20];
+ 555              		.loc 1 196 17 view .LVU158
+ 556 011e 9A81     		strh	r2, [r3, #12]	@ movhi
+ 197:Core/Src/GT911.c **** 			Dev_Now.S[2] = ((uint16_t)buf[23] << 8) + buf[22];
+ 557              		.loc 1 197 4 is_stmt 1 view .LVU159
+ 197:Core/Src/GT911.c **** 			Dev_Now.S[2] = ((uint16_t)buf[23] << 8) + buf[22];
+ 558              		.loc 1 197 33 is_stmt 0 view .LVU160
+ 559 0120 9DF82910 		ldrb	r1, [sp, #41]	@ zero_extendqisi2
+ 197:Core/Src/GT911.c **** 			Dev_Now.S[2] = ((uint16_t)buf[23] << 8) + buf[22];
+ 560              		.loc 1 197 49 view .LVU161
+ 561 0124 9DF82820 		ldrb	r2, [sp, #40]	@ zero_extendqisi2
+ 197:Core/Src/GT911.c **** 			Dev_Now.S[2] = ((uint16_t)buf[23] << 8) + buf[22];
+ 562              		.loc 1 197 44 view .LVU162
+ 563 0128 02EB0122 		add	r2, r2, r1, lsl #8
+ 197:Core/Src/GT911.c **** 			Dev_Now.S[2] = ((uint16_t)buf[23] << 8) + buf[22];
+ 564              		.loc 1 197 17 view .LVU163
+ 565 012c DA82     		strh	r2, [r3, #22]	@ movhi
+ 198:Core/Src/GT911.c **** 
+ 566              		.loc 1 198 4 is_stmt 1 view .LVU164
+ 198:Core/Src/GT911.c **** 
+ 567              		.loc 1 198 33 is_stmt 0 view .LVU165
+ 568 012e 9DF82B10 		ldrb	r1, [sp, #43]	@ zero_extendqisi2
+ 198:Core/Src/GT911.c **** 
+ 569              		.loc 1 198 49 view .LVU166
+ 570 0132 9DF82A20 		ldrb	r2, [sp, #42]	@ zero_extendqisi2
+ 198:Core/Src/GT911.c **** 
+ 571              		.loc 1 198 44 view .LVU167
+ 572 0136 02EB0122 		add	r2, r2, r1, lsl #8
+ 198:Core/Src/GT911.c **** 
+ 573              		.loc 1 198 17 view .LVU168
+ 574 013a 1A84     		strh	r2, [r3, #32]	@ movhi
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 17
+
+
+ 200:Core/Src/GT911.c **** 			Dev_Now.X[3] = ((uint16_t)buf[27] << 8) + buf[26];
+ 575              		.loc 1 200 4 is_stmt 1 view .LVU169
+ 200:Core/Src/GT911.c **** 			Dev_Now.X[3] = ((uint16_t)buf[27] << 8) + buf[26];
+ 576              		.loc 1 200 36 is_stmt 0 view .LVU170
+ 577 013c 9DF82D20 		ldrb	r2, [sp, #45]	@ zero_extendqisi2
+ 200:Core/Src/GT911.c **** 			Dev_Now.X[3] = ((uint16_t)buf[27] << 8) + buf[26];
+ 578              		.loc 1 200 31 view .LVU171
+ 579 0140 9A71     		strb	r2, [r3, #6]
+ 201:Core/Src/GT911.c **** 			Dev_Now.Y[3] = ((uint16_t)buf[29] << 8) + buf[28];
+ 580              		.loc 1 201 4 is_stmt 1 view .LVU172
+ 201:Core/Src/GT911.c **** 			Dev_Now.Y[3] = ((uint16_t)buf[29] << 8) + buf[28];
+ 581              		.loc 1 201 33 is_stmt 0 view .LVU173
+ 582 0142 9DF82F10 		ldrb	r1, [sp, #47]	@ zero_extendqisi2
+ 201:Core/Src/GT911.c **** 			Dev_Now.Y[3] = ((uint16_t)buf[29] << 8) + buf[28];
+ 583              		.loc 1 201 49 view .LVU174
+ 584 0146 9DF82E20 		ldrb	r2, [sp, #46]	@ zero_extendqisi2
+ 201:Core/Src/GT911.c **** 			Dev_Now.Y[3] = ((uint16_t)buf[29] << 8) + buf[28];
+ 585              		.loc 1 201 44 view .LVU175
+ 586 014a 02EB0122 		add	r2, r2, r1, lsl #8
+ 201:Core/Src/GT911.c **** 			Dev_Now.Y[3] = ((uint16_t)buf[29] << 8) + buf[28];
+ 587              		.loc 1 201 17 view .LVU176
+ 588 014e DA81     		strh	r2, [r3, #14]	@ movhi
+ 202:Core/Src/GT911.c **** 			Dev_Now.S[3] = ((uint16_t)buf[31] << 8) + buf[30];
+ 589              		.loc 1 202 4 is_stmt 1 view .LVU177
+ 202:Core/Src/GT911.c **** 			Dev_Now.S[3] = ((uint16_t)buf[31] << 8) + buf[30];
+ 590              		.loc 1 202 33 is_stmt 0 view .LVU178
+ 591 0150 9DF83110 		ldrb	r1, [sp, #49]	@ zero_extendqisi2
+ 202:Core/Src/GT911.c **** 			Dev_Now.S[3] = ((uint16_t)buf[31] << 8) + buf[30];
+ 592              		.loc 1 202 49 view .LVU179
+ 593 0154 9DF83020 		ldrb	r2, [sp, #48]	@ zero_extendqisi2
+ 202:Core/Src/GT911.c **** 			Dev_Now.S[3] = ((uint16_t)buf[31] << 8) + buf[30];
+ 594              		.loc 1 202 44 view .LVU180
+ 595 0158 02EB0122 		add	r2, r2, r1, lsl #8
+ 202:Core/Src/GT911.c **** 			Dev_Now.S[3] = ((uint16_t)buf[31] << 8) + buf[30];
+ 596              		.loc 1 202 17 view .LVU181
+ 597 015c 1A83     		strh	r2, [r3, #24]	@ movhi
+ 203:Core/Src/GT911.c **** 
+ 598              		.loc 1 203 4 is_stmt 1 view .LVU182
+ 203:Core/Src/GT911.c **** 
+ 599              		.loc 1 203 33 is_stmt 0 view .LVU183
+ 600 015e 9DF83310 		ldrb	r1, [sp, #51]	@ zero_extendqisi2
+ 203:Core/Src/GT911.c **** 
+ 601              		.loc 1 203 49 view .LVU184
+ 602 0162 9DF83220 		ldrb	r2, [sp, #50]	@ zero_extendqisi2
+ 203:Core/Src/GT911.c **** 
+ 603              		.loc 1 203 44 view .LVU185
+ 604 0166 02EB0122 		add	r2, r2, r1, lsl #8
+ 203:Core/Src/GT911.c **** 
+ 605              		.loc 1 203 17 view .LVU186
+ 606 016a 5A84     		strh	r2, [r3, #34]	@ movhi
+ 205:Core/Src/GT911.c **** 			Dev_Now.X[4] = ((uint16_t)buf[35] << 8) + buf[34];
+ 607              		.loc 1 205 4 is_stmt 1 view .LVU187
+ 205:Core/Src/GT911.c **** 			Dev_Now.X[4] = ((uint16_t)buf[35] << 8) + buf[34];
+ 608              		.loc 1 205 36 is_stmt 0 view .LVU188
+ 609 016c 9DF83520 		ldrb	r2, [sp, #53]	@ zero_extendqisi2
+ 205:Core/Src/GT911.c **** 			Dev_Now.X[4] = ((uint16_t)buf[35] << 8) + buf[34];
+ 610              		.loc 1 205 31 view .LVU189
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 18
+
+
+ 611 0170 DA71     		strb	r2, [r3, #7]
+ 206:Core/Src/GT911.c **** 			Dev_Now.Y[4] = ((uint16_t)buf[37] << 8) + buf[36];
+ 612              		.loc 1 206 4 is_stmt 1 view .LVU190
+ 206:Core/Src/GT911.c **** 			Dev_Now.Y[4] = ((uint16_t)buf[37] << 8) + buf[36];
+ 613              		.loc 1 206 33 is_stmt 0 view .LVU191
+ 614 0172 9DF83710 		ldrb	r1, [sp, #55]	@ zero_extendqisi2
+ 206:Core/Src/GT911.c **** 			Dev_Now.Y[4] = ((uint16_t)buf[37] << 8) + buf[36];
+ 615              		.loc 1 206 49 view .LVU192
+ 616 0176 9DF83620 		ldrb	r2, [sp, #54]	@ zero_extendqisi2
+ 206:Core/Src/GT911.c **** 			Dev_Now.Y[4] = ((uint16_t)buf[37] << 8) + buf[36];
+ 617              		.loc 1 206 44 view .LVU193
+ 618 017a 02EB0122 		add	r2, r2, r1, lsl #8
+ 206:Core/Src/GT911.c **** 			Dev_Now.Y[4] = ((uint16_t)buf[37] << 8) + buf[36];
+ 619              		.loc 1 206 17 view .LVU194
+ 620 017e 1A82     		strh	r2, [r3, #16]	@ movhi
+ 207:Core/Src/GT911.c **** 			Dev_Now.S[4] = ((uint16_t)buf[39] << 8) + buf[38];
+ 621              		.loc 1 207 4 is_stmt 1 view .LVU195
+ 207:Core/Src/GT911.c **** 			Dev_Now.S[4] = ((uint16_t)buf[39] << 8) + buf[38];
+ 622              		.loc 1 207 33 is_stmt 0 view .LVU196
+ 623 0180 9DF83910 		ldrb	r1, [sp, #57]	@ zero_extendqisi2
+ 207:Core/Src/GT911.c **** 			Dev_Now.S[4] = ((uint16_t)buf[39] << 8) + buf[38];
+ 624              		.loc 1 207 49 view .LVU197
+ 625 0184 9DF83820 		ldrb	r2, [sp, #56]	@ zero_extendqisi2
+ 207:Core/Src/GT911.c **** 			Dev_Now.S[4] = ((uint16_t)buf[39] << 8) + buf[38];
+ 626              		.loc 1 207 44 view .LVU198
+ 627 0188 02EB0122 		add	r2, r2, r1, lsl #8
+ 207:Core/Src/GT911.c **** 			Dev_Now.S[4] = ((uint16_t)buf[39] << 8) + buf[38];
+ 628              		.loc 1 207 17 view .LVU199
+ 629 018c 5A83     		strh	r2, [r3, #26]	@ movhi
+ 208:Core/Src/GT911.c **** 			
+ 630              		.loc 1 208 4 is_stmt 1 view .LVU200
+ 208:Core/Src/GT911.c **** 			
+ 631              		.loc 1 208 33 is_stmt 0 view .LVU201
+ 632 018e 9DF83B10 		ldrb	r1, [sp, #59]	@ zero_extendqisi2
+ 208:Core/Src/GT911.c **** 			
+ 633              		.loc 1 208 49 view .LVU202
+ 634 0192 9DF83A20 		ldrb	r2, [sp, #58]	@ zero_extendqisi2
+ 208:Core/Src/GT911.c **** 			
+ 635              		.loc 1 208 44 view .LVU203
+ 636 0196 02EB0122 		add	r2, r2, r1, lsl #8
+ 208:Core/Src/GT911.c **** 			
+ 637              		.loc 1 208 17 view .LVU204
+ 638 019a 9A84     		strh	r2, [r3, #36]	@ movhi
+ 213:Core/Src/GT911.c **** 				for(i = z; i != Dev_Now.TouchCount; i--){
+ 639              		.loc 1 213 4 is_stmt 1 view .LVU205
+ 213:Core/Src/GT911.c **** 				for(i = z; i != Dev_Now.TouchCount; i--){
+ 640              		.loc 1 213 18 is_stmt 0 view .LVU206
+ 641 019c 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 213:Core/Src/GT911.c **** 				for(i = z; i != Dev_Now.TouchCount; i--){
+ 642              		.loc 1 213 9 view .LVU207
+ 643 019e 214A     		ldr	r2, .L39+8
+ 644 01a0 1488     		ldrh	r4, [r2]
+ 213:Core/Src/GT911.c **** 				for(i = z; i != Dev_Now.TouchCount; i--){
+ 645              		.loc 1 213 6 view .LVU208
+ 646 01a2 A342     		cmp	r3, r4
+ 647 01a4 37D2     		bcs	.L26
+ 214:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i-1]+3, 800, y[i-1]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 19
+
+
+ 648              		.loc 1 214 5 is_stmt 1 view .LVU209
+ 214:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i-1]+3, 800, y[i-1]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 649              		.loc 1 214 11 is_stmt 0 view .LVU210
+ 650 01a6 E4B2     		uxtb	r4, r4
+ 651              	.LVL45:
+ 214:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i-1]+3, 800, y[i-1]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 652              		.loc 1 214 5 view .LVU211
+ 653 01a8 31E0     		b	.L27
+ 654              	.L28:
+ 215:Core/Src/GT911.c **** 					Paint_DrawLine(x[i-1]+3, 0, x[i-1]+3, 480, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 655              		.loc 1 215 6 is_stmt 1 discriminator 3 view .LVU212
+ 215:Core/Src/GT911.c **** 					Paint_DrawLine(x[i-1]+3, 0, x[i-1]+3, 480, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 656              		.loc 1 215 28 is_stmt 0 discriminator 3 view .LVU213
+ 657 01aa 013C     		subs	r4, r4, #1
+ 658              	.LVL46:
+ 215:Core/Src/GT911.c **** 					Paint_DrawLine(x[i-1]+3, 0, x[i-1]+3, 480, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 659              		.loc 1 215 26 discriminator 3 view .LVU214
+ 660 01ac DFF87C80 		ldr	r8, .L39+16
+ 661 01b0 38F81410 		ldrh	r1, [r8, r4, lsl #1]
+ 215:Core/Src/GT911.c **** 					Paint_DrawLine(x[i-1]+3, 0, x[i-1]+3, 480, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 662              		.loc 1 215 6 discriminator 3 view .LVU215
+ 663 01b4 0331     		adds	r1, r1, #3
+ 664 01b6 89B2     		uxth	r1, r1
+ 665 01b8 0125     		movs	r5, #1
+ 666 01ba 0295     		str	r5, [sp, #8]
+ 667 01bc 0026     		movs	r6, #0
+ 668 01be 0196     		str	r6, [sp, #4]
+ 669 01c0 4FF6FF77 		movw	r7, #65535
+ 670 01c4 0097     		str	r7, [sp]
+ 671 01c6 0B46     		mov	r3, r1
+ 672 01c8 4FF44872 		mov	r2, #800
+ 673 01cc 3046     		mov	r0, r6
+ 674 01ce FFF7FEFF 		bl	Paint_DrawLine
+ 675              	.LVL47:
+ 216:Core/Src/GT911.c **** 					Paint_DrawCircle( x[i-1]+3 , y[i-1]+3 , 8, WHITE, DRAW_FILL_FULL, DOT_PIXEL_1X1);
+ 676              		.loc 1 216 6 is_stmt 1 discriminator 3 view .LVU216
+ 216:Core/Src/GT911.c **** 					Paint_DrawCircle( x[i-1]+3 , y[i-1]+3 , 8, WHITE, DRAW_FILL_FULL, DOT_PIXEL_1X1);
+ 677              		.loc 1 216 22 is_stmt 0 discriminator 3 view .LVU217
+ 678 01d2 DFF85490 		ldr	r9, .L39+12
+ 679 01d6 39F81400 		ldrh	r0, [r9, r4, lsl #1]
+ 216:Core/Src/GT911.c **** 					Paint_DrawCircle( x[i-1]+3 , y[i-1]+3 , 8, WHITE, DRAW_FILL_FULL, DOT_PIXEL_1X1);
+ 680              		.loc 1 216 6 discriminator 3 view .LVU218
+ 681 01da 0330     		adds	r0, r0, #3
+ 682 01dc 80B2     		uxth	r0, r0
+ 683 01de 0295     		str	r5, [sp, #8]
+ 684 01e0 0196     		str	r6, [sp, #4]
+ 685 01e2 0097     		str	r7, [sp]
+ 686 01e4 4FF4F073 		mov	r3, #480
+ 687 01e8 0246     		mov	r2, r0
+ 688 01ea 3146     		mov	r1, r6
+ 689 01ec FFF7FEFF 		bl	Paint_DrawLine
+ 690              	.LVL48:
+ 217:Core/Src/GT911.c **** 				}
+ 691              		.loc 1 217 6 is_stmt 1 discriminator 3 view .LVU219
+ 217:Core/Src/GT911.c **** 				}
+ 692              		.loc 1 217 25 is_stmt 0 discriminator 3 view .LVU220
+ 693 01f0 39F81400 		ldrh	r0, [r9, r4, lsl #1]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 20
+
+
+ 217:Core/Src/GT911.c **** 				}
+ 694              		.loc 1 217 36 discriminator 3 view .LVU221
+ 695 01f4 38F81410 		ldrh	r1, [r8, r4, lsl #1]
+ 217:Core/Src/GT911.c **** 				}
+ 696              		.loc 1 217 6 discriminator 3 view .LVU222
+ 697 01f8 0331     		adds	r1, r1, #3
+ 698 01fa 0330     		adds	r0, r0, #3
+ 699 01fc 0195     		str	r5, [sp, #4]
+ 700 01fe 0095     		str	r5, [sp]
+ 701 0200 3B46     		mov	r3, r7
+ 702 0202 0822     		movs	r2, #8
+ 703 0204 89B2     		uxth	r1, r1
+ 704 0206 80B2     		uxth	r0, r0
+ 705 0208 FFF7FEFF 		bl	Paint_DrawCircle
+ 706              	.LVL49:
+ 214:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i-1]+3, 800, y[i-1]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 707              		.loc 1 214 42 is_stmt 1 discriminator 3 view .LVU223
+ 708 020c E4B2     		uxtb	r4, r4
+ 709              	.LVL50:
+ 710              	.L27:
+ 214:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i-1]+3, 800, y[i-1]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 711              		.loc 1 214 18 discriminator 1 view .LVU224
+ 214:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i-1]+3, 800, y[i-1]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 712              		.loc 1 214 28 is_stmt 0 discriminator 1 view .LVU225
+ 713 020e 034B     		ldr	r3, .L39
+ 714 0210 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 214:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i-1]+3, 800, y[i-1]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 715              		.loc 1 214 18 discriminator 1 view .LVU226
+ 716 0212 A342     		cmp	r3, r4
+ 717 0214 C9D1     		bne	.L28
+ 718              	.LVL51:
+ 719              	.L26:
+ 149:Core/Src/GT911.c **** 	uint8_t buf[41];
+ 720              		.loc 1 149 1 discriminator 1 view .LVU227
+ 721 0216 0025     		movs	r5, #0
+ 722 0218 85E0     		b	.L29
+ 723              	.L40:
+ 724 021a 00BF     		.align	2
+ 725              	.L39:
+ 726 021c 00000000 		.word	.LANCHOR0
+ 727 0220 00000000 		.word	.LANCHOR1
+ 728 0224 00000000 		.word	.LANCHOR2
+ 729 0228 00000000 		.word	.LANCHOR4
+ 730 022c 00000000 		.word	.LANCHOR3
+ 731              	.LVL52:
+ 732              	.L30:
+ 230:Core/Src/GT911.c **** 					Paint_DrawLine(x[i]+3, 0, x[i]+3, 480, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 733              		.loc 1 230 6 is_stmt 1 view .LVU228
+ 230:Core/Src/GT911.c **** 					Paint_DrawLine(x[i]+3, 0, x[i]+3, 480, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 734              		.loc 1 230 26 is_stmt 0 view .LVU229
+ 735 0230 DFF86091 		ldr	r9, .L41+8
+ 736 0234 39F81410 		ldrh	r1, [r9, r4, lsl #1]
+ 230:Core/Src/GT911.c **** 					Paint_DrawLine(x[i]+3, 0, x[i]+3, 480, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 737              		.loc 1 230 6 view .LVU230
+ 738 0238 0331     		adds	r1, r1, #3
+ 739 023a 89B2     		uxth	r1, r1
+ 740 023c 0126     		movs	r6, #1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 21
+
+
+ 741 023e 0296     		str	r6, [sp, #8]
+ 742 0240 0027     		movs	r7, #0
+ 743 0242 0197     		str	r7, [sp, #4]
+ 744 0244 4FF6FF78 		movw	r8, #65535
+ 745 0248 CDF80080 		str	r8, [sp]
+ 746 024c 0B46     		mov	r3, r1
+ 747 024e 4FF44872 		mov	r2, #800
+ 748 0252 3846     		mov	r0, r7
+ 749 0254 FFF7FEFF 		bl	Paint_DrawLine
+ 750              	.LVL53:
+ 231:Core/Src/GT911.c **** 					Paint_DrawCircle( x[i]+3 , y[i]+3 , 8, WHITE, DRAW_FILL_FULL, DOT_PIXEL_1X1);
+ 751              		.loc 1 231 6 is_stmt 1 view .LVU231
+ 231:Core/Src/GT911.c **** 					Paint_DrawCircle( x[i]+3 , y[i]+3 , 8, WHITE, DRAW_FILL_FULL, DOT_PIXEL_1X1);
+ 752              		.loc 1 231 22 is_stmt 0 view .LVU232
+ 753 0258 DFF834A1 		ldr	r10, .L41+4
+ 754 025c 3AF81400 		ldrh	r0, [r10, r4, lsl #1]
+ 231:Core/Src/GT911.c **** 					Paint_DrawCircle( x[i]+3 , y[i]+3 , 8, WHITE, DRAW_FILL_FULL, DOT_PIXEL_1X1);
+ 755              		.loc 1 231 6 view .LVU233
+ 756 0260 0330     		adds	r0, r0, #3
+ 757 0262 80B2     		uxth	r0, r0
+ 758 0264 0296     		str	r6, [sp, #8]
+ 759 0266 0197     		str	r7, [sp, #4]
+ 760 0268 CDF80080 		str	r8, [sp]
+ 761 026c 4FF4F073 		mov	r3, #480
+ 762 0270 0246     		mov	r2, r0
+ 763 0272 3946     		mov	r1, r7
+ 764 0274 FFF7FEFF 		bl	Paint_DrawLine
+ 765              	.LVL54:
+ 232:Core/Src/GT911.c **** 				}
+ 766              		.loc 1 232 6 is_stmt 1 view .LVU234
+ 232:Core/Src/GT911.c **** 				}
+ 767              		.loc 1 232 25 is_stmt 0 view .LVU235
+ 768 0278 3AF81400 		ldrh	r0, [r10, r4, lsl #1]
+ 232:Core/Src/GT911.c **** 				}
+ 769              		.loc 1 232 34 view .LVU236
+ 770 027c 39F81410 		ldrh	r1, [r9, r4, lsl #1]
+ 232:Core/Src/GT911.c **** 				}
+ 771              		.loc 1 232 6 view .LVU237
+ 772 0280 0331     		adds	r1, r1, #3
+ 773 0282 0330     		adds	r0, r0, #3
+ 774 0284 0196     		str	r6, [sp, #4]
+ 775 0286 0096     		str	r6, [sp]
+ 776 0288 4346     		mov	r3, r8
+ 777 028a 0822     		movs	r2, #8
+ 778 028c 89B2     		uxth	r1, r1
+ 779 028e 80B2     		uxth	r0, r0
+ 780 0290 FFF7FEFF 		bl	Paint_DrawCircle
+ 781              	.LVL55:
+ 782              	.L31:
+ 235:Core/Src/GT911.c **** 				Paint_DrawLine(0 , Dev_Now.Y[i]+3, 800, Dev_Now.Y[i]+3, Color[i], LINE_STYLE_SOLID, DOT_PIXEL_1
+ 783              		.loc 1 235 5 is_stmt 1 discriminator 2 view .LVU238
+ 235:Core/Src/GT911.c **** 				Paint_DrawLine(0 , Dev_Now.Y[i]+3, 800, Dev_Now.Y[i]+3, Color[i], LINE_STYLE_SOLID, DOT_PIXEL_1
+ 784              		.loc 1 235 29 is_stmt 0 discriminator 2 view .LVU239
+ 785 0294 3D4F     		ldr	r7, .L41
+ 786 0296 04F1040A 		add	r10, r4, #4
+ 787 029a 37F81A00 		ldrh	r0, [r7, r10, lsl #1]
+ 235:Core/Src/GT911.c **** 				Paint_DrawLine(0 , Dev_Now.Y[i]+3, 800, Dev_Now.Y[i]+3, Color[i], LINE_STYLE_SOLID, DOT_PIXEL_1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 22
+
+
+ 788              		.loc 1 235 5 discriminator 2 view .LVU240
+ 789 029e 0330     		adds	r0, r0, #3
+ 790 02a0 80B2     		uxth	r0, r0
+ 791 02a2 4FF00108 		mov	r8, #1
+ 792 02a6 CDF80880 		str	r8, [sp, #8]
+ 793 02aa 4FF00009 		mov	r9, #0
+ 794 02ae CDF80490 		str	r9, [sp, #4]
+ 795 02b2 DFF8F0B0 		ldr	fp, .L41+24
+ 796 02b6 3BF81430 		ldrh	r3, [fp, r4, lsl #1]
+ 797 02ba 0093     		str	r3, [sp]
+ 798 02bc 4FF4F073 		mov	r3, #480
+ 799 02c0 0246     		mov	r2, r0
+ 800 02c2 4946     		mov	r1, r9
+ 801 02c4 FFF7FEFF 		bl	Paint_DrawLine
+ 802              	.LVL56:
+ 236:Core/Src/GT911.c **** 				Paint_DrawCircle(Dev_Now.X[i]+3 , Dev_Now.Y[i]+3 , 8, Color[i], DRAW_FILL_FULL, DOT_PIXEL_1X1);
+ 803              		.loc 1 236 5 is_stmt 1 discriminator 2 view .LVU241
+ 236:Core/Src/GT911.c **** 				Paint_DrawCircle(Dev_Now.X[i]+3 , Dev_Now.Y[i]+3 , 8, Color[i], DRAW_FILL_FULL, DOT_PIXEL_1X1);
+ 804              		.loc 1 236 33 is_stmt 0 discriminator 2 view .LVU242
+ 805 02c8 04F10806 		add	r6, r4, #8
+ 806 02cc 07EB4606 		add	r6, r7, r6, lsl #1
+ 807 02d0 7188     		ldrh	r1, [r6, #2]
+ 236:Core/Src/GT911.c **** 				Paint_DrawCircle(Dev_Now.X[i]+3 , Dev_Now.Y[i]+3 , 8, Color[i], DRAW_FILL_FULL, DOT_PIXEL_1X1);
+ 808              		.loc 1 236 5 discriminator 2 view .LVU243
+ 809 02d2 0331     		adds	r1, r1, #3
+ 810 02d4 89B2     		uxth	r1, r1
+ 811 02d6 CDF80880 		str	r8, [sp, #8]
+ 812 02da CDF80490 		str	r9, [sp, #4]
+ 813 02de 3BF81430 		ldrh	r3, [fp, r4, lsl #1]
+ 814 02e2 0093     		str	r3, [sp]
+ 815 02e4 0B46     		mov	r3, r1
+ 816 02e6 4FF44872 		mov	r2, #800
+ 817 02ea 4846     		mov	r0, r9
+ 818 02ec FFF7FEFF 		bl	Paint_DrawLine
+ 819              	.LVL57:
+ 237:Core/Src/GT911.c **** 				
+ 820              		.loc 1 237 5 is_stmt 1 discriminator 2 view .LVU244
+ 237:Core/Src/GT911.c **** 				
+ 821              		.loc 1 237 31 is_stmt 0 discriminator 2 view .LVU245
+ 822 02f0 37F81A00 		ldrh	r0, [r7, r10, lsl #1]
+ 237:Core/Src/GT911.c **** 				
+ 823              		.loc 1 237 48 discriminator 2 view .LVU246
+ 824 02f4 7188     		ldrh	r1, [r6, #2]
+ 237:Core/Src/GT911.c **** 				
+ 825              		.loc 1 237 5 discriminator 2 view .LVU247
+ 826 02f6 0331     		adds	r1, r1, #3
+ 827 02f8 0330     		adds	r0, r0, #3
+ 828 02fa CDF80480 		str	r8, [sp, #4]
+ 829 02fe CDF80080 		str	r8, [sp]
+ 830 0302 3BF81430 		ldrh	r3, [fp, r4, lsl #1]
+ 831 0306 0822     		movs	r2, #8
+ 832 0308 89B2     		uxth	r1, r1
+ 833 030a 80B2     		uxth	r0, r0
+ 834 030c FFF7FEFF 		bl	Paint_DrawCircle
+ 835              	.LVL58:
+ 239:Core/Src/GT911.c **** 				y[i]  = Dev_Now.Y[i];
+ 836              		.loc 1 239 5 is_stmt 1 discriminator 2 view .LVU248
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 23
+
+
+ 239:Core/Src/GT911.c **** 				y[i]  = Dev_Now.Y[i];
+ 837              		.loc 1 239 22 is_stmt 0 discriminator 2 view .LVU249
+ 838 0310 37F81A20 		ldrh	r2, [r7, r10, lsl #1]
+ 239:Core/Src/GT911.c **** 				y[i]  = Dev_Now.Y[i];
+ 839              		.loc 1 239 11 discriminator 2 view .LVU250
+ 840 0314 1E4B     		ldr	r3, .L41+4
+ 841 0316 23F81420 		strh	r2, [r3, r4, lsl #1]	@ movhi
+ 240:Core/Src/GT911.c **** 			}
+ 842              		.loc 1 240 5 is_stmt 1 discriminator 2 view .LVU251
+ 240:Core/Src/GT911.c **** 			}
+ 843              		.loc 1 240 22 is_stmt 0 discriminator 2 view .LVU252
+ 844 031a 7288     		ldrh	r2, [r6, #2]
+ 240:Core/Src/GT911.c **** 			}
+ 845              		.loc 1 240 11 discriminator 2 view .LVU253
+ 846 031c 1D4B     		ldr	r3, .L41+8
+ 847 031e 23F81420 		strh	r2, [r3, r4, lsl #1]	@ movhi
+ 221:Core/Src/GT911.c **** 			{			
+ 848              		.loc 1 221 35 is_stmt 1 discriminator 2 view .LVU254
+ 849 0322 4544     		add	r5, r5, r8
+ 850              	.LVL59:
+ 221:Core/Src/GT911.c **** 			{			
+ 851              		.loc 1 221 35 is_stmt 0 discriminator 2 view .LVU255
+ 852 0324 EDB2     		uxtb	r5, r5
+ 853              	.LVL60:
+ 854              	.L29:
+ 221:Core/Src/GT911.c **** 			{			
+ 855              		.loc 1 221 14 is_stmt 1 discriminator 1 view .LVU256
+ 221:Core/Src/GT911.c **** 			{			
+ 856              		.loc 1 221 22 is_stmt 0 discriminator 1 view .LVU257
+ 857 0326 194B     		ldr	r3, .L41
+ 858 0328 93F802C0 		ldrb	ip, [r3, #2]	@ zero_extendqisi2
+ 221:Core/Src/GT911.c **** 			{			
+ 859              		.loc 1 221 14 discriminator 1 view .LVU258
+ 860 032c AC45     		cmp	ip, r5
+ 861 032e 28D9     		bls	.L38
+ 223:Core/Src/GT911.c **** 				Dev_Backup.Y[i] = Dev_Now.Y[i];
+ 862              		.loc 1 223 5 is_stmt 1 view .LVU259
+ 223:Core/Src/GT911.c **** 				Dev_Backup.Y[i] = Dev_Now.Y[i];
+ 863              		.loc 1 223 32 is_stmt 0 view .LVU260
+ 864 0330 2C46     		mov	r4, r5
+ 865 0332 164E     		ldr	r6, .L41
+ 866 0334 2F1D     		adds	r7, r5, #4
+ 867 0336 36F81710 		ldrh	r1, [r6, r7, lsl #1]
+ 223:Core/Src/GT911.c **** 				Dev_Backup.Y[i] = Dev_Now.Y[i];
+ 868              		.loc 1 223 21 view .LVU261
+ 869 033a 1748     		ldr	r0, .L41+12
+ 870 033c 20F81710 		strh	r1, [r0, r7, lsl #1]	@ movhi
+ 224:Core/Src/GT911.c **** 				Dev_Backup.TouchCount = Dev_Now.TouchCount;		
+ 871              		.loc 1 224 5 is_stmt 1 view .LVU262
+ 224:Core/Src/GT911.c **** 				Dev_Backup.TouchCount = Dev_Now.TouchCount;		
+ 872              		.loc 1 224 32 is_stmt 0 view .LVU263
+ 873 0340 05F10803 		add	r3, r5, #8
+ 874 0344 06EB4302 		add	r2, r6, r3, lsl #1
+ 875 0348 5288     		ldrh	r2, [r2, #2]
+ 224:Core/Src/GT911.c **** 				Dev_Backup.TouchCount = Dev_Now.TouchCount;		
+ 876              		.loc 1 224 21 view .LVU264
+ 877 034a 00EB4303 		add	r3, r0, r3, lsl #1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 24
+
+
+ 878 034e 5A80     		strh	r2, [r3, #2]	@ movhi
+ 225:Core/Src/GT911.c **** 				printf("x = %d   y=  %d \r\n",Dev_Now.X[i], Dev_Now.Y[i]);
+ 879              		.loc 1 225 5 is_stmt 1 view .LVU265
+ 225:Core/Src/GT911.c **** 				printf("x = %d   y=  %d \r\n",Dev_Now.X[i], Dev_Now.Y[i]);
+ 880              		.loc 1 225 27 is_stmt 0 view .LVU266
+ 881 0350 80F802C0 		strb	ip, [r0, #2]
+ 226:Core/Src/GT911.c **** 
+ 882              		.loc 1 226 5 is_stmt 1 view .LVU267
+ 883 0354 1148     		ldr	r0, .L41+16
+ 884 0356 FFF7FEFF 		bl	printf
+ 885              	.LVL61:
+ 229:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i]+3, 800, y[i]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 886              		.loc 1 229 5 view .LVU268
+ 229:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i]+3, 800, y[i]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 887              		.loc 1 229 9 is_stmt 0 view .LVU269
+ 888 035a 0D4B     		ldr	r3, .L41+4
+ 889 035c 33F81520 		ldrh	r2, [r3, r5, lsl #1]
+ 229:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i]+3, 800, y[i]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 890              		.loc 1 229 25 view .LVU270
+ 891 0360 36F81730 		ldrh	r3, [r6, r7, lsl #1]
+ 229:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i]+3, 800, y[i]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 892              		.loc 1 229 7 view .LVU271
+ 893 0364 9A42     		cmp	r2, r3
+ 894 0366 7FF463AF 		bne	.L30
+ 229:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i]+3, 800, y[i]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 895              		.loc 1 229 33 discriminator 1 view .LVU272
+ 896 036a 0A4B     		ldr	r3, .L41+8
+ 897 036c 33F81510 		ldrh	r1, [r3, r5, lsl #1]
+ 229:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i]+3, 800, y[i]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 898              		.loc 1 229 50 discriminator 1 view .LVU273
+ 899 0370 05F10802 		add	r2, r5, #8
+ 900 0374 06EB4203 		add	r3, r6, r2, lsl #1
+ 901 0378 5B88     		ldrh	r3, [r3, #2]
+ 229:Core/Src/GT911.c **** 					Paint_DrawLine(0 , y[i]+3, 800, y[i]+3, WHITE, LINE_STYLE_SOLID, DOT_PIXEL_1X1);
+ 902              		.loc 1 229 29 discriminator 1 view .LVU274
+ 903 037a 9942     		cmp	r1, r3
+ 904 037c 7FF458AF 		bne	.L30
+ 905 0380 88E7     		b	.L31
+ 906              	.L38:
+ 242:Core/Src/GT911.c **** 		}
+ 907              		.loc 1 242 4 is_stmt 1 view .LVU275
+ 242:Core/Src/GT911.c **** 		}
+ 908              		.loc 1 242 6 is_stmt 0 view .LVU276
+ 909 0382 074B     		ldr	r3, .L41+20
+ 910 0384 A3F800C0 		strh	ip, [r3]	@ movhi
+ 911 0388 44E6     		b	.L19
+ 912              	.L42:
+ 913 038a 00BF     		.align	2
+ 914              	.L41:
+ 915 038c 00000000 		.word	.LANCHOR0
+ 916 0390 00000000 		.word	.LANCHOR4
+ 917 0394 00000000 		.word	.LANCHOR3
+ 918 0398 00000000 		.word	.LANCHOR5
+ 919 039c 00000000 		.word	.LC2
+ 920 03a0 00000000 		.word	.LANCHOR2
+ 921 03a4 00000000 		.word	.LANCHOR6
+ 922              		.cfi_endproc
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 25
+
+
+ 923              	.LFE329:
+ 925              		.section	.rodata.GT911_Init.str1.4,"aMS",%progbits,1
+ 926              		.align	2
+ 927              	.LC3:
+ 928 0000 47543931 		.ascii	"GT911_Init\015\000"
+ 928      315F496E 
+ 928      69740D00 
+ 929              		.section	.text.GT911_Init,"ax",%progbits
+ 930              		.align	1
+ 931              		.global	GT911_Init
+ 932              		.syntax unified
+ 933              		.thumb
+ 934              		.thumb_func
+ 936              	GT911_Init:
+ 937              	.LFB330:
+ 246:Core/Src/GT911.c **** 
+ 247:Core/Src/GT911.c **** void GT911_Init(void)
+ 248:Core/Src/GT911.c **** {
+ 938              		.loc 1 248 1 is_stmt 1 view -0
+ 939              		.cfi_startproc
+ 940              		@ args = 0, pretend = 0, frame = 0
+ 941              		@ frame_needed = 0, uses_anonymous_args = 0
+ 942 0000 08B5     		push	{r3, lr}
+ 943              		.cfi_def_cfa_offset 8
+ 944              		.cfi_offset 3, -8
+ 945              		.cfi_offset 14, -4
+ 249:Core/Src/GT911.c **** 	printf("GT911_Init\r\n");
+ 946              		.loc 1 249 2 view .LVU278
+ 947 0002 0448     		ldr	r0, .L45
+ 948 0004 FFF7FEFF 		bl	puts
+ 949              	.LVL62:
+ 250:Core/Src/GT911.c **** 	GT911_Reset();
+ 950              		.loc 1 250 2 view .LVU279
+ 251:Core/Src/GT911.c **** 	GT911_Read_ID();
+ 951              		.loc 1 251 2 view .LVU280
+ 952 0008 FFF7FEFF 		bl	GT911_Read_ID
+ 953              	.LVL63:
+ 252:Core/Src/GT911.c **** 	GT911_Read_FirmwareVersion();
+ 954              		.loc 1 252 2 view .LVU281
+ 955 000c FFF7FEFF 		bl	GT911_Read_FirmwareVersion
+ 956              	.LVL64:
+ 253:Core/Src/GT911.c **** }
+ 957              		.loc 1 253 1 is_stmt 0 view .LVU282
+ 958 0010 08BD     		pop	{r3, pc}
+ 959              	.L46:
+ 960 0012 00BF     		.align	2
+ 961              	.L45:
+ 962 0014 00000000 		.word	.LC3
+ 963              		.cfi_endproc
+ 964              	.LFE330:
+ 966              		.global	Dev_Backup
+ 967              		.global	Dev_Now
+ 968              		.global	temp
+ 969              		.global	Color
+ 970              		.global	z
+ 971              		.global	y
+ 972              		.global	x
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 26
+
+
+ 973              		.section	.bss.Dev_Backup,"aw",%nobits
+ 974              		.align	2
+ 975              		.set	.LANCHOR5,. + 0
+ 978              	Dev_Backup:
+ 979 0000 00000000 		.space	38
+ 979      00000000 
+ 979      00000000 
+ 979      00000000 
+ 979      00000000 
+ 980              		.section	.bss.Dev_Now,"aw",%nobits
+ 981              		.align	2
+ 982              		.set	.LANCHOR0,. + 0
+ 985              	Dev_Now:
+ 986 0000 00000000 		.space	38
+ 986      00000000 
+ 986      00000000 
+ 986      00000000 
+ 986      00000000 
+ 987              		.section	.bss.temp,"aw",%nobits
+ 988              		.align	1
+ 989              		.set	.LANCHOR1,. + 0
+ 992              	temp:
+ 993 0000 0000     		.space	2
+ 994              		.section	.bss.x,"aw",%nobits
+ 995              		.align	2
+ 996              		.set	.LANCHOR4,. + 0
+ 999              	x:
+ 1000 0000 00000000 		.space	10
+ 1000      00000000 
+ 1000      0000
+ 1001              		.section	.bss.y,"aw",%nobits
+ 1002              		.align	2
+ 1003              		.set	.LANCHOR3,. + 0
+ 1006              	y:
+ 1007 0000 00000000 		.space	10
+ 1007      00000000 
+ 1007      0000
+ 1008              		.section	.bss.z,"aw",%nobits
+ 1009              		.align	1
+ 1010              		.set	.LANCHOR2,. + 0
+ 1013              	z:
+ 1014 0000 0000     		.space	2
+ 1015              		.section	.data.Color,"aw"
+ 1016              		.align	2
+ 1017              		.set	.LANCHOR6,. + 0
+ 1020              	Color:
+ 1021 0000 0000     		.short	0
+ 1022 0002 1FF8     		.short	-2017
+ 1023 0004 1F00     		.short	31
+ 1024 0006 00F8     		.short	-2048
+ 1025 0008 40BC     		.short	-17344
+ 1026              		.text
+ 1027              	.Letext0:
+ 1028              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 1029              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 1030              		.file 4 "Core/Inc/GUI_Paint.h"
+ 1031              		.file 5 "Core/Inc/GT911.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 27
+
+
+ 1032              		.file 6 "Core/Inc/Analog_I2C.h"
+ 1033              		.file 7 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 1034              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ 1035              		.file 9 "<built-in>"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s 			page 28
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 GT911.c
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:20     .text.GT911_WR_Reg:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:25     .text.GT911_WR_Reg:0000000000000000 GT911_WR_Reg
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:118    .text.GT911_RD_Reg:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:123    .text.GT911_RD_Reg:0000000000000000 GT911_RD_Reg
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:216    .rodata.GT911_Read_ID.str1.4:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:221    .text.GT911_Read_ID:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:226    .text.GT911_Read_ID:0000000000000000 GT911_Read_ID
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:271    .text.GT911_Read_ID:0000000000000040 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:276    .rodata.GT911_Read_FirmwareVersion.str1.4:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:280    .text.GT911_Read_FirmwareVersion:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:285    .text.GT911_Read_FirmwareVersion:0000000000000000 GT911_Read_FirmwareVersion
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:329    .text.GT911_Read_FirmwareVersion:0000000000000038 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:334    .rodata.GT911_Scan.str1.4:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:338    .text.GT911_Scan:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:344    .text.GT911_Scan:0000000000000000 GT911_Scan
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:726    .text.GT911_Scan:000000000000021c $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:735    .text.GT911_Scan:0000000000000230 $t
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:915    .text.GT911_Scan:000000000000038c $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:926    .rodata.GT911_Init.str1.4:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:930    .text.GT911_Init:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:936    .text.GT911_Init:0000000000000000 GT911_Init
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:962    .text.GT911_Init:0000000000000014 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:978    .bss.Dev_Backup:0000000000000000 Dev_Backup
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:985    .bss.Dev_Now:0000000000000000 Dev_Now
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:992    .bss.temp:0000000000000000 temp
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:1020   .data.Color:0000000000000000 Color
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:1013   .bss.z:0000000000000000 z
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:1006   .bss.y:0000000000000000 y
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:999    .bss.x:0000000000000000 x
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:974    .bss.Dev_Backup:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:981    .bss.Dev_Now:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:988    .bss.temp:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:995    .bss.x:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:1002   .bss.y:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:1009   .bss.z:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSVqxxA.s:1016   .data.Color:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+I2C_Start
+I2C_Send_Byte
+I2C_Wait_Ack
+I2C_Stop
+I2C_Read_Byte
+printf
+Paint_Clear
+HAL_Delay
+Paint_DrawLine
+Paint_DrawCircle
+puts
