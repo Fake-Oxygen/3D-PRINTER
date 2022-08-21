@@ -1,0 +1,1394 @@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32l4xx_hal_msp.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.HAL_MspInit,"ax",%progbits
+  20              		.align	1
+  21              		.global	HAL_MspInit
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	HAL_MspInit:
+  27              	.LFB132:
+  28              		.file 1 "Core/Src/stm32l4xx_hal_msp.c"
+   1:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE BEGIN Header */
+   2:Core/Src/stm32l4xx_hal_msp.c **** /**
+   3:Core/Src/stm32l4xx_hal_msp.c ****   ******************************************************************************
+   4:Core/Src/stm32l4xx_hal_msp.c ****   * @file         stm32l4xx_hal_msp.c
+   5:Core/Src/stm32l4xx_hal_msp.c ****   * @brief        This file provides code for the MSP Initialization
+   6:Core/Src/stm32l4xx_hal_msp.c ****   *               and de-Initialization codes.
+   7:Core/Src/stm32l4xx_hal_msp.c ****   ******************************************************************************
+   8:Core/Src/stm32l4xx_hal_msp.c ****   * @attention
+   9:Core/Src/stm32l4xx_hal_msp.c ****   *
+  10:Core/Src/stm32l4xx_hal_msp.c ****   * Copyright (c) 2022 STMicroelectronics.
+  11:Core/Src/stm32l4xx_hal_msp.c ****   * All rights reserved.
+  12:Core/Src/stm32l4xx_hal_msp.c ****   *
+  13:Core/Src/stm32l4xx_hal_msp.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  14:Core/Src/stm32l4xx_hal_msp.c ****   * in the root directory of this software component.
+  15:Core/Src/stm32l4xx_hal_msp.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  16:Core/Src/stm32l4xx_hal_msp.c ****   *
+  17:Core/Src/stm32l4xx_hal_msp.c ****   ******************************************************************************
+  18:Core/Src/stm32l4xx_hal_msp.c ****   */
+  19:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE END Header */
+  20:Core/Src/stm32l4xx_hal_msp.c **** 
+  21:Core/Src/stm32l4xx_hal_msp.c **** /* Includes ------------------------------------------------------------------*/
+  22:Core/Src/stm32l4xx_hal_msp.c **** #include "main.h"
+  23:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE BEGIN Includes */
+  24:Core/Src/stm32l4xx_hal_msp.c **** 
+  25:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE END Includes */
+  26:Core/Src/stm32l4xx_hal_msp.c **** 
+  27:Core/Src/stm32l4xx_hal_msp.c **** /* Private typedef -----------------------------------------------------------*/
+  28:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE BEGIN TD */
+  29:Core/Src/stm32l4xx_hal_msp.c **** 
+  30:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE END TD */
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 2
+
+
+  31:Core/Src/stm32l4xx_hal_msp.c **** 
+  32:Core/Src/stm32l4xx_hal_msp.c **** /* Private define ------------------------------------------------------------*/
+  33:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE BEGIN Define */
+  34:Core/Src/stm32l4xx_hal_msp.c **** 
+  35:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE END Define */
+  36:Core/Src/stm32l4xx_hal_msp.c **** 
+  37:Core/Src/stm32l4xx_hal_msp.c **** /* Private macro -------------------------------------------------------------*/
+  38:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE BEGIN Macro */
+  39:Core/Src/stm32l4xx_hal_msp.c **** 
+  40:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE END Macro */
+  41:Core/Src/stm32l4xx_hal_msp.c **** 
+  42:Core/Src/stm32l4xx_hal_msp.c **** /* Private variables ---------------------------------------------------------*/
+  43:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE BEGIN PV */
+  44:Core/Src/stm32l4xx_hal_msp.c **** 
+  45:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE END PV */
+  46:Core/Src/stm32l4xx_hal_msp.c **** 
+  47:Core/Src/stm32l4xx_hal_msp.c **** /* Private function prototypes -----------------------------------------------*/
+  48:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE BEGIN PFP */
+  49:Core/Src/stm32l4xx_hal_msp.c **** 
+  50:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE END PFP */
+  51:Core/Src/stm32l4xx_hal_msp.c **** 
+  52:Core/Src/stm32l4xx_hal_msp.c **** /* External functions --------------------------------------------------------*/
+  53:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE BEGIN ExternalFunctions */
+  54:Core/Src/stm32l4xx_hal_msp.c **** 
+  55:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE END ExternalFunctions */
+  56:Core/Src/stm32l4xx_hal_msp.c **** 
+  57:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE BEGIN 0 */
+  58:Core/Src/stm32l4xx_hal_msp.c **** 
+  59:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE END 0 */
+  60:Core/Src/stm32l4xx_hal_msp.c **** /**
+  61:Core/Src/stm32l4xx_hal_msp.c ****   * Initializes the Global MSP.
+  62:Core/Src/stm32l4xx_hal_msp.c ****   */
+  63:Core/Src/stm32l4xx_hal_msp.c **** void HAL_MspInit(void)
+  64:Core/Src/stm32l4xx_hal_msp.c **** {
+  29              		.loc 1 64 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 8
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34 0000 82B0     		sub	sp, sp, #8
+  35              		.cfi_def_cfa_offset 8
+  65:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 0 */
+  66:Core/Src/stm32l4xx_hal_msp.c **** 
+  67:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END MspInit 0 */
+  68:Core/Src/stm32l4xx_hal_msp.c **** 
+  69:Core/Src/stm32l4xx_hal_msp.c ****   __HAL_RCC_SYSCFG_CLK_ENABLE();
+  36              		.loc 1 69 3 view .LVU1
+  37              	.LBB2:
+  38              		.loc 1 69 3 view .LVU2
+  39              		.loc 1 69 3 view .LVU3
+  40 0002 0A4B     		ldr	r3, .L3
+  41 0004 1A6E     		ldr	r2, [r3, #96]
+  42 0006 42F00102 		orr	r2, r2, #1
+  43 000a 1A66     		str	r2, [r3, #96]
+  44              		.loc 1 69 3 view .LVU4
+  45 000c 1A6E     		ldr	r2, [r3, #96]
+  46 000e 02F00102 		and	r2, r2, #1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 3
+
+
+  47 0012 0092     		str	r2, [sp]
+  48              		.loc 1 69 3 view .LVU5
+  49 0014 009A     		ldr	r2, [sp]
+  50              	.LBE2:
+  51              		.loc 1 69 3 view .LVU6
+  70:Core/Src/stm32l4xx_hal_msp.c ****   __HAL_RCC_PWR_CLK_ENABLE();
+  52              		.loc 1 70 3 view .LVU7
+  53              	.LBB3:
+  54              		.loc 1 70 3 view .LVU8
+  55              		.loc 1 70 3 view .LVU9
+  56 0016 9A6D     		ldr	r2, [r3, #88]
+  57 0018 42F08052 		orr	r2, r2, #268435456
+  58 001c 9A65     		str	r2, [r3, #88]
+  59              		.loc 1 70 3 view .LVU10
+  60 001e 9B6D     		ldr	r3, [r3, #88]
+  61 0020 03F08053 		and	r3, r3, #268435456
+  62 0024 0193     		str	r3, [sp, #4]
+  63              		.loc 1 70 3 view .LVU11
+  64 0026 019B     		ldr	r3, [sp, #4]
+  65              	.LBE3:
+  66              		.loc 1 70 3 view .LVU12
+  71:Core/Src/stm32l4xx_hal_msp.c **** 
+  72:Core/Src/stm32l4xx_hal_msp.c ****   /* System interrupt init*/
+  73:Core/Src/stm32l4xx_hal_msp.c **** 
+  74:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 1 */
+  75:Core/Src/stm32l4xx_hal_msp.c **** 
+  76:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END MspInit 1 */
+  77:Core/Src/stm32l4xx_hal_msp.c **** }
+  67              		.loc 1 77 1 is_stmt 0 view .LVU13
+  68 0028 02B0     		add	sp, sp, #8
+  69              		.cfi_def_cfa_offset 0
+  70              		@ sp needed
+  71 002a 7047     		bx	lr
+  72              	.L4:
+  73              		.align	2
+  74              	.L3:
+  75 002c 00100240 		.word	1073876992
+  76              		.cfi_endproc
+  77              	.LFE132:
+  79              		.section	.text.HAL_UART_MspInit,"ax",%progbits
+  80              		.align	1
+  81              		.global	HAL_UART_MspInit
+  82              		.syntax unified
+  83              		.thumb
+  84              		.thumb_func
+  86              	HAL_UART_MspInit:
+  87              	.LVL0:
+  88              	.LFB133:
+  78:Core/Src/stm32l4xx_hal_msp.c **** 
+  79:Core/Src/stm32l4xx_hal_msp.c **** /**
+  80:Core/Src/stm32l4xx_hal_msp.c **** * @brief UART MSP Initialization
+  81:Core/Src/stm32l4xx_hal_msp.c **** * This function configures the hardware resources used in this example
+  82:Core/Src/stm32l4xx_hal_msp.c **** * @param huart: UART handle pointer
+  83:Core/Src/stm32l4xx_hal_msp.c **** * @retval None
+  84:Core/Src/stm32l4xx_hal_msp.c **** */
+  85:Core/Src/stm32l4xx_hal_msp.c **** void HAL_UART_MspInit(UART_HandleTypeDef* huart)
+  86:Core/Src/stm32l4xx_hal_msp.c **** {
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 4
+
+
+  89              		.loc 1 86 1 is_stmt 1 view -0
+  90              		.cfi_startproc
+  91              		@ args = 0, pretend = 0, frame = 192
+  92              		@ frame_needed = 0, uses_anonymous_args = 0
+  93              		.loc 1 86 1 is_stmt 0 view .LVU15
+  94 0000 10B5     		push	{r4, lr}
+  95              		.cfi_def_cfa_offset 8
+  96              		.cfi_offset 4, -8
+  97              		.cfi_offset 14, -4
+  98 0002 B0B0     		sub	sp, sp, #192
+  99              		.cfi_def_cfa_offset 200
+ 100 0004 0446     		mov	r4, r0
+  87:Core/Src/stm32l4xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+ 101              		.loc 1 87 3 is_stmt 1 view .LVU16
+ 102              		.loc 1 87 20 is_stmt 0 view .LVU17
+ 103 0006 0021     		movs	r1, #0
+ 104 0008 2B91     		str	r1, [sp, #172]
+ 105 000a 2C91     		str	r1, [sp, #176]
+ 106 000c 2D91     		str	r1, [sp, #180]
+ 107 000e 2E91     		str	r1, [sp, #184]
+ 108 0010 2F91     		str	r1, [sp, #188]
+  88:Core/Src/stm32l4xx_hal_msp.c ****   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+ 109              		.loc 1 88 3 is_stmt 1 view .LVU18
+ 110              		.loc 1 88 28 is_stmt 0 view .LVU19
+ 111 0012 9822     		movs	r2, #152
+ 112 0014 05A8     		add	r0, sp, #20
+ 113              	.LVL1:
+ 114              		.loc 1 88 28 view .LVU20
+ 115 0016 FFF7FEFF 		bl	memset
+ 116              	.LVL2:
+  89:Core/Src/stm32l4xx_hal_msp.c ****   if(huart->Instance==LPUART1)
+ 117              		.loc 1 89 3 is_stmt 1 view .LVU21
+ 118              		.loc 1 89 11 is_stmt 0 view .LVU22
+ 119 001a 2368     		ldr	r3, [r4]
+ 120              		.loc 1 89 5 view .LVU23
+ 121 001c 304A     		ldr	r2, .L15
+ 122 001e 9342     		cmp	r3, r2
+ 123 0020 04D0     		beq	.L11
+  90:Core/Src/stm32l4xx_hal_msp.c ****   {
+  91:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN LPUART1_MspInit 0 */
+  92:Core/Src/stm32l4xx_hal_msp.c **** 
+  93:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END LPUART1_MspInit 0 */
+  94:Core/Src/stm32l4xx_hal_msp.c **** 
+  95:Core/Src/stm32l4xx_hal_msp.c ****   /** Initializes the peripherals clock
+  96:Core/Src/stm32l4xx_hal_msp.c ****   */
+  97:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_LPUART1;
+  98:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.Lpuart1ClockSelection = RCC_LPUART1CLKSOURCE_PCLK1;
+  99:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 100:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 101:Core/Src/stm32l4xx_hal_msp.c ****       Error_Handler();
+ 102:Core/Src/stm32l4xx_hal_msp.c ****     }
+ 103:Core/Src/stm32l4xx_hal_msp.c **** 
+ 104:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock enable */
+ 105:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_LPUART1_CLK_ENABLE();
+ 106:Core/Src/stm32l4xx_hal_msp.c **** 
+ 107:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_GPIOG_CLK_ENABLE();
+ 108:Core/Src/stm32l4xx_hal_msp.c ****     HAL_PWREx_EnableVddIO2();
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 5
+
+
+ 109:Core/Src/stm32l4xx_hal_msp.c ****     /**LPUART1 GPIO Configuration
+ 110:Core/Src/stm32l4xx_hal_msp.c ****     PG7     ------> LPUART1_TX
+ 111:Core/Src/stm32l4xx_hal_msp.c ****     PG8     ------> LPUART1_RX
+ 112:Core/Src/stm32l4xx_hal_msp.c ****     */
+ 113:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pin = STLINK_TX_Pin|STLINK_RX_Pin;
+ 114:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 115:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 116:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 117:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF8_LPUART1;
+ 118:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+ 119:Core/Src/stm32l4xx_hal_msp.c **** 
+ 120:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN LPUART1_MspInit 1 */
+ 121:Core/Src/stm32l4xx_hal_msp.c **** 
+ 122:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END LPUART1_MspInit 1 */
+ 123:Core/Src/stm32l4xx_hal_msp.c ****   }
+ 124:Core/Src/stm32l4xx_hal_msp.c ****   else if(huart->Instance==UART4)
+ 124              		.loc 1 124 8 is_stmt 1 view .LVU24
+ 125              		.loc 1 124 10 is_stmt 0 view .LVU25
+ 126 0022 304A     		ldr	r2, .L15+4
+ 127 0024 9342     		cmp	r3, r2
+ 128 0026 2FD0     		beq	.L12
+ 129              	.L5:
+ 125:Core/Src/stm32l4xx_hal_msp.c ****   {
+ 126:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN UART4_MspInit 0 */
+ 127:Core/Src/stm32l4xx_hal_msp.c **** 
+ 128:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END UART4_MspInit 0 */
+ 129:Core/Src/stm32l4xx_hal_msp.c **** 
+ 130:Core/Src/stm32l4xx_hal_msp.c ****   /** Initializes the peripherals clock
+ 131:Core/Src/stm32l4xx_hal_msp.c ****   */
+ 132:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_UART4;
+ 133:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.Uart4ClockSelection = RCC_UART4CLKSOURCE_PCLK1;
+ 134:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 135:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 136:Core/Src/stm32l4xx_hal_msp.c ****       Error_Handler();
+ 137:Core/Src/stm32l4xx_hal_msp.c ****     }
+ 138:Core/Src/stm32l4xx_hal_msp.c **** 
+ 139:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock enable */
+ 140:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_UART4_CLK_ENABLE();
+ 141:Core/Src/stm32l4xx_hal_msp.c **** 
+ 142:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
+ 143:Core/Src/stm32l4xx_hal_msp.c ****     /**UART4 GPIO Configuration
+ 144:Core/Src/stm32l4xx_hal_msp.c ****     PA0     ------> UART4_TX
+ 145:Core/Src/stm32l4xx_hal_msp.c ****     PA1     ------> UART4_RX
+ 146:Core/Src/stm32l4xx_hal_msp.c ****     */
+ 147:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1;
+ 148:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 149:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 150:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 151:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF8_UART4;
+ 152:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 153:Core/Src/stm32l4xx_hal_msp.c **** 
+ 154:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN UART4_MspInit 1 */
+ 155:Core/Src/stm32l4xx_hal_msp.c **** 
+ 156:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END UART4_MspInit 1 */
+ 157:Core/Src/stm32l4xx_hal_msp.c ****   }
+ 158:Core/Src/stm32l4xx_hal_msp.c **** 
+ 159:Core/Src/stm32l4xx_hal_msp.c **** }
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 6
+
+
+ 130              		.loc 1 159 1 view .LVU26
+ 131 0028 30B0     		add	sp, sp, #192
+ 132              		.cfi_remember_state
+ 133              		.cfi_def_cfa_offset 8
+ 134              		@ sp needed
+ 135 002a 10BD     		pop	{r4, pc}
+ 136              	.LVL3:
+ 137              	.L11:
+ 138              		.cfi_restore_state
+  97:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.Lpuart1ClockSelection = RCC_LPUART1CLKSOURCE_PCLK1;
+ 139              		.loc 1 97 5 is_stmt 1 view .LVU27
+  97:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.Lpuart1ClockSelection = RCC_LPUART1CLKSOURCE_PCLK1;
+ 140              		.loc 1 97 40 is_stmt 0 view .LVU28
+ 141 002c 2023     		movs	r3, #32
+ 142 002e 0593     		str	r3, [sp, #20]
+  98:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 143              		.loc 1 98 5 is_stmt 1 view .LVU29
+  99:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 144              		.loc 1 99 5 view .LVU30
+  99:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 145              		.loc 1 99 9 is_stmt 0 view .LVU31
+ 146 0030 05A8     		add	r0, sp, #20
+ 147 0032 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 148              	.LVL4:
+  99:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 149              		.loc 1 99 8 view .LVU32
+ 150 0036 20BB     		cbnz	r0, .L13
+ 151              	.L7:
+ 105:Core/Src/stm32l4xx_hal_msp.c **** 
+ 152              		.loc 1 105 5 is_stmt 1 view .LVU33
+ 153              	.LBB4:
+ 105:Core/Src/stm32l4xx_hal_msp.c **** 
+ 154              		.loc 1 105 5 view .LVU34
+ 105:Core/Src/stm32l4xx_hal_msp.c **** 
+ 155              		.loc 1 105 5 view .LVU35
+ 156 0038 2B4B     		ldr	r3, .L15+8
+ 157 003a DA6D     		ldr	r2, [r3, #92]
+ 158 003c 42F00102 		orr	r2, r2, #1
+ 159 0040 DA65     		str	r2, [r3, #92]
+ 105:Core/Src/stm32l4xx_hal_msp.c **** 
+ 160              		.loc 1 105 5 view .LVU36
+ 161 0042 DA6D     		ldr	r2, [r3, #92]
+ 162 0044 02F00102 		and	r2, r2, #1
+ 163 0048 0192     		str	r2, [sp, #4]
+ 105:Core/Src/stm32l4xx_hal_msp.c **** 
+ 164              		.loc 1 105 5 view .LVU37
+ 165 004a 019A     		ldr	r2, [sp, #4]
+ 166              	.LBE4:
+ 105:Core/Src/stm32l4xx_hal_msp.c **** 
+ 167              		.loc 1 105 5 view .LVU38
+ 107:Core/Src/stm32l4xx_hal_msp.c ****     HAL_PWREx_EnableVddIO2();
+ 168              		.loc 1 107 5 view .LVU39
+ 169              	.LBB5:
+ 107:Core/Src/stm32l4xx_hal_msp.c ****     HAL_PWREx_EnableVddIO2();
+ 170              		.loc 1 107 5 view .LVU40
+ 107:Core/Src/stm32l4xx_hal_msp.c ****     HAL_PWREx_EnableVddIO2();
+ 171              		.loc 1 107 5 view .LVU41
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 7
+
+
+ 172 004c DA6C     		ldr	r2, [r3, #76]
+ 173 004e 42F04002 		orr	r2, r2, #64
+ 174 0052 DA64     		str	r2, [r3, #76]
+ 107:Core/Src/stm32l4xx_hal_msp.c ****     HAL_PWREx_EnableVddIO2();
+ 175              		.loc 1 107 5 view .LVU42
+ 176 0054 DB6C     		ldr	r3, [r3, #76]
+ 177 0056 03F04003 		and	r3, r3, #64
+ 178 005a 0293     		str	r3, [sp, #8]
+ 107:Core/Src/stm32l4xx_hal_msp.c ****     HAL_PWREx_EnableVddIO2();
+ 179              		.loc 1 107 5 view .LVU43
+ 180 005c 029B     		ldr	r3, [sp, #8]
+ 181              	.LBE5:
+ 107:Core/Src/stm32l4xx_hal_msp.c ****     HAL_PWREx_EnableVddIO2();
+ 182              		.loc 1 107 5 view .LVU44
+ 108:Core/Src/stm32l4xx_hal_msp.c ****     /**LPUART1 GPIO Configuration
+ 183              		.loc 1 108 5 view .LVU45
+ 184 005e FFF7FEFF 		bl	HAL_PWREx_EnableVddIO2
+ 185              	.LVL5:
+ 113:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 186              		.loc 1 113 5 view .LVU46
+ 113:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 187              		.loc 1 113 25 is_stmt 0 view .LVU47
+ 188 0062 4FF4C073 		mov	r3, #384
+ 189 0066 2B93     		str	r3, [sp, #172]
+ 114:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 190              		.loc 1 114 5 is_stmt 1 view .LVU48
+ 114:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 191              		.loc 1 114 26 is_stmt 0 view .LVU49
+ 192 0068 0223     		movs	r3, #2
+ 193 006a 2C93     		str	r3, [sp, #176]
+ 115:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 194              		.loc 1 115 5 is_stmt 1 view .LVU50
+ 115:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 195              		.loc 1 115 26 is_stmt 0 view .LVU51
+ 196 006c 0023     		movs	r3, #0
+ 197 006e 2D93     		str	r3, [sp, #180]
+ 116:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF8_LPUART1;
+ 198              		.loc 1 116 5 is_stmt 1 view .LVU52
+ 116:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF8_LPUART1;
+ 199              		.loc 1 116 27 is_stmt 0 view .LVU53
+ 200 0070 0323     		movs	r3, #3
+ 201 0072 2E93     		str	r3, [sp, #184]
+ 117:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+ 202              		.loc 1 117 5 is_stmt 1 view .LVU54
+ 117:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+ 203              		.loc 1 117 31 is_stmt 0 view .LVU55
+ 204 0074 0823     		movs	r3, #8
+ 205 0076 2F93     		str	r3, [sp, #188]
+ 118:Core/Src/stm32l4xx_hal_msp.c **** 
+ 206              		.loc 1 118 5 is_stmt 1 view .LVU56
+ 207 0078 2BA9     		add	r1, sp, #172
+ 208 007a 1C48     		ldr	r0, .L15+12
+ 209 007c FFF7FEFF 		bl	HAL_GPIO_Init
+ 210              	.LVL6:
+ 211 0080 D2E7     		b	.L5
+ 212              	.L13:
+ 101:Core/Src/stm32l4xx_hal_msp.c ****     }
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 8
+
+
+ 213              		.loc 1 101 7 view .LVU57
+ 214 0082 FFF7FEFF 		bl	Error_Handler
+ 215              	.LVL7:
+ 216 0086 D7E7     		b	.L7
+ 217              	.L12:
+ 132:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.Uart4ClockSelection = RCC_UART4CLKSOURCE_PCLK1;
+ 218              		.loc 1 132 5 view .LVU58
+ 132:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.Uart4ClockSelection = RCC_UART4CLKSOURCE_PCLK1;
+ 219              		.loc 1 132 40 is_stmt 0 view .LVU59
+ 220 0088 0823     		movs	r3, #8
+ 221 008a 0593     		str	r3, [sp, #20]
+ 133:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 222              		.loc 1 133 5 is_stmt 1 view .LVU60
+ 134:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 223              		.loc 1 134 5 view .LVU61
+ 134:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 224              		.loc 1 134 9 is_stmt 0 view .LVU62
+ 225 008c 05A8     		add	r0, sp, #20
+ 226 008e FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 227              	.LVL8:
+ 134:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 228              		.loc 1 134 8 view .LVU63
+ 229 0092 08BB     		cbnz	r0, .L14
+ 230              	.L9:
+ 140:Core/Src/stm32l4xx_hal_msp.c **** 
+ 231              		.loc 1 140 5 is_stmt 1 view .LVU64
+ 232              	.LBB6:
+ 140:Core/Src/stm32l4xx_hal_msp.c **** 
+ 233              		.loc 1 140 5 view .LVU65
+ 140:Core/Src/stm32l4xx_hal_msp.c **** 
+ 234              		.loc 1 140 5 view .LVU66
+ 235 0094 144B     		ldr	r3, .L15+8
+ 236 0096 9A6D     		ldr	r2, [r3, #88]
+ 237 0098 42F40022 		orr	r2, r2, #524288
+ 238 009c 9A65     		str	r2, [r3, #88]
+ 140:Core/Src/stm32l4xx_hal_msp.c **** 
+ 239              		.loc 1 140 5 view .LVU67
+ 240 009e 9A6D     		ldr	r2, [r3, #88]
+ 241 00a0 02F40022 		and	r2, r2, #524288
+ 242 00a4 0392     		str	r2, [sp, #12]
+ 140:Core/Src/stm32l4xx_hal_msp.c **** 
+ 243              		.loc 1 140 5 view .LVU68
+ 244 00a6 039A     		ldr	r2, [sp, #12]
+ 245              	.LBE6:
+ 140:Core/Src/stm32l4xx_hal_msp.c **** 
+ 246              		.loc 1 140 5 view .LVU69
+ 142:Core/Src/stm32l4xx_hal_msp.c ****     /**UART4 GPIO Configuration
+ 247              		.loc 1 142 5 view .LVU70
+ 248              	.LBB7:
+ 142:Core/Src/stm32l4xx_hal_msp.c ****     /**UART4 GPIO Configuration
+ 249              		.loc 1 142 5 view .LVU71
+ 142:Core/Src/stm32l4xx_hal_msp.c ****     /**UART4 GPIO Configuration
+ 250              		.loc 1 142 5 view .LVU72
+ 251 00a8 DA6C     		ldr	r2, [r3, #76]
+ 252 00aa 42F00102 		orr	r2, r2, #1
+ 253 00ae DA64     		str	r2, [r3, #76]
+ 142:Core/Src/stm32l4xx_hal_msp.c ****     /**UART4 GPIO Configuration
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 9
+
+
+ 254              		.loc 1 142 5 view .LVU73
+ 255 00b0 DB6C     		ldr	r3, [r3, #76]
+ 256 00b2 03F00103 		and	r3, r3, #1
+ 257 00b6 0493     		str	r3, [sp, #16]
+ 142:Core/Src/stm32l4xx_hal_msp.c ****     /**UART4 GPIO Configuration
+ 258              		.loc 1 142 5 view .LVU74
+ 259 00b8 049B     		ldr	r3, [sp, #16]
+ 260              	.LBE7:
+ 142:Core/Src/stm32l4xx_hal_msp.c ****     /**UART4 GPIO Configuration
+ 261              		.loc 1 142 5 view .LVU75
+ 147:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 262              		.loc 1 147 5 view .LVU76
+ 147:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 263              		.loc 1 147 25 is_stmt 0 view .LVU77
+ 264 00ba 0323     		movs	r3, #3
+ 265 00bc 2B93     		str	r3, [sp, #172]
+ 148:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 266              		.loc 1 148 5 is_stmt 1 view .LVU78
+ 148:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 267              		.loc 1 148 26 is_stmt 0 view .LVU79
+ 268 00be 0222     		movs	r2, #2
+ 269 00c0 2C92     		str	r2, [sp, #176]
+ 149:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 270              		.loc 1 149 5 is_stmt 1 view .LVU80
+ 149:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 271              		.loc 1 149 26 is_stmt 0 view .LVU81
+ 272 00c2 0022     		movs	r2, #0
+ 273 00c4 2D92     		str	r2, [sp, #180]
+ 150:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF8_UART4;
+ 274              		.loc 1 150 5 is_stmt 1 view .LVU82
+ 150:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF8_UART4;
+ 275              		.loc 1 150 27 is_stmt 0 view .LVU83
+ 276 00c6 2E93     		str	r3, [sp, #184]
+ 151:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 277              		.loc 1 151 5 is_stmt 1 view .LVU84
+ 151:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 278              		.loc 1 151 31 is_stmt 0 view .LVU85
+ 279 00c8 0823     		movs	r3, #8
+ 280 00ca 2F93     		str	r3, [sp, #188]
+ 152:Core/Src/stm32l4xx_hal_msp.c **** 
+ 281              		.loc 1 152 5 is_stmt 1 view .LVU86
+ 282 00cc 2BA9     		add	r1, sp, #172
+ 283 00ce 4FF09040 		mov	r0, #1207959552
+ 284 00d2 FFF7FEFF 		bl	HAL_GPIO_Init
+ 285              	.LVL9:
+ 286              		.loc 1 159 1 is_stmt 0 view .LVU87
+ 287 00d6 A7E7     		b	.L5
+ 288              	.L14:
+ 136:Core/Src/stm32l4xx_hal_msp.c ****     }
+ 289              		.loc 1 136 7 is_stmt 1 view .LVU88
+ 290 00d8 FFF7FEFF 		bl	Error_Handler
+ 291              	.LVL10:
+ 292 00dc DAE7     		b	.L9
+ 293              	.L16:
+ 294 00de 00BF     		.align	2
+ 295              	.L15:
+ 296 00e0 00800040 		.word	1073774592
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 10
+
+
+ 297 00e4 004C0040 		.word	1073761280
+ 298 00e8 00100240 		.word	1073876992
+ 299 00ec 00180048 		.word	1207965696
+ 300              		.cfi_endproc
+ 301              	.LFE133:
+ 303              		.section	.text.HAL_UART_MspDeInit,"ax",%progbits
+ 304              		.align	1
+ 305              		.global	HAL_UART_MspDeInit
+ 306              		.syntax unified
+ 307              		.thumb
+ 308              		.thumb_func
+ 310              	HAL_UART_MspDeInit:
+ 311              	.LVL11:
+ 312              	.LFB134:
+ 160:Core/Src/stm32l4xx_hal_msp.c **** 
+ 161:Core/Src/stm32l4xx_hal_msp.c **** /**
+ 162:Core/Src/stm32l4xx_hal_msp.c **** * @brief UART MSP De-Initialization
+ 163:Core/Src/stm32l4xx_hal_msp.c **** * This function freeze the hardware resources used in this example
+ 164:Core/Src/stm32l4xx_hal_msp.c **** * @param huart: UART handle pointer
+ 165:Core/Src/stm32l4xx_hal_msp.c **** * @retval None
+ 166:Core/Src/stm32l4xx_hal_msp.c **** */
+ 167:Core/Src/stm32l4xx_hal_msp.c **** void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
+ 168:Core/Src/stm32l4xx_hal_msp.c **** {
+ 313              		.loc 1 168 1 view -0
+ 314              		.cfi_startproc
+ 315              		@ args = 0, pretend = 0, frame = 0
+ 316              		@ frame_needed = 0, uses_anonymous_args = 0
+ 317              		.loc 1 168 1 is_stmt 0 view .LVU90
+ 318 0000 08B5     		push	{r3, lr}
+ 319              		.cfi_def_cfa_offset 8
+ 320              		.cfi_offset 3, -8
+ 321              		.cfi_offset 14, -4
+ 169:Core/Src/stm32l4xx_hal_msp.c ****   if(huart->Instance==LPUART1)
+ 322              		.loc 1 169 3 is_stmt 1 view .LVU91
+ 323              		.loc 1 169 11 is_stmt 0 view .LVU92
+ 324 0002 0368     		ldr	r3, [r0]
+ 325              		.loc 1 169 5 view .LVU93
+ 326 0004 0F4A     		ldr	r2, .L23
+ 327 0006 9342     		cmp	r3, r2
+ 328 0008 03D0     		beq	.L21
+ 170:Core/Src/stm32l4xx_hal_msp.c ****   {
+ 171:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN LPUART1_MspDeInit 0 */
+ 172:Core/Src/stm32l4xx_hal_msp.c **** 
+ 173:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END LPUART1_MspDeInit 0 */
+ 174:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock disable */
+ 175:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_LPUART1_CLK_DISABLE();
+ 176:Core/Src/stm32l4xx_hal_msp.c **** 
+ 177:Core/Src/stm32l4xx_hal_msp.c ****     /**LPUART1 GPIO Configuration
+ 178:Core/Src/stm32l4xx_hal_msp.c ****     PG7     ------> LPUART1_TX
+ 179:Core/Src/stm32l4xx_hal_msp.c ****     PG8     ------> LPUART1_RX
+ 180:Core/Src/stm32l4xx_hal_msp.c ****     */
+ 181:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOG, STLINK_TX_Pin|STLINK_RX_Pin);
+ 182:Core/Src/stm32l4xx_hal_msp.c **** 
+ 183:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN LPUART1_MspDeInit 1 */
+ 184:Core/Src/stm32l4xx_hal_msp.c **** 
+ 185:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END LPUART1_MspDeInit 1 */
+ 186:Core/Src/stm32l4xx_hal_msp.c ****   }
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 11
+
+
+ 187:Core/Src/stm32l4xx_hal_msp.c ****   else if(huart->Instance==UART4)
+ 329              		.loc 1 187 8 is_stmt 1 view .LVU94
+ 330              		.loc 1 187 10 is_stmt 0 view .LVU95
+ 331 000a 0F4A     		ldr	r2, .L23+4
+ 332 000c 9342     		cmp	r3, r2
+ 333 000e 0CD0     		beq	.L22
+ 334              	.LVL12:
+ 335              	.L17:
+ 188:Core/Src/stm32l4xx_hal_msp.c ****   {
+ 189:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN UART4_MspDeInit 0 */
+ 190:Core/Src/stm32l4xx_hal_msp.c **** 
+ 191:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END UART4_MspDeInit 0 */
+ 192:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock disable */
+ 193:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_UART4_CLK_DISABLE();
+ 194:Core/Src/stm32l4xx_hal_msp.c **** 
+ 195:Core/Src/stm32l4xx_hal_msp.c ****     /**UART4 GPIO Configuration
+ 196:Core/Src/stm32l4xx_hal_msp.c ****     PA0     ------> UART4_TX
+ 197:Core/Src/stm32l4xx_hal_msp.c ****     PA1     ------> UART4_RX
+ 198:Core/Src/stm32l4xx_hal_msp.c ****     */
+ 199:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_0|GPIO_PIN_1);
+ 200:Core/Src/stm32l4xx_hal_msp.c **** 
+ 201:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN UART4_MspDeInit 1 */
+ 202:Core/Src/stm32l4xx_hal_msp.c **** 
+ 203:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END UART4_MspDeInit 1 */
+ 204:Core/Src/stm32l4xx_hal_msp.c ****   }
+ 205:Core/Src/stm32l4xx_hal_msp.c **** 
+ 206:Core/Src/stm32l4xx_hal_msp.c **** }
+ 336              		.loc 1 206 1 view .LVU96
+ 337 0010 08BD     		pop	{r3, pc}
+ 338              	.LVL13:
+ 339              	.L21:
+ 175:Core/Src/stm32l4xx_hal_msp.c **** 
+ 340              		.loc 1 175 5 is_stmt 1 view .LVU97
+ 341 0012 02F5C832 		add	r2, r2, #102400
+ 342 0016 D36D     		ldr	r3, [r2, #92]
+ 343 0018 23F00103 		bic	r3, r3, #1
+ 344 001c D365     		str	r3, [r2, #92]
+ 181:Core/Src/stm32l4xx_hal_msp.c **** 
+ 345              		.loc 1 181 5 view .LVU98
+ 346 001e 4FF4C071 		mov	r1, #384
+ 347 0022 0A48     		ldr	r0, .L23+8
+ 348              	.LVL14:
+ 181:Core/Src/stm32l4xx_hal_msp.c **** 
+ 349              		.loc 1 181 5 is_stmt 0 view .LVU99
+ 350 0024 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 351              	.LVL15:
+ 352 0028 F2E7     		b	.L17
+ 353              	.LVL16:
+ 354              	.L22:
+ 193:Core/Src/stm32l4xx_hal_msp.c **** 
+ 355              		.loc 1 193 5 is_stmt 1 view .LVU100
+ 356 002a 02F5E232 		add	r2, r2, #115712
+ 357 002e 936D     		ldr	r3, [r2, #88]
+ 358 0030 23F40023 		bic	r3, r3, #524288
+ 359 0034 9365     		str	r3, [r2, #88]
+ 199:Core/Src/stm32l4xx_hal_msp.c **** 
+ 360              		.loc 1 199 5 view .LVU101
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 12
+
+
+ 361 0036 0321     		movs	r1, #3
+ 362 0038 4FF09040 		mov	r0, #1207959552
+ 363              	.LVL17:
+ 199:Core/Src/stm32l4xx_hal_msp.c **** 
+ 364              		.loc 1 199 5 is_stmt 0 view .LVU102
+ 365 003c FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 366              	.LVL18:
+ 367              		.loc 1 206 1 view .LVU103
+ 368 0040 E6E7     		b	.L17
+ 369              	.L24:
+ 370 0042 00BF     		.align	2
+ 371              	.L23:
+ 372 0044 00800040 		.word	1073774592
+ 373 0048 004C0040 		.word	1073761280
+ 374 004c 00180048 		.word	1207965696
+ 375              		.cfi_endproc
+ 376              	.LFE134:
+ 378              		.section	.text.HAL_TIM_Base_MspInit,"ax",%progbits
+ 379              		.align	1
+ 380              		.global	HAL_TIM_Base_MspInit
+ 381              		.syntax unified
+ 382              		.thumb
+ 383              		.thumb_func
+ 385              	HAL_TIM_Base_MspInit:
+ 386              	.LVL19:
+ 387              	.LFB135:
+ 207:Core/Src/stm32l4xx_hal_msp.c **** 
+ 208:Core/Src/stm32l4xx_hal_msp.c **** /**
+ 209:Core/Src/stm32l4xx_hal_msp.c **** * @brief TIM_Base MSP Initialization
+ 210:Core/Src/stm32l4xx_hal_msp.c **** * This function configures the hardware resources used in this example
+ 211:Core/Src/stm32l4xx_hal_msp.c **** * @param htim_base: TIM_Base handle pointer
+ 212:Core/Src/stm32l4xx_hal_msp.c **** * @retval None
+ 213:Core/Src/stm32l4xx_hal_msp.c **** */
+ 214:Core/Src/stm32l4xx_hal_msp.c **** void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
+ 215:Core/Src/stm32l4xx_hal_msp.c **** {
+ 388              		.loc 1 215 1 is_stmt 1 view -0
+ 389              		.cfi_startproc
+ 390              		@ args = 0, pretend = 0, frame = 8
+ 391              		@ frame_needed = 0, uses_anonymous_args = 0
+ 392              		@ link register save eliminated.
+ 216:Core/Src/stm32l4xx_hal_msp.c ****   if(htim_base->Instance==TIM4)
+ 393              		.loc 1 216 3 view .LVU105
+ 394              		.loc 1 216 15 is_stmt 0 view .LVU106
+ 395 0000 0268     		ldr	r2, [r0]
+ 396              		.loc 1 216 5 view .LVU107
+ 397 0002 094B     		ldr	r3, .L32
+ 398 0004 9A42     		cmp	r2, r3
+ 399 0006 00D0     		beq	.L31
+ 400 0008 7047     		bx	lr
+ 401              	.L31:
+ 215:Core/Src/stm32l4xx_hal_msp.c ****   if(htim_base->Instance==TIM4)
+ 402              		.loc 1 215 1 view .LVU108
+ 403 000a 82B0     		sub	sp, sp, #8
+ 404              		.cfi_def_cfa_offset 8
+ 217:Core/Src/stm32l4xx_hal_msp.c ****   {
+ 218:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM4_MspInit 0 */
+ 219:Core/Src/stm32l4xx_hal_msp.c **** 
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 13
+
+
+ 220:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END TIM4_MspInit 0 */
+ 221:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock enable */
+ 222:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_TIM4_CLK_ENABLE();
+ 405              		.loc 1 222 5 is_stmt 1 view .LVU109
+ 406              	.LBB8:
+ 407              		.loc 1 222 5 view .LVU110
+ 408              		.loc 1 222 5 view .LVU111
+ 409 000c 03F50233 		add	r3, r3, #133120
+ 410 0010 9A6D     		ldr	r2, [r3, #88]
+ 411 0012 42F00402 		orr	r2, r2, #4
+ 412 0016 9A65     		str	r2, [r3, #88]
+ 413              		.loc 1 222 5 view .LVU112
+ 414 0018 9B6D     		ldr	r3, [r3, #88]
+ 415 001a 03F00403 		and	r3, r3, #4
+ 416 001e 0193     		str	r3, [sp, #4]
+ 417              		.loc 1 222 5 view .LVU113
+ 418 0020 019B     		ldr	r3, [sp, #4]
+ 419              	.LBE8:
+ 420              		.loc 1 222 5 view .LVU114
+ 223:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM4_MspInit 1 */
+ 224:Core/Src/stm32l4xx_hal_msp.c **** 
+ 225:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END TIM4_MspInit 1 */
+ 226:Core/Src/stm32l4xx_hal_msp.c ****   }
+ 227:Core/Src/stm32l4xx_hal_msp.c **** 
+ 228:Core/Src/stm32l4xx_hal_msp.c **** }
+ 421              		.loc 1 228 1 is_stmt 0 view .LVU115
+ 422 0022 02B0     		add	sp, sp, #8
+ 423              		.cfi_def_cfa_offset 0
+ 424              		@ sp needed
+ 425 0024 7047     		bx	lr
+ 426              	.L33:
+ 427 0026 00BF     		.align	2
+ 428              	.L32:
+ 429 0028 00080040 		.word	1073743872
+ 430              		.cfi_endproc
+ 431              	.LFE135:
+ 433              		.section	.text.HAL_TIM_Base_MspDeInit,"ax",%progbits
+ 434              		.align	1
+ 435              		.global	HAL_TIM_Base_MspDeInit
+ 436              		.syntax unified
+ 437              		.thumb
+ 438              		.thumb_func
+ 440              	HAL_TIM_Base_MspDeInit:
+ 441              	.LVL20:
+ 442              	.LFB136:
+ 229:Core/Src/stm32l4xx_hal_msp.c **** 
+ 230:Core/Src/stm32l4xx_hal_msp.c **** /**
+ 231:Core/Src/stm32l4xx_hal_msp.c **** * @brief TIM_Base MSP De-Initialization
+ 232:Core/Src/stm32l4xx_hal_msp.c **** * This function freeze the hardware resources used in this example
+ 233:Core/Src/stm32l4xx_hal_msp.c **** * @param htim_base: TIM_Base handle pointer
+ 234:Core/Src/stm32l4xx_hal_msp.c **** * @retval None
+ 235:Core/Src/stm32l4xx_hal_msp.c **** */
+ 236:Core/Src/stm32l4xx_hal_msp.c **** void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
+ 237:Core/Src/stm32l4xx_hal_msp.c **** {
+ 443              		.loc 1 237 1 is_stmt 1 view -0
+ 444              		.cfi_startproc
+ 445              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 14
+
+
+ 446              		@ frame_needed = 0, uses_anonymous_args = 0
+ 447              		@ link register save eliminated.
+ 238:Core/Src/stm32l4xx_hal_msp.c ****   if(htim_base->Instance==TIM4)
+ 448              		.loc 1 238 3 view .LVU117
+ 449              		.loc 1 238 15 is_stmt 0 view .LVU118
+ 450 0000 0268     		ldr	r2, [r0]
+ 451              		.loc 1 238 5 view .LVU119
+ 452 0002 054B     		ldr	r3, .L37
+ 453 0004 9A42     		cmp	r2, r3
+ 454 0006 00D0     		beq	.L36
+ 455              	.L34:
+ 239:Core/Src/stm32l4xx_hal_msp.c ****   {
+ 240:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM4_MspDeInit 0 */
+ 241:Core/Src/stm32l4xx_hal_msp.c **** 
+ 242:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END TIM4_MspDeInit 0 */
+ 243:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock disable */
+ 244:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_TIM4_CLK_DISABLE();
+ 245:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM4_MspDeInit 1 */
+ 246:Core/Src/stm32l4xx_hal_msp.c **** 
+ 247:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END TIM4_MspDeInit 1 */
+ 248:Core/Src/stm32l4xx_hal_msp.c ****   }
+ 249:Core/Src/stm32l4xx_hal_msp.c **** 
+ 250:Core/Src/stm32l4xx_hal_msp.c **** }
+ 456              		.loc 1 250 1 view .LVU120
+ 457 0008 7047     		bx	lr
+ 458              	.L36:
+ 244:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM4_MspDeInit 1 */
+ 459              		.loc 1 244 5 is_stmt 1 view .LVU121
+ 460 000a 044A     		ldr	r2, .L37+4
+ 461 000c 936D     		ldr	r3, [r2, #88]
+ 462 000e 23F00403 		bic	r3, r3, #4
+ 463 0012 9365     		str	r3, [r2, #88]
+ 464              		.loc 1 250 1 is_stmt 0 view .LVU122
+ 465 0014 F8E7     		b	.L34
+ 466              	.L38:
+ 467 0016 00BF     		.align	2
+ 468              	.L37:
+ 469 0018 00080040 		.word	1073743872
+ 470 001c 00100240 		.word	1073876992
+ 471              		.cfi_endproc
+ 472              	.LFE136:
+ 474              		.section	.text.HAL_PCD_MspInit,"ax",%progbits
+ 475              		.align	1
+ 476              		.global	HAL_PCD_MspInit
+ 477              		.syntax unified
+ 478              		.thumb
+ 479              		.thumb_func
+ 481              	HAL_PCD_MspInit:
+ 482              	.LVL21:
+ 483              	.LFB137:
+ 251:Core/Src/stm32l4xx_hal_msp.c **** 
+ 252:Core/Src/stm32l4xx_hal_msp.c **** /**
+ 253:Core/Src/stm32l4xx_hal_msp.c **** * @brief PCD MSP Initialization
+ 254:Core/Src/stm32l4xx_hal_msp.c **** * This function configures the hardware resources used in this example
+ 255:Core/Src/stm32l4xx_hal_msp.c **** * @param hpcd: PCD handle pointer
+ 256:Core/Src/stm32l4xx_hal_msp.c **** * @retval None
+ 257:Core/Src/stm32l4xx_hal_msp.c **** */
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 15
+
+
+ 258:Core/Src/stm32l4xx_hal_msp.c **** void HAL_PCD_MspInit(PCD_HandleTypeDef* hpcd)
+ 259:Core/Src/stm32l4xx_hal_msp.c **** {
+ 484              		.loc 1 259 1 is_stmt 1 view -0
+ 485              		.cfi_startproc
+ 486              		@ args = 0, pretend = 0, frame = 184
+ 487              		@ frame_needed = 0, uses_anonymous_args = 0
+ 488              		.loc 1 259 1 is_stmt 0 view .LVU124
+ 489 0000 30B5     		push	{r4, r5, lr}
+ 490              		.cfi_def_cfa_offset 12
+ 491              		.cfi_offset 4, -12
+ 492              		.cfi_offset 5, -8
+ 493              		.cfi_offset 14, -4
+ 494 0002 AFB0     		sub	sp, sp, #188
+ 495              		.cfi_def_cfa_offset 200
+ 496 0004 0446     		mov	r4, r0
+ 260:Core/Src/stm32l4xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+ 497              		.loc 1 260 3 is_stmt 1 view .LVU125
+ 498              		.loc 1 260 20 is_stmt 0 view .LVU126
+ 499 0006 0021     		movs	r1, #0
+ 500 0008 2991     		str	r1, [sp, #164]
+ 501 000a 2A91     		str	r1, [sp, #168]
+ 502 000c 2B91     		str	r1, [sp, #172]
+ 503 000e 2C91     		str	r1, [sp, #176]
+ 504 0010 2D91     		str	r1, [sp, #180]
+ 261:Core/Src/stm32l4xx_hal_msp.c ****   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+ 505              		.loc 1 261 3 is_stmt 1 view .LVU127
+ 506              		.loc 1 261 28 is_stmt 0 view .LVU128
+ 507 0012 9822     		movs	r2, #152
+ 508 0014 03A8     		add	r0, sp, #12
+ 509              	.LVL22:
+ 510              		.loc 1 261 28 view .LVU129
+ 511 0016 FFF7FEFF 		bl	memset
+ 512              	.LVL23:
+ 262:Core/Src/stm32l4xx_hal_msp.c ****   if(hpcd->Instance==USB_OTG_FS)
+ 513              		.loc 1 262 3 is_stmt 1 view .LVU130
+ 514              		.loc 1 262 10 is_stmt 0 view .LVU131
+ 515 001a 2368     		ldr	r3, [r4]
+ 516              		.loc 1 262 5 view .LVU132
+ 517 001c B3F1A04F 		cmp	r3, #1342177280
+ 518 0020 01D0     		beq	.L44
+ 519              	.LVL24:
+ 520              	.L39:
+ 263:Core/Src/stm32l4xx_hal_msp.c ****   {
+ 264:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN USB_OTG_FS_MspInit 0 */
+ 265:Core/Src/stm32l4xx_hal_msp.c **** 
+ 266:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END USB_OTG_FS_MspInit 0 */
+ 267:Core/Src/stm32l4xx_hal_msp.c **** 
+ 268:Core/Src/stm32l4xx_hal_msp.c ****   /** Initializes the peripherals clock
+ 269:Core/Src/stm32l4xx_hal_msp.c ****   */
+ 270:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
+ 271:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLLSAI1;
+ 272:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1Source = RCC_PLLSOURCE_MSI;
+ 273:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1M = 1;
+ 274:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1N = 24;
+ 275:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1P = RCC_PLLP_DIV2;
+ 276:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1Q = RCC_PLLQ_DIV2;
+ 277:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1R = RCC_PLLR_DIV2;
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 16
+
+
+ 278:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1ClockOut = RCC_PLLSAI1_48M2CLK;
+ 279:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 280:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 281:Core/Src/stm32l4xx_hal_msp.c ****       Error_Handler();
+ 282:Core/Src/stm32l4xx_hal_msp.c ****     }
+ 283:Core/Src/stm32l4xx_hal_msp.c **** 
+ 284:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
+ 285:Core/Src/stm32l4xx_hal_msp.c ****     /**USB_OTG_FS GPIO Configuration
+ 286:Core/Src/stm32l4xx_hal_msp.c ****     PA8     ------> USB_OTG_FS_SOF
+ 287:Core/Src/stm32l4xx_hal_msp.c ****     PA9     ------> USB_OTG_FS_VBUS
+ 288:Core/Src/stm32l4xx_hal_msp.c ****     PA10     ------> USB_OTG_FS_ID
+ 289:Core/Src/stm32l4xx_hal_msp.c ****     PA11     ------> USB_OTG_FS_DM
+ 290:Core/Src/stm32l4xx_hal_msp.c ****     PA12     ------> USB_OTG_FS_DP
+ 291:Core/Src/stm32l4xx_hal_msp.c ****     */
+ 292:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pin = USB_SOF_Pin|USB_ID_Pin|USB_DM_Pin|USB_DP_Pin;
+ 293:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 294:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 295:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 296:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF10_OTG_FS;
+ 297:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 298:Core/Src/stm32l4xx_hal_msp.c **** 
+ 299:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pin = USB_VBUS_Pin;
+ 300:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 301:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 302:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(USB_VBUS_GPIO_Port, &GPIO_InitStruct);
+ 303:Core/Src/stm32l4xx_hal_msp.c **** 
+ 304:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock enable */
+ 305:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_USB_OTG_FS_CLK_ENABLE();
+ 306:Core/Src/stm32l4xx_hal_msp.c **** 
+ 307:Core/Src/stm32l4xx_hal_msp.c ****     /* Enable VDDUSB */
+ 308:Core/Src/stm32l4xx_hal_msp.c ****     if(__HAL_RCC_PWR_IS_CLK_DISABLED())
+ 309:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 310:Core/Src/stm32l4xx_hal_msp.c ****       __HAL_RCC_PWR_CLK_ENABLE();
+ 311:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_EnableVddUSB();
+ 312:Core/Src/stm32l4xx_hal_msp.c ****       __HAL_RCC_PWR_CLK_DISABLE();
+ 313:Core/Src/stm32l4xx_hal_msp.c ****     }
+ 314:Core/Src/stm32l4xx_hal_msp.c ****     else
+ 315:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 316:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_EnableVddUSB();
+ 317:Core/Src/stm32l4xx_hal_msp.c ****     }
+ 318:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN USB_OTG_FS_MspInit 1 */
+ 319:Core/Src/stm32l4xx_hal_msp.c **** 
+ 320:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END USB_OTG_FS_MspInit 1 */
+ 321:Core/Src/stm32l4xx_hal_msp.c ****   }
+ 322:Core/Src/stm32l4xx_hal_msp.c **** 
+ 323:Core/Src/stm32l4xx_hal_msp.c **** }
+ 521              		.loc 1 323 1 view .LVU133
+ 522 0022 2FB0     		add	sp, sp, #188
+ 523              		.cfi_remember_state
+ 524              		.cfi_def_cfa_offset 12
+ 525              		@ sp needed
+ 526 0024 30BD     		pop	{r4, r5, pc}
+ 527              	.LVL25:
+ 528              	.L44:
+ 529              		.cfi_restore_state
+ 270:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLLSAI1;
+ 530              		.loc 1 270 5 is_stmt 1 view .LVU134
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 17
+
+
+ 270:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLLSAI1;
+ 531              		.loc 1 270 40 is_stmt 0 view .LVU135
+ 532 0026 4FF40053 		mov	r3, #8192
+ 533 002a 0393     		str	r3, [sp, #12]
+ 271:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1Source = RCC_PLLSOURCE_MSI;
+ 534              		.loc 1 271 5 is_stmt 1 view .LVU136
+ 271:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1Source = RCC_PLLSOURCE_MSI;
+ 535              		.loc 1 271 37 is_stmt 0 view .LVU137
+ 536 002c 4FF08063 		mov	r3, #67108864
+ 537 0030 2093     		str	r3, [sp, #128]
+ 272:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1M = 1;
+ 538              		.loc 1 272 5 is_stmt 1 view .LVU138
+ 272:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1M = 1;
+ 539              		.loc 1 272 41 is_stmt 0 view .LVU139
+ 540 0032 0123     		movs	r3, #1
+ 541 0034 0493     		str	r3, [sp, #16]
+ 273:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1N = 24;
+ 542              		.loc 1 273 5 is_stmt 1 view .LVU140
+ 273:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1N = 24;
+ 543              		.loc 1 273 36 is_stmt 0 view .LVU141
+ 544 0036 0593     		str	r3, [sp, #20]
+ 274:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1P = RCC_PLLP_DIV2;
+ 545              		.loc 1 274 5 is_stmt 1 view .LVU142
+ 274:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1P = RCC_PLLP_DIV2;
+ 546              		.loc 1 274 36 is_stmt 0 view .LVU143
+ 547 0038 1823     		movs	r3, #24
+ 548 003a 0693     		str	r3, [sp, #24]
+ 275:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1Q = RCC_PLLQ_DIV2;
+ 549              		.loc 1 275 5 is_stmt 1 view .LVU144
+ 275:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1Q = RCC_PLLQ_DIV2;
+ 550              		.loc 1 275 36 is_stmt 0 view .LVU145
+ 551 003c 0223     		movs	r3, #2
+ 552 003e 0793     		str	r3, [sp, #28]
+ 276:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1R = RCC_PLLR_DIV2;
+ 553              		.loc 1 276 5 is_stmt 1 view .LVU146
+ 276:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1R = RCC_PLLR_DIV2;
+ 554              		.loc 1 276 36 is_stmt 0 view .LVU147
+ 555 0040 0893     		str	r3, [sp, #32]
+ 277:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1ClockOut = RCC_PLLSAI1_48M2CLK;
+ 556              		.loc 1 277 5 is_stmt 1 view .LVU148
+ 277:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1ClockOut = RCC_PLLSAI1_48M2CLK;
+ 557              		.loc 1 277 36 is_stmt 0 view .LVU149
+ 558 0042 0993     		str	r3, [sp, #36]
+ 278:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 559              		.loc 1 278 5 is_stmt 1 view .LVU150
+ 278:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 560              		.loc 1 278 43 is_stmt 0 view .LVU151
+ 561 0044 4FF48013 		mov	r3, #1048576
+ 562 0048 0A93     		str	r3, [sp, #40]
+ 279:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 563              		.loc 1 279 5 is_stmt 1 view .LVU152
+ 279:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 564              		.loc 1 279 9 is_stmt 0 view .LVU153
+ 565 004a 03A8     		add	r0, sp, #12
+ 566 004c FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 567              	.LVL26:
+ 279:Core/Src/stm32l4xx_hal_msp.c ****     {
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 18
+
+
+ 568              		.loc 1 279 8 view .LVU154
+ 569 0050 0028     		cmp	r0, #0
+ 570 0052 40D1     		bne	.L45
+ 571              	.L41:
+ 284:Core/Src/stm32l4xx_hal_msp.c ****     /**USB_OTG_FS GPIO Configuration
+ 572              		.loc 1 284 5 is_stmt 1 view .LVU155
+ 573              	.LBB9:
+ 284:Core/Src/stm32l4xx_hal_msp.c ****     /**USB_OTG_FS GPIO Configuration
+ 574              		.loc 1 284 5 view .LVU156
+ 284:Core/Src/stm32l4xx_hal_msp.c ****     /**USB_OTG_FS GPIO Configuration
+ 575              		.loc 1 284 5 view .LVU157
+ 576 0054 234C     		ldr	r4, .L46
+ 577              	.LVL27:
+ 284:Core/Src/stm32l4xx_hal_msp.c ****     /**USB_OTG_FS GPIO Configuration
+ 578              		.loc 1 284 5 is_stmt 0 view .LVU158
+ 579 0056 E36C     		ldr	r3, [r4, #76]
+ 580 0058 43F00103 		orr	r3, r3, #1
+ 581 005c E364     		str	r3, [r4, #76]
+ 284:Core/Src/stm32l4xx_hal_msp.c ****     /**USB_OTG_FS GPIO Configuration
+ 582              		.loc 1 284 5 is_stmt 1 view .LVU159
+ 583 005e E36C     		ldr	r3, [r4, #76]
+ 584 0060 03F00103 		and	r3, r3, #1
+ 585 0064 0093     		str	r3, [sp]
+ 284:Core/Src/stm32l4xx_hal_msp.c ****     /**USB_OTG_FS GPIO Configuration
+ 586              		.loc 1 284 5 view .LVU160
+ 587 0066 009B     		ldr	r3, [sp]
+ 588              	.LBE9:
+ 284:Core/Src/stm32l4xx_hal_msp.c ****     /**USB_OTG_FS GPIO Configuration
+ 589              		.loc 1 284 5 view .LVU161
+ 292:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 590              		.loc 1 292 5 view .LVU162
+ 292:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 591              		.loc 1 292 25 is_stmt 0 view .LVU163
+ 592 0068 4FF4E853 		mov	r3, #7424
+ 593 006c 2993     		str	r3, [sp, #164]
+ 293:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 594              		.loc 1 293 5 is_stmt 1 view .LVU164
+ 293:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 595              		.loc 1 293 26 is_stmt 0 view .LVU165
+ 596 006e 0223     		movs	r3, #2
+ 597 0070 2A93     		str	r3, [sp, #168]
+ 294:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 598              		.loc 1 294 5 is_stmt 1 view .LVU166
+ 294:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 599              		.loc 1 294 26 is_stmt 0 view .LVU167
+ 600 0072 0025     		movs	r5, #0
+ 601 0074 2B95     		str	r5, [sp, #172]
+ 295:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF10_OTG_FS;
+ 602              		.loc 1 295 5 is_stmt 1 view .LVU168
+ 295:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF10_OTG_FS;
+ 603              		.loc 1 295 27 is_stmt 0 view .LVU169
+ 604 0076 0323     		movs	r3, #3
+ 605 0078 2C93     		str	r3, [sp, #176]
+ 296:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 606              		.loc 1 296 5 is_stmt 1 view .LVU170
+ 296:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 607              		.loc 1 296 31 is_stmt 0 view .LVU171
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 19
+
+
+ 608 007a 0A23     		movs	r3, #10
+ 609 007c 2D93     		str	r3, [sp, #180]
+ 297:Core/Src/stm32l4xx_hal_msp.c **** 
+ 610              		.loc 1 297 5 is_stmt 1 view .LVU172
+ 611 007e 29A9     		add	r1, sp, #164
+ 612 0080 4FF09040 		mov	r0, #1207959552
+ 613 0084 FFF7FEFF 		bl	HAL_GPIO_Init
+ 614              	.LVL28:
+ 299:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 615              		.loc 1 299 5 view .LVU173
+ 299:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 616              		.loc 1 299 25 is_stmt 0 view .LVU174
+ 617 0088 4FF40073 		mov	r3, #512
+ 618 008c 2993     		str	r3, [sp, #164]
+ 300:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 619              		.loc 1 300 5 is_stmt 1 view .LVU175
+ 300:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 620              		.loc 1 300 26 is_stmt 0 view .LVU176
+ 621 008e 2A95     		str	r5, [sp, #168]
+ 301:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(USB_VBUS_GPIO_Port, &GPIO_InitStruct);
+ 622              		.loc 1 301 5 is_stmt 1 view .LVU177
+ 301:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(USB_VBUS_GPIO_Port, &GPIO_InitStruct);
+ 623              		.loc 1 301 26 is_stmt 0 view .LVU178
+ 624 0090 2B95     		str	r5, [sp, #172]
+ 302:Core/Src/stm32l4xx_hal_msp.c **** 
+ 625              		.loc 1 302 5 is_stmt 1 view .LVU179
+ 626 0092 29A9     		add	r1, sp, #164
+ 627 0094 4FF09040 		mov	r0, #1207959552
+ 628 0098 FFF7FEFF 		bl	HAL_GPIO_Init
+ 629              	.LVL29:
+ 305:Core/Src/stm32l4xx_hal_msp.c **** 
+ 630              		.loc 1 305 5 view .LVU180
+ 631              	.LBB10:
+ 305:Core/Src/stm32l4xx_hal_msp.c **** 
+ 632              		.loc 1 305 5 view .LVU181
+ 305:Core/Src/stm32l4xx_hal_msp.c **** 
+ 633              		.loc 1 305 5 view .LVU182
+ 634 009c E36C     		ldr	r3, [r4, #76]
+ 635 009e 43F48053 		orr	r3, r3, #4096
+ 636 00a2 E364     		str	r3, [r4, #76]
+ 305:Core/Src/stm32l4xx_hal_msp.c **** 
+ 637              		.loc 1 305 5 view .LVU183
+ 638 00a4 E36C     		ldr	r3, [r4, #76]
+ 639 00a6 03F48053 		and	r3, r3, #4096
+ 640 00aa 0193     		str	r3, [sp, #4]
+ 305:Core/Src/stm32l4xx_hal_msp.c **** 
+ 641              		.loc 1 305 5 view .LVU184
+ 642 00ac 019B     		ldr	r3, [sp, #4]
+ 643              	.LBE10:
+ 305:Core/Src/stm32l4xx_hal_msp.c **** 
+ 644              		.loc 1 305 5 view .LVU185
+ 308:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 645              		.loc 1 308 5 view .LVU186
+ 308:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 646              		.loc 1 308 8 is_stmt 0 view .LVU187
+ 647 00ae A36D     		ldr	r3, [r4, #88]
+ 308:Core/Src/stm32l4xx_hal_msp.c ****     {
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 20
+
+
+ 648              		.loc 1 308 7 view .LVU188
+ 649 00b0 13F0805F 		tst	r3, #268435456
+ 650 00b4 12D1     		bne	.L42
+ 310:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_EnableVddUSB();
+ 651              		.loc 1 310 7 is_stmt 1 view .LVU189
+ 652              	.LBB11:
+ 310:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_EnableVddUSB();
+ 653              		.loc 1 310 7 view .LVU190
+ 310:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_EnableVddUSB();
+ 654              		.loc 1 310 7 view .LVU191
+ 655 00b6 A36D     		ldr	r3, [r4, #88]
+ 656 00b8 43F08053 		orr	r3, r3, #268435456
+ 657 00bc A365     		str	r3, [r4, #88]
+ 310:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_EnableVddUSB();
+ 658              		.loc 1 310 7 view .LVU192
+ 659 00be A36D     		ldr	r3, [r4, #88]
+ 660 00c0 03F08053 		and	r3, r3, #268435456
+ 661 00c4 0293     		str	r3, [sp, #8]
+ 310:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_EnableVddUSB();
+ 662              		.loc 1 310 7 view .LVU193
+ 663 00c6 029B     		ldr	r3, [sp, #8]
+ 664              	.LBE11:
+ 310:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_EnableVddUSB();
+ 665              		.loc 1 310 7 view .LVU194
+ 311:Core/Src/stm32l4xx_hal_msp.c ****       __HAL_RCC_PWR_CLK_DISABLE();
+ 666              		.loc 1 311 7 view .LVU195
+ 667 00c8 FFF7FEFF 		bl	HAL_PWREx_EnableVddUSB
+ 668              	.LVL30:
+ 312:Core/Src/stm32l4xx_hal_msp.c ****     }
+ 669              		.loc 1 312 7 view .LVU196
+ 670 00cc A36D     		ldr	r3, [r4, #88]
+ 671 00ce 23F08053 		bic	r3, r3, #268435456
+ 672 00d2 A365     		str	r3, [r4, #88]
+ 673 00d4 A5E7     		b	.L39
+ 674              	.LVL31:
+ 675              	.L45:
+ 281:Core/Src/stm32l4xx_hal_msp.c ****     }
+ 676              		.loc 1 281 7 view .LVU197
+ 677 00d6 FFF7FEFF 		bl	Error_Handler
+ 678              	.LVL32:
+ 679 00da BBE7     		b	.L41
+ 680              	.LVL33:
+ 681              	.L42:
+ 316:Core/Src/stm32l4xx_hal_msp.c ****     }
+ 682              		.loc 1 316 7 view .LVU198
+ 683 00dc FFF7FEFF 		bl	HAL_PWREx_EnableVddUSB
+ 684              	.LVL34:
+ 685              		.loc 1 323 1 is_stmt 0 view .LVU199
+ 686 00e0 9FE7     		b	.L39
+ 687              	.L47:
+ 688 00e2 00BF     		.align	2
+ 689              	.L46:
+ 690 00e4 00100240 		.word	1073876992
+ 691              		.cfi_endproc
+ 692              	.LFE137:
+ 694              		.section	.text.HAL_PCD_MspDeInit,"ax",%progbits
+ 695              		.align	1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 21
+
+
+ 696              		.global	HAL_PCD_MspDeInit
+ 697              		.syntax unified
+ 698              		.thumb
+ 699              		.thumb_func
+ 701              	HAL_PCD_MspDeInit:
+ 702              	.LVL35:
+ 703              	.LFB138:
+ 324:Core/Src/stm32l4xx_hal_msp.c **** 
+ 325:Core/Src/stm32l4xx_hal_msp.c **** /**
+ 326:Core/Src/stm32l4xx_hal_msp.c **** * @brief PCD MSP De-Initialization
+ 327:Core/Src/stm32l4xx_hal_msp.c **** * This function freeze the hardware resources used in this example
+ 328:Core/Src/stm32l4xx_hal_msp.c **** * @param hpcd: PCD handle pointer
+ 329:Core/Src/stm32l4xx_hal_msp.c **** * @retval None
+ 330:Core/Src/stm32l4xx_hal_msp.c **** */
+ 331:Core/Src/stm32l4xx_hal_msp.c **** void HAL_PCD_MspDeInit(PCD_HandleTypeDef* hpcd)
+ 332:Core/Src/stm32l4xx_hal_msp.c **** {
+ 704              		.loc 1 332 1 is_stmt 1 view -0
+ 705              		.cfi_startproc
+ 706              		@ args = 0, pretend = 0, frame = 8
+ 707              		@ frame_needed = 0, uses_anonymous_args = 0
+ 333:Core/Src/stm32l4xx_hal_msp.c ****   if(hpcd->Instance==USB_OTG_FS)
+ 708              		.loc 1 333 3 view .LVU201
+ 709              		.loc 1 333 10 is_stmt 0 view .LVU202
+ 710 0000 0368     		ldr	r3, [r0]
+ 711              		.loc 1 333 5 view .LVU203
+ 712 0002 B3F1A04F 		cmp	r3, #1342177280
+ 713 0006 00D0     		beq	.L55
+ 714 0008 7047     		bx	lr
+ 715              	.L55:
+ 332:Core/Src/stm32l4xx_hal_msp.c ****   if(hpcd->Instance==USB_OTG_FS)
+ 716              		.loc 1 332 1 view .LVU204
+ 717 000a 10B5     		push	{r4, lr}
+ 718              		.cfi_def_cfa_offset 8
+ 719              		.cfi_offset 4, -8
+ 720              		.cfi_offset 14, -4
+ 721 000c 82B0     		sub	sp, sp, #8
+ 722              		.cfi_def_cfa_offset 16
+ 334:Core/Src/stm32l4xx_hal_msp.c ****   {
+ 335:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN USB_OTG_FS_MspDeInit 0 */
+ 336:Core/Src/stm32l4xx_hal_msp.c **** 
+ 337:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END USB_OTG_FS_MspDeInit 0 */
+ 338:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock disable */
+ 339:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_USB_OTG_FS_CLK_DISABLE();
+ 723              		.loc 1 339 5 is_stmt 1 view .LVU205
+ 724 000e 114C     		ldr	r4, .L56
+ 725 0010 E36C     		ldr	r3, [r4, #76]
+ 726 0012 23F48053 		bic	r3, r3, #4096
+ 727 0016 E364     		str	r3, [r4, #76]
+ 728              		.loc 1 339 39 view .LVU206
+ 340:Core/Src/stm32l4xx_hal_msp.c **** 
+ 341:Core/Src/stm32l4xx_hal_msp.c ****     /**USB_OTG_FS GPIO Configuration
+ 342:Core/Src/stm32l4xx_hal_msp.c ****     PA8     ------> USB_OTG_FS_SOF
+ 343:Core/Src/stm32l4xx_hal_msp.c ****     PA9     ------> USB_OTG_FS_VBUS
+ 344:Core/Src/stm32l4xx_hal_msp.c ****     PA10     ------> USB_OTG_FS_ID
+ 345:Core/Src/stm32l4xx_hal_msp.c ****     PA11     ------> USB_OTG_FS_DM
+ 346:Core/Src/stm32l4xx_hal_msp.c ****     PA12     ------> USB_OTG_FS_DP
+ 347:Core/Src/stm32l4xx_hal_msp.c ****     */
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 22
+
+
+ 348:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOA, USB_SOF_Pin|USB_VBUS_Pin|USB_ID_Pin|USB_DM_Pin
+ 729              		.loc 1 348 5 view .LVU207
+ 730 0018 4FF4F851 		mov	r1, #7936
+ 731 001c 4FF09040 		mov	r0, #1207959552
+ 732              	.LVL36:
+ 733              		.loc 1 348 5 is_stmt 0 view .LVU208
+ 734 0020 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 735              	.LVL37:
+ 349:Core/Src/stm32l4xx_hal_msp.c ****                           |USB_DP_Pin);
+ 350:Core/Src/stm32l4xx_hal_msp.c **** 
+ 351:Core/Src/stm32l4xx_hal_msp.c ****     /* Disable VDDUSB */
+ 352:Core/Src/stm32l4xx_hal_msp.c ****     if(__HAL_RCC_PWR_IS_CLK_DISABLED())
+ 736              		.loc 1 352 5 is_stmt 1 view .LVU209
+ 737              		.loc 1 352 8 is_stmt 0 view .LVU210
+ 738 0024 A36D     		ldr	r3, [r4, #88]
+ 739              		.loc 1 352 7 view .LVU211
+ 740 0026 13F0805F 		tst	r3, #268435456
+ 741 002a 10D1     		bne	.L50
+ 353:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 354:Core/Src/stm32l4xx_hal_msp.c ****       __HAL_RCC_PWR_CLK_ENABLE();
+ 742              		.loc 1 354 7 is_stmt 1 view .LVU212
+ 743              	.LBB12:
+ 744              		.loc 1 354 7 view .LVU213
+ 745              		.loc 1 354 7 view .LVU214
+ 746 002c A36D     		ldr	r3, [r4, #88]
+ 747 002e 43F08053 		orr	r3, r3, #268435456
+ 748 0032 A365     		str	r3, [r4, #88]
+ 749              		.loc 1 354 7 view .LVU215
+ 750 0034 A36D     		ldr	r3, [r4, #88]
+ 751 0036 03F08053 		and	r3, r3, #268435456
+ 752 003a 0193     		str	r3, [sp, #4]
+ 753              		.loc 1 354 7 view .LVU216
+ 754 003c 019B     		ldr	r3, [sp, #4]
+ 755              	.LBE12:
+ 756              		.loc 1 354 7 view .LVU217
+ 355:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_DisableVddUSB();
+ 757              		.loc 1 355 7 view .LVU218
+ 758 003e FFF7FEFF 		bl	HAL_PWREx_DisableVddUSB
+ 759              	.LVL38:
+ 356:Core/Src/stm32l4xx_hal_msp.c ****       __HAL_RCC_PWR_CLK_DISABLE();
+ 760              		.loc 1 356 7 view .LVU219
+ 761 0042 A36D     		ldr	r3, [r4, #88]
+ 762 0044 23F08053 		bic	r3, r3, #268435456
+ 763 0048 A365     		str	r3, [r4, #88]
+ 764              	.L48:
+ 357:Core/Src/stm32l4xx_hal_msp.c ****     }
+ 358:Core/Src/stm32l4xx_hal_msp.c ****     else
+ 359:Core/Src/stm32l4xx_hal_msp.c ****     {
+ 360:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_DisableVddUSB();
+ 361:Core/Src/stm32l4xx_hal_msp.c ****     }
+ 362:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN USB_OTG_FS_MspDeInit 1 */
+ 363:Core/Src/stm32l4xx_hal_msp.c **** 
+ 364:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END USB_OTG_FS_MspDeInit 1 */
+ 365:Core/Src/stm32l4xx_hal_msp.c ****   }
+ 366:Core/Src/stm32l4xx_hal_msp.c **** 
+ 367:Core/Src/stm32l4xx_hal_msp.c **** }
+ 765              		.loc 1 367 1 is_stmt 0 view .LVU220
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 23
+
+
+ 766 004a 02B0     		add	sp, sp, #8
+ 767              		.cfi_remember_state
+ 768              		.cfi_def_cfa_offset 8
+ 769              		@ sp needed
+ 770 004c 10BD     		pop	{r4, pc}
+ 771              	.L50:
+ 772              		.cfi_restore_state
+ 360:Core/Src/stm32l4xx_hal_msp.c ****     }
+ 773              		.loc 1 360 7 is_stmt 1 view .LVU221
+ 774 004e FFF7FEFF 		bl	HAL_PWREx_DisableVddUSB
+ 775              	.LVL39:
+ 776              		.loc 1 367 1 is_stmt 0 view .LVU222
+ 777 0052 FAE7     		b	.L48
+ 778              	.L57:
+ 779              		.align	2
+ 780              	.L56:
+ 781 0054 00100240 		.word	1073876992
+ 782              		.cfi_endproc
+ 783              	.LFE138:
+ 785              		.text
+ 786              	.Letext0:
+ 787              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 788              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 789              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+ 790              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 791              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h"
+ 792              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 793              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 794              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h"
+ 795              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h"
+ 796              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h"
+ 797              		.file 12 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
+ 798              		.file 13 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
+ 799              		.file 14 "Core/Inc/main.h"
+ 800              		.file 15 "<built-in>"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s 			page 24
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32l4xx_hal_msp.c
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:20     .text.HAL_MspInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:26     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:75     .text.HAL_MspInit:000000000000002c $d
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:80     .text.HAL_UART_MspInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:86     .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:296    .text.HAL_UART_MspInit:00000000000000e0 $d
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:304    .text.HAL_UART_MspDeInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:310    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:372    .text.HAL_UART_MspDeInit:0000000000000044 $d
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:379    .text.HAL_TIM_Base_MspInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:385    .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:429    .text.HAL_TIM_Base_MspInit:0000000000000028 $d
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:434    .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:440    .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:469    .text.HAL_TIM_Base_MspDeInit:0000000000000018 $d
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:475    .text.HAL_PCD_MspInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:481    .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:690    .text.HAL_PCD_MspInit:00000000000000e4 $d
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:695    .text.HAL_PCD_MspDeInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:701    .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
+C:\Users\Morroway\AppData\Local\Temp\ccqoHdOD.s:781    .text.HAL_PCD_MspDeInit:0000000000000054 $d
+
+UNDEFINED SYMBOLS
+memset
+HAL_RCCEx_PeriphCLKConfig
+HAL_PWREx_EnableVddIO2
+HAL_GPIO_Init
+Error_Handler
+HAL_GPIO_DeInit
+HAL_PWREx_EnableVddUSB
+HAL_PWREx_DisableVddUSB

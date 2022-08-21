@@ -1,0 +1,997 @@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"TMC2208Stepper_GCONF.cpp"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text._ZN14TMC2208Stepper5GCONFEPm,"ax",%progbits
+  20              		.align	1
+  21              		.global	_ZN14TMC2208Stepper5GCONFEPm
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_ZN14TMC2208Stepper5GCONFEPm:
+  27              		.fnstart
+  28              	.LVL0:
+  29              	.LFB137:
+  30              		.file 1 "Core/Src/TMC2208Stepper_GCONF.cpp"
+   1:Core/Src/TMC2208Stepper_GCONF.cpp **** #include "TMC2208Stepper.h"
+   2:Core/Src/TMC2208Stepper_GCONF.cpp **** #include "TMC2208Stepper_MACROS.h"
+   3:Core/Src/TMC2208Stepper_GCONF.cpp **** 
+   4:Core/Src/TMC2208Stepper_GCONF.cpp **** // GCONF
+   5:Core/Src/TMC2208Stepper_GCONF.cpp **** bool TMC2208Stepper::GCONF(uint32_t *data) {
+  31              		.loc 1 5 44 view -0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 0
+  34              		@ frame_needed = 0, uses_anonymous_args = 0
+  35              		.loc 1 5 44 is_stmt 0 view .LVU1
+  36 0000 38B5     		push	{r3, r4, r5, lr}
+  37              		.save {r3, r4, r5, lr}
+  38              		.cfi_def_cfa_offset 16
+  39              		.cfi_offset 3, -16
+  40              		.cfi_offset 4, -12
+  41              		.cfi_offset 5, -8
+  42              		.cfi_offset 14, -4
+  43 0002 0446     		mov	r4, r0
+  44 0004 0D46     		mov	r5, r1
+   6:Core/Src/TMC2208Stepper_GCONF.cpp **** 	if (write_only) {
+  45              		.loc 1 6 2 is_stmt 1 view .LVU2
+  46              		.loc 1 6 6 is_stmt 0 view .LVU3
+  47 0006 90F84C30 		ldrb	r3, [r0, #76]	@ zero_extendqisi2
+  48              		.loc 1 6 2 view .LVU4
+  49 000a 1BB1     		cbz	r3, .L2
+   7:Core/Src/TMC2208Stepper_GCONF.cpp **** 		*data = GCONF_sr;
+  50              		.loc 1 7 3 is_stmt 1 view .LVU5
+  51              		.loc 1 7 11 is_stmt 0 view .LVU6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 2
+
+
+  52 000c 8369     		ldr	r3, [r0, #24]
+  53              		.loc 1 7 9 view .LVU7
+  54 000e 0B60     		str	r3, [r1]
+   8:Core/Src/TMC2208Stepper_GCONF.cpp **** 		return 0;
+  55              		.loc 1 8 3 is_stmt 1 view .LVU8
+  56              		.loc 1 8 10 is_stmt 0 view .LVU9
+  57 0010 0020     		movs	r0, #0
+  58              	.LVL1:
+  59              	.L3:
+   9:Core/Src/TMC2208Stepper_GCONF.cpp **** 	}
+  10:Core/Src/TMC2208Stepper_GCONF.cpp **** 	REGISTER_R(GCONF);
+  60              		.loc 1 10 19 is_stmt 1 discriminator 1 view .LVU10
+  11:Core/Src/TMC2208Stepper_GCONF.cpp **** }
+  61              		.loc 1 11 1 is_stmt 0 discriminator 1 view .LVU11
+  62 0012 38BD     		pop	{r3, r4, r5, pc}
+  63              	.LVL2:
+  64              	.L2:
+  10:Core/Src/TMC2208Stepper_GCONF.cpp **** }
+  65              		.loc 1 10 2 is_stmt 1 view .LVU12
+  66 0014 0323     		movs	r3, #3
+  67 0016 0A46     		mov	r2, r1
+  68 0018 0021     		movs	r1, #0
+  69              	.LVL3:
+  10:Core/Src/TMC2208Stepper_GCONF.cpp **** }
+  70              		.loc 1 10 2 is_stmt 0 view .LVU13
+  71 001a FFF7FEFF 		bl	_ZN14TMC2208Stepper12sendDatagramEhPmh
+  72              	.LVL4:
+  10:Core/Src/TMC2208Stepper_GCONF.cpp **** }
+  73              		.loc 1 10 2 is_stmt 1 view .LVU14
+  74 001e 2B68     		ldr	r3, [r5]
+  75 0020 A361     		str	r3, [r4, #24]
+  10:Core/Src/TMC2208Stepper_GCONF.cpp **** }
+  76              		.loc 1 10 2 view .LVU15
+  77 0022 F6E7     		b	.L3
+  78              		.cfi_endproc
+  79              	.LFE137:
+  80              		.fnend
+  82              		.section	.text._ZN14TMC2208Stepper5GCONFEm,"ax",%progbits
+  83              		.align	1
+  84              		.global	_ZN14TMC2208Stepper5GCONFEm
+  85              		.syntax unified
+  86              		.thumb
+  87              		.thumb_func
+  89              	_ZN14TMC2208Stepper5GCONFEm:
+  90              		.fnstart
+  91              	.LVL5:
+  92              	.LFB138:
+  12:Core/Src/TMC2208Stepper_GCONF.cpp **** void TMC2208Stepper::GCONF(uint32_t input) {
+  93              		.loc 1 12 44 view -0
+  94              		.cfi_startproc
+  95              		@ args = 0, pretend = 0, frame = 0
+  96              		@ frame_needed = 0, uses_anonymous_args = 0
+  97              		.loc 1 12 44 is_stmt 0 view .LVU17
+  98 0000 08B5     		push	{r3, lr}
+  99              		.save {r3, lr}
+ 100              		.cfi_def_cfa_offset 8
+ 101              		.cfi_offset 3, -8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 3
+
+
+ 102              		.cfi_offset 14, -4
+ 103 0002 0A46     		mov	r2, r1
+  13:Core/Src/TMC2208Stepper_GCONF.cpp **** 	GCONF_sr = input;
+ 104              		.loc 1 13 2 is_stmt 1 view .LVU18
+ 105              		.loc 1 13 11 is_stmt 0 view .LVU19
+ 106 0004 8161     		str	r1, [r0, #24]
+  14:Core/Src/TMC2208Stepper_GCONF.cpp **** 	REGISTER_W(GCONF);
+ 107              		.loc 1 14 2 is_stmt 1 view .LVU20
+ 108 0006 0723     		movs	r3, #7
+ 109 0008 8021     		movs	r1, #128
+ 110              	.LVL6:
+ 111              		.loc 1 14 2 is_stmt 0 view .LVU21
+ 112 000a FFF7FEFF 		bl	_ZN14TMC2208Stepper12sendDatagramEhmh
+ 113              	.LVL7:
+ 114              		.loc 1 14 19 is_stmt 1 view .LVU22
+  15:Core/Src/TMC2208Stepper_GCONF.cpp **** }
+ 115              		.loc 1 15 1 is_stmt 0 view .LVU23
+ 116 000e 08BD     		pop	{r3, pc}
+ 117              		.cfi_endproc
+ 118              	.LFE138:
+ 119              		.fnend
+ 121              		.section	.text._ZN14TMC2208Stepper14I_scale_analogEb,"ax",%progbits
+ 122              		.align	1
+ 123              		.global	_ZN14TMC2208Stepper14I_scale_analogEb
+ 124              		.syntax unified
+ 125              		.thumb
+ 126              		.thumb_func
+ 128              	_ZN14TMC2208Stepper14I_scale_analogEb:
+ 129              		.fnstart
+ 130              	.LVL8:
+ 131              	.LFB139:
+  16:Core/Src/TMC2208Stepper_GCONF.cpp **** 
+  17:Core/Src/TMC2208Stepper_GCONF.cpp **** 
+  18:Core/Src/TMC2208Stepper_GCONF.cpp **** void TMC2208Stepper::I_scale_analog(bool B)		{ MOD_REG(GCONF, I_SCALE_ANALOG);	}
+ 132              		.loc 1 18 46 is_stmt 1 view -0
+ 133              		.cfi_startproc
+ 134              		@ args = 0, pretend = 0, frame = 0
+ 135              		@ frame_needed = 0, uses_anonymous_args = 0
+ 136              		.loc 1 18 46 is_stmt 0 view .LVU25
+ 137 0000 08B5     		push	{r3, lr}
+ 138              		.save {r3, lr}
+ 139              		.cfi_def_cfa_offset 8
+ 140              		.cfi_offset 3, -8
+ 141              		.cfi_offset 14, -4
+ 142              		.loc 1 18 48 is_stmt 1 view .LVU26
+ 143 0002 8269     		ldr	r2, [r0, #24]
+ 144 0004 22F00102 		bic	r2, r2, #1
+ 145 0008 8261     		str	r2, [r0, #24]
+ 146              		.loc 1 18 48 view .LVU27
+ 147 000a 0A43     		orrs	r2, r2, r1
+ 148 000c 8261     		str	r2, [r0, #24]
+ 149              		.loc 1 18 48 view .LVU28
+ 150 000e 0723     		movs	r3, #7
+ 151 0010 8021     		movs	r1, #128
+ 152              	.LVL9:
+ 153              		.loc 1 18 48 is_stmt 0 view .LVU29
+ 154 0012 FFF7FEFF 		bl	_ZN14TMC2208Stepper12sendDatagramEhmh
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 4
+
+
+ 155              	.LVL10:
+ 156              		.loc 1 18 48 is_stmt 1 view .LVU30
+ 157              		.loc 1 18 78 view .LVU31
+ 158              		.loc 1 18 80 is_stmt 0 view .LVU32
+ 159 0016 08BD     		pop	{r3, pc}
+ 160              		.cfi_endproc
+ 161              	.LFE139:
+ 162              		.fnend
+ 164              		.section	.text._ZN14TMC2208Stepper15internal_RsenseEb,"ax",%progbits
+ 165              		.align	1
+ 166              		.global	_ZN14TMC2208Stepper15internal_RsenseEb
+ 167              		.syntax unified
+ 168              		.thumb
+ 169              		.thumb_func
+ 171              	_ZN14TMC2208Stepper15internal_RsenseEb:
+ 172              		.fnstart
+ 173              	.LVL11:
+ 174              	.LFB140:
+  19:Core/Src/TMC2208Stepper_GCONF.cpp **** void TMC2208Stepper::internal_Rsense(bool B)	{ MOD_REG(GCONF, INTERNAL_RSENSE);	}
+ 175              		.loc 1 19 46 is_stmt 1 view -0
+ 176              		.cfi_startproc
+ 177              		@ args = 0, pretend = 0, frame = 0
+ 178              		@ frame_needed = 0, uses_anonymous_args = 0
+ 179              		.loc 1 19 46 is_stmt 0 view .LVU34
+ 180 0000 08B5     		push	{r3, lr}
+ 181              		.save {r3, lr}
+ 182              		.cfi_def_cfa_offset 8
+ 183              		.cfi_offset 3, -8
+ 184              		.cfi_offset 14, -4
+ 185              		.loc 1 19 48 is_stmt 1 view .LVU35
+ 186 0002 8269     		ldr	r2, [r0, #24]
+ 187 0004 22F00202 		bic	r2, r2, #2
+ 188 0008 8261     		str	r2, [r0, #24]
+ 189              		.loc 1 19 48 view .LVU36
+ 190 000a 4900     		lsls	r1, r1, #1
+ 191              	.LVL12:
+ 192              		.loc 1 19 48 is_stmt 0 view .LVU37
+ 193 000c 01F00201 		and	r1, r1, #2
+ 194 0010 0A43     		orrs	r2, r2, r1
+ 195 0012 8261     		str	r2, [r0, #24]
+ 196              		.loc 1 19 48 is_stmt 1 view .LVU38
+ 197 0014 0723     		movs	r3, #7
+ 198 0016 8021     		movs	r1, #128
+ 199 0018 FFF7FEFF 		bl	_ZN14TMC2208Stepper12sendDatagramEhmh
+ 200              	.LVL13:
+ 201              		.loc 1 19 48 view .LVU39
+ 202              		.loc 1 19 79 view .LVU40
+ 203              		.loc 1 19 81 is_stmt 0 view .LVU41
+ 204 001c 08BD     		pop	{r3, pc}
+ 205              		.cfi_endproc
+ 206              	.LFE140:
+ 207              		.fnend
+ 209              		.section	.text._ZN14TMC2208Stepper14en_spreadCycleEb,"ax",%progbits
+ 210              		.align	1
+ 211              		.global	_ZN14TMC2208Stepper14en_spreadCycleEb
+ 212              		.syntax unified
+ 213              		.thumb
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 5
+
+
+ 214              		.thumb_func
+ 216              	_ZN14TMC2208Stepper14en_spreadCycleEb:
+ 217              		.fnstart
+ 218              	.LVL14:
+ 219              	.LFB141:
+  20:Core/Src/TMC2208Stepper_GCONF.cpp **** void TMC2208Stepper::en_spreadCycle(bool B)		{ MOD_REG(GCONF, EN_SPREADCYCLE);	}
+ 220              		.loc 1 20 46 is_stmt 1 view -0
+ 221              		.cfi_startproc
+ 222              		@ args = 0, pretend = 0, frame = 0
+ 223              		@ frame_needed = 0, uses_anonymous_args = 0
+ 224              		.loc 1 20 46 is_stmt 0 view .LVU43
+ 225 0000 08B5     		push	{r3, lr}
+ 226              		.save {r3, lr}
+ 227              		.cfi_def_cfa_offset 8
+ 228              		.cfi_offset 3, -8
+ 229              		.cfi_offset 14, -4
+ 230              		.loc 1 20 48 is_stmt 1 view .LVU44
+ 231 0002 8269     		ldr	r2, [r0, #24]
+ 232 0004 22F00402 		bic	r2, r2, #4
+ 233 0008 8261     		str	r2, [r0, #24]
+ 234              		.loc 1 20 48 view .LVU45
+ 235 000a 8900     		lsls	r1, r1, #2
+ 236              	.LVL15:
+ 237              		.loc 1 20 48 is_stmt 0 view .LVU46
+ 238 000c 01F00401 		and	r1, r1, #4
+ 239 0010 0A43     		orrs	r2, r2, r1
+ 240 0012 8261     		str	r2, [r0, #24]
+ 241              		.loc 1 20 48 is_stmt 1 view .LVU47
+ 242 0014 0723     		movs	r3, #7
+ 243 0016 8021     		movs	r1, #128
+ 244 0018 FFF7FEFF 		bl	_ZN14TMC2208Stepper12sendDatagramEhmh
+ 245              	.LVL16:
+ 246              		.loc 1 20 48 view .LVU48
+ 247              		.loc 1 20 78 view .LVU49
+ 248              		.loc 1 20 80 is_stmt 0 view .LVU50
+ 249 001c 08BD     		pop	{r3, pc}
+ 250              		.cfi_endproc
+ 251              	.LFE141:
+ 252              		.fnend
+ 254              		.section	.text._ZN14TMC2208Stepper5shaftEb,"ax",%progbits
+ 255              		.align	1
+ 256              		.global	_ZN14TMC2208Stepper5shaftEb
+ 257              		.syntax unified
+ 258              		.thumb
+ 259              		.thumb_func
+ 261              	_ZN14TMC2208Stepper5shaftEb:
+ 262              		.fnstart
+ 263              	.LVL17:
+ 264              	.LFB142:
+  21:Core/Src/TMC2208Stepper_GCONF.cpp **** void TMC2208Stepper::shaft(bool B) 				{ MOD_REG(GCONF, SHAFT);			}
+ 265              		.loc 1 21 40 is_stmt 1 view -0
+ 266              		.cfi_startproc
+ 267              		@ args = 0, pretend = 0, frame = 0
+ 268              		@ frame_needed = 0, uses_anonymous_args = 0
+ 269              		.loc 1 21 40 is_stmt 0 view .LVU52
+ 270 0000 08B5     		push	{r3, lr}
+ 271              		.save {r3, lr}
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 6
+
+
+ 272              		.cfi_def_cfa_offset 8
+ 273              		.cfi_offset 3, -8
+ 274              		.cfi_offset 14, -4
+ 275              		.loc 1 21 42 is_stmt 1 view .LVU53
+ 276 0002 8269     		ldr	r2, [r0, #24]
+ 277 0004 22F00802 		bic	r2, r2, #8
+ 278 0008 8261     		str	r2, [r0, #24]
+ 279              		.loc 1 21 42 view .LVU54
+ 280 000a C900     		lsls	r1, r1, #3
+ 281              	.LVL18:
+ 282              		.loc 1 21 42 is_stmt 0 view .LVU55
+ 283 000c 01F00801 		and	r1, r1, #8
+ 284 0010 0A43     		orrs	r2, r2, r1
+ 285 0012 8261     		str	r2, [r0, #24]
+ 286              		.loc 1 21 42 is_stmt 1 view .LVU56
+ 287 0014 0723     		movs	r3, #7
+ 288 0016 8021     		movs	r1, #128
+ 289 0018 FFF7FEFF 		bl	_ZN14TMC2208Stepper12sendDatagramEhmh
+ 290              	.LVL19:
+ 291              		.loc 1 21 42 view .LVU57
+ 292              		.loc 1 21 63 view .LVU58
+ 293              		.loc 1 21 67 is_stmt 0 view .LVU59
+ 294 001c 08BD     		pop	{r3, pc}
+ 295              		.cfi_endproc
+ 296              	.LFE142:
+ 297              		.fnend
+ 299              		.section	.text._ZN14TMC2208Stepper10index_otpwEb,"ax",%progbits
+ 300              		.align	1
+ 301              		.global	_ZN14TMC2208Stepper10index_otpwEb
+ 302              		.syntax unified
+ 303              		.thumb
+ 304              		.thumb_func
+ 306              	_ZN14TMC2208Stepper10index_otpwEb:
+ 307              		.fnstart
+ 308              	.LVL20:
+ 309              	.LFB143:
+  22:Core/Src/TMC2208Stepper_GCONF.cpp **** void TMC2208Stepper::index_otpw(bool B)			{ MOD_REG(GCONF, INDEX_OTPW);		}
+ 310              		.loc 1 22 43 is_stmt 1 view -0
+ 311              		.cfi_startproc
+ 312              		@ args = 0, pretend = 0, frame = 0
+ 313              		@ frame_needed = 0, uses_anonymous_args = 0
+ 314              		.loc 1 22 43 is_stmt 0 view .LVU61
+ 315 0000 08B5     		push	{r3, lr}
+ 316              		.save {r3, lr}
+ 317              		.cfi_def_cfa_offset 8
+ 318              		.cfi_offset 3, -8
+ 319              		.cfi_offset 14, -4
+ 320              		.loc 1 22 45 is_stmt 1 view .LVU62
+ 321 0002 8269     		ldr	r2, [r0, #24]
+ 322 0004 22F01002 		bic	r2, r2, #16
+ 323 0008 8261     		str	r2, [r0, #24]
+ 324              		.loc 1 22 45 view .LVU63
+ 325 000a 0901     		lsls	r1, r1, #4
+ 326              	.LVL21:
+ 327              		.loc 1 22 45 is_stmt 0 view .LVU64
+ 328 000c 01F01001 		and	r1, r1, #16
+ 329 0010 0A43     		orrs	r2, r2, r1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 7
+
+
+ 330 0012 8261     		str	r2, [r0, #24]
+ 331              		.loc 1 22 45 is_stmt 1 view .LVU65
+ 332 0014 0723     		movs	r3, #7
+ 333 0016 8021     		movs	r1, #128
+ 334 0018 FFF7FEFF 		bl	_ZN14TMC2208Stepper12sendDatagramEhmh
+ 335              	.LVL22:
+ 336              		.loc 1 22 45 view .LVU66
+ 337              		.loc 1 22 71 view .LVU67
+ 338              		.loc 1 22 74 is_stmt 0 view .LVU68
+ 339 001c 08BD     		pop	{r3, pc}
+ 340              		.cfi_endproc
+ 341              	.LFE143:
+ 342              		.fnend
+ 344              		.section	.text._ZN14TMC2208Stepper10index_stepEb,"ax",%progbits
+ 345              		.align	1
+ 346              		.global	_ZN14TMC2208Stepper10index_stepEb
+ 347              		.syntax unified
+ 348              		.thumb
+ 349              		.thumb_func
+ 351              	_ZN14TMC2208Stepper10index_stepEb:
+ 352              		.fnstart
+ 353              	.LVL23:
+ 354              	.LFB144:
+  23:Core/Src/TMC2208Stepper_GCONF.cpp **** void TMC2208Stepper::index_step(bool B)			{ MOD_REG(GCONF, INDEX_STEP);		}
+ 355              		.loc 1 23 43 is_stmt 1 view -0
+ 356              		.cfi_startproc
+ 357              		@ args = 0, pretend = 0, frame = 0
+ 358              		@ frame_needed = 0, uses_anonymous_args = 0
+ 359              		.loc 1 23 43 is_stmt 0 view .LVU70
+ 360 0000 08B5     		push	{r3, lr}
+ 361              		.save {r3, lr}
+ 362              		.cfi_def_cfa_offset 8
+ 363              		.cfi_offset 3, -8
+ 364              		.cfi_offset 14, -4
+ 365              		.loc 1 23 45 is_stmt 1 view .LVU71
+ 366 0002 8269     		ldr	r2, [r0, #24]
+ 367 0004 22F02002 		bic	r2, r2, #32
+ 368 0008 8261     		str	r2, [r0, #24]
+ 369              		.loc 1 23 45 view .LVU72
+ 370 000a 4901     		lsls	r1, r1, #5
+ 371              	.LVL24:
+ 372              		.loc 1 23 45 is_stmt 0 view .LVU73
+ 373 000c 01F02001 		and	r1, r1, #32
+ 374 0010 0A43     		orrs	r2, r2, r1
+ 375 0012 8261     		str	r2, [r0, #24]
+ 376              		.loc 1 23 45 is_stmt 1 view .LVU74
+ 377 0014 0723     		movs	r3, #7
+ 378 0016 8021     		movs	r1, #128
+ 379 0018 FFF7FEFF 		bl	_ZN14TMC2208Stepper12sendDatagramEhmh
+ 380              	.LVL25:
+ 381              		.loc 1 23 45 view .LVU75
+ 382              		.loc 1 23 71 view .LVU76
+ 383              		.loc 1 23 74 is_stmt 0 view .LVU77
+ 384 001c 08BD     		pop	{r3, pc}
+ 385              		.cfi_endproc
+ 386              	.LFE144:
+ 387              		.fnend
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 8
+
+
+ 389              		.section	.text._ZN14TMC2208Stepper11pdn_disableEb,"ax",%progbits
+ 390              		.align	1
+ 391              		.global	_ZN14TMC2208Stepper11pdn_disableEb
+ 392              		.syntax unified
+ 393              		.thumb
+ 394              		.thumb_func
+ 396              	_ZN14TMC2208Stepper11pdn_disableEb:
+ 397              		.fnstart
+ 398              	.LVL26:
+ 399              	.LFB145:
+  24:Core/Src/TMC2208Stepper_GCONF.cpp **** void TMC2208Stepper::pdn_disable(bool B)		{ MOD_REG(GCONF, PDN_DISABLE);		}
+ 400              		.loc 1 24 43 is_stmt 1 view -0
+ 401              		.cfi_startproc
+ 402              		@ args = 0, pretend = 0, frame = 0
+ 403              		@ frame_needed = 0, uses_anonymous_args = 0
+ 404              		.loc 1 24 43 is_stmt 0 view .LVU79
+ 405 0000 08B5     		push	{r3, lr}
+ 406              		.save {r3, lr}
+ 407              		.cfi_def_cfa_offset 8
+ 408              		.cfi_offset 3, -8
+ 409              		.cfi_offset 14, -4
+ 410              		.loc 1 24 45 is_stmt 1 view .LVU80
+ 411 0002 8269     		ldr	r2, [r0, #24]
+ 412 0004 22F04002 		bic	r2, r2, #64
+ 413 0008 8261     		str	r2, [r0, #24]
+ 414              		.loc 1 24 45 view .LVU81
+ 415 000a 8901     		lsls	r1, r1, #6
+ 416              	.LVL27:
+ 417              		.loc 1 24 45 is_stmt 0 view .LVU82
+ 418 000c 01F04001 		and	r1, r1, #64
+ 419 0010 0A43     		orrs	r2, r2, r1
+ 420 0012 8261     		str	r2, [r0, #24]
+ 421              		.loc 1 24 45 is_stmt 1 view .LVU83
+ 422 0014 0723     		movs	r3, #7
+ 423 0016 8021     		movs	r1, #128
+ 424 0018 FFF7FEFF 		bl	_ZN14TMC2208Stepper12sendDatagramEhmh
+ 425              	.LVL28:
+ 426              		.loc 1 24 45 view .LVU84
+ 427              		.loc 1 24 72 view .LVU85
+ 428              		.loc 1 24 75 is_stmt 0 view .LVU86
+ 429 001c 08BD     		pop	{r3, pc}
+ 430              		.cfi_endproc
+ 431              	.LFE145:
+ 432              		.fnend
+ 434              		.section	.text._ZN14TMC2208Stepper16mstep_reg_selectEb,"ax",%progbits
+ 435              		.align	1
+ 436              		.global	_ZN14TMC2208Stepper16mstep_reg_selectEb
+ 437              		.syntax unified
+ 438              		.thumb
+ 439              		.thumb_func
+ 441              	_ZN14TMC2208Stepper16mstep_reg_selectEb:
+ 442              		.fnstart
+ 443              	.LVL29:
+ 444              	.LFB146:
+  25:Core/Src/TMC2208Stepper_GCONF.cpp **** void TMC2208Stepper::mstep_reg_select(bool B)	{ MOD_REG(GCONF, MSTEP_REG_SELECT);	}
+ 445              		.loc 1 25 47 is_stmt 1 view -0
+ 446              		.cfi_startproc
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 9
+
+
+ 447              		@ args = 0, pretend = 0, frame = 0
+ 448              		@ frame_needed = 0, uses_anonymous_args = 0
+ 449              		.loc 1 25 47 is_stmt 0 view .LVU88
+ 450 0000 08B5     		push	{r3, lr}
+ 451              		.save {r3, lr}
+ 452              		.cfi_def_cfa_offset 8
+ 453              		.cfi_offset 3, -8
+ 454              		.cfi_offset 14, -4
+ 455              		.loc 1 25 49 is_stmt 1 view .LVU89
+ 456 0002 8269     		ldr	r2, [r0, #24]
+ 457 0004 22F08002 		bic	r2, r2, #128
+ 458 0008 8261     		str	r2, [r0, #24]
+ 459              		.loc 1 25 49 view .LVU90
+ 460 000a C901     		lsls	r1, r1, #7
+ 461              	.LVL30:
+ 462              		.loc 1 25 49 is_stmt 0 view .LVU91
+ 463 000c C9B2     		uxtb	r1, r1
+ 464 000e 0A43     		orrs	r2, r2, r1
+ 465 0010 8261     		str	r2, [r0, #24]
+ 466              		.loc 1 25 49 is_stmt 1 view .LVU92
+ 467 0012 0723     		movs	r3, #7
+ 468 0014 8021     		movs	r1, #128
+ 469 0016 FFF7FEFF 		bl	_ZN14TMC2208Stepper12sendDatagramEhmh
+ 470              	.LVL31:
+ 471              		.loc 1 25 49 view .LVU93
+ 472              		.loc 1 25 81 view .LVU94
+ 473              		.loc 1 25 83 is_stmt 0 view .LVU95
+ 474 001a 08BD     		pop	{r3, pc}
+ 475              		.cfi_endproc
+ 476              	.LFE146:
+ 477              		.fnend
+ 479              		.section	.text._ZN14TMC2208Stepper14multistep_filtEb,"ax",%progbits
+ 480              		.align	1
+ 481              		.global	_ZN14TMC2208Stepper14multistep_filtEb
+ 482              		.syntax unified
+ 483              		.thumb
+ 484              		.thumb_func
+ 486              	_ZN14TMC2208Stepper14multistep_filtEb:
+ 487              		.fnstart
+ 488              	.LVL32:
+ 489              	.LFB147:
+  26:Core/Src/TMC2208Stepper_GCONF.cpp **** void TMC2208Stepper::multistep_filt(bool B)		{ MOD_REG(GCONF, MULTISTEP_FILT);	}
+ 490              		.loc 1 26 46 is_stmt 1 view -0
+ 491              		.cfi_startproc
+ 492              		@ args = 0, pretend = 0, frame = 0
+ 493              		@ frame_needed = 0, uses_anonymous_args = 0
+ 494              		.loc 1 26 46 is_stmt 0 view .LVU97
+ 495 0000 08B5     		push	{r3, lr}
+ 496              		.save {r3, lr}
+ 497              		.cfi_def_cfa_offset 8
+ 498              		.cfi_offset 3, -8
+ 499              		.cfi_offset 14, -4
+ 500              		.loc 1 26 48 is_stmt 1 view .LVU98
+ 501 0002 8269     		ldr	r2, [r0, #24]
+ 502 0004 22F48072 		bic	r2, r2, #256
+ 503 0008 8261     		str	r2, [r0, #24]
+ 504              		.loc 1 26 48 view .LVU99
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 10
+
+
+ 505 000a 0902     		lsls	r1, r1, #8
+ 506              	.LVL33:
+ 507              		.loc 1 26 48 is_stmt 0 view .LVU100
+ 508 000c 01F48071 		and	r1, r1, #256
+ 509 0010 0A43     		orrs	r2, r2, r1
+ 510 0012 8261     		str	r2, [r0, #24]
+ 511              		.loc 1 26 48 is_stmt 1 view .LVU101
+ 512 0014 0723     		movs	r3, #7
+ 513 0016 8021     		movs	r1, #128
+ 514 0018 FFF7FEFF 		bl	_ZN14TMC2208Stepper12sendDatagramEhmh
+ 515              	.LVL34:
+ 516              		.loc 1 26 48 view .LVU102
+ 517              		.loc 1 26 78 view .LVU103
+ 518              		.loc 1 26 80 is_stmt 0 view .LVU104
+ 519 001c 08BD     		pop	{r3, pc}
+ 520              		.cfi_endproc
+ 521              	.LFE147:
+ 522              		.fnend
+ 524              		.section	.text._ZN14TMC2208Stepper14I_scale_analogEv,"ax",%progbits
+ 525              		.align	1
+ 526              		.global	_ZN14TMC2208Stepper14I_scale_analogEv
+ 527              		.syntax unified
+ 528              		.thumb
+ 529              		.thumb_func
+ 531              	_ZN14TMC2208Stepper14I_scale_analogEv:
+ 532              		.fnstart
+ 533              	.LVL35:
+ 534              	.LFB148:
+  27:Core/Src/TMC2208Stepper_GCONF.cpp **** 
+  28:Core/Src/TMC2208Stepper_GCONF.cpp **** bool TMC2208Stepper::I_scale_analog()	{ GET_BYTE(GCONF, I_SCALE_ANALOG);	}
+ 535              		.loc 1 28 39 is_stmt 1 view -0
+ 536              		.cfi_startproc
+ 537              		@ args = 0, pretend = 0, frame = 0
+ 538              		@ frame_needed = 0, uses_anonymous_args = 0
+ 539              		.loc 1 28 39 is_stmt 0 view .LVU106
+ 540 0000 10B5     		push	{r4, lr}
+ 541              		.save {r4, lr}
+ 542              		.cfi_def_cfa_offset 8
+ 543              		.cfi_offset 4, -8
+ 544              		.cfi_offset 14, -4
+ 545 0002 0446     		mov	r4, r0
+ 546              		.loc 1 28 41 is_stmt 1 view .LVU107
+ 547 0004 00F11801 		add	r1, r0, #24
+ 548 0008 FFF7FEFF 		bl	_ZN14TMC2208Stepper5GCONFEPm
+ 549              	.LVL36:
+ 550              		.loc 1 28 41 view .LVU108
+ 551 000c A069     		ldr	r0, [r4, #24]
+ 552              		.loc 1 28 72 view .LVU109
+ 553              		.loc 1 28 74 is_stmt 0 view .LVU110
+ 554 000e 00F00100 		and	r0, r0, #1
+ 555 0012 10BD     		pop	{r4, pc}
+ 556              		.loc 1 28 74 view .LVU111
+ 557              		.cfi_endproc
+ 558              	.LFE148:
+ 559              		.fnend
+ 561              		.section	.text._ZN14TMC2208Stepper15internal_RsenseEv,"ax",%progbits
+ 562              		.align	1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 11
+
+
+ 563              		.global	_ZN14TMC2208Stepper15internal_RsenseEv
+ 564              		.syntax unified
+ 565              		.thumb
+ 566              		.thumb_func
+ 568              	_ZN14TMC2208Stepper15internal_RsenseEv:
+ 569              		.fnstart
+ 570              	.LVL37:
+ 571              	.LFB149:
+  29:Core/Src/TMC2208Stepper_GCONF.cpp **** bool TMC2208Stepper::internal_Rsense()	{ GET_BYTE(GCONF, INTERNAL_RSENSE);	}
+ 572              		.loc 1 29 40 is_stmt 1 view -0
+ 573              		.cfi_startproc
+ 574              		@ args = 0, pretend = 0, frame = 0
+ 575              		@ frame_needed = 0, uses_anonymous_args = 0
+ 576              		.loc 1 29 40 is_stmt 0 view .LVU113
+ 577 0000 10B5     		push	{r4, lr}
+ 578              		.save {r4, lr}
+ 579              		.cfi_def_cfa_offset 8
+ 580              		.cfi_offset 4, -8
+ 581              		.cfi_offset 14, -4
+ 582 0002 0446     		mov	r4, r0
+ 583              		.loc 1 29 42 is_stmt 1 view .LVU114
+ 584 0004 00F11801 		add	r1, r0, #24
+ 585 0008 FFF7FEFF 		bl	_ZN14TMC2208Stepper5GCONFEPm
+ 586              	.LVL38:
+ 587              		.loc 1 29 42 view .LVU115
+ 588 000c A069     		ldr	r0, [r4, #24]
+ 589              		.loc 1 29 74 view .LVU116
+ 590              		.loc 1 29 76 is_stmt 0 view .LVU117
+ 591 000e C0F34000 		ubfx	r0, r0, #1, #1
+ 592 0012 10BD     		pop	{r4, pc}
+ 593              		.loc 1 29 76 view .LVU118
+ 594              		.cfi_endproc
+ 595              	.LFE149:
+ 596              		.fnend
+ 598              		.section	.text._ZN14TMC2208Stepper14en_spreadCycleEv,"ax",%progbits
+ 599              		.align	1
+ 600              		.global	_ZN14TMC2208Stepper14en_spreadCycleEv
+ 601              		.syntax unified
+ 602              		.thumb
+ 603              		.thumb_func
+ 605              	_ZN14TMC2208Stepper14en_spreadCycleEv:
+ 606              		.fnstart
+ 607              	.LVL39:
+ 608              	.LFB150:
+  30:Core/Src/TMC2208Stepper_GCONF.cpp **** bool TMC2208Stepper::en_spreadCycle()	{ GET_BYTE(GCONF, EN_SPREADCYCLE);	}
+ 609              		.loc 1 30 39 is_stmt 1 view -0
+ 610              		.cfi_startproc
+ 611              		@ args = 0, pretend = 0, frame = 0
+ 612              		@ frame_needed = 0, uses_anonymous_args = 0
+ 613              		.loc 1 30 39 is_stmt 0 view .LVU120
+ 614 0000 10B5     		push	{r4, lr}
+ 615              		.save {r4, lr}
+ 616              		.cfi_def_cfa_offset 8
+ 617              		.cfi_offset 4, -8
+ 618              		.cfi_offset 14, -4
+ 619 0002 0446     		mov	r4, r0
+ 620              		.loc 1 30 41 is_stmt 1 view .LVU121
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 12
+
+
+ 621 0004 00F11801 		add	r1, r0, #24
+ 622 0008 FFF7FEFF 		bl	_ZN14TMC2208Stepper5GCONFEPm
+ 623              	.LVL40:
+ 624              		.loc 1 30 41 view .LVU122
+ 625 000c A069     		ldr	r0, [r4, #24]
+ 626              		.loc 1 30 72 view .LVU123
+ 627              		.loc 1 30 74 is_stmt 0 view .LVU124
+ 628 000e C0F38000 		ubfx	r0, r0, #2, #1
+ 629 0012 10BD     		pop	{r4, pc}
+ 630              		.loc 1 30 74 view .LVU125
+ 631              		.cfi_endproc
+ 632              	.LFE150:
+ 633              		.fnend
+ 635              		.section	.text._ZN14TMC2208Stepper5shaftEv,"ax",%progbits
+ 636              		.align	1
+ 637              		.global	_ZN14TMC2208Stepper5shaftEv
+ 638              		.syntax unified
+ 639              		.thumb
+ 640              		.thumb_func
+ 642              	_ZN14TMC2208Stepper5shaftEv:
+ 643              		.fnstart
+ 644              	.LVL41:
+ 645              	.LFB151:
+  31:Core/Src/TMC2208Stepper_GCONF.cpp **** bool TMC2208Stepper::shaft()			{ GET_BYTE(GCONF, SHAFT);			}
+ 646              		.loc 1 31 32 is_stmt 1 view -0
+ 647              		.cfi_startproc
+ 648              		@ args = 0, pretend = 0, frame = 0
+ 649              		@ frame_needed = 0, uses_anonymous_args = 0
+ 650              		.loc 1 31 32 is_stmt 0 view .LVU127
+ 651 0000 10B5     		push	{r4, lr}
+ 652              		.save {r4, lr}
+ 653              		.cfi_def_cfa_offset 8
+ 654              		.cfi_offset 4, -8
+ 655              		.cfi_offset 14, -4
+ 656 0002 0446     		mov	r4, r0
+ 657              		.loc 1 31 34 is_stmt 1 view .LVU128
+ 658 0004 00F11801 		add	r1, r0, #24
+ 659 0008 FFF7FEFF 		bl	_ZN14TMC2208Stepper5GCONFEPm
+ 660              	.LVL42:
+ 661              		.loc 1 31 34 view .LVU129
+ 662 000c A069     		ldr	r0, [r4, #24]
+ 663              		.loc 1 31 56 view .LVU130
+ 664              		.loc 1 31 60 is_stmt 0 view .LVU131
+ 665 000e C0F3C000 		ubfx	r0, r0, #3, #1
+ 666 0012 10BD     		pop	{r4, pc}
+ 667              		.loc 1 31 60 view .LVU132
+ 668              		.cfi_endproc
+ 669              	.LFE151:
+ 670              		.fnend
+ 672              		.section	.text._ZN14TMC2208Stepper10index_otpwEv,"ax",%progbits
+ 673              		.align	1
+ 674              		.global	_ZN14TMC2208Stepper10index_otpwEv
+ 675              		.syntax unified
+ 676              		.thumb
+ 677              		.thumb_func
+ 679              	_ZN14TMC2208Stepper10index_otpwEv:
+ 680              		.fnstart
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 13
+
+
+ 681              	.LVL43:
+ 682              	.LFB152:
+  32:Core/Src/TMC2208Stepper_GCONF.cpp **** bool TMC2208Stepper::index_otpw()		{ GET_BYTE(GCONF, INDEX_OTPW);		}
+ 683              		.loc 1 32 36 is_stmt 1 view -0
+ 684              		.cfi_startproc
+ 685              		@ args = 0, pretend = 0, frame = 0
+ 686              		@ frame_needed = 0, uses_anonymous_args = 0
+ 687              		.loc 1 32 36 is_stmt 0 view .LVU134
+ 688 0000 10B5     		push	{r4, lr}
+ 689              		.save {r4, lr}
+ 690              		.cfi_def_cfa_offset 8
+ 691              		.cfi_offset 4, -8
+ 692              		.cfi_offset 14, -4
+ 693 0002 0446     		mov	r4, r0
+ 694              		.loc 1 32 38 is_stmt 1 view .LVU135
+ 695 0004 00F11801 		add	r1, r0, #24
+ 696 0008 FFF7FEFF 		bl	_ZN14TMC2208Stepper5GCONFEPm
+ 697              	.LVL44:
+ 698              		.loc 1 32 38 view .LVU136
+ 699 000c A069     		ldr	r0, [r4, #24]
+ 700              		.loc 1 32 65 view .LVU137
+ 701              		.loc 1 32 68 is_stmt 0 view .LVU138
+ 702 000e C0F30010 		ubfx	r0, r0, #4, #1
+ 703 0012 10BD     		pop	{r4, pc}
+ 704              		.loc 1 32 68 view .LVU139
+ 705              		.cfi_endproc
+ 706              	.LFE152:
+ 707              		.fnend
+ 709              		.section	.text._ZN14TMC2208Stepper10index_stepEv,"ax",%progbits
+ 710              		.align	1
+ 711              		.global	_ZN14TMC2208Stepper10index_stepEv
+ 712              		.syntax unified
+ 713              		.thumb
+ 714              		.thumb_func
+ 716              	_ZN14TMC2208Stepper10index_stepEv:
+ 717              		.fnstart
+ 718              	.LVL45:
+ 719              	.LFB153:
+  33:Core/Src/TMC2208Stepper_GCONF.cpp **** bool TMC2208Stepper::index_step()		{ GET_BYTE(GCONF, INDEX_STEP);		}
+ 720              		.loc 1 33 36 is_stmt 1 view -0
+ 721              		.cfi_startproc
+ 722              		@ args = 0, pretend = 0, frame = 0
+ 723              		@ frame_needed = 0, uses_anonymous_args = 0
+ 724              		.loc 1 33 36 is_stmt 0 view .LVU141
+ 725 0000 10B5     		push	{r4, lr}
+ 726              		.save {r4, lr}
+ 727              		.cfi_def_cfa_offset 8
+ 728              		.cfi_offset 4, -8
+ 729              		.cfi_offset 14, -4
+ 730 0002 0446     		mov	r4, r0
+ 731              		.loc 1 33 38 is_stmt 1 view .LVU142
+ 732 0004 00F11801 		add	r1, r0, #24
+ 733 0008 FFF7FEFF 		bl	_ZN14TMC2208Stepper5GCONFEPm
+ 734              	.LVL46:
+ 735              		.loc 1 33 38 view .LVU143
+ 736 000c A069     		ldr	r0, [r4, #24]
+ 737              		.loc 1 33 65 view .LVU144
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 14
+
+
+ 738              		.loc 1 33 68 is_stmt 0 view .LVU145
+ 739 000e C0F34010 		ubfx	r0, r0, #5, #1
+ 740 0012 10BD     		pop	{r4, pc}
+ 741              		.loc 1 33 68 view .LVU146
+ 742              		.cfi_endproc
+ 743              	.LFE153:
+ 744              		.fnend
+ 746              		.section	.text._ZN14TMC2208Stepper11pdn_disableEv,"ax",%progbits
+ 747              		.align	1
+ 748              		.global	_ZN14TMC2208Stepper11pdn_disableEv
+ 749              		.syntax unified
+ 750              		.thumb
+ 751              		.thumb_func
+ 753              	_ZN14TMC2208Stepper11pdn_disableEv:
+ 754              		.fnstart
+ 755              	.LVL47:
+ 756              	.LFB154:
+  34:Core/Src/TMC2208Stepper_GCONF.cpp **** bool TMC2208Stepper::pdn_disable()		{ GET_BYTE(GCONF, PDN_DISABLE);		}
+ 757              		.loc 1 34 37 is_stmt 1 view -0
+ 758              		.cfi_startproc
+ 759              		@ args = 0, pretend = 0, frame = 0
+ 760              		@ frame_needed = 0, uses_anonymous_args = 0
+ 761              		.loc 1 34 37 is_stmt 0 view .LVU148
+ 762 0000 10B5     		push	{r4, lr}
+ 763              		.save {r4, lr}
+ 764              		.cfi_def_cfa_offset 8
+ 765              		.cfi_offset 4, -8
+ 766              		.cfi_offset 14, -4
+ 767 0002 0446     		mov	r4, r0
+ 768              		.loc 1 34 39 is_stmt 1 view .LVU149
+ 769 0004 00F11801 		add	r1, r0, #24
+ 770 0008 FFF7FEFF 		bl	_ZN14TMC2208Stepper5GCONFEPm
+ 771              	.LVL48:
+ 772              		.loc 1 34 39 view .LVU150
+ 773 000c A069     		ldr	r0, [r4, #24]
+ 774              		.loc 1 34 67 view .LVU151
+ 775              		.loc 1 34 70 is_stmt 0 view .LVU152
+ 776 000e C0F38010 		ubfx	r0, r0, #6, #1
+ 777 0012 10BD     		pop	{r4, pc}
+ 778              		.loc 1 34 70 view .LVU153
+ 779              		.cfi_endproc
+ 780              	.LFE154:
+ 781              		.fnend
+ 783              		.section	.text._ZN14TMC2208Stepper16mstep_reg_selectEv,"ax",%progbits
+ 784              		.align	1
+ 785              		.global	_ZN14TMC2208Stepper16mstep_reg_selectEv
+ 786              		.syntax unified
+ 787              		.thumb
+ 788              		.thumb_func
+ 790              	_ZN14TMC2208Stepper16mstep_reg_selectEv:
+ 791              		.fnstart
+ 792              	.LVL49:
+ 793              	.LFB155:
+  35:Core/Src/TMC2208Stepper_GCONF.cpp **** bool TMC2208Stepper::mstep_reg_select()	{ GET_BYTE(GCONF, MSTEP_REG_SELECT);}
+ 794              		.loc 1 35 41 is_stmt 1 view -0
+ 795              		.cfi_startproc
+ 796              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 15
+
+
+ 797              		@ frame_needed = 0, uses_anonymous_args = 0
+ 798              		.loc 1 35 41 is_stmt 0 view .LVU155
+ 799 0000 10B5     		push	{r4, lr}
+ 800              		.save {r4, lr}
+ 801              		.cfi_def_cfa_offset 8
+ 802              		.cfi_offset 4, -8
+ 803              		.cfi_offset 14, -4
+ 804 0002 0446     		mov	r4, r0
+ 805              		.loc 1 35 43 is_stmt 1 view .LVU156
+ 806 0004 00F11801 		add	r1, r0, #24
+ 807 0008 FFF7FEFF 		bl	_ZN14TMC2208Stepper5GCONFEPm
+ 808              	.LVL50:
+ 809              		.loc 1 35 43 view .LVU157
+ 810 000c A069     		ldr	r0, [r4, #24]
+ 811              		.loc 1 35 76 view .LVU158
+ 812              		.loc 1 35 77 is_stmt 0 view .LVU159
+ 813 000e C0F3C010 		ubfx	r0, r0, #7, #1
+ 814 0012 10BD     		pop	{r4, pc}
+ 815              		.loc 1 35 77 view .LVU160
+ 816              		.cfi_endproc
+ 817              	.LFE155:
+ 818              		.fnend
+ 820              		.section	.text._ZN14TMC2208Stepper14multistep_filtEv,"ax",%progbits
+ 821              		.align	1
+ 822              		.global	_ZN14TMC2208Stepper14multistep_filtEv
+ 823              		.syntax unified
+ 824              		.thumb
+ 825              		.thumb_func
+ 827              	_ZN14TMC2208Stepper14multistep_filtEv:
+ 828              		.fnstart
+ 829              	.LVL51:
+ 830              	.LFB156:
+  36:Core/Src/TMC2208Stepper_GCONF.cpp **** bool TMC2208Stepper::multistep_filt()	{ GET_BYTE(GCONF, MULTISTEP_FILT);	}
+ 831              		.loc 1 36 39 is_stmt 1 view -0
+ 832              		.cfi_startproc
+ 833              		@ args = 0, pretend = 0, frame = 0
+ 834              		@ frame_needed = 0, uses_anonymous_args = 0
+ 835              		.loc 1 36 39 is_stmt 0 view .LVU162
+ 836 0000 10B5     		push	{r4, lr}
+ 837              		.save {r4, lr}
+ 838              		.cfi_def_cfa_offset 8
+ 839              		.cfi_offset 4, -8
+ 840              		.cfi_offset 14, -4
+ 841 0002 0446     		mov	r4, r0
+ 842              		.loc 1 36 41 is_stmt 1 view .LVU163
+ 843 0004 00F11801 		add	r1, r0, #24
+ 844 0008 FFF7FEFF 		bl	_ZN14TMC2208Stepper5GCONFEPm
+ 845              	.LVL52:
+ 846              		.loc 1 36 41 view .LVU164
+ 847 000c A069     		ldr	r0, [r4, #24]
+ 848              		.loc 1 36 72 view .LVU165
+ 849              		.loc 1 36 74 is_stmt 0 view .LVU166
+ 850 000e C0F30020 		ubfx	r0, r0, #8, #1
+ 851 0012 10BD     		pop	{r4, pc}
+ 852              		.loc 1 36 74 view .LVU167
+ 853              		.cfi_endproc
+ 854              	.LFE156:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 16
+
+
+ 855              		.fnend
+ 857              		.text
+ 858              	.Letext0:
+ 859              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 860              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 861              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+ 862              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 863              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 864              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
+ 865              		.file 8 "Core/Inc/TMC2208Stepper.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 17
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 TMC2208Stepper_GCONF.cpp
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:20     .text._ZN14TMC2208Stepper5GCONFEPm:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:26     .text._ZN14TMC2208Stepper5GCONFEPm:0000000000000000 _ZN14TMC2208Stepper5GCONFEPm
+.ARM.exidx.text._ZN14TMC2208Stepper5GCONFEPm:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:83     .text._ZN14TMC2208Stepper5GCONFEm:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:89     .text._ZN14TMC2208Stepper5GCONFEm:0000000000000000 _ZN14TMC2208Stepper5GCONFEm
+.ARM.extab.text._ZN14TMC2208Stepper5GCONFEm:0000000000000000 $d
+.ARM.exidx.text._ZN14TMC2208Stepper5GCONFEm:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:122    .text._ZN14TMC2208Stepper14I_scale_analogEb:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:128    .text._ZN14TMC2208Stepper14I_scale_analogEb:0000000000000000 _ZN14TMC2208Stepper14I_scale_analogEb
+.ARM.extab.text._ZN14TMC2208Stepper14I_scale_analogEb:0000000000000000 $d
+.ARM.exidx.text._ZN14TMC2208Stepper14I_scale_analogEb:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:165    .text._ZN14TMC2208Stepper15internal_RsenseEb:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:171    .text._ZN14TMC2208Stepper15internal_RsenseEb:0000000000000000 _ZN14TMC2208Stepper15internal_RsenseEb
+.ARM.extab.text._ZN14TMC2208Stepper15internal_RsenseEb:0000000000000000 $d
+.ARM.exidx.text._ZN14TMC2208Stepper15internal_RsenseEb:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:210    .text._ZN14TMC2208Stepper14en_spreadCycleEb:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:216    .text._ZN14TMC2208Stepper14en_spreadCycleEb:0000000000000000 _ZN14TMC2208Stepper14en_spreadCycleEb
+.ARM.extab.text._ZN14TMC2208Stepper14en_spreadCycleEb:0000000000000000 $d
+.ARM.exidx.text._ZN14TMC2208Stepper14en_spreadCycleEb:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:255    .text._ZN14TMC2208Stepper5shaftEb:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:261    .text._ZN14TMC2208Stepper5shaftEb:0000000000000000 _ZN14TMC2208Stepper5shaftEb
+.ARM.extab.text._ZN14TMC2208Stepper5shaftEb:0000000000000000 $d
+.ARM.exidx.text._ZN14TMC2208Stepper5shaftEb:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:300    .text._ZN14TMC2208Stepper10index_otpwEb:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:306    .text._ZN14TMC2208Stepper10index_otpwEb:0000000000000000 _ZN14TMC2208Stepper10index_otpwEb
+.ARM.extab.text._ZN14TMC2208Stepper10index_otpwEb:0000000000000000 $d
+.ARM.exidx.text._ZN14TMC2208Stepper10index_otpwEb:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:345    .text._ZN14TMC2208Stepper10index_stepEb:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:351    .text._ZN14TMC2208Stepper10index_stepEb:0000000000000000 _ZN14TMC2208Stepper10index_stepEb
+.ARM.extab.text._ZN14TMC2208Stepper10index_stepEb:0000000000000000 $d
+.ARM.exidx.text._ZN14TMC2208Stepper10index_stepEb:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:390    .text._ZN14TMC2208Stepper11pdn_disableEb:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:396    .text._ZN14TMC2208Stepper11pdn_disableEb:0000000000000000 _ZN14TMC2208Stepper11pdn_disableEb
+.ARM.extab.text._ZN14TMC2208Stepper11pdn_disableEb:0000000000000000 $d
+.ARM.exidx.text._ZN14TMC2208Stepper11pdn_disableEb:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:435    .text._ZN14TMC2208Stepper16mstep_reg_selectEb:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:441    .text._ZN14TMC2208Stepper16mstep_reg_selectEb:0000000000000000 _ZN14TMC2208Stepper16mstep_reg_selectEb
+.ARM.extab.text._ZN14TMC2208Stepper16mstep_reg_selectEb:0000000000000000 $d
+.ARM.exidx.text._ZN14TMC2208Stepper16mstep_reg_selectEb:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:480    .text._ZN14TMC2208Stepper14multistep_filtEb:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:486    .text._ZN14TMC2208Stepper14multistep_filtEb:0000000000000000 _ZN14TMC2208Stepper14multistep_filtEb
+.ARM.extab.text._ZN14TMC2208Stepper14multistep_filtEb:0000000000000000 $d
+.ARM.exidx.text._ZN14TMC2208Stepper14multistep_filtEb:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:525    .text._ZN14TMC2208Stepper14I_scale_analogEv:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:531    .text._ZN14TMC2208Stepper14I_scale_analogEv:0000000000000000 _ZN14TMC2208Stepper14I_scale_analogEv
+.ARM.exidx.text._ZN14TMC2208Stepper14I_scale_analogEv:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:562    .text._ZN14TMC2208Stepper15internal_RsenseEv:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:568    .text._ZN14TMC2208Stepper15internal_RsenseEv:0000000000000000 _ZN14TMC2208Stepper15internal_RsenseEv
+.ARM.exidx.text._ZN14TMC2208Stepper15internal_RsenseEv:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:599    .text._ZN14TMC2208Stepper14en_spreadCycleEv:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:605    .text._ZN14TMC2208Stepper14en_spreadCycleEv:0000000000000000 _ZN14TMC2208Stepper14en_spreadCycleEv
+.ARM.exidx.text._ZN14TMC2208Stepper14en_spreadCycleEv:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:636    .text._ZN14TMC2208Stepper5shaftEv:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:642    .text._ZN14TMC2208Stepper5shaftEv:0000000000000000 _ZN14TMC2208Stepper5shaftEv
+.ARM.exidx.text._ZN14TMC2208Stepper5shaftEv:0000000000000000 $d
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s 			page 18
+
+
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:673    .text._ZN14TMC2208Stepper10index_otpwEv:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:679    .text._ZN14TMC2208Stepper10index_otpwEv:0000000000000000 _ZN14TMC2208Stepper10index_otpwEv
+.ARM.exidx.text._ZN14TMC2208Stepper10index_otpwEv:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:710    .text._ZN14TMC2208Stepper10index_stepEv:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:716    .text._ZN14TMC2208Stepper10index_stepEv:0000000000000000 _ZN14TMC2208Stepper10index_stepEv
+.ARM.exidx.text._ZN14TMC2208Stepper10index_stepEv:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:747    .text._ZN14TMC2208Stepper11pdn_disableEv:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:753    .text._ZN14TMC2208Stepper11pdn_disableEv:0000000000000000 _ZN14TMC2208Stepper11pdn_disableEv
+.ARM.exidx.text._ZN14TMC2208Stepper11pdn_disableEv:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:784    .text._ZN14TMC2208Stepper16mstep_reg_selectEv:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:790    .text._ZN14TMC2208Stepper16mstep_reg_selectEv:0000000000000000 _ZN14TMC2208Stepper16mstep_reg_selectEv
+.ARM.exidx.text._ZN14TMC2208Stepper16mstep_reg_selectEv:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:821    .text._ZN14TMC2208Stepper14multistep_filtEv:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccOKAY7c.s:827    .text._ZN14TMC2208Stepper14multistep_filtEv:0000000000000000 _ZN14TMC2208Stepper14multistep_filtEv
+.ARM.exidx.text._ZN14TMC2208Stepper14multistep_filtEv:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+_ZN14TMC2208Stepper12sendDatagramEhPmh
+__aeabi_unwind_cpp_pr0
+_ZN14TMC2208Stepper12sendDatagramEhmh
+__aeabi_unwind_cpp_pr1
