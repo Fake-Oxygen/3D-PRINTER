@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -27,7 +27,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
   24              		.thumb_func
   26              	HAL_DMAEx_ConfigMuxSync:
   27              	.LVL0:
-  28              	.LFB132:
+  28              	.LFB321:
   29              		.file 1 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c"
    1:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** /**
    2:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
   27:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** 
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****    (+) Configure the DMA_MUX Synchronization Block using HAL_DMAEx_ConfigMuxSync function.
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****    (+) Configure the DMA_MUX Request Generator Block using HAL_DMAEx_ConfigMuxRequestGenerator func
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 2
 
 
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****        Functions HAL_DMAEx_EnableMuxRequestGenerator and HAL_DMAEx_DisableMuxRequestGenerator can t
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
   84:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****  ===============================================================================
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****     [..]  This section provides functions allowing to:
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 3
 
 
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****     (+) Configure the DMAMUX Synchronization Block using HAL_DMAEx_ConfigMuxSync function.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
   50 000a 90F82430 		ldrb	r3, [r0, #36]	@ zero_extendqisi2
   51 000e 012B     		cmp	r3, #1
   52 0010 1FD0     		beq	.L4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 4
 
 
  105:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****   /* Check the parameters */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  137:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****     return HAL_ERROR;
  138:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****   }
  139:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 5
 
 
   90              		.loc 1 139 1 discriminator 2 view .LVU22
@@ -265,7 +265,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  108              		.loc 1 139 1 view .LVU26
  109 0054 7047     		bx	lr
  110              		.cfi_endproc
- 111              	.LFE132:
+ 111              	.LFE321:
  113              		.section	.text.HAL_DMAEx_ConfigMuxRequestGenerator,"ax",%progbits
  114              		.align	1
  115              		.global	HAL_DMAEx_ConfigMuxRequestGenerator
@@ -274,7 +274,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  118              		.thumb_func
  120              	HAL_DMAEx_ConfigMuxRequestGenerator:
  121              	.LVL7:
- 122              	.LFB133:
+ 122              	.LFB322:
  140:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** 
  141:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** /**
  142:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****   * @brief  Configure the DMAMUX request generator block used by the given DMA channel (instance).
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  153:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****   assert_param(IS_DMA_ALL_INSTANCE(hdma->Instance));
  130              		.loc 1 153 3 is_stmt 1 view .LVU29
  154:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 6
 
 
  155:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****   assert_param(IS_DMAMUX_REQUEST_GEN_SIGNAL_ID(pRequestGeneratorConfig->SignalID));
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  167 0026 43EAC043 		orr	r3, r3, r0, lsl #19
  171:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****                                   pRequestGeneratorConfig->Polarity;
  168              		.loc 1 171 58 discriminator 2 view .LVU48
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 7
 
 
  169 002a 4968     		ldr	r1, [r1, #4]
@@ -406,7 +406,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  197 0040 0220     		movs	r0, #2
  198 0042 F8E7     		b	.L10
  199              		.cfi_endproc
- 200              	.LFE133:
+ 200              	.LFE322:
  202              		.section	.text.HAL_DMAEx_EnableMuxRequestGenerator,"ax",%progbits
  203              		.align	1
  204              		.global	HAL_DMAEx_EnableMuxRequestGenerator
@@ -415,10 +415,10 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  207              		.thumb_func
  209              	HAL_DMAEx_EnableMuxRequestGenerator:
  210              	.LVL11:
- 211              	.LFB134:
+ 211              	.LFB323:
  182:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** 
  183:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** /**
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 8
 
 
  184:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****   * @brief  Enable the DMAMUX request generator block used by the given DMA channel (instance).
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  242              	.LVL14:
  243              		.loc 1 207 11 view .LVU72
  244 0018 7047     		bx	lr
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 9
 
 
  245              	.LVL15:
@@ -491,7 +491,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  250              		.loc 1 209 1 view .LVU74
  251 001c 7047     		bx	lr
  252              		.cfi_endproc
- 253              	.LFE134:
+ 253              	.LFE323:
  255              		.section	.text.HAL_DMAEx_DisableMuxRequestGenerator,"ax",%progbits
  256              		.align	1
  257              		.global	HAL_DMAEx_DisableMuxRequestGenerator
@@ -500,7 +500,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  260              		.thumb_func
  262              	HAL_DMAEx_DisableMuxRequestGenerator:
  263              	.LVL17:
- 264              	.LFB135:
+ 264              	.LFB324:
  210:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** 
  211:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** /**
  212:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****   * @brief  Disable the DMAMUX request generator block used by the given DMA channel (instance).
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  229:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****     hdma->DMAmuxRequestGen->RGCR &= ~DMAMUX_RGxCR_GE;
  280              		.loc 1 229 5 is_stmt 1 view .LVU82
  281              		.loc 1 229 34 is_stmt 0 view .LVU83
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 10
 
 
  282 000a 1A68     		ldr	r2, [r3]
@@ -573,7 +573,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  303              		.loc 1 237 1 view .LVU90
  304 001c 7047     		bx	lr
  305              		.cfi_endproc
- 306              	.LFE135:
+ 306              	.LFE324:
  308              		.section	.text.HAL_DMAEx_MUX_IRQHandler,"ax",%progbits
  309              		.align	1
  310              		.global	HAL_DMAEx_MUX_IRQHandler
@@ -582,7 +582,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  313              		.thumb_func
  315              	HAL_DMAEx_MUX_IRQHandler:
  316              	.LVL23:
- 317              	.LFB136:
+ 317              	.LFB325:
  238:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** 
  239:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** /**
  240:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****   * @brief  Handles DMAMUX interrupt request.
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  321              		@ frame_needed = 0, uses_anonymous_args = 0
  322              		.loc 1 246 1 is_stmt 0 view .LVU92
  323 0000 10B5     		push	{r4, lr}
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 11
 
 
  324              		.cfi_def_cfa_offset 8
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  362              		.loc 1 262 7 is_stmt 1 view .LVU110
  363 002a 9847     		blx	r3
  364              	.LVL24:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 12
 
 
  365              	.L26:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  401              		.loc 1 280 9 view .LVU129
  402 0052 0BB1     		cbz	r3, .L25
  281:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****       {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 13
 
 
  282:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****         /* Transfer error callback */
@@ -736,7 +736,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  409 0058 10BD     		pop	{r4, pc}
  410              		.loc 1 287 1 view .LVU132
  411              		.cfi_endproc
- 412              	.LFE136:
+ 412              	.LFE325:
  414              		.text
  415              	.Letext0:
  416              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
@@ -746,20 +746,20 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 1
  420              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
  421              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
  422              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma_ex.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s 			page 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_dma_ex.c
-C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s:20     .text.HAL_DMAEx_ConfigMuxSync:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s:26     .text.HAL_DMAEx_ConfigMuxSync:0000000000000000 HAL_DMAEx_ConfigMuxSync
-C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s:114    .text.HAL_DMAEx_ConfigMuxRequestGenerator:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s:120    .text.HAL_DMAEx_ConfigMuxRequestGenerator:0000000000000000 HAL_DMAEx_ConfigMuxRequestGenerator
-C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s:203    .text.HAL_DMAEx_EnableMuxRequestGenerator:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s:209    .text.HAL_DMAEx_EnableMuxRequestGenerator:0000000000000000 HAL_DMAEx_EnableMuxRequestGenerator
-C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s:256    .text.HAL_DMAEx_DisableMuxRequestGenerator:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s:262    .text.HAL_DMAEx_DisableMuxRequestGenerator:0000000000000000 HAL_DMAEx_DisableMuxRequestGenerator
-C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s:309    .text.HAL_DMAEx_MUX_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccGMTtC1.s:315    .text.HAL_DMAEx_MUX_IRQHandler:0000000000000000 HAL_DMAEx_MUX_IRQHandler
+C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s:20     .text.HAL_DMAEx_ConfigMuxSync:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s:26     .text.HAL_DMAEx_ConfigMuxSync:0000000000000000 HAL_DMAEx_ConfigMuxSync
+C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s:114    .text.HAL_DMAEx_ConfigMuxRequestGenerator:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s:120    .text.HAL_DMAEx_ConfigMuxRequestGenerator:0000000000000000 HAL_DMAEx_ConfigMuxRequestGenerator
+C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s:203    .text.HAL_DMAEx_EnableMuxRequestGenerator:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s:209    .text.HAL_DMAEx_EnableMuxRequestGenerator:0000000000000000 HAL_DMAEx_EnableMuxRequestGenerator
+C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s:256    .text.HAL_DMAEx_DisableMuxRequestGenerator:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s:262    .text.HAL_DMAEx_DisableMuxRequestGenerator:0000000000000000 HAL_DMAEx_DisableMuxRequestGenerator
+C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s:309    .text.HAL_DMAEx_MUX_IRQHandler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc8qnyiw.s:315    .text.HAL_DMAEx_MUX_IRQHandler:0000000000000000 HAL_DMAEx_MUX_IRQHandler
 
 NO UNDEFINED SYMBOLS

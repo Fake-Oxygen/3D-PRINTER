@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -25,7 +25,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
   22              		.thumb
   23              		.thumb_func
   25              	RCC_GetSysClockFreqFromPLLSource:
-  26              	.LFB147:
+  26              	.LFB336:
   27              		.file 1 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c"
    1:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** /**
    2:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       (+) Configure the clock source to be used to drive the System clock
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           (if the application needs higher frequency/performance)
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       (+) Configure the System clock frequency and Flash settings
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 2
 
 
   32:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       (+) Configure the AHB and APB busses prescalers
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   * @{
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   */
   88:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #define __MCO1_CLK_ENABLE()   __HAL_RCC_GPIOA_CLK_ENABLE()
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 3
 
 
   89:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #define MCO1_GPIO_PORT        GPIOA
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  143:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****          (+) HSE (high-speed external): 4 to 48 MHz crystal oscillator used directly or
  144:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****              through the PLL as System clock source. Can be used also optionally as RTC clock sourc
  145:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 4
 
 
  146:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****          (+) LSE (low-speed external): 32.768 KHz oscillator used optionally as RTC clock source.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  200:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****                 through PLLQ divider. You have to enable the peripheral clock and use
  201:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****                 HAL_RCCEx_PeriphCLKConfig() function to configure this clock.
  202:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****            (+@) IWDG clock which is always the LSI clock.
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 5
 
 
  203:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  257:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   *            - CSS, MCO1 OFF
  258:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   *            - All interrupts disabled
  259:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   *            - All interrupt and reset flags cleared
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 6
 
 
  260:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   * @note   This function does not modify the configuration of the
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  314:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Reset HSION, HSIKERON, HSIASFS, HSEON, HSECSSON, PLLON, PLLSAIxON bits */
  315:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #if defined(RCC_PLLSAI2_SUPPORT)
  316:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 7
 
 
  317:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   CLEAR_BIT(RCC->CR, RCC_CR_HSEON | RCC_CR_HSION | RCC_CR_HSIKERON| RCC_CR_HSIASFS | RCC_CR_PLLON |
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  371:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #endif /* RCC_PLLSAI2_SUPPORT */
  372:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  373:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Reset HSEBYP bit */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 8
 
 
  374:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   CLEAR_BIT(RCC->CR, RCC_CR_HSEBYP);
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  428:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  429:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     /* Check if MSI is used as system clock or as PLL source when PLL is selected as system clock *
  430:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     if((sysclk_source == RCC_CFGR_SWS_MSI) ||
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 9
 
 
  431:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****        ((sysclk_source == RCC_CFGR_SWS_PLL) && (pll_config == RCC_PLLSOURCE_MSI)))
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  485:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       }
  486:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     }
  487:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     else
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 10
 
 
  488:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     {
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  542:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       {
  543:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         return HAL_ERROR;
  544:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 11
 
 
  545:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     }
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  599:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       else
  600:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       {
  601:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         /* Adjusts the Internal High Speed oscillator (HSI) calibration value.*/
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 12
 
 
  602:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         __HAL_RCC_HSI_CALIBRATIONVALUE_ADJUST(RCC_OscInitStruct->HSICalibrationValue);
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  656:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #if defined(RCC_CSR_LSIPREDIV)
  657:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       uint32_t csr_temp = RCC->CSR;
  658:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 13
 
 
  659:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       /* Check LSI division factor */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  713:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       __HAL_RCC_LSI_DISABLE();
  714:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  715:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       /* Get Start Tick*/
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 14
 
 
  716:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       tickstart = HAL_GetTick();
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  770:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         /* LSE oscillator bypass enable */
  771:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         SET_BIT(RCC->BDCR, RCC_BDCR_LSEBYP);
  772:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         SET_BIT(RCC->BDCR, RCC_BDCR_LSEON);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 15
 
 
  773:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       }
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  827:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       __HAL_RCC_PWR_CLK_DISABLE();
  828:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     }
  829:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 16
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 16
 
 
  830:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #if defined(RCC_HSI48_SUPPORT)
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  884:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       assert_param(IS_RCC_PLLSOURCE(RCC_OscInitStruct->PLL.PLLSource));
  885:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       assert_param(IS_RCC_PLLM_VALUE(RCC_OscInitStruct->PLL.PLLM));
  886:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       assert_param(IS_RCC_PLLN_VALUE(RCC_OscInitStruct->PLL.PLLN));
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 17
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 17
 
 
  887:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #if defined(RCC_PLLP_SUPPORT)
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  941:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #if defined(RCC_PLLP_SUPPORT)
  942:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****             __HAL_RCC_PLL_CONFIG(RCC_OscInitStruct->PLL.PLLSource,
  943:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****                                  RCC_OscInitStruct->PLL.PLLM,
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 18
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 18
 
 
  944:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****                                  RCC_OscInitStruct->PLL.PLLN,
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  998:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           {
  999:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****             if((HAL_GetTick() - tickstart) > PLL_TIMEOUT_VALUE)
 1000:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****             {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 19
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 19
 
 
 1001:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****               return HAL_TIMEOUT;
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1055:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   *            @arg FLASH_LATENCY_3   FLASH 3 Latency cycles
 1056:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   *            @arg FLASH_LATENCY_4   FLASH 4 Latency cycles
 1057:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   @if STM32L4S9xx
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 20
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 20
 
 
 1058:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   *            @arg FLASH_LATENCY_5   FLASH 5 Latency cycles
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1112:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   assert_param(IS_FLASH_LATENCY(FLatency));
 1113:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
 1114:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* To correctly read data from FLASH memory, the number of wait states (LATENCY)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 21
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 21
 
 
 1115:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     must be correctly programmed according to the frequency of the CPU clock
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1169:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       }
 1170:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #endif
 1171:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 22
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 22
 
 
 1172:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     else
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1226:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         return HAL_TIMEOUT;
 1227:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       }
 1228:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 23
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 23
 
 
 1229:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   }
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1283:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
 1284:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   return status;
 1285:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 24
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 24
 
 
 1286:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1340:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
 1341:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Check the parameters */
 1342:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   assert_param(IS_RCC_MCO(RCC_MCOx));
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 25
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 25
 
 
 1343:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   assert_param(IS_RCC_MCODIV(RCC_MCODiv));
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1397:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** {
 1398:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   uint32_t msirange = 0U, sysclockfreq = 0U;
 1399:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   uint32_t pllvco, pllsource, pllr, pllm;    /* no init needed */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 26
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 26
 
 
 1400:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   uint32_t sysclk_source, pll_oscsource;
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1454:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     case RCC_PLLSOURCE_HSI:  /* HSI used as PLL clock source */
 1455:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       pllvco = HSI_VALUE;
 1456:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       break;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 27
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 27
 
 
 1457:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1511:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** }
 1512:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
 1513:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** /**
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 28
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 28
 
 
 1514:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   * @brief  Configure the RCC_OscInitStruct according to the internal
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1568:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     RCC_OscInitStruct->HSIState = RCC_HSI_OFF;
 1569:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   }
 1570:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 29
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 29
 
 
 1571:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   RCC_OscInitStruct->HSICalibrationValue = READ_BIT(RCC->ICSCR, RCC_ICSCR_HSITRIM) >> RCC_ICSCR_HSI
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1625:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #endif /* RCC_CSR_LSIPREDIV */
 1626:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
 1627:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #if defined(RCC_HSI48_SUPPORT)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 30
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 30
 
 
 1628:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Get the HSI48 configuration ---------------------------------------------*/
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1682:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   assert_param(RCC_ClkInitStruct != (void  *)NULL);
 1683:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   assert_param(pFLatency != (void *)NULL);
 1684:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 31
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 31
 
 
 1685:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Set all possible values for the Clock type parameter --------------------*/
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1739:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   * @retval none
 1740:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   */
 1741:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** __weak void HAL_RCC_CSSCallback(void)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 32
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 32
 
 
 1742:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** {
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1796:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     __HAL_RCC_PWR_CLK_ENABLE();
 1797:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     vos = HAL_PWREx_GetVoltageRange();
 1798:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     __HAL_RCC_PWR_CLK_DISABLE();
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 33
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 33
 
 
 1799:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   }
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1853:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         latency = FLASH_LATENCY_1; /* 1WS */
 1854:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       }
 1855:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       /* else MSI < 8Mhz default FLASH_LATENCY_0 0WS */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 34
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 34
 
 
 1856:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     }
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1890:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     pllvco = HSI_VALUE;
 1891:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     break;
 1892:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 35
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 35
 
 
 1893:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   case RCC_PLLSOURCE_HSE:  /* HSE used as PLL clock source */
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
   77              		.loc 1 1917 78 view .LVU19
   78 0034 0133     		adds	r3, r3, #1
   79              		.loc 1 1917 8 view .LVU20
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 36
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 36
 
 
   80 0036 5B00     		lsls	r3, r3, #1
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  118              		.loc 1 1905 18 is_stmt 0 view .LVU36
  119 005a 044B     		ldr	r3, .L9
  120 005c 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 37
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 37
 
 
 1905:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     }
@@ -2185,9 +2185,9 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  138 006c 00100240 		.word	1073876992
  139 0070 00000000 		.word	MSIRangeTable
  140 0074 0024F400 		.word	16000000
- 141 0078 00127A00 		.word	8000000
+ 141 0078 808D5B00 		.word	6000000
  142              		.cfi_endproc
- 143              	.LFE147:
+ 143              	.LFE336:
  145              		.section	.text.RCC_SetFlashLatencyFromMSIRange,"ax",%progbits
  146              		.align	1
  147              		.syntax unified
@@ -2195,7 +2195,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  149              		.thumb_func
  151              	RCC_SetFlashLatencyFromMSIRange:
  152              	.LVL14:
- 153              	.LFB146:
+ 153              	.LFB335:
 1786:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   uint32_t vos;
  154              		.loc 1 1786 1 is_stmt 1 view -0
  155              		.cfi_startproc
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  169              	.LVL15:
 1790:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   {
  170              		.loc 1 1790 3 view .LVU45
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 38
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 38
 
 
 1790:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   {
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  210 0036 0193     		str	r3, [sp, #4]
 1796:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     vos = HAL_PWREx_GetVoltageRange();
  211              		.loc 1 1796 5 view .LVU61
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 39
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 39
 
 
  212 0038 019B     		ldr	r3, [sp, #4]
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  253 0066 0B43     		orrs	r3, r3, r1
  254 0068 1360     		str	r3, [r2]
 1864:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 40
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 40
 
 
  255              		.loc 1 1864 3 view .LVU75
@@ -2384,7 +2384,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  288 0084 00100240 		.word	1073876992
  289 0088 00200240 		.word	1073881088
  290              		.cfi_endproc
- 291              	.LFE146:
+ 291              	.LFE335:
  293              		.section	.text.HAL_RCC_DeInit,"ax",%progbits
  294              		.align	1
  295              		.global	HAL_RCC_DeInit
@@ -2392,13 +2392,13 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  297              		.thumb
  298              		.thumb_func
  300              	HAL_RCC_DeInit:
- 301              	.LFB132:
+ 301              	.LFB321:
  266:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   uint32_t tickstart;
  302              		.loc 1 266 1 is_stmt 1 view -0
  303              		.cfi_startproc
  304              		@ args = 0, pretend = 0, frame = 0
  305              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 41
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 41
 
 
  306 0000 38B5     		push	{r3, r4, r5, lr}
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  346              		.loc 1 386 1 view .LVU97
  347 0028 2046     		mov	r0, r4
  348 002a 38BD     		pop	{r3, r4, r5, pc}
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 42
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 42
 
 
  349              	.LVL28:
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  389              		.loc 1 306 9 is_stmt 0 view .LVU111
  390 005a 214B     		ldr	r3, .L43
  391 005c 9B68     		ldr	r3, [r3, #8]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 43
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 43
 
 
  306:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   {
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  431              		.loc 1 347 9 is_stmt 0 view .LVU126
  432 0090 FFF7FEFF 		bl	HAL_GetTick
  433              	.LVL36:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 44
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 44
 
 
  347:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     {
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  475 00d8 C3F89420 		str	r2, [r3, #148]
  385:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** }
  476              		.loc 1 385 3 view .LVU140
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 45
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 45
 
 
  385:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** }
@@ -2653,7 +2653,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  485 00ec 00000000 		.word	uwTickPrio
  486 00f0 FFF4FEEA 		.word	-352389889
  487              		.cfi_endproc
- 488              	.LFE132:
+ 488              	.LFE321:
  490              		.section	.text.HAL_RCC_MCOConfig,"ax",%progbits
  491              		.align	1
  492              		.global	HAL_RCC_MCOConfig
@@ -2662,7 +2662,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  495              		.thumb_func
  497              	HAL_RCC_MCOConfig:
  498              	.LVL37:
- 499              	.LFB135:
+ 499              	.LFB324:
 1338:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   GPIO_InitTypeDef GPIO_InitStruct;
  500              		.loc 1 1338 1 is_stmt 1 view -0
  501              		.cfi_startproc
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1350:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  523              		.loc 1 1350 3 view .LVU151
  524 0008 0F4C     		ldr	r4, .L47
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 46
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 46
 
 
  525 000a E36C     		ldr	r3, [r4, #76]
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1361:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** }
  563              		.loc 1 1361 3 is_stmt 1 view .LVU168
  564 0038 A368     		ldr	r3, [r4, #8]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 47
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 47
 
 
  565 003a 23F0FE43 		bic	r3, r3, #2130706432
@@ -2782,7 +2782,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  580              	.L47:
  581 0048 00100240 		.word	1073876992
  582              		.cfi_endproc
- 583              	.LFE135:
+ 583              	.LFE324:
  585              		.section	.text.HAL_RCC_GetSysClockFreq,"ax",%progbits
  586              		.align	1
  587              		.global	HAL_RCC_GetSysClockFreq
@@ -2790,7 +2790,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  589              		.thumb
  590              		.thumb_func
  592              	HAL_RCC_GetSysClockFreq:
- 593              	.LFB136:
+ 593              	.LFB325:
 1397:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   uint32_t msirange = 0U, sysclockfreq = 0U;
  594              		.loc 1 1397 1 is_stmt 1 view -0
  595              		.cfi_startproc
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  610 0004 D268     		ldr	r2, [r2, #12]
 1403:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  611              		.loc 1 1403 17 view .LVU180
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 48
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 48
 
 
  612 0006 02F00302 		and	r2, r2, #3
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1411:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     { /* MSISRANGE from RCC_CSR applies */
  651              		.loc 1 1411 7 view .LVU196
  652 002a 12F0080F 		tst	r2, #8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 49
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 49
 
 
  653 002e 0CD1     		bne	.L52
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1417:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     }
  692              		.loc 1 1417 16 view .LVU212
  693 0052 F2E7     		b	.L53
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 50
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 50
 
 
  694              	.L57:
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  735              	.L56:
 1467:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     pllvco = (pllvco * (READ_BIT(RCC->PLLCFGR, RCC_PLLCFGR_PLLN) >> RCC_PLLCFGR_PLLN_Pos)) / pllm;
  736              		.loc 1 1467 5 is_stmt 1 view .LVU226
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 51
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 51
 
 
 1467:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     pllvco = (pllvco * (READ_BIT(RCC->PLLCFGR, RCC_PLLCFGR_PLLN) >> RCC_PLLCFGR_PLLN_Pos)) / pllm;
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  774 009c D4E7     		b	.L49
  775              	.LVL71:
  776              	.L60:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 52
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 52
 
 
 1452:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     {
@@ -3074,9 +3074,9 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  785 00a4 00100240 		.word	1073876992
  786 00a8 00000000 		.word	MSIRangeTable
  787 00ac 0024F400 		.word	16000000
- 788 00b0 00127A00 		.word	8000000
+ 788 00b0 808D5B00 		.word	6000000
  789              		.cfi_endproc
- 790              	.LFE136:
+ 790              	.LFE325:
  792              		.section	.text.HAL_RCC_OscConfig,"ax",%progbits
  793              		.align	1
  794              		.global	HAL_RCC_OscConfig
@@ -3085,7 +3085,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  797              		.thumb_func
  799              	HAL_RCC_OscConfig:
  800              	.LVL73:
- 801              	.LFB133:
+ 801              	.LFB322:
  404:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   uint32_t tickstart;
  802              		.loc 1 404 1 is_stmt 1 view -0
  803              		.cfi_startproc
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  416:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  824              		.loc 1 416 3 is_stmt 1 view .LVU253
  418:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   pll_config = __HAL_RCC_GET_PLL_OSCSOURCE();
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 53
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 53
 
 
  825              		.loc 1 418 3 view .LVU254
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  861 0030 8D4A     		ldr	r2, .L199
  862 0032 1368     		ldr	r3, [r2]
  863 0034 43F00103 		orr	r3, r3, #1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 54
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 54
 
 
  864 0038 1360     		str	r3, [r2]
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  433:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       {
  903              		.loc 1 433 9 view .LVU288
  904 0062 13F0020F 		tst	r3, #2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 55
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 55
 
 
  905 0066 03D0     		beq	.L70
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  947 00aa 5A60     		str	r2, [r3, #4]
  467:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           {
  948              		.loc 1 467 11 view .LVU301
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 56
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 56
 
 
  467:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           {
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  987              		.loc 1 532 5 view .LVU317
  988 00da 13F0010F 		tst	r3, #1
  989 00de 00F08180 		beq	.L80
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 57
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 57
 
 
  535:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1029              	.LVL85:
  558:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         {
  1030              		.loc 1 558 9 is_stmt 1 view .LVU333
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 58
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 58
 
 
  1031              	.L87:
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1071 0150 42F00802 		orr	r2, r2, #8
  1072 0154 1A60     		str	r2, [r3]
  453:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           /* Adjusts the Multiple Speed oscillator (MSI) calibration value.*/
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 59
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 59
 
 
  1073              		.loc 1 453 11 view .LVU348
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1116 0198 22F47F42 		bic	r2, r2, #65280
  1117 019c 216A     		ldr	r1, [r4, #32]
  1118 019e 42EA0122 		orr	r2, r2, r1, lsl #8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 60
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 60
 
 
  1119 01a2 5A60     		str	r2, [r3, #4]
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1159 01ce 032E     		cmp	r6, #3
  1160 01d0 8BD1     		bne	.L82
  1161              	.L81:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 61
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 61
 
 
  541:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       {
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1199 01fe 1368     		ldr	r3, [r2]
  1200 0200 43F48073 		orr	r3, r3, #256
  1201 0204 1360     		str	r3, [r2]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 62
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 62
 
 
  614:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1243 023e 1A60     		str	r2, [r3]
  549:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  1244              		.loc 1 549 7 discriminator 4 view .LVU404
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 63
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 63
 
 
  1245 0240 1A68     		ldr	r2, [r3]
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1287 0278 022E     		cmp	r6, #2
  1288 027a BBD1     		bne	.L93
  1289              	.L92:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 64
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 64
 
 
  594:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       {
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1329 02ae D3F89430 		ldr	r3, [r3, #148]
  1330              	.LVL105:
  660:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 65
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 65
 
 
  1331              		.loc 1 660 7 is_stmt 1 view .LVU432
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1371              		.loc 1 702 7 is_stmt 1 view .LVU446
  1372              	.L106:
  702:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 66
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 66
 
 
  1373              		.loc 1 702 48 view .LVU447
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1415              	.LVL112:
  637:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         {
  1416              		.loc 1 637 9 is_stmt 1 view .LVU460
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 67
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 67
 
 
  1417              	.L98:
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1456              		.loc 1 681 17 is_stmt 0 view .LVU475
  1457 035a 784B     		ldr	r3, .L201
  1458 035c D3F89430 		ldr	r3, [r3, #148]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 68
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 68
 
 
  681:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           {
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1498              		.loc 1 721 9 is_stmt 1 view .LVU490
  721:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         {
  1499              		.loc 1 721 13 is_stmt 0 view .LVU491
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 69
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 69
 
 
  1500 0394 FFF7FEFF 		bl	HAL_GetTick
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1539 03c2 03F08053 		and	r3, r3, #268435456
  1540 03c6 0193     		str	r3, [sp, #4]
  740:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       pwrclkchanged = SET;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 70
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 70
 
 
  1541              		.loc 1 740 7 view .LVU507
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1581 0402 C1F89020 		str	r2, [r1, #144]
  772:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       }
  1582              		.loc 1 772 9 view .LVU522
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 71
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 71
 
 
  1583 0406 D1F89020 		ldr	r2, [r1, #144]
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  777:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       }
  1626              		.loc 1 777 9 is_stmt 1 view .LVU534
  1627 0440 3E4A     		ldr	r2, .L201
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 72
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 72
 
 
  1628 0442 D2F89030 		ldr	r3, [r2, #144]
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1668 0484 C01B     		subs	r0, r0, r7
  798:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         {
  1669              		.loc 1 798 11 view .LVU549
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 73
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 73
 
 
  1670 0486 41F28833 		movw	r3, #5000
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1711 04c0 C2F89030 		str	r3, [r2, #144]
  1712              	.L121:
  825:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 74
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 74
 
 
  1713              		.loc 1 825 5 view .LVU563
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1751 04f0 28D1     		bne	.L124
  849:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         {
  1752              		.loc 1 849 9 is_stmt 1 view .LVU580
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 75
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 75
 
 
  849:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         {
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1794              		.loc 1 864 54 view .LVU593
  1795 0526 13F0020F 		tst	r3, #2
  1796 052a 0BD0     		beq	.L124
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 76
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 76
 
 
  866:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         {
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1836              		.loc 1 1016 9 view .LVU608
 1016:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  1837              		.loc 1 1016 21 is_stmt 0 view .LVU609
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 77
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 77
 
 
  1838 0560 FFF7FEFF 		bl	HAL_GetTick
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1875              	.LVL154:
  895:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****          (READ_BIT(pll_config, RCC_PLLCFGR_PLLM)    != ((RCC_OscInitStruct->PLL.PLLM - 1U) << RCC_P
  1876              		.loc 1 895 7 is_stmt 1 view .LVU627
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 78
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 78
 
 
  895:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****          (READ_BIT(pll_config, RCC_PLLCFGR_PLLM)    != ((RCC_OscInitStruct->PLL.PLLM - 1U) << RCC_P
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1916 05ba E8D1     		bne	.L131
  897:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #if defined(RCC_PLLP_SUPPORT)
  1917              		.loc 1 897 11 view .LVU643
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 79
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 79
 
 
  1918 05bc 03F4FE42 		and	r2, r3, #32512
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  1955              		.loc 1 985 12 is_stmt 0 view .LVU660
  1956 05f4 424B     		ldr	r3, .L203
  1957 05f6 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 80
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 80
 
 
  985:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         {
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  942:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****                                  RCC_OscInitStruct->PLL.PLLM,
  1998              		.loc 1 942 13 is_stmt 1 view .LVU675
  1999 062a 354A     		ldr	r2, .L203
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 81
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 81
 
 
  2000 062c D368     		ldr	r3, [r2, #12]
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  968:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****               {
  2045              		.loc 1 968 19 is_stmt 0 view .LVU685
  2046 0680 FFF7FEFF 		bl	HAL_GetTick
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 82
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 82
 
 
  2047              	.LVL163:
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2087              		.loc 1 999 17 is_stmt 0 view .LVU699
  2088 06b4 FFF7FEFF 		bl	HAL_GetTick
  2089              	.LVL167:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 83
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 83
 
 
  999:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****             {
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2134              		.loc 1 435 16 view .LVU709
  2135 06d8 0120     		movs	r0, #1
  2136              	.LVL171:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 84
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 84
 
 
  435:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       }
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2181              	.L171:
 1038:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       }
  2182              		.loc 1 1038 16 view .LVU720
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 85
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 85
 
 
  2183 06fa 0120     		movs	r0, #1
@@ -5050,7 +5050,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2189 0704 0C809D01 		.word	27099148
  2190 0708 FCFFEEFE 		.word	-17891332
  2191              		.cfi_endproc
- 2192              	.LFE133:
+ 2192              	.LFE322:
  2194              		.section	.text.HAL_RCC_ClockConfig,"ax",%progbits
  2195              		.align	1
  2196              		.global	HAL_RCC_ClockConfig
@@ -5059,7 +5059,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2199              		.thumb_func
  2201              	HAL_RCC_ClockConfig:
  2202              	.LVL176:
- 2203              	.LFB134:
+ 2203              	.LFB323:
 1096:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   uint32_t tickstart;
  2204              		.loc 1 1096 1 is_stmt 1 view -0
  2205              		.cfi_startproc
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1119:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   {
  2229              		.loc 1 1119 17 is_stmt 0 view .LVU731
  2230 000c 774B     		ldr	r3, .L243
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 86
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 86
 
 
  2231 000e 1B68     		ldr	r3, [r3]
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2270              		.loc 1 1140 7 is_stmt 0 view .LVU746
  2271 0048 8B68     		ldr	r3, [r1, #8]
  2272 004a 23F0F003 		bic	r3, r3, #240
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 87
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 87
 
 
  2273 004e 1A43     		orrs	r2, r2, r3
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2311              	.L237:
 1153:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       {
  2312              		.loc 1 1153 7 is_stmt 1 view .LVU763
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 88
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 88
 
 
 1153:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       {
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1178:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         {
  2354              		.loc 1 1178 9 is_stmt 1 view .LVU777
 1178:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 89
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 89
 
 
  2355              		.loc 1 1178 12 is_stmt 0 view .LVU778
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2396 00ea E7D1     		bne	.L213
 1198:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         }
  2397              		.loc 1 1198 18 view .LVU792
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 90
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 90
 
 
  2398 00ec 0120     		movs	r0, #1
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2440 011e FFF7FEFF 		bl	HAL_GetTick
  2441              	.LVL192:
 1224:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 91
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 91
 
 
  2442              		.loc 1 1224 25 view .LVU805
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2483 0152 23F0F003 		bic	r3, r3, #240
  2484 0156 1A43     		orrs	r2, r2, r3
  2485 0158 8A60     		str	r2, [r1, #8]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 92
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 92
 
 
  2486              	.L217:
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2526 0192 2368     		ldr	r3, [r4]
 1272:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   {
  2527              		.loc 1 1272 5 view .LVU833
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 93
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 93
 
 
  2528 0194 13F0080F 		tst	r3, #8
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2568              	.LVL198:
  2569              	.L242:
 1236:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 94
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 94
 
 
  2570              		.loc 1 1236 5 is_stmt 1 view .LVU848
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2617 01ea 00BF     		.align	2
  2618              	.L243:
  2619 01ec 00200240 		.word	1073881088
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 95
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 95
 
 
  2620 01f0 00100240 		.word	1073876992
@@ -5647,7 +5647,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2623 01fc 00000000 		.word	SystemCoreClock
  2624 0200 00000000 		.word	uwTickPrio
  2625              		.cfi_endproc
- 2626              	.LFE134:
+ 2626              	.LFE323:
  2628              		.section	.text.HAL_RCC_GetHCLKFreq,"ax",%progbits
  2629              		.align	1
  2630              		.global	HAL_RCC_GetHCLKFreq
@@ -5655,7 +5655,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2632              		.thumb
  2633              		.thumb_func
  2635              	HAL_RCC_GetHCLKFreq:
- 2636              	.LFB137:
+ 2636              	.LFB326:
 1485:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   return SystemCoreClock;
  2637              		.loc 1 1485 1 is_stmt 1 view -0
  2638              		.cfi_startproc
@@ -5674,7 +5674,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2649              	.L246:
  2650 0008 00000000 		.word	SystemCoreClock
  2651              		.cfi_endproc
- 2652              	.LFE137:
+ 2652              	.LFE326:
  2654              		.section	.text.HAL_RCC_GetPCLK1Freq,"ax",%progbits
  2655              		.align	1
  2656              		.global	HAL_RCC_GetPCLK1Freq
@@ -5682,7 +5682,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2658              		.thumb
  2659              		.thumb_func
  2661              	HAL_RCC_GetPCLK1Freq:
- 2662              	.LFB138:
+ 2662              	.LFB327:
 1496:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Get HCLK source and Compute PCLK1 frequency ---------------------------*/
  2663              		.loc 1 1496 1 is_stmt 1 view -0
  2664              		.cfi_startproc
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2672              		.loc 1 1498 11 is_stmt 0 view .LVU861
  2673 0002 FFF7FEFF 		bl	HAL_RCC_GetHCLKFreq
  2674              	.LVL206:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 96
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 96
 
 
 1498:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** }
@@ -5725,7 +5725,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2691 001c 00100240 		.word	1073876992
  2692 0020 00000000 		.word	APBPrescTable
  2693              		.cfi_endproc
- 2694              	.LFE138:
+ 2694              	.LFE327:
  2696              		.section	.text.HAL_RCC_GetPCLK2Freq,"ax",%progbits
  2697              		.align	1
  2698              		.global	HAL_RCC_GetPCLK2Freq
@@ -5733,7 +5733,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2700              		.thumb
  2701              		.thumb_func
  2703              	HAL_RCC_GetPCLK2Freq:
- 2704              	.LFB139:
+ 2704              	.LFB328:
 1508:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Get HCLK source and Compute PCLK2 frequency ---------------------------*/
  2705              		.loc 1 1508 1 is_stmt 1 view -0
  2706              		.cfi_startproc
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2721 000a C3F3C223 		ubfx	r3, r3, #11, #3
 1510:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** }
  2722              		.loc 1 1510 49 view .LVU872
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 97
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 97
 
 
  2723 000e 044A     		ldr	r2, .L254+4
@@ -5776,7 +5776,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2733 001c 00100240 		.word	1073876992
  2734 0020 00000000 		.word	APBPrescTable
  2735              		.cfi_endproc
- 2736              	.LFE139:
+ 2736              	.LFE328:
  2738              		.section	.text.HAL_RCC_GetOscConfig,"ax",%progbits
  2739              		.align	1
  2740              		.global	HAL_RCC_GetOscConfig
@@ -5785,7 +5785,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2743              		.thumb_func
  2745              	HAL_RCC_GetOscConfig:
  2746              	.LVL208:
- 2747              	.LFB140:
+ 2747              	.LFB329:
 1521:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Check the parameters */
  2748              		.loc 1 1521 1 is_stmt 1 view -0
  2749              		.cfi_startproc
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2768 0012 4360     		str	r3, [r0, #4]
  2769              	.L258:
 1549:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 98
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 98
 
 
  2770              		.loc 1 1549 3 is_stmt 1 view .LVU884
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2807              		.loc 1 1571 3 is_stmt 1 view .LVU901
 1571:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  2808              		.loc 1 1571 44 is_stmt 0 view .LVU902
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 99
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 99
 
 
  2809 0042 424A     		ldr	r2, .L277
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2846 0074 354B     		ldr	r3, .L277
  2847 0076 D3F89430 		ldr	r3, [r3, #148]
 1617:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 100
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 100
 
 
  2848              		.loc 1 1617 5 view .LVU920
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
 1651:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   RCC_OscInitStruct->PLL.PLLN = READ_BIT(RCC->PLLCFGR, RCC_PLLCFGR_PLLN) >> RCC_PLLCFGR_PLLN_Pos;
  2887              		.loc 1 1651 3 is_stmt 1 view .LVU936
 1651:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   RCC_OscInitStruct->PLL.PLLN = READ_BIT(RCC->PLLCFGR, RCC_PLLCFGR_PLLN) >> RCC_PLLCFGR_PLLN_Pos;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 101
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 101
 
 
  2888              		.loc 1 1651 34 is_stmt 0 view .LVU937
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2923              		.loc 1 1654 31 view .LVU956
  2924 00d4 4364     		str	r3, [r0, #68]
 1657:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #else
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 102
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 102
 
 
  2925              		.loc 1 1657 3 is_stmt 1 view .LVU957
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  2964 0100 9FE7     		b	.L263
  2965              	.L265:
 1584:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 103
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 103
 
 
  2966              		.loc 1 1584 7 is_stmt 1 view .LVU973
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3005              		.loc 1 1612 33 is_stmt 0 view .LVU988
  3006 0132 0023     		movs	r3, #0
  3007 0134 4361     		str	r3, [r0, #20]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 104
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 104
 
 
  3008 0136 9DE7     		b	.L270
@@ -6211,7 +6211,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3029              	.L277:
  3030 014c 00100240 		.word	1073876992
  3031              		.cfi_endproc
- 3032              	.LFE140:
+ 3032              	.LFE329:
  3034              		.section	.text.HAL_RCC_GetClockConfig,"ax",%progbits
  3035              		.align	1
  3036              		.global	HAL_RCC_GetClockConfig
@@ -6220,7 +6220,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3039              		.thumb_func
  3041              	HAL_RCC_GetClockConfig:
  3042              	.LVL209:
- 3043              	.LFB141:
+ 3043              	.LFB330:
 1680:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Check the parameters */
  3044              		.loc 1 1680 1 is_stmt 1 view -0
  3045              		.cfi_startproc
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3053 0000 0F23     		movs	r3, #15
  3054 0002 0360     		str	r3, [r0]
 1689:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 105
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 105
 
 
  3055              		.loc 1 1689 3 is_stmt 1 view .LVU1000
@@ -6298,11 +6298,11 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3093              	.L280:
  3094 0034 00100240 		.word	1073876992
  3095 0038 00200240 		.word	1073881088
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 106
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 106
 
 
  3096              		.cfi_endproc
- 3097              	.LFE141:
+ 3097              	.LFE330:
  3099              		.section	.text.HAL_RCC_EnableCSS,"ax",%progbits
  3100              		.align	1
  3101              		.global	HAL_RCC_EnableCSS
@@ -6310,7 +6310,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3103              		.thumb
  3104              		.thumb_func
  3106              	HAL_RCC_EnableCSS:
- 3107              	.LFB142:
+ 3107              	.LFB331:
 1715:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   SET_BIT(RCC->CR, RCC_CR_CSSON) ;
  3108              		.loc 1 1715 1 is_stmt 1 view -0
  3109              		.cfi_startproc
@@ -6331,7 +6331,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3122              	.L283:
  3123 000c 00100240 		.word	1073876992
  3124              		.cfi_endproc
- 3125              	.LFE142:
+ 3125              	.LFE331:
  3127              		.section	.text.HAL_RCC_CSSCallback,"ax",%progbits
  3128              		.align	1
  3129              		.weak	HAL_RCC_CSSCallback
@@ -6339,7 +6339,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3131              		.thumb
  3132              		.thumb_func
  3134              	HAL_RCC_CSSCallback:
- 3135              	.LFB144:
+ 3135              	.LFB333:
 1742:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* NOTE : This function should not be modified, when the callback is needed,
  3136              		.loc 1 1742 1 is_stmt 1 view -0
  3137              		.cfi_startproc
@@ -6350,7 +6350,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3141              		.loc 1 1746 1 view .LVU1021
  3142 0000 7047     		bx	lr
  3143              		.cfi_endproc
- 3144              	.LFE144:
+ 3144              	.LFE333:
  3146              		.section	.text.HAL_RCC_NMI_IRQHandler,"ax",%progbits
  3147              		.align	1
  3148              		.global	HAL_RCC_NMI_IRQHandler
@@ -6358,10 +6358,10 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3150              		.thumb
  3151              		.thumb_func
  3153              	HAL_RCC_NMI_IRQHandler:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 107
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 107
 
 
- 3154              	.LFB143:
+ 3154              	.LFB332:
 1725:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Check RCC CSSF interrupt flag  */
  3155              		.loc 1 1725 1 view -0
  3156              		.cfi_startproc
@@ -6403,7 +6403,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3185              	.L290:
  3186 001c 00100240 		.word	1073876992
  3187              		.cfi_endproc
- 3188              	.LFE143:
+ 3188              	.LFE332:
  3190              		.section	.text.HAL_RCC_GetResetSource,"ax",%progbits
  3191              		.align	1
  3192              		.global	HAL_RCC_GetResetSource
@@ -6411,14 +6411,14 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3194              		.thumb
  3195              		.thumb_func
  3197              	HAL_RCC_GetResetSource:
- 3198              	.LFB145:
+ 3198              	.LFB334:
 1756:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   uint32_t reset;
  3199              		.loc 1 1756 1 is_stmt 1 view -0
  3200              		.cfi_startproc
  3201              		@ args = 0, pretend = 0, frame = 0
  3202              		@ frame_needed = 0, uses_anonymous_args = 0
  3203              		@ link register save eliminated.
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 108
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 108
 
 
 1757:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
@@ -6451,7 +6451,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3223              	.L293:
  3224 0018 00100240 		.word	1073876992
  3225              		.cfi_endproc
- 3226              	.LFE145:
+ 3226              	.LFE334:
  3228              		.text
  3229              	.Letext0:
  3230              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
@@ -6464,67 +6464,67 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 1
  3237              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
  3238              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
  3239              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 109
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 109
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_rcc.c
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:20     .text.RCC_GetSysClockFreqFromPLLSource:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:25     .text.RCC_GetSysClockFreqFromPLLSource:0000000000000000 RCC_GetSysClockFreqFromPLLSource
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:138    .text.RCC_GetSysClockFreqFromPLLSource:000000000000006c $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:146    .text.RCC_SetFlashLatencyFromMSIRange:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:151    .text.RCC_SetFlashLatencyFromMSIRange:0000000000000000 RCC_SetFlashLatencyFromMSIRange
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:288    .text.RCC_SetFlashLatencyFromMSIRange:0000000000000084 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:294    .text.HAL_RCC_DeInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:300    .text.HAL_RCC_DeInit:0000000000000000 HAL_RCC_DeInit
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:482    .text.HAL_RCC_DeInit:00000000000000e0 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:491    .text.HAL_RCC_MCOConfig:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:497    .text.HAL_RCC_MCOConfig:0000000000000000 HAL_RCC_MCOConfig
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:581    .text.HAL_RCC_MCOConfig:0000000000000048 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:586    .text.HAL_RCC_GetSysClockFreq:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:592    .text.HAL_RCC_GetSysClockFreq:0000000000000000 HAL_RCC_GetSysClockFreq
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:785    .text.HAL_RCC_GetSysClockFreq:00000000000000a4 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:793    .text.HAL_RCC_OscConfig:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:799    .text.HAL_RCC_OscConfig:0000000000000000 HAL_RCC_OscConfig
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:1280   .text.HAL_RCC_OscConfig:0000000000000268 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:1287   .text.HAL_RCC_OscConfig:0000000000000278 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:1812   .text.HAL_RCC_OscConfig:000000000000053c $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:1819   .text.HAL_RCC_OscConfig:0000000000000544 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2188   .text.HAL_RCC_OscConfig:0000000000000700 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2195   .text.HAL_RCC_ClockConfig:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2201   .text.HAL_RCC_ClockConfig:0000000000000000 HAL_RCC_ClockConfig
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2619   .text.HAL_RCC_ClockConfig:00000000000001ec $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2629   .text.HAL_RCC_GetHCLKFreq:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2635   .text.HAL_RCC_GetHCLKFreq:0000000000000000 HAL_RCC_GetHCLKFreq
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2650   .text.HAL_RCC_GetHCLKFreq:0000000000000008 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2655   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2661   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 HAL_RCC_GetPCLK1Freq
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2691   .text.HAL_RCC_GetPCLK1Freq:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2697   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2703   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 HAL_RCC_GetPCLK2Freq
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2733   .text.HAL_RCC_GetPCLK2Freq:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2739   .text.HAL_RCC_GetOscConfig:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:2745   .text.HAL_RCC_GetOscConfig:0000000000000000 HAL_RCC_GetOscConfig
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3030   .text.HAL_RCC_GetOscConfig:000000000000014c $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3035   .text.HAL_RCC_GetClockConfig:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3041   .text.HAL_RCC_GetClockConfig:0000000000000000 HAL_RCC_GetClockConfig
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3094   .text.HAL_RCC_GetClockConfig:0000000000000034 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3100   .text.HAL_RCC_EnableCSS:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3106   .text.HAL_RCC_EnableCSS:0000000000000000 HAL_RCC_EnableCSS
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3123   .text.HAL_RCC_EnableCSS:000000000000000c $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3128   .text.HAL_RCC_CSSCallback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3134   .text.HAL_RCC_CSSCallback:0000000000000000 HAL_RCC_CSSCallback
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3147   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3153   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 HAL_RCC_NMI_IRQHandler
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3186   .text.HAL_RCC_NMI_IRQHandler:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3191   .text.HAL_RCC_GetResetSource:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3197   .text.HAL_RCC_GetResetSource:0000000000000000 HAL_RCC_GetResetSource
-C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s:3224   .text.HAL_RCC_GetResetSource:0000000000000018 $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:20     .text.RCC_GetSysClockFreqFromPLLSource:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:25     .text.RCC_GetSysClockFreqFromPLLSource:0000000000000000 RCC_GetSysClockFreqFromPLLSource
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:138    .text.RCC_GetSysClockFreqFromPLLSource:000000000000006c $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:146    .text.RCC_SetFlashLatencyFromMSIRange:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:151    .text.RCC_SetFlashLatencyFromMSIRange:0000000000000000 RCC_SetFlashLatencyFromMSIRange
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:288    .text.RCC_SetFlashLatencyFromMSIRange:0000000000000084 $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:294    .text.HAL_RCC_DeInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:300    .text.HAL_RCC_DeInit:0000000000000000 HAL_RCC_DeInit
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:482    .text.HAL_RCC_DeInit:00000000000000e0 $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:491    .text.HAL_RCC_MCOConfig:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:497    .text.HAL_RCC_MCOConfig:0000000000000000 HAL_RCC_MCOConfig
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:581    .text.HAL_RCC_MCOConfig:0000000000000048 $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:586    .text.HAL_RCC_GetSysClockFreq:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:592    .text.HAL_RCC_GetSysClockFreq:0000000000000000 HAL_RCC_GetSysClockFreq
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:785    .text.HAL_RCC_GetSysClockFreq:00000000000000a4 $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:793    .text.HAL_RCC_OscConfig:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:799    .text.HAL_RCC_OscConfig:0000000000000000 HAL_RCC_OscConfig
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:1280   .text.HAL_RCC_OscConfig:0000000000000268 $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:1287   .text.HAL_RCC_OscConfig:0000000000000278 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:1812   .text.HAL_RCC_OscConfig:000000000000053c $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:1819   .text.HAL_RCC_OscConfig:0000000000000544 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2188   .text.HAL_RCC_OscConfig:0000000000000700 $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2195   .text.HAL_RCC_ClockConfig:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2201   .text.HAL_RCC_ClockConfig:0000000000000000 HAL_RCC_ClockConfig
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2619   .text.HAL_RCC_ClockConfig:00000000000001ec $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2629   .text.HAL_RCC_GetHCLKFreq:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2635   .text.HAL_RCC_GetHCLKFreq:0000000000000000 HAL_RCC_GetHCLKFreq
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2650   .text.HAL_RCC_GetHCLKFreq:0000000000000008 $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2655   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2661   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 HAL_RCC_GetPCLK1Freq
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2691   .text.HAL_RCC_GetPCLK1Freq:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2697   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2703   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 HAL_RCC_GetPCLK2Freq
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2733   .text.HAL_RCC_GetPCLK2Freq:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2739   .text.HAL_RCC_GetOscConfig:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:2745   .text.HAL_RCC_GetOscConfig:0000000000000000 HAL_RCC_GetOscConfig
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3030   .text.HAL_RCC_GetOscConfig:000000000000014c $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3035   .text.HAL_RCC_GetClockConfig:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3041   .text.HAL_RCC_GetClockConfig:0000000000000000 HAL_RCC_GetClockConfig
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3094   .text.HAL_RCC_GetClockConfig:0000000000000034 $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3100   .text.HAL_RCC_EnableCSS:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3106   .text.HAL_RCC_EnableCSS:0000000000000000 HAL_RCC_EnableCSS
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3123   .text.HAL_RCC_EnableCSS:000000000000000c $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3128   .text.HAL_RCC_CSSCallback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3134   .text.HAL_RCC_CSSCallback:0000000000000000 HAL_RCC_CSSCallback
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3147   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3153   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 HAL_RCC_NMI_IRQHandler
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3186   .text.HAL_RCC_NMI_IRQHandler:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3191   .text.HAL_RCC_GetResetSource:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3197   .text.HAL_RCC_GetResetSource:0000000000000000 HAL_RCC_GetResetSource
+C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s:3224   .text.HAL_RCC_GetResetSource:0000000000000018 $d
 
 UNDEFINED SYMBOLS
 MSIRangeTable
 HAL_PWREx_GetVoltageRange
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbkha74.s 			page 110
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccIavKMl.s 			page 110
 
 
 HAL_GetTick
