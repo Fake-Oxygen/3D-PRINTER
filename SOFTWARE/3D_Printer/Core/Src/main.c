@@ -73,11 +73,6 @@ static void MX_ADC1_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 uint32_t value[ADC_CHANNELS]; 
-int SER_PutChar(int ch)
-{
-    HAL_UART_Transmit(&hlpuart1, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
-    return 1;
-}
 /* USER CODE END 0 */
 
 /**
@@ -127,7 +122,7 @@ int main(void)
   while (1)
   {
     char buffer[40];
-    sprintf(buffer, "temp: %f\r\n", (GetTemperature(ADC_HOT_END, value[2])));
+    sprintf(buffer, "temp: %f\r\n", (GetTemperature(ADC_STM_TEMP, value[2])));
     HAL_UART_Transmit(&hlpuart1, (uint8_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
     HAL_Delay(200);
     /* USER CODE END WHILE */

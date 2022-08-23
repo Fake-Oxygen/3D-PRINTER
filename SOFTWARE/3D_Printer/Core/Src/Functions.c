@@ -38,5 +38,8 @@ double GetTemperature(uint8_t adc, uint16_t value)
             resistance = val/((ADC_VOLTAGE-val)/HOT_END_RESISTANCE);
             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resistance),3))-KELVIN_OFFSET;
             break;
+        case ADC_STM_TEMP:
+            return ((V30-(ADC_VOLTAGE/ADC_SAMPLING*value))/AVG_SLOPE+30);
+            break;
     }
 }
