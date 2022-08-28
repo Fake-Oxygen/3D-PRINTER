@@ -17,7 +17,7 @@
 #include <string.h>
 #include <errno.h>
 
-int __attribute__((weak)) SER_PutChar (int c) {
+int SER_PutChar (int c) {
 
   return (c);
 }

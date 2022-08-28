@@ -115,16 +115,24 @@ int main(void)
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
   HAL_ADC_Start_DMA(&hadc1, value, ADC_CHANNELS);
+  HAL_TIM_Base_Start(&htim4);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    char buffer[40];
-    sprintf(buffer, "temp: %f\r\n", (GetTemperature(ADC_STM_TEMP, value[2])));
-    HAL_UART_Transmit(&hlpuart1, (uint8_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
+    char buffer[30];
+    sprintf(buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
+    HAL_UART_Transmit(&hlpuart1, (uint16_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
     HAL_Delay(200);
+    // uint16_t speed = 300;
+    if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == 1)
+	  {
+       CHANGE_MOTOR_DIR(E_AXIS_DIR, COUNTERCLOCKWISE);
+       MAKE_MOTOR_STEP(E_AXIS_STEP);
+       DelayMicrosecond(&htim4, 200);
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -552,7 +560,7 @@ static void MX_GPIO_Init(void)
   HAL_PWREx_EnableVddIO2();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_3|GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
@@ -578,8 +586,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PF6 PF7 */
-  GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
+  /*Configure GPIO pins : PF3 PF6 PF7 */
+  GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_6|GPIO_PIN_7;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

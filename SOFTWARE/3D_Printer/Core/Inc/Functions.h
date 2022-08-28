@@ -8,6 +8,6 @@
 #define WRITE_PIN(_pin, _value)		            HAL_GPIO_WritePin(_pin, _value == 0? GPIO_PIN_RESET:GPIO_PIN_SET)
 #define READ_PIN(_pin)					        HAL_GPIO_ReadPin(_pin)
 
-void DelayMicrosecond(TIM_HandleTypeDef *timer, uint8_t time); 
-void SelectDriver(uint8_t axis);
-double GetTemperature(uint8_t adc, uint16_t value);
+void DelayMicrosecond(TIM_HandleTypeDef *timer, uint16_t time); 
+void SelectDriver(uint16_t axis);
+double GetTemperature(uint16_t adc, uint16_t value);
