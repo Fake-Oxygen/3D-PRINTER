@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
   28:Core/Src/stm32l4xx_hal_msp.c **** /* Private typedef -----------------------------------------------------------*/
   29:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE BEGIN TD */
   30:Core/Src/stm32l4xx_hal_msp.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 2
 
 
   31:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE END TD */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
   41 0004 1A6E     		ldr	r2, [r3, #96]
   42 0006 42F00102 		orr	r2, r2, #1
   43 000a 1A66     		str	r2, [r3, #96]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 3
 
 
   44              		.loc 1 72 3 view .LVU4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
   84:Core/Src/stm32l4xx_hal_msp.c **** * This function configures the hardware resources used in this example
   85:Core/Src/stm32l4xx_hal_msp.c **** * @param hadc: ADC handle pointer
   86:Core/Src/stm32l4xx_hal_msp.c **** * @retval None
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 4
 
 
   87:Core/Src/stm32l4xx_hal_msp.c **** */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  104:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1N = 24;
  105:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1P = RCC_PLLP_DIV2;
  106:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1Q = RCC_PLLQ_DIV4;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 5
 
 
  107:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1R = RCC_PLLR_DIV2;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  135              		.loc 1 100 5 is_stmt 1 view .LVU25
  100:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_PLLSAI1;
  136              		.loc 1 100 40 is_stmt 0 view .LVU26
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 6
 
 
  137 0026 4FF48043 		mov	r3, #16384
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  173              	.LVL4:
  109:Core/Src/stm32l4xx_hal_msp.c ****     {
  174              		.loc 1 109 8 view .LVU45
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 7
 
 
  175 0052 0028     		cmp	r0, #0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  123:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
  214              		.loc 1 123 26 is_stmt 0 view .LVU61
  215 0080 0B23     		movs	r3, #11
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 8
 
 
  216 0082 2A93     		str	r3, [sp, #168]
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  136:Core/Src/stm32l4xx_hal_msp.c ****     hdma_adc1.Init.Priority = DMA_PRIORITY_LOW;
  253              		.loc 1 136 5 is_stmt 1 view .LVU79
  136:Core/Src/stm32l4xx_hal_msp.c ****     hdma_adc1.Init.Priority = DMA_PRIORITY_LOW;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 9
 
 
  254              		.loc 1 136 25 is_stmt 0 view .LVU80
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  298              		.align	1
  299              		.global	HAL_ADC_MspDeInit
  300              		.syntax unified
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 10
 
 
  301              		.thumb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  333 001a 0548     		ldr	r0, .L22+8
  334              	.LVL10:
  335              		.loc 1 172 5 is_stmt 0 view .LVU100
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 11
 
 
  336 001c FFF7FEFF 		bl	HAL_GPIO_DeInit
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  374 0002 B0B0     		sub	sp, sp, #192
  375              		.cfi_def_cfa_offset 200
  376 0004 0446     		mov	r4, r0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 12
 
 
  191:Core/Src/stm32l4xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  222:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
  223:Core/Src/stm32l4xx_hal_msp.c **** 
  224:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN LPUART1_MspInit 1 */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 13
 
 
  225:Core/Src/stm32l4xx_hal_msp.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  201:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.Lpuart1ClockSelection = RCC_LPUART1CLKSOURCE_PCLK1;
  415              		.loc 1 201 5 is_stmt 1 view .LVU117
  201:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.Lpuart1ClockSelection = RCC_LPUART1CLKSOURCE_PCLK1;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 14
 
 
  416              		.loc 1 201 40 is_stmt 0 view .LVU118
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  455              		.loc 1 211 5 view .LVU133
  456 005c 029B     		ldr	r3, [sp, #8]
  457              	.LBE7:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 15
 
 
  211:Core/Src/stm32l4xx_hal_msp.c ****     HAL_PWREx_EnableVddIO2();
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  496 0088 0823     		movs	r3, #8
  497 008a 0593     		str	r3, [sp, #20]
  237:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 16
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 16
 
 
  498              		.loc 1 237 5 is_stmt 1 view .LVU150
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  537              		.loc 1 246 5 view .LVU165
  251:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
  538              		.loc 1 251 5 view .LVU166
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 17
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 17
 
 
  251:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  583              		.thumb
  584              		.thumb_func
  586              	HAL_UART_MspDeInit:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 18
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 18
 
 
  587              	.LVL25:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  293:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN UART4_MspDeInit 0 */
  294:Core/Src/stm32l4xx_hal_msp.c **** 
  295:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END UART4_MspDeInit 0 */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 19
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 19
 
 
  296:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock disable */
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  645              	.L43:
  646 0042 00BF     		.align	2
  647              	.L42:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 20
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 20
 
 
  648 0044 00800040 		.word	1073774592
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  683 000e 0CD0     		beq	.L49
  684              	.L44:
  332:Core/Src/stm32l4xx_hal_msp.c ****   {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 21
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 21
 
 
  333:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM4_MspInit 0 */
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  337:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM4_MspInit 1 */
  719              		.loc 1 337 5 view .LVU211
  720 0034 9B6D     		ldr	r3, [r3, #88]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 22
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 22
 
 
  721 0036 03F00403 		and	r3, r3, #4
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  770 0012 0D4B     		ldr	r3, .L56
  771 0014 9A42     		cmp	r2, r3
  772 0016 02D0     		beq	.L55
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 23
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 23
 
 
  773              	.LVL35:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  798              	.LBE12:
  354:Core/Src/stm32l4xx_hal_msp.c ****     /**TIM3 GPIO Configuration
  799              		.loc 1 354 5 view .LVU228
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 24
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 24
 
 
  360:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  379:Core/Src/stm32l4xx_hal_msp.c **** void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
  380:Core/Src/stm32l4xx_hal_msp.c **** {
  840              		.loc 1 380 1 is_stmt 1 view -0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 25
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 25
 
 
  841              		.cfi_startproc
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  869 001e 02F50232 		add	r2, r2, #133120
  870 0022 936D     		ldr	r3, [r2, #88]
  871 0024 23F00403 		bic	r3, r3, #4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 26
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 26
 
 
  872 0028 9365     		str	r3, [r2, #88]
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  917 0014 03A8     		add	r0, sp, #12
  918              	.LVL41:
  919              		.loc 1 415 28 view .LVU256
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 27
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 27
 
 
  920 0016 FFF7FEFF 		bl	memset
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  460:Core/Src/stm32l4xx_hal_msp.c ****     }
  461:Core/Src/stm32l4xx_hal_msp.c ****     else
  462:Core/Src/stm32l4xx_hal_msp.c ****     {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 28
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 28
 
 
  463:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_EnableVddUSB();
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  965 0042 03F00103 		and	r3, r3, #1
  966 0046 0093     		str	r3, [sp]
  431:Core/Src/stm32l4xx_hal_msp.c ****     /**USB_OTG_FS GPIO Configuration
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 29
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 29
 
 
  967              		.loc 1 431 5 view .LVU272
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  448:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(USB_VBUS_GPIO_Port, &GPIO_InitStruct);
  1004              		.loc 1 448 26 is_stmt 0 view .LVU290
  1005 0072 2B95     		str	r5, [sp, #172]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 30
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 30
 
 
  449:Core/Src/stm32l4xx_hal_msp.c **** 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  1045              	.LBE15:
  457:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_EnableVddUSB();
  1046              		.loc 1 457 7 view .LVU306
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 31
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 31
 
 
  458:Core/Src/stm32l4xx_hal_msp.c ****       __HAL_RCC_PWR_CLK_DISABLE();
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  1089              		.loc 1 480 3 view .LVU313
  1090              		.loc 1 480 10 is_stmt 0 view .LVU314
  1091 0000 0368     		ldr	r3, [r0]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 32
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 32
 
 
  1092              		.loc 1 480 5 view .LVU315
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  1124              	.LBB16:
  1125              		.loc 1 501 7 view .LVU325
  1126              		.loc 1 501 7 view .LVU326
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 33
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 33
 
 
  1127 002c A36D     		ldr	r3, [r4, #88]
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  1168              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
  1169              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
  1170              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 34
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 34
 
 
  1171              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h"
@@ -1994,41 +1994,41 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 1
  1181              		.file 15 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
  1182              		.file 16 "Core/Inc/main.h"
  1183              		.file 17 "<built-in>"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s 			page 35
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s 			page 35
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_msp.c
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:20     .text.HAL_MspInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:26     .text.HAL_MspInit:0000000000000000 HAL_MspInit
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:75     .text.HAL_MspInit:000000000000002c $d
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:80     .text.HAL_ADC_MspInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:86     .text.HAL_ADC_MspInit:0000000000000000 HAL_ADC_MspInit
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:289    .text.HAL_ADC_MspInit:00000000000000d0 $d
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:298    .text.HAL_ADC_MspDeInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:304    .text.HAL_ADC_MspDeInit:0000000000000000 HAL_ADC_MspDeInit
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:349    .text.HAL_ADC_MspDeInit:0000000000000028 $d
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:356    .text.HAL_UART_MspInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:362    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:572    .text.HAL_UART_MspInit:00000000000000e0 $d
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:580    .text.HAL_UART_MspDeInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:586    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:648    .text.HAL_UART_MspDeInit:0000000000000044 $d
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:655    .text.HAL_TIM_Base_MspInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:661    .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:732    .text.HAL_TIM_Base_MspInit:0000000000000040 $d
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:739    .text.HAL_TIM_MspPostInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:745    .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:825    .text.HAL_TIM_MspPostInit:0000000000000048 $d
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:831    .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:837    .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:878    .text.HAL_TIM_Base_MspDeInit:000000000000002c $d
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:884    .text.HAL_PCD_MspInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:890    .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:1071   .text.HAL_PCD_MspInit:00000000000000c4 $d
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:1076   .text.HAL_PCD_MspDeInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:1082   .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
-C:\Users\Morroway\AppData\Local\Temp\ccm5Tgm0.s:1162   .text.HAL_PCD_MspDeInit:0000000000000054 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:20     .text.HAL_MspInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:26     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:75     .text.HAL_MspInit:000000000000002c $d
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:80     .text.HAL_ADC_MspInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:86     .text.HAL_ADC_MspInit:0000000000000000 HAL_ADC_MspInit
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:289    .text.HAL_ADC_MspInit:00000000000000d0 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:298    .text.HAL_ADC_MspDeInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:304    .text.HAL_ADC_MspDeInit:0000000000000000 HAL_ADC_MspDeInit
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:349    .text.HAL_ADC_MspDeInit:0000000000000028 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:356    .text.HAL_UART_MspInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:362    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:572    .text.HAL_UART_MspInit:00000000000000e0 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:580    .text.HAL_UART_MspDeInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:586    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:648    .text.HAL_UART_MspDeInit:0000000000000044 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:655    .text.HAL_TIM_Base_MspInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:661    .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:732    .text.HAL_TIM_Base_MspInit:0000000000000040 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:739    .text.HAL_TIM_MspPostInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:745    .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:825    .text.HAL_TIM_MspPostInit:0000000000000048 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:831    .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:837    .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:878    .text.HAL_TIM_Base_MspDeInit:000000000000002c $d
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:884    .text.HAL_PCD_MspInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:890    .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:1071   .text.HAL_PCD_MspInit:00000000000000c4 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:1076   .text.HAL_PCD_MspDeInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:1082   .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
+C:\Users\Morroway\AppData\Local\Temp\ccNrPErW.s:1162   .text.HAL_PCD_MspDeInit:0000000000000054 $d
 
 UNDEFINED SYMBOLS
 memset

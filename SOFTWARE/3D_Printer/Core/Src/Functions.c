@@ -43,3 +43,23 @@ double GetTemperature(uint16_t adc, uint16_t value)
             break;
     }
 }
+
+void SetHeating(uint16_t heater, uint16_t power)
+{
+    switch(heater)
+    {
+        case HOT_END:
+            TIM3->CCR2 = power;
+            break;
+    }
+}
+
+void SetFanSpeed(uint16_t fan, uint16_t speed)
+{
+    switch(fan)
+    {
+        case HOT_END_FAN:
+            TIM3->CCR3 = speed;
+            break;
+    }
+}

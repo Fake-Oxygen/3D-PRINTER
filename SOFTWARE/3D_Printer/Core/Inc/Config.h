@@ -37,3 +37,5 @@
 #define KELVIN_OFFSET 273.15
 #define V30 0.76
 #define AVG_SLOPE 0.0025
+#define HOT_END_FAN 0
+#define HOT_END 0

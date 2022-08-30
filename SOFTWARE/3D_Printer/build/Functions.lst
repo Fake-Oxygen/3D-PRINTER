@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
   49 000e 7047     		bx	lr
   50              		.cfi_endproc
   51              	.LFE321:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s 			page 2
 
 
   53              		.section	.text.SelectDriver,"ax",%progbits
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
   16:Core/Src/Functions.c ****         case Y_AXIS:
   17:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_A, 1);
   18:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_B, 0);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s 			page 3
 
 
   19:Core/Src/Functions.c ****             break;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  136 0050 FFF7FEFF 		bl	HAL_GPIO_WritePin
  137              	.LVL12:
   23:Core/Src/Functions.c ****         case Z_AXIS:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s 			page 4
 
 
  138              		.loc 1 23 13 view .LVU22
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  187 0000 38B5     		push	{r3, r4, r5, lr}
  188              		.cfi_def_cfa_offset 16
  189              		.cfi_offset 3, -16
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s 			page 5
 
 
  190              		.cfi_offset 4, -12
@@ -271,7 +271,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
   42:Core/Src/Functions.c ****             return ((V30-(ADC_VOLTAGE/ADC_SAMPLING*value))/AVG_SLOPE+30);
   43:Core/Src/Functions.c ****             break;
   44:Core/Src/Functions.c ****     }
-  45:Core/Src/Functions.c **** }...
+  45:Core/Src/Functions.c **** }
  208              		.loc 1 45 1 is_stmt 0 view .LVU32
  209 0012 BDEC028B 		vldm	sp!, {d8}
  210              		.cfi_remember_state
@@ -282,13 +282,13 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  215              	.LVL20:
  216              	.L15:
  217              		.cfi_restore_state
-  37:Core/Src/Functions.c ****             val = (ADC_VOLTAGE/ADC_SAMPLING)*value;
+  37:Core/Src/Functions.c ****             resistance = val/((ADC_VOLTAGE-val)/HOT_END_RESISTANCE);
  218              		.loc 1 37 13 is_stmt 1 view .LVU33
-  37:Core/Src/Functions.c ****             val = (ADC_VOLTAGE/ADC_SAMPLING)*value;
+  37:Core/Src/Functions.c ****             resistance = val/((ADC_VOLTAGE-val)/HOT_END_RESISTANCE);
  219              		.loc 1 37 45 is_stmt 0 view .LVU34
  220 0018 FFF7FEFF 		bl	__aeabi_i2d
  221              	.LVL21:
-  37:Core/Src/Functions.c ****             val = (ADC_VOLTAGE/ADC_SAMPLING)*value;
+  37:Core/Src/Functions.c ****             resistance = val/((ADC_VOLTAGE-val)/HOT_END_RESISTANCE);
  222              		.loc 1 37 17 view .LVU35
  223 001c 3AA3     		adr	r3, .L21+16
  224 001e D3E90023 		ldrd	r2, [r3]
@@ -297,12 +297,12 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  227 0026 0446     		mov	r4, r0
  228 0028 0D46     		mov	r5, r1
  229              	.LVL23:
-  38:Core/Src/Functions.c ****             resistance = val/((ADC_VOLTAGE-val)/HOT_END_RESISTANCE);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 6
+  38:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s 			page 6
 
 
  230              		.loc 1 38 13 is_stmt 1 view .LVU36
-  38:Core/Src/Functions.c ****             resistance = val/((ADC_VOLTAGE-val)/HOT_END_RESISTANCE);
+  38:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
  231              		.loc 1 38 43 is_stmt 0 view .LVU37
  232 002a 0246     		mov	r2, r0
  233 002c 0B46     		mov	r3, r1
@@ -310,7 +310,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  235 0030 D1E90001 		ldrd	r0, [r1]
  236 0034 FFF7FEFF 		bl	__aeabi_dsub
  237              	.LVL24:
-  38:Core/Src/Functions.c ****             resistance = val/((ADC_VOLTAGE-val)/HOT_END_RESISTANCE);
+  38:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
  238              		.loc 1 38 48 view .LVU38
  239 0038 3DA3     		adr	r3, .L21+56
  240 003a D3E90023 		ldrd	r2, [r3]
@@ -318,7 +318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  242              	.LVL25:
  243 0042 0246     		mov	r2, r0
  244 0044 0B46     		mov	r3, r1
-  38:Core/Src/Functions.c ****             resistance = val/((ADC_VOLTAGE-val)/HOT_END_RESISTANCE);
+  38:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
  245              		.loc 1 38 24 view .LVU39
  246 0046 2046     		mov	r0, r4
  247 0048 2946     		mov	r1, r5
@@ -326,23 +326,23 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  249              	.LVL26:
  250 004e 41EC180B 		vmov	d8, r0, r1
  251              	.LVL27:
-  39:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
+  39:Core/Src/Functions.c ****             break;
  252              		.loc 1 39 13 is_stmt 1 view .LVU40
-  39:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
+  39:Core/Src/Functions.c ****             break;
  253              		.loc 1 39 55 is_stmt 0 view .LVU41
  254 0052 41EC100B 		vmov	d0, r0, r1
  255 0056 FFF7FEFF 		bl	log
  256              	.LVL28:
-  39:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
+  39:Core/Src/Functions.c ****             break;
  257              		.loc 1 39 55 view .LVU42
  258 005a 51EC100B 		vmov	r0, r1, d0
-  39:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
+  39:Core/Src/Functions.c ****             break;
  259              		.loc 1 39 54 view .LVU43
  260 005e 36A3     		adr	r3, .L21+64
  261 0060 D3E90023 		ldrd	r2, [r3]
  262 0064 FFF7FEFF 		bl	__aeabi_dmul
  263              	.LVL29:
-  39:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
+  39:Core/Src/Functions.c ****             break;
  264              		.loc 1 39 38 view .LVU44
  265 0068 35A3     		adr	r3, .L21+72
  266 006a D3E90023 		ldrd	r2, [r3]
@@ -350,15 +350,15 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  268              	.LVL30:
  269 0072 0446     		mov	r4, r0
  270              	.LVL31:
-  39:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
+  39:Core/Src/Functions.c ****             break;
  271              		.loc 1 39 38 view .LVU45
  272 0074 0D46     		mov	r5, r1
-  39:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
+  39:Core/Src/Functions.c ****             break;
  273              		.loc 1 39 87 view .LVU46
  274 0076 B0EE480A 		vmov.f32	s0, s16
  275 007a F0EE680A 		vmov.f32	s1, s17
  276 007e FFF7FEFF 		bl	log
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s 			page 7
 
 
  277              	.LVL32:
@@ -366,7 +366,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  279 0086 FFF7FEFF 		bl	pow
  280              	.LVL33:
  281 008a 51EC100B 		vmov	r0, r1, d0
-  39:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
+  39:Core/Src/Functions.c ****             break;
  282              		.loc 1 39 86 view .LVU47
  283 008e 2EA3     		adr	r3, .L21+80
  284 0090 D3E90023 		ldrd	r2, [r3]
@@ -374,7 +374,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  286              	.LVL34:
  287 0098 0246     		mov	r2, r0
  288 009a 0B46     		mov	r3, r1
-  39:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
+  39:Core/Src/Functions.c ****             break;
  289              		.loc 1 39 70 view .LVU48
  290 009c 2046     		mov	r0, r4
  291 009e 2946     		mov	r1, r5
@@ -382,13 +382,13 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  293              	.LVL35:
  294 00a4 0246     		mov	r2, r0
  295 00a6 0B46     		mov	r3, r1
-  39:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
+  39:Core/Src/Functions.c ****             break;
  296              		.loc 1 39 21 view .LVU49
  297 00a8 0020     		movs	r0, #0
  298 00aa 1D49     		ldr	r1, .L21+40
  299 00ac FFF7FEFF 		bl	__aeabi_ddiv
  300              	.LVL36:
-  39:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
+  39:Core/Src/Functions.c ****             break;
  301              		.loc 1 39 110 view .LVU50
  302 00b0 13A3     		adr	r3, .L21+8
  303 00b2 D3E90023 		ldrd	r2, [r3]
@@ -398,15 +398,15 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  307 00be A8E7     		b	.L14
  308              	.LVL38:
  309              	.L16:
-  40:Core/Src/Functions.c ****             break;
+  40:Core/Src/Functions.c ****         case ADC_STM_TEMP:
  310              		.loc 1 40 13 is_stmt 1 view .LVU51
-  42:Core/Src/Functions.c ****             return ((V30-(ADC_VOLTAGE/ADC_SAMPLING*value))/AVG_SLOPE+30);
+  42:Core/Src/Functions.c ****             break;
  311              		.loc 1 42 13 view .LVU52
-  42:Core/Src/Functions.c ****             return ((V30-(ADC_VOLTAGE/ADC_SAMPLING*value))/AVG_SLOPE+30);
+  42:Core/Src/Functions.c ****             break;
  312              		.loc 1 42 51 is_stmt 0 view .LVU53
  313 00c0 FFF7FEFF 		bl	__aeabi_i2d
  314              	.LVL39:
-  42:Core/Src/Functions.c ****             return ((V30-(ADC_VOLTAGE/ADC_SAMPLING*value))/AVG_SLOPE+30);
+  42:Core/Src/Functions.c ****             break;
  315              		.loc 1 42 51 view .LVU54
  316 00c4 10A3     		adr	r3, .L21+16
  317 00c6 D3E90023 		ldrd	r2, [r3]
@@ -414,22 +414,22 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  319              	.LVL40:
  320 00ce 0246     		mov	r2, r0
  321 00d0 0B46     		mov	r3, r1
-  42:Core/Src/Functions.c ****             return ((V30-(ADC_VOLTAGE/ADC_SAMPLING*value))/AVG_SLOPE+30);
+  42:Core/Src/Functions.c ****             break;
  322              		.loc 1 42 25 view .LVU55
  323 00d2 0FA1     		adr	r1, .L21+24
  324 00d4 D1E90001 		ldrd	r0, [r1]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s 			page 8
 
 
  325 00d8 FFF7FEFF 		bl	__aeabi_dsub
  326              	.LVL41:
-  42:Core/Src/Functions.c ****             return ((V30-(ADC_VOLTAGE/ADC_SAMPLING*value))/AVG_SLOPE+30);
+  42:Core/Src/Functions.c ****             break;
  327              		.loc 1 42 59 view .LVU56
  328 00dc 0EA3     		adr	r3, .L21+32
  329 00de D3E90023 		ldrd	r2, [r3]
  330 00e2 FFF7FEFF 		bl	__aeabi_ddiv
  331              	.LVL42:
-  42:Core/Src/Functions.c ****             return ((V30-(ADC_VOLTAGE/ADC_SAMPLING*value))/AVG_SLOPE+30);
+  42:Core/Src/Functions.c ****             break;
  332              		.loc 1 42 69 view .LVU57
  333 00e6 0022     		movs	r2, #0
  334 00e8 0E4B     		ldr	r3, .L21+44
@@ -464,31 +464,123 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 1
  363 014c E7517C3E 		.word	1048334823
  364              		.cfi_endproc
  365              	.LFE323:
- 367              		.text
- 368              	.Letext0:
- 369              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 370              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 371              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
- 372              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
- 373              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
- 374              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
- 375              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h"
- 376              		.file 9 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s 			page 9
+ 367              		.section	.text.SetHeating,"ax",%progbits
+ 368              		.align	1
+ 369              		.global	SetHeating
+ 370              		.syntax unified
+ 371              		.thumb
+ 372              		.thumb_func
+ 374              	SetHeating:
+ 375              	.LVL44:
+ 376              	.LFB324:
+  46:Core/Src/Functions.c **** 
+  47:Core/Src/Functions.c **** void SetHeating(uint16_t heater, uint16_t power)
+  48:Core/Src/Functions.c **** {
+ 377              		.loc 1 48 1 is_stmt 1 view -0
+ 378              		.cfi_startproc
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s 			page 9
+
+
+ 379              		@ args = 0, pretend = 0, frame = 0
+ 380              		@ frame_needed = 0, uses_anonymous_args = 0
+ 381              		@ link register save eliminated.
+  49:Core/Src/Functions.c ****     switch(heater)
+ 382              		.loc 1 49 5 view .LVU59
+ 383 0000 08B9     		cbnz	r0, .L23
+  50:Core/Src/Functions.c ****     {
+  51:Core/Src/Functions.c ****         case HOT_END:
+  52:Core/Src/Functions.c ****             TIM3->CCR2 = power;
+ 384              		.loc 1 52 13 view .LVU60
+ 385              		.loc 1 52 24 is_stmt 0 view .LVU61
+ 386 0002 014B     		ldr	r3, .L25
+ 387 0004 9963     		str	r1, [r3, #56]
+  53:Core/Src/Functions.c ****             break;
+ 388              		.loc 1 53 13 is_stmt 1 view .LVU62
+ 389              	.L23:
+  54:Core/Src/Functions.c ****     }
+  55:Core/Src/Functions.c **** }
+ 390              		.loc 1 55 1 is_stmt 0 view .LVU63
+ 391 0006 7047     		bx	lr
+ 392              	.L26:
+ 393              		.align	2
+ 394              	.L25:
+ 395 0008 00040040 		.word	1073742848
+ 396              		.cfi_endproc
+ 397              	.LFE324:
+ 399              		.section	.text.SetFanSpeed,"ax",%progbits
+ 400              		.align	1
+ 401              		.global	SetFanSpeed
+ 402              		.syntax unified
+ 403              		.thumb
+ 404              		.thumb_func
+ 406              	SetFanSpeed:
+ 407              	.LVL45:
+ 408              	.LFB325:
+  56:Core/Src/Functions.c **** 
+  57:Core/Src/Functions.c **** void SetFanSpeed(uint16_t fan, uint16_t speed)
+  58:Core/Src/Functions.c **** {
+ 409              		.loc 1 58 1 is_stmt 1 view -0
+ 410              		.cfi_startproc
+ 411              		@ args = 0, pretend = 0, frame = 0
+ 412              		@ frame_needed = 0, uses_anonymous_args = 0
+ 413              		@ link register save eliminated.
+  59:Core/Src/Functions.c ****     switch(fan)
+ 414              		.loc 1 59 5 view .LVU65
+ 415 0000 08B9     		cbnz	r0, .L27
+  60:Core/Src/Functions.c ****     {
+  61:Core/Src/Functions.c ****         case HOT_END_FAN:
+  62:Core/Src/Functions.c ****             TIM3->CCR3 = speed;
+ 416              		.loc 1 62 13 view .LVU66
+ 417              		.loc 1 62 24 is_stmt 0 view .LVU67
+ 418 0002 014B     		ldr	r3, .L29
+ 419 0004 D963     		str	r1, [r3, #60]
+  63:Core/Src/Functions.c ****             break;
+ 420              		.loc 1 63 13 is_stmt 1 view .LVU68
+ 421              	.L27:
+  64:Core/Src/Functions.c ****     }
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s 			page 10
+
+
+  65:Core/Src/Functions.c **** }...
+ 422              		.loc 1 65 1 is_stmt 0 view .LVU69
+ 423 0006 7047     		bx	lr
+ 424              	.L30:
+ 425              		.align	2
+ 426              	.L29:
+ 427 0008 00040040 		.word	1073742848
+ 428              		.cfi_endproc
+ 429              	.LFE325:
+ 431              		.text
+ 432              	.Letext0:
+ 433              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 434              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 435              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+ 436              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 437              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 438              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 439              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h"
+ 440              		.file 9 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Functions.c
-C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s:20     .text.DelayMicrosecond:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s:26     .text.DelayMicrosecond:0000000000000000 DelayMicrosecond
-C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s:54     .text.SelectDriver:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s:60     .text.SelectDriver:0000000000000000 SelectDriver
-C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s:77     .text.SelectDriver:000000000000000a $d
-C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s:81     .text.SelectDriver:000000000000000e $t
-C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s:163    .text.SelectDriver:0000000000000070 $d
-C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s:173    .text.GetTemperature:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s:179    .text.GetTemperature:0000000000000000 GetTemperature
-C:\Users\Morroway\AppData\Local\Temp\ccr4G9bp.s:342    .text.GetTemperature:00000000000000f8 $d
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:20     .text.DelayMicrosecond:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:26     .text.DelayMicrosecond:0000000000000000 DelayMicrosecond
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:54     .text.SelectDriver:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:60     .text.SelectDriver:0000000000000000 SelectDriver
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:77     .text.SelectDriver:000000000000000a $d
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:81     .text.SelectDriver:000000000000000e $t
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:163    .text.SelectDriver:0000000000000070 $d
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:173    .text.GetTemperature:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:179    .text.GetTemperature:0000000000000000 GetTemperature
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:342    .text.GetTemperature:00000000000000f8 $d
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:368    .text.SetHeating:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:374    .text.SetHeating:0000000000000000 SetHeating
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:395    .text.SetHeating:0000000000000008 $d
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:400    .text.SetFanSpeed:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:406    .text.SetFanSpeed:0000000000000000 SetFanSpeed
+C:\Users\Morroway\AppData\Local\Temp\cc3HnpbQ.s:427    .text.SetFanSpeed:0000000000000008 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin

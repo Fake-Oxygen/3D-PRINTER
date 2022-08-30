@@ -125,13 +125,18 @@ int main(void)
     char buffer[30];
     sprintf(buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
     HAL_UART_Transmit(&hlpuart1, (uint16_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
-    HAL_Delay(200);
+    // HAL_Delay(200);
     // uint16_t speed = 300;
+    // TIM3->CCR3 = 100;
+    
+    SetFanSpeed(HOT_END_FAN, 100);
     if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == 1)
 	  {
-       CHANGE_MOTOR_DIR(E_AXIS_DIR, COUNTERCLOCKWISE);
-       MAKE_MOTOR_STEP(E_AXIS_STEP);
-       DelayMicrosecond(&htim4, 200);
+      CHANGE_MOTOR_DIR(E_AXIS_DIR, COUNTERCLOCKWISE);
+      MAKE_MOTOR_STEP(E_AXIS_STEP);
+      DelayMicrosecond(&htim4, 200);
+      SetHeating(HOT_END, 30);
+      SetFanSpeed(HOT_END_FAN, 50);
 	  }
     /* USER CODE END WHILE */
 
@@ -248,7 +253,7 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_1;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_247CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
@@ -270,7 +275,6 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_TEMPSENSOR;
   sConfig.Rank = ADC_REGULAR_RANK_3;
-  sConfig.SamplingTime = ADC_SAMPLETIME_247CYCLES_5;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -305,7 +309,8 @@ static void MX_LPUART1_UART_Init(void)
   hlpuart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
   hlpuart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
   hlpuart1.Init.ClockPrescaler = UART_PRESCALER_DIV1;
-  hlpuart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  hlpuart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_RXOVERRUNDISABLE_INIT;
+  hlpuart1.AdvancedInit.OverrunDisable = UART_ADVFEATURE_OVERRUN_DISABLE;
   hlpuart1.FifoMode = UART_FIFOMODE_DISABLE;
   if (HAL_UART_Init(&hlpuart1) != HAL_OK)
   {
@@ -401,7 +406,7 @@ static void MX_TIM3_Init(void)
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim3.Init.Period = 99;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
   {
     Error_Handler();
