@@ -63,3 +63,4 @@ void SetFanSpeed(uint16_t fan, uint16_t speed)
             break;
     }
 }
+

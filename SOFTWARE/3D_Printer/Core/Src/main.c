@@ -24,6 +24,7 @@
 #include "Config.h"
 #include "Functions.h"
 #include <stdio.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +47,7 @@ DMA_HandleTypeDef hdma_adc1;
 
 UART_HandleTypeDef hlpuart1;
 UART_HandleTypeDef huart4;
+DMA_HandleTypeDef hdma_lpuart1_rx;
 
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
@@ -67,12 +69,41 @@ static void MX_UART4_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_ADC1_Init(void);
 /* USER CODE BEGIN PFP */
-
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 uint32_t value[ADC_CHANNELS]; 
+uint8_t RxBuf[RxBuf_SIZE];
+uint8_t MainBuf[MainBuf_SIZE];
+uint16_t oldPos = 0;
+uint16_t newPos = 0;
+int isOK = 0;
+
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+{
+  if (huart->Instance == LPUART1)
+	{
+		oldPos = newPos; 
+
+		if (oldPos+Size > MainBuf_SIZE) 
+		{
+			uint16_t datatocopy = MainBuf_SIZE-oldPos; 
+			memcpy ((uint8_t *)MainBuf+oldPos, RxBuf, datatocopy);  
+			oldPos = 0;
+			memcpy ((uint8_t *)MainBuf, (uint8_t *)RxBuf+datatocopy, (Size-datatocopy)); 
+			newPos = (Size-datatocopy);  
+		}
+		else
+		{
+			memcpy ((uint8_t *)MainBuf+oldPos, RxBuf, Size);
+			newPos = Size+oldPos;
+		}
+		HAL_UARTEx_ReceiveToIdle_DMA(&hlpuart1, (uint8_t *) RxBuf, RxBuf_SIZE);
+		__HAL_DMA_DISABLE_IT(&hdma_lpuart1_rx, DMA_IT_HT);
+
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -116,19 +147,25 @@ int main(void)
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
   HAL_ADC_Start_DMA(&hadc1, value, ADC_CHANNELS);
   HAL_TIM_Base_Start(&htim4);
+  HAL_UARTEx_ReceiveToIdle_DMA(&hlpuart1, RxBuf, RxBuf_SIZE);
+  __HAL_DMA_DISABLE_IT(&hdma_lpuart1_rx, DMA_IT_HT);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    char buffer[30];
-    sprintf(buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
-    HAL_UART_Transmit(&hlpuart1, (uint16_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
+
     // HAL_Delay(200);
     // uint16_t speed = 300;
     // TIM3->CCR3 = 100;
-    
+      // char buffer[30];
+ 
+
+
+    // sprintf(buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
+    // HAL_UART_Transmit(&hlpuart1, (uint16_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
+
     SetFanSpeed(HOT_END_FAN, 100);
     if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == 1)
 	  {
@@ -542,6 +579,9 @@ static void MX_DMA_Init(void)
   /* DMA1_Channel1_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+  /* DMA1_Channel2_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
 
 }
 
