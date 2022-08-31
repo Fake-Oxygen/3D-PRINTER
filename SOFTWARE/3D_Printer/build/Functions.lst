@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 1
   49 000e 7047     		bx	lr
   50              		.cfi_endproc
   51              	.LFE321:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s 			page 2
 
 
   53              		.section	.text.SelectDriver,"ax",%progbits
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 1
   16:Core/Src/Functions.c ****         case Y_AXIS:
   17:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_A, 1);
   18:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_B, 0);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s 			page 3
 
 
   19:Core/Src/Functions.c ****             break;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 1
  136 0050 FFF7FEFF 		bl	HAL_GPIO_WritePin
  137              	.LVL12:
   23:Core/Src/Functions.c ****         case Z_AXIS:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s 			page 4
 
 
  138              		.loc 1 23 13 view .LVU22
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 1
  187 0000 38B5     		push	{r3, r4, r5, lr}
  188              		.cfi_def_cfa_offset 16
  189              		.cfi_offset 3, -16
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s 			page 5
 
 
  190              		.cfi_offset 4, -12
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 1
  228 0028 0D46     		mov	r5, r1
  229              	.LVL23:
   38:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s 			page 6
 
 
  230              		.loc 1 38 13 is_stmt 1 view .LVU36
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 1
  274 0076 B0EE480A 		vmov.f32	s0, s16
  275 007a F0EE680A 		vmov.f32	s1, s17
  276 007e FFF7FEFF 		bl	log
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s 			page 7
 
 
  277              	.LVL32:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 1
  322              		.loc 1 42 25 view .LVU55
  323 00d2 0FA1     		adr	r1, .L21+24
  324 00d4 D1E90001 		ldrd	r0, [r1]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s 			page 8
 
 
  325 00d8 FFF7FEFF 		bl	__aeabi_dsub
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 1
   48:Core/Src/Functions.c **** {
  377              		.loc 1 48 1 is_stmt 1 view -0
  378              		.cfi_startproc
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s 			page 9
 
 
  379              		@ args = 0, pretend = 0, frame = 0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 1
  420              		.loc 1 63 13 is_stmt 1 view .LVU68
  421              	.L27:
   64:Core/Src/Functions.c ****     }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s 			page 10
 
 
   65:Core/Src/Functions.c **** }
@@ -560,27 +560,27 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 1
  438              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
  439              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h"
  440              		.file 9 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Functions.c
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:20     .text.DelayMicrosecond:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:26     .text.DelayMicrosecond:0000000000000000 DelayMicrosecond
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:54     .text.SelectDriver:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:60     .text.SelectDriver:0000000000000000 SelectDriver
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:77     .text.SelectDriver:000000000000000a $d
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:81     .text.SelectDriver:000000000000000e $t
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:163    .text.SelectDriver:0000000000000070 $d
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:173    .text.GetTemperature:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:179    .text.GetTemperature:0000000000000000 GetTemperature
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:342    .text.GetTemperature:00000000000000f8 $d
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:368    .text.SetHeating:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:374    .text.SetHeating:0000000000000000 SetHeating
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:395    .text.SetHeating:0000000000000008 $d
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:400    .text.SetFanSpeed:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:406    .text.SetFanSpeed:0000000000000000 SetFanSpeed
-C:\Users\Morroway\AppData\Local\Temp\ccH3rAC0.s:427    .text.SetFanSpeed:0000000000000008 $d
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:20     .text.DelayMicrosecond:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:26     .text.DelayMicrosecond:0000000000000000 DelayMicrosecond
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:54     .text.SelectDriver:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:60     .text.SelectDriver:0000000000000000 SelectDriver
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:77     .text.SelectDriver:000000000000000a $d
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:81     .text.SelectDriver:000000000000000e $t
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:163    .text.SelectDriver:0000000000000070 $d
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:173    .text.GetTemperature:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:179    .text.GetTemperature:0000000000000000 GetTemperature
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:342    .text.GetTemperature:00000000000000f8 $d
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:368    .text.SetHeating:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:374    .text.SetHeating:0000000000000000 SetHeating
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:395    .text.SetHeating:0000000000000008 $d
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:400    .text.SetFanSpeed:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:406    .text.SetFanSpeed:0000000000000000 SetFanSpeed
+C:\Users\Morroway\AppData\Local\Temp\ccB0hfRz.s:427    .text.SetFanSpeed:0000000000000008 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin

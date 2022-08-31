@@ -39,5 +39,4 @@
 #define AVG_SLOPE 0.0025
 #define HOT_END_FAN 0
 #define HOT_END 0
-#define RxBuf_SIZE	10
-#define MainBuf_SIZE 20
+#define RxBuf_SIZE	20

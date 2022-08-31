@@ -75,30 +75,11 @@ static void MX_ADC1_Init(void);
 /* USER CODE BEGIN 0 */
 uint32_t value[ADC_CHANNELS]; 
 uint8_t RxBuf[RxBuf_SIZE];
-uint8_t MainBuf[MainBuf_SIZE];
-uint16_t oldPos = 0;
-uint16_t newPos = 0;
-int isOK = 0;
 
 void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {
   if (huart->Instance == LPUART1)
 	{
-		oldPos = newPos; 
-
-		if (oldPos+Size > MainBuf_SIZE) 
-		{
-			uint16_t datatocopy = MainBuf_SIZE-oldPos; 
-			memcpy ((uint8_t *)MainBuf+oldPos, RxBuf, datatocopy);  
-			oldPos = 0;
-			memcpy ((uint8_t *)MainBuf, (uint8_t *)RxBuf+datatocopy, (Size-datatocopy)); 
-			newPos = (Size-datatocopy);  
-		}
-		else
-		{
-			memcpy ((uint8_t *)MainBuf+oldPos, RxBuf, Size);
-			newPos = Size+oldPos;
-		}
 		HAL_UARTEx_ReceiveToIdle_DMA(&hlpuart1, (uint8_t *) RxBuf, RxBuf_SIZE);
 		__HAL_DMA_DISABLE_IT(&hdma_lpuart1_rx, DMA_IT_HT);
 
@@ -159,13 +140,22 @@ int main(void)
     // HAL_Delay(200);
     // uint16_t speed = 300;
     // TIM3->CCR3 = 100;
-      // char buffer[30];
- 
-
-
+     char buffer[30];
     // sprintf(buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
     // HAL_UART_Transmit(&hlpuart1, (uint16_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
-
+    switch(RxBuf[0])
+    {
+      case 'G':
+        sprintf(buffer, "temp: %c\r\n", RxBuf[0]);
+        HAL_UART_Transmit(&hlpuart1, (uint16_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
+        RxBuf[0] = '0';
+        break;
+      case 'M':
+        sprintf(buffer, "temp: %c\r\n", RxBuf[0]);
+        HAL_UART_Transmit(&hlpuart1, (uint16_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
+        RxBuf[0] = '0';
+        break;
+    }
     SetFanSpeed(HOT_END_FAN, 100);
     if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == 1)
 	  {
