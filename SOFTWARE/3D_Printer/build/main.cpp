@@ -86,10 +86,9 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 	}
 }
 
-void print()
+void print(uint16_t msg)
 {
-      sprintf(msg_buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
-      HAL_UART_Transmit(&hlpuart1, (uint16_t*)msg_buffer, strlen(msg_buffer), HAL_MAX_DELAY);
+      HAL_UART_Transmit(&hlpuart1, (uint16_t*)msg, strlen(msg), HAL_MAX_DELAY);
 }
 /* USER CODE END 0 */
 

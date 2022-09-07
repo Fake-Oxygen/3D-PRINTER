@@ -37,6 +37,8 @@ BUILD_DIR = build
 # C sources
 C_SOURCES =  \
 Core/Src/Functions.c \
+Core/Src/GCodes.c \
+Core/Src/Parser.c \
 Core/Src/main.c \
 Core/Src/stm32l4xx_hal_msp.c \
 Core/Src/stm32l4xx_it.c \

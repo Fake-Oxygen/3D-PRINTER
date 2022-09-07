@@ -31,6 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "Config.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -54,7 +55,9 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+static char msg_buffer[30];
+static uint32_t value[ADC_CHANNELS]; 
+static uint8_t RxBuf[RxBuf_SIZE];
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
