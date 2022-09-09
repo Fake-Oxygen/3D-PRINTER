@@ -40,3 +40,4 @@
 #define HOT_END_FAN 0
 #define HOT_END 0
 #define RxBuf_SIZE	20
+//#define REDUNDANT_TEMP_SENSOR

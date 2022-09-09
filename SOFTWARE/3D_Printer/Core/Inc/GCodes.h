@@ -13,7 +13,15 @@
 //  M107: Fan Off
 //  M109: Wait for Hotend Temperature
 //  M118: Serial print
+//  M155: Temperature Auto-Report
+#ifndef GCodes_H
+#define GCodes_H
 
+#include "Config.h"
+#include "Functions.h"
 #include "main.h"
 
-void M105(uint16_t R, uint16_t T);
+
+void M105(int R, int T);
+int M155(int S);
+#endif

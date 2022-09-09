@@ -3,6 +3,7 @@
     {
       "name": "STM32",
       "includePath": [
+        "${workspaceFolder}/**",
         "Core/Inc",
         "Core/Src",
         "Drivers/CMSIS/Device/ST/STM32L4xx/Include",
@@ -11,11 +12,20 @@
         "Drivers/STM32L4xx_HAL_Driver/Inc/Legacy"
       ],
       "defines": [
+        "DSTM32L4P5xx",
+        "DUSE_HAL_DRIVER",
         "STM32L4P5xx",
         "USE_HAL_DRIVER"
       ],
       "compilerPath": "C:\\USERS\\MORROWAY\\APPDATA\\ROAMING\\CODE\\USER\\GLOBALSTORAGE\\BMD.STM32-FOR-VSCODE\\@XPACK-DEV-TOOLS\\ARM-NONE-EABI-GCC\\11.2.1-1.2.2\\.CONTENT\\BIN\\ARM-NONE-EABI-GCC.EXE",
-      "configurationProvider": "ms-vscode.makefile-tools"
+      "configurationProvider": "ms-vscode.makefile-tools",
+      "intelliSenseMode": "gcc-arm",
+      "compilerArgs": [
+        "-mcpu=cortex-m4",
+        "-mthumb"
+      ],
+      "cStandard": "c11",
+      "cppStandard": "c++17"
     }
   ],
   "version": 4

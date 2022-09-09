@@ -1,6 +1,6 @@
-#include "main.h"
 #include "Config.h"
 #include <math.h>
+#include "main.h"
 
 #define CHANGE_MOTOR_DIR(axis_dir, dir)         HAL_GPIO_WritePin(axis_dir,dir);
 #define MAKE_MOTOR_STEP(axis_step)              HAL_GPIO_TogglePin(axis_step);

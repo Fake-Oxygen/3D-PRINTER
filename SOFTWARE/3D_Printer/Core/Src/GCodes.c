@@ -1,10 +1,17 @@
 #include "GCodes.h"
-#include "Config.h"
-#include "main.h"
-#include "Functions.h"
 
-void M105(uint16_t R, uint16_t T)
+void M105(int R, int T)
 {
-    
-    print();
+    print_temperature();
+    #ifdef REDUNDANT_TEMP_SENSOR
+    if(R != -1)
+    {
+        
+    }
+    #endif
+}
+
+int M155(int S)
+{
+    return S*1000;
 }

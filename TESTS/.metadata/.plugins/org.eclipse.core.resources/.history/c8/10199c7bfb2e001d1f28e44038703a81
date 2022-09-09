@@ -1,0 +1,52 @@
+#include "Parser.h"
+#include "GCodes.h"
+
+void get_command(char buf[])
+{
+    split_gcode(buf);
+    command = strtok(buf, delim);
+    switch(command[0])
+    {
+        case 'M':
+        HAL_Delay(1);
+        switch(get_argument(command))
+        {
+            case 105:
+                M105(R, T);
+                break;
+            case 155:
+                M155(S);
+                break;
+        }
+            break;
+    }
+    memset(&command[0], 0, sizeof(command));
+}
+
+uint16_t get_argument(char arg[])
+{
+    return atoi(arg+1);
+}
+
+void split_gcode(char buf[])
+{
+    char *buf2;
+    buf2 = strtok(buf, " ");
+    while(buf2 != NULL)
+    {
+        
+        switch(buf2[0])
+        {
+            case 'R':
+                R = get_argument(buf);
+                break;
+            case 'T':
+                T = get_argument(buf);
+                break;
+            case 'S':
+                S = get_argument(buf);
+                break;
+        }
+        buf2 = strtok(NULL, " ");
+    }
+}
