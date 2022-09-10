@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -53,43 +53,39 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s 			page 1
   54      00000000 
   54      00000000 
   54      00000000 
-  55              		.section	.bss.interval,"aw",%nobits
+  55              		.section	.text.M105,"ax",%progbits
   56              		.align	1
-  59              	interval:
-  60 0000 0000     		.space	2
-  61              		.section	.text.M105,"ax",%progbits
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s 			page 2
+  57              		.global	M105
+  58              		.syntax unified
+  59              		.thumb
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s 			page 2
 
 
-  62              		.align	1
-  63              		.global	M105
-  64              		.syntax unified
-  65              		.thumb
-  66              		.thumb_func
-  68              	M105:
-  69              	.LFB321:
-  70              		.file 1 "Core/Src/GCodes.c"
+  60              		.thumb_func
+  62              	M105:
+  63              	.LFB321:
+  64              		.file 1 "Core/Src/GCodes.c"
    1:Core/Src/GCodes.c **** #include "GCodes.h"
    2:Core/Src/GCodes.c **** 
    3:Core/Src/GCodes.c **** void M105(int R, int T)
    4:Core/Src/GCodes.c **** {
-  71              		.loc 1 4 1
-  72              		.cfi_startproc
-  73              		@ args = 0, pretend = 0, frame = 8
-  74              		@ frame_needed = 1, uses_anonymous_args = 0
-  75 0000 80B5     		push	{r7, lr}
-  76              		.cfi_def_cfa_offset 8
-  77              		.cfi_offset 7, -8
-  78              		.cfi_offset 14, -4
-  79 0002 82B0     		sub	sp, sp, #8
-  80              		.cfi_def_cfa_offset 16
-  81 0004 00AF     		add	r7, sp, #0
-  82              		.cfi_def_cfa_register 7
-  83 0006 7860     		str	r0, [r7, #4]
-  84 0008 3960     		str	r1, [r7]
+  65              		.loc 1 4 1
+  66              		.cfi_startproc
+  67              		@ args = 0, pretend = 0, frame = 8
+  68              		@ frame_needed = 1, uses_anonymous_args = 0
+  69 0000 80B5     		push	{r7, lr}
+  70              		.cfi_def_cfa_offset 8
+  71              		.cfi_offset 7, -8
+  72              		.cfi_offset 14, -4
+  73 0002 82B0     		sub	sp, sp, #8
+  74              		.cfi_def_cfa_offset 16
+  75 0004 00AF     		add	r7, sp, #0
+  76              		.cfi_def_cfa_register 7
+  77 0006 7860     		str	r0, [r7, #4]
+  78 0008 3960     		str	r1, [r7]
    5:Core/Src/GCodes.c ****     print_temperature();
-  85              		.loc 1 5 5
-  86 000a FFF7FEFF 		bl	print_temperature
+  79              		.loc 1 5 5
+  80 000a FFF7FEFF 		bl	print_temperature
    6:Core/Src/GCodes.c ****     #ifdef REDUNDANT_TEMP_SENSOR
    7:Core/Src/GCodes.c ****     if(R != -1)
    8:Core/Src/GCodes.c ****     {
@@ -97,91 +93,89 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s 			page 1
   10:Core/Src/GCodes.c ****     }
   11:Core/Src/GCodes.c ****     #endif
   12:Core/Src/GCodes.c **** }
-  87              		.loc 1 12 1
-  88 000e 00BF     		nop
-  89 0010 0837     		adds	r7, r7, #8
-  90              		.cfi_def_cfa_offset 8
-  91 0012 BD46     		mov	sp, r7
-  92              		.cfi_def_cfa_register 13
-  93              		@ sp needed
-  94 0014 80BD     		pop	{r7, pc}
-  95              		.cfi_endproc
-  96              	.LFE321:
-  98              		.section	.text.M155,"ax",%progbits
-  99              		.align	1
- 100              		.global	M155
- 101              		.syntax unified
- 102              		.thumb
- 103              		.thumb_func
- 105              	M155:
- 106              	.LFB322:
+  81              		.loc 1 12 1
+  82 000e 00BF     		nop
+  83 0010 0837     		adds	r7, r7, #8
+  84              		.cfi_def_cfa_offset 8
+  85 0012 BD46     		mov	sp, r7
+  86              		.cfi_def_cfa_register 13
+  87              		@ sp needed
+  88 0014 80BD     		pop	{r7, pc}
+  89              		.cfi_endproc
+  90              	.LFE321:
+  92              		.section	.text.M155,"ax",%progbits
+  93              		.align	1
+  94              		.global	M155
+  95              		.syntax unified
+  96              		.thumb
+  97              		.thumb_func
+  99              	M155:
+ 100              	.LFB322:
   13:Core/Src/GCodes.c **** 
   14:Core/Src/GCodes.c **** int M155(int S)
   15:Core/Src/GCodes.c **** {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s 			page 3
+ 101              		.loc 1 15 1
+ 102              		.cfi_startproc
+ 103              		@ args = 0, pretend = 0, frame = 8
+ 104              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s 			page 3
 
 
- 107              		.loc 1 15 1
- 108              		.cfi_startproc
- 109              		@ args = 0, pretend = 0, frame = 8
- 110              		@ frame_needed = 1, uses_anonymous_args = 0
- 111              		@ link register save eliminated.
- 112 0000 80B4     		push	{r7}
- 113              		.cfi_def_cfa_offset 4
- 114              		.cfi_offset 7, -4
- 115 0002 83B0     		sub	sp, sp, #12
- 116              		.cfi_def_cfa_offset 16
- 117 0004 00AF     		add	r7, sp, #0
- 118              		.cfi_def_cfa_register 7
- 119 0006 7860     		str	r0, [r7, #4]
+ 105              		@ link register save eliminated.
+ 106 0000 80B4     		push	{r7}
+ 107              		.cfi_def_cfa_offset 4
+ 108              		.cfi_offset 7, -4
+ 109 0002 83B0     		sub	sp, sp, #12
+ 110              		.cfi_def_cfa_offset 16
+ 111 0004 00AF     		add	r7, sp, #0
+ 112              		.cfi_def_cfa_register 7
+ 113 0006 7860     		str	r0, [r7, #4]
   16:Core/Src/GCodes.c ****     return S*1000;
- 120              		.loc 1 16 13
- 121 0008 7B68     		ldr	r3, [r7, #4]
- 122 000a 4FF47A72 		mov	r2, #1000
- 123 000e 02FB03F3 		mul	r3, r2, r3
+ 114              		.loc 1 16 13
+ 115 0008 7B68     		ldr	r3, [r7, #4]
+ 116 000a 4FF47A72 		mov	r2, #1000
+ 117 000e 02FB03F3 		mul	r3, r2, r3
   17:Core/Src/GCodes.c **** }...
- 124              		.loc 1 17 1
- 125 0012 1846     		mov	r0, r3
- 126 0014 0C37     		adds	r7, r7, #12
- 127              		.cfi_def_cfa_offset 4
- 128 0016 BD46     		mov	sp, r7
- 129              		.cfi_def_cfa_register 13
- 130              		@ sp needed
- 131 0018 5DF8047B 		ldr	r7, [sp], #4
- 132              		.cfi_restore 7
- 133              		.cfi_def_cfa_offset 0
- 134 001c 7047     		bx	lr
- 135              		.cfi_endproc
- 136              	.LFE322:
- 138              		.text
- 139              	.Letext0:
- 140              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 141              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 142              		.file 4 "Core/Inc/Parser.h"
- 143              		.file 5 "Core/Inc/main.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s 			page 4
+ 118              		.loc 1 17 1
+ 119 0012 1846     		mov	r0, r3
+ 120 0014 0C37     		adds	r7, r7, #12
+ 121              		.cfi_def_cfa_offset 4
+ 122 0016 BD46     		mov	sp, r7
+ 123              		.cfi_def_cfa_register 13
+ 124              		@ sp needed
+ 125 0018 5DF8047B 		ldr	r7, [sp], #4
+ 126              		.cfi_restore 7
+ 127              		.cfi_def_cfa_offset 0
+ 128 001c 7047     		bx	lr
+ 129              		.cfi_endproc
+ 130              	.LFE322:
+ 132              		.text
+ 133              	.Letext0:
+ 134              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 135              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 136              		.file 4 "Core/Inc/Parser.h"
+ 137              		.file 5 "Core/Inc/main.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 GCodes.c
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:20     .bss.R:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:23     .bss.R:0000000000000000 R
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:26     .bss.T:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:29     .bss.T:0000000000000000 T
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:32     .bss.S:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:35     .bss.S:0000000000000000 S
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:38     .bss.msg_buffer:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:41     .bss.msg_buffer:0000000000000000 msg_buffer
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:44     .bss.value:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:47     .bss.value:0000000000000000 value
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:50     .bss.RxBuf:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:53     .bss.RxBuf:0000000000000000 RxBuf
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:56     .bss.interval:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:59     .bss.interval:0000000000000000 interval
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:62     .text.M105:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:68     .text.M105:0000000000000000 M105
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:99     .text.M155:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9CZCFh.s:105    .text.M155:0000000000000000 M155
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:20     .bss.R:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:23     .bss.R:0000000000000000 R
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:26     .bss.T:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:29     .bss.T:0000000000000000 T
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:32     .bss.S:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:35     .bss.S:0000000000000000 S
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:38     .bss.msg_buffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:41     .bss.msg_buffer:0000000000000000 msg_buffer
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:44     .bss.value:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:47     .bss.value:0000000000000000 value
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:50     .bss.RxBuf:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:53     .bss.RxBuf:0000000000000000 RxBuf
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:56     .text.M105:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:62     .text.M105:0000000000000000 M105
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:93     .text.M155:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc8VPWCk.s:99     .text.M155:0000000000000000 M155
 
 UNDEFINED SYMBOLS
 print_temperature

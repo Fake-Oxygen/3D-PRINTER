@@ -1,5 +1,7 @@
 #include "Parser.h"
 
+uint16_t interval = 0;
+
 void reset_args()
 {
   R = -1;

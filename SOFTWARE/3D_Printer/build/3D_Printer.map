@@ -210,7 +210,6 @@ Discarded input sections
                 0x0000000000000000       0x1e build/Functions.o
  .bss.value     0x0000000000000000        0xc build/Functions.o
  .bss.RxBuf     0x0000000000000000       0x14 build/Functions.o
- .bss.interval  0x0000000000000000        0x2 build/Functions.o
  .text.SelectDriver
                 0x0000000000000000       0x8c build/Functions.o
  .text          0x0000000000000000        0x0 build/GCodes.o
@@ -223,7 +222,6 @@ Discarded input sections
                 0x0000000000000000       0x1e build/GCodes.o
  .bss.value     0x0000000000000000        0xc build/GCodes.o
  .bss.RxBuf     0x0000000000000000       0x14 build/GCodes.o
- .bss.interval  0x0000000000000000        0x2 build/GCodes.o
  .text          0x0000000000000000        0x0 build/Parser.o
  .data          0x0000000000000000        0x0 build/Parser.o
  .bss           0x0000000000000000        0x0 build/Parser.o
@@ -247,7 +245,6 @@ Discarded input sections
                 0x0000000000000000       0x1e build/stm32l4xx_hal_msp.o
  .bss.value     0x0000000000000000        0xc build/stm32l4xx_hal_msp.o
  .bss.RxBuf     0x0000000000000000       0x14 build/stm32l4xx_hal_msp.o
- .bss.interval  0x0000000000000000        0x2 build/stm32l4xx_hal_msp.o
  .text.HAL_ADC_MspDeInit
                 0x0000000000000000       0x44 build/stm32l4xx_hal_msp.o
  .text.HAL_UART_MspDeInit
@@ -266,7 +263,6 @@ Discarded input sections
                 0x0000000000000000       0x1e build/stm32l4xx_it.o
  .bss.value     0x0000000000000000        0xc build/stm32l4xx_it.o
  .bss.RxBuf     0x0000000000000000       0x14 build/stm32l4xx_it.o
- .bss.interval  0x0000000000000000        0x2 build/stm32l4xx_it.o
  .text          0x0000000000000000        0x0 build/system_stm32l4xx.o
  .data          0x0000000000000000        0x0 build/system_stm32l4xx.o
  .bss           0x0000000000000000        0x0 build/system_stm32l4xx.o
@@ -3749,7 +3745,7 @@ LOAD c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vsc
  .igot.plt      0x00000000200001e0        0x0 c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x00000000200001e0                . = ALIGN (0x4)
 
-.bss            0x00000000200001e0      0x86c load address 0x000000000800ec38
+.bss            0x00000000200001e0      0x868 load address 0x000000000800ec38
                 0x00000000200001e0                _sbss = .
                 0x00000000200001e0                __bss_start__ = _sbss
  *(.bss)
@@ -3758,67 +3754,65 @@ LOAD c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vsc
                 0x00000000200001e0        0x1 c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
  *fill*         0x00000000200001e1        0x3 
  .bss.object.0  0x00000000200001e4       0x18 c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard/crtbegin.o
- .bss.interval  0x00000000200001fc        0x2 build/Parser.o
- .bss.R         0x00000000200001fe        0x2 build/Parser.o
- .bss.T         0x0000000020000200        0x2 build/Parser.o
- .bss.S         0x0000000020000202        0x2 build/Parser.o
+ .bss.R         0x00000000200001fc        0x2 build/Parser.o
+ .bss.T         0x00000000200001fe        0x2 build/Parser.o
+ .bss.S         0x0000000020000200        0x2 build/Parser.o
+ .bss.interval  0x0000000020000202        0x2 build/Parser.o
+                0x0000000020000202                interval
  .bss.msg_buffer
                 0x0000000020000204       0x1e build/main.o
  *fill*         0x0000000020000222        0x2 
  .bss.value     0x0000000020000224        0xc build/main.o
  .bss.RxBuf     0x0000000020000230       0x14 build/main.o
- .bss.interval  0x0000000020000244        0x2 build/main.o
- *fill*         0x0000000020000246        0x2 
- .bss.hadc1     0x0000000020000248       0x68 build/main.o
-                0x0000000020000248                hadc1
+ .bss.hadc1     0x0000000020000244       0x68 build/main.o
+                0x0000000020000244                hadc1
  .bss.hdma_adc1
-                0x00000000200002b0       0x60 build/main.o
-                0x00000000200002b0                hdma_adc1
- .bss.huart4    0x0000000020000310       0x90 build/main.o
-                0x0000000020000310                huart4
+                0x00000000200002ac       0x60 build/main.o
+                0x00000000200002ac                hdma_adc1
+ .bss.huart4    0x000000002000030c       0x90 build/main.o
+                0x000000002000030c                huart4
  .bss.hdma_lpuart1_rx
-                0x00000000200003a0       0x60 build/main.o
-                0x00000000200003a0                hdma_lpuart1_rx
- .bss.htim3     0x0000000020000400       0x4c build/main.o
-                0x0000000020000400                htim3
- .bss.htim4     0x000000002000044c       0x4c build/main.o
-                0x000000002000044c                htim4
- .bss.hlpuart1  0x0000000020000498       0x90 build/main.o
-                0x0000000020000498                hlpuart1
+                0x000000002000039c       0x60 build/main.o
+                0x000000002000039c                hdma_lpuart1_rx
+ .bss.htim3     0x00000000200003fc       0x4c build/main.o
+                0x00000000200003fc                htim3
+ .bss.htim4     0x0000000020000448       0x4c build/main.o
+                0x0000000020000448                htim4
+ .bss.hlpuart1  0x0000000020000494       0x90 build/main.o
+                0x0000000020000494                hlpuart1
  .bss.hpcd_USB_OTG_FS
-                0x0000000020000528      0x50c build/main.o
-                0x0000000020000528                hpcd_USB_OTG_FS
+                0x0000000020000524      0x50c build/main.o
+                0x0000000020000524                hpcd_USB_OTG_FS
  .bss.last_time
-                0x0000000020000a34        0x4 build/main.o
-                0x0000000020000a34                last_time
- .bss.uwTick    0x0000000020000a38        0x4 build/stm32l4xx_hal.o
-                0x0000000020000a38                uwTick
+                0x0000000020000a30        0x4 build/main.o
+                0x0000000020000a30                last_time
+ .bss.uwTick    0x0000000020000a34        0x4 build/stm32l4xx_hal.o
+                0x0000000020000a34                uwTick
  .bss.__malloc_free_list
-                0x0000000020000a3c        0x4 c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000020000a3c                __malloc_free_list
+                0x0000000020000a38        0x4 c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000a38                __malloc_free_list
  .bss.__malloc_sbrk_start
-                0x0000000020000a40        0x4 c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000020000a40                __malloc_sbrk_start
- .bss.errno     0x0000000020000a44        0x4 c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-reent.o)
-                0x0000000020000a44                errno
+                0x0000000020000a3c        0x4 c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000a3c                __malloc_sbrk_start
+ .bss.errno     0x0000000020000a40        0x4 c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-reent.o)
+                0x0000000020000a40                errno
  .bss.heap_end.0
-                0x0000000020000a48        0x4 c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libnosys.a(sbrk.o)
+                0x0000000020000a44        0x4 c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libnosys.a(sbrk.o)
  *(COMMON)
-                0x0000000020000a4c                . = ALIGN (0x4)
-                0x0000000020000a4c                _ebss = .
-                0x0000000020000a4c                __bss_end__ = _ebss
+                0x0000000020000a48                . = ALIGN (0x4)
+                0x0000000020000a48                _ebss = .
+                0x0000000020000a48                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000a4c      0x604 load address 0x000000000800ec38
-                0x0000000020000a50                . = ALIGN (0x8)
- *fill*         0x0000000020000a4c        0x4 
-                0x0000000020000a50                PROVIDE (end = .)
+                0x0000000020000a48      0x600 load address 0x000000000800ec38
+                0x0000000020000a48                . = ALIGN (0x8)
+                0x0000000020000a48                PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
-                0x0000000020000c50                . = (. + _Min_Heap_Size)
- *fill*         0x0000000020000a50      0x200 
-                0x0000000020001050                . = (. + _Min_Stack_Size)
- *fill*         0x0000000020000c50      0x400 
-                0x0000000020001050                . = ALIGN (0x8)
+                0x0000000020000c48                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020000a48      0x200 
+                0x0000000020001048                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020000c48      0x400 
+                0x0000000020001048                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -4151,57 +4145,57 @@ LOAD c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vsc
  .comment       0x0000000000000039       0x3a c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard\libgcc.a(unwind-arm.o)
  .comment       0x0000000000000039       0x3a c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard\libgcc.a(pr-support.o)
 
-.debug_info     0x0000000000000000    0x1c230
- .debug_info    0x0000000000000000      0xa82 build/Functions.o
- .debug_info    0x0000000000000a82      0x1e1 build/GCodes.o
- .debug_info    0x0000000000000c63      0x2e2 build/Parser.o
- .debug_info    0x0000000000000f45     0x25d5 build/main.o
- .debug_info    0x000000000000351a     0x213b build/stm32l4xx_hal_msp.o
- .debug_info    0x0000000000005655      0x913 build/stm32l4xx_it.o
- .debug_info    0x0000000000005f68      0x5e5 build/system_stm32l4xx.o
- .debug_info    0x000000000000654d      0xb4b build/stm32l4xx_hal.o
- .debug_info    0x0000000000007098     0x1ee1 build/stm32l4xx_hal_adc.o
- .debug_info    0x0000000000008f79     0x1c66 build/stm32l4xx_hal_adc_ex.o
- .debug_info    0x000000000000abdf      0xd66 build/stm32l4xx_hal_cortex.o
- .debug_info    0x000000000000b945      0x83d build/stm32l4xx_hal_dma.o
- .debug_info    0x000000000000c182      0x783 build/stm32l4xx_hal_gpio.o
- .debug_info    0x000000000000c905     0x14b2 build/stm32l4xx_hal_pcd.o
- .debug_info    0x000000000000ddb7      0x882 build/stm32l4xx_hal_pcd_ex.o
- .debug_info    0x000000000000e639      0xa2a build/stm32l4xx_hal_pwr_ex.o
- .debug_info    0x000000000000f063      0xd81 build/stm32l4xx_hal_rcc.o
- .debug_info    0x000000000000fde4     0x1170 build/stm32l4xx_hal_rcc_ex.o
- .debug_info    0x0000000000010f54     0x2b99 build/stm32l4xx_hal_tim.o
- .debug_info    0x0000000000013aed     0x17c0 build/stm32l4xx_hal_tim_ex.o
- .debug_info    0x00000000000152ad     0x46c3 build/stm32l4xx_hal_uart.o
- .debug_info    0x0000000000019970      0xf80 build/stm32l4xx_hal_uart_ex.o
- .debug_info    0x000000000001a8f0     0x191d build/stm32l4xx_ll_usb.o
- .debug_info    0x000000000001c20d       0x23 build/startup_stm32l4p5xx.o
+.debug_info     0x0000000000000000    0x1c1ec
+ .debug_info    0x0000000000000000      0xa70 build/Functions.o
+ .debug_info    0x0000000000000a70      0x1d0 build/GCodes.o
+ .debug_info    0x0000000000000c40      0x2ea build/Parser.o
+ .debug_info    0x0000000000000f2a     0x25cf build/main.o
+ .debug_info    0x00000000000034f9     0x2129 build/stm32l4xx_hal_msp.o
+ .debug_info    0x0000000000005622      0x902 build/stm32l4xx_it.o
+ .debug_info    0x0000000000005f24      0x5e5 build/system_stm32l4xx.o
+ .debug_info    0x0000000000006509      0xb4b build/stm32l4xx_hal.o
+ .debug_info    0x0000000000007054     0x1ee1 build/stm32l4xx_hal_adc.o
+ .debug_info    0x0000000000008f35     0x1c66 build/stm32l4xx_hal_adc_ex.o
+ .debug_info    0x000000000000ab9b      0xd66 build/stm32l4xx_hal_cortex.o
+ .debug_info    0x000000000000b901      0x83d build/stm32l4xx_hal_dma.o
+ .debug_info    0x000000000000c13e      0x783 build/stm32l4xx_hal_gpio.o
+ .debug_info    0x000000000000c8c1     0x14b2 build/stm32l4xx_hal_pcd.o
+ .debug_info    0x000000000000dd73      0x882 build/stm32l4xx_hal_pcd_ex.o
+ .debug_info    0x000000000000e5f5      0xa2a build/stm32l4xx_hal_pwr_ex.o
+ .debug_info    0x000000000000f01f      0xd81 build/stm32l4xx_hal_rcc.o
+ .debug_info    0x000000000000fda0     0x1170 build/stm32l4xx_hal_rcc_ex.o
+ .debug_info    0x0000000000010f10     0x2b99 build/stm32l4xx_hal_tim.o
+ .debug_info    0x0000000000013aa9     0x17c0 build/stm32l4xx_hal_tim_ex.o
+ .debug_info    0x0000000000015269     0x46c3 build/stm32l4xx_hal_uart.o
+ .debug_info    0x000000000001992c      0xf80 build/stm32l4xx_hal_uart_ex.o
+ .debug_info    0x000000000001a8ac     0x191d build/stm32l4xx_ll_usb.o
+ .debug_info    0x000000000001c1c9       0x23 build/startup_stm32l4p5xx.o
 
-.debug_abbrev   0x0000000000000000     0x3669
+.debug_abbrev   0x0000000000000000     0x369e
  .debug_abbrev  0x0000000000000000      0x1e7 build/Functions.o
  .debug_abbrev  0x00000000000001e7       0xe5 build/GCodes.o
- .debug_abbrev  0x00000000000002cc      0x137 build/Parser.o
- .debug_abbrev  0x0000000000000403      0x3bc build/main.o
- .debug_abbrev  0x00000000000007bf      0x2c9 build/stm32l4xx_hal_msp.o
- .debug_abbrev  0x0000000000000a88      0x1a7 build/stm32l4xx_it.o
- .debug_abbrev  0x0000000000000c2f      0x118 build/system_stm32l4xx.o
- .debug_abbrev  0x0000000000000d47      0x240 build/stm32l4xx_hal.o
- .debug_abbrev  0x0000000000000f87      0x2d2 build/stm32l4xx_hal_adc.o
- .debug_abbrev  0x0000000000001259      0x2ec build/stm32l4xx_hal_adc_ex.o
- .debug_abbrev  0x0000000000001545      0x325 build/stm32l4xx_hal_cortex.o
- .debug_abbrev  0x000000000000186a      0x1e0 build/stm32l4xx_hal_dma.o
- .debug_abbrev  0x0000000000001a4a      0x1c9 build/stm32l4xx_hal_gpio.o
- .debug_abbrev  0x0000000000001c13      0x2c6 build/stm32l4xx_hal_pcd.o
- .debug_abbrev  0x0000000000001ed9      0x254 build/stm32l4xx_hal_pcd_ex.o
- .debug_abbrev  0x000000000000212d      0x1f7 build/stm32l4xx_hal_pwr_ex.o
- .debug_abbrev  0x0000000000002324      0x322 build/stm32l4xx_hal_rcc.o
- .debug_abbrev  0x0000000000002646      0x2a1 build/stm32l4xx_hal_rcc_ex.o
- .debug_abbrev  0x00000000000028e7      0x274 build/stm32l4xx_hal_tim.o
- .debug_abbrev  0x0000000000002b5b      0x27f build/stm32l4xx_hal_tim_ex.o
- .debug_abbrev  0x0000000000002dda      0x302 build/stm32l4xx_hal_uart.o
- .debug_abbrev  0x00000000000030dc      0x2d1 build/stm32l4xx_hal_uart_ex.o
- .debug_abbrev  0x00000000000033ad      0x2aa build/stm32l4xx_ll_usb.o
- .debug_abbrev  0x0000000000003657       0x12 build/startup_stm32l4p5xx.o
+ .debug_abbrev  0x00000000000002cc      0x159 build/Parser.o
+ .debug_abbrev  0x0000000000000425      0x3cf build/main.o
+ .debug_abbrev  0x00000000000007f4      0x2c9 build/stm32l4xx_hal_msp.o
+ .debug_abbrev  0x0000000000000abd      0x1a7 build/stm32l4xx_it.o
+ .debug_abbrev  0x0000000000000c64      0x118 build/system_stm32l4xx.o
+ .debug_abbrev  0x0000000000000d7c      0x240 build/stm32l4xx_hal.o
+ .debug_abbrev  0x0000000000000fbc      0x2d2 build/stm32l4xx_hal_adc.o
+ .debug_abbrev  0x000000000000128e      0x2ec build/stm32l4xx_hal_adc_ex.o
+ .debug_abbrev  0x000000000000157a      0x325 build/stm32l4xx_hal_cortex.o
+ .debug_abbrev  0x000000000000189f      0x1e0 build/stm32l4xx_hal_dma.o
+ .debug_abbrev  0x0000000000001a7f      0x1c9 build/stm32l4xx_hal_gpio.o
+ .debug_abbrev  0x0000000000001c48      0x2c6 build/stm32l4xx_hal_pcd.o
+ .debug_abbrev  0x0000000000001f0e      0x254 build/stm32l4xx_hal_pcd_ex.o
+ .debug_abbrev  0x0000000000002162      0x1f7 build/stm32l4xx_hal_pwr_ex.o
+ .debug_abbrev  0x0000000000002359      0x322 build/stm32l4xx_hal_rcc.o
+ .debug_abbrev  0x000000000000267b      0x2a1 build/stm32l4xx_hal_rcc_ex.o
+ .debug_abbrev  0x000000000000291c      0x274 build/stm32l4xx_hal_tim.o
+ .debug_abbrev  0x0000000000002b90      0x27f build/stm32l4xx_hal_tim_ex.o
+ .debug_abbrev  0x0000000000002e0f      0x302 build/stm32l4xx_hal_uart.o
+ .debug_abbrev  0x0000000000003111      0x2d1 build/stm32l4xx_hal_uart_ex.o
+ .debug_abbrev  0x00000000000033e2      0x2aa build/stm32l4xx_ll_usb.o
+ .debug_abbrev  0x000000000000368c       0x12 build/startup_stm32l4p5xx.o
 
 .debug_aranges  0x0000000000000000     0x1800
  .debug_aranges
@@ -4331,18 +4325,18 @@ LOAD c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vsc
  .debug_line    0x0000000000014fd5       0x76 build/startup_stm32l4p5xx.o
 
 .debug_str      0x0000000000000000     0x77c1
- .debug_str     0x0000000000000000      0x7fb build/Functions.o
-                                        0x8d0 (size before relaxing)
- .debug_str     0x00000000000007fb       0x2e build/GCodes.o
-                                        0x210 (size before relaxing)
- .debug_str     0x0000000000000829       0x5d build/Parser.o
+ .debug_str     0x0000000000000000      0x7f2 build/Functions.o
+                                        0x8c7 (size before relaxing)
+ .debug_str     0x00000000000007f2       0x2e build/GCodes.o
+                                        0x207 (size before relaxing)
+ .debug_str     0x0000000000000820       0x66 build/Parser.o
                                         0x244 (size before relaxing)
  .debug_str     0x0000000000000886     0x1526 build/main.o
                                        0x1ede (size before relaxing)
  .debug_str     0x0000000000001dac      0x42a build/stm32l4xx_hal_msp.o
-                                       0x1c21 (size before relaxing)
+                                       0x1c18 (size before relaxing)
  .debug_str     0x00000000000021d6      0x120 build/stm32l4xx_it.o
-                                        0x835 (size before relaxing)
+                                        0x82c (size before relaxing)
  .debug_str     0x00000000000022f6       0xef build/system_stm32l4xx.o
                                         0x3f3 (size before relaxing)
  .debug_str     0x00000000000023e5      0x47b build/stm32l4xx_hal.o
@@ -5882,6 +5876,8 @@ hpcd_USB_OTG_FS                                   build/main.o
 htim3                                             build/main.o
 htim4                                             build/main.o
 huart4                                            build/main.o
+interval                                          build/Parser.o
+                                                  build/main.o
 last_time                                         build/main.o
 localeconv                                        c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-localeconv.o)
 log                                               c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-w_log.o)

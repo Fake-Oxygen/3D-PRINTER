@@ -4,7 +4,7 @@
 #include "main.h"
 
 static uint16_t R, T, S;
-static uint16_t interval;
+extern uint16_t interval;
 
 
 void reset_args();
