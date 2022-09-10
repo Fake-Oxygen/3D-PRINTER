@@ -71,19 +71,12 @@ static void MX_UART4_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_ADC1_Init(void);
 /* USER CODE BEGIN PFP */
-uint16_t interval = 0;
-uint16_t R, T, S;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-void reset_args()
-{
-  R = -1;
-  T = 0;
-  S = 0;
-}
+
 
 void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {
@@ -95,55 +88,6 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 }
 
 uint32_t GetADCValue(uint16_t val) { return value[val]; }
-
-void get_command()
-{
-  char *command;
-  char *delim = " ";
-
-  split_gcode();
-  command = strtok(RxBuf, delim);
-  switch (command[0])
-  {
-  case 'M':
-    HAL_Delay(1);
-    switch (atoi(RxBuf + 1))
-    {
-    case 105:
-      M105(R, T);
-      break;
-    case 155:
-      interval = M155(S);
-      break;
-    }
-    break;
-  }
-  reset_args();
-  memset(&command[0], 0, sizeof(command));
-}
-
-void split_gcode()
-{
-  char *buf2;
-  buf2 = strtok(RxBuf, " ");
-  while (buf2 != NULL)
-  {
-
-    switch (buf2[0])
-    {
-    case 'R':
-      R = atoi(buf2 + 1);
-      break;
-    case 'T':
-      T = atoi(buf2 + 1);
-      break;
-    case 'S':
-      S = atoi(buf2 + 1);
-      break;
-    }
-    buf2 = strtok(NULL, " ");
-  }
-}
 
 void print_temperature()
 {
@@ -210,11 +154,12 @@ int main(void)
     //  sprintf(msg_buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
     //  HAL_UART_Transmit(&hlpuart1, (uint16_t*)msg_buffer, strlen(msg_buffer), HAL_MAX_DELAY);
     HAL_Delay(2);
+  //  uint16_t inter = GetInterval();
     if (RxBuf[0] != 0)
     {
       // sprintf(msg_buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
       // HAL_UART_Transmit(&hlpuart1, (uint16_t*)msg_buffer, strlen(msg_buffer), HAL_MAX_DELAY);
-      get_command();
+      get_command(RxBuf);
       memset(&RxBuf[0], 0, sizeof(RxBuf));
     }
     SetFanSpeed(HOT_END_FAN, 100);

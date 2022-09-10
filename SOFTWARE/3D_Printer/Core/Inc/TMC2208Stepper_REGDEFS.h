@@ -1,3 +1,6 @@
+#ifndef TMC2208STEPPER_REGDEFS_H
+#define TMC2208STEPPER_REGDEFS_H
+
 #define TMC2208_READ 		0x00
 #define TMC2208_WRITE 		0x80
 #define TMC2208_SYNC 		0x05
@@ -206,3 +209,5 @@
 #define CS_ACTUAL_bm	    0x1F0000ul
 #define STEALTH_bm		    0x40000000ul
 #define STST_bm			    0x80000000ul
+
+#endif

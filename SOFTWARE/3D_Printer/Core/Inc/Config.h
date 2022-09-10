@@ -1,3 +1,6 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
 #define X_AXIS_DIR GPIOF,GPIO_PIN_1
 #define X_AXIS_STEP GPIOC,GPIO_PIN_6
 #define Y_AXIS_DIR GPIOF,GPIO_PIN_2
@@ -41,3 +44,5 @@
 #define HOT_END 0
 #define RxBuf_SIZE	20
 //#define REDUNDANT_TEMP_SENSOR
+
+#endif

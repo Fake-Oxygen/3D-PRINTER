@@ -1,3 +1,6 @@
+#ifndef FUNTIONS_H
+#define FUNTIONS_H
+
 #include "Config.h"
 #include <math.h>
 #include "main.h"
@@ -15,3 +18,4 @@ void SetFanSpeed(uint16_t fan, uint16_t speed);
 void SetHeating(uint16_t heater, uint16_t power);
 // void line_append(uint8_t value, UART_HandleTypeDef *hlpuart);
 
+#endif

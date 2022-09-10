@@ -32,6 +32,7 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Config.h"
+#include "Parser.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
