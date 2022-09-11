@@ -46,18 +46,19 @@
 ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
 
+UART_HandleTypeDef hlpuart1;
 UART_HandleTypeDef huart4;
 DMA_HandleTypeDef hdma_lpuart1_rx;
 
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
-UART_HandleTypeDef hlpuart1;
 
 PCD_HandleTypeDef hpcd_USB_OTG_FS;
-uint32_t last_time;
 
 /* USER CODE BEGIN PV */
 uint16_t step = 0;
+uint32_t last_time = 0;
+uint32_t value[ADC_CHANNELS];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -72,6 +73,7 @@ static void MX_TIM3_Init(void);
 static void MX_ADC1_Init(void);
 /* USER CODE BEGIN PFP */
 /* USER CODE END PFP */
+
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
@@ -86,23 +88,22 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 
 void DelayMicrosecond(uint16_t time)
 {
-    __HAL_TIM_SET_COUNTER(&htim4,0);
-	while (__HAL_TIM_GET_COUNTER(&htim4) < time);
+  __HAL_TIM_SET_COUNTER(&htim4, 0);
+  while (__HAL_TIM_GET_COUNTER(&htim4) < time)
+    ;
 }
-
-uint32_t GetADCValue(uint16_t val) { return value[val]; }
 
 void print_temperature()
 {
-  sprintf(msg_buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, GetADCValue(ADC_HOT_END)), GetADCValue(ADC_HOT_END));
+  sprintf(msg_buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
   HAL_UART_Transmit(&hlpuart1, (uint16_t *)msg_buffer, strlen(msg_buffer), HAL_MAX_DELAY);
 }
 /* USER CODE END 0 */
 
 /**
- * @brief  The application entry point.
- * @retval int
- */
+  * @brief  The application entry point.
+  * @retval int
+  */
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -145,45 +146,25 @@ int main(void)
   memset(&RxBuf[0], 0, sizeof(RxBuf));
   reset_args();
   /* USER CODE END 2 */
-  // uint16_t lapse;
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
-    // HAL_Delay(200);
-    // uint16_t speed = 300;
-    // TIM3->CCR3 = 100;
-    //  sprintf(msg_buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
-    //  HAL_UART_Transmit(&hlpuart1, (uint16_t*)msg_buffer, strlen(msg_buffer), HAL_MAX_DELAY);
-    //  uint16_t inter = GetInterval();
-    if (RxBuf[0] != 0)
+    if (RxBuf[0] != 0 && isRunning == false)
     {
-      // sprintf(msg_buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
-      // HAL_UART_Transmit(&hlpuart1, (uint16_t*)msg_buffer, strlen(msg_buffer), HAL_MAX_DELAY);
       get_command(RxBuf);
       memset(&RxBuf[0], 0, sizeof(RxBuf));
     }
-    SetFanSpeed(HOT_END_FAN, 100);
-    if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == 1)
-    {
-      CHANGE_MOTOR_DIR(E_AXIS_DIR, COUNTERCLOCKWISE);
-      if (step <= STEPS_PER_REV)
-      {
-        MAKE_MOTOR_STEP(E_AXIS_STEP);
-        step++;
-      }
-      SetHeating(HOT_END, 30);
-      SetFanSpeed(HOT_END_FAN, 50);
-    }
-    // lapse = HAL_GetTick() - last_time;
+
     if (HAL_GetTick() - last_time > interval && interval > 0)
     {
       M105(0, 0);
       last_time = HAL_GetTick();
     }
-   G0();
 
+    G0();
+    M104();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -192,25 +173,25 @@ int main(void)
 }
 
 /**
- * @brief System Clock Configuration
- * @retval None
- */
+  * @brief System Clock Configuration
+  * @retval None
+  */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
   /** Configure the main internal regulator output voltage
-   */
+  */
   if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1_BOOST) != HAL_OK)
   {
     Error_Handler();
   }
 
   /** Initializes the RCC Oscillators according to the specified parameters
-   * in the RCC_OscInitTypeDef structure.
-   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48 | RCC_OSCILLATORTYPE_MSI;
+  * in the RCC_OscInitTypeDef structure.
+  */
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48|RCC_OSCILLATORTYPE_MSI;
   RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
   RCC_OscInitStruct.MSICalibrationValue = 0;
@@ -228,8 +209,9 @@ void SystemClock_Config(void)
   }
 
   /** Initializes the CPU, AHB and APB buses clocks
-   */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
@@ -242,10 +224,10 @@ void SystemClock_Config(void)
 }
 
 /**
- * @brief ADC1 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief ADC1 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_ADC1_Init(void)
 {
 
@@ -261,7 +243,7 @@ static void MX_ADC1_Init(void)
   /* USER CODE END ADC1_Init 1 */
 
   /** Common config
-   */
+  */
   hadc1.Instance = ADC1;
   hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
@@ -287,7 +269,7 @@ static void MX_ADC1_Init(void)
   }
 
   /** Configure the ADC multi-mode
-   */
+  */
   multimode.Mode = ADC_MODE_INDEPENDENT;
   if (HAL_ADCEx_MultiModeConfigChannel(&hadc1, &multimode) != HAL_OK)
   {
@@ -295,10 +277,10 @@ static void MX_ADC1_Init(void)
   }
 
   /** Configure Regular Channel
-   */
+  */
   sConfig.Channel = ADC_CHANNEL_1;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_247CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_640CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
@@ -308,16 +290,17 @@ static void MX_ADC1_Init(void)
   }
 
   /** Configure Regular Channel
-   */
+  */
   sConfig.Channel = ADC_CHANNEL_2;
   sConfig.Rank = ADC_REGULAR_RANK_2;
+  sConfig.SamplingTime = ADC_SAMPLETIME_247CYCLES_5;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
   }
 
   /** Configure Regular Channel
-   */
+  */
   sConfig.Channel = ADC_CHANNEL_TEMPSENSOR;
   sConfig.Rank = ADC_REGULAR_RANK_3;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
@@ -327,13 +310,14 @@ static void MX_ADC1_Init(void)
   /* USER CODE BEGIN ADC1_Init 2 */
 
   /* USER CODE END ADC1_Init 2 */
+
 }
 
 /**
- * @brief LPUART1 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief LPUART1 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_LPUART1_UART_Init(void)
 {
 
@@ -375,13 +359,14 @@ static void MX_LPUART1_UART_Init(void)
   /* USER CODE BEGIN LPUART1_Init 2 */
 
   /* USER CODE END LPUART1_Init 2 */
+
 }
 
 /**
- * @brief UART4 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief UART4 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_UART4_Init(void)
 {
 
@@ -422,13 +407,14 @@ static void MX_UART4_Init(void)
   /* USER CODE BEGIN UART4_Init 2 */
 
   /* USER CODE END UART4_Init 2 */
+
 }
 
 /**
- * @brief TIM3 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_TIM3_Init(void)
 {
 
@@ -446,7 +432,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 119;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 99;
+  htim3.Init.Period = 255;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -488,13 +474,14 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 2 */
   HAL_TIM_MspPostInit(&htim3);
+
 }
 
 /**
- * @brief TIM4 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief TIM4 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_TIM4_Init(void)
 {
 
@@ -532,13 +519,14 @@ static void MX_TIM4_Init(void)
   /* USER CODE BEGIN TIM4_Init 2 */
 
   /* USER CODE END TIM4_Init 2 */
+
 }
 
 /**
- * @brief USB_OTG_FS Initialization Function
- * @param None
- * @retval None
- */
+  * @brief USB_OTG_FS Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_USB_OTG_FS_PCD_Init(void)
 {
 
@@ -565,11 +553,12 @@ static void MX_USB_OTG_FS_PCD_Init(void)
   /* USER CODE BEGIN USB_OTG_FS_Init 2 */
 
   /* USER CODE END USB_OTG_FS_Init 2 */
+
 }
 
 /**
- * Enable DMA controller clock
- */
+  * Enable DMA controller clock
+  */
 static void MX_DMA_Init(void)
 {
 
@@ -584,13 +573,14 @@ static void MX_DMA_Init(void)
   /* DMA1_Channel2_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
+
 }
 
 /**
- * @brief GPIO Initialization Function
- * @param None
- * @retval None
- */
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -606,13 +596,13 @@ static void MX_GPIO_Init(void)
   HAL_PWREx_EnableVddIO2();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_3 | GPIO_PIN_6 | GPIO_PIN_7, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_3|GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | LD3_Pin | LD2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1|LD3_Pin|LD2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(USB_PowerSwitchOn_GPIO_Port, USB_PowerSwitchOn_Pin, GPIO_PIN_RESET);
@@ -633,7 +623,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PF3 PF6 PF7 */
-  GPIO_InitStruct.Pin = GPIO_PIN_3 | GPIO_PIN_6 | GPIO_PIN_7;
+  GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_6|GPIO_PIN_7;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -647,7 +637,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB0 PB1 LD3_Pin LD2_Pin */
-  GPIO_InitStruct.Pin = GPIO_PIN_0 | GPIO_PIN_1 | LD3_Pin | LD2_Pin;
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|LD3_Pin|LD2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -672,6 +662,7 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
 }
 
 /* USER CODE BEGIN 4 */
@@ -679,9 +670,9 @@ static void MX_GPIO_Init(void)
 /* USER CODE END 4 */
 
 /**
- * @brief  This function is executed in case of error occurrence.
- * @retval None
- */
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
@@ -693,14 +684,14 @@ void Error_Handler(void)
   /* USER CODE END Error_Handler_Debug */
 }
 
-#ifdef USE_FULL_ASSERT
+#ifdef  USE_FULL_ASSERT
 /**
- * @brief  Reports the name of the source file and the source line number
- *         where the assert_param error has occurred.
- * @param  file: pointer to the source file name
- * @param  line: assert_param error line source number
- * @retval None
- */
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */

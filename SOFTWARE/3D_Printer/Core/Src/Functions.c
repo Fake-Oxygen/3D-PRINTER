@@ -1,6 +1,5 @@
 #include "Functions.h"
 
-
 void SelectDriver(uint16_t axis)
 {
     switch(axis)

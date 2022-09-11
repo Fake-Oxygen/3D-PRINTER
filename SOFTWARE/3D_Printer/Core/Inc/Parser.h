@@ -4,6 +4,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 extern uint16_t F;
 extern uint16_t interval;

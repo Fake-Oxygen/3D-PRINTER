@@ -33,6 +33,7 @@ extern "C" {
 /* USER CODE BEGIN Includes */
 #include "Config.h"
 #include "Parser.h"
+#include "GCodes.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -57,7 +58,7 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 static char msg_buffer[30];
-static uint32_t value[ADC_CHANNELS]; 
+extern uint32_t value[ADC_CHANNELS]; 
 static uint8_t RxBuf[RxBuf_SIZE];
 
 

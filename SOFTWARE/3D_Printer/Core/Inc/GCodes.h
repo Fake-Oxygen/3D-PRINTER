@@ -20,10 +20,17 @@
 #include "Config.h"
 #include "Functions.h"
 #include "main.h"
+#include <stdbool.h>
 
 extern double Cur_X, Cur_Y, Cur_Z, Cur_E;
+extern uint16_t Cur_F;
+extern bool isRunning;
+extern uint16_t temp_goal;
+extern uint16_t Cur_temp;
 
+void M104();
 void M105(uint16_t R, uint16_t T);
+void M106(uint16_t S);
 uint16_t M155(uint16_t S);
 void G0();
 #endif

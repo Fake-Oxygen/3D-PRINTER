@@ -34,7 +34,8 @@ build/Parser.o: Core/Src/Parser.c Core/Inc/Parser.h Core/Inc/main.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- Core/Inc/Config.h Core/Inc/Parser.h
+ Core/Inc/Config.h Core/Inc/Parser.h Core/Inc/GCodes.h \
+ Core/Inc/Functions.h
 Core/Inc/Parser.h:
 Core/Inc/main.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
@@ -76,3 +77,5 @@ Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
 Core/Inc/Config.h:
 Core/Inc/Parser.h:
+Core/Inc/GCodes.h:
+Core/Inc/Functions.h:
