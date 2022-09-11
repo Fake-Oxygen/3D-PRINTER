@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,648 +19,564 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.bss.R,"aw",%nobits
-  20              		.align	1
-  23              	R:
-  24 0000 0000     		.space	2
-  25              		.section	.bss.T,"aw",%nobits
-  26              		.align	1
-  29              	T:
-  30 0000 0000     		.space	2
-  31              		.section	.bss.S,"aw",%nobits
-  32              		.align	1
-  35              	S:
-  36 0000 0000     		.space	2
-  37              		.section	.bss.msg_buffer,"aw",%nobits
-  38              		.align	2
-  41              	msg_buffer:
-  42 0000 00000000 		.space	30
-  42      00000000 
-  42      00000000 
-  42      00000000 
-  42      00000000 
-  43              		.section	.bss.value,"aw",%nobits
-  44              		.align	2
-  47              	value:
-  48 0000 00000000 		.space	12
-  48      00000000 
-  48      00000000 
-  49              		.section	.bss.RxBuf,"aw",%nobits
-  50              		.align	2
-  53              	RxBuf:
-  54 0000 00000000 		.space	20
-  54      00000000 
-  54      00000000 
-  54      00000000 
-  54      00000000 
-  55              		.section	.text.DelayMicrosecond,"ax",%progbits
-  56              		.align	1
-  57              		.global	DelayMicrosecond
-  58              		.syntax unified
-  59              		.thumb
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s 			page 2
-
-
-  60              		.thumb_func
-  62              	DelayMicrosecond:
-  63              	.LFB321:
-  64              		.file 1 "Core/Src/Functions.c"
+  19              		.section	.bss.msg_buffer,"aw",%nobits
+  20              		.align	2
+  23              	msg_buffer:
+  24 0000 00000000 		.space	30
+  24      00000000 
+  24      00000000 
+  24      00000000 
+  24      00000000 
+  25              		.section	.bss.value,"aw",%nobits
+  26              		.align	2
+  29              	value:
+  30 0000 00000000 		.space	12
+  30      00000000 
+  30      00000000 
+  31              		.section	.bss.RxBuf,"aw",%nobits
+  32              		.align	2
+  35              	RxBuf:
+  36 0000 00000000 		.space	20
+  36      00000000 
+  36      00000000 
+  36      00000000 
+  36      00000000 
+  37              		.section	.text.SelectDriver,"ax",%progbits
+  38              		.align	1
+  39              		.global	SelectDriver
+  40              		.syntax unified
+  41              		.thumb
+  42              		.thumb_func
+  44              	SelectDriver:
+  45              	.LFB321:
+  46              		.file 1 "Core/Src/Functions.c"
    1:Core/Src/Functions.c **** #include "Functions.h"
    2:Core/Src/Functions.c **** 
-   3:Core/Src/Functions.c **** void DelayMicrosecond(TIM_HandleTypeDef *timer, uint16_t time)
-   4:Core/Src/Functions.c **** {
-  65              		.loc 1 4 1
-  66              		.cfi_startproc
-  67              		@ args = 0, pretend = 0, frame = 8
-  68              		@ frame_needed = 1, uses_anonymous_args = 0
-  69              		@ link register save eliminated.
-  70 0000 80B4     		push	{r7}
-  71              		.cfi_def_cfa_offset 4
-  72              		.cfi_offset 7, -4
-  73 0002 83B0     		sub	sp, sp, #12
-  74              		.cfi_def_cfa_offset 16
-  75 0004 00AF     		add	r7, sp, #0
-  76              		.cfi_def_cfa_register 7
-  77 0006 7860     		str	r0, [r7, #4]
-  78 0008 0B46     		mov	r3, r1
-  79 000a 7B80     		strh	r3, [r7, #2]	@ movhi
-   5:Core/Src/Functions.c ****     __HAL_TIM_SET_COUNTER(timer,0);
-  80              		.loc 1 5 5
-  81 000c 7B68     		ldr	r3, [r7, #4]
-  82 000e 1B68     		ldr	r3, [r3]
-  83 0010 0022     		movs	r2, #0
-  84 0012 5A62     		str	r2, [r3, #36]
-   6:Core/Src/Functions.c **** 	while (__HAL_TIM_GET_COUNTER(timer) < time);
-  85              		.loc 1 6 8
-  86 0014 00BF     		nop
-  87              	.L2:
-  88              		.loc 1 6 9 discriminator 1
-  89 0016 7B68     		ldr	r3, [r7, #4]
-  90 0018 1B68     		ldr	r3, [r3]
-  91 001a 5A6A     		ldr	r2, [r3, #36]
-  92              		.loc 1 6 38 discriminator 1
-  93 001c 7B88     		ldrh	r3, [r7, #2]
-  94 001e 9A42     		cmp	r2, r3
-  95 0020 F9D3     		bcc	.L2
-   7:Core/Src/Functions.c **** }
-  96              		.loc 1 7 1
-  97 0022 00BF     		nop
-  98 0024 00BF     		nop
-  99 0026 0C37     		adds	r7, r7, #12
- 100              		.cfi_def_cfa_offset 4
- 101 0028 BD46     		mov	sp, r7
- 102              		.cfi_def_cfa_register 13
- 103              		@ sp needed
- 104 002a 5DF8047B 		ldr	r7, [sp], #4
- 105              		.cfi_restore 7
- 106              		.cfi_def_cfa_offset 0
- 107 002e 7047     		bx	lr
- 108              		.cfi_endproc
- 109              	.LFE321:
- 111              		.section	.text.SelectDriver,"ax",%progbits
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s 			page 3
+   3:Core/Src/Functions.c **** 
+   4:Core/Src/Functions.c **** void SelectDriver(uint16_t axis)
+   5:Core/Src/Functions.c **** {
+  47              		.loc 1 5 1
+  48              		.cfi_startproc
+  49              		@ args = 0, pretend = 0, frame = 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s 			page 2
 
 
- 112              		.align	1
- 113              		.global	SelectDriver
- 114              		.syntax unified
- 115              		.thumb
- 116              		.thumb_func
- 118              	SelectDriver:
- 119              	.LFB322:
-   8:Core/Src/Functions.c **** void SelectDriver(uint16_t axis)
-   9:Core/Src/Functions.c **** {
- 120              		.loc 1 9 1
- 121              		.cfi_startproc
- 122              		@ args = 0, pretend = 0, frame = 8
- 123              		@ frame_needed = 1, uses_anonymous_args = 0
- 124 0000 80B5     		push	{r7, lr}
- 125              		.cfi_def_cfa_offset 8
- 126              		.cfi_offset 7, -8
- 127              		.cfi_offset 14, -4
- 128 0002 82B0     		sub	sp, sp, #8
- 129              		.cfi_def_cfa_offset 16
- 130 0004 00AF     		add	r7, sp, #0
- 131              		.cfi_def_cfa_register 7
- 132 0006 0346     		mov	r3, r0
- 133 0008 FB80     		strh	r3, [r7, #6]	@ movhi
-  10:Core/Src/Functions.c ****     switch(axis)
- 134              		.loc 1 10 5
- 135 000a FB88     		ldrh	r3, [r7, #6]
- 136 000c 032B     		cmp	r3, #3
- 137 000e 37D8     		bhi	.L10
- 138 0010 01A2     		adr	r2, .L6
- 139 0012 52F823F0 		ldr	pc, [r2, r3, lsl #2]
- 140 0016 00BF     		.p2align 2
- 141              	.L6:
- 142 0018 29000000 		.word	.L9+1
- 143 001c 3F000000 		.word	.L8+1
- 144 0020 55000000 		.word	.L7+1
- 145 0024 6B000000 		.word	.L5+1
- 146              		.p2align 1
- 147              	.L9:
-  11:Core/Src/Functions.c ****     {
-  12:Core/Src/Functions.c ****         case X_AXIS:
-  13:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_A, 0);
- 148              		.loc 1 13 13
- 149 0028 0022     		movs	r2, #0
- 150 002a 4021     		movs	r1, #64
- 151 002c 1648     		ldr	r0, .L12
- 152 002e FFF7FEFF 		bl	HAL_GPIO_WritePin
+  50              		@ frame_needed = 1, uses_anonymous_args = 0
+  51 0000 80B5     		push	{r7, lr}
+  52              		.cfi_def_cfa_offset 8
+  53              		.cfi_offset 7, -8
+  54              		.cfi_offset 14, -4
+  55 0002 82B0     		sub	sp, sp, #8
+  56              		.cfi_def_cfa_offset 16
+  57 0004 00AF     		add	r7, sp, #0
+  58              		.cfi_def_cfa_register 7
+  59 0006 0346     		mov	r3, r0
+  60 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+   6:Core/Src/Functions.c ****     switch(axis)
+  61              		.loc 1 6 5
+  62 000a FB88     		ldrh	r3, [r7, #6]
+  63 000c 032B     		cmp	r3, #3
+  64 000e 37D8     		bhi	.L8
+  65 0010 01A2     		adr	r2, .L4
+  66 0012 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+  67 0016 00BF     		.p2align 2
+  68              	.L4:
+  69 0018 29000000 		.word	.L7+1
+  70 001c 3F000000 		.word	.L6+1
+  71 0020 55000000 		.word	.L5+1
+  72 0024 6B000000 		.word	.L3+1
+  73              		.p2align 1
+  74              	.L7:
+   7:Core/Src/Functions.c ****     {
+   8:Core/Src/Functions.c ****         case X_AXIS:
+   9:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_A, 0);
+  75              		.loc 1 9 13
+  76 0028 0022     		movs	r2, #0
+  77 002a 4021     		movs	r1, #64
+  78 002c 1648     		ldr	r0, .L10
+  79 002e FFF7FEFF 		bl	HAL_GPIO_WritePin
+  10:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_B, 0);
+  80              		.loc 1 10 13
+  81 0032 0022     		movs	r2, #0
+  82 0034 8021     		movs	r1, #128
+  83 0036 1448     		ldr	r0, .L10
+  84 0038 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  11:Core/Src/Functions.c ****             break;
+  85              		.loc 1 11 13
+  86 003c 20E0     		b	.L2
+  87              	.L6:
+  12:Core/Src/Functions.c ****         case Y_AXIS:
+  13:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_A, 1);
+  88              		.loc 1 13 13
+  89 003e 0122     		movs	r2, #1
+  90 0040 4021     		movs	r1, #64
+  91 0042 1148     		ldr	r0, .L10
+  92 0044 FFF7FEFF 		bl	HAL_GPIO_WritePin
   14:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_B, 0);
- 153              		.loc 1 14 13
- 154 0032 0022     		movs	r2, #0
- 155 0034 8021     		movs	r1, #128
- 156 0036 1448     		ldr	r0, .L12
- 157 0038 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  93              		.loc 1 14 13
+  94 0048 0022     		movs	r2, #0
+  95 004a 8021     		movs	r1, #128
+  96 004c 0E48     		ldr	r0, .L10
+  97 004e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s 			page 3
+
+
   15:Core/Src/Functions.c ****             break;
- 158              		.loc 1 15 13
- 159 003c 20E0     		b	.L4
- 160              	.L8:
-  16:Core/Src/Functions.c ****         case Y_AXIS:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s 			page 4
-
-
-  17:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_A, 1);
- 161              		.loc 1 17 13
- 162 003e 0122     		movs	r2, #1
- 163 0040 4021     		movs	r1, #64
- 164 0042 1148     		ldr	r0, .L12
- 165 0044 FFF7FEFF 		bl	HAL_GPIO_WritePin
-  18:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_B, 0);
- 166              		.loc 1 18 13
- 167 0048 0022     		movs	r2, #0
- 168 004a 8021     		movs	r1, #128
- 169 004c 0E48     		ldr	r0, .L12
- 170 004e FFF7FEFF 		bl	HAL_GPIO_WritePin
+  98              		.loc 1 15 13
+  99 0052 15E0     		b	.L2
+ 100              	.L5:
+  16:Core/Src/Functions.c ****         case E_AXIS:
+  17:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_A, 0);
+ 101              		.loc 1 17 13
+ 102 0054 0022     		movs	r2, #0
+ 103 0056 4021     		movs	r1, #64
+ 104 0058 0B48     		ldr	r0, .L10
+ 105 005a FFF7FEFF 		bl	HAL_GPIO_WritePin
+  18:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_B, 1);
+ 106              		.loc 1 18 13
+ 107 005e 0122     		movs	r2, #1
+ 108 0060 8021     		movs	r1, #128
+ 109 0062 0948     		ldr	r0, .L10
+ 110 0064 FFF7FEFF 		bl	HAL_GPIO_WritePin
   19:Core/Src/Functions.c ****             break;
- 171              		.loc 1 19 13
- 172 0052 15E0     		b	.L4
- 173              	.L7:
-  20:Core/Src/Functions.c ****         case E_AXIS:
-  21:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_A, 0);
- 174              		.loc 1 21 13
- 175 0054 0022     		movs	r2, #0
- 176 0056 4021     		movs	r1, #64
- 177 0058 0B48     		ldr	r0, .L12
- 178 005a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 111              		.loc 1 19 13
+ 112 0068 0AE0     		b	.L2
+ 113              	.L3:
+  20:Core/Src/Functions.c ****         case Z_AXIS:
+  21:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_A, 1);
+ 114              		.loc 1 21 13
+ 115 006a 0122     		movs	r2, #1
+ 116 006c 4021     		movs	r1, #64
+ 117 006e 0648     		ldr	r0, .L10
+ 118 0070 FFF7FEFF 		bl	HAL_GPIO_WritePin
   22:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_B, 1);
- 179              		.loc 1 22 13
- 180 005e 0122     		movs	r2, #1
- 181 0060 8021     		movs	r1, #128
- 182 0062 0948     		ldr	r0, .L12
- 183 0064 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 119              		.loc 1 22 13
+ 120 0074 0122     		movs	r2, #1
+ 121 0076 8021     		movs	r1, #128
+ 122 0078 0348     		ldr	r0, .L10
+ 123 007a FFF7FEFF 		bl	HAL_GPIO_WritePin
   23:Core/Src/Functions.c ****             break;
- 184              		.loc 1 23 13
- 185 0068 0AE0     		b	.L4
- 186              	.L5:
-  24:Core/Src/Functions.c ****         case Z_AXIS:
-  25:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_A, 1);
- 187              		.loc 1 25 13
- 188 006a 0122     		movs	r2, #1
- 189 006c 4021     		movs	r1, #64
- 190 006e 0648     		ldr	r0, .L12
- 191 0070 FFF7FEFF 		bl	HAL_GPIO_WritePin
-  26:Core/Src/Functions.c ****             WRITE_PIN(MPLX_PIN_B, 1);
- 192              		.loc 1 26 13
- 193 0074 0122     		movs	r2, #1
- 194 0076 8021     		movs	r1, #128
- 195 0078 0348     		ldr	r0, .L12
- 196 007a FFF7FEFF 		bl	HAL_GPIO_WritePin
-  27:Core/Src/Functions.c ****             break;
- 197              		.loc 1 27 13
- 198 007e 00BF     		nop
- 199              	.L4:
- 200              	.L10:
-  28:Core/Src/Functions.c ****     }
-  29:Core/Src/Functions.c **** }
- 201              		.loc 1 29 1
- 202 0080 00BF     		nop
- 203 0082 0837     		adds	r7, r7, #8
- 204              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s 			page 5
+ 124              		.loc 1 23 13
+ 125 007e 00BF     		nop
+ 126              	.L2:
+ 127              	.L8:
+  24:Core/Src/Functions.c ****     }
+  25:Core/Src/Functions.c **** }
+ 128              		.loc 1 25 1
+ 129 0080 00BF     		nop
+ 130 0082 0837     		adds	r7, r7, #8
+ 131              		.cfi_def_cfa_offset 8
+ 132 0084 BD46     		mov	sp, r7
+ 133              		.cfi_def_cfa_register 13
+ 134              		@ sp needed
+ 135 0086 80BD     		pop	{r7, pc}
+ 136              	.L11:
+ 137              		.align	2
+ 138              	.L10:
+ 139 0088 00140048 		.word	1207964672
+ 140              		.cfi_endproc
+ 141              	.LFE321:
+ 143              		.global	__aeabi_i2d
+ 144              		.global	__aeabi_dmul
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s 			page 4
 
 
- 205 0084 BD46     		mov	sp, r7
- 206              		.cfi_def_cfa_register 13
- 207              		@ sp needed
- 208 0086 80BD     		pop	{r7, pc}
- 209              	.L13:
- 210              		.align	2
- 211              	.L12:
- 212 0088 00140048 		.word	1207964672
- 213              		.cfi_endproc
- 214              	.LFE322:
- 216              		.global	__aeabi_i2d
- 217              		.global	__aeabi_dmul
- 218              		.global	__aeabi_dsub
- 219              		.global	__aeabi_ddiv
- 220              		.global	__aeabi_dadd
- 221              		.section	.text.GetTemperature,"ax",%progbits
- 222              		.align	1
- 223              		.global	GetTemperature
- 224              		.syntax unified
- 225              		.thumb
- 226              		.thumb_func
- 228              	GetTemperature:
- 229              	.LFB323:
-  30:Core/Src/Functions.c **** 
-  31:Core/Src/Functions.c **** double GetTemperature(uint16_t adc, uint16_t value)
-  32:Core/Src/Functions.c **** {
- 230              		.loc 1 32 1
- 231              		.cfi_startproc
- 232              		@ args = 0, pretend = 0, frame = 24
- 233              		@ frame_needed = 1, uses_anonymous_args = 0
- 234 0000 B0B5     		push	{r4, r5, r7, lr}
- 235              		.cfi_def_cfa_offset 16
- 236              		.cfi_offset 4, -16
- 237              		.cfi_offset 5, -12
- 238              		.cfi_offset 7, -8
- 239              		.cfi_offset 14, -4
- 240 0002 86B0     		sub	sp, sp, #24
- 241              		.cfi_def_cfa_offset 40
- 242 0004 00AF     		add	r7, sp, #0
- 243              		.cfi_def_cfa_register 7
- 244 0006 0346     		mov	r3, r0
- 245 0008 0A46     		mov	r2, r1
- 246 000a FB80     		strh	r3, [r7, #6]	@ movhi
- 247 000c 1346     		mov	r3, r2	@ movhi
- 248 000e BB80     		strh	r3, [r7, #4]	@ movhi
-  33:Core/Src/Functions.c ****     double resistance, val;
-  34:Core/Src/Functions.c ****     switch (adc)
- 249              		.loc 1 34 5
- 250 0010 FB88     		ldrh	r3, [r7, #6]
- 251 0012 012B     		cmp	r3, #1
- 252 0014 02D0     		beq	.L15
- 253 0016 022B     		cmp	r3, #2
- 254 0018 6FD0     		beq	.L16
- 255 001a 93E0     		b	.L19
- 256              	.L15:
-  35:Core/Src/Functions.c ****     {
-  36:Core/Src/Functions.c ****         case ADC_HOT_END:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s 			page 6
+ 145              		.global	__aeabi_dsub
+ 146              		.global	__aeabi_ddiv
+ 147              		.global	__aeabi_dadd
+ 148              		.section	.text.GetTemperature,"ax",%progbits
+ 149              		.align	1
+ 150              		.global	GetTemperature
+ 151              		.syntax unified
+ 152              		.thumb
+ 153              		.thumb_func
+ 155              	GetTemperature:
+ 156              	.LFB322:
+  26:Core/Src/Functions.c **** 
+  27:Core/Src/Functions.c **** double GetTemperature(uint16_t adc, uint16_t value)
+  28:Core/Src/Functions.c **** {
+ 157              		.loc 1 28 1
+ 158              		.cfi_startproc
+ 159              		@ args = 0, pretend = 0, frame = 24
+ 160              		@ frame_needed = 1, uses_anonymous_args = 0
+ 161 0000 B0B5     		push	{r4, r5, r7, lr}
+ 162              		.cfi_def_cfa_offset 16
+ 163              		.cfi_offset 4, -16
+ 164              		.cfi_offset 5, -12
+ 165              		.cfi_offset 7, -8
+ 166              		.cfi_offset 14, -4
+ 167 0002 86B0     		sub	sp, sp, #24
+ 168              		.cfi_def_cfa_offset 40
+ 169 0004 00AF     		add	r7, sp, #0
+ 170              		.cfi_def_cfa_register 7
+ 171 0006 0346     		mov	r3, r0
+ 172 0008 0A46     		mov	r2, r1
+ 173 000a FB80     		strh	r3, [r7, #6]	@ movhi
+ 174 000c 1346     		mov	r3, r2	@ movhi
+ 175 000e BB80     		strh	r3, [r7, #4]	@ movhi
+  29:Core/Src/Functions.c ****     double resistance, val;
+  30:Core/Src/Functions.c ****     switch (adc)
+ 176              		.loc 1 30 5
+ 177 0010 FB88     		ldrh	r3, [r7, #6]
+ 178 0012 012B     		cmp	r3, #1
+ 179 0014 02D0     		beq	.L13
+ 180 0016 022B     		cmp	r3, #2
+ 181 0018 6FD0     		beq	.L14
+ 182 001a 93E0     		b	.L17
+ 183              	.L13:
+  31:Core/Src/Functions.c ****     {
+  32:Core/Src/Functions.c ****         case ADC_HOT_END:
+  33:Core/Src/Functions.c ****             val = (ADC_VOLTAGE/ADC_SAMPLING)*value;
+ 184              		.loc 1 33 45
+ 185 001c BB88     		ldrh	r3, [r7, #4]
+ 186 001e 1846     		mov	r0, r3
+ 187 0020 FFF7FEFF 		bl	__aeabi_i2d
+ 188              		.loc 1 33 17
+ 189 0024 50A3     		adr	r3, .L18+16
+ 190 0026 D3E90023 		ldrd	r2, [r3]
+ 191 002a FFF7FEFF 		bl	__aeabi_dmul
+ 192 002e 0246     		mov	r2, r0
+ 193 0030 0B46     		mov	r3, r1
+ 194 0032 C7E90423 		strd	r2, [r7, #16]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s 			page 5
 
 
-  37:Core/Src/Functions.c ****             val = (ADC_VOLTAGE/ADC_SAMPLING)*value;
- 257              		.loc 1 37 45
- 258 001c BB88     		ldrh	r3, [r7, #4]
- 259 001e 1846     		mov	r0, r3
- 260 0020 FFF7FEFF 		bl	__aeabi_i2d
- 261              		.loc 1 37 17
- 262 0024 50A3     		adr	r3, .L20+16
- 263 0026 D3E90023 		ldrd	r2, [r3]
- 264 002a FFF7FEFF 		bl	__aeabi_dmul
- 265 002e 0246     		mov	r2, r0
- 266 0030 0B46     		mov	r3, r1
- 267 0032 C7E90423 		strd	r2, [r7, #16]
-  38:Core/Src/Functions.c ****             resistance = val/((ADC_VOLTAGE-val)/HOT_END_RESISTANCE);
- 268              		.loc 1 38 43
- 269 0036 D7E90423 		ldrd	r2, [r7, #16]
- 270 003a 53A1     		adr	r1, .L20+48
- 271 003c D1E90001 		ldrd	r0, [r1]
- 272 0040 FFF7FEFF 		bl	__aeabi_dsub
- 273 0044 0246     		mov	r2, r0
- 274 0046 0B46     		mov	r3, r1
- 275 0048 1046     		mov	r0, r2
- 276 004a 1946     		mov	r1, r3
- 277              		.loc 1 38 48
- 278 004c 50A3     		adr	r3, .L20+56
- 279 004e D3E90023 		ldrd	r2, [r3]
- 280 0052 FFF7FEFF 		bl	__aeabi_ddiv
- 281 0056 0246     		mov	r2, r0
- 282 0058 0B46     		mov	r3, r1
- 283              		.loc 1 38 24
- 284 005a D7E90401 		ldrd	r0, [r7, #16]
- 285 005e FFF7FEFF 		bl	__aeabi_ddiv
- 286 0062 0246     		mov	r2, r0
- 287 0064 0B46     		mov	r3, r1
- 288 0066 C7E90223 		strd	r2, [r7, #8]
-  39:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
- 289              		.loc 1 39 55
- 290 006a 97ED020B 		vldr.64	d0, [r7, #8]
- 291 006e FFF7FEFF 		bl	log
- 292 0072 51EC100B 		vmov	r0, r1, d0
- 293              		.loc 1 39 54
- 294 0076 48A3     		adr	r3, .L20+64
- 295 0078 D3E90023 		ldrd	r2, [r3]
- 296 007c FFF7FEFF 		bl	__aeabi_dmul
- 297 0080 0246     		mov	r2, r0
- 298 0082 0B46     		mov	r3, r1
- 299 0084 1046     		mov	r0, r2
- 300 0086 1946     		mov	r1, r3
- 301              		.loc 1 39 38
- 302 0088 45A3     		adr	r3, .L20+72
- 303 008a D3E90023 		ldrd	r2, [r3]
- 304 008e FFF7FEFF 		bl	__aeabi_dadd
- 305 0092 0246     		mov	r2, r0
- 306 0094 0B46     		mov	r3, r1
- 307 0096 1446     		mov	r4, r2
- 308 0098 1D46     		mov	r5, r3
- 309              		.loc 1 39 87
- 310 009a 97ED020B 		vldr.64	d0, [r7, #8]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s 			page 7
+  34:Core/Src/Functions.c ****             resistance = val/((ADC_VOLTAGE-val)/HOT_END_RESISTANCE);
+ 195              		.loc 1 34 43
+ 196 0036 D7E90423 		ldrd	r2, [r7, #16]
+ 197 003a 53A1     		adr	r1, .L18+48
+ 198 003c D1E90001 		ldrd	r0, [r1]
+ 199 0040 FFF7FEFF 		bl	__aeabi_dsub
+ 200 0044 0246     		mov	r2, r0
+ 201 0046 0B46     		mov	r3, r1
+ 202 0048 1046     		mov	r0, r2
+ 203 004a 1946     		mov	r1, r3
+ 204              		.loc 1 34 48
+ 205 004c 50A3     		adr	r3, .L18+56
+ 206 004e D3E90023 		ldrd	r2, [r3]
+ 207 0052 FFF7FEFF 		bl	__aeabi_ddiv
+ 208 0056 0246     		mov	r2, r0
+ 209 0058 0B46     		mov	r3, r1
+ 210              		.loc 1 34 24
+ 211 005a D7E90401 		ldrd	r0, [r7, #16]
+ 212 005e FFF7FEFF 		bl	__aeabi_ddiv
+ 213 0062 0246     		mov	r2, r0
+ 214 0064 0B46     		mov	r3, r1
+ 215 0066 C7E90223 		strd	r2, [r7, #8]
+  35:Core/Src/Functions.c ****             return 1/(HOT_END_THERM_A+HOT_END_THERM_B*log(resistance)+HOT_END_THERM_C*pow(log(resis
+ 216              		.loc 1 35 55
+ 217 006a 97ED020B 		vldr.64	d0, [r7, #8]
+ 218 006e FFF7FEFF 		bl	log
+ 219 0072 51EC100B 		vmov	r0, r1, d0
+ 220              		.loc 1 35 54
+ 221 0076 48A3     		adr	r3, .L18+64
+ 222 0078 D3E90023 		ldrd	r2, [r3]
+ 223 007c FFF7FEFF 		bl	__aeabi_dmul
+ 224 0080 0246     		mov	r2, r0
+ 225 0082 0B46     		mov	r3, r1
+ 226 0084 1046     		mov	r0, r2
+ 227 0086 1946     		mov	r1, r3
+ 228              		.loc 1 35 38
+ 229 0088 45A3     		adr	r3, .L18+72
+ 230 008a D3E90023 		ldrd	r2, [r3]
+ 231 008e FFF7FEFF 		bl	__aeabi_dadd
+ 232 0092 0246     		mov	r2, r0
+ 233 0094 0B46     		mov	r3, r1
+ 234 0096 1446     		mov	r4, r2
+ 235 0098 1D46     		mov	r5, r3
+ 236              		.loc 1 35 87
+ 237 009a 97ED020B 		vldr.64	d0, [r7, #8]
+ 238 009e FFF7FEFF 		bl	log
+ 239 00a2 B0EE407A 		vmov.f32	s14, s0
+ 240 00a6 F0EE607A 		vmov.f32	s15, s1
+ 241 00aa 9FED2B1B 		vldr.64	d1, .L18
+ 242 00ae B0EE470A 		vmov.f32	s0, s14
+ 243 00b2 F0EE670A 		vmov.f32	s1, s15
+ 244 00b6 FFF7FEFF 		bl	pow
+ 245 00ba 51EC100B 		vmov	r0, r1, d0
+ 246              		.loc 1 35 86
+ 247 00be 3AA3     		adr	r3, .L18+80
+ 248 00c0 D3E90023 		ldrd	r2, [r3]
+ 249 00c4 FFF7FEFF 		bl	__aeabi_dmul
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s 			page 6
 
 
- 311 009e FFF7FEFF 		bl	log
- 312 00a2 B0EE407A 		vmov.f32	s14, s0
- 313 00a6 F0EE607A 		vmov.f32	s15, s1
- 314 00aa 9FED2B1B 		vldr.64	d1, .L20
- 315 00ae B0EE470A 		vmov.f32	s0, s14
- 316 00b2 F0EE670A 		vmov.f32	s1, s15
- 317 00b6 FFF7FEFF 		bl	pow
- 318 00ba 51EC100B 		vmov	r0, r1, d0
- 319              		.loc 1 39 86
- 320 00be 3AA3     		adr	r3, .L20+80
- 321 00c0 D3E90023 		ldrd	r2, [r3]
- 322 00c4 FFF7FEFF 		bl	__aeabi_dmul
- 323 00c8 0246     		mov	r2, r0
- 324 00ca 0B46     		mov	r3, r1
- 325              		.loc 1 39 70
- 326 00cc 2046     		mov	r0, r4
- 327 00ce 2946     		mov	r1, r5
- 328 00d0 FFF7FEFF 		bl	__aeabi_dadd
- 329 00d4 0246     		mov	r2, r0
- 330 00d6 0B46     		mov	r3, r1
- 331              		.loc 1 39 21
- 332 00d8 4FF00000 		mov	r0, #0
- 333 00dc 2849     		ldr	r1, .L20+40
- 334 00de FFF7FEFF 		bl	__aeabi_ddiv
- 335 00e2 0246     		mov	r2, r0
- 336 00e4 0B46     		mov	r3, r1
- 337 00e6 1046     		mov	r0, r2
- 338 00e8 1946     		mov	r1, r3
- 339              		.loc 1 39 110
- 340 00ea 1DA3     		adr	r3, .L20+8
- 341 00ec D3E90023 		ldrd	r2, [r3]
- 342 00f0 FFF7FEFF 		bl	__aeabi_dsub
- 343 00f4 0246     		mov	r2, r0
- 344 00f6 0B46     		mov	r3, r1
- 345 00f8 25E0     		b	.L18
- 346              	.L16:
-  40:Core/Src/Functions.c ****             break;
-  41:Core/Src/Functions.c ****         case ADC_STM_TEMP:
-  42:Core/Src/Functions.c ****             return ((V30-(ADC_VOLTAGE/ADC_SAMPLING*value))/AVG_SLOPE+30);
- 347              		.loc 1 42 51
- 348 00fa BB88     		ldrh	r3, [r7, #4]
- 349 00fc 1846     		mov	r0, r3
- 350 00fe FFF7FEFF 		bl	__aeabi_i2d
- 351 0102 19A3     		adr	r3, .L20+16
- 352 0104 D3E90023 		ldrd	r2, [r3]
- 353 0108 FFF7FEFF 		bl	__aeabi_dmul
- 354 010c 0246     		mov	r2, r0
- 355 010e 0B46     		mov	r3, r1
- 356              		.loc 1 42 25
- 357 0110 17A1     		adr	r1, .L20+24
- 358 0112 D1E90001 		ldrd	r0, [r1]
- 359 0116 FFF7FEFF 		bl	__aeabi_dsub
- 360 011a 0246     		mov	r2, r0
- 361 011c 0B46     		mov	r3, r1
- 362 011e 1046     		mov	r0, r2
- 363 0120 1946     		mov	r1, r3
- 364              		.loc 1 42 59
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s 			page 8
+ 250 00c8 0246     		mov	r2, r0
+ 251 00ca 0B46     		mov	r3, r1
+ 252              		.loc 1 35 70
+ 253 00cc 2046     		mov	r0, r4
+ 254 00ce 2946     		mov	r1, r5
+ 255 00d0 FFF7FEFF 		bl	__aeabi_dadd
+ 256 00d4 0246     		mov	r2, r0
+ 257 00d6 0B46     		mov	r3, r1
+ 258              		.loc 1 35 21
+ 259 00d8 4FF00000 		mov	r0, #0
+ 260 00dc 2849     		ldr	r1, .L18+40
+ 261 00de FFF7FEFF 		bl	__aeabi_ddiv
+ 262 00e2 0246     		mov	r2, r0
+ 263 00e4 0B46     		mov	r3, r1
+ 264 00e6 1046     		mov	r0, r2
+ 265 00e8 1946     		mov	r1, r3
+ 266              		.loc 1 35 110
+ 267 00ea 1DA3     		adr	r3, .L18+8
+ 268 00ec D3E90023 		ldrd	r2, [r3]
+ 269 00f0 FFF7FEFF 		bl	__aeabi_dsub
+ 270 00f4 0246     		mov	r2, r0
+ 271 00f6 0B46     		mov	r3, r1
+ 272 00f8 25E0     		b	.L16
+ 273              	.L14:
+  36:Core/Src/Functions.c ****             break;
+  37:Core/Src/Functions.c ****         case ADC_STM_TEMP:
+  38:Core/Src/Functions.c ****             return ((V30-(ADC_VOLTAGE/ADC_SAMPLING*value))/AVG_SLOPE+30);
+ 274              		.loc 1 38 51
+ 275 00fa BB88     		ldrh	r3, [r7, #4]
+ 276 00fc 1846     		mov	r0, r3
+ 277 00fe FFF7FEFF 		bl	__aeabi_i2d
+ 278 0102 19A3     		adr	r3, .L18+16
+ 279 0104 D3E90023 		ldrd	r2, [r3]
+ 280 0108 FFF7FEFF 		bl	__aeabi_dmul
+ 281 010c 0246     		mov	r2, r0
+ 282 010e 0B46     		mov	r3, r1
+ 283              		.loc 1 38 25
+ 284 0110 17A1     		adr	r1, .L18+24
+ 285 0112 D1E90001 		ldrd	r0, [r1]
+ 286 0116 FFF7FEFF 		bl	__aeabi_dsub
+ 287 011a 0246     		mov	r2, r0
+ 288 011c 0B46     		mov	r3, r1
+ 289 011e 1046     		mov	r0, r2
+ 290 0120 1946     		mov	r1, r3
+ 291              		.loc 1 38 59
+ 292 0122 15A3     		adr	r3, .L18+32
+ 293 0124 D3E90023 		ldrd	r2, [r3]
+ 294 0128 FFF7FEFF 		bl	__aeabi_ddiv
+ 295 012c 0246     		mov	r2, r0
+ 296 012e 0B46     		mov	r3, r1
+ 297 0130 1046     		mov	r0, r2
+ 298 0132 1946     		mov	r1, r3
+ 299              		.loc 1 38 69
+ 300 0134 4FF00002 		mov	r2, #0
+ 301 0138 124B     		ldr	r3, .L18+44
+ 302 013a FFF7FEFF 		bl	__aeabi_dadd
+ 303 013e 0246     		mov	r2, r0
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s 			page 7
 
 
- 365 0122 15A3     		adr	r3, .L20+32
- 366 0124 D3E90023 		ldrd	r2, [r3]
- 367 0128 FFF7FEFF 		bl	__aeabi_ddiv
- 368 012c 0246     		mov	r2, r0
- 369 012e 0B46     		mov	r3, r1
- 370 0130 1046     		mov	r0, r2
- 371 0132 1946     		mov	r1, r3
- 372              		.loc 1 42 69
- 373 0134 4FF00002 		mov	r2, #0
- 374 0138 124B     		ldr	r3, .L20+44
- 375 013a FFF7FEFF 		bl	__aeabi_dadd
- 376 013e 0246     		mov	r2, r0
- 377 0140 0B46     		mov	r3, r1
- 378 0142 00E0     		b	.L18
- 379              	.L19:
-  43:Core/Src/Functions.c ****             break;
-  44:Core/Src/Functions.c ****     }
-  45:Core/Src/Functions.c **** }
- 380              		.loc 1 45 1
- 381 0144 01E0     		b	.L14
- 382              	.L18:
- 383 0146 43EC172B 		vmov	d7, r2, r3
- 384              	.L14:
- 385 014a B0EE470A 		vmov.f32	s0, s14
- 386 014e F0EE670A 		vmov.f32	s1, s15
- 387 0152 1837     		adds	r7, r7, #24
- 388              		.cfi_def_cfa_offset 16
- 389 0154 BD46     		mov	sp, r7
- 390              		.cfi_def_cfa_register 13
- 391              		@ sp needed
- 392 0156 B0BD     		pop	{r4, r5, r7, pc}
- 393              	.L21:
- 394              		.align	3
- 395              	.L20:
- 396 0158 00000000 		.word	0
- 397 015c 00000840 		.word	1074266112
- 398 0160 66666666 		.word	1717986918
- 399 0164 66127140 		.word	1081152102
- 400 0168 66666666 		.word	1717986918
- 401 016c 66660A3F 		.word	1057646182
- 402 0170 52B81E85 		.word	-2061584302
- 403 0174 EB51E83F 		.word	1072189931
- 404 0178 7B14AE47 		.word	1202590843
- 405 017c E17A643F 		.word	1063549665
- 406 0180 0000F03F 		.word	1072693248
- 407 0184 00003E40 		.word	1077805056
- 408 0188 66666666 		.word	1717986918
- 409 018c 66660A40 		.word	1074423398
- 410 0190 00000000 		.word	0
- 411 0194 0088C340 		.word	1086556160
- 412 0198 0395F1EF 		.word	-269380349
- 413 019c 332E2C3F 		.word	1059860019
- 414 01a0 D7F7E120 		.word	551679959
- 415 01a4 21CA473F 		.word	1061669409
- 416 01a8 B905B0A0 		.word	-1599076935
- 417 01ac E7517C3E 		.word	1048334823
- 418              		.cfi_endproc
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s 			page 9
+ 304 0140 0B46     		mov	r3, r1
+ 305 0142 00E0     		b	.L16
+ 306              	.L17:
+  39:Core/Src/Functions.c ****             break;
+  40:Core/Src/Functions.c ****     }
+  41:Core/Src/Functions.c **** }
+ 307              		.loc 1 41 1
+ 308 0144 01E0     		b	.L12
+ 309              	.L16:
+ 310 0146 43EC172B 		vmov	d7, r2, r3
+ 311              	.L12:
+ 312 014a B0EE470A 		vmov.f32	s0, s14
+ 313 014e F0EE670A 		vmov.f32	s1, s15
+ 314 0152 1837     		adds	r7, r7, #24
+ 315              		.cfi_def_cfa_offset 16
+ 316 0154 BD46     		mov	sp, r7
+ 317              		.cfi_def_cfa_register 13
+ 318              		@ sp needed
+ 319 0156 B0BD     		pop	{r4, r5, r7, pc}
+ 320              	.L19:
+ 321              		.align	3
+ 322              	.L18:
+ 323 0158 00000000 		.word	0
+ 324 015c 00000840 		.word	1074266112
+ 325 0160 66666666 		.word	1717986918
+ 326 0164 66127140 		.word	1081152102
+ 327 0168 66666666 		.word	1717986918
+ 328 016c 66660A3F 		.word	1057646182
+ 329 0170 52B81E85 		.word	-2061584302
+ 330 0174 EB51E83F 		.word	1072189931
+ 331 0178 7B14AE47 		.word	1202590843
+ 332 017c E17A643F 		.word	1063549665
+ 333 0180 0000F03F 		.word	1072693248
+ 334 0184 00003E40 		.word	1077805056
+ 335 0188 66666666 		.word	1717986918
+ 336 018c 66660A40 		.word	1074423398
+ 337 0190 00000000 		.word	0
+ 338 0194 0088C340 		.word	1086556160
+ 339 0198 0395F1EF 		.word	-269380349
+ 340 019c 332E2C3F 		.word	1059860019
+ 341 01a0 D7F7E120 		.word	551679959
+ 342 01a4 21CA473F 		.word	1061669409
+ 343 01a8 B905B0A0 		.word	-1599076935
+ 344 01ac E7517C3E 		.word	1048334823
+ 345              		.cfi_endproc
+ 346              	.LFE322:
+ 348              		.section	.text.SetHeating,"ax",%progbits
+ 349              		.align	1
+ 350              		.global	SetHeating
+ 351              		.syntax unified
+ 352              		.thumb
+ 353              		.thumb_func
+ 355              	SetHeating:
+ 356              	.LFB323:
+  42:Core/Src/Functions.c **** 
+  43:Core/Src/Functions.c **** void SetHeating(uint16_t heater, uint16_t power)
+  44:Core/Src/Functions.c **** {
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s 			page 8
 
 
- 419              	.LFE323:
- 421              		.section	.text.SetHeating,"ax",%progbits
- 422              		.align	1
- 423              		.global	SetHeating
- 424              		.syntax unified
- 425              		.thumb
- 426              		.thumb_func
- 428              	SetHeating:
- 429              	.LFB324:
-  46:Core/Src/Functions.c **** 
-  47:Core/Src/Functions.c **** void SetHeating(uint16_t heater, uint16_t power)
-  48:Core/Src/Functions.c **** {
- 430              		.loc 1 48 1
- 431              		.cfi_startproc
- 432              		@ args = 0, pretend = 0, frame = 8
- 433              		@ frame_needed = 1, uses_anonymous_args = 0
- 434              		@ link register save eliminated.
- 435 0000 80B4     		push	{r7}
- 436              		.cfi_def_cfa_offset 4
- 437              		.cfi_offset 7, -4
- 438 0002 83B0     		sub	sp, sp, #12
- 439              		.cfi_def_cfa_offset 16
- 440 0004 00AF     		add	r7, sp, #0
- 441              		.cfi_def_cfa_register 7
- 442 0006 0346     		mov	r3, r0
- 443 0008 0A46     		mov	r2, r1
- 444 000a FB80     		strh	r3, [r7, #6]	@ movhi
- 445 000c 1346     		mov	r3, r2	@ movhi
- 446 000e BB80     		strh	r3, [r7, #4]	@ movhi
-  49:Core/Src/Functions.c ****     switch(heater)
- 447              		.loc 1 49 5
- 448 0010 FB88     		ldrh	r3, [r7, #6]
- 449 0012 002B     		cmp	r3, #0
- 450 0014 03D1     		bne	.L24
-  50:Core/Src/Functions.c ****     {
-  51:Core/Src/Functions.c ****         case HOT_END:
-  52:Core/Src/Functions.c ****             TIM3->CCR2 = power;
- 451              		.loc 1 52 17
- 452 0016 054A     		ldr	r2, .L25
- 453              		.loc 1 52 24
- 454 0018 BB88     		ldrh	r3, [r7, #4]
- 455 001a 9363     		str	r3, [r2, #56]
-  53:Core/Src/Functions.c ****             break;
- 456              		.loc 1 53 13
- 457 001c 00BF     		nop
- 458              	.L24:
-  54:Core/Src/Functions.c ****     }
-  55:Core/Src/Functions.c **** }
- 459              		.loc 1 55 1
- 460 001e 00BF     		nop
- 461 0020 0C37     		adds	r7, r7, #12
- 462              		.cfi_def_cfa_offset 4
- 463 0022 BD46     		mov	sp, r7
- 464              		.cfi_def_cfa_register 13
- 465              		@ sp needed
- 466 0024 5DF8047B 		ldr	r7, [sp], #4
- 467              		.cfi_restore 7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s 			page 10
+ 357              		.loc 1 44 1
+ 358              		.cfi_startproc
+ 359              		@ args = 0, pretend = 0, frame = 8
+ 360              		@ frame_needed = 1, uses_anonymous_args = 0
+ 361              		@ link register save eliminated.
+ 362 0000 80B4     		push	{r7}
+ 363              		.cfi_def_cfa_offset 4
+ 364              		.cfi_offset 7, -4
+ 365 0002 83B0     		sub	sp, sp, #12
+ 366              		.cfi_def_cfa_offset 16
+ 367 0004 00AF     		add	r7, sp, #0
+ 368              		.cfi_def_cfa_register 7
+ 369 0006 0346     		mov	r3, r0
+ 370 0008 0A46     		mov	r2, r1
+ 371 000a FB80     		strh	r3, [r7, #6]	@ movhi
+ 372 000c 1346     		mov	r3, r2	@ movhi
+ 373 000e BB80     		strh	r3, [r7, #4]	@ movhi
+  45:Core/Src/Functions.c ****     switch(heater)
+ 374              		.loc 1 45 5
+ 375 0010 FB88     		ldrh	r3, [r7, #6]
+ 376 0012 002B     		cmp	r3, #0
+ 377 0014 03D1     		bne	.L22
+  46:Core/Src/Functions.c ****     {
+  47:Core/Src/Functions.c ****         case HOT_END:
+  48:Core/Src/Functions.c ****             TIM3->CCR2 = power;
+ 378              		.loc 1 48 17
+ 379 0016 054A     		ldr	r2, .L23
+ 380              		.loc 1 48 24
+ 381 0018 BB88     		ldrh	r3, [r7, #4]
+ 382 001a 9363     		str	r3, [r2, #56]
+  49:Core/Src/Functions.c ****             break;
+ 383              		.loc 1 49 13
+ 384 001c 00BF     		nop
+ 385              	.L22:
+  50:Core/Src/Functions.c ****     }
+  51:Core/Src/Functions.c **** }
+ 386              		.loc 1 51 1
+ 387 001e 00BF     		nop
+ 388 0020 0C37     		adds	r7, r7, #12
+ 389              		.cfi_def_cfa_offset 4
+ 390 0022 BD46     		mov	sp, r7
+ 391              		.cfi_def_cfa_register 13
+ 392              		@ sp needed
+ 393 0024 5DF8047B 		ldr	r7, [sp], #4
+ 394              		.cfi_restore 7
+ 395              		.cfi_def_cfa_offset 0
+ 396 0028 7047     		bx	lr
+ 397              	.L24:
+ 398 002a 00BF     		.align	2
+ 399              	.L23:
+ 400 002c 00040040 		.word	1073742848
+ 401              		.cfi_endproc
+ 402              	.LFE323:
+ 404              		.section	.text.SetFanSpeed,"ax",%progbits
+ 405              		.align	1
+ 406              		.global	SetFanSpeed
+ 407              		.syntax unified
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s 			page 9
 
 
- 468              		.cfi_def_cfa_offset 0
- 469 0028 7047     		bx	lr
- 470              	.L26:
- 471 002a 00BF     		.align	2
- 472              	.L25:
- 473 002c 00040040 		.word	1073742848
- 474              		.cfi_endproc
- 475              	.LFE324:
- 477              		.section	.text.SetFanSpeed,"ax",%progbits
- 478              		.align	1
- 479              		.global	SetFanSpeed
- 480              		.syntax unified
- 481              		.thumb
- 482              		.thumb_func
- 484              	SetFanSpeed:
- 485              	.LFB325:
-  56:Core/Src/Functions.c **** 
-  57:Core/Src/Functions.c **** void SetFanSpeed(uint16_t fan, uint16_t speed)
-  58:Core/Src/Functions.c **** {
- 486              		.loc 1 58 1
- 487              		.cfi_startproc
- 488              		@ args = 0, pretend = 0, frame = 8
- 489              		@ frame_needed = 1, uses_anonymous_args = 0
- 490              		@ link register save eliminated.
- 491 0000 80B4     		push	{r7}
- 492              		.cfi_def_cfa_offset 4
- 493              		.cfi_offset 7, -4
- 494 0002 83B0     		sub	sp, sp, #12
- 495              		.cfi_def_cfa_offset 16
- 496 0004 00AF     		add	r7, sp, #0
- 497              		.cfi_def_cfa_register 7
- 498 0006 0346     		mov	r3, r0
- 499 0008 0A46     		mov	r2, r1
- 500 000a FB80     		strh	r3, [r7, #6]	@ movhi
- 501 000c 1346     		mov	r3, r2	@ movhi
- 502 000e BB80     		strh	r3, [r7, #4]	@ movhi
-  59:Core/Src/Functions.c ****     switch(fan)
- 503              		.loc 1 59 5
- 504 0010 FB88     		ldrh	r3, [r7, #6]
- 505 0012 002B     		cmp	r3, #0
- 506 0014 03D1     		bne	.L29
-  60:Core/Src/Functions.c ****     {
-  61:Core/Src/Functions.c ****         case HOT_END_FAN:
-  62:Core/Src/Functions.c ****             TIM3->CCR3 = speed;
- 507              		.loc 1 62 17
- 508 0016 054A     		ldr	r2, .L30
- 509              		.loc 1 62 24
- 510 0018 BB88     		ldrh	r3, [r7, #4]
- 511 001a D363     		str	r3, [r2, #60]
-  63:Core/Src/Functions.c ****             break;
- 512              		.loc 1 63 13
- 513 001c 00BF     		nop
- 514              	.L29:
-  64:Core/Src/Functions.c ****     }
-  65:Core/Src/Functions.c **** }
- 515              		.loc 1 65 1
- 516 001e 00BF     		nop
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s 			page 11
+ 408              		.thumb
+ 409              		.thumb_func
+ 411              	SetFanSpeed:
+ 412              	.LFB324:
+  52:Core/Src/Functions.c **** 
+  53:Core/Src/Functions.c **** void SetFanSpeed(uint16_t fan, uint16_t speed)
+  54:Core/Src/Functions.c **** {
+ 413              		.loc 1 54 1
+ 414              		.cfi_startproc
+ 415              		@ args = 0, pretend = 0, frame = 8
+ 416              		@ frame_needed = 1, uses_anonymous_args = 0
+ 417              		@ link register save eliminated.
+ 418 0000 80B4     		push	{r7}
+ 419              		.cfi_def_cfa_offset 4
+ 420              		.cfi_offset 7, -4
+ 421 0002 83B0     		sub	sp, sp, #12
+ 422              		.cfi_def_cfa_offset 16
+ 423 0004 00AF     		add	r7, sp, #0
+ 424              		.cfi_def_cfa_register 7
+ 425 0006 0346     		mov	r3, r0
+ 426 0008 0A46     		mov	r2, r1
+ 427 000a FB80     		strh	r3, [r7, #6]	@ movhi
+ 428 000c 1346     		mov	r3, r2	@ movhi
+ 429 000e BB80     		strh	r3, [r7, #4]	@ movhi
+  55:Core/Src/Functions.c ****     switch(fan)
+ 430              		.loc 1 55 5
+ 431 0010 FB88     		ldrh	r3, [r7, #6]
+ 432 0012 002B     		cmp	r3, #0
+ 433 0014 03D1     		bne	.L27
+  56:Core/Src/Functions.c ****     {
+  57:Core/Src/Functions.c ****         case HOT_END_FAN:
+  58:Core/Src/Functions.c ****             TIM3->CCR3 = speed;
+ 434              		.loc 1 58 17
+ 435 0016 054A     		ldr	r2, .L28
+ 436              		.loc 1 58 24
+ 437 0018 BB88     		ldrh	r3, [r7, #4]
+ 438 001a D363     		str	r3, [r2, #60]
+  59:Core/Src/Functions.c ****             break;
+ 439              		.loc 1 59 13
+ 440 001c 00BF     		nop
+ 441              	.L27:
+  60:Core/Src/Functions.c ****     }
+  61:Core/Src/Functions.c **** }
+ 442              		.loc 1 61 1
+ 443 001e 00BF     		nop
+ 444 0020 0C37     		adds	r7, r7, #12
+ 445              		.cfi_def_cfa_offset 4
+ 446 0022 BD46     		mov	sp, r7
+ 447              		.cfi_def_cfa_register 13
+ 448              		@ sp needed
+ 449 0024 5DF8047B 		ldr	r7, [sp], #4
+ 450              		.cfi_restore 7
+ 451              		.cfi_def_cfa_offset 0
+ 452 0028 7047     		bx	lr
+ 453              	.L29:
+ 454 002a 00BF     		.align	2
+ 455              	.L28:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s 			page 10
 
 
- 517 0020 0C37     		adds	r7, r7, #12
- 518              		.cfi_def_cfa_offset 4
- 519 0022 BD46     		mov	sp, r7
- 520              		.cfi_def_cfa_register 13
- 521              		@ sp needed
- 522 0024 5DF8047B 		ldr	r7, [sp], #4
- 523              		.cfi_restore 7
- 524              		.cfi_def_cfa_offset 0
- 525 0028 7047     		bx	lr
- 526              	.L31:
- 527 002a 00BF     		.align	2
- 528              	.L30:
- 529 002c 00040040 		.word	1073742848
- 530              		.cfi_endproc
- 531              	.LFE325:
- 533              		.text
- 534              	.Letext0:
- 535              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 536              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 537              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
- 538              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
- 539              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
- 540              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
- 541              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h"
- 542              		.file 9 "Core/Inc/Parser.h"
- 543              		.file 10 "Core/Inc/main.h"
- 544              		.file 11 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s 			page 12
+ 456 002c 00040040 		.word	1073742848
+ 457              		.cfi_endproc
+ 458              	.LFE324:
+ 460              		.text
+ 461              	.Letext0:
+ 462              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 463              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 464              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+ 465              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 466              		.file 6 "Core/Inc/main.h"
+ 467              		.file 7 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Functions.c
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:20     .bss.R:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:23     .bss.R:0000000000000000 R
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:26     .bss.T:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:29     .bss.T:0000000000000000 T
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:32     .bss.S:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:35     .bss.S:0000000000000000 S
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:38     .bss.msg_buffer:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:41     .bss.msg_buffer:0000000000000000 msg_buffer
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:44     .bss.value:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:47     .bss.value:0000000000000000 value
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:50     .bss.RxBuf:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:53     .bss.RxBuf:0000000000000000 RxBuf
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:56     .text.DelayMicrosecond:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:62     .text.DelayMicrosecond:0000000000000000 DelayMicrosecond
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:112    .text.SelectDriver:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:118    .text.SelectDriver:0000000000000000 SelectDriver
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:142    .text.SelectDriver:0000000000000018 $d
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:146    .text.SelectDriver:0000000000000028 $t
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:212    .text.SelectDriver:0000000000000088 $d
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:222    .text.GetTemperature:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:228    .text.GetTemperature:0000000000000000 GetTemperature
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:396    .text.GetTemperature:0000000000000158 $d
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:422    .text.SetHeating:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:428    .text.SetHeating:0000000000000000 SetHeating
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:473    .text.SetHeating:000000000000002c $d
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:478    .text.SetFanSpeed:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:484    .text.SetFanSpeed:0000000000000000 SetFanSpeed
-C:\Users\Morroway\AppData\Local\Temp\ccCtNFZc.s:529    .text.SetFanSpeed:000000000000002c $d
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:20     .bss.msg_buffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:26     .bss.value:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:29     .bss.value:0000000000000000 value
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:32     .bss.RxBuf:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:35     .bss.RxBuf:0000000000000000 RxBuf
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:38     .text.SelectDriver:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:44     .text.SelectDriver:0000000000000000 SelectDriver
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:69     .text.SelectDriver:0000000000000018 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:73     .text.SelectDriver:0000000000000028 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:139    .text.SelectDriver:0000000000000088 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:149    .text.GetTemperature:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:155    .text.GetTemperature:0000000000000000 GetTemperature
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:323    .text.GetTemperature:0000000000000158 $d
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:349    .text.SetHeating:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:355    .text.SetHeating:0000000000000000 SetHeating
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:400    .text.SetHeating:000000000000002c $d
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:405    .text.SetFanSpeed:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:411    .text.SetFanSpeed:0000000000000000 SetFanSpeed
+C:\Users\Morroway\AppData\Local\Temp\ccNy3ttV.s:456    .text.SetFanSpeed:000000000000002c $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin

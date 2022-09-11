@@ -59,6 +59,9 @@ void Error_Handler(void);
 static char msg_buffer[30];
 static uint32_t value[ADC_CHANNELS]; 
 static uint8_t RxBuf[RxBuf_SIZE];
+
+
+void DelayMicrosecond(uint16_t time); 
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

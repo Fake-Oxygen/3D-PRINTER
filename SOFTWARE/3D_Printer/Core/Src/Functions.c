@@ -1,10 +1,6 @@
 #include "Functions.h"
 
-void DelayMicrosecond(TIM_HandleTypeDef *timer, uint16_t time)
-{
-    __HAL_TIM_SET_COUNTER(timer,0);
-	while (__HAL_TIM_GET_COUNTER(timer) < time);
-}
+
 void SelectDriver(uint16_t axis)
 {
     switch(axis)

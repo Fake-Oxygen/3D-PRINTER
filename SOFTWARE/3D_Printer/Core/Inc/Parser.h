@@ -2,10 +2,12 @@
 #define PARSER_H
 
 #include "main.h"
+#include <stdlib.h>
+#include <string.h>
 
-static uint16_t R, T, S;
+extern uint16_t F;
 extern uint16_t interval;
-
+extern double X, Y, Z, E;
 
 void reset_args();
 void get_command(uint8_t buf[]);

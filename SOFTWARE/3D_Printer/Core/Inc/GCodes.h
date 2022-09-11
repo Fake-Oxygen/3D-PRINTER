@@ -21,7 +21,9 @@
 #include "Functions.h"
 #include "main.h"
 
+extern double Cur_X, Cur_Y, Cur_Z, Cur_E;
 
-void M105(int R, int T);
-int M155(int S);
+void M105(uint16_t R, uint16_t T);
+uint16_t M155(uint16_t S);
+void G0();
 #endif

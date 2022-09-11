@@ -57,7 +57,7 @@ PCD_HandleTypeDef hpcd_USB_OTG_FS;
 uint32_t last_time;
 
 /* USER CODE BEGIN PV */
-
+uint16_t step = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -72,11 +72,8 @@ static void MX_TIM3_Init(void);
 static void MX_ADC1_Init(void);
 /* USER CODE BEGIN PFP */
 /* USER CODE END PFP */
-
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
-
 
 void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {
@@ -85,6 +82,12 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
     HAL_UARTEx_ReceiveToIdle_DMA(&hlpuart1, (uint8_t *)RxBuf, RxBuf_SIZE);
     __HAL_DMA_DISABLE_IT(&hdma_lpuart1_rx, DMA_IT_HT);
   }
+}
+
+void DelayMicrosecond(uint16_t time)
+{
+    __HAL_TIM_SET_COUNTER(&htim4,0);
+	while (__HAL_TIM_GET_COUNTER(&htim4) < time);
 }
 
 uint32_t GetADCValue(uint16_t val) { return value[val]; }
@@ -153,8 +156,7 @@ int main(void)
     // TIM3->CCR3 = 100;
     //  sprintf(msg_buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
     //  HAL_UART_Transmit(&hlpuart1, (uint16_t*)msg_buffer, strlen(msg_buffer), HAL_MAX_DELAY);
-    HAL_Delay(2);
-  //  uint16_t inter = GetInterval();
+    //  uint16_t inter = GetInterval();
     if (RxBuf[0] != 0)
     {
       // sprintf(msg_buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
@@ -166,8 +168,11 @@ int main(void)
     if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == 1)
     {
       CHANGE_MOTOR_DIR(E_AXIS_DIR, COUNTERCLOCKWISE);
-      MAKE_MOTOR_STEP(E_AXIS_STEP);
-      DelayMicrosecond(&htim4, 200);
+      if (step <= STEPS_PER_REV)
+      {
+        MAKE_MOTOR_STEP(E_AXIS_STEP);
+        step++;
+      }
       SetHeating(HOT_END, 30);
       SetFanSpeed(HOT_END_FAN, 50);
     }
@@ -177,6 +182,7 @@ int main(void)
       M105(0, 0);
       last_time = HAL_GetTick();
     }
+   G0();
 
     /* USER CODE END WHILE */
 

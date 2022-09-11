@@ -1,59 +1,92 @@
 #include "Parser.h"
 
+uint16_t R, T, S;
 uint16_t interval = 0;
+uint16_t F = 0;
+double E = 0;
+double X = 0;
+double Y = 0;
+double Z = 0;
+
 
 void reset_args()
 {
-  R = -1;
-  T = 0;
-  S = 0;
+    R = -1;
+    T = 0;
+    S = 0;
 }
 
 void get_command(uint8_t buf[])
 {
-  char *command;
-  char *delim = " ";
+    char *command;
+    char *delim = " ";
 
-  split_gcode(buf);
-  command = strtok(buf, delim);
-  switch (command[0])
-  {
-  case 'M':
-    HAL_Delay(1);
-    switch (atoi(buf + 1))
+    split_gcode(buf);
+    command = strtok(buf, delim);
+    switch (command[0])
     {
-    case 105:
-      M105(R, T);
-      break;
-    case 155:
-      interval = M155(S);
-      break;
+    case 'M':
+        HAL_Delay(1);
+        switch (atoi(buf + 1))
+        {
+        case 105:
+            M105(R, T);
+            break;
+        case 155:
+            interval = M155(S);
+            break;
+        }
+        break;
+    case 'G':
+        HAL_Delay(1);
+        switch(atoi(buf + 1))
+        {
+            case 0:
+            case 1:
+                 G0();
+                break;
+        }
+        break;
     }
-    break;
-  }
-  reset_args();
-  memset(&command[0], 0, sizeof(command));
+    reset_args();
+    memset(&command[0], 0, sizeof(command));
 }
 
 void split_gcode(uint8_t buf[])
 {
-  char *buf2;
-  buf2 = strtok(buf, " ");
-  while (buf2 != NULL)
-  {
-
-    switch (buf2[0])
+    char *buf2;
+    HAL_Delay(1);
+    buf2 = strtok(buf, " ");
+    while (buf2 != NULL)
     {
-    case 'R':
-      R = atoi(buf2 + 1);
-      break;
-    case 'T':
-      T = atoi(buf2 + 1);
-      break;
-    case 'S':
-      S = atoi(buf2 + 1);
-      break;
+        switch (buf2[0])
+        {
+        case 'R':
+            R = atoi(buf2 + 1);
+            break;
+        case 'T':
+            T = atoi(buf2 + 1);
+            break;
+        case 'S':
+            S = atoi(buf2 + 1);
+            break;
+        case 'X':
+            X = atof(buf2 + 1);
+            break;
+        case 'Y':
+            Y = atof(buf2 + 1);
+            break;
+        case 'Z':
+            Z = atof(buf2 + 1);
+            break;
+        case 'E':
+            E = atof(buf2 + 1);
+            break;
+        case 'F':
+            F = atoi(buf2 + 1);
+            break;
+        }
+        HAL_Delay(1);
+        buf2 = strtok(NULL, " ");
     }
-    buf2 = strtok(NULL, " ");
-  }
 }
