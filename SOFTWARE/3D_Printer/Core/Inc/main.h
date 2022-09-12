@@ -61,7 +61,7 @@ static char msg_buffer[30];
 extern uint32_t value[ADC_CHANNELS]; 
 static uint8_t RxBuf[RxBuf_SIZE];
 
-
+int GetTicks();
 void DelayMicrosecond(uint16_t time); 
 /* USER CODE END EFP */
 

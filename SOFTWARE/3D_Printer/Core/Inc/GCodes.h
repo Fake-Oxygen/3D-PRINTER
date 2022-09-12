@@ -27,6 +27,7 @@ extern uint16_t Cur_F;
 extern bool isRunning;
 extern uint16_t temp_goal;
 extern uint16_t Cur_temp;
+extern uint32_t last_time_E;
 
 void M104();
 void M105(uint16_t R, uint16_t T);
