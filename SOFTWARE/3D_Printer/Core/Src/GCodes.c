@@ -14,6 +14,7 @@ void M105(uint16_t R, uint16_t T)
 #ifdef REDUNDANT_TEMP_SENSOR
     if (R != -1)
     {
+        
     }
 #endif
 }

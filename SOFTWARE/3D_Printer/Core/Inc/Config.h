@@ -45,6 +45,7 @@
 #define RxBuf_SIZE	20
 #define STEPS_PER_REV 19256.0f
 #define MM_PER_REV 23.0f
+#define X_STOP_PIN GPIOF,GPIO_PIN_4
 //#define REDUNDANT_TEMP_SENSOR
 
 #endif
