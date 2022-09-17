@@ -182,7 +182,7 @@ LIBDIR = \
 
 
 # Additional LD Flags from config file
-ADDITIONALLDFLAGS = -specs=nano.specs -specs=nosys.specs -u_printf_float 
+ADDITIONALLDFLAGS = -Wunused-variable -specs=nano.specs -specs=nosys.specs -u_printf_float 
 
 LDFLAGS = $(MCU) $(ADDITIONALLDFLAGS) -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 

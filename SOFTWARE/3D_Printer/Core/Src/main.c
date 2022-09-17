@@ -154,8 +154,9 @@ int main(void)
   __HAL_DMA_DISABLE_IT(&hdma_lpuart1_rx, DMA_IT_HT);
   memset(&RxBuf[0], 0, sizeof(RxBuf));
   reset_args();
+  int steps = 0;
   /* USER CODE END 2 */
-
+  HAL_Delay(1000);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -182,8 +183,13 @@ int main(void)
 
     G0();
     M104();
-    MAKE_MOTOR_STEP(X_AXIS_STEP);
-    DelayMicrosecond(200);
+    if (steps <= 6524)
+    {
+      MAKE_MOTOR_STEP(X_AXIS_STEP);
+      DelayMicrosecond(600);
+      steps++;
+    }
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

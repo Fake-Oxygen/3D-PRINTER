@@ -45,6 +45,7 @@ assemblyFlags: []
 linkerFlags: 
   - -specs=nano.specs
   - -u_printf_float
+  - -Wunused-variable
 
 
 # libraries to be included. The -l prefix to the library will be automatically added.

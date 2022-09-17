@@ -44,8 +44,11 @@
 #define HOT_END 0
 #define RxBuf_SIZE	20
 #define STEPS_PER_REV 19256.0f
-#define MM_PER_REV 23.0f
+#define E_MM_PER_REV 23.0f
 #define X_STOP_PIN GPIOF,GPIO_PIN_4
+#define OFFSET_P 0.012
+#define OFFSET_N -0.012
+#define XY_MM_PER_REV 69.115f
 //#define REDUNDANT_TEMP_SENSOR
 
 #endif

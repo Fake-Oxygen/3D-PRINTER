@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 1
   54              		.align	3
   57              	Cur_Z:
   58 0000 00000000 		.space	8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s 			page 2
 
 
   58      00000000 
@@ -76,15 +76,25 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 1
   74              		.align	2
   77              	last_time_E:
   78 0000 00000000 		.space	4
-  79              		.section	.text.M105,"ax",%progbits
-  80              		.align	1
-  81              		.global	M105
-  82              		.syntax unified
-  83              		.thumb
-  84              		.thumb_func
-  86              	M105:
-  87              	.LFB321:
-  88              		.file 1 "Core/Src/GCodes.c"
+  79              		.global	last_time_X
+  80              		.section	.bss.last_time_X,"aw",%nobits
+  81              		.align	2
+  84              	last_time_X:
+  85 0000 00000000 		.space	4
+  86              		.global	last_time_Y
+  87              		.section	.bss.last_time_Y,"aw",%nobits
+  88              		.align	2
+  91              	last_time_Y:
+  92 0000 00000000 		.space	4
+  93              		.section	.text.M105,"ax",%progbits
+  94              		.align	1
+  95              		.global	M105
+  96              		.syntax unified
+  97              		.thumb
+  98              		.thumb_func
+ 100              	M105:
+ 101              	.LFB321:
+ 102              		.file 1 "Core/Src/GCodes.c"
    1:Core/Src/GCodes.c **** #include "GCodes.h"
    2:Core/Src/GCodes.c **** 
    3:Core/Src/GCodes.c **** double Cur_E = 0;
@@ -94,593 +104,498 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 1
    7:Core/Src/GCodes.c **** uint16_t Cur_F = 0;
    8:Core/Src/GCodes.c **** bool isRunning = false;
    9:Core/Src/GCodes.c **** uint32_t last_time_E = 0;
-  10:Core/Src/GCodes.c **** 
-  11:Core/Src/GCodes.c **** void M105(uint16_t R, uint16_t T)
-  12:Core/Src/GCodes.c **** {
-  89              		.loc 1 12 1
-  90              		.cfi_startproc
-  91              		@ args = 0, pretend = 0, frame = 8
-  92              		@ frame_needed = 1, uses_anonymous_args = 0
-  93 0000 80B5     		push	{r7, lr}
-  94              		.cfi_def_cfa_offset 8
-  95              		.cfi_offset 7, -8
-  96              		.cfi_offset 14, -4
-  97 0002 82B0     		sub	sp, sp, #8
-  98              		.cfi_def_cfa_offset 16
-  99 0004 00AF     		add	r7, sp, #0
- 100              		.cfi_def_cfa_register 7
- 101 0006 0346     		mov	r3, r0
- 102 0008 0A46     		mov	r2, r1
- 103 000a FB80     		strh	r3, [r7, #6]	@ movhi
- 104 000c 1346     		mov	r3, r2	@ movhi
- 105 000e BB80     		strh	r3, [r7, #4]	@ movhi
-  13:Core/Src/GCodes.c ****     print_temperature();
- 106              		.loc 1 13 5
- 107 0010 FFF7FEFF 		bl	print_temperature
-  14:Core/Src/GCodes.c **** #ifdef REDUNDANT_TEMP_SENSOR
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 3
+  10:Core/Src/GCodes.c **** uint32_t last_time_X = 0;
+  11:Core/Src/GCodes.c **** uint32_t last_time_Y = 0;
+  12:Core/Src/GCodes.c **** 
+  13:Core/Src/GCodes.c **** void M105(uint16_t R, uint16_t T)
+  14:Core/Src/GCodes.c **** {
+ 103              		.loc 1 14 1
+ 104              		.cfi_startproc
+ 105              		@ args = 0, pretend = 0, frame = 8
+ 106              		@ frame_needed = 1, uses_anonymous_args = 0
+ 107 0000 80B5     		push	{r7, lr}
+ 108              		.cfi_def_cfa_offset 8
+ 109              		.cfi_offset 7, -8
+ 110              		.cfi_offset 14, -4
+ 111 0002 82B0     		sub	sp, sp, #8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s 			page 3
 
 
-  15:Core/Src/GCodes.c ****     if (R != -1)
-  16:Core/Src/GCodes.c ****     {
-  17:Core/Src/GCodes.c ****         
-  18:Core/Src/GCodes.c ****     }
-  19:Core/Src/GCodes.c **** #endif
-  20:Core/Src/GCodes.c **** }
- 108              		.loc 1 20 1
- 109 0014 00BF     		nop
- 110 0016 0837     		adds	r7, r7, #8
- 111              		.cfi_def_cfa_offset 8
- 112 0018 BD46     		mov	sp, r7
- 113              		.cfi_def_cfa_register 13
- 114              		@ sp needed
- 115 001a 80BD     		pop	{r7, pc}
- 116              		.cfi_endproc
- 117              	.LFE321:
- 119              		.section	.text.M155,"ax",%progbits
- 120              		.align	1
- 121              		.global	M155
- 122              		.syntax unified
- 123              		.thumb
- 124              		.thumb_func
- 126              	M155:
- 127              	.LFB322:
-  21:Core/Src/GCodes.c **** 
-  22:Core/Src/GCodes.c **** uint16_t M155(uint16_t S)
-  23:Core/Src/GCodes.c **** {
- 128              		.loc 1 23 1
- 129              		.cfi_startproc
- 130              		@ args = 0, pretend = 0, frame = 8
- 131              		@ frame_needed = 1, uses_anonymous_args = 0
- 132              		@ link register save eliminated.
- 133 0000 80B4     		push	{r7}
- 134              		.cfi_def_cfa_offset 4
- 135              		.cfi_offset 7, -4
- 136 0002 83B0     		sub	sp, sp, #12
- 137              		.cfi_def_cfa_offset 16
- 138 0004 00AF     		add	r7, sp, #0
- 139              		.cfi_def_cfa_register 7
- 140 0006 0346     		mov	r3, r0
- 141 0008 FB80     		strh	r3, [r7, #6]	@ movhi
-  24:Core/Src/GCodes.c ****     return S * 1000;
- 142              		.loc 1 24 14
- 143 000a FB88     		ldrh	r3, [r7, #6]	@ movhi
- 144 000c 1A46     		mov	r2, r3	@ movhi
- 145 000e 5201     		lsls	r2, r2, #5
- 146 0010 D21A     		subs	r2, r2, r3
- 147 0012 9200     		lsls	r2, r2, #2
- 148 0014 1344     		add	r3, r3, r2
- 149 0016 DB00     		lsls	r3, r3, #3
- 150 0018 9BB2     		uxth	r3, r3
-  25:Core/Src/GCodes.c **** }
- 151              		.loc 1 25 1
- 152 001a 1846     		mov	r0, r3
- 153 001c 0C37     		adds	r7, r7, #12
- 154              		.cfi_def_cfa_offset 4
- 155 001e BD46     		mov	sp, r7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 4
+ 112              		.cfi_def_cfa_offset 16
+ 113 0004 00AF     		add	r7, sp, #0
+ 114              		.cfi_def_cfa_register 7
+ 115 0006 0346     		mov	r3, r0
+ 116 0008 0A46     		mov	r2, r1
+ 117 000a FB80     		strh	r3, [r7, #6]	@ movhi
+ 118 000c 1346     		mov	r3, r2	@ movhi
+ 119 000e BB80     		strh	r3, [r7, #4]	@ movhi
+  15:Core/Src/GCodes.c ****     print_temperature();
+ 120              		.loc 1 15 5
+ 121 0010 FFF7FEFF 		bl	print_temperature
+  16:Core/Src/GCodes.c **** #ifdef REDUNDANT_TEMP_SENSOR
+  17:Core/Src/GCodes.c ****     if (R != -1)
+  18:Core/Src/GCodes.c ****     {
+  19:Core/Src/GCodes.c ****     }
+  20:Core/Src/GCodes.c **** #endif
+  21:Core/Src/GCodes.c **** }
+ 122              		.loc 1 21 1
+ 123 0014 00BF     		nop
+ 124 0016 0837     		adds	r7, r7, #8
+ 125              		.cfi_def_cfa_offset 8
+ 126 0018 BD46     		mov	sp, r7
+ 127              		.cfi_def_cfa_register 13
+ 128              		@ sp needed
+ 129 001a 80BD     		pop	{r7, pc}
+ 130              		.cfi_endproc
+ 131              	.LFE321:
+ 133              		.section	.text.M155,"ax",%progbits
+ 134              		.align	1
+ 135              		.global	M155
+ 136              		.syntax unified
+ 137              		.thumb
+ 138              		.thumb_func
+ 140              	M155:
+ 141              	.LFB322:
+  22:Core/Src/GCodes.c **** 
+  23:Core/Src/GCodes.c **** uint16_t M155(uint16_t S)
+  24:Core/Src/GCodes.c **** {
+ 142              		.loc 1 24 1
+ 143              		.cfi_startproc
+ 144              		@ args = 0, pretend = 0, frame = 8
+ 145              		@ frame_needed = 1, uses_anonymous_args = 0
+ 146              		@ link register save eliminated.
+ 147 0000 80B4     		push	{r7}
+ 148              		.cfi_def_cfa_offset 4
+ 149              		.cfi_offset 7, -4
+ 150 0002 83B0     		sub	sp, sp, #12
+ 151              		.cfi_def_cfa_offset 16
+ 152 0004 00AF     		add	r7, sp, #0
+ 153              		.cfi_def_cfa_register 7
+ 154 0006 0346     		mov	r3, r0
+ 155 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+  25:Core/Src/GCodes.c ****     return S * 1000;
+ 156              		.loc 1 25 14
+ 157 000a FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 158 000c 1A46     		mov	r2, r3	@ movhi
+ 159 000e 5201     		lsls	r2, r2, #5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s 			page 4
 
 
- 156              		.cfi_def_cfa_register 13
- 157              		@ sp needed
- 158 0020 5DF8047B 		ldr	r7, [sp], #4
- 159              		.cfi_restore 7
- 160              		.cfi_def_cfa_offset 0
- 161 0024 7047     		bx	lr
- 162              		.cfi_endproc
- 163              	.LFE322:
- 165              		.global	__aeabi_dsub
- 166              		.global	__aeabi_ui2d
- 167              		.global	__aeabi_ddiv
- 168              		.global	__aeabi_dmul
- 169              		.global	__aeabi_d2uiz
- 170              		.global	__aeabi_dcmpge
- 171              		.global	__aeabi_dcmple
- 172              		.global	__aeabi_dcmplt
- 173              		.global	__aeabi_dadd
- 174              		.section	.text.G0,"ax",%progbits
- 175              		.align	1
- 176              		.global	G0
- 177              		.syntax unified
- 178              		.thumb
- 179              		.thumb_func
- 181              	G0:
- 182              	.LFB323:
-  26:Core/Src/GCodes.c **** 
-  27:Core/Src/GCodes.c **** void G0()
-  28:Core/Src/GCodes.c **** {
- 183              		.loc 1 28 1
- 184              		.cfi_startproc
- 185              		@ args = 0, pretend = 0, frame = 16
- 186              		@ frame_needed = 1, uses_anonymous_args = 0
- 187 0000 80B5     		push	{r7, lr}
- 188              		.cfi_def_cfa_offset 8
- 189              		.cfi_offset 7, -8
- 190              		.cfi_offset 14, -4
- 191 0002 84B0     		sub	sp, sp, #16
- 192              		.cfi_def_cfa_offset 24
- 193 0004 00AF     		add	r7, sp, #0
- 194              		.cfi_def_cfa_register 7
-  29:Core/Src/GCodes.c ****     double E_dif = E - Cur_E;
- 195              		.loc 1 29 22
- 196 0006 604B     		ldr	r3, .L18+40
- 197 0008 D3E90001 		ldrd	r0, [r3]
- 198 000c 5F4B     		ldr	r3, .L18+44
- 199 000e D3E90023 		ldrd	r2, [r3]
- 200              		.loc 1 29 12
- 201 0012 FFF7FEFF 		bl	__aeabi_dsub
- 202 0016 0246     		mov	r2, r0
- 203 0018 0B46     		mov	r3, r1
- 204 001a C7E90223 		strd	r2, [r7, #8]
-  30:Core/Src/GCodes.c ****     uint16_t speed = (double)1 / (double)F * (double)60 * MM_PER_REV / STEPS_PER_REV * (double)1000
- 205              		.loc 1 30 34
- 206 001e 5C4B     		ldr	r3, .L18+48
- 207 0020 1B88     		ldrh	r3, [r3]
- 208 0022 1846     		mov	r0, r3
- 209 0024 FFF7FEFF 		bl	__aeabi_ui2d
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 5
+ 160 0010 D21A     		subs	r2, r2, r3
+ 161 0012 9200     		lsls	r2, r2, #2
+ 162 0014 1344     		add	r3, r3, r2
+ 163 0016 DB00     		lsls	r3, r3, #3
+ 164 0018 9BB2     		uxth	r3, r3
+  26:Core/Src/GCodes.c **** }
+ 165              		.loc 1 26 1
+ 166 001a 1846     		mov	r0, r3
+ 167 001c 0C37     		adds	r7, r7, #12
+ 168              		.cfi_def_cfa_offset 4
+ 169 001e BD46     		mov	sp, r7
+ 170              		.cfi_def_cfa_register 13
+ 171              		@ sp needed
+ 172 0020 5DF8047B 		ldr	r7, [sp], #4
+ 173              		.cfi_restore 7
+ 174              		.cfi_def_cfa_offset 0
+ 175 0024 7047     		bx	lr
+ 176              		.cfi_endproc
+ 177              	.LFE322:
+ 179              		.global	__aeabi_dsub
+ 180              		.global	__aeabi_ui2d
+ 181              		.global	__aeabi_ddiv
+ 182              		.global	__aeabi_dmul
+ 183              		.global	__aeabi_d2uiz
+ 184              		.section	.text.G0,"ax",%progbits
+ 185              		.align	1
+ 186              		.global	G0
+ 187              		.syntax unified
+ 188              		.thumb
+ 189              		.thumb_func
+ 191              	G0:
+ 192              	.LFB323:
+  27:Core/Src/GCodes.c **** 
+  28:Core/Src/GCodes.c **** void G0()
+  29:Core/Src/GCodes.c **** {
+ 193              		.loc 1 29 1
+ 194              		.cfi_startproc
+ 195              		@ args = 0, pretend = 0, frame = 32
+ 196              		@ frame_needed = 1, uses_anonymous_args = 0
+ 197 0000 80B5     		push	{r7, lr}
+ 198              		.cfi_def_cfa_offset 8
+ 199              		.cfi_offset 7, -8
+ 200              		.cfi_offset 14, -4
+ 201 0002 88B0     		sub	sp, sp, #32
+ 202              		.cfi_def_cfa_offset 40
+ 203 0004 00AF     		add	r7, sp, #0
+ 204              		.cfi_def_cfa_register 7
+  30:Core/Src/GCodes.c ****     double E_dif = E - Cur_E;
+ 205              		.loc 1 30 22
+ 206 0006 3E4B     		ldr	r3, .L5+16
+ 207 0008 D3E90001 		ldrd	r0, [r3]
+ 208 000c 3D4B     		ldr	r3, .L5+20
+ 209 000e D3E90023 		ldrd	r2, [r3]
+ 210              		.loc 1 30 12
+ 211 0012 FFF7FEFF 		bl	__aeabi_dsub
+ 212 0016 0246     		mov	r2, r0
+ 213 0018 0B46     		mov	r3, r1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s 			page 5
 
 
- 210 0028 0246     		mov	r2, r0
- 211 002a 0B46     		mov	r3, r1
- 212              		.loc 1 30 32
- 213 002c 4FF00000 		mov	r0, #0
- 214 0030 5849     		ldr	r1, .L18+52
- 215 0032 FFF7FEFF 		bl	__aeabi_ddiv
- 216 0036 0246     		mov	r2, r0
- 217 0038 0B46     		mov	r3, r1
- 218 003a 1046     		mov	r0, r2
- 219 003c 1946     		mov	r1, r3
- 220              		.loc 1 30 44
- 221 003e 4FF00002 		mov	r2, #0
- 222 0042 554B     		ldr	r3, .L18+56
- 223 0044 FFF7FEFF 		bl	__aeabi_dmul
- 224 0048 0246     		mov	r2, r0
- 225 004a 0B46     		mov	r3, r1
- 226 004c 1046     		mov	r0, r2
- 227 004e 1946     		mov	r1, r3
- 228              		.loc 1 30 57
- 229 0050 4FF00002 		mov	r2, #0
- 230 0054 514B     		ldr	r3, .L18+60
- 231 0056 FFF7FEFF 		bl	__aeabi_dmul
- 232 005a 0246     		mov	r2, r0
- 233 005c 0B46     		mov	r3, r1
- 234 005e 1046     		mov	r0, r2
- 235 0060 1946     		mov	r1, r3
- 236              		.loc 1 30 70
- 237 0062 3FA3     		adr	r3, .L18
- 238 0064 D3E90023 		ldrd	r2, [r3]
- 239 0068 FFF7FEFF 		bl	__aeabi_ddiv
- 240 006c 0246     		mov	r2, r0
- 241 006e 0B46     		mov	r3, r1
- 242 0070 1046     		mov	r0, r2
- 243 0072 1946     		mov	r1, r3
- 244              		.loc 1 30 86
- 245 0074 3CA3     		adr	r3, .L18+8
- 246 0076 D3E90023 		ldrd	r2, [r3]
- 247 007a FFF7FEFF 		bl	__aeabi_dmul
- 248 007e 0246     		mov	r2, r0
- 249 0080 0B46     		mov	r3, r1
- 250              		.loc 1 30 14
- 251 0082 1046     		mov	r0, r2
- 252 0084 1946     		mov	r1, r3
- 253 0086 FFF7FEFF 		bl	__aeabi_d2uiz
- 254 008a 0346     		mov	r3, r0
- 255 008c FB80     		strh	r3, [r7, #6]	@ movhi
-  31:Core/Src/GCodes.c **** 
-  32:Core/Src/GCodes.c ****     if (E_dif >= 0.0012 || E_dif <= -0.0012)
- 256              		.loc 1 32 8
- 257 008e 38A3     		adr	r3, .L18+16
- 258 0090 D3E90023 		ldrd	r2, [r3]
- 259 0094 D7E90201 		ldrd	r0, [r7, #8]
- 260 0098 FFF7FEFF 		bl	__aeabi_dcmpge
- 261 009c 0346     		mov	r3, r0
- 262 009e 002B     		cmp	r3, #0
- 263 00a0 09D1     		bne	.L5
- 264              		.loc 1 32 25 discriminator 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 6
+ 214 001a C7E90623 		strd	r2, [r7, #24]
+  31:Core/Src/GCodes.c ****     double X_dif = X - Cur_X;
+ 215              		.loc 1 31 22
+ 216 001e 3A4B     		ldr	r3, .L5+24
+ 217 0020 D3E90001 		ldrd	r0, [r3]
+ 218 0024 394B     		ldr	r3, .L5+28
+ 219 0026 D3E90023 		ldrd	r2, [r3]
+ 220              		.loc 1 31 12
+ 221 002a FFF7FEFF 		bl	__aeabi_dsub
+ 222 002e 0246     		mov	r2, r0
+ 223 0030 0B46     		mov	r3, r1
+ 224 0032 C7E90423 		strd	r2, [r7, #16]
+  32:Core/Src/GCodes.c ****     double Y_dif = Y - Cur_Y;
+ 225              		.loc 1 32 22
+ 226 0036 364B     		ldr	r3, .L5+32
+ 227 0038 D3E90001 		ldrd	r0, [r3]
+ 228 003c 354B     		ldr	r3, .L5+36
+ 229 003e D3E90023 		ldrd	r2, [r3]
+ 230              		.loc 1 32 12
+ 231 0042 FFF7FEFF 		bl	__aeabi_dsub
+ 232 0046 0246     		mov	r2, r0
+ 233 0048 0B46     		mov	r3, r1
+ 234 004a C7E90223 		strd	r2, [r7, #8]
+  33:Core/Src/GCodes.c ****     uint16_t speed = (double)1 / (double)F * (double)60 * E_MM_PER_REV / STEPS_PER_REV * (double)10
+ 235              		.loc 1 33 34
+ 236 004e 324B     		ldr	r3, .L5+40
+ 237 0050 1B88     		ldrh	r3, [r3]
+ 238 0052 1846     		mov	r0, r3
+ 239 0054 FFF7FEFF 		bl	__aeabi_ui2d
+ 240 0058 0246     		mov	r2, r0
+ 241 005a 0B46     		mov	r3, r1
+ 242              		.loc 1 33 32
+ 243 005c 4FF00000 		mov	r0, #0
+ 244 0060 2E49     		ldr	r1, .L5+44
+ 245 0062 FFF7FEFF 		bl	__aeabi_ddiv
+ 246 0066 0246     		mov	r2, r0
+ 247 0068 0B46     		mov	r3, r1
+ 248 006a 1046     		mov	r0, r2
+ 249 006c 1946     		mov	r1, r3
+ 250              		.loc 1 33 44
+ 251 006e 4FF00002 		mov	r2, #0
+ 252 0072 2B4B     		ldr	r3, .L5+48
+ 253 0074 FFF7FEFF 		bl	__aeabi_dmul
+ 254 0078 0246     		mov	r2, r0
+ 255 007a 0B46     		mov	r3, r1
+ 256 007c 1046     		mov	r0, r2
+ 257 007e 1946     		mov	r1, r3
+ 258              		.loc 1 33 57
+ 259 0080 4FF00002 		mov	r2, #0
+ 260 0084 274B     		ldr	r3, .L5+52
+ 261 0086 FFF7FEFF 		bl	__aeabi_dmul
+ 262 008a 0246     		mov	r2, r0
+ 263 008c 0B46     		mov	r3, r1
+ 264 008e 1046     		mov	r0, r2
+ 265 0090 1946     		mov	r1, r3
+ 266              		.loc 1 33 72
+ 267 0092 17A3     		adr	r3, .L5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s 			page 6
 
 
- 265 00a2 35A3     		adr	r3, .L18+24
- 266 00a4 D3E90023 		ldrd	r2, [r3]
- 267 00a8 D7E90201 		ldrd	r0, [r7, #8]
- 268 00ac FFF7FEFF 		bl	__aeabi_dcmple
- 269 00b0 0346     		mov	r3, r0
- 270 00b2 002B     		cmp	r3, #0
- 271 00b4 4AD0     		beq	.L14
- 272              	.L5:
-  33:Core/Src/GCodes.c ****     {
-  34:Core/Src/GCodes.c ****         if (GetTicks() - last_time_E >= speed && speed > 0)
- 273              		.loc 1 34 13
- 274 00b6 FFF7FEFF 		bl	GetTicks
- 275 00ba 0346     		mov	r3, r0
- 276 00bc 1A46     		mov	r2, r3
- 277              		.loc 1 34 24
- 278 00be 384B     		ldr	r3, .L18+64
- 279 00c0 1B68     		ldr	r3, [r3]
- 280 00c2 D21A     		subs	r2, r2, r3
- 281              		.loc 1 34 38
- 282 00c4 FB88     		ldrh	r3, [r7, #6]
- 283              		.loc 1 34 12
- 284 00c6 9A42     		cmp	r2, r3
- 285 00c8 44D3     		bcc	.L16
- 286              		.loc 1 34 47 discriminator 1
- 287 00ca FB88     		ldrh	r3, [r7, #6]
- 288 00cc 002B     		cmp	r3, #0
- 289 00ce 41D0     		beq	.L16
-  35:Core/Src/GCodes.c ****         {
-  36:Core/Src/GCodes.c ****             isRunning = true;
- 290              		.loc 1 36 23
- 291 00d0 344B     		ldr	r3, .L18+68
- 292 00d2 0122     		movs	r2, #1
- 293 00d4 1A70     		strb	r2, [r3]
-  37:Core/Src/GCodes.c ****             if (E_dif < 0)
- 294              		.loc 1 37 16
- 295 00d6 4FF00002 		mov	r2, #0
- 296 00da 4FF00003 		mov	r3, #0
- 297 00de D7E90201 		ldrd	r0, [r7, #8]
- 298 00e2 FFF7FEFF 		bl	__aeabi_dcmplt
- 299 00e6 0346     		mov	r3, r0
- 300 00e8 002B     		cmp	r3, #0
- 301 00ea 12D0     		beq	.L15
-  38:Core/Src/GCodes.c ****             {
-  39:Core/Src/GCodes.c ****                 CHANGE_MOTOR_DIR(E_AXIS_DIR, COUNTERCLOCKWISE);
- 302              		.loc 1 39 17
- 303 00ec 0122     		movs	r2, #1
- 304 00ee 0821     		movs	r1, #8
- 305 00f0 2D48     		ldr	r0, .L18+72
- 306 00f2 FFF7FEFF 		bl	HAL_GPIO_WritePin
-  40:Core/Src/GCodes.c ****                 Cur_E -= MM_PER_REV / STEPS_PER_REV;
- 307              		.loc 1 40 23
- 308 00f6 254B     		ldr	r3, .L18+44
- 309 00f8 D3E90001 		ldrd	r0, [r3]
- 310 00fc 20A3     		adr	r3, .L18+32
- 311 00fe D3E90023 		ldrd	r2, [r3]
- 312 0102 FFF7FEFF 		bl	__aeabi_dsub
- 313 0106 0246     		mov	r2, r0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 7
+ 268 0094 D3E90023 		ldrd	r2, [r3]
+ 269 0098 FFF7FEFF 		bl	__aeabi_ddiv
+ 270 009c 0246     		mov	r2, r0
+ 271 009e 0B46     		mov	r3, r1
+ 272 00a0 1046     		mov	r0, r2
+ 273 00a2 1946     		mov	r1, r3
+ 274              		.loc 1 33 88
+ 275 00a4 14A3     		adr	r3, .L5+8
+ 276 00a6 D3E90023 		ldrd	r2, [r3]
+ 277 00aa FFF7FEFF 		bl	__aeabi_dmul
+ 278 00ae 0246     		mov	r2, r0
+ 279 00b0 0B46     		mov	r3, r1
+ 280              		.loc 1 33 14
+ 281 00b2 1046     		mov	r0, r2
+ 282 00b4 1946     		mov	r1, r3
+ 283 00b6 FFF7FEFF 		bl	__aeabi_d2uiz
+ 284 00ba 0346     		mov	r3, r0
+ 285 00bc FB80     		strh	r3, [r7, #6]	@ movhi
+  34:Core/Src/GCodes.c **** 
+  35:Core/Src/GCodes.c ****     Move(E_dif, last_time_E, E_AXIS, speed);
+ 286              		.loc 1 35 5
+ 287 00be 1A4B     		ldr	r3, .L5+56
+ 288 00c0 1B68     		ldr	r3, [r3]
+ 289 00c2 FA88     		ldrh	r2, [r7, #6]
+ 290 00c4 0221     		movs	r1, #2
+ 291 00c6 1846     		mov	r0, r3
+ 292 00c8 97ED060B 		vldr.64	d0, [r7, #24]
+ 293 00cc FFF7FEFF 		bl	Move
+  36:Core/Src/GCodes.c ****     Move(X_dif, last_time_X, X_AXIS, speed);
+ 294              		.loc 1 36 5
+ 295 00d0 164B     		ldr	r3, .L5+60
+ 296 00d2 1B68     		ldr	r3, [r3]
+ 297 00d4 FA88     		ldrh	r2, [r7, #6]
+ 298 00d6 0021     		movs	r1, #0
+ 299 00d8 1846     		mov	r0, r3
+ 300 00da 97ED040B 		vldr.64	d0, [r7, #16]
+ 301 00de FFF7FEFF 		bl	Move
+  37:Core/Src/GCodes.c **** }
+ 302              		.loc 1 37 1
+ 303 00e2 00BF     		nop
+ 304 00e4 2037     		adds	r7, r7, #32
+ 305              		.cfi_def_cfa_offset 8
+ 306 00e6 BD46     		mov	sp, r7
+ 307              		.cfi_def_cfa_register 13
+ 308              		@ sp needed
+ 309 00e8 80BD     		pop	{r7, pc}
+ 310              	.L6:
+ 311 00ea 00BFAFF3 		.align	3
+ 311      0080
+ 312              	.L5:
+ 313 00f0 00000000 		.word	0
+ 314 00f4 00CED240 		.word	1087557120
+ 315 00f8 00000000 		.word	0
+ 316 00fc 80842E41 		.word	1093567616
+ 317 0100 00000000 		.word	E
+ 318 0104 00000000 		.word	Cur_E
+ 319 0108 00000000 		.word	X
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s 			page 7
 
 
- 314 0108 0B46     		mov	r3, r1
- 315 010a 2049     		ldr	r1, .L18+44
- 316 010c C1E90023 		strd	r2, [r1]
- 317 0110 11E0     		b	.L11
- 318              	.L15:
-  41:Core/Src/GCodes.c ****             }
-  42:Core/Src/GCodes.c ****             else
-  43:Core/Src/GCodes.c ****             {
-  44:Core/Src/GCodes.c ****                 CHANGE_MOTOR_DIR(E_AXIS_DIR, CLOCKWISE);
- 319              		.loc 1 44 17
- 320 0112 0022     		movs	r2, #0
- 321 0114 0821     		movs	r1, #8
- 322 0116 2448     		ldr	r0, .L18+72
- 323 0118 FFF7FEFF 		bl	HAL_GPIO_WritePin
-  45:Core/Src/GCodes.c ****                 Cur_E += MM_PER_REV / STEPS_PER_REV;
- 324              		.loc 1 45 23
- 325 011c 1B4B     		ldr	r3, .L18+44
- 326 011e D3E90001 		ldrd	r0, [r3]
- 327 0122 17A3     		adr	r3, .L18+32
- 328 0124 D3E90023 		ldrd	r2, [r3]
- 329 0128 FFF7FEFF 		bl	__aeabi_dadd
- 330 012c 0246     		mov	r2, r0
- 331 012e 0B46     		mov	r3, r1
- 332 0130 1649     		ldr	r1, .L18+44
- 333 0132 C1E90023 		strd	r2, [r1]
- 334              	.L11:
-  46:Core/Src/GCodes.c ****             }
-  47:Core/Src/GCodes.c ****             MAKE_MOTOR_STEP(E_AXIS_STEP);
- 335              		.loc 1 47 13
- 336 0136 0121     		movs	r1, #1
- 337 0138 1C48     		ldr	r0, .L18+76
- 338 013a FFF7FEFF 		bl	HAL_GPIO_TogglePin
-  48:Core/Src/GCodes.c ****             last_time_E = GetTicks();
- 339              		.loc 1 48 27
- 340 013e FFF7FEFF 		bl	GetTicks
- 341 0142 0346     		mov	r3, r0
- 342 0144 1A46     		mov	r2, r3
- 343              		.loc 1 48 25
- 344 0146 164B     		ldr	r3, .L18+64
- 345 0148 1A60     		str	r2, [r3]
-  34:Core/Src/GCodes.c ****         {
- 346              		.loc 1 34 12
- 347 014a 03E0     		b	.L16
- 348              	.L14:
-  49:Core/Src/GCodes.c ****             // DelayMicrosecond(speed);
-  50:Core/Src/GCodes.c ****         }
-  51:Core/Src/GCodes.c ****     }
-  52:Core/Src/GCodes.c ****     else
-  53:Core/Src/GCodes.c ****     {
-  54:Core/Src/GCodes.c ****         isRunning = false;
- 349              		.loc 1 54 19
- 350 014c 154B     		ldr	r3, .L18+68
- 351 014e 0022     		movs	r2, #0
- 352 0150 1A70     		strb	r2, [r3]
-  55:Core/Src/GCodes.c ****     }
+ 320 010c 00000000 		.word	Cur_X
+ 321 0110 00000000 		.word	Y
+ 322 0114 00000000 		.word	Cur_Y
+ 323 0118 00000000 		.word	F
+ 324 011c 0000F03F 		.word	1072693248
+ 325 0120 00004E40 		.word	1078853632
+ 326 0124 00003740 		.word	1077346304
+ 327 0128 00000000 		.word	last_time_E
+ 328 012c 00000000 		.word	last_time_X
+ 329              		.cfi_endproc
+ 330              	.LFE323:
+ 332              		.global	__aeabi_dadd
+ 333              		.section	.text.M104,"ax",%progbits
+ 334              		.align	1
+ 335              		.global	M104
+ 336              		.syntax unified
+ 337              		.thumb
+ 338              		.thumb_func
+ 340              	M104:
+ 341              	.LFB324:
+  38:Core/Src/GCodes.c **** 
+  39:Core/Src/GCodes.c **** void M104()
+  40:Core/Src/GCodes.c **** {
+ 342              		.loc 1 40 1
+ 343              		.cfi_startproc
+ 344              		@ args = 0, pretend = 0, frame = 0
+ 345              		@ frame_needed = 1, uses_anonymous_args = 0
+ 346 0000 B0B5     		push	{r4, r5, r7, lr}
+ 347              		.cfi_def_cfa_offset 16
+ 348              		.cfi_offset 4, -16
+ 349              		.cfi_offset 5, -12
+ 350              		.cfi_offset 7, -8
+ 351              		.cfi_offset 14, -4
+ 352 0002 00AF     		add	r7, sp, #0
+ 353              		.cfi_def_cfa_register 7
+  41:Core/Src/GCodes.c ****     Cur_temp = GetTemperature(ADC_HOT_END, value[ADC_HOT_END]);
+ 354              		.loc 1 41 49
+ 355 0004 284B     		ldr	r3, .L11+8
+ 356 0006 5B68     		ldr	r3, [r3, #4]
+ 357              		.loc 1 41 16
+ 358 0008 9BB2     		uxth	r3, r3
+ 359 000a 1946     		mov	r1, r3
+ 360 000c 0120     		movs	r0, #1
+ 361 000e FFF7FEFF 		bl	GetTemperature
+ 362 0012 53EC102B 		vmov	r2, r3, d0
+ 363              		.loc 1 41 14
+ 364 0016 1046     		mov	r0, r2
+ 365 0018 1946     		mov	r1, r3
+ 366 001a FFF7FEFF 		bl	__aeabi_d2uiz
+ 367 001e 0346     		mov	r3, r0
+ 368 0020 9AB2     		uxth	r2, r3
+ 369 0022 224B     		ldr	r3, .L11+12
+ 370 0024 1A80     		strh	r2, [r3]	@ movhi
+  42:Core/Src/GCodes.c ****     if (Cur_temp <= temp_goal)
+ 371              		.loc 1 42 18
+ 372 0026 214B     		ldr	r3, .L11+12
+ 373 0028 1A88     		ldrh	r2, [r3]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s 			page 8
+
+
+ 374 002a 214B     		ldr	r3, .L11+16
+ 375 002c 1B88     		ldrh	r3, [r3]
+ 376              		.loc 1 42 8
+ 377 002e 9A42     		cmp	r2, r3
+ 378 0030 2ED8     		bhi	.L8
+  43:Core/Src/GCodes.c ****     {
+  44:Core/Src/GCodes.c ****         SetHeating(HOT_END, -9.0f / 10.0f * (double)Cur_temp + (double)temp_goal + 100.0f);
+ 379              		.loc 1 44 45
+ 380 0032 1E4B     		ldr	r3, .L11+12
+ 381 0034 1B88     		ldrh	r3, [r3]
+ 382 0036 1846     		mov	r0, r3
+ 383 0038 FFF7FEFF 		bl	__aeabi_ui2d
+ 384              		.loc 1 44 43
+ 385 003c 18A3     		adr	r3, .L11
+ 386 003e D3E90023 		ldrd	r2, [r3]
+ 387 0042 FFF7FEFF 		bl	__aeabi_dmul
+ 388 0046 0246     		mov	r2, r0
+ 389 0048 0B46     		mov	r3, r1
+ 390 004a 1446     		mov	r4, r2
+ 391 004c 1D46     		mov	r5, r3
+ 392              		.loc 1 44 64
+ 393 004e 184B     		ldr	r3, .L11+16
+ 394 0050 1B88     		ldrh	r3, [r3]
+ 395 0052 1846     		mov	r0, r3
+ 396 0054 FFF7FEFF 		bl	__aeabi_ui2d
+ 397 0058 0246     		mov	r2, r0
+ 398 005a 0B46     		mov	r3, r1
+ 399              		.loc 1 44 62
+ 400 005c 2046     		mov	r0, r4
+ 401 005e 2946     		mov	r1, r5
+ 402 0060 FFF7FEFF 		bl	__aeabi_dadd
+ 403 0064 0246     		mov	r2, r0
+ 404 0066 0B46     		mov	r3, r1
+ 405 0068 1046     		mov	r0, r2
+ 406 006a 1946     		mov	r1, r3
+ 407              		.loc 1 44 82
+ 408 006c 4FF00002 		mov	r2, #0
+ 409 0070 104B     		ldr	r3, .L11+20
+ 410 0072 FFF7FEFF 		bl	__aeabi_dadd
+ 411 0076 0246     		mov	r2, r0
+ 412 0078 0B46     		mov	r3, r1
+ 413              		.loc 1 44 9
+ 414 007a 1046     		mov	r0, r2
+ 415 007c 1946     		mov	r1, r3
+ 416 007e FFF7FEFF 		bl	__aeabi_d2uiz
+ 417 0082 0346     		mov	r3, r0
+ 418 0084 9BB2     		uxth	r3, r3
+ 419 0086 1946     		mov	r1, r3
+ 420 0088 0020     		movs	r0, #0
+ 421 008a FFF7FEFF 		bl	SetHeating
+  45:Core/Src/GCodes.c ****     }
+  46:Core/Src/GCodes.c ****     else
+  47:Core/Src/GCodes.c ****     {
+  48:Core/Src/GCodes.c ****         SetHeating(HOT_END, 0);
+  49:Core/Src/GCodes.c ****     }
+  50:Core/Src/GCodes.c **** }
+ 422              		.loc 1 50 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s 			page 9
+
+
+ 423 008e 03E0     		b	.L10
+ 424              	.L8:
+  48:Core/Src/GCodes.c ****     }
+ 425              		.loc 1 48 9
+ 426 0090 0021     		movs	r1, #0
+ 427 0092 0020     		movs	r0, #0
+ 428 0094 FFF7FEFF 		bl	SetHeating
+ 429              	.L10:
+ 430              		.loc 1 50 1
+ 431 0098 00BF     		nop
+ 432 009a B0BD     		pop	{r4, r5, r7, pc}
+ 433              	.L12:
+ 434 009c AFF30080 		.align	3
+ 435              	.L11:
+ 436 00a0 000000C0 		.word	-1073741824
+ 437 00a4 CCCCECBF 		.word	-1075000116
+ 438 00a8 00000000 		.word	value
+ 439 00ac 00000000 		.word	Cur_temp
+ 440 00b0 00000000 		.word	temp_goal
+ 441 00b4 00005940 		.word	1079574528
+ 442              		.cfi_endproc
+ 443              	.LFE324:
+ 445              		.section	.text.M106,"ax",%progbits
+ 446              		.align	1
+ 447              		.global	M106
+ 448              		.syntax unified
+ 449              		.thumb
+ 450              		.thumb_func
+ 452              	M106:
+ 453              	.LFB325:
+  51:Core/Src/GCodes.c **** 
+  52:Core/Src/GCodes.c **** void M106(uint16_t S)
+  53:Core/Src/GCodes.c **** {
+ 454              		.loc 1 53 1
+ 455              		.cfi_startproc
+ 456              		@ args = 0, pretend = 0, frame = 8
+ 457              		@ frame_needed = 1, uses_anonymous_args = 0
+ 458 0000 80B5     		push	{r7, lr}
+ 459              		.cfi_def_cfa_offset 8
+ 460              		.cfi_offset 7, -8
+ 461              		.cfi_offset 14, -4
+ 462 0002 82B0     		sub	sp, sp, #8
+ 463              		.cfi_def_cfa_offset 16
+ 464 0004 00AF     		add	r7, sp, #0
+ 465              		.cfi_def_cfa_register 7
+ 466 0006 0346     		mov	r3, r0
+ 467 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+  54:Core/Src/GCodes.c **** 
+  55:Core/Src/GCodes.c ****     SetFanSpeed(HOT_END_FAN, S);
+ 468              		.loc 1 55 5
+ 469 000a FB88     		ldrh	r3, [r7, #6]
+ 470 000c 1946     		mov	r1, r3
+ 471 000e 0020     		movs	r0, #0
+ 472 0010 FFF7FEFF 		bl	SetFanSpeed
   56:Core/Src/GCodes.c **** }
- 353              		.loc 1 56 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 8
+ 473              		.loc 1 56 1
+ 474 0014 00BF     		nop
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s 			page 10
 
 
- 354 0152 00E0     		b	.L17
- 355              	.L16:
-  34:Core/Src/GCodes.c ****         {
- 356              		.loc 1 34 12
- 357 0154 00BF     		nop
- 358              	.L17:
- 359              		.loc 1 56 1
- 360 0156 00BF     		nop
- 361 0158 1037     		adds	r7, r7, #16
- 362              		.cfi_def_cfa_offset 8
- 363 015a BD46     		mov	sp, r7
- 364              		.cfi_def_cfa_register 13
- 365              		@ sp needed
- 366 015c 80BD     		pop	{r7, pc}
- 367              	.L19:
- 368 015e 00BF     		.align	3
- 369              	.L18:
- 370 0160 00000000 		.word	0
- 371 0164 00CED240 		.word	1087557120
- 372 0168 00000000 		.word	0
- 373 016c 80842E41 		.word	1093567616
- 374 0170 61325530 		.word	810889825
- 375 0174 2AA9533F 		.word	1062447402
- 376 0178 61325530 		.word	810889825
- 377 017c 2AA953BF 		.word	-1085036246
- 378 0180 000000A0 		.word	-1610612736
- 379 0184 D091533F 		.word	1062441424
- 380 0188 00000000 		.word	E
- 381 018c 00000000 		.word	Cur_E
- 382 0190 00000000 		.word	F
- 383 0194 0000F03F 		.word	1072693248
- 384 0198 00004E40 		.word	1078853632
- 385 019c 00003740 		.word	1077346304
- 386 01a0 00000000 		.word	last_time_E
- 387 01a4 00000000 		.word	isRunning
- 388 01a8 00140048 		.word	1207964672
- 389 01ac 00040048 		.word	1207960576
- 390              		.cfi_endproc
- 391              	.LFE323:
- 393              		.section	.text.M104,"ax",%progbits
- 394              		.align	1
- 395              		.global	M104
- 396              		.syntax unified
- 397              		.thumb
- 398              		.thumb_func
- 400              	M104:
- 401              	.LFB324:
-  57:Core/Src/GCodes.c **** 
-  58:Core/Src/GCodes.c **** void M104()
-  59:Core/Src/GCodes.c **** {
- 402              		.loc 1 59 1
- 403              		.cfi_startproc
- 404              		@ args = 0, pretend = 0, frame = 0
- 405              		@ frame_needed = 1, uses_anonymous_args = 0
- 406 0000 B0B5     		push	{r4, r5, r7, lr}
- 407              		.cfi_def_cfa_offset 16
- 408              		.cfi_offset 4, -16
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 9
-
-
- 409              		.cfi_offset 5, -12
- 410              		.cfi_offset 7, -8
- 411              		.cfi_offset 14, -4
- 412 0002 00AF     		add	r7, sp, #0
- 413              		.cfi_def_cfa_register 7
-  60:Core/Src/GCodes.c ****     Cur_temp = GetTemperature(ADC_HOT_END, value[ADC_HOT_END]);
- 414              		.loc 1 60 49
- 415 0004 284B     		ldr	r3, .L24+8
- 416 0006 5B68     		ldr	r3, [r3, #4]
- 417              		.loc 1 60 16
- 418 0008 9BB2     		uxth	r3, r3
- 419 000a 1946     		mov	r1, r3
- 420 000c 0120     		movs	r0, #1
- 421 000e FFF7FEFF 		bl	GetTemperature
- 422 0012 53EC102B 		vmov	r2, r3, d0
- 423              		.loc 1 60 14
- 424 0016 1046     		mov	r0, r2
- 425 0018 1946     		mov	r1, r3
- 426 001a FFF7FEFF 		bl	__aeabi_d2uiz
- 427 001e 0346     		mov	r3, r0
- 428 0020 9AB2     		uxth	r2, r3
- 429 0022 224B     		ldr	r3, .L24+12
- 430 0024 1A80     		strh	r2, [r3]	@ movhi
-  61:Core/Src/GCodes.c ****     if (Cur_temp <= temp_goal)
- 431              		.loc 1 61 18
- 432 0026 214B     		ldr	r3, .L24+12
- 433 0028 1A88     		ldrh	r2, [r3]
- 434 002a 214B     		ldr	r3, .L24+16
- 435 002c 1B88     		ldrh	r3, [r3]
- 436              		.loc 1 61 8
- 437 002e 9A42     		cmp	r2, r3
- 438 0030 2ED8     		bhi	.L21
-  62:Core/Src/GCodes.c ****     {
-  63:Core/Src/GCodes.c ****         SetHeating(HOT_END, -9.0f / 10.0f * (double)Cur_temp + (double)temp_goal + 100.0f);
- 439              		.loc 1 63 45
- 440 0032 1E4B     		ldr	r3, .L24+12
- 441 0034 1B88     		ldrh	r3, [r3]
- 442 0036 1846     		mov	r0, r3
- 443 0038 FFF7FEFF 		bl	__aeabi_ui2d
- 444              		.loc 1 63 43
- 445 003c 18A3     		adr	r3, .L24
- 446 003e D3E90023 		ldrd	r2, [r3]
- 447 0042 FFF7FEFF 		bl	__aeabi_dmul
- 448 0046 0246     		mov	r2, r0
- 449 0048 0B46     		mov	r3, r1
- 450 004a 1446     		mov	r4, r2
- 451 004c 1D46     		mov	r5, r3
- 452              		.loc 1 63 64
- 453 004e 184B     		ldr	r3, .L24+16
- 454 0050 1B88     		ldrh	r3, [r3]
- 455 0052 1846     		mov	r0, r3
- 456 0054 FFF7FEFF 		bl	__aeabi_ui2d
- 457 0058 0246     		mov	r2, r0
- 458 005a 0B46     		mov	r3, r1
- 459              		.loc 1 63 62
- 460 005c 2046     		mov	r0, r4
- 461 005e 2946     		mov	r1, r5
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 10
-
-
- 462 0060 FFF7FEFF 		bl	__aeabi_dadd
- 463 0064 0246     		mov	r2, r0
- 464 0066 0B46     		mov	r3, r1
- 465 0068 1046     		mov	r0, r2
- 466 006a 1946     		mov	r1, r3
- 467              		.loc 1 63 82
- 468 006c 4FF00002 		mov	r2, #0
- 469 0070 104B     		ldr	r3, .L24+20
- 470 0072 FFF7FEFF 		bl	__aeabi_dadd
- 471 0076 0246     		mov	r2, r0
- 472 0078 0B46     		mov	r3, r1
- 473              		.loc 1 63 9
- 474 007a 1046     		mov	r0, r2
- 475 007c 1946     		mov	r1, r3
- 476 007e FFF7FEFF 		bl	__aeabi_d2uiz
- 477 0082 0346     		mov	r3, r0
- 478 0084 9BB2     		uxth	r3, r3
- 479 0086 1946     		mov	r1, r3
- 480 0088 0020     		movs	r0, #0
- 481 008a FFF7FEFF 		bl	SetHeating
-  64:Core/Src/GCodes.c ****     }
-  65:Core/Src/GCodes.c ****     else
-  66:Core/Src/GCodes.c ****     {
-  67:Core/Src/GCodes.c ****         SetHeating(HOT_END, 0);
-  68:Core/Src/GCodes.c ****     }
-  69:Core/Src/GCodes.c **** }
- 482              		.loc 1 69 1
- 483 008e 03E0     		b	.L23
- 484              	.L21:
-  67:Core/Src/GCodes.c ****     }
- 485              		.loc 1 67 9
- 486 0090 0021     		movs	r1, #0
- 487 0092 0020     		movs	r0, #0
- 488 0094 FFF7FEFF 		bl	SetHeating
- 489              	.L23:
- 490              		.loc 1 69 1
- 491 0098 00BF     		nop
- 492 009a B0BD     		pop	{r4, r5, r7, pc}
- 493              	.L25:
- 494 009c AFF30080 		.align	3
- 495              	.L24:
- 496 00a0 000000C0 		.word	-1073741824
- 497 00a4 CCCCECBF 		.word	-1075000116
- 498 00a8 00000000 		.word	value
- 499 00ac 00000000 		.word	Cur_temp
- 500 00b0 00000000 		.word	temp_goal
- 501 00b4 00005940 		.word	1079574528
- 502              		.cfi_endproc
- 503              	.LFE324:
- 505              		.section	.text.M106,"ax",%progbits
- 506              		.align	1
- 507              		.global	M106
- 508              		.syntax unified
- 509              		.thumb
- 510              		.thumb_func
- 512              	M106:
- 513              	.LFB325:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 11
-
-
-  70:Core/Src/GCodes.c **** 
-  71:Core/Src/GCodes.c **** void M106(uint16_t S)
-  72:Core/Src/GCodes.c **** {
- 514              		.loc 1 72 1
- 515              		.cfi_startproc
- 516              		@ args = 0, pretend = 0, frame = 8
- 517              		@ frame_needed = 1, uses_anonymous_args = 0
- 518 0000 80B5     		push	{r7, lr}
- 519              		.cfi_def_cfa_offset 8
- 520              		.cfi_offset 7, -8
- 521              		.cfi_offset 14, -4
- 522 0002 82B0     		sub	sp, sp, #8
- 523              		.cfi_def_cfa_offset 16
- 524 0004 00AF     		add	r7, sp, #0
- 525              		.cfi_def_cfa_register 7
- 526 0006 0346     		mov	r3, r0
- 527 0008 FB80     		strh	r3, [r7, #6]	@ movhi
-  73:Core/Src/GCodes.c **** 
-  74:Core/Src/GCodes.c ****     SetFanSpeed(HOT_END_FAN, S);
- 528              		.loc 1 74 5
- 529 000a FB88     		ldrh	r3, [r7, #6]
- 530 000c 1946     		mov	r1, r3
- 531 000e 0020     		movs	r0, #0
- 532 0010 FFF7FEFF 		bl	SetFanSpeed
-  75:Core/Src/GCodes.c **** }...
- 533              		.loc 1 75 1
- 534 0014 00BF     		nop
- 535 0016 0837     		adds	r7, r7, #8
- 536              		.cfi_def_cfa_offset 8
- 537 0018 BD46     		mov	sp, r7
- 538              		.cfi_def_cfa_register 13
- 539              		@ sp needed
- 540 001a 80BD     		pop	{r7, pc}
- 541              		.cfi_endproc
- 542              	.LFE325:
- 544              		.text
- 545              	.Letext0:
- 546              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 547              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 548              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
- 549              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
- 550              		.file 6 "Core/Inc/Parser.h"
- 551              		.file 7 "Core/Inc/main.h"
- 552              		.file 8 "Core/Inc/GCodes.h"
- 553              		.file 9 "Core/Inc/Functions.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s 			page 12
+ 475 0016 0837     		adds	r7, r7, #8
+ 476              		.cfi_def_cfa_offset 8
+ 477 0018 BD46     		mov	sp, r7
+ 478              		.cfi_def_cfa_register 13
+ 479              		@ sp needed
+ 480 001a 80BD     		pop	{r7, pc}
+ 481              		.cfi_endproc
+ 482              	.LFE325:
+ 484              		.text
+ 485              	.Letext0:
+ 486              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 487              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 488              		.file 4 "Core/Inc/Parser.h"
+ 489              		.file 5 "Core/Inc/main.h"
+ 490              		.file 6 "Core/Inc/GCodes.h"
+ 491              		.file 7 "Core/Inc/Functions.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 GCodes.c
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:20     .bss.msg_buffer:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:26     .bss.RxBuf:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:29     .bss.RxBuf:0000000000000000 RxBuf
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:36     .bss.Cur_E:0000000000000000 Cur_E
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:33     .bss.Cur_E:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:43     .bss.Cur_X:0000000000000000 Cur_X
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:40     .bss.Cur_X:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:50     .bss.Cur_Y:0000000000000000 Cur_Y
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:47     .bss.Cur_Y:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:57     .bss.Cur_Z:0000000000000000 Cur_Z
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:54     .bss.Cur_Z:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:64     .bss.Cur_F:0000000000000000 Cur_F
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:61     .bss.Cur_F:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:70     .bss.isRunning:0000000000000000 isRunning
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:71     .bss.isRunning:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:77     .bss.last_time_E:0000000000000000 last_time_E
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:74     .bss.last_time_E:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:80     .text.M105:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:86     .text.M105:0000000000000000 M105
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:120    .text.M155:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:126    .text.M155:0000000000000000 M155
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:175    .text.G0:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:181    .text.G0:0000000000000000 G0
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:370    .text.G0:0000000000000160 $d
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:394    .text.M104:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:400    .text.M104:0000000000000000 M104
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:496    .text.M104:00000000000000a0 $d
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:506    .text.M106:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccEO2Qmg.s:512    .text.M106:0000000000000000 M106
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:20     .bss.msg_buffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:26     .bss.RxBuf:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:29     .bss.RxBuf:0000000000000000 RxBuf
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:36     .bss.Cur_E:0000000000000000 Cur_E
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:33     .bss.Cur_E:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:43     .bss.Cur_X:0000000000000000 Cur_X
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:40     .bss.Cur_X:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:50     .bss.Cur_Y:0000000000000000 Cur_Y
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:47     .bss.Cur_Y:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:57     .bss.Cur_Z:0000000000000000 Cur_Z
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:54     .bss.Cur_Z:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:64     .bss.Cur_F:0000000000000000 Cur_F
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:61     .bss.Cur_F:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:70     .bss.isRunning:0000000000000000 isRunning
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:71     .bss.isRunning:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:77     .bss.last_time_E:0000000000000000 last_time_E
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:74     .bss.last_time_E:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:84     .bss.last_time_X:0000000000000000 last_time_X
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:81     .bss.last_time_X:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:91     .bss.last_time_Y:0000000000000000 last_time_Y
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:88     .bss.last_time_Y:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:94     .text.M105:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:100    .text.M105:0000000000000000 M105
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:134    .text.M155:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:140    .text.M155:0000000000000000 M155
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:185    .text.G0:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:191    .text.G0:0000000000000000 G0
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:313    .text.G0:00000000000000f0 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:334    .text.M104:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:340    .text.M104:0000000000000000 M104
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:436    .text.M104:00000000000000a0 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:446    .text.M106:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmEzGWd.s:452    .text.M106:0000000000000000 M106
 
 UNDEFINED SYMBOLS
 print_temperature
@@ -689,15 +604,12 @@ __aeabi_ui2d
 __aeabi_ddiv
 __aeabi_dmul
 __aeabi_d2uiz
-__aeabi_dcmpge
-__aeabi_dcmple
-__aeabi_dcmplt
-__aeabi_dadd
-GetTicks
-HAL_GPIO_WritePin
-HAL_GPIO_TogglePin
+Move
 E
+X
+Y
 F
+__aeabi_dadd
 GetTemperature
 SetHeating
 value

@@ -15,6 +15,7 @@ void SelectDriver(uint16_t axis);
 double GetTemperature(uint16_t adc, uint16_t value);
 void SetFanSpeed(uint16_t fan, uint16_t speed);
 void SetHeating(uint16_t heater, uint16_t power);
+void Move(double dif, uint32_t last_time, uint16_t axis, uint16_t speed);
 // void line_append(uint8_t value, UART_HandleTypeDef *hlpuart);
 
 #endif

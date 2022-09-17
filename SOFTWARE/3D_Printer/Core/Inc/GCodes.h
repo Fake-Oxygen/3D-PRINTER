@@ -28,10 +28,14 @@ extern bool isRunning;
 extern uint16_t temp_goal;
 extern uint16_t Cur_temp;
 extern uint32_t last_time_E;
+extern uint32_t last_time_X;
+extern uint32_t last_time_Y;
 
 void M104();
 void M105(uint16_t R, uint16_t T);
 void M106(uint16_t S);
 uint16_t M155(uint16_t S);
 void G0();
+
+
 #endif

@@ -154,7 +154,7 @@ LDSCRIPT = STM32L4P5ZGTx_FLASH.ld
 # libraries
 LIBS = -lc -lm -lnosys
 LIBDIR = 
-LDFLAGS = $(MCU) -specs=nosys.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -u_printf_float -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
+LDFLAGS = $(MCU) -specs=nosys.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wunused-variable -u_printf_float -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 
 # default action: build all
 all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
