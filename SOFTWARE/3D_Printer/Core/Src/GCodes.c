@@ -34,6 +34,7 @@ void G0()
 
     Move(E_dif, last_time_E, E_AXIS, speed);
     Move(X_dif, last_time_X, X_AXIS, speed);
+    Move(Y_dif, last_time_Y, Y_AXIS, speed);
 }
 
 void M104()
@@ -43,7 +44,7 @@ void M104()
     {
         SetHeating(HOT_END, -9.0f / 10.0f * (double)Cur_temp + (double)temp_goal + 100.0f);
     }
-    else
+    else 
     {
         SetHeating(HOT_END, 0);
     }
@@ -53,4 +54,17 @@ void M106(uint16_t S)
 {
 
     SetFanSpeed(HOT_END_FAN, S);
+}
+
+void G28()
+{
+    Cur_E = 0;
+    MoveAndWait(1, 400, X_AXIS, CLOCKWISE, CLOCKWISE);
+    MoveAndWait(0, 1600, X_AXIS, COUNTERCLOCKWISE, COUNTERCLOCKWISE);
+    MoveAndWait(1, 1600, X_AXIS, CLOCKWISE, CLOCKWISE);
+    Cur_X = 0;
+    MoveAndWait(1, 400, Y_AXIS, COUNTERCLOCKWISE, CLOCKWISE);
+    MoveAndWait(0, 1600, Y_AXIS, CLOCKWISE, COUNTERCLOCKWISE);
+    MoveAndWait(1, 1600, Y_AXIS, COUNTERCLOCKWISE, CLOCKWISE);
+    Cur_Y = 0;
 }

@@ -77,12 +77,20 @@ void Move(double dif, uint32_t last_time, uint16_t axis, uint16_t speed)
                     last_time_E = GetTicks();
                     break;
                 case X_AXIS:
-                    CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
-                    CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
-                    Cur_X -= XY_MM_PER_REV / STEPS_PER_REV;
+                    CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
+                    CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
+                    Cur_X -= XY_MM_PER_REV / XY_STEPS_PER_REV;
                     MAKE_MOTOR_STEP(X_AXIS_STEP);
                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
                     last_time_X = GetTicks();
+                    break;
+                case Y_AXIS:
+                    CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
+                    CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
+                    Cur_Y -= XY_MM_PER_REV / XY_STEPS_PER_REV;
+                    MAKE_MOTOR_STEP(X_AXIS_STEP);
+                    MAKE_MOTOR_STEP(Y_AXIS_STEP);
+                    last_time_Y = GetTicks();
                     break;
                 default:
                     break;
@@ -99,12 +107,20 @@ void Move(double dif, uint32_t last_time, uint16_t axis, uint16_t speed)
                     last_time_E = GetTicks();
                     break;
                 case X_AXIS:
-                    CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
-                    CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
-                    Cur_X += XY_MM_PER_REV / STEPS_PER_REV;
+                    CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
+                    CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
+                    Cur_X += XY_MM_PER_REV / XY_STEPS_PER_REV;
                     MAKE_MOTOR_STEP(X_AXIS_STEP);
                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
                     last_time_X = GetTicks();
+                    break;
+                case Y_AXIS:
+                    CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
+                    CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
+                    Cur_Y += XY_MM_PER_REV / XY_STEPS_PER_REV;
+                    MAKE_MOTOR_STEP(X_AXIS_STEP);
+                    MAKE_MOTOR_STEP(Y_AXIS_STEP);
+                    last_time_Y = GetTicks();
                     break;
                 default:
                     break;
@@ -117,5 +133,32 @@ void Move(double dif, uint32_t last_time, uint16_t axis, uint16_t speed)
     else
     {
         isRunning = false;
+    }
+}
+
+void MoveAndWait(uint16_t state, uint16_t speed, uint16_t axis, uint16_t dir_X, uint16_t dir_Y)
+{
+    switch (axis)
+    {
+    case X_AXIS:
+        CHANGE_MOTOR_DIR(X_AXIS_DIR, dir_X);
+        CHANGE_MOTOR_DIR(Y_AXIS_DIR, dir_Y);
+        while (READ_PIN(X_STOP_PIN) != state)
+        {
+            MAKE_MOTOR_STEP(X_AXIS_STEP);
+            MAKE_MOTOR_STEP(Y_AXIS_STEP);
+            DelayMicrosecond(speed);
+        }
+        break;
+    case Y_AXIS:
+        CHANGE_MOTOR_DIR(X_AXIS_DIR, dir_X);
+        CHANGE_MOTOR_DIR(Y_AXIS_DIR, dir_Y);
+        while (READ_PIN(Y_STOP_PIN) != state)
+        {
+            MAKE_MOTOR_STEP(X_AXIS_STEP);
+            MAKE_MOTOR_STEP(Y_AXIS_STEP);
+            DelayMicrosecond(speed);
+        }
+        break;
     }
 }

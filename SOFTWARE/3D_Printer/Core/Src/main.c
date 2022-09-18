@@ -183,12 +183,12 @@ int main(void)
 
     G0();
     M104();
-    if (steps <= 6524)
-    {
-      MAKE_MOTOR_STEP(X_AXIS_STEP);
-      DelayMicrosecond(600);
-      steps++;
-    }
+    // if (steps <= 6500)
+    // {
+    //   MAKE_MOTOR_STEP(X_AXIS_STEP);
+    //   DelayMicrosecond(600);
+    //   steps++;
+    // }
 
     /* USER CODE END WHILE */
 

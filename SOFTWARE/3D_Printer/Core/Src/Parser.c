@@ -54,6 +54,9 @@ void get_command(uint8_t buf[])
             case 1:
                  G0();
                 break;
+            case 28:
+                G28();
+                break;
         }
         break;
     }
