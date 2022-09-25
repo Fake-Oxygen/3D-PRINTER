@@ -59,6 +59,44 @@ void SetFanSpeed(uint16_t fan, uint16_t speed)
     }
 }
 
+void MoveXY(double dir_x, double dir_y, uint32_t speed, uint32_t last_tick_A, unit32_t last_tick_B) {
+    double engine_dir_B = dir_x * SQRT_2_BY_2 - dir_y * SQRT_2_BY_2; // engine B (image Y)
+    double engine_dir_A = dir_x * SQRT_2_BY_2 + dir_y * SQRT_2_BY_2; // engine A (image X)
+
+    uint32_t speed_A = abs(speed * engine_dir_A);
+    uint32_t speed_B = abs(speed * engine_dir_B);
+
+    if(GetTicks() - last_tick_A >= speed_A && speed_A > 0) {
+        // isRunning = true;
+        if(engine_dir_A > 0) {
+            CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
+            Cur_X -= XY_MM_PER_REV / XY_STEPS_PER_REV;
+            MAKE_MOTOR_STEP(X_AXIS_STEP);
+        } else if(engine_dir_A < 0) {
+            CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
+            Cur_X -= XY_MM_PER_REV / XY_STEPS_PER_REV;
+            MAKE_MOTOR_STEP(X_AXIS_STEP);
+        }
+        last_tick_A = GetTicks();
+    }
+
+    if(GetTicks() - last_tick_B >= speed_B && speed_B > 0) {
+        // isRunning = true;
+        if(engine_dir_B > 0) {
+            CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
+            Cur_Y -= XY_MM_PER_REV / XY_STEPS_PER_REV;
+            MAKE_MOTOR_STEP(Y_AXIS_STEP);
+        } else if(engine_dir_B < 0) {
+            CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
+            Cur_Y -= XY_MM_PER_REV / XY_STEPS_PER_REV;
+            MAKE_MOTOR_STEP(Y_AXIS_STEP);
+        }
+        last_tick_B = GetTicks();
+    }
+
+    // isRunning = false;
+}
+
 void Move(double dif, uint32_t last_time, uint16_t axis, uint16_t speed)
 {
     if (dif >= OFFSET_P || dif <= OFFSET_N)
