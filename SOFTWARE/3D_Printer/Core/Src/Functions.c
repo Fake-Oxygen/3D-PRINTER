@@ -59,39 +59,51 @@ void SetFanSpeed(uint16_t fan, uint16_t speed)
     }
 }
 
-void MoveXY(double dir_x, double dir_y, uint32_t speed, uint32_t last_tick_A, unit32_t last_tick_B) {
+void MoveXY(double dir_x, double dir_y) {
     double engine_dir_B = dir_x * SQRT_2_BY_2 - dir_y * SQRT_2_BY_2; // engine B (image Y)
     double engine_dir_A = dir_x * SQRT_2_BY_2 + dir_y * SQRT_2_BY_2; // engine A (image X)
 
-    uint32_t speed_A = abs(speed * engine_dir_A);
-    uint32_t speed_B = abs(speed * engine_dir_B);
+    double feed_rate_A = fabs(F * engine_dir_A); // F = feed rate
+    double feed_rate_B = fabs(F * engine_dir_B);
 
-    if(GetTicks() - last_tick_A >= speed_A && speed_A > 0) {
-        // isRunning = true;
-        if(engine_dir_A > 0) {
-            CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
-            Cur_X -= XY_MM_PER_REV / XY_STEPS_PER_REV;
-            MAKE_MOTOR_STEP(X_AXIS_STEP);
-        } else if(engine_dir_A < 0) {
-            CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
-            Cur_X -= XY_MM_PER_REV / XY_STEPS_PER_REV;
-            MAKE_MOTOR_STEP(X_AXIS_STEP);
+    if(feed_rate_A > 0) {
+        uint32_t speed_A = (double)1 / (double)feed_rate_A * (double)60 * XY_MM_PER_REV / XY_STEPS_PER_REV * (double)1000000;
+
+        if(GetTicks() - last_tick_A >= speed_A && fabs(engine_dir_A) > ENGINE_MIN_SPEED) {
+            // isRunning = true;
+            if(engine_dir_A > 0) {
+                CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
+                MAKE_MOTOR_STEP(X_AXIS_STEP);
+            } else if(engine_dir_A < 0) {
+                CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
+                MAKE_MOTOR_STEP(X_AXIS_STEP);
+            }
+            last_tick_A = GetTicks();
         }
-        last_tick_A = GetTicks();
     }
 
-    if(GetTicks() - last_tick_B >= speed_B && speed_B > 0) {
-        // isRunning = true;
-        if(engine_dir_B > 0) {
-            CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
-            Cur_Y -= XY_MM_PER_REV / XY_STEPS_PER_REV;
-            MAKE_MOTOR_STEP(Y_AXIS_STEP);
-        } else if(engine_dir_B < 0) {
-            CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
-            Cur_Y -= XY_MM_PER_REV / XY_STEPS_PER_REV;
-            MAKE_MOTOR_STEP(Y_AXIS_STEP);
+    if(feed_rate_B > 0) {
+        uint32_t speed_B = (double)1 / (double)feed_rate_B * (double)60 * XY_MM_PER_REV / XY_STEPS_PER_REV * (double)1000000;
+
+        if(GetTicks() - last_tick_B >= speed_B && fabs(engine_dir_B) > ENGINE_MIN_SPEED) {
+            // isRunning = true;
+            if(engine_dir_B > 0) {
+                CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
+                MAKE_MOTOR_STEP(Y_AXIS_STEP);
+            } else if(engine_dir_B < 0) {
+                CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
+                MAKE_MOTOR_STEP(Y_AXIS_STEP);
+            }
+            last_tick_B = GetTicks();
         }
-        last_tick_B = GetTicks();
+    }
+
+    if(F > 0) {
+        uint32_t speed_AB = (double)1 / (double)F * (double)60 * XY_MM_PER_REV / XY_STEPS_PER_REV * (double)1000000;
+        if(GetTicks() - last_tick_AB >= speed_AB) {
+            Cur_X += dir_x * XY_MM_PER_REV / XY_STEPS_PER_REV;
+            Cur_Y += dir_y * XY_MM_PER_REV / XY_STEPS_PER_REV;
+        }
     }
 
     // isRunning = false;

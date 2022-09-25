@@ -176,7 +176,9 @@ int main(void)
     }
    
 
-    G0();
+    if(READ_PIN(X_STOP_PIN) != 1 && READ_PIN(Y_STOP_PIN) != 1) {
+      G0();
+    }
     M104();
     // if (steps <= 6500)
     // {
