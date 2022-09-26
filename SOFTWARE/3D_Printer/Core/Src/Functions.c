@@ -99,10 +99,18 @@ void MoveXY(double dir_x, double dir_y) {
     }
 
     if(F > 0) {
-        uint32_t speed_AB = (double)1 / (double)F * (double)60 * XY_MM_PER_REV / XY_STEPS_PER_REV * (double)1000000;
-        if(GetTicks() - last_tick_AB >= speed_AB) {
-            Cur_X += dir_x * XY_MM_PER_REV / XY_STEPS_PER_REV;
-            Cur_Y += dir_y * XY_MM_PER_REV / XY_STEPS_PER_REV;
+        uint32_t speed_AB = 1.0 / (double)F * 60000000.0; // us/mm
+        //uint32_t speed_AB = (double)1 / (double)F * (double)60 * XY_MM_PER_REV / XY_STEPS_PER_REV * (double)1000000;
+        // speed - us/step
+        // FEED RATE - ile milimetrów/minutę musi przejść glowica
+        uint32_t time_delta = GetTicks() - last_tick_AB; // mikrosekundy od ostatniego przemieszczenia (delta t)
+        if(time_delta >= speed_AB) {
+            // Cur_X += dir_x * XY_MM_PER_REV / XY_STEPS_PER_REV; // Cur_X - pozycja w milimetrach
+            // Cur_Y += dir_y * XY_MM_PER_REV / XY_STEPS_PER_REV; // Cur_Y - pozycja w milimetrach
+            Cur_X += dir_x * (double)F * ((double)time_delta / 60000000);
+            Cur_Y += dir_y * (double)F * ((double)time_delta / 60000000);
+            // XY_MM_PER_REV / XY_STEPS_PER_REV - milimetry na jeden step
+            last_tick_AB = GetTicks();
         }
     }
 

@@ -52,7 +52,10 @@ void get_command(uint8_t buf[])
         {
             case 0:
             case 1:
-                 G0();
+                last_tick_A = GetTicks();
+                last_tick_B = GetTicks();
+                last_tick_AB = GetTicks();
+                G0();
                 break;
             case 28:
                 G28();

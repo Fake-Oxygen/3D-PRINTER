@@ -154,7 +154,7 @@ int main(void)
   __HAL_DMA_DISABLE_IT(&hdma_lpuart1_rx, DMA_IT_HT);
   memset(&RxBuf[0], 0, sizeof(RxBuf));
   reset_args();
-  // int steps = 0;
+  int steps = 0;
   uint32_t lasttimeX = 0;
   uint32_t lasttimeY = 0;
   /* USER CODE END 2 */
@@ -182,7 +182,10 @@ int main(void)
     M104();
     // if (steps <= 6500)
     // {
+    //   CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
+    //   CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
     //   MAKE_MOTOR_STEP(X_AXIS_STEP);
+    //   MAKE_MOTOR_STEP(Y_AXIS_STEP);
     //   DelayMicrosecond(600);
     //   steps++;
     // }
