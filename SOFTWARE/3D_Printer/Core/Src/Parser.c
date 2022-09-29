@@ -52,10 +52,14 @@ void get_command(uint8_t buf[])
         {
             case 0:
             case 1:
-                 G0();
                 break;
             case 28:
                 G28();
+                break;
+            case 50:
+                last_time_X = GetTicks();
+                g50_steps = 0;
+                G50_works = true;
                 break;
         }
         break;

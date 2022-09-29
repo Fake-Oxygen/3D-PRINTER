@@ -33,6 +33,9 @@ extern uint32_t last_time_Y;
 extern uint32_t last_tick_A;
 extern uint32_t last_tick_B;
 extern uint32_t last_tick_AB;
+extern bool G50_works;
+extern uint32_t g50_steps;
+extern bool G51_works;
 
 void M104();
 void M105(uint16_t R, uint16_t T);
@@ -40,5 +43,6 @@ void M106(uint16_t S);
 uint16_t M155(uint16_t S);
 void G0();
 void G28();
+void G50();
 
 #endif

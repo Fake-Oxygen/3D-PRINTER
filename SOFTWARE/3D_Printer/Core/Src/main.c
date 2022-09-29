@@ -175,10 +175,8 @@ int main(void)
       last_time = HAL_GetTick();
     }
    
-
-    if(READ_PIN(X_STOP_PIN) != 1 && READ_PIN(Y_STOP_PIN) != 1) {
-      G0();
-    }
+    G0();
+    G50();
     M104();
     // if (steps <= 6500)
     // {

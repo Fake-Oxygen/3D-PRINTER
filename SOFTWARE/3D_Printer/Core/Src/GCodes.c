@@ -12,6 +12,9 @@ uint32_t last_time_Y = 0;
 uint32_t last_tick_A = 0;
 uint32_t last_tick_B = 0;
 uint32_t last_tick_AB = 0;
+bool G50_works = false;
+uint32_t g50_steps = 0;
+bool G51_works = false;
 
 void M105(uint16_t R, uint16_t T)
 {
@@ -41,6 +44,24 @@ void G0()
     //Move(E_dif, last_time_E, E_AXIS, speed);
     if(fabs(dif_x) > OFFSET_P || fabs(dif_y) > OFFSET_P) {
         MoveXY(dir_x, dir_y);
+    }
+}
+
+void G50() {
+    if(G50_works) {
+        Move45();
+        if(g50_steps >= 6500) {
+            G50_works = false;
+        }
+    }
+}
+
+void G51() {
+    if(G51_works) {
+        MoveY();
+        if(g50_steps >= 6500) {
+            G51_works = false;
+        }
     }
 }
 

@@ -59,6 +59,29 @@ void SetFanSpeed(uint16_t fan, uint16_t speed)
     }
 }
 
+void Move45() {
+    //1539 49mm
+    //3078 50mm
+    //4000 48mm
+    if(GetTicks() - last_time_X > 1539) {
+        CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
+        MAKE_MOTOR_STEP(X_AXIS_STEP);
+        g50_steps++;
+        last_time_X = GetTicks();
+    }
+}
+
+void MoveY() {
+    if(GetTicks() - last_time_Y > 1539) {
+        CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
+        MAKE_MOTOR_STEP(X_AXIS_STEP);
+        CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
+        MAKE_MOTOR_STEP(Y_AXIS_STEP);
+        g50_steps++;
+        last_time_Y = GetTicks();
+    }
+}
+
 void MoveXY(double dir_x, double dir_y) {
     double engine_dir_B = dir_x * SQRT_2_BY_2 - dir_y * SQRT_2_BY_2; // engine B (image Y)
     double engine_dir_A = dir_x * SQRT_2_BY_2 + dir_y * SQRT_2_BY_2; // engine A (image X)
