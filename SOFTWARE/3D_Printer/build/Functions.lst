@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
   48              		.cfi_offset 14, -4
   49 0002 82B0     		sub	sp, sp, #8
   50              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 2
 
 
   51 0004 00AF     		add	r7, sp, #0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
   15:Core/Src/Functions.c ****     case E_AXIS:
   16:Core/Src/Functions.c ****         WRITE_PIN(MPLX_PIN_A, 0);
   95              		.loc 1 16 9
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 3
 
 
   96 0054 0022     		movs	r2, #0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  143              		.align	1
  144              		.global	GetTemperature
  145              		.syntax unified
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 4
 
 
  146              		.thumb
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  192 003c D1E90001 		ldrd	r0, [r1]
  193 0040 FFF7FEFF 		bl	__aeabi_dsub
  194 0044 0246     		mov	r2, r0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 5
 
 
  195 0046 0B46     		mov	r3, r1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  248 00ce 2946     		mov	r1, r5
  249 00d0 FFF7FEFF 		bl	__aeabi_dadd
  250 00d4 0246     		mov	r2, r0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 6
 
 
  251 00d6 0B46     		mov	r3, r1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
   39:Core/Src/Functions.c ****     }
   40:Core/Src/Functions.c **** }
  301              		.loc 1 40 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 7
 
 
  302 0144 01E0     		b	.L12
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  355              		@ link register save eliminated.
  356 0000 80B4     		push	{r7}
  357              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 8
 
 
  358              		.cfi_offset 7, -4
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
   51:Core/Src/Functions.c **** 
   52:Core/Src/Functions.c **** void SetFanSpeed(uint16_t fan, uint16_t speed)
   53:Core/Src/Functions.c **** {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 9
 
 
  407              		.loc 1 53 1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  455              		.global	__aeabi_d2uiz
  456              		.global	__aeabi_dcmplt
  457              		.global	__aeabi_ui2d
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 10
 
 
  458              		.section	.text.MoveXY,"ax",%progbits
@@ -571,7 +571,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  484 000c 87ED021B 		vstr.64	d1, [r7, #8]
   63:Core/Src/Functions.c ****     double engine_dir_B = dir_x * SQRT_2_BY_2 - dir_y * SQRT_2_BY_2; // engine B (image Y)
  485              		.loc 1 63 33
- 486 0010 B4A3     		adr	r3, .L57+60
+ 486 0010 B4A3     		adr	r3, .L67+60
  487 0012 D3E90023 		ldrd	r2, [r3]
  488 0016 D7E90401 		ldrd	r0, [r7, #16]
  489 001a FFF7FEFF 		bl	__aeabi_dmul
@@ -580,7 +580,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  492 0022 9046     		mov	r8, r2
  493 0024 9946     		mov	r9, r3
  494              		.loc 1 63 55
- 495 0026 AFA3     		adr	r3, .L57+60
+ 495 0026 AFA3     		adr	r3, .L67+60
  496 0028 D3E90023 		ldrd	r2, [r3]
  497 002c D7E90201 		ldrd	r0, [r7, #8]
  498 0030 FFF7FEFF 		bl	__aeabi_dmul
@@ -595,10 +595,10 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  507 0044 C7E91023 		strd	r2, [r7, #64]
   64:Core/Src/Functions.c ****     double engine_dir_A = dir_x * SQRT_2_BY_2 + dir_y * SQRT_2_BY_2; // engine A (image X)
  508              		.loc 1 64 33
- 509 0048 A6A3     		adr	r3, .L57+60
+ 509 0048 A6A3     		adr	r3, .L67+60
  510 004a D3E90023 		ldrd	r2, [r3]
  511 004e D7E90401 		ldrd	r0, [r7, #16]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 11
 
 
  512 0052 FFF7FEFF 		bl	__aeabi_dmul
@@ -607,7 +607,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  515 005a 9046     		mov	r8, r2
  516 005c 9946     		mov	r9, r3
  517              		.loc 1 64 55
- 518 005e A1A3     		adr	r3, .L57+60
+ 518 005e A1A3     		adr	r3, .L67+60
  519 0060 D3E90023 		ldrd	r2, [r3]
  520 0064 D7E90201 		ldrd	r0, [r7, #8]
  521 0068 FFF7FEFF 		bl	__aeabi_dmul
@@ -623,7 +623,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
   65:Core/Src/Functions.c **** 
   66:Core/Src/Functions.c ****     double feed_rate_A = fabs(F * engine_dir_A); // F = feed rate
  531              		.loc 1 66 33
- 532 0080 914B     		ldr	r3, .L57+32
+ 532 0080 914B     		ldr	r3, .L67+32
  533 0082 1B88     		ldrh	r3, [r3]
  534 0084 1846     		mov	r0, r3
  535 0086 FFF7FEFF 		bl	__aeabi_i2d
@@ -638,7 +638,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  544 009e 7B63     		str	r3, [r7, #52]
   67:Core/Src/Functions.c ****     double feed_rate_B = fabs(F * engine_dir_B);
  545              		.loc 1 67 33
- 546 00a0 894B     		ldr	r3, .L57+32
+ 546 00a0 894B     		ldr	r3, .L67+32
  547 00a2 1B88     		ldrh	r3, [r3]
  548 00a4 1846     		mov	r0, r3
  549 00a6 FFF7FEFF 		bl	__aeabi_i2d
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  561 00c4 4FF00003 		mov	r3, #0
  562 00c8 D7E90C01 		ldrd	r0, [r7, #48]
  563 00cc FFF7FEFF 		bl	__aeabi_dcmpgt
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 12
 
 
  564 00d0 0346     		mov	r3, r0
@@ -669,7 +669,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  568              		.loc 1 70 38
  569 00d6 D7E90C23 		ldrd	r2, [r7, #48]
  570 00da 4FF00000 		mov	r0, #0
- 571 00de 7B49     		ldr	r1, .L57+36
+ 571 00de 7B49     		ldr	r1, .L67+36
  572 00e0 FFF7FEFF 		bl	__aeabi_ddiv
  573 00e4 0246     		mov	r2, r0
  574 00e6 0B46     		mov	r3, r1
@@ -677,14 +677,14 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  576 00ea 1946     		mov	r1, r3
  577              		.loc 1 70 60
  578 00ec 4FF00002 		mov	r2, #0
- 579 00f0 774B     		ldr	r3, .L57+40
+ 579 00f0 774B     		ldr	r3, .L67+40
  580 00f2 FFF7FEFF 		bl	__aeabi_dmul
  581 00f6 0246     		mov	r2, r0
  582 00f8 0B46     		mov	r3, r1
  583 00fa 1046     		mov	r0, r2
  584 00fc 1946     		mov	r1, r3
  585              		.loc 1 70 73
- 586 00fe 6AA3     		adr	r3, .L57
+ 586 00fe 6AA3     		adr	r3, .L67
  587 0100 D3E90023 		ldrd	r2, [r3]
  588 0104 FFF7FEFF 		bl	__aeabi_dmul
  589 0108 0246     		mov	r2, r0
@@ -692,7 +692,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  591 010c 1046     		mov	r0, r2
  592 010e 1946     		mov	r1, r3
  593              		.loc 1 70 89
- 594 0110 67A3     		adr	r3, .L57+8
+ 594 0110 67A3     		adr	r3, .L67+8
  595 0112 D3E90023 		ldrd	r2, [r3]
  596 0116 FFF7FEFF 		bl	__aeabi_ddiv
  597 011a 0246     		mov	r2, r0
@@ -700,7 +700,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  599 011e 1046     		mov	r0, r2
  600 0120 1946     		mov	r1, r3
  601              		.loc 1 70 108
- 602 0122 65A3     		adr	r3, .L57+16
+ 602 0122 65A3     		adr	r3, .L67+16
  603 0124 D3E90023 		ldrd	r2, [r3]
  604 0128 FFF7FEFF 		bl	__aeabi_dmul
  605 012c 0246     		mov	r2, r0
@@ -718,10 +718,10 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  615 0140 0346     		mov	r3, r0
  616 0142 1A46     		mov	r2, r3
  617              		.loc 1 72 23
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 13
 
 
- 618 0144 634B     		ldr	r3, .L57+44
+ 618 0144 634B     		ldr	r3, .L67+44
  619 0146 1B68     		ldr	r3, [r3]
  620 0148 D31A     		subs	r3, r2, r3
  621              		.loc 1 72 11
@@ -735,7 +735,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  629 0156 23F00043 		bic	r3, r3, #-2147483648
  630 015a 7B60     		str	r3, [r7, #4]
  631              		.loc 1 72 48 discriminator 1
- 632 015c 58A3     		adr	r3, .L57+24
+ 632 015c 58A3     		adr	r3, .L67+24
  633 015e D3E90023 		ldrd	r2, [r3]
  634 0162 D7E90001 		ldrd	r0, [r7]
  635 0166 FFF7FEFF 		bl	__aeabi_dcmpgt
@@ -751,20 +751,20 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  643 017c FFF7FEFF 		bl	__aeabi_dcmpgt
  644 0180 0346     		mov	r3, r0
  645 0182 002B     		cmp	r3, #0
- 646 0184 09D0     		beq	.L54
-  75:Core/Src/Functions.c ****                 CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
+ 646 0184 09D0     		beq	.L62
+  75:Core/Src/Functions.c ****                 CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
  647              		.loc 1 75 17
- 648 0186 0022     		movs	r2, #0
+ 648 0186 0122     		movs	r2, #1
  649 0188 0221     		movs	r1, #2
- 650 018a 5348     		ldr	r0, .L57+48
+ 650 018a 5348     		ldr	r0, .L67+48
  651 018c FFF7FEFF 		bl	HAL_GPIO_WritePin
   76:Core/Src/Functions.c ****                 MAKE_MOTOR_STEP(X_AXIS_STEP);
  652              		.loc 1 76 17
  653 0190 4021     		movs	r1, #64
- 654 0192 5248     		ldr	r0, .L57+52
+ 654 0192 5248     		ldr	r0, .L67+52
  655 0194 FFF7FEFF 		bl	HAL_GPIO_TogglePin
  656 0198 13E0     		b	.L36
- 657              	.L54:
+ 657              	.L62:
   77:Core/Src/Functions.c ****             } else if(engine_dir_A < 0) {
  658              		.loc 1 77 22
  659 019a 4FF00002 		mov	r2, #0
@@ -774,19 +774,19 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  663 01aa 0346     		mov	r3, r0
  664 01ac 002B     		cmp	r3, #0
  665 01ae 08D0     		beq	.L36
-  78:Core/Src/Functions.c ****                 CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
+  78:Core/Src/Functions.c ****                 CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
  666              		.loc 1 78 17
- 667 01b0 0122     		movs	r2, #1
+ 667 01b0 0022     		movs	r2, #0
  668 01b2 0221     		movs	r1, #2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 14
 
 
- 669 01b4 4848     		ldr	r0, .L57+48
+ 669 01b4 4848     		ldr	r0, .L67+48
  670 01b6 FFF7FEFF 		bl	HAL_GPIO_WritePin
   79:Core/Src/Functions.c ****                 MAKE_MOTOR_STEP(X_AXIS_STEP);
  671              		.loc 1 79 17
  672 01ba 4021     		movs	r1, #64
- 673 01bc 4748     		ldr	r0, .L57+52
+ 673 01bc 4748     		ldr	r0, .L67+52
  674 01be FFF7FEFF 		bl	HAL_GPIO_TogglePin
  675              	.L36:
   80:Core/Src/Functions.c ****             }
@@ -796,7 +796,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  678 01c6 0346     		mov	r3, r0
  679 01c8 1A46     		mov	r2, r3
  680              		.loc 1 81 25
- 681 01ca 424B     		ldr	r3, .L57+44
+ 681 01ca 424B     		ldr	r3, .L67+44
  682 01cc 1A60     		str	r2, [r3]
  683              	.L31:
  684              	.LBE2:
@@ -817,7 +817,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  694              		.loc 1 86 38
  695 01e6 D7E90A23 		ldrd	r2, [r7, #40]
  696 01ea 4FF00000 		mov	r0, #0
- 697 01ee 3749     		ldr	r1, .L57+36
+ 697 01ee 3749     		ldr	r1, .L67+36
  698 01f0 FFF7FEFF 		bl	__aeabi_ddiv
  699 01f4 0246     		mov	r2, r0
  700 01f6 0B46     		mov	r3, r1
@@ -825,25 +825,25 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  702 01fa 1946     		mov	r1, r3
  703              		.loc 1 86 60
  704 01fc 4FF00002 		mov	r2, #0
- 705 0200 334B     		ldr	r3, .L57+40
+ 705 0200 334B     		ldr	r3, .L67+40
  706 0202 FFF7FEFF 		bl	__aeabi_dmul
  707 0206 0246     		mov	r2, r0
  708 0208 0B46     		mov	r3, r1
  709 020a 1046     		mov	r0, r2
  710 020c 1946     		mov	r1, r3
  711              		.loc 1 86 73
- 712 020e 26A3     		adr	r3, .L57
+ 712 020e 26A3     		adr	r3, .L67
  713 0210 D3E90023 		ldrd	r2, [r3]
  714 0214 FFF7FEFF 		bl	__aeabi_dmul
  715 0218 0246     		mov	r2, r0
  716 021a 0B46     		mov	r3, r1
  717 021c 1046     		mov	r0, r2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 15
 
 
  718 021e 1946     		mov	r1, r3
  719              		.loc 1 86 89
- 720 0220 23A3     		adr	r3, .L57+8
+ 720 0220 23A3     		adr	r3, .L67+8
  721 0222 D3E90023 		ldrd	r2, [r3]
  722 0226 FFF7FEFF 		bl	__aeabi_ddiv
  723 022a 0246     		mov	r2, r0
@@ -851,7 +851,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  725 022e 1046     		mov	r0, r2
  726 0230 1946     		mov	r1, r3
  727              		.loc 1 86 108
- 728 0232 21A3     		adr	r3, .L57+16
+ 728 0232 21A3     		adr	r3, .L67+16
  729 0234 D3E90023 		ldrd	r2, [r3]
  730 0238 FFF7FEFF 		bl	__aeabi_dmul
  731 023c 0246     		mov	r2, r0
@@ -869,7 +869,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  741 0250 0346     		mov	r3, r0
  742 0252 1A46     		mov	r2, r3
  743              		.loc 1 88 23
- 744 0254 224B     		ldr	r3, .L57+56
+ 744 0254 224B     		ldr	r3, .L67+56
  745 0256 1B68     		ldr	r3, [r3]
  746 0258 D31A     		subs	r3, r2, r3
  747              		.loc 1 88 11
@@ -881,7 +881,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  753 0262 7B6C     		ldr	r3, [r7, #68]
  754 0264 23F00045 		bic	r5, r3, #-2147483648
  755              		.loc 1 88 48 discriminator 1
- 756 0268 15A3     		adr	r3, .L57+24
+ 756 0268 15A3     		adr	r3, .L67+24
  757 026a D3E90023 		ldrd	r2, [r3]
  758 026e 2046     		mov	r0, r4
  759 0270 2946     		mov	r1, r5
@@ -898,15 +898,15 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  768 0288 FFF7FEFF 		bl	__aeabi_dcmpgt
  769 028c 0346     		mov	r3, r0
  770 028e 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 16
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 16
 
 
- 771 0290 2CD0     		beq	.L55
-  91:Core/Src/Functions.c ****                 CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
+ 771 0290 2CD0     		beq	.L63
+  91:Core/Src/Functions.c ****                 CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
  772              		.loc 1 91 17
- 773 0292 0022     		movs	r2, #0
+ 773 0292 0122     		movs	r2, #1
  774 0294 0421     		movs	r1, #4
- 775 0296 1048     		ldr	r0, .L57+48
+ 775 0296 1048     		ldr	r0, .L67+48
  776 0298 FFF7FEFF 		bl	HAL_GPIO_WritePin
   92:Core/Src/Functions.c ****                 MAKE_MOTOR_STEP(Y_AXIS_STEP);
  777              		.loc 1 92 17
@@ -914,9 +914,9 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  779 029e 4FF09040 		mov	r0, #1207959552
  780 02a2 FFF7FEFF 		bl	HAL_GPIO_TogglePin
  781 02a6 36E0     		b	.L43
- 782              	.L58:
+ 782              	.L68:
  783              		.align	3
- 784              	.L57:
+ 784              	.L67:
  785 02a8 00000020 		.word	536870912
  786 02ac 5C475140 		.word	1079068508
  787 02b0 00000000 		.word	0
@@ -934,7 +934,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  799 02e0 00000000 		.word	last_tick_B
  800 02e4 CD3B7F66 		.word	1719614413
  801 02e8 9EA0E63F 		.word	1072079006
- 802              	.L55:
+ 802              	.L63:
   93:Core/Src/Functions.c ****             } else if(engine_dir_B < 0) {
  803              		.loc 1 93 22
  804 02ec 4FF00002 		mov	r2, #0
@@ -944,11 +944,11 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  808 02fc 0346     		mov	r3, r0
  809 02fe 002B     		cmp	r3, #0
  810 0300 09D0     		beq	.L43
-  94:Core/Src/Functions.c ****                 CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
+  94:Core/Src/Functions.c ****                 CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
  811              		.loc 1 94 17
- 812 0302 0122     		movs	r2, #1
+ 812 0302 0022     		movs	r2, #0
  813 0304 0421     		movs	r1, #4
- 814 0306 5048     		ldr	r0, .L59+24
+ 814 0306 8E48     		ldr	r0, .L69+24
  815 0308 FFF7FEFF 		bl	HAL_GPIO_WritePin
   95:Core/Src/Functions.c ****                 MAKE_MOTOR_STEP(Y_AXIS_STEP);
  816              		.loc 1 95 17
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  820              	.L43:
   96:Core/Src/Functions.c ****             }
   97:Core/Src/Functions.c ****             last_tick_B = GetTicks();
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 17
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 17
 
 
  821              		.loc 1 97 27
@@ -966,7 +966,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  823 031a 0346     		mov	r3, r0
  824 031c 1A46     		mov	r2, r3
  825              		.loc 1 97 25
- 826 031e 4B4B     		ldr	r3, .L59+28
+ 826 031e 894B     		ldr	r3, .L69+28
  827 0320 1A60     		str	r2, [r3]
  828              	.L38:
  829              	.LBE3:
@@ -975,922 +975,1054 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 1
  100:Core/Src/Functions.c **** 
  101:Core/Src/Functions.c ****     if(F > 0) {
  830              		.loc 1 101 10
- 831 0322 4B4B     		ldr	r3, .L59+32
+ 831 0322 894B     		ldr	r3, .L69+32
  832 0324 1B88     		ldrh	r3, [r3]
  833              		.loc 1 101 7
  834 0326 002B     		cmp	r3, #0
- 835 0328 7DD0     		beq	.L56
+ 835 0328 00F0F980 		beq	.L66
  836              	.LBB4:
  102:Core/Src/Functions.c ****         uint32_t speed_AB = (double)1 / (double)F * (double)60 * XY_MM_PER_REV / XY_STEPS_PER_REV *
  837              		.loc 1 102 41
- 838 032a 494B     		ldr	r3, .L59+32
- 839 032c 1B88     		ldrh	r3, [r3]
- 840 032e 1846     		mov	r0, r3
- 841 0330 FFF7FEFF 		bl	__aeabi_ui2d
- 842 0334 0246     		mov	r2, r0
- 843 0336 0B46     		mov	r3, r1
+ 838 032c 864B     		ldr	r3, .L69+32
+ 839 032e 1B88     		ldrh	r3, [r3]
+ 840 0330 1846     		mov	r0, r3
+ 841 0332 FFF7FEFF 		bl	__aeabi_ui2d
+ 842 0336 0246     		mov	r2, r0
+ 843 0338 0B46     		mov	r3, r1
  844              		.loc 1 102 39
- 845 0338 4FF00000 		mov	r0, #0
- 846 033c 4549     		ldr	r1, .L59+36
- 847 033e FFF7FEFF 		bl	__aeabi_ddiv
- 848 0342 0246     		mov	r2, r0
- 849 0344 0B46     		mov	r3, r1
- 850 0346 1046     		mov	r0, r2
- 851 0348 1946     		mov	r1, r3
+ 845 033a 4FF00000 		mov	r0, #0
+ 846 033e 8349     		ldr	r1, .L69+36
+ 847 0340 FFF7FEFF 		bl	__aeabi_ddiv
+ 848 0344 0246     		mov	r2, r0
+ 849 0346 0B46     		mov	r3, r1
+ 850 0348 1046     		mov	r0, r2
+ 851 034a 1946     		mov	r1, r3
  852              		.loc 1 102 51
- 853 034a 4FF00002 		mov	r2, #0
- 854 034e 424B     		ldr	r3, .L59+40
- 855 0350 FFF7FEFF 		bl	__aeabi_dmul
- 856 0354 0246     		mov	r2, r0
- 857 0356 0B46     		mov	r3, r1
- 858 0358 1046     		mov	r0, r2
- 859 035a 1946     		mov	r1, r3
+ 853 034c 4FF00002 		mov	r2, #0
+ 854 0350 7F4B     		ldr	r3, .L69+40
+ 855 0352 FFF7FEFF 		bl	__aeabi_dmul
+ 856 0356 0246     		mov	r2, r0
+ 857 0358 0B46     		mov	r3, r1
+ 858 035a 1046     		mov	r0, r2
+ 859 035c 1946     		mov	r1, r3
  860              		.loc 1 102 64
- 861 035c 34A3     		adr	r3, .L59
- 862 035e D3E90023 		ldrd	r2, [r3]
- 863 0362 FFF7FEFF 		bl	__aeabi_dmul
- 864 0366 0246     		mov	r2, r0
- 865 0368 0B46     		mov	r3, r1
- 866 036a 1046     		mov	r0, r2
- 867 036c 1946     		mov	r1, r3
+ 861 035e 72A3     		adr	r3, .L69
+ 862 0360 D3E90023 		ldrd	r2, [r3]
+ 863 0364 FFF7FEFF 		bl	__aeabi_dmul
+ 864 0368 0246     		mov	r2, r0
+ 865 036a 0B46     		mov	r3, r1
+ 866 036c 1046     		mov	r0, r2
+ 867 036e 1946     		mov	r1, r3
  868              		.loc 1 102 80
- 869 036e 32A3     		adr	r3, .L59+8
- 870 0370 D3E90023 		ldrd	r2, [r3]
- 871 0374 FFF7FEFF 		bl	__aeabi_ddiv
- 872 0378 0246     		mov	r2, r0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 18
+ 869 0370 6FA3     		adr	r3, .L69+8
+ 870 0372 D3E90023 		ldrd	r2, [r3]
+ 871 0376 FFF7FEFF 		bl	__aeabi_ddiv
+ 872 037a 0246     		mov	r2, r0
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 18
 
 
- 873 037a 0B46     		mov	r3, r1
- 874 037c 1046     		mov	r0, r2
- 875 037e 1946     		mov	r1, r3
+ 873 037c 0B46     		mov	r3, r1
+ 874 037e 1046     		mov	r0, r2
+ 875 0380 1946     		mov	r1, r3
  876              		.loc 1 102 99
- 877 0380 2FA3     		adr	r3, .L59+16
- 878 0382 D3E90023 		ldrd	r2, [r3]
- 879 0386 FFF7FEFF 		bl	__aeabi_dmul
- 880 038a 0246     		mov	r2, r0
- 881 038c 0B46     		mov	r3, r1
+ 877 0382 6DA3     		adr	r3, .L69+16
+ 878 0384 D3E90023 		ldrd	r2, [r3]
+ 879 0388 FFF7FEFF 		bl	__aeabi_dmul
+ 880 038c 0246     		mov	r2, r0
+ 881 038e 0B46     		mov	r3, r1
  882              		.loc 1 102 18
- 883 038e 1046     		mov	r0, r2
- 884 0390 1946     		mov	r1, r3
- 885 0392 FFF7FEFF 		bl	__aeabi_d2uiz
- 886 0396 0346     		mov	r3, r0
- 887 0398 FB61     		str	r3, [r7, #28]
+ 883 0390 1046     		mov	r0, r2
+ 884 0392 1946     		mov	r1, r3
+ 885 0394 FFF7FEFF 		bl	__aeabi_d2uiz
+ 886 0398 0346     		mov	r3, r0
+ 887 039a FB61     		str	r3, [r7, #28]
  103:Core/Src/Functions.c ****         if(GetTicks() - last_tick_AB >= speed_AB) {
  888              		.loc 1 103 12
- 889 039a FFF7FEFF 		bl	GetTicks
- 890 039e 0346     		mov	r3, r0
- 891 03a0 1A46     		mov	r2, r3
+ 889 039c FFF7FEFF 		bl	GetTicks
+ 890 03a0 0346     		mov	r3, r0
+ 891 03a2 1A46     		mov	r2, r3
  892              		.loc 1 103 23
- 893 03a2 2E4B     		ldr	r3, .L59+44
- 894 03a4 1B68     		ldr	r3, [r3]
- 895 03a6 D31A     		subs	r3, r2, r3
+ 893 03a4 6B4B     		ldr	r3, .L69+44
+ 894 03a6 1B68     		ldr	r3, [r3]
+ 895 03a8 D31A     		subs	r3, r2, r3
  896              		.loc 1 103 11
- 897 03a8 FA69     		ldr	r2, [r7, #28]
- 898 03aa 9A42     		cmp	r2, r3
- 899 03ac 3BD8     		bhi	.L56
- 104:Core/Src/Functions.c ****             Cur_X += dir_x * XY_MM_PER_REV / XY_STEPS_PER_REV;
- 900              		.loc 1 104 28
- 901 03ae 20A3     		adr	r3, .L59
- 902 03b0 D3E90023 		ldrd	r2, [r3]
- 903 03b4 D7E90401 		ldrd	r0, [r7, #16]
- 904 03b8 FFF7FEFF 		bl	__aeabi_dmul
- 905 03bc 0246     		mov	r2, r0
- 906 03be 0B46     		mov	r3, r1
- 907 03c0 1046     		mov	r0, r2
- 908 03c2 1946     		mov	r1, r3
- 909              		.loc 1 104 44
- 910 03c4 1CA3     		adr	r3, .L59+8
- 911 03c6 D3E90023 		ldrd	r2, [r3]
- 912 03ca FFF7FEFF 		bl	__aeabi_ddiv
- 913 03ce 0246     		mov	r2, r0
- 914 03d0 0B46     		mov	r3, r1
- 915 03d2 1046     		mov	r0, r2
- 916 03d4 1946     		mov	r1, r3
- 917              		.loc 1 104 19
- 918 03d6 224B     		ldr	r3, .L59+48
- 919 03d8 D3E90023 		ldrd	r2, [r3]
- 920 03dc FFF7FEFF 		bl	__aeabi_dadd
- 921 03e0 0246     		mov	r2, r0
- 922 03e2 0B46     		mov	r3, r1
- 923 03e4 1E49     		ldr	r1, .L59+48
- 924 03e6 C1E90023 		strd	r2, [r1]
- 105:Core/Src/Functions.c ****             Cur_Y += dir_y * XY_MM_PER_REV / XY_STEPS_PER_REV;
- 925              		.loc 1 105 28
- 926 03ea 11A3     		adr	r3, .L59
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 19
+ 897 03aa FA69     		ldr	r2, [r7, #28]
+ 898 03ac 9A42     		cmp	r2, r3
+ 899 03ae 00F2B680 		bhi	.L66
+ 104:Core/Src/Functions.c ****             //dirs have to sum up to 1 or -1
+ 105:Core/Src/Functions.c ****             //1-smaller diff/larger dif
+ 106:Core/Src/Functions.c ****             if(dir_x > 0) {
+ 900              		.loc 1 106 15
+ 901 03b2 4FF00002 		mov	r2, #0
+ 902 03b6 4FF00003 		mov	r3, #0
+ 903 03ba D7E90401 		ldrd	r0, [r7, #16]
+ 904 03be FFF7FEFF 		bl	__aeabi_dcmpgt
+ 905 03c2 0346     		mov	r3, r0
+ 906 03c4 002B     		cmp	r3, #0
+ 907 03c6 26D0     		beq	.L64
+ 107:Core/Src/Functions.c ****                 Cur_X += dir_x * dir_x * XY_MM_PER_REV / XY_STEPS_PER_REV;
+ 908              		.loc 1 107 32
+ 909 03c8 D7E90423 		ldrd	r2, [r7, #16]
+ 910 03cc D7E90401 		ldrd	r0, [r7, #16]
+ 911 03d0 FFF7FEFF 		bl	__aeabi_dmul
+ 912 03d4 0246     		mov	r2, r0
+ 913 03d6 0B46     		mov	r3, r1
+ 914 03d8 1046     		mov	r0, r2
+ 915 03da 1946     		mov	r1, r3
+ 916              		.loc 1 107 40
+ 917 03dc 52A3     		adr	r3, .L69
+ 918 03de D3E90023 		ldrd	r2, [r3]
+ 919 03e2 FFF7FEFF 		bl	__aeabi_dmul
+ 920 03e6 0246     		mov	r2, r0
+ 921 03e8 0B46     		mov	r3, r1
+ 922 03ea 1046     		mov	r0, r2
+ 923 03ec 1946     		mov	r1, r3
+ 924              		.loc 1 107 56
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 19
 
 
- 927 03ec D3E90023 		ldrd	r2, [r3]
- 928 03f0 D7E90201 		ldrd	r0, [r7, #8]
- 929 03f4 FFF7FEFF 		bl	__aeabi_dmul
- 930 03f8 0246     		mov	r2, r0
- 931 03fa 0B46     		mov	r3, r1
- 932 03fc 1046     		mov	r0, r2
- 933 03fe 1946     		mov	r1, r3
- 934              		.loc 1 105 44
- 935 0400 0DA3     		adr	r3, .L59+8
- 936 0402 D3E90023 		ldrd	r2, [r3]
- 937 0406 FFF7FEFF 		bl	__aeabi_ddiv
- 938 040a 0246     		mov	r2, r0
- 939 040c 0B46     		mov	r3, r1
- 940 040e 1046     		mov	r0, r2
- 941 0410 1946     		mov	r1, r3
- 942              		.loc 1 105 19
- 943 0412 144B     		ldr	r3, .L59+52
- 944 0414 D3E90023 		ldrd	r2, [r3]
- 945 0418 FFF7FEFF 		bl	__aeabi_dadd
- 946 041c 0246     		mov	r2, r0
- 947 041e 0B46     		mov	r3, r1
- 948 0420 1049     		ldr	r1, .L59+52
- 949 0422 C1E90023 		strd	r2, [r1]
- 950              	.L56:
- 951              	.LBE4:
- 106:Core/Src/Functions.c ****         }
- 107:Core/Src/Functions.c ****     }
- 108:Core/Src/Functions.c **** 
- 109:Core/Src/Functions.c ****     // isRunning = false;
- 110:Core/Src/Functions.c **** }
- 952              		.loc 1 110 1
- 953 0426 00BF     		nop
- 954 0428 4837     		adds	r7, r7, #72
- 955              		.cfi_def_cfa_offset 24
- 956 042a BD46     		mov	sp, r7
- 957              		.cfi_def_cfa_register 13
- 958              		@ sp needed
- 959 042c BDE8B083 		pop	{r4, r5, r7, r8, r9, pc}
- 960              	.L60:
- 961              		.align	3
- 962              	.L59:
- 963 0430 00000020 		.word	536870912
- 964 0434 5C475140 		.word	1079068508
- 965 0438 00000000 		.word	0
- 966 043c 0064B940 		.word	1085891584
- 967 0440 00000000 		.word	0
- 968 0444 80842E41 		.word	1093567616
- 969 0448 00140048 		.word	1207964672
- 970 044c 00000000 		.word	last_tick_B
- 971 0450 00000000 		.word	F
- 972 0454 0000F03F 		.word	1072693248
- 973 0458 00004E40 		.word	1078853632
- 974 045c 00000000 		.word	last_tick_AB
- 975 0460 00000000 		.word	Cur_X
- 976 0464 00000000 		.word	Cur_Y
- 977              		.cfi_endproc
- 978              	.LFE325:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 20
+ 925 03ee 50A3     		adr	r3, .L69+8
+ 926 03f0 D3E90023 		ldrd	r2, [r3]
+ 927 03f4 FFF7FEFF 		bl	__aeabi_ddiv
+ 928 03f8 0246     		mov	r2, r0
+ 929 03fa 0B46     		mov	r3, r1
+ 930 03fc 1046     		mov	r0, r2
+ 931 03fe 1946     		mov	r1, r3
+ 932              		.loc 1 107 23
+ 933 0400 554B     		ldr	r3, .L69+48
+ 934 0402 D3E90023 		ldrd	r2, [r3]
+ 935 0406 FFF7FEFF 		bl	__aeabi_dadd
+ 936 040a 0246     		mov	r2, r0
+ 937 040c 0B46     		mov	r3, r1
+ 938 040e 5249     		ldr	r1, .L69+48
+ 939 0410 C1E90023 		strd	r2, [r1]
+ 940 0414 25E0     		b	.L48
+ 941              	.L64:
+ 108:Core/Src/Functions.c ****             }
+ 109:Core/Src/Functions.c ****             else {
+ 110:Core/Src/Functions.c ****                 Cur_X -= dir_x * dir_x * XY_MM_PER_REV / XY_STEPS_PER_REV;
+ 942              		.loc 1 110 23
+ 943 0416 504B     		ldr	r3, .L69+48
+ 944 0418 D3E90045 		ldrd	r4, [r3]
+ 945              		.loc 1 110 32
+ 946 041c D7E90423 		ldrd	r2, [r7, #16]
+ 947 0420 D7E90401 		ldrd	r0, [r7, #16]
+ 948 0424 FFF7FEFF 		bl	__aeabi_dmul
+ 949 0428 0246     		mov	r2, r0
+ 950 042a 0B46     		mov	r3, r1
+ 951 042c 1046     		mov	r0, r2
+ 952 042e 1946     		mov	r1, r3
+ 953              		.loc 1 110 40
+ 954 0430 3DA3     		adr	r3, .L69
+ 955 0432 D3E90023 		ldrd	r2, [r3]
+ 956 0436 FFF7FEFF 		bl	__aeabi_dmul
+ 957 043a 0246     		mov	r2, r0
+ 958 043c 0B46     		mov	r3, r1
+ 959 043e 1046     		mov	r0, r2
+ 960 0440 1946     		mov	r1, r3
+ 961              		.loc 1 110 56
+ 962 0442 3BA3     		adr	r3, .L69+8
+ 963 0444 D3E90023 		ldrd	r2, [r3]
+ 964 0448 FFF7FEFF 		bl	__aeabi_ddiv
+ 965 044c 0246     		mov	r2, r0
+ 966 044e 0B46     		mov	r3, r1
+ 967              		.loc 1 110 23
+ 968 0450 2046     		mov	r0, r4
+ 969 0452 2946     		mov	r1, r5
+ 970 0454 FFF7FEFF 		bl	__aeabi_dsub
+ 971 0458 0246     		mov	r2, r0
+ 972 045a 0B46     		mov	r3, r1
+ 973 045c 3E49     		ldr	r1, .L69+48
+ 974 045e C1E90023 		strd	r2, [r1]
+ 975              	.L48:
+ 111:Core/Src/Functions.c ****             }
+ 112:Core/Src/Functions.c ****             if(dir_y > 0) {
+ 976              		.loc 1 112 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 20
 
 
- 980              		.global	__aeabi_dcmpge
- 981              		.global	__aeabi_dcmple
- 982              		.section	.text.Move,"ax",%progbits
- 983              		.align	1
- 984              		.global	Move
- 985              		.syntax unified
- 986              		.thumb
- 987              		.thumb_func
- 989              	Move:
- 990              	.LFB326:
- 111:Core/Src/Functions.c **** 
- 112:Core/Src/Functions.c **** void Move(double dif, uint32_t last_time, uint16_t axis, uint16_t speed)
- 113:Core/Src/Functions.c **** {
- 991              		.loc 1 113 1
- 992              		.cfi_startproc
- 993              		@ args = 0, pretend = 0, frame = 16
- 994              		@ frame_needed = 1, uses_anonymous_args = 0
- 995 0000 80B5     		push	{r7, lr}
- 996              		.cfi_def_cfa_offset 8
- 997              		.cfi_offset 7, -8
- 998              		.cfi_offset 14, -4
- 999 0002 84B0     		sub	sp, sp, #16
- 1000              		.cfi_def_cfa_offset 24
- 1001 0004 00AF     		add	r7, sp, #0
- 1002              		.cfi_def_cfa_register 7
- 1003 0006 87ED020B 		vstr.64	d0, [r7, #8]
- 1004 000a 7860     		str	r0, [r7, #4]
- 1005 000c 0B46     		mov	r3, r1
- 1006 000e 7B80     		strh	r3, [r7, #2]	@ movhi
- 1007 0010 1346     		mov	r3, r2	@ movhi
- 1008 0012 3B80     		strh	r3, [r7]	@ movhi
- 114:Core/Src/Functions.c ****     if (dif >= OFFSET_P || dif <= OFFSET_N)
- 1009              		.loc 1 114 8
- 1010 0014 A2A3     		adr	r3, .L85+56
- 1011 0016 D3E90023 		ldrd	r2, [r3]
- 1012 001a D7E90201 		ldrd	r0, [r7, #8]
- 1013 001e FFF7FEFF 		bl	__aeabi_dcmpge
- 1014 0022 0346     		mov	r3, r0
- 1015 0024 002B     		cmp	r3, #0
- 1016 0026 0AD1     		bne	.L62
- 1017              		.loc 1 114 25 discriminator 1
- 1018 0028 9FA3     		adr	r3, .L85+64
- 1019 002a D3E90023 		ldrd	r2, [r3]
- 1020 002e D7E90201 		ldrd	r0, [r7, #8]
- 1021 0032 FFF7FEFF 		bl	__aeabi_dcmple
- 1022 0036 0346     		mov	r3, r0
- 1023 0038 002B     		cmp	r3, #0
- 1024 003a 00F00B81 		beq	.L79
- 1025              	.L62:
- 115:Core/Src/Functions.c ****     {
- 116:Core/Src/Functions.c ****         if (GetTicks() - last_time >= speed && speed > 0)
- 1026              		.loc 1 116 13
- 1027 003e FFF7FEFF 		bl	GetTicks
- 1028 0042 0346     		mov	r3, r0
- 1029 0044 1A46     		mov	r2, r3
- 1030              		.loc 1 116 24
- 1031 0046 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 21
+ 977 0462 4FF00002 		mov	r2, #0
+ 978 0466 4FF00003 		mov	r3, #0
+ 979 046a D7E90201 		ldrd	r0, [r7, #8]
+ 980 046e FFF7FEFF 		bl	__aeabi_dcmpgt
+ 981 0472 0346     		mov	r3, r0
+ 982 0474 002B     		cmp	r3, #0
+ 983 0476 26D0     		beq	.L65
+ 113:Core/Src/Functions.c ****                 Cur_Y += dir_y * dir_y * XY_MM_PER_REV / XY_STEPS_PER_REV;
+ 984              		.loc 1 113 32
+ 985 0478 D7E90223 		ldrd	r2, [r7, #8]
+ 986 047c D7E90201 		ldrd	r0, [r7, #8]
+ 987 0480 FFF7FEFF 		bl	__aeabi_dmul
+ 988 0484 0246     		mov	r2, r0
+ 989 0486 0B46     		mov	r3, r1
+ 990 0488 1046     		mov	r0, r2
+ 991 048a 1946     		mov	r1, r3
+ 992              		.loc 1 113 40
+ 993 048c 26A3     		adr	r3, .L69
+ 994 048e D3E90023 		ldrd	r2, [r3]
+ 995 0492 FFF7FEFF 		bl	__aeabi_dmul
+ 996 0496 0246     		mov	r2, r0
+ 997 0498 0B46     		mov	r3, r1
+ 998 049a 1046     		mov	r0, r2
+ 999 049c 1946     		mov	r1, r3
+ 1000              		.loc 1 113 56
+ 1001 049e 24A3     		adr	r3, .L69+8
+ 1002 04a0 D3E90023 		ldrd	r2, [r3]
+ 1003 04a4 FFF7FEFF 		bl	__aeabi_ddiv
+ 1004 04a8 0246     		mov	r2, r0
+ 1005 04aa 0B46     		mov	r3, r1
+ 1006 04ac 1046     		mov	r0, r2
+ 1007 04ae 1946     		mov	r1, r3
+ 1008              		.loc 1 113 23
+ 1009 04b0 2A4B     		ldr	r3, .L69+52
+ 1010 04b2 D3E90023 		ldrd	r2, [r3]
+ 1011 04b6 FFF7FEFF 		bl	__aeabi_dadd
+ 1012 04ba 0246     		mov	r2, r0
+ 1013 04bc 0B46     		mov	r3, r1
+ 1014 04be 2749     		ldr	r1, .L69+52
+ 1015 04c0 C1E90023 		strd	r2, [r1]
+ 1016 04c4 25E0     		b	.L51
+ 1017              	.L65:
+ 114:Core/Src/Functions.c ****             }
+ 115:Core/Src/Functions.c ****             else {
+ 116:Core/Src/Functions.c ****                 Cur_Y -= dir_y * dir_y * XY_MM_PER_REV / XY_STEPS_PER_REV;
+ 1018              		.loc 1 116 23
+ 1019 04c6 254B     		ldr	r3, .L69+52
+ 1020 04c8 D3E90045 		ldrd	r4, [r3]
+ 1021              		.loc 1 116 32
+ 1022 04cc D7E90223 		ldrd	r2, [r7, #8]
+ 1023 04d0 D7E90201 		ldrd	r0, [r7, #8]
+ 1024 04d4 FFF7FEFF 		bl	__aeabi_dmul
+ 1025 04d8 0246     		mov	r2, r0
+ 1026 04da 0B46     		mov	r3, r1
+ 1027 04dc 1046     		mov	r0, r2
+ 1028 04de 1946     		mov	r1, r3
+ 1029              		.loc 1 116 40
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 21
 
 
- 1032 0048 D21A     		subs	r2, r2, r3
- 1033              		.loc 1 116 36
- 1034 004a 3B88     		ldrh	r3, [r7]
- 1035              		.loc 1 116 12
- 1036 004c 9A42     		cmp	r2, r3
- 1037 004e C0F00581 		bcc	.L81
- 1038              		.loc 1 116 45 discriminator 1
- 1039 0052 3B88     		ldrh	r3, [r7]
- 1040 0054 002B     		cmp	r3, #0
- 1041 0056 00F00181 		beq	.L81
- 117:Core/Src/Functions.c ****         {
- 118:Core/Src/Functions.c ****             isRunning = true;
- 1042              		.loc 1 118 23
- 1043 005a 874B     		ldr	r3, .L85+16
- 1044 005c 0122     		movs	r2, #1
- 1045 005e 1A70     		strb	r2, [r3]
- 119:Core/Src/Functions.c ****             if (dif < 0)
- 1046              		.loc 1 119 16
- 1047 0060 4FF00002 		mov	r2, #0
- 1048 0064 4FF00003 		mov	r3, #0
- 1049 0068 D7E90201 		ldrd	r0, [r7, #8]
- 1050 006c FFF7FEFF 		bl	__aeabi_dcmplt
- 1051 0070 0346     		mov	r3, r0
- 1052 0072 002B     		cmp	r3, #0
- 1053 0074 75D0     		beq	.L80
- 120:Core/Src/Functions.c ****             {
- 121:Core/Src/Functions.c ****                 switch (axis)
- 1054              		.loc 1 121 17
- 1055 0076 7B88     		ldrh	r3, [r7, #2]
- 1056 0078 022B     		cmp	r3, #2
- 1057 007a 07D0     		beq	.L68
- 1058 007c 022B     		cmp	r3, #2
- 1059 007e 00F3E580 		bgt	.L82
- 1060 0082 002B     		cmp	r3, #0
- 1061 0084 1FD0     		beq	.L70
- 1062 0086 012B     		cmp	r3, #1
- 1063 0088 44D0     		beq	.L71
- 122:Core/Src/Functions.c ****                 {
- 123:Core/Src/Functions.c ****                 case E_AXIS:
- 124:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(E_AXIS_DIR, COUNTERCLOCKWISE);
- 125:Core/Src/Functions.c ****                     Cur_E -= E_MM_PER_REV / STEPS_PER_REV;
- 126:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(E_AXIS_STEP);
- 127:Core/Src/Functions.c ****                     last_time_E = GetTicks();
- 128:Core/Src/Functions.c ****                     break;
- 129:Core/Src/Functions.c ****                 case X_AXIS:
- 130:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
- 131:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
- 132:Core/Src/Functions.c ****                     Cur_X -= XY_MM_PER_REV / XY_STEPS_PER_REV;
- 133:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
- 134:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
- 135:Core/Src/Functions.c ****                     last_time_X = GetTicks();
- 136:Core/Src/Functions.c ****                     break;
- 137:Core/Src/Functions.c ****                 case Y_AXIS:
- 138:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
- 139:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
- 140:Core/Src/Functions.c ****                     Cur_Y -= XY_MM_PER_REV / XY_STEPS_PER_REV;
- 141:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 22
+ 1030 04e0 11A3     		adr	r3, .L69
+ 1031 04e2 D3E90023 		ldrd	r2, [r3]
+ 1032 04e6 FFF7FEFF 		bl	__aeabi_dmul
+ 1033 04ea 0246     		mov	r2, r0
+ 1034 04ec 0B46     		mov	r3, r1
+ 1035 04ee 1046     		mov	r0, r2
+ 1036 04f0 1946     		mov	r1, r3
+ 1037              		.loc 1 116 56
+ 1038 04f2 0FA3     		adr	r3, .L69+8
+ 1039 04f4 D3E90023 		ldrd	r2, [r3]
+ 1040 04f8 FFF7FEFF 		bl	__aeabi_ddiv
+ 1041 04fc 0246     		mov	r2, r0
+ 1042 04fe 0B46     		mov	r3, r1
+ 1043              		.loc 1 116 23
+ 1044 0500 2046     		mov	r0, r4
+ 1045 0502 2946     		mov	r1, r5
+ 1046 0504 FFF7FEFF 		bl	__aeabi_dsub
+ 1047 0508 0246     		mov	r2, r0
+ 1048 050a 0B46     		mov	r3, r1
+ 1049 050c 1349     		ldr	r1, .L69+52
+ 1050 050e C1E90023 		strd	r2, [r1]
+ 1051              	.L51:
+ 117:Core/Src/Functions.c ****             }
+ 118:Core/Src/Functions.c ****             
+ 119:Core/Src/Functions.c ****             last_tick_AB = GetTicks();
+ 1052              		.loc 1 119 28
+ 1053 0512 FFF7FEFF 		bl	GetTicks
+ 1054 0516 0346     		mov	r3, r0
+ 1055 0518 1A46     		mov	r2, r3
+ 1056              		.loc 1 119 26
+ 1057 051a 0E4B     		ldr	r3, .L69+44
+ 1058 051c 1A60     		str	r2, [r3]
+ 1059              	.L66:
+ 1060              	.LBE4:
+ 120:Core/Src/Functions.c ****         }
+ 121:Core/Src/Functions.c ****     }
+ 122:Core/Src/Functions.c **** 
+ 123:Core/Src/Functions.c ****     // isRunning = false;
+ 124:Core/Src/Functions.c **** }
+ 1061              		.loc 1 124 1
+ 1062 051e 00BF     		nop
+ 1063 0520 4837     		adds	r7, r7, #72
+ 1064              		.cfi_def_cfa_offset 24
+ 1065 0522 BD46     		mov	sp, r7
+ 1066              		.cfi_def_cfa_register 13
+ 1067              		@ sp needed
+ 1068 0524 BDE8B083 		pop	{r4, r5, r7, r8, r9, pc}
+ 1069              	.L70:
+ 1070              		.align	3
+ 1071              	.L69:
+ 1072 0528 00000020 		.word	536870912
+ 1073 052c 5C475140 		.word	1079068508
+ 1074 0530 00000000 		.word	0
+ 1075 0534 0064B940 		.word	1085891584
+ 1076 0538 00000000 		.word	0
+ 1077 053c 80842E41 		.word	1093567616
+ 1078 0540 00140048 		.word	1207964672
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 22
 
 
- 142:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
- 143:Core/Src/Functions.c ****                     last_time_Y = GetTicks();
- 144:Core/Src/Functions.c ****                     break;
- 145:Core/Src/Functions.c ****                 default:
- 146:Core/Src/Functions.c ****                     break;
- 1064              		.loc 1 146 21
- 1065 008a DFE0     		b	.L82
- 1066              	.L68:
- 124:Core/Src/Functions.c ****                     Cur_E -= E_MM_PER_REV / STEPS_PER_REV;
- 1067              		.loc 1 124 21
- 1068 008c 0122     		movs	r2, #1
- 1069 008e 0821     		movs	r1, #8
- 1070 0090 7A48     		ldr	r0, .L85+20
- 1071 0092 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 125:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(E_AXIS_STEP);
- 1072              		.loc 1 125 27
- 1073 0096 7A4B     		ldr	r3, .L85+24
- 1074 0098 D3E90001 		ldrd	r0, [r3]
- 1075 009c 72A3     		adr	r3, .L85
- 1076 009e D3E90023 		ldrd	r2, [r3]
- 1077 00a2 FFF7FEFF 		bl	__aeabi_dsub
- 1078 00a6 0246     		mov	r2, r0
- 1079 00a8 0B46     		mov	r3, r1
- 1080 00aa 7549     		ldr	r1, .L85+24
- 1081 00ac C1E90023 		strd	r2, [r1]
- 126:Core/Src/Functions.c ****                     last_time_E = GetTicks();
- 1082              		.loc 1 126 21
- 1083 00b0 0121     		movs	r1, #1
- 1084 00b2 7448     		ldr	r0, .L85+28
- 1085 00b4 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 127:Core/Src/Functions.c ****                     break;
- 1086              		.loc 1 127 35
- 1087 00b8 FFF7FEFF 		bl	GetTicks
- 1088 00bc 0346     		mov	r3, r0
- 1089 00be 1A46     		mov	r2, r3
- 127:Core/Src/Functions.c ****                     break;
- 1090              		.loc 1 127 33
- 1091 00c0 714B     		ldr	r3, .L85+32
- 1092 00c2 1A60     		str	r2, [r3]
- 128:Core/Src/Functions.c ****                 case X_AXIS:
- 1093              		.loc 1 128 21
- 1094 00c4 C5E0     		b	.L65
- 1095              	.L70:
- 130:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
- 1096              		.loc 1 130 21
- 1097 00c6 0022     		movs	r2, #0
- 1098 00c8 0221     		movs	r1, #2
- 1099 00ca 6C48     		ldr	r0, .L85+20
- 1100 00cc FFF7FEFF 		bl	HAL_GPIO_WritePin
- 131:Core/Src/Functions.c ****                     Cur_X -= XY_MM_PER_REV / XY_STEPS_PER_REV;
- 1101              		.loc 1 131 21
- 1102 00d0 0022     		movs	r2, #0
- 1103 00d2 0421     		movs	r1, #4
- 1104 00d4 6948     		ldr	r0, .L85+20
- 1105 00d6 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 132:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
- 1106              		.loc 1 132 27
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 23
+ 1079 0544 00000000 		.word	last_tick_B
+ 1080 0548 00000000 		.word	F
+ 1081 054c 0000F03F 		.word	1072693248
+ 1082 0550 00004E40 		.word	1078853632
+ 1083 0554 00000000 		.word	last_tick_AB
+ 1084 0558 00000000 		.word	Cur_X
+ 1085 055c 00000000 		.word	Cur_Y
+ 1086              		.cfi_endproc
+ 1087              	.LFE325:
+ 1089              		.global	__aeabi_dcmpge
+ 1090              		.global	__aeabi_dcmple
+ 1091              		.section	.text.Move,"ax",%progbits
+ 1092              		.align	1
+ 1093              		.global	Move
+ 1094              		.syntax unified
+ 1095              		.thumb
+ 1096              		.thumb_func
+ 1098              	Move:
+ 1099              	.LFB326:
+ 125:Core/Src/Functions.c **** 
+ 126:Core/Src/Functions.c **** void Move(double dif, uint32_t last_time, uint16_t axis, uint16_t speed)
+ 127:Core/Src/Functions.c **** {
+ 1100              		.loc 1 127 1
+ 1101              		.cfi_startproc
+ 1102              		@ args = 0, pretend = 0, frame = 16
+ 1103              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1104 0000 80B5     		push	{r7, lr}
+ 1105              		.cfi_def_cfa_offset 8
+ 1106              		.cfi_offset 7, -8
+ 1107              		.cfi_offset 14, -4
+ 1108 0002 84B0     		sub	sp, sp, #16
+ 1109              		.cfi_def_cfa_offset 24
+ 1110 0004 00AF     		add	r7, sp, #0
+ 1111              		.cfi_def_cfa_register 7
+ 1112 0006 87ED020B 		vstr.64	d0, [r7, #8]
+ 1113 000a 7860     		str	r0, [r7, #4]
+ 1114 000c 0B46     		mov	r3, r1
+ 1115 000e 7B80     		strh	r3, [r7, #2]	@ movhi
+ 1116 0010 1346     		mov	r3, r2	@ movhi
+ 1117 0012 3B80     		strh	r3, [r7]	@ movhi
+ 128:Core/Src/Functions.c ****     if (dif >= OFFSET_P || dif <= OFFSET_N)
+ 1118              		.loc 1 128 8
+ 1119 0014 A2A3     		adr	r3, .L95+56
+ 1120 0016 D3E90023 		ldrd	r2, [r3]
+ 1121 001a D7E90201 		ldrd	r0, [r7, #8]
+ 1122 001e FFF7FEFF 		bl	__aeabi_dcmpge
+ 1123 0022 0346     		mov	r3, r0
+ 1124 0024 002B     		cmp	r3, #0
+ 1125 0026 0AD1     		bne	.L72
+ 1126              		.loc 1 128 25 discriminator 1
+ 1127 0028 9FA3     		adr	r3, .L95+64
+ 1128 002a D3E90023 		ldrd	r2, [r3]
+ 1129 002e D7E90201 		ldrd	r0, [r7, #8]
+ 1130 0032 FFF7FEFF 		bl	__aeabi_dcmple
+ 1131 0036 0346     		mov	r3, r0
+ 1132 0038 002B     		cmp	r3, #0
+ 1133 003a 00F00B81 		beq	.L89
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 23
 
 
- 1107 00da 6C4B     		ldr	r3, .L85+36
- 1108 00dc D3E90001 		ldrd	r0, [r3]
- 1109 00e0 63A3     		adr	r3, .L85+8
- 1110 00e2 D3E90023 		ldrd	r2, [r3]
- 1111 00e6 FFF7FEFF 		bl	__aeabi_dsub
- 1112 00ea 0246     		mov	r2, r0
- 1113 00ec 0B46     		mov	r3, r1
- 1114 00ee 6749     		ldr	r1, .L85+36
- 1115 00f0 C1E90023 		strd	r2, [r1]
- 133:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
- 1116              		.loc 1 133 21
- 1117 00f4 4021     		movs	r1, #64
- 1118 00f6 6648     		ldr	r0, .L85+40
- 1119 00f8 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 134:Core/Src/Functions.c ****                     last_time_X = GetTicks();
- 1120              		.loc 1 134 21
- 1121 00fc 8021     		movs	r1, #128
- 1122 00fe 4FF09040 		mov	r0, #1207959552
- 1123 0102 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 135:Core/Src/Functions.c ****                     break;
- 1124              		.loc 1 135 35
- 1125 0106 FFF7FEFF 		bl	GetTicks
- 1126 010a 0346     		mov	r3, r0
- 1127 010c 1A46     		mov	r2, r3
- 135:Core/Src/Functions.c ****                     break;
- 1128              		.loc 1 135 33
- 1129 010e 614B     		ldr	r3, .L85+44
- 1130 0110 1A60     		str	r2, [r3]
- 136:Core/Src/Functions.c ****                 case Y_AXIS:
- 1131              		.loc 1 136 21
- 1132 0112 9EE0     		b	.L65
- 1133              	.L71:
- 138:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
- 1134              		.loc 1 138 21
- 1135 0114 0022     		movs	r2, #0
- 1136 0116 0221     		movs	r1, #2
- 1137 0118 5848     		ldr	r0, .L85+20
- 1138 011a FFF7FEFF 		bl	HAL_GPIO_WritePin
- 139:Core/Src/Functions.c ****                     Cur_Y -= XY_MM_PER_REV / XY_STEPS_PER_REV;
- 1139              		.loc 1 139 21
- 1140 011e 0122     		movs	r2, #1
- 1141 0120 0421     		movs	r1, #4
- 1142 0122 5648     		ldr	r0, .L85+20
- 1143 0124 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 140:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
- 1144              		.loc 1 140 27
- 1145 0128 5B4B     		ldr	r3, .L85+48
- 1146 012a D3E90001 		ldrd	r0, [r3]
- 1147 012e 50A3     		adr	r3, .L85+8
- 1148 0130 D3E90023 		ldrd	r2, [r3]
- 1149 0134 FFF7FEFF 		bl	__aeabi_dsub
- 1150 0138 0246     		mov	r2, r0
- 1151 013a 0B46     		mov	r3, r1
- 1152 013c 5649     		ldr	r1, .L85+48
- 1153 013e C1E90023 		strd	r2, [r1]
- 141:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
- 1154              		.loc 1 141 21
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 24
+ 1134              	.L72:
+ 129:Core/Src/Functions.c ****     {
+ 130:Core/Src/Functions.c ****         if (GetTicks() - last_time >= speed && speed > 0)
+ 1135              		.loc 1 130 13
+ 1136 003e FFF7FEFF 		bl	GetTicks
+ 1137 0042 0346     		mov	r3, r0
+ 1138 0044 1A46     		mov	r2, r3
+ 1139              		.loc 1 130 24
+ 1140 0046 7B68     		ldr	r3, [r7, #4]
+ 1141 0048 D21A     		subs	r2, r2, r3
+ 1142              		.loc 1 130 36
+ 1143 004a 3B88     		ldrh	r3, [r7]
+ 1144              		.loc 1 130 12
+ 1145 004c 9A42     		cmp	r2, r3
+ 1146 004e C0F00581 		bcc	.L91
+ 1147              		.loc 1 130 45 discriminator 1
+ 1148 0052 3B88     		ldrh	r3, [r7]
+ 1149 0054 002B     		cmp	r3, #0
+ 1150 0056 00F00181 		beq	.L91
+ 131:Core/Src/Functions.c ****         {
+ 132:Core/Src/Functions.c ****             isRunning = true;
+ 1151              		.loc 1 132 23
+ 1152 005a 874B     		ldr	r3, .L95+16
+ 1153 005c 0122     		movs	r2, #1
+ 1154 005e 1A70     		strb	r2, [r3]
+ 133:Core/Src/Functions.c ****             if (dif < 0)
+ 1155              		.loc 1 133 16
+ 1156 0060 4FF00002 		mov	r2, #0
+ 1157 0064 4FF00003 		mov	r3, #0
+ 1158 0068 D7E90201 		ldrd	r0, [r7, #8]
+ 1159 006c FFF7FEFF 		bl	__aeabi_dcmplt
+ 1160 0070 0346     		mov	r3, r0
+ 1161 0072 002B     		cmp	r3, #0
+ 1162 0074 75D0     		beq	.L90
+ 134:Core/Src/Functions.c ****             {
+ 135:Core/Src/Functions.c ****                 switch (axis)
+ 1163              		.loc 1 135 17
+ 1164 0076 7B88     		ldrh	r3, [r7, #2]
+ 1165 0078 022B     		cmp	r3, #2
+ 1166 007a 07D0     		beq	.L78
+ 1167 007c 022B     		cmp	r3, #2
+ 1168 007e 00F3E580 		bgt	.L92
+ 1169 0082 002B     		cmp	r3, #0
+ 1170 0084 1FD0     		beq	.L80
+ 1171 0086 012B     		cmp	r3, #1
+ 1172 0088 44D0     		beq	.L81
+ 136:Core/Src/Functions.c ****                 {
+ 137:Core/Src/Functions.c ****                 case E_AXIS:
+ 138:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(E_AXIS_DIR, COUNTERCLOCKWISE);
+ 139:Core/Src/Functions.c ****                     Cur_E -= E_MM_PER_REV / STEPS_PER_REV;
+ 140:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(E_AXIS_STEP);
+ 141:Core/Src/Functions.c ****                     last_time_E = GetTicks();
+ 142:Core/Src/Functions.c ****                     break;
+ 143:Core/Src/Functions.c ****                 case X_AXIS:
+ 144:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
+ 145:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
+ 146:Core/Src/Functions.c ****                     Cur_X -= XY_MM_PER_REV / XY_STEPS_PER_REV;
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 24
 
 
- 1155 0142 4021     		movs	r1, #64
- 1156 0144 5248     		ldr	r0, .L85+40
- 1157 0146 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 142:Core/Src/Functions.c ****                     last_time_Y = GetTicks();
- 1158              		.loc 1 142 21
- 1159 014a 8021     		movs	r1, #128
- 1160 014c 4FF09040 		mov	r0, #1207959552
- 1161 0150 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 143:Core/Src/Functions.c ****                     break;
- 1162              		.loc 1 143 35
- 1163 0154 FFF7FEFF 		bl	GetTicks
- 1164 0158 0346     		mov	r3, r0
- 1165 015a 1A46     		mov	r2, r3
- 143:Core/Src/Functions.c ****                     break;
- 1166              		.loc 1 143 33
- 1167 015c 4F4B     		ldr	r3, .L85+52
- 1168 015e 1A60     		str	r2, [r3]
- 144:Core/Src/Functions.c ****                 default:
- 1169              		.loc 1 144 21
- 1170 0160 77E0     		b	.L65
- 1171              	.L80:
- 147:Core/Src/Functions.c ****                 }
- 148:Core/Src/Functions.c ****             }
- 149:Core/Src/Functions.c ****             else
- 150:Core/Src/Functions.c ****             {
- 151:Core/Src/Functions.c ****                 switch (axis)
- 1172              		.loc 1 151 17
- 1173 0162 7B88     		ldrh	r3, [r7, #2]
- 1174 0164 022B     		cmp	r3, #2
- 1175 0166 06D0     		beq	.L73
- 1176 0168 022B     		cmp	r3, #2
- 1177 016a 71DC     		bgt	.L83
- 1178 016c 002B     		cmp	r3, #0
- 1179 016e 1FD0     		beq	.L75
- 1180 0170 012B     		cmp	r3, #1
- 1181 0172 44D0     		beq	.L76
- 152:Core/Src/Functions.c ****                 {
- 153:Core/Src/Functions.c ****                 case E_AXIS:
- 154:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(E_AXIS_DIR, CLOCKWISE);
- 155:Core/Src/Functions.c ****                     Cur_E += E_MM_PER_REV / STEPS_PER_REV;
- 156:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(E_AXIS_STEP);
- 157:Core/Src/Functions.c ****                     last_time_E = GetTicks();
+ 147:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
+ 148:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
+ 149:Core/Src/Functions.c ****                     last_time_X = GetTicks();
+ 150:Core/Src/Functions.c ****                     break;
+ 151:Core/Src/Functions.c ****                 case Y_AXIS:
+ 152:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
+ 153:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
+ 154:Core/Src/Functions.c ****                     Cur_Y -= XY_MM_PER_REV / XY_STEPS_PER_REV;
+ 155:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
+ 156:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
+ 157:Core/Src/Functions.c ****                     last_time_Y = GetTicks();
  158:Core/Src/Functions.c ****                     break;
- 159:Core/Src/Functions.c ****                 case X_AXIS:
- 160:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
- 161:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
- 162:Core/Src/Functions.c ****                     Cur_X += XY_MM_PER_REV / XY_STEPS_PER_REV;
- 163:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
- 164:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
- 165:Core/Src/Functions.c ****                     last_time_X = GetTicks();
- 166:Core/Src/Functions.c ****                     break;
- 167:Core/Src/Functions.c ****                 case Y_AXIS:
- 168:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
- 169:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
- 170:Core/Src/Functions.c ****                     Cur_Y += XY_MM_PER_REV / XY_STEPS_PER_REV;
- 171:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
- 172:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 25
+ 159:Core/Src/Functions.c ****                 default:
+ 160:Core/Src/Functions.c ****                     break;
+ 1173              		.loc 1 160 21
+ 1174 008a DFE0     		b	.L92
+ 1175              	.L78:
+ 138:Core/Src/Functions.c ****                     Cur_E -= E_MM_PER_REV / STEPS_PER_REV;
+ 1176              		.loc 1 138 21
+ 1177 008c 0122     		movs	r2, #1
+ 1178 008e 0821     		movs	r1, #8
+ 1179 0090 7A48     		ldr	r0, .L95+20
+ 1180 0092 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 139:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(E_AXIS_STEP);
+ 1181              		.loc 1 139 27
+ 1182 0096 7A4B     		ldr	r3, .L95+24
+ 1183 0098 D3E90001 		ldrd	r0, [r3]
+ 1184 009c 72A3     		adr	r3, .L95
+ 1185 009e D3E90023 		ldrd	r2, [r3]
+ 1186 00a2 FFF7FEFF 		bl	__aeabi_dsub
+ 1187 00a6 0246     		mov	r2, r0
+ 1188 00a8 0B46     		mov	r3, r1
+ 1189 00aa 7549     		ldr	r1, .L95+24
+ 1190 00ac C1E90023 		strd	r2, [r1]
+ 140:Core/Src/Functions.c ****                     last_time_E = GetTicks();
+ 1191              		.loc 1 140 21
+ 1192 00b0 0121     		movs	r1, #1
+ 1193 00b2 7448     		ldr	r0, .L95+28
+ 1194 00b4 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 141:Core/Src/Functions.c ****                     break;
+ 1195              		.loc 1 141 35
+ 1196 00b8 FFF7FEFF 		bl	GetTicks
+ 1197 00bc 0346     		mov	r3, r0
+ 1198 00be 1A46     		mov	r2, r3
+ 141:Core/Src/Functions.c ****                     break;
+ 1199              		.loc 1 141 33
+ 1200 00c0 714B     		ldr	r3, .L95+32
+ 1201 00c2 1A60     		str	r2, [r3]
+ 142:Core/Src/Functions.c ****                 case X_AXIS:
+ 1202              		.loc 1 142 21
+ 1203 00c4 C5E0     		b	.L75
+ 1204              	.L80:
+ 144:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
+ 1205              		.loc 1 144 21
+ 1206 00c6 0022     		movs	r2, #0
+ 1207 00c8 0221     		movs	r1, #2
+ 1208 00ca 6C48     		ldr	r0, .L95+20
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 25
 
 
- 173:Core/Src/Functions.c ****                     last_time_Y = GetTicks();
- 174:Core/Src/Functions.c ****                     break;
- 175:Core/Src/Functions.c ****                 default:
- 176:Core/Src/Functions.c ****                     break;
- 1182              		.loc 1 176 21
- 1183 0174 6CE0     		b	.L83
- 1184              	.L73:
- 154:Core/Src/Functions.c ****                     Cur_E += E_MM_PER_REV / STEPS_PER_REV;
- 1185              		.loc 1 154 21
- 1186 0176 0022     		movs	r2, #0
- 1187 0178 0821     		movs	r1, #8
- 1188 017a 4048     		ldr	r0, .L85+20
- 1189 017c FFF7FEFF 		bl	HAL_GPIO_WritePin
- 155:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(E_AXIS_STEP);
- 1190              		.loc 1 155 27
- 1191 0180 3F4B     		ldr	r3, .L85+24
- 1192 0182 D3E90001 		ldrd	r0, [r3]
- 1193 0186 38A3     		adr	r3, .L85
- 1194 0188 D3E90023 		ldrd	r2, [r3]
- 1195 018c FFF7FEFF 		bl	__aeabi_dadd
- 1196 0190 0246     		mov	r2, r0
- 1197 0192 0B46     		mov	r3, r1
- 1198 0194 3A49     		ldr	r1, .L85+24
- 1199 0196 C1E90023 		strd	r2, [r1]
- 156:Core/Src/Functions.c ****                     last_time_E = GetTicks();
- 1200              		.loc 1 156 21
- 1201 019a 0121     		movs	r1, #1
- 1202 019c 3948     		ldr	r0, .L85+28
- 1203 019e FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 1209 00cc FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 145:Core/Src/Functions.c ****                     Cur_X -= XY_MM_PER_REV / XY_STEPS_PER_REV;
+ 1210              		.loc 1 145 21
+ 1211 00d0 0022     		movs	r2, #0
+ 1212 00d2 0421     		movs	r1, #4
+ 1213 00d4 6948     		ldr	r0, .L95+20
+ 1214 00d6 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 146:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
+ 1215              		.loc 1 146 27
+ 1216 00da 6C4B     		ldr	r3, .L95+36
+ 1217 00dc D3E90001 		ldrd	r0, [r3]
+ 1218 00e0 63A3     		adr	r3, .L95+8
+ 1219 00e2 D3E90023 		ldrd	r2, [r3]
+ 1220 00e6 FFF7FEFF 		bl	__aeabi_dsub
+ 1221 00ea 0246     		mov	r2, r0
+ 1222 00ec 0B46     		mov	r3, r1
+ 1223 00ee 6749     		ldr	r1, .L95+36
+ 1224 00f0 C1E90023 		strd	r2, [r1]
+ 147:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
+ 1225              		.loc 1 147 21
+ 1226 00f4 4021     		movs	r1, #64
+ 1227 00f6 6648     		ldr	r0, .L95+40
+ 1228 00f8 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 148:Core/Src/Functions.c ****                     last_time_X = GetTicks();
+ 1229              		.loc 1 148 21
+ 1230 00fc 8021     		movs	r1, #128
+ 1231 00fe 4FF09040 		mov	r0, #1207959552
+ 1232 0102 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 149:Core/Src/Functions.c ****                     break;
+ 1233              		.loc 1 149 35
+ 1234 0106 FFF7FEFF 		bl	GetTicks
+ 1235 010a 0346     		mov	r3, r0
+ 1236 010c 1A46     		mov	r2, r3
+ 149:Core/Src/Functions.c ****                     break;
+ 1237              		.loc 1 149 33
+ 1238 010e 614B     		ldr	r3, .L95+44
+ 1239 0110 1A60     		str	r2, [r3]
+ 150:Core/Src/Functions.c ****                 case Y_AXIS:
+ 1240              		.loc 1 150 21
+ 1241 0112 9EE0     		b	.L75
+ 1242              	.L81:
+ 152:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
+ 1243              		.loc 1 152 21
+ 1244 0114 0022     		movs	r2, #0
+ 1245 0116 0221     		movs	r1, #2
+ 1246 0118 5848     		ldr	r0, .L95+20
+ 1247 011a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 153:Core/Src/Functions.c ****                     Cur_Y -= XY_MM_PER_REV / XY_STEPS_PER_REV;
+ 1248              		.loc 1 153 21
+ 1249 011e 0122     		movs	r2, #1
+ 1250 0120 0421     		movs	r1, #4
+ 1251 0122 5648     		ldr	r0, .L95+20
+ 1252 0124 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 154:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
+ 1253              		.loc 1 154 27
+ 1254 0128 5B4B     		ldr	r3, .L95+48
+ 1255 012a D3E90001 		ldrd	r0, [r3]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 26
+
+
+ 1256 012e 50A3     		adr	r3, .L95+8
+ 1257 0130 D3E90023 		ldrd	r2, [r3]
+ 1258 0134 FFF7FEFF 		bl	__aeabi_dsub
+ 1259 0138 0246     		mov	r2, r0
+ 1260 013a 0B46     		mov	r3, r1
+ 1261 013c 5649     		ldr	r1, .L95+48
+ 1262 013e C1E90023 		strd	r2, [r1]
+ 155:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
+ 1263              		.loc 1 155 21
+ 1264 0142 4021     		movs	r1, #64
+ 1265 0144 5248     		ldr	r0, .L95+40
+ 1266 0146 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 156:Core/Src/Functions.c ****                     last_time_Y = GetTicks();
+ 1267              		.loc 1 156 21
+ 1268 014a 8021     		movs	r1, #128
+ 1269 014c 4FF09040 		mov	r0, #1207959552
+ 1270 0150 FFF7FEFF 		bl	HAL_GPIO_TogglePin
  157:Core/Src/Functions.c ****                     break;
- 1204              		.loc 1 157 35
- 1205 01a2 FFF7FEFF 		bl	GetTicks
- 1206 01a6 0346     		mov	r3, r0
- 1207 01a8 1A46     		mov	r2, r3
+ 1271              		.loc 1 157 35
+ 1272 0154 FFF7FEFF 		bl	GetTicks
+ 1273 0158 0346     		mov	r3, r0
+ 1274 015a 1A46     		mov	r2, r3
  157:Core/Src/Functions.c ****                     break;
- 1208              		.loc 1 157 33
- 1209 01aa 374B     		ldr	r3, .L85+32
- 1210 01ac 1A60     		str	r2, [r3]
- 158:Core/Src/Functions.c ****                 case X_AXIS:
- 1211              		.loc 1 158 21
- 1212 01ae 50E0     		b	.L65
- 1213              	.L75:
- 160:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
- 1214              		.loc 1 160 21
- 1215 01b0 0122     		movs	r2, #1
- 1216 01b2 0221     		movs	r1, #2
- 1217 01b4 3148     		ldr	r0, .L85+20
- 1218 01b6 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 161:Core/Src/Functions.c ****                     Cur_X += XY_MM_PER_REV / XY_STEPS_PER_REV;
- 1219              		.loc 1 161 21
- 1220 01ba 0122     		movs	r2, #1
- 1221 01bc 0421     		movs	r1, #4
- 1222 01be 2F48     		ldr	r0, .L85+20
- 1223 01c0 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 162:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
- 1224              		.loc 1 162 27
- 1225 01c4 314B     		ldr	r3, .L85+36
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 26
+ 1275              		.loc 1 157 33
+ 1276 015c 4F4B     		ldr	r3, .L95+52
+ 1277 015e 1A60     		str	r2, [r3]
+ 158:Core/Src/Functions.c ****                 default:
+ 1278              		.loc 1 158 21
+ 1279 0160 77E0     		b	.L75
+ 1280              	.L90:
+ 161:Core/Src/Functions.c ****                 }
+ 162:Core/Src/Functions.c ****             }
+ 163:Core/Src/Functions.c ****             else
+ 164:Core/Src/Functions.c ****             {
+ 165:Core/Src/Functions.c ****                 switch (axis)
+ 1281              		.loc 1 165 17
+ 1282 0162 7B88     		ldrh	r3, [r7, #2]
+ 1283 0164 022B     		cmp	r3, #2
+ 1284 0166 06D0     		beq	.L83
+ 1285 0168 022B     		cmp	r3, #2
+ 1286 016a 71DC     		bgt	.L93
+ 1287 016c 002B     		cmp	r3, #0
+ 1288 016e 1FD0     		beq	.L85
+ 1289 0170 012B     		cmp	r3, #1
+ 1290 0172 44D0     		beq	.L86
+ 166:Core/Src/Functions.c ****                 {
+ 167:Core/Src/Functions.c ****                 case E_AXIS:
+ 168:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(E_AXIS_DIR, CLOCKWISE);
+ 169:Core/Src/Functions.c ****                     Cur_E += E_MM_PER_REV / STEPS_PER_REV;
+ 170:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(E_AXIS_STEP);
+ 171:Core/Src/Functions.c ****                     last_time_E = GetTicks();
+ 172:Core/Src/Functions.c ****                     break;
+ 173:Core/Src/Functions.c ****                 case X_AXIS:
+ 174:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
+ 175:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
+ 176:Core/Src/Functions.c ****                     Cur_X += XY_MM_PER_REV / XY_STEPS_PER_REV;
+ 177:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 27
 
 
- 1226 01c6 D3E90001 		ldrd	r0, [r3]
- 1227 01ca 29A3     		adr	r3, .L85+8
- 1228 01cc D3E90023 		ldrd	r2, [r3]
- 1229 01d0 FFF7FEFF 		bl	__aeabi_dadd
- 1230 01d4 0246     		mov	r2, r0
- 1231 01d6 0B46     		mov	r3, r1
- 1232 01d8 2C49     		ldr	r1, .L85+36
- 1233 01da C1E90023 		strd	r2, [r1]
- 163:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
- 1234              		.loc 1 163 21
- 1235 01de 4021     		movs	r1, #64
- 1236 01e0 2B48     		ldr	r0, .L85+40
- 1237 01e2 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 164:Core/Src/Functions.c ****                     last_time_X = GetTicks();
- 1238              		.loc 1 164 21
- 1239 01e6 8021     		movs	r1, #128
- 1240 01e8 4FF09040 		mov	r0, #1207959552
- 1241 01ec FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 165:Core/Src/Functions.c ****                     break;
- 1242              		.loc 1 165 35
- 1243 01f0 FFF7FEFF 		bl	GetTicks
- 1244 01f4 0346     		mov	r3, r0
- 1245 01f6 1A46     		mov	r2, r3
- 165:Core/Src/Functions.c ****                     break;
- 1246              		.loc 1 165 33
- 1247 01f8 264B     		ldr	r3, .L85+44
- 1248 01fa 1A60     		str	r2, [r3]
- 166:Core/Src/Functions.c ****                 case Y_AXIS:
- 1249              		.loc 1 166 21
- 1250 01fc 29E0     		b	.L65
- 1251              	.L76:
- 168:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
- 1252              		.loc 1 168 21
- 1253 01fe 0122     		movs	r2, #1
- 1254 0200 0221     		movs	r1, #2
- 1255 0202 1E48     		ldr	r0, .L85+20
- 1256 0204 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 169:Core/Src/Functions.c ****                     Cur_Y += XY_MM_PER_REV / XY_STEPS_PER_REV;
- 1257              		.loc 1 169 21
- 1258 0208 0022     		movs	r2, #0
- 1259 020a 0421     		movs	r1, #4
- 1260 020c 1B48     		ldr	r0, .L85+20
- 1261 020e FFF7FEFF 		bl	HAL_GPIO_WritePin
- 170:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
- 1262              		.loc 1 170 27
- 1263 0212 214B     		ldr	r3, .L85+48
- 1264 0214 D3E90001 		ldrd	r0, [r3]
- 1265 0218 15A3     		adr	r3, .L85+8
- 1266 021a D3E90023 		ldrd	r2, [r3]
- 1267 021e FFF7FEFF 		bl	__aeabi_dadd
- 1268 0222 0246     		mov	r2, r0
- 1269 0224 0B46     		mov	r3, r1
- 1270 0226 1C49     		ldr	r1, .L85+48
- 1271 0228 C1E90023 		strd	r2, [r1]
- 171:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
- 1272              		.loc 1 171 21
- 1273 022c 4021     		movs	r1, #64
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 27
-
-
- 1274 022e 1848     		ldr	r0, .L85+40
- 1275 0230 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 172:Core/Src/Functions.c ****                     last_time_Y = GetTicks();
- 1276              		.loc 1 172 21
- 1277 0234 8021     		movs	r1, #128
- 1278 0236 4FF09040 		mov	r0, #1207959552
- 1279 023a FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 173:Core/Src/Functions.c ****                     break;
- 1280              		.loc 1 173 35
- 1281 023e FFF7FEFF 		bl	GetTicks
- 1282 0242 0346     		mov	r3, r0
- 1283 0244 1A46     		mov	r2, r3
- 173:Core/Src/Functions.c ****                     break;
- 1284              		.loc 1 173 33
- 1285 0246 154B     		ldr	r3, .L85+52
- 1286 0248 1A60     		str	r2, [r3]
- 174:Core/Src/Functions.c ****                 default:
- 1287              		.loc 1 174 21
- 1288 024a 02E0     		b	.L65
- 1289              	.L82:
- 146:Core/Src/Functions.c ****                 }
- 1290              		.loc 1 146 21
- 1291 024c 00BF     		nop
- 1292 024e 05E0     		b	.L81
+ 178:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
+ 179:Core/Src/Functions.c ****                     last_time_X = GetTicks();
+ 180:Core/Src/Functions.c ****                     break;
+ 181:Core/Src/Functions.c ****                 case Y_AXIS:
+ 182:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
+ 183:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
+ 184:Core/Src/Functions.c ****                     Cur_Y += XY_MM_PER_REV / XY_STEPS_PER_REV;
+ 185:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
+ 186:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
+ 187:Core/Src/Functions.c ****                     last_time_Y = GetTicks();
+ 188:Core/Src/Functions.c ****                     break;
+ 189:Core/Src/Functions.c ****                 default:
+ 190:Core/Src/Functions.c ****                     break;
+ 1291              		.loc 1 190 21
+ 1292 0174 6CE0     		b	.L93
  1293              	.L83:
- 1294              		.loc 1 176 21
- 1295 0250 00BF     		nop
- 1296              	.L65:
- 116:Core/Src/Functions.c ****         {
- 1297              		.loc 1 116 12 discriminator 1
- 1298 0252 03E0     		b	.L81
- 1299              	.L79:
- 177:Core/Src/Functions.c ****                 }
- 178:Core/Src/Functions.c ****             }
- 179:Core/Src/Functions.c **** 
- 180:Core/Src/Functions.c ****             // DelayMicrosecond(speed);
- 181:Core/Src/Functions.c ****         }
- 182:Core/Src/Functions.c ****     }
- 183:Core/Src/Functions.c ****     else
- 184:Core/Src/Functions.c ****     {
- 185:Core/Src/Functions.c ****         isRunning = false;
- 1300              		.loc 1 185 19
- 1301 0254 084B     		ldr	r3, .L85+16
- 1302 0256 0022     		movs	r2, #0
- 1303 0258 1A70     		strb	r2, [r3]
- 186:Core/Src/Functions.c ****     }
- 187:Core/Src/Functions.c **** }
- 1304              		.loc 1 187 1
- 1305 025a 00E0     		b	.L84
- 1306              	.L81:
- 116:Core/Src/Functions.c ****         {
- 1307              		.loc 1 116 12
- 1308 025c 00BF     		nop
- 1309              	.L84:
- 1310              		.loc 1 187 1
- 1311 025e 00BF     		nop
- 1312 0260 1037     		adds	r7, r7, #16
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 28
+ 168:Core/Src/Functions.c ****                     Cur_E += E_MM_PER_REV / STEPS_PER_REV;
+ 1294              		.loc 1 168 21
+ 1295 0176 0022     		movs	r2, #0
+ 1296 0178 0821     		movs	r1, #8
+ 1297 017a 4048     		ldr	r0, .L95+20
+ 1298 017c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 169:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(E_AXIS_STEP);
+ 1299              		.loc 1 169 27
+ 1300 0180 3F4B     		ldr	r3, .L95+24
+ 1301 0182 D3E90001 		ldrd	r0, [r3]
+ 1302 0186 38A3     		adr	r3, .L95
+ 1303 0188 D3E90023 		ldrd	r2, [r3]
+ 1304 018c FFF7FEFF 		bl	__aeabi_dadd
+ 1305 0190 0246     		mov	r2, r0
+ 1306 0192 0B46     		mov	r3, r1
+ 1307 0194 3A49     		ldr	r1, .L95+24
+ 1308 0196 C1E90023 		strd	r2, [r1]
+ 170:Core/Src/Functions.c ****                     last_time_E = GetTicks();
+ 1309              		.loc 1 170 21
+ 1310 019a 0121     		movs	r1, #1
+ 1311 019c 3948     		ldr	r0, .L95+28
+ 1312 019e FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 171:Core/Src/Functions.c ****                     break;
+ 1313              		.loc 1 171 35
+ 1314 01a2 FFF7FEFF 		bl	GetTicks
+ 1315 01a6 0346     		mov	r3, r0
+ 1316 01a8 1A46     		mov	r2, r3
+ 171:Core/Src/Functions.c ****                     break;
+ 1317              		.loc 1 171 33
+ 1318 01aa 374B     		ldr	r3, .L95+32
+ 1319 01ac 1A60     		str	r2, [r3]
+ 172:Core/Src/Functions.c ****                 case X_AXIS:
+ 1320              		.loc 1 172 21
+ 1321 01ae 50E0     		b	.L75
+ 1322              	.L85:
+ 174:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
+ 1323              		.loc 1 174 21
+ 1324 01b0 0122     		movs	r2, #1
+ 1325 01b2 0221     		movs	r1, #2
+ 1326 01b4 3148     		ldr	r0, .L95+20
+ 1327 01b6 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 28
 
 
- 1313              		.cfi_def_cfa_offset 8
- 1314 0262 BD46     		mov	sp, r7
- 1315              		.cfi_def_cfa_register 13
- 1316              		@ sp needed
- 1317 0264 80BD     		pop	{r7, pc}
- 1318              	.L86:
- 1319 0266 00BF     		.align	3
- 1320              	.L85:
- 1321 0268 000000A0 		.word	-1610612736
- 1322 026c D091533F 		.word	1062441424
- 1323 0270 00000060 		.word	1610612736
- 1324 0274 CBC6853F 		.word	1065731787
- 1325 0278 00000000 		.word	isRunning
- 1326 027c 00140048 		.word	1207964672
- 1327 0280 00000000 		.word	Cur_E
- 1328 0284 00040048 		.word	1207960576
- 1329 0288 00000000 		.word	last_time_E
- 1330 028c 00000000 		.word	Cur_X
- 1331 0290 00080048 		.word	1207961600
- 1332 0294 00000000 		.word	last_time_X
- 1333 0298 00000000 		.word	Cur_Y
- 1334 029c 00000000 		.word	last_time_Y
- 1335 02a0 FA7E6ABC 		.word	-1133871366
- 1336 02a4 7493883F 		.word	1065915252
- 1337 02a8 FA7E6ABC 		.word	-1133871366
- 1338 02ac 749388BF 		.word	-1081568396
- 1339              		.cfi_endproc
- 1340              	.LFE326:
- 1342              		.section	.text.MoveAndWait,"ax",%progbits
- 1343              		.align	1
- 1344              		.global	MoveAndWait
- 1345              		.syntax unified
- 1346              		.thumb
- 1347              		.thumb_func
- 1349              	MoveAndWait:
- 1350              	.LFB327:
- 188:Core/Src/Functions.c **** 
- 189:Core/Src/Functions.c **** void MoveAndWait(uint16_t state, uint16_t speed, uint16_t axis, uint16_t dir_X, uint16_t dir_Y)
- 190:Core/Src/Functions.c **** {
- 1351              		.loc 1 190 1
- 1352              		.cfi_startproc
- 1353              		@ args = 4, pretend = 0, frame = 8
- 1354              		@ frame_needed = 1, uses_anonymous_args = 0
- 1355 0000 90B5     		push	{r4, r7, lr}
- 1356              		.cfi_def_cfa_offset 12
- 1357              		.cfi_offset 4, -12
- 1358              		.cfi_offset 7, -8
- 1359              		.cfi_offset 14, -4
- 1360 0002 83B0     		sub	sp, sp, #12
- 1361              		.cfi_def_cfa_offset 24
- 1362 0004 00AF     		add	r7, sp, #0
- 1363              		.cfi_def_cfa_register 7
- 1364 0006 0446     		mov	r4, r0
- 1365 0008 0846     		mov	r0, r1
- 1366 000a 1146     		mov	r1, r2
- 1367 000c 1A46     		mov	r2, r3
- 1368 000e 2346     		mov	r3, r4	@ movhi
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 29
+ 175:Core/Src/Functions.c ****                     Cur_X += XY_MM_PER_REV / XY_STEPS_PER_REV;
+ 1328              		.loc 1 175 21
+ 1329 01ba 0122     		movs	r2, #1
+ 1330 01bc 0421     		movs	r1, #4
+ 1331 01be 2F48     		ldr	r0, .L95+20
+ 1332 01c0 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 176:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
+ 1333              		.loc 1 176 27
+ 1334 01c4 314B     		ldr	r3, .L95+36
+ 1335 01c6 D3E90001 		ldrd	r0, [r3]
+ 1336 01ca 29A3     		adr	r3, .L95+8
+ 1337 01cc D3E90023 		ldrd	r2, [r3]
+ 1338 01d0 FFF7FEFF 		bl	__aeabi_dadd
+ 1339 01d4 0246     		mov	r2, r0
+ 1340 01d6 0B46     		mov	r3, r1
+ 1341 01d8 2C49     		ldr	r1, .L95+36
+ 1342 01da C1E90023 		strd	r2, [r1]
+ 177:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
+ 1343              		.loc 1 177 21
+ 1344 01de 4021     		movs	r1, #64
+ 1345 01e0 2B48     		ldr	r0, .L95+40
+ 1346 01e2 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 178:Core/Src/Functions.c ****                     last_time_X = GetTicks();
+ 1347              		.loc 1 178 21
+ 1348 01e6 8021     		movs	r1, #128
+ 1349 01e8 4FF09040 		mov	r0, #1207959552
+ 1350 01ec FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 179:Core/Src/Functions.c ****                     break;
+ 1351              		.loc 1 179 35
+ 1352 01f0 FFF7FEFF 		bl	GetTicks
+ 1353 01f4 0346     		mov	r3, r0
+ 1354 01f6 1A46     		mov	r2, r3
+ 179:Core/Src/Functions.c ****                     break;
+ 1355              		.loc 1 179 33
+ 1356 01f8 264B     		ldr	r3, .L95+44
+ 1357 01fa 1A60     		str	r2, [r3]
+ 180:Core/Src/Functions.c ****                 case Y_AXIS:
+ 1358              		.loc 1 180 21
+ 1359 01fc 29E0     		b	.L75
+ 1360              	.L86:
+ 182:Core/Src/Functions.c ****                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
+ 1361              		.loc 1 182 21
+ 1362 01fe 0122     		movs	r2, #1
+ 1363 0200 0221     		movs	r1, #2
+ 1364 0202 1E48     		ldr	r0, .L95+20
+ 1365 0204 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 183:Core/Src/Functions.c ****                     Cur_Y += XY_MM_PER_REV / XY_STEPS_PER_REV;
+ 1366              		.loc 1 183 21
+ 1367 0208 0022     		movs	r2, #0
+ 1368 020a 0421     		movs	r1, #4
+ 1369 020c 1B48     		ldr	r0, .L95+20
+ 1370 020e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 184:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(X_AXIS_STEP);
+ 1371              		.loc 1 184 27
+ 1372 0212 214B     		ldr	r3, .L95+48
+ 1373 0214 D3E90001 		ldrd	r0, [r3]
+ 1374 0218 15A3     		adr	r3, .L95+8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 29
 
 
- 1369 0010 FB80     		strh	r3, [r7, #6]	@ movhi
- 1370 0012 0346     		mov	r3, r0	@ movhi
- 1371 0014 BB80     		strh	r3, [r7, #4]	@ movhi
- 1372 0016 0B46     		mov	r3, r1	@ movhi
- 1373 0018 7B80     		strh	r3, [r7, #2]	@ movhi
- 1374 001a 1346     		mov	r3, r2	@ movhi
- 1375 001c 3B80     		strh	r3, [r7]	@ movhi
- 191:Core/Src/Functions.c ****     switch (axis)
- 1376              		.loc 1 191 5
- 1377 001e 7B88     		ldrh	r3, [r7, #2]
- 1378 0020 002B     		cmp	r3, #0
- 1379 0022 02D0     		beq	.L88
- 1380 0024 012B     		cmp	r3, #1
- 1381 0026 26D0     		beq	.L89
- 192:Core/Src/Functions.c ****     {
- 193:Core/Src/Functions.c ****     case X_AXIS:
- 194:Core/Src/Functions.c ****         CHANGE_MOTOR_DIR(X_AXIS_DIR, dir_X);
- 195:Core/Src/Functions.c ****         CHANGE_MOTOR_DIR(Y_AXIS_DIR, dir_Y);
- 196:Core/Src/Functions.c ****         while (READ_PIN(X_STOP_PIN) != state)
- 197:Core/Src/Functions.c ****         {
- 198:Core/Src/Functions.c ****             MAKE_MOTOR_STEP(X_AXIS_STEP);
- 199:Core/Src/Functions.c ****             MAKE_MOTOR_STEP(Y_AXIS_STEP);
- 200:Core/Src/Functions.c ****             DelayMicrosecond(speed);
- 201:Core/Src/Functions.c ****         }
- 202:Core/Src/Functions.c ****         break;
- 203:Core/Src/Functions.c ****     case Y_AXIS:
- 204:Core/Src/Functions.c ****         CHANGE_MOTOR_DIR(X_AXIS_DIR, dir_X);
- 205:Core/Src/Functions.c ****         CHANGE_MOTOR_DIR(Y_AXIS_DIR, dir_Y);
- 206:Core/Src/Functions.c ****         while (READ_PIN(Y_STOP_PIN) != state)
- 207:Core/Src/Functions.c ****         {
- 208:Core/Src/Functions.c ****             MAKE_MOTOR_STEP(X_AXIS_STEP);
- 209:Core/Src/Functions.c ****             MAKE_MOTOR_STEP(Y_AXIS_STEP);
- 210:Core/Src/Functions.c ****             DelayMicrosecond(speed);
- 211:Core/Src/Functions.c ****         }
- 212:Core/Src/Functions.c ****         break;
- 213:Core/Src/Functions.c ****     }
- 214:Core/Src/Functions.c **** }
- 1382              		.loc 1 214 1
- 1383 0028 4BE0     		b	.L95
- 1384              	.L88:
- 194:Core/Src/Functions.c ****         CHANGE_MOTOR_DIR(Y_AXIS_DIR, dir_Y);
- 1385              		.loc 1 194 9
- 1386 002a 3B88     		ldrh	r3, [r7]	@ movhi
- 1387 002c DBB2     		uxtb	r3, r3
- 1388 002e 1A46     		mov	r2, r3
- 1389 0030 0221     		movs	r1, #2
- 1390 0032 2648     		ldr	r0, .L96
- 1391 0034 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 195:Core/Src/Functions.c ****         while (READ_PIN(X_STOP_PIN) != state)
- 1392              		.loc 1 195 9
- 1393 0038 3B8B     		ldrh	r3, [r7, #24]	@ movhi
- 1394 003a DBB2     		uxtb	r3, r3
- 1395 003c 1A46     		mov	r2, r3
- 1396 003e 0421     		movs	r1, #4
- 1397 0040 2248     		ldr	r0, .L96
- 1398 0042 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 196:Core/Src/Functions.c ****         {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 30
+ 1375 021a D3E90023 		ldrd	r2, [r3]
+ 1376 021e FFF7FEFF 		bl	__aeabi_dadd
+ 1377 0222 0246     		mov	r2, r0
+ 1378 0224 0B46     		mov	r3, r1
+ 1379 0226 1C49     		ldr	r1, .L95+48
+ 1380 0228 C1E90023 		strd	r2, [r1]
+ 185:Core/Src/Functions.c ****                     MAKE_MOTOR_STEP(Y_AXIS_STEP);
+ 1381              		.loc 1 185 21
+ 1382 022c 4021     		movs	r1, #64
+ 1383 022e 1848     		ldr	r0, .L95+40
+ 1384 0230 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 186:Core/Src/Functions.c ****                     last_time_Y = GetTicks();
+ 1385              		.loc 1 186 21
+ 1386 0234 8021     		movs	r1, #128
+ 1387 0236 4FF09040 		mov	r0, #1207959552
+ 1388 023a FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 187:Core/Src/Functions.c ****                     break;
+ 1389              		.loc 1 187 35
+ 1390 023e FFF7FEFF 		bl	GetTicks
+ 1391 0242 0346     		mov	r3, r0
+ 1392 0244 1A46     		mov	r2, r3
+ 187:Core/Src/Functions.c ****                     break;
+ 1393              		.loc 1 187 33
+ 1394 0246 154B     		ldr	r3, .L95+52
+ 1395 0248 1A60     		str	r2, [r3]
+ 188:Core/Src/Functions.c ****                 default:
+ 1396              		.loc 1 188 21
+ 1397 024a 02E0     		b	.L75
+ 1398              	.L92:
+ 160:Core/Src/Functions.c ****                 }
+ 1399              		.loc 1 160 21
+ 1400 024c 00BF     		nop
+ 1401 024e 05E0     		b	.L91
+ 1402              	.L93:
+ 1403              		.loc 1 190 21
+ 1404 0250 00BF     		nop
+ 1405              	.L75:
+ 130:Core/Src/Functions.c ****         {
+ 1406              		.loc 1 130 12 discriminator 1
+ 1407 0252 03E0     		b	.L91
+ 1408              	.L89:
+ 191:Core/Src/Functions.c ****                 }
+ 192:Core/Src/Functions.c ****             }
+ 193:Core/Src/Functions.c **** 
+ 194:Core/Src/Functions.c ****             // DelayMicrosecond(speed);
+ 195:Core/Src/Functions.c ****         }
+ 196:Core/Src/Functions.c ****     }
+ 197:Core/Src/Functions.c ****     else
+ 198:Core/Src/Functions.c ****     {
+ 199:Core/Src/Functions.c ****         isRunning = false;
+ 1409              		.loc 1 199 19
+ 1410 0254 084B     		ldr	r3, .L95+16
+ 1411 0256 0022     		movs	r2, #0
+ 1412 0258 1A70     		strb	r2, [r3]
+ 200:Core/Src/Functions.c ****     }
+ 201:Core/Src/Functions.c **** }
+ 1413              		.loc 1 201 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 30
 
 
- 1399              		.loc 1 196 15
- 1400 0046 0CE0     		b	.L91
- 1401              	.L92:
- 198:Core/Src/Functions.c ****             MAKE_MOTOR_STEP(Y_AXIS_STEP);
- 1402              		.loc 1 198 13
- 1403 0048 4021     		movs	r1, #64
- 1404 004a 2148     		ldr	r0, .L96+4
- 1405 004c FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 199:Core/Src/Functions.c ****             DelayMicrosecond(speed);
- 1406              		.loc 1 199 13
- 1407 0050 8021     		movs	r1, #128
- 1408 0052 4FF09040 		mov	r0, #1207959552
- 1409 0056 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 200:Core/Src/Functions.c ****         }
- 1410              		.loc 1 200 13
- 1411 005a BB88     		ldrh	r3, [r7, #4]
- 1412 005c 1846     		mov	r0, r3
- 1413 005e FFF7FEFF 		bl	DelayMicrosecond
- 1414              	.L91:
- 196:Core/Src/Functions.c ****         {
- 1415              		.loc 1 196 16
- 1416 0062 1021     		movs	r1, #16
- 1417 0064 1948     		ldr	r0, .L96
- 1418 0066 FFF7FEFF 		bl	HAL_GPIO_ReadPin
- 1419 006a 0346     		mov	r3, r0
- 1420 006c 9BB2     		uxth	r3, r3
- 196:Core/Src/Functions.c ****         {
- 1421              		.loc 1 196 37
- 1422 006e FA88     		ldrh	r2, [r7, #6]
- 1423 0070 9A42     		cmp	r2, r3
- 1424 0072 E9D1     		bne	.L92
- 202:Core/Src/Functions.c ****     case Y_AXIS:
- 1425              		.loc 1 202 9
- 1426 0074 25E0     		b	.L90
- 1427              	.L89:
- 204:Core/Src/Functions.c ****         CHANGE_MOTOR_DIR(Y_AXIS_DIR, dir_Y);
- 1428              		.loc 1 204 9
- 1429 0076 3B88     		ldrh	r3, [r7]	@ movhi
- 1430 0078 DBB2     		uxtb	r3, r3
- 1431 007a 1A46     		mov	r2, r3
- 1432 007c 0221     		movs	r1, #2
- 1433 007e 1348     		ldr	r0, .L96
- 1434 0080 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 205:Core/Src/Functions.c ****         while (READ_PIN(Y_STOP_PIN) != state)
- 1435              		.loc 1 205 9
- 1436 0084 3B8B     		ldrh	r3, [r7, #24]	@ movhi
- 1437 0086 DBB2     		uxtb	r3, r3
- 1438 0088 1A46     		mov	r2, r3
- 1439 008a 0421     		movs	r1, #4
- 1440 008c 0F48     		ldr	r0, .L96
- 1441 008e FFF7FEFF 		bl	HAL_GPIO_WritePin
- 206:Core/Src/Functions.c ****         {
- 1442              		.loc 1 206 15
- 1443 0092 0CE0     		b	.L93
- 1444              	.L94:
- 208:Core/Src/Functions.c ****             MAKE_MOTOR_STEP(Y_AXIS_STEP);
- 1445              		.loc 1 208 13
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 31
+ 1414 025a 00E0     		b	.L94
+ 1415              	.L91:
+ 130:Core/Src/Functions.c ****         {
+ 1416              		.loc 1 130 12
+ 1417 025c 00BF     		nop
+ 1418              	.L94:
+ 1419              		.loc 1 201 1
+ 1420 025e 00BF     		nop
+ 1421 0260 1037     		adds	r7, r7, #16
+ 1422              		.cfi_def_cfa_offset 8
+ 1423 0262 BD46     		mov	sp, r7
+ 1424              		.cfi_def_cfa_register 13
+ 1425              		@ sp needed
+ 1426 0264 80BD     		pop	{r7, pc}
+ 1427              	.L96:
+ 1428 0266 00BF     		.align	3
+ 1429              	.L95:
+ 1430 0268 000000A0 		.word	-1610612736
+ 1431 026c D091533F 		.word	1062441424
+ 1432 0270 00000060 		.word	1610612736
+ 1433 0274 CBC6853F 		.word	1065731787
+ 1434 0278 00000000 		.word	isRunning
+ 1435 027c 00140048 		.word	1207964672
+ 1436 0280 00000000 		.word	Cur_E
+ 1437 0284 00040048 		.word	1207960576
+ 1438 0288 00000000 		.word	last_time_E
+ 1439 028c 00000000 		.word	Cur_X
+ 1440 0290 00080048 		.word	1207961600
+ 1441 0294 00000000 		.word	last_time_X
+ 1442 0298 00000000 		.word	Cur_Y
+ 1443 029c 00000000 		.word	last_time_Y
+ 1444 02a0 FA7E6ABC 		.word	-1133871366
+ 1445 02a4 7493883F 		.word	1065915252
+ 1446 02a8 FA7E6ABC 		.word	-1133871366
+ 1447 02ac 749388BF 		.word	-1081568396
+ 1448              		.cfi_endproc
+ 1449              	.LFE326:
+ 1451              		.section	.text.MoveAndWait,"ax",%progbits
+ 1452              		.align	1
+ 1453              		.global	MoveAndWait
+ 1454              		.syntax unified
+ 1455              		.thumb
+ 1456              		.thumb_func
+ 1458              	MoveAndWait:
+ 1459              	.LFB327:
+ 202:Core/Src/Functions.c **** 
+ 203:Core/Src/Functions.c **** void MoveAndWait(uint16_t state, uint16_t speed, uint16_t axis, uint16_t dir_X, uint16_t dir_Y)
+ 204:Core/Src/Functions.c **** {
+ 1460              		.loc 1 204 1
+ 1461              		.cfi_startproc
+ 1462              		@ args = 4, pretend = 0, frame = 8
+ 1463              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1464 0000 90B5     		push	{r4, r7, lr}
+ 1465              		.cfi_def_cfa_offset 12
+ 1466              		.cfi_offset 4, -12
+ 1467              		.cfi_offset 7, -8
+ 1468              		.cfi_offset 14, -4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 31
 
 
- 1446 0094 4021     		movs	r1, #64
- 1447 0096 0E48     		ldr	r0, .L96+4
- 1448 0098 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 209:Core/Src/Functions.c ****             DelayMicrosecond(speed);
- 1449              		.loc 1 209 13
- 1450 009c 8021     		movs	r1, #128
- 1451 009e 4FF09040 		mov	r0, #1207959552
- 1452 00a2 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 210:Core/Src/Functions.c ****         }
- 1453              		.loc 1 210 13
- 1454 00a6 BB88     		ldrh	r3, [r7, #4]
- 1455 00a8 1846     		mov	r0, r3
- 1456 00aa FFF7FEFF 		bl	DelayMicrosecond
- 1457              	.L93:
- 206:Core/Src/Functions.c ****         {
- 1458              		.loc 1 206 16
- 1459 00ae 2021     		movs	r1, #32
- 1460 00b0 0648     		ldr	r0, .L96
- 1461 00b2 FFF7FEFF 		bl	HAL_GPIO_ReadPin
- 1462 00b6 0346     		mov	r3, r0
- 1463 00b8 9BB2     		uxth	r3, r3
- 206:Core/Src/Functions.c ****         {
- 1464              		.loc 1 206 37
- 1465 00ba FA88     		ldrh	r2, [r7, #6]
- 1466 00bc 9A42     		cmp	r2, r3
- 1467 00be E9D1     		bne	.L94
- 212:Core/Src/Functions.c ****     }
- 1468              		.loc 1 212 9
- 1469 00c0 00BF     		nop
- 1470              	.L90:
- 1471              	.L95:
- 1472              		.loc 1 214 1
- 1473 00c2 00BF     		nop
- 1474 00c4 0C37     		adds	r7, r7, #12
- 1475              		.cfi_def_cfa_offset 12
- 1476 00c6 BD46     		mov	sp, r7
- 1477              		.cfi_def_cfa_register 13
- 1478              		@ sp needed
- 1479 00c8 90BD     		pop	{r4, r7, pc}
- 1480              	.L97:
- 1481 00ca 00BF     		.align	2
- 1482              	.L96:
- 1483 00cc 00140048 		.word	1207964672
- 1484 00d0 00080048 		.word	1207961600
- 1485              		.cfi_endproc
- 1486              	.LFE327:
- 1488              		.text
- 1489              	.Letext0:
- 1490              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 1491              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 1492              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
- 1493              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
- 1494              		.file 6 "Core/Inc/GCodes.h"
- 1495              		.file 7 "Core/Inc/main.h"
- 1496              		.file 8 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 1497              		.file 9 "Core/Inc/Parser.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 32
+ 1469 0002 83B0     		sub	sp, sp, #12
+ 1470              		.cfi_def_cfa_offset 24
+ 1471 0004 00AF     		add	r7, sp, #0
+ 1472              		.cfi_def_cfa_register 7
+ 1473 0006 0446     		mov	r4, r0
+ 1474 0008 0846     		mov	r0, r1
+ 1475 000a 1146     		mov	r1, r2
+ 1476 000c 1A46     		mov	r2, r3
+ 1477 000e 2346     		mov	r3, r4	@ movhi
+ 1478 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1479 0012 0346     		mov	r3, r0	@ movhi
+ 1480 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+ 1481 0016 0B46     		mov	r3, r1	@ movhi
+ 1482 0018 7B80     		strh	r3, [r7, #2]	@ movhi
+ 1483 001a 1346     		mov	r3, r2	@ movhi
+ 1484 001c 3B80     		strh	r3, [r7]	@ movhi
+ 205:Core/Src/Functions.c ****     switch (axis)
+ 1485              		.loc 1 205 5
+ 1486 001e 7B88     		ldrh	r3, [r7, #2]
+ 1487 0020 002B     		cmp	r3, #0
+ 1488 0022 02D0     		beq	.L98
+ 1489 0024 012B     		cmp	r3, #1
+ 1490 0026 26D0     		beq	.L99
+ 206:Core/Src/Functions.c ****     {
+ 207:Core/Src/Functions.c ****     case X_AXIS:
+ 208:Core/Src/Functions.c ****         CHANGE_MOTOR_DIR(X_AXIS_DIR, dir_X);
+ 209:Core/Src/Functions.c ****         CHANGE_MOTOR_DIR(Y_AXIS_DIR, dir_Y);
+ 210:Core/Src/Functions.c ****         while (READ_PIN(X_STOP_PIN) != state)
+ 211:Core/Src/Functions.c ****         {
+ 212:Core/Src/Functions.c ****             MAKE_MOTOR_STEP(X_AXIS_STEP);
+ 213:Core/Src/Functions.c ****             MAKE_MOTOR_STEP(Y_AXIS_STEP);
+ 214:Core/Src/Functions.c ****             DelayMicrosecond(speed);
+ 215:Core/Src/Functions.c ****         }
+ 216:Core/Src/Functions.c ****         break;
+ 217:Core/Src/Functions.c ****     case Y_AXIS:
+ 218:Core/Src/Functions.c ****         CHANGE_MOTOR_DIR(X_AXIS_DIR, dir_X);
+ 219:Core/Src/Functions.c ****         CHANGE_MOTOR_DIR(Y_AXIS_DIR, dir_Y);
+ 220:Core/Src/Functions.c ****         while (READ_PIN(Y_STOP_PIN) != state)
+ 221:Core/Src/Functions.c ****         {
+ 222:Core/Src/Functions.c ****             MAKE_MOTOR_STEP(X_AXIS_STEP);
+ 223:Core/Src/Functions.c ****             MAKE_MOTOR_STEP(Y_AXIS_STEP);
+ 224:Core/Src/Functions.c ****             DelayMicrosecond(speed);
+ 225:Core/Src/Functions.c ****         }
+ 226:Core/Src/Functions.c ****         break;
+ 227:Core/Src/Functions.c ****     }
+ 228:Core/Src/Functions.c **** }
+ 1491              		.loc 1 228 1
+ 1492 0028 4BE0     		b	.L105
+ 1493              	.L98:
+ 208:Core/Src/Functions.c ****         CHANGE_MOTOR_DIR(Y_AXIS_DIR, dir_Y);
+ 1494              		.loc 1 208 9
+ 1495 002a 3B88     		ldrh	r3, [r7]	@ movhi
+ 1496 002c DBB2     		uxtb	r3, r3
+ 1497 002e 1A46     		mov	r2, r3
+ 1498 0030 0221     		movs	r1, #2
+ 1499 0032 2648     		ldr	r0, .L106
+ 1500 0034 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 32
+
+
+ 209:Core/Src/Functions.c ****         while (READ_PIN(X_STOP_PIN) != state)
+ 1501              		.loc 1 209 9
+ 1502 0038 3B8B     		ldrh	r3, [r7, #24]	@ movhi
+ 1503 003a DBB2     		uxtb	r3, r3
+ 1504 003c 1A46     		mov	r2, r3
+ 1505 003e 0421     		movs	r1, #4
+ 1506 0040 2248     		ldr	r0, .L106
+ 1507 0042 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 210:Core/Src/Functions.c ****         {
+ 1508              		.loc 1 210 15
+ 1509 0046 0CE0     		b	.L101
+ 1510              	.L102:
+ 212:Core/Src/Functions.c ****             MAKE_MOTOR_STEP(Y_AXIS_STEP);
+ 1511              		.loc 1 212 13
+ 1512 0048 4021     		movs	r1, #64
+ 1513 004a 2148     		ldr	r0, .L106+4
+ 1514 004c FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 213:Core/Src/Functions.c ****             DelayMicrosecond(speed);
+ 1515              		.loc 1 213 13
+ 1516 0050 8021     		movs	r1, #128
+ 1517 0052 4FF09040 		mov	r0, #1207959552
+ 1518 0056 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 214:Core/Src/Functions.c ****         }
+ 1519              		.loc 1 214 13
+ 1520 005a BB88     		ldrh	r3, [r7, #4]
+ 1521 005c 1846     		mov	r0, r3
+ 1522 005e FFF7FEFF 		bl	DelayMicrosecond
+ 1523              	.L101:
+ 210:Core/Src/Functions.c ****         {
+ 1524              		.loc 1 210 16
+ 1525 0062 1021     		movs	r1, #16
+ 1526 0064 1948     		ldr	r0, .L106
+ 1527 0066 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 1528 006a 0346     		mov	r3, r0
+ 1529 006c 9BB2     		uxth	r3, r3
+ 210:Core/Src/Functions.c ****         {
+ 1530              		.loc 1 210 37
+ 1531 006e FA88     		ldrh	r2, [r7, #6]
+ 1532 0070 9A42     		cmp	r2, r3
+ 1533 0072 E9D1     		bne	.L102
+ 216:Core/Src/Functions.c ****     case Y_AXIS:
+ 1534              		.loc 1 216 9
+ 1535 0074 25E0     		b	.L100
+ 1536              	.L99:
+ 218:Core/Src/Functions.c ****         CHANGE_MOTOR_DIR(Y_AXIS_DIR, dir_Y);
+ 1537              		.loc 1 218 9
+ 1538 0076 3B88     		ldrh	r3, [r7]	@ movhi
+ 1539 0078 DBB2     		uxtb	r3, r3
+ 1540 007a 1A46     		mov	r2, r3
+ 1541 007c 0221     		movs	r1, #2
+ 1542 007e 1348     		ldr	r0, .L106
+ 1543 0080 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 219:Core/Src/Functions.c ****         while (READ_PIN(Y_STOP_PIN) != state)
+ 1544              		.loc 1 219 9
+ 1545 0084 3B8B     		ldrh	r3, [r7, #24]	@ movhi
+ 1546 0086 DBB2     		uxtb	r3, r3
+ 1547 0088 1A46     		mov	r2, r3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 33
+
+
+ 1548 008a 0421     		movs	r1, #4
+ 1549 008c 0F48     		ldr	r0, .L106
+ 1550 008e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 220:Core/Src/Functions.c ****         {
+ 1551              		.loc 1 220 15
+ 1552 0092 0CE0     		b	.L103
+ 1553              	.L104:
+ 222:Core/Src/Functions.c ****             MAKE_MOTOR_STEP(Y_AXIS_STEP);
+ 1554              		.loc 1 222 13
+ 1555 0094 4021     		movs	r1, #64
+ 1556 0096 0E48     		ldr	r0, .L106+4
+ 1557 0098 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 223:Core/Src/Functions.c ****             DelayMicrosecond(speed);
+ 1558              		.loc 1 223 13
+ 1559 009c 8021     		movs	r1, #128
+ 1560 009e 4FF09040 		mov	r0, #1207959552
+ 1561 00a2 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 224:Core/Src/Functions.c ****         }
+ 1562              		.loc 1 224 13
+ 1563 00a6 BB88     		ldrh	r3, [r7, #4]
+ 1564 00a8 1846     		mov	r0, r3
+ 1565 00aa FFF7FEFF 		bl	DelayMicrosecond
+ 1566              	.L103:
+ 220:Core/Src/Functions.c ****         {
+ 1567              		.loc 1 220 16
+ 1568 00ae 2021     		movs	r1, #32
+ 1569 00b0 0648     		ldr	r0, .L106
+ 1570 00b2 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 1571 00b6 0346     		mov	r3, r0
+ 1572 00b8 9BB2     		uxth	r3, r3
+ 220:Core/Src/Functions.c ****         {
+ 1573              		.loc 1 220 37
+ 1574 00ba FA88     		ldrh	r2, [r7, #6]
+ 1575 00bc 9A42     		cmp	r2, r3
+ 1576 00be E9D1     		bne	.L104
+ 226:Core/Src/Functions.c ****     }
+ 1577              		.loc 1 226 9
+ 1578 00c0 00BF     		nop
+ 1579              	.L100:
+ 1580              	.L105:
+ 1581              		.loc 1 228 1
+ 1582 00c2 00BF     		nop
+ 1583 00c4 0C37     		adds	r7, r7, #12
+ 1584              		.cfi_def_cfa_offset 12
+ 1585 00c6 BD46     		mov	sp, r7
+ 1586              		.cfi_def_cfa_register 13
+ 1587              		@ sp needed
+ 1588 00c8 90BD     		pop	{r4, r7, pc}
+ 1589              	.L107:
+ 1590 00ca 00BF     		.align	2
+ 1591              	.L106:
+ 1592 00cc 00140048 		.word	1207964672
+ 1593 00d0 00080048 		.word	1207961600
+ 1594              		.cfi_endproc
+ 1595              	.LFE327:
+ 1597              		.text
+ 1598              	.Letext0:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 34
+
+
+ 1599              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 1600              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 1601              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+ 1602              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 1603              		.file 6 "Core/Inc/GCodes.h"
+ 1604              		.file 7 "Core/Inc/main.h"
+ 1605              		.file 8 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 1606              		.file 9 "Core/Inc/Parser.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 35
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Functions.c
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:20     .bss.msg_buffer:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:26     .bss.RxBuf:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:29     .bss.RxBuf:0000000000000000 RxBuf
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:32     .text.SelectDriver:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:38     .text.SelectDriver:0000000000000000 SelectDriver
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:63     .text.SelectDriver:0000000000000018 $d
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:67     .text.SelectDriver:0000000000000028 $t
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:133    .text.SelectDriver:0000000000000088 $d
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:143    .text.GetTemperature:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:149    .text.GetTemperature:0000000000000000 GetTemperature
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:317    .text.GetTemperature:0000000000000158 $d
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:343    .text.SetHeating:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:349    .text.SetHeating:0000000000000000 SetHeating
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:394    .text.SetHeating:000000000000002c $d
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:399    .text.SetFanSpeed:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:405    .text.SetFanSpeed:0000000000000000 SetFanSpeed
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:450    .text.SetFanSpeed:000000000000002c $d
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:459    .text.MoveXY:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:465    .text.MoveXY:0000000000000000 MoveXY
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:785    .text.MoveXY:00000000000002a8 $d
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:804    .text.MoveXY:00000000000002ec $t
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:963    .text.MoveXY:0000000000000430 $d
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:983    .text.Move:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:989    .text.Move:0000000000000000 Move
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:1321   .text.Move:0000000000000268 $d
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:1343   .text.MoveAndWait:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:1349   .text.MoveAndWait:0000000000000000 MoveAndWait
-C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s:1483   .text.MoveAndWait:00000000000000cc $d
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:20     .bss.msg_buffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:26     .bss.RxBuf:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:29     .bss.RxBuf:0000000000000000 RxBuf
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:32     .text.SelectDriver:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:38     .text.SelectDriver:0000000000000000 SelectDriver
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:63     .text.SelectDriver:0000000000000018 $d
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:67     .text.SelectDriver:0000000000000028 $t
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:133    .text.SelectDriver:0000000000000088 $d
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:143    .text.GetTemperature:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:149    .text.GetTemperature:0000000000000000 GetTemperature
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:317    .text.GetTemperature:0000000000000158 $d
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:343    .text.SetHeating:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:349    .text.SetHeating:0000000000000000 SetHeating
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:394    .text.SetHeating:000000000000002c $d
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:399    .text.SetFanSpeed:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:405    .text.SetFanSpeed:0000000000000000 SetFanSpeed
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:450    .text.SetFanSpeed:000000000000002c $d
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:459    .text.MoveXY:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:465    .text.MoveXY:0000000000000000 MoveXY
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:785    .text.MoveXY:00000000000002a8 $d
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:804    .text.MoveXY:00000000000002ec $t
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:1072   .text.MoveXY:0000000000000528 $d
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:1092   .text.Move:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:1098   .text.Move:0000000000000000 Move
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:1430   .text.Move:0000000000000268 $d
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:1452   .text.MoveAndWait:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:1458   .text.MoveAndWait:0000000000000000 MoveAndWait
+C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s:1592   .text.MoveAndWait:00000000000000cc $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin
@@ -1917,7 +2049,7 @@ __aeabi_dcmpge
 __aeabi_dcmple
 isRunning
 Cur_E
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccuFxcpY.s 			page 33
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccFinBco.s 			page 36
 
 
 last_time_E

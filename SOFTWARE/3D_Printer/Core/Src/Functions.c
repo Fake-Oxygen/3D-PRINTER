@@ -72,10 +72,10 @@ void MoveXY(double dir_x, double dir_y) {
         if(GetTicks() - last_tick_A >= speed_A && fabs(engine_dir_A) > ENGINE_MIN_SPEED) {
             // isRunning = true;
             if(engine_dir_A > 0) {
-                CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
+                CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
                 MAKE_MOTOR_STEP(X_AXIS_STEP);
             } else if(engine_dir_A < 0) {
-                CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
+                CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
                 MAKE_MOTOR_STEP(X_AXIS_STEP);
             }
             last_tick_A = GetTicks();
@@ -88,10 +88,10 @@ void MoveXY(double dir_x, double dir_y) {
         if(GetTicks() - last_tick_B >= speed_B && fabs(engine_dir_B) > ENGINE_MIN_SPEED) {
             // isRunning = true;
             if(engine_dir_B > 0) {
-                CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
+                CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
                 MAKE_MOTOR_STEP(Y_AXIS_STEP);
             } else if(engine_dir_B < 0) {
-                CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
+                CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
                 MAKE_MOTOR_STEP(Y_AXIS_STEP);
             }
             last_tick_B = GetTicks();
@@ -101,8 +101,22 @@ void MoveXY(double dir_x, double dir_y) {
     if(F > 0) {
         uint32_t speed_AB = (double)1 / (double)F * (double)60 * XY_MM_PER_REV / XY_STEPS_PER_REV * (double)1000000;
         if(GetTicks() - last_tick_AB >= speed_AB) {
-            Cur_X += dir_x * XY_MM_PER_REV / XY_STEPS_PER_REV;
-            Cur_Y += dir_y * XY_MM_PER_REV / XY_STEPS_PER_REV;
+            //dirs have to sum up to 1 or -1
+            //1-smaller diff/larger dif
+            if(dir_x > 0) {
+                Cur_X += dir_x * dir_x * XY_MM_PER_REV / XY_STEPS_PER_REV;
+            }
+            else {
+                Cur_X -= dir_x * dir_x * XY_MM_PER_REV / XY_STEPS_PER_REV;
+            }
+            if(dir_y > 0) {
+                Cur_Y += dir_y * dir_y * XY_MM_PER_REV / XY_STEPS_PER_REV;
+            }
+            else {
+                Cur_Y -= dir_y * dir_y * XY_MM_PER_REV / XY_STEPS_PER_REV;
+            }
+            
+            last_tick_AB = GetTicks();
         }
     }
 
