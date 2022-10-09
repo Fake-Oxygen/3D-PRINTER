@@ -51,6 +51,7 @@
 #define OFFSET_P 0.012
 #define OFFSET_N -0.012
 #define XY_MM_PER_REV 69.115f
+#define Z_MM_PER_REV 8.0f
 #define XY_STEPS_PER_REV 6500.0f
 #define USER_BUTTON GPIOC,GPIO_PIN_13
 //#define REDUNDANT_TEMP_SENSOR

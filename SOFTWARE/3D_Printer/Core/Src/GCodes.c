@@ -30,15 +30,15 @@ uint16_t M155(uint16_t S)
 
 void G0()
 {
-    // double E_dif = E - Cur_E;
+    double E_dif = E - Cur_E;
     double dif_x = X - Cur_X;
     double dif_y = Y - Cur_Y;
     double xy_len = sqrt(dif_x * dif_x + dif_y * dif_y);
     double dir_x = dif_x / xy_len;
     double dir_y = dif_y / xy_len;
-    // uint32_t speed = (double)1 / (double)F * (double)60 * E_MM_PER_REV / STEPS_PER_REV * (double)1000000;
+    uint32_t speed = (double)1 / (double)F * (double)60 * E_MM_PER_REV / STEPS_PER_REV * (double)1000000;
 
-    //Move(E_dif, last_time_E, E_AXIS, speed);
+    Move(E_dif, last_time_E, E_AXIS, speed);
     if(fabs(dif_x) > OFFSET_P || fabs(dif_y) > OFFSET_P) {
         MoveXY(dir_x, dir_y);
     }
