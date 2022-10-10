@@ -9,6 +9,7 @@ bool isRunning = false;
 uint32_t last_time_E = 0;
 uint32_t last_time_X = 0;
 uint32_t last_time_Y = 0;
+uint32_t last_time_Z = 0;
 uint32_t last_tick_A = 0;
 uint32_t last_tick_B = 0;
 uint32_t last_tick_AB = 0;
@@ -37,7 +38,7 @@ void G0()
     double dir_x = dif_x / xy_len;
     double dir_y = dif_y / xy_len;
     uint32_t speed = (double)1 / (double)F * (double)60 * E_MM_PER_REV / STEPS_PER_REV * (double)1000000;
-
+    Move(Z_dif, last_time_Z, Z_AXIS, speed);
     Move(E_dif, last_time_E, E_AXIS, speed);
     if(fabs(dif_x) > OFFSET_P || fabs(dif_y) > OFFSET_P) {
         MoveXY(dir_x, dir_y);

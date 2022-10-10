@@ -140,6 +140,12 @@ void Move(double dif, uint32_t last_time, uint16_t axis, uint16_t speed)
                     MAKE_MOTOR_STEP(E_AXIS_STEP);
                     last_time_E = GetTicks();
                     break;
+                case Z_AXIS:
+                    CHANGE_MOTOR_DIR(Z_AXIS_DIR, CLOCKWISE);
+                    Cur_Z -= Z_MM_PER_REV / STEPS_PER_REV;
+                    MAKE_MOTOR_STEP(Z_AXIS_STEP);
+                    last_time_Z = GetTicks();
+                    break;
                 case X_AXIS:
                     CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
@@ -170,6 +176,11 @@ void Move(double dif, uint32_t last_time, uint16_t axis, uint16_t speed)
                     MAKE_MOTOR_STEP(E_AXIS_STEP);
                     last_time_E = GetTicks();
                     break;
+                case Z_AXIS:
+                    CHANGE_MOTOR_DIR(Z_AXIS_DIR, COUNTERCLOCKWISE);
+                    Cur_Z += Z_MM_PER_REV / STEPS_PER_REV;
+                    MAKE_MOTOR_STEP(Z_AXIS_STEP);
+                    last_time_Z = GetTicks();
                 case X_AXIS:
                     CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
                     CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
