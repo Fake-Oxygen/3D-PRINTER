@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s 			page 1
-=======
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
->>>>>>> Stashed changes
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -62,11 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
   12:Core/Src/stm32l4xx_it.c ****   * This software is licensed under terms that can be found in the LICENSE file
   13:Core/Src/stm32l4xx_it.c ****   * in the root directory of this software component.
   14:Core/Src/stm32l4xx_it.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
-<<<<<<< Updated upstream
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s 			page 2
-=======
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 2
->>>>>>> Stashed changes
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 2
 
 
   15:Core/Src/stm32l4xx_it.c ****   *
@@ -115,20 +107,6 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
   58:Core/Src/stm32l4xx_it.c **** extern DMA_HandleTypeDef hdma_adc1;
   59:Core/Src/stm32l4xx_it.c **** extern DMA_HandleTypeDef hdma_lpuart1_rx;
   60:Core/Src/stm32l4xx_it.c **** extern UART_HandleTypeDef hlpuart1;
-<<<<<<< Updated upstream
-  61:Core/Src/stm32l4xx_it.c **** /* USER CODE BEGIN EV */
-  62:Core/Src/stm32l4xx_it.c **** 
-  63:Core/Src/stm32l4xx_it.c **** /* USER CODE END EV */
-  64:Core/Src/stm32l4xx_it.c **** 
-  65:Core/Src/stm32l4xx_it.c **** /******************************************************************************/
-  66:Core/Src/stm32l4xx_it.c **** /*           Cortex-M4 Processor Interruption and Exception Handlers          */
-  67:Core/Src/stm32l4xx_it.c **** /******************************************************************************/
-  68:Core/Src/stm32l4xx_it.c **** /**
-  69:Core/Src/stm32l4xx_it.c ****   * @brief This function handles Non maskable interrupt.
-  70:Core/Src/stm32l4xx_it.c ****   */
-  71:Core/Src/stm32l4xx_it.c **** void NMI_Handler(void)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s 			page 3
-=======
   61:Core/Src/stm32l4xx_it.c **** extern LTDC_HandleTypeDef hltdc;
   62:Core/Src/stm32l4xx_it.c **** /* USER CODE BEGIN EV */
   63:Core/Src/stm32l4xx_it.c **** 
@@ -140,8 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
   69:Core/Src/stm32l4xx_it.c **** /**
   70:Core/Src/stm32l4xx_it.c ****   * @brief This function handles Non maskable interrupt.
   71:Core/Src/stm32l4xx_it.c ****   */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 3
->>>>>>> Stashed changes
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 3
 
 
   72:Core/Src/stm32l4xx_it.c **** void NMI_Handler(void)
@@ -201,12 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
   92:Core/Src/stm32l4xx_it.c ****   while (1)
   77              		.loc 1 92 9 discriminator 1
   78 0004 FEE7     		b	.L4
-<<<<<<< Updated upstream
-  79              		.cfi_endproc
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s 			page 4
-=======
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 4
->>>>>>> Stashed changes
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 4
 
 
   79              		.cfi_endproc
@@ -257,19 +229,6 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
  112              		.thumb_func
  114              	BusFault_Handler:
  115              	.LFB324:
-<<<<<<< Updated upstream
- 107:Core/Src/stm32l4xx_it.c ****   {
- 108:Core/Src/stm32l4xx_it.c ****     /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
- 109:Core/Src/stm32l4xx_it.c ****     /* USER CODE END W1_MemoryManagement_IRQn 0 */
- 110:Core/Src/stm32l4xx_it.c ****   }
- 111:Core/Src/stm32l4xx_it.c **** }
- 112:Core/Src/stm32l4xx_it.c **** 
- 113:Core/Src/stm32l4xx_it.c **** /**
- 114:Core/Src/stm32l4xx_it.c ****   * @brief This function handles Prefetch fault, memory access fault.
- 115:Core/Src/stm32l4xx_it.c ****   */
- 116:Core/Src/stm32l4xx_it.c **** void BusFault_Handler(void)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s 			page 5
-=======
  108:Core/Src/stm32l4xx_it.c ****   {
  109:Core/Src/stm32l4xx_it.c ****     /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
  110:Core/Src/stm32l4xx_it.c ****     /* USER CODE END W1_MemoryManagement_IRQn 0 */
@@ -279,8 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
  114:Core/Src/stm32l4xx_it.c **** /**
  115:Core/Src/stm32l4xx_it.c ****   * @brief This function handles Prefetch fault, memory access fault.
  116:Core/Src/stm32l4xx_it.c ****   */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 5
->>>>>>> Stashed changes
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 5
 
 
  117:Core/Src/stm32l4xx_it.c **** void BusFault_Handler(void)
@@ -340,12 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
  137:Core/Src/stm32l4xx_it.c ****   while (1)
  152              		.loc 1 137 9 discriminator 1
  153 0004 FEE7     		b	.L10
-<<<<<<< Updated upstream
- 154              		.cfi_endproc
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s 			page 6
-=======
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 6
->>>>>>> Stashed changes
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 6
 
 
  154              		.cfi_endproc
@@ -405,12 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
  193              		.thumb_func
  195              	DebugMon_Handler:
  196              	.LFB327:
-<<<<<<< Updated upstream
- 155:Core/Src/stm32l4xx_it.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s 			page 7
-=======
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 7
->>>>>>> Stashed changes
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 7
 
 
  156:Core/Src/stm32l4xx_it.c **** 
@@ -470,12 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
  234              		.cfi_def_cfa_offset 4
  235              		.cfi_offset 7, -4
  236 0002 00AF     		add	r7, sp, #0
-<<<<<<< Updated upstream
- 237              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s 			page 8
-=======
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 8
->>>>>>> Stashed changes
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 8
 
 
  237              		.cfi_def_cfa_register 7
@@ -535,12 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
  272 0008 00BF     		nop
  273 000a 80BD     		pop	{r7, pc}
  274              		.cfi_endproc
-<<<<<<< Updated upstream
- 275              	.LFE329:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s 			page 9
-=======
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 9
->>>>>>> Stashed changes
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 9
 
 
  275              	.LFE329:
@@ -600,12 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
  311              		.global	DMA1_Channel2_IRQHandler
  312              		.syntax unified
  313              		.thumb
-<<<<<<< Updated upstream
- 314              		.thumb_func
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s 			page 10
-=======
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 10
->>>>>>> Stashed changes
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 10
 
 
  314              		.thumb_func
@@ -665,12 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
  351              		.cfi_startproc
  352              		@ args = 0, pretend = 0, frame = 0
  353              		@ frame_needed = 1, uses_anonymous_args = 0
-<<<<<<< Updated upstream
- 354 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s 			page 11
-=======
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 11
->>>>>>> Stashed changes
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 11
 
 
  354 0000 80B5     		push	{r7, lr}
@@ -699,19 +627,6 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
  369 0010 00000000 		.word	hlpuart1
  370              		.cfi_endproc
  371              	.LFE332:
-<<<<<<< Updated upstream
- 373              		.text
- 374              	.Letext0:
- 375              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 376              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 377              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
- 378              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
- 379              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
- 380              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
- 381              		.file 8 "Core/Inc/main.h"
- 382              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s 			page 12
-=======
  373              		.section	.text.LTDC_IRQHandler,"ax",%progbits
  374              		.align	1
  375              		.global	LTDC_IRQHandler
@@ -743,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
  392              		.loc 1 254 3
  393 0004 0248     		ldr	r0, .L25
  394 0006 FFF7FEFF 		bl	HAL_LTDC_IRQHandler
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 12
 
 
  255:Core/Src/stm32l4xx_it.c ****   /* USER CODE BEGIN LTDC_IRQn 1 */
@@ -803,7 +718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
  433 0010 00000000 		.word	hltdc
  434              		.cfi_endproc
  435              	.LFE334:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 13
 
 
  437              		.text
@@ -817,83 +732,48 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 1
  445              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
  446              		.file 9 "Core/Inc/main.h"
  447              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s 			page 14
->>>>>>> Stashed changes
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_it.c
-<<<<<<< Updated upstream
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:20     .bss.msg_buffer:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:26     .bss.RxBuf:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:29     .bss.RxBuf:0000000000000000 RxBuf
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:32     .text.NMI_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:38     .text.NMI_Handler:0000000000000000 NMI_Handler
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:58     .text.HardFault_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:64     .text.HardFault_Handler:0000000000000000 HardFault_Handler
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:83     .text.MemManage_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:89     .text.MemManage_Handler:0000000000000000 MemManage_Handler
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:108    .text.BusFault_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:114    .text.BusFault_Handler:0000000000000000 BusFault_Handler
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:133    .text.UsageFault_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:139    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:158    .text.SVC_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:164    .text.SVC_Handler:0000000000000000 SVC_Handler
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:189    .text.DebugMon_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:195    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:220    .text.PendSV_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:226    .text.PendSV_Handler:0000000000000000 PendSV_Handler
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:251    .text.SysTick_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:257    .text.SysTick_Handler:0000000000000000 SysTick_Handler
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:278    .text.DMA1_Channel1_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:284    .text.DMA1_Channel1_IRQHandler:0000000000000000 DMA1_Channel1_IRQHandler
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:305    .text.DMA1_Channel1_IRQHandler:0000000000000010 $d
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:310    .text.DMA1_Channel2_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:316    .text.DMA1_Channel2_IRQHandler:0000000000000000 DMA1_Channel2_IRQHandler
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:337    .text.DMA1_Channel2_IRQHandler:0000000000000010 $d
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:342    .text.LPUART1_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:348    .text.LPUART1_IRQHandler:0000000000000000 LPUART1_IRQHandler
-C:\Users\Morroway\AppData\Local\Temp\cc9jJ42S.s:369    .text.LPUART1_IRQHandler:0000000000000010 $d
-=======
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:20     .bss.msg_buffer:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:26     .bss.RxBuf:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:29     .bss.RxBuf:0000000000000000 RxBuf
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:32     .text.NMI_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:38     .text.NMI_Handler:0000000000000000 NMI_Handler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:58     .text.HardFault_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:64     .text.HardFault_Handler:0000000000000000 HardFault_Handler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:83     .text.MemManage_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:89     .text.MemManage_Handler:0000000000000000 MemManage_Handler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:108    .text.BusFault_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:114    .text.BusFault_Handler:0000000000000000 BusFault_Handler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:133    .text.UsageFault_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:139    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:158    .text.SVC_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:164    .text.SVC_Handler:0000000000000000 SVC_Handler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:189    .text.DebugMon_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:195    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:220    .text.PendSV_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:226    .text.PendSV_Handler:0000000000000000 PendSV_Handler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:251    .text.SysTick_Handler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:257    .text.SysTick_Handler:0000000000000000 SysTick_Handler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:278    .text.DMA1_Channel1_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:284    .text.DMA1_Channel1_IRQHandler:0000000000000000 DMA1_Channel1_IRQHandler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:305    .text.DMA1_Channel1_IRQHandler:0000000000000010 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:310    .text.DMA1_Channel2_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:316    .text.DMA1_Channel2_IRQHandler:0000000000000000 DMA1_Channel2_IRQHandler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:337    .text.DMA1_Channel2_IRQHandler:0000000000000010 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:342    .text.LPUART1_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:348    .text.LPUART1_IRQHandler:0000000000000000 LPUART1_IRQHandler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:369    .text.LPUART1_IRQHandler:0000000000000010 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:374    .text.LTDC_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:380    .text.LTDC_IRQHandler:0000000000000000 LTDC_IRQHandler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:401    .text.LTDC_IRQHandler:0000000000000010 $d
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:406    .text.LTDC_ER_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:412    .text.LTDC_ER_IRQHandler:0000000000000000 LTDC_ER_IRQHandler
-C:\Users\Morroway\AppData\Local\Temp\ccbZIaU7.s:433    .text.LTDC_ER_IRQHandler:0000000000000010 $d
->>>>>>> Stashed changes
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:20     .bss.msg_buffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:26     .bss.RxBuf:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:29     .bss.RxBuf:0000000000000000 RxBuf
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:32     .text.NMI_Handler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:38     .text.NMI_Handler:0000000000000000 NMI_Handler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:58     .text.HardFault_Handler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:64     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:83     .text.MemManage_Handler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:89     .text.MemManage_Handler:0000000000000000 MemManage_Handler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:108    .text.BusFault_Handler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:114    .text.BusFault_Handler:0000000000000000 BusFault_Handler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:133    .text.UsageFault_Handler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:139    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:158    .text.SVC_Handler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:164    .text.SVC_Handler:0000000000000000 SVC_Handler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:189    .text.DebugMon_Handler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:195    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:220    .text.PendSV_Handler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:226    .text.PendSV_Handler:0000000000000000 PendSV_Handler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:251    .text.SysTick_Handler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:257    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:278    .text.DMA1_Channel1_IRQHandler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:284    .text.DMA1_Channel1_IRQHandler:0000000000000000 DMA1_Channel1_IRQHandler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:305    .text.DMA1_Channel1_IRQHandler:0000000000000010 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:310    .text.DMA1_Channel2_IRQHandler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:316    .text.DMA1_Channel2_IRQHandler:0000000000000000 DMA1_Channel2_IRQHandler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:337    .text.DMA1_Channel2_IRQHandler:0000000000000010 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:342    .text.LPUART1_IRQHandler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:348    .text.LPUART1_IRQHandler:0000000000000000 LPUART1_IRQHandler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:369    .text.LPUART1_IRQHandler:0000000000000010 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:374    .text.LTDC_IRQHandler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:380    .text.LTDC_IRQHandler:0000000000000000 LTDC_IRQHandler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:401    .text.LTDC_IRQHandler:0000000000000010 $d
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:406    .text.LTDC_ER_IRQHandler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:412    .text.LTDC_ER_IRQHandler:0000000000000000 LTDC_ER_IRQHandler
+C:\Users\Morroway\AppData\Local\Temp\ccmb9Rto.s:433    .text.LTDC_ER_IRQHandler:0000000000000010 $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick
