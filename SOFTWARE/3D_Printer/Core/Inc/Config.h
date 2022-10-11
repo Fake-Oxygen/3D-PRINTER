@@ -1,6 +1,6 @@
 #ifndef CONFIG_H
 #define CONFIG_H
-
+//Pinout changed
 #define X_AXIS_DIR GPIOF,GPIO_PIN_1
 #define X_AXIS_STEP GPIOC,GPIO_PIN_6
 #define Y_AXIS_DIR GPIOF,GPIO_PIN_2

@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 1
+=======
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s 			page 1
+>>>>>>> Stashed changes
 
 
    1              		.cpu cortex-m4
@@ -58,7 +62,11 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 1
   59              		.section	.text.SystemInit,"ax",%progbits
   60              		.align	1
   61              		.global	SystemInit
+<<<<<<< Updated upstream
 ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 2
+=======
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s 			page 2
+>>>>>>> Stashed changes
 
 
   62              		.syntax unified
@@ -118,7 +126,11 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 1
   49:Core/Src/system_stm32l4xx.c ****   *-----------------------------------------------------------------------------
   50:Core/Src/system_stm32l4xx.c ****   *        PLLSAI1_P                              | NA
   51:Core/Src/system_stm32l4xx.c ****   *-----------------------------------------------------------------------------
+<<<<<<< Updated upstream
 ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 3
+=======
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s 			page 3
+>>>>>>> Stashed changes
 
 
   52:Core/Src/system_stm32l4xx.c ****   *        PLLSAI1_Q                              | NA
@@ -178,7 +190,11 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 1
  106:Core/Src/system_stm32l4xx.c ****   * @{
  107:Core/Src/system_stm32l4xx.c ****   */
  108:Core/Src/system_stm32l4xx.c **** 
+<<<<<<< Updated upstream
 ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 4
+=======
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s 			page 4
+>>>>>>> Stashed changes
 
 
  109:Core/Src/system_stm32l4xx.c **** #if !defined  (HSE_VALUE)
@@ -238,7 +254,11 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 1
  163:Core/Src/system_stm32l4xx.c ****       1) by calling CMSIS function SystemCoreClockUpdate()
  164:Core/Src/system_stm32l4xx.c ****       2) by calling HAL API function HAL_RCC_GetHCLKFreq()
  165:Core/Src/system_stm32l4xx.c ****       3) each time HAL_RCC_ClockConfig() is called to configure the system clock frequency
+<<<<<<< Updated upstream
 ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 5
+=======
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s 			page 5
+>>>>>>> Stashed changes
 
 
  166:Core/Src/system_stm32l4xx.c ****          Note: If you use this function to configure the system clock; then there
@@ -298,7 +318,11 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 1
   82 000a 054A     		ldr	r2, .L2
   83 000c 43F47003 		orr	r3, r3, #15728640
   84 0010 C2F88830 		str	r3, [r2, #136]
+<<<<<<< Updated upstream
 ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 6
+=======
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s 			page 6
+>>>>>>> Stashed changes
 
 
  207:Core/Src/system_stm32l4xx.c **** #endif
@@ -358,7 +382,11 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 1
  238:Core/Src/system_stm32l4xx.c ****   *              16 MHz) but the real value may vary depending on the variations
  239:Core/Src/system_stm32l4xx.c ****   *              in voltage and temperature.
  240:Core/Src/system_stm32l4xx.c ****   *
+<<<<<<< Updated upstream
 ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 7
+=======
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s 			page 7
+>>>>>>> Stashed changes
 
 
  241:Core/Src/system_stm32l4xx.c ****   *         (***) HSE_VALUE is a constant defined in stm32l4xx_hal.h file (default value
@@ -418,7 +446,11 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 1
  142 0024 1B68     		ldr	r3, [r3]
  143              		.loc 1 262 44
  144 0026 1B09     		lsrs	r3, r3, #4
+<<<<<<< Updated upstream
 ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 8
+=======
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s 			page 8
+>>>>>>> Stashed changes
 
 
  145              		.loc 1 262 14
@@ -478,7 +510,11 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 1
  274:Core/Src/system_stm32l4xx.c ****     case 0x04:  /* HSI used as system clock source */
  275:Core/Src/system_stm32l4xx.c ****       SystemCoreClock = HSI_VALUE;
  188              		.loc 1 275 23
+<<<<<<< Updated upstream
 ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 9
+=======
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s 			page 9
+>>>>>>> Stashed changes
 
 
  189 0088 304B     		ldr	r3, .L19+8
@@ -538,7 +574,11 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 1
  226 00be 244A     		ldr	r2, .L19+12
  227 00c0 BB68     		ldr	r3, [r7, #8]
  228 00c2 B2FBF3F3 		udiv	r3, r2, r3
+<<<<<<< Updated upstream
 ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 10
+=======
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s 			page 10
+>>>>>>> Stashed changes
 
 
  229 00c6 3B61     		str	r3, [r7, #16]
@@ -598,7 +638,11 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 1
  270              		.loc 1 305 31
  271 0104 3A69     		ldr	r2, [r7, #16]
  272 0106 7B68     		ldr	r3, [r7, #4]
+<<<<<<< Updated upstream
 ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 11
+=======
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s 			page 11
+>>>>>>> Stashed changes
 
 
  273 0108 B2FBF3F3 		udiv	r3, r2, r3
@@ -658,7 +702,11 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 1
  315 0142 7047     		bx	lr
  316              	.L20:
  317              		.align	2
+<<<<<<< Updated upstream
 ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 12
+=======
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s 			page 12
+>>>>>>> Stashed changes
 
 
  318              	.L19:
@@ -677,11 +725,16 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 1
  332              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
  333              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h"
  334              		.file 6 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+<<<<<<< Updated upstream
 ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s 			page 13
+=======
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s 			page 13
+>>>>>>> Stashed changes
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 system_stm32l4xx.c
+<<<<<<< Updated upstream
 C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s:24     .data.SystemCoreClock:0000000000000000 SystemCoreClock
 C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s:21     .data.SystemCoreClock:0000000000000000 $d
 C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s:31     .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
@@ -698,5 +751,23 @@ C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s:108    .text.SystemCoreClockUpda
 C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s:166    .text.SystemCoreClockUpdate:000000000000004c $d
 C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s:179    .text.SystemCoreClockUpdate:0000000000000080 $t
 C:\Users\Morroway\AppData\Local\Temp\ccdcYEXe.s:319    .text.SystemCoreClockUpdate:0000000000000144 $d
+=======
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:24     .data.SystemCoreClock:0000000000000000 SystemCoreClock
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:21     .data.SystemCoreClock:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:31     .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:28     .rodata.AHBPrescTable:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:39     .rodata.APBPrescTable:0000000000000000 APBPrescTable
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:36     .rodata.APBPrescTable:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:46     .rodata.MSIRangeTable:0000000000000000 MSIRangeTable
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:43     .rodata.MSIRangeTable:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:60     .text.SystemInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:66     .text.SystemInit:0000000000000000 SystemInit
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:97     .text.SystemInit:0000000000000020 $d
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:102    .text.SystemCoreClockUpdate:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:108    .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:166    .text.SystemCoreClockUpdate:000000000000004c $d
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:179    .text.SystemCoreClockUpdate:0000000000000080 $t
+C:\Users\Morroway\AppData\Local\Temp\cceqUgzl.s:319    .text.SystemCoreClockUpdate:0000000000000144 $d
+>>>>>>> Stashed changes
 
 NO UNDEFINED SYMBOLS

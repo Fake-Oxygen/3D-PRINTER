@@ -59,16 +59,20 @@ Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_ltdc.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_ltdc_ex.c \
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_ospi.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c \
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sd.c \
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_sd_ex.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c \
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_sdmmc.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.c
 
 

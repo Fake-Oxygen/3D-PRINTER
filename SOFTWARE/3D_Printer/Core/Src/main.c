@@ -91,8 +91,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 void DelayMicrosecond(uint16_t time)
 {
   __HAL_TIM_SET_COUNTER(&htim4, 0);
-  while (__HAL_TIM_GET_COUNTER(&htim4) < time)
-    ;
+  while (__HAL_TIM_GET_COUNTER(&htim4) < time);
 }
 
 int GetTicks()
@@ -336,7 +335,7 @@ static void MX_ADC1_Init(void)
     Error_Handler();
   }
 
-  /** Configure Regular Channel
+  /** Configure Regular 
   */
   sConfig.Channel = ADC_CHANNEL_TEMPSENSOR;
   sConfig.Rank = ADC_REGULAR_RANK_3;
