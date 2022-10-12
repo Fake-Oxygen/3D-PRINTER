@@ -58,11 +58,12 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 static char msg_buffer[30];
-extern uint32_t value[ADC_CHANNELS]; 
+extern uint32_t value[ADC_CHANNELS];
 static uint8_t RxBuf[RxBuf_SIZE];
 
 int GetTicks();
 void DelayMicrosecond(uint16_t time); 
+void SPI_Transmit(uint8_t *pData, uint16_t Size, uint32_t Timeout);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

@@ -110,6 +110,11 @@ void print_temperature()
   sprintf(msg_buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
   HAL_UART_Transmit(&hlpuart1, (uint16_t *)msg_buffer, strlen(msg_buffer), HAL_MAX_DELAY);
 }
+
+void SPI_Transmit(uint8_t *pData, uint16_t Size, uint32_t Timeout)
+{
+  HAL_SPI_Transmit(&hspi1, &pData, Size, Timeout);
+}
 /* USER CODE END 0 */
 
 /**

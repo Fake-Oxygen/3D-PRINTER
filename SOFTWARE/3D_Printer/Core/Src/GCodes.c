@@ -32,6 +32,7 @@ uint16_t M155(uint16_t S)
 void G0()
 {
     double E_dif = E - Cur_E;
+    double Z_dif = Z - Cur_Z;
     double dif_x = X - Cur_X;
     double dif_y = Y - Cur_Y;
     double xy_len = sqrt(dif_x * dif_x + dif_y * dif_y);
