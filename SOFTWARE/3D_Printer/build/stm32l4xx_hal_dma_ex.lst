@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****    (+) Configure the DMA_MUX Synchronization Block using HAL_DMAEx_ConfigMuxSync function.
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****    (+) Configure the DMA_MUX Request Generator Block using HAL_DMAEx_ConfigMuxRequestGenerator func
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****        Functions HAL_DMAEx_EnableMuxRequestGenerator and HAL_DMAEx_DisableMuxRequestGenerator can t
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 2
 
 
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****        to respectively enable/disable the request generator.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****     [..]  This section provides functions allowing to:
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c **** 
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****     (+) Configure the DMAMUX Synchronization Block using HAL_DMAEx_ConfigMuxSync function.
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 3
 
 
   88:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****     (+) Configure the DMAMUX Request Generator Block using HAL_DMAEx_ConfigMuxRequestGenerator func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
   50              		.loc 1 120 5
   51 0016 7B68     		ldr	r3, [r7, #4]
   52 0018 93F82430 		ldrb	r3, [r3, #36]	@ zero_extendqisi2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 4
 
 
   53 001c 012B     		cmp	r3, #1
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
   95              		.loc 1 132 12 discriminator 2
   96 006a 0023     		movs	r3, #0
   97 006c 00E0     		b	.L4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 5
 
 
   98              	.L2:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
  135 0004 00AF     		add	r7, sp, #0
  136              		.cfi_def_cfa_register 7
  137 0006 7860     		str	r0, [r7, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 6
 
 
  138 0008 3960     		str	r1, [r7]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
  173              		.loc 1 170 82 discriminator 2
  174 003e DB04     		lsls	r3, r3, #19
  169:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****                                   ((pRequestGeneratorConfig->RequestNumber - 1U) << DMAMUX_RGxCR_GN
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 7
 
 
  175              		.loc 1 169 70 discriminator 2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
  216              		.thumb
  217              		.thumb_func
  219              	HAL_DMAEx_EnableMuxRequestGenerator:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 8
 
 
  220              	.LFB323:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
  254 0024 5B6D     		ldr	r3, [r3, #84]
  255              		.loc 1 201 34
  256 0026 42F48032 		orr	r2, r2, #65536
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 9
 
 
  257 002a 1A60     		str	r2, [r3]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
  296 0002 83B0     		sub	sp, sp, #12
  297              		.cfi_def_cfa_offset 16
  298 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 10
 
 
  299              		.cfi_def_cfa_register 7
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
  334 0034 0C37     		adds	r7, r7, #12
  335              		.cfi_def_cfa_offset 4
  336 0036 BD46     		mov	sp, r7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 11
 
 
  337              		.cfi_def_cfa_register 13
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
  250:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****     /* Disable the synchro overrun interrupt */
  251:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c ****     hdma->DMAmuxChannel->CCR &= ~DMAMUX_CxCR_SOIE;
  381              		.loc 1 251 9
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 12
 
 
  382 0018 7B68     		ldr	r3, [r7, #4]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
  421 004e 7B68     		ldr	r3, [r7, #4]
  422 0050 5B6D     		ldr	r3, [r3, #84]
  423              		.loc 1 266 5
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 13
 
 
  424 0052 002B     		cmp	r3, #0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
  464              		.loc 1 280 14
  465 008c 7B68     		ldr	r3, [r7, #4]
  466 008e 5B6B     		ldr	r3, [r3, #52]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 14
 
 
  467              		.loc 1 280 9
@@ -818,20 +818,20 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 1
  495              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
  496              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
  497              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma_ex.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s 			page 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_dma_ex.c
-C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s:20     .text.HAL_DMAEx_ConfigMuxSync:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s:26     .text.HAL_DMAEx_ConfigMuxSync:0000000000000000 HAL_DMAEx_ConfigMuxSync
-C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s:117    .text.HAL_DMAEx_ConfigMuxRequestGenerator:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s:123    .text.HAL_DMAEx_ConfigMuxRequestGenerator:0000000000000000 HAL_DMAEx_ConfigMuxRequestGenerator
-C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s:213    .text.HAL_DMAEx_EnableMuxRequestGenerator:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s:219    .text.HAL_DMAEx_EnableMuxRequestGenerator:0000000000000000 HAL_DMAEx_EnableMuxRequestGenerator
-C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s:280    .text.HAL_DMAEx_DisableMuxRequestGenerator:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s:286    .text.HAL_DMAEx_DisableMuxRequestGenerator:0000000000000000 HAL_DMAEx_DisableMuxRequestGenerator
-C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s:347    .text.HAL_DMAEx_MUX_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctiSL8m.s:353    .text.HAL_DMAEx_MUX_IRQHandler:0000000000000000 HAL_DMAEx_MUX_IRQHandler
+C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s:20     .text.HAL_DMAEx_ConfigMuxSync:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s:26     .text.HAL_DMAEx_ConfigMuxSync:0000000000000000 HAL_DMAEx_ConfigMuxSync
+C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s:117    .text.HAL_DMAEx_ConfigMuxRequestGenerator:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s:123    .text.HAL_DMAEx_ConfigMuxRequestGenerator:0000000000000000 HAL_DMAEx_ConfigMuxRequestGenerator
+C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s:213    .text.HAL_DMAEx_EnableMuxRequestGenerator:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s:219    .text.HAL_DMAEx_EnableMuxRequestGenerator:0000000000000000 HAL_DMAEx_EnableMuxRequestGenerator
+C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s:280    .text.HAL_DMAEx_DisableMuxRequestGenerator:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s:286    .text.HAL_DMAEx_DisableMuxRequestGenerator:0000000000000000 HAL_DMAEx_DisableMuxRequestGenerator
+C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s:347    .text.HAL_DMAEx_MUX_IRQHandler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccfBueef.s:353    .text.HAL_DMAEx_MUX_IRQHandler:0000000000000000 HAL_DMAEx_MUX_IRQHandler
 
 NO UNDEFINED SYMBOLS

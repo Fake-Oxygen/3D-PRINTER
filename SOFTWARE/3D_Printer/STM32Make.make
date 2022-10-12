@@ -38,7 +38,9 @@ BUILD_DIR = build
 C_SOURCES =  \
 Core/Src/Functions.c \
 Core/Src/GCodes.c \
+Core/Src/ILI9341_GFX.c \
 Core/Src/ILI9341_STM32_Driver.c \
+Core/Src/ILI9341_Touchscreen.c \
 Core/Src/Parser.c \
 Core/Src/main.c \
 Core/Src/stm32l4xx_hal_msp.c \

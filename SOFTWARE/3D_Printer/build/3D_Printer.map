@@ -239,6 +239,39 @@ Discarded input sections
                 0x0000000000000000       0x1e build/GCodes.o
  .bss.RxBuf     0x0000000000000000       0x14 build/GCodes.o
  .bss.Cur_F     0x0000000000000000        0x2 build/GCodes.o
+ .text          0x0000000000000000        0x0 build/ILI9341_GFX.o
+ .data          0x0000000000000000        0x0 build/ILI9341_GFX.o
+ .bss           0x0000000000000000        0x0 build/ILI9341_GFX.o
+ .bss.msg_buffer
+                0x0000000000000000       0x1e build/ILI9341_GFX.o
+ .bss.RxBuf     0x0000000000000000       0x14 build/ILI9341_GFX.o
+ .rodata.font   0x0000000000000000      0x240 build/ILI9341_GFX.o
+ .text.ILI9341_Draw_Hollow_Circle
+                0x0000000000000000      0x16c build/ILI9341_GFX.o
+ .text.ILI9341_Draw_Filled_Circle
+                0x0000000000000000      0x110 build/ILI9341_GFX.o
+ .text.ILI9341_Draw_Hollow_Rectangle_Coord
+                0x0000000000000000      0x102 build/ILI9341_GFX.o
+ .text.ILI9341_Draw_Filled_Rectangle_Coord
+                0x0000000000000000       0xbc build/ILI9341_GFX.o
+ .text.ILI9341_Draw_Char
+                0x0000000000000000      0x134 build/ILI9341_GFX.o
+ .text.ILI9341_Draw_Text
+                0x0000000000000000       0x5e build/ILI9341_GFX.o
+ .text.ILI9341_Draw_Image
+                0x0000000000000000      0x35c build/ILI9341_GFX.o
+ .debug_info    0x0000000000000000      0x8b3 build/ILI9341_GFX.o
+ .debug_abbrev  0x0000000000000000      0x1f6 build/ILI9341_GFX.o
+ .debug_aranges
+                0x0000000000000000       0x50 build/ILI9341_GFX.o
+ .debug_rnglists
+                0x0000000000000000       0x3d build/ILI9341_GFX.o
+ .debug_line    0x0000000000000000      0x662 build/ILI9341_GFX.o
+ .debug_str     0x0000000000000000      0x49d build/ILI9341_GFX.o
+ .comment       0x0000000000000000       0x3a build/ILI9341_GFX.o
+ .debug_frame   0x0000000000000000      0x128 build/ILI9341_GFX.o
+ .ARM.attributes
+                0x0000000000000000       0x34 build/ILI9341_GFX.o
  .text          0x0000000000000000        0x0 build/ILI9341_STM32_Driver.o
  .data          0x0000000000000000        0x0 build/ILI9341_STM32_Driver.o
  .bss           0x0000000000000000        0x0 build/ILI9341_STM32_Driver.o
@@ -293,6 +326,28 @@ Discarded input sections
  .debug_frame   0x0000000000000000      0x24c build/ILI9341_STM32_Driver.o
  .ARM.attributes
                 0x0000000000000000       0x34 build/ILI9341_STM32_Driver.o
+ .text          0x0000000000000000        0x0 build/ILI9341_Touchscreen.o
+ .data          0x0000000000000000        0x0 build/ILI9341_Touchscreen.o
+ .bss           0x0000000000000000        0x0 build/ILI9341_Touchscreen.o
+ .text.TP_Read  0x0000000000000000       0x60 build/ILI9341_Touchscreen.o
+ .text.TP_Write
+                0x0000000000000000       0x78 build/ILI9341_Touchscreen.o
+ .text.TP_Read_Coordinates
+                0x0000000000000000      0x1a0 build/ILI9341_Touchscreen.o
+ .text.TP_Touchpad_Pressed
+                0x0000000000000000       0x24 build/ILI9341_Touchscreen.o
+ .debug_info    0x0000000000000000      0x2df build/ILI9341_Touchscreen.o
+ .debug_abbrev  0x0000000000000000      0x194 build/ILI9341_Touchscreen.o
+ .debug_aranges
+                0x0000000000000000       0x38 build/ILI9341_Touchscreen.o
+ .debug_rnglists
+                0x0000000000000000       0x26 build/ILI9341_Touchscreen.o
+ .debug_line    0x0000000000000000      0x357 build/ILI9341_Touchscreen.o
+ .debug_str     0x0000000000000000      0x2e3 build/ILI9341_Touchscreen.o
+ .comment       0x0000000000000000       0x3a build/ILI9341_Touchscreen.o
+ .debug_frame   0x0000000000000000       0x9c build/ILI9341_Touchscreen.o
+ .ARM.attributes
+                0x0000000000000000       0x34 build/ILI9341_Touchscreen.o
  .text          0x0000000000000000        0x0 build/Parser.o
  .data          0x0000000000000000        0x0 build/Parser.o
  .bss           0x0000000000000000        0x0 build/Parser.o
@@ -2628,7 +2683,9 @@ LOAD c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vsc
 LOAD c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
 LOAD build/Functions.o
 LOAD build/GCodes.o
+LOAD build/ILI9341_GFX.o
 LOAD build/ILI9341_STM32_Driver.o
+LOAD build/ILI9341_Touchscreen.o
 LOAD build/Parser.o
 LOAD build/main.o
 LOAD build/stm32l4xx_hal_msp.o
@@ -5096,13 +5153,16 @@ HAL_GPIO_Init                                     build/stm32l4xx_hal_gpio.o
 HAL_GPIO_LockPin                                  build/stm32l4xx_hal_gpio.o
 HAL_GPIO_ReadPin                                  build/stm32l4xx_hal_gpio.o
                                                   build/main.o
+                                                  build/ILI9341_Touchscreen.o
                                                   build/Functions.o
 HAL_GPIO_TogglePin                                build/stm32l4xx_hal_gpio.o
                                                   build/main.o
                                                   build/Functions.o
 HAL_GPIO_WritePin                                 build/stm32l4xx_hal_gpio.o
                                                   build/main.o
+                                                  build/ILI9341_Touchscreen.o
                                                   build/ILI9341_STM32_Driver.o
+                                                  build/ILI9341_GFX.o
                                                   build/Functions.o
 HAL_GetDEVID                                      build/stm32l4xx_hal.o
 HAL_GetHalVersion                                 build/stm32l4xx_hal.o
@@ -5659,12 +5719,23 @@ I2C3_ER_IRQHandler                                build/startup_stm32l4p5xx.o
 I2C3_EV_IRQHandler                                build/startup_stm32l4p5xx.o
 I2C4_ER_IRQHandler                                build/startup_stm32l4p5xx.o
 I2C4_EV_IRQHandler                                build/startup_stm32l4p5xx.o
+ILI9341_Draw_Char                                 build/ILI9341_GFX.o
 ILI9341_Draw_Colour                               build/ILI9341_STM32_Driver.o
 ILI9341_Draw_Colour_Burst                         build/ILI9341_STM32_Driver.o
+ILI9341_Draw_Filled_Circle                        build/ILI9341_GFX.o
+ILI9341_Draw_Filled_Rectangle_Coord               build/ILI9341_GFX.o
+ILI9341_Draw_Hollow_Circle                        build/ILI9341_GFX.o
+ILI9341_Draw_Hollow_Rectangle_Coord               build/ILI9341_GFX.o
 ILI9341_Draw_Horizontal_Line                      build/ILI9341_STM32_Driver.o
+                                                  build/ILI9341_GFX.o
+ILI9341_Draw_Image                                build/ILI9341_GFX.o
 ILI9341_Draw_Pixel                                build/ILI9341_STM32_Driver.o
+                                                  build/ILI9341_GFX.o
 ILI9341_Draw_Rectangle                            build/ILI9341_STM32_Driver.o
+                                                  build/ILI9341_GFX.o
+ILI9341_Draw_Text                                 build/ILI9341_GFX.o
 ILI9341_Draw_Vertical_Line                        build/ILI9341_STM32_Driver.o
+                                                  build/ILI9341_GFX.o
 ILI9341_Enable                                    build/ILI9341_STM32_Driver.o
 ILI9341_Fill_Screen                               build/ILI9341_STM32_Driver.o
 ILI9341_Init                                      build/ILI9341_STM32_Driver.o
@@ -5672,7 +5743,9 @@ ILI9341_Reset                                     build/ILI9341_STM32_Driver.o
 ILI9341_SPI_Init                                  build/ILI9341_STM32_Driver.o
 ILI9341_SPI_Send                                  build/ILI9341_STM32_Driver.o
 ILI9341_Set_Address                               build/ILI9341_STM32_Driver.o
+                                                  build/ILI9341_GFX.o
 ILI9341_Set_Rotation                              build/ILI9341_STM32_Driver.o
+                                                  build/ILI9341_GFX.o
 ILI9341_Write_Command                             build/ILI9341_STM32_Driver.o
 ILI9341_Write_Data                                build/ILI9341_STM32_Driver.o
 LCD_HEIGHT                                        build/ILI9341_STM32_Driver.o
@@ -5726,6 +5799,7 @@ SPI2_IRQHandler                                   build/startup_stm32l4p5xx.o
 SPI3_IRQHandler                                   build/startup_stm32l4p5xx.o
 SPI_Transmit                                      build/main.o
                                                   build/ILI9341_STM32_Driver.o
+                                                  build/ILI9341_GFX.o
 SVC_Handler                                       build/stm32l4xx_it.o
 SelectDriver                                      build/Functions.o
 SetFanSpeed                                       build/Functions.o
@@ -5782,6 +5856,10 @@ TIM_OC2_SetConfig                                 build/stm32l4xx_hal_tim.o
                                                   build/stm32l4xx_hal_tim_ex.o
 TIM_TI1_SetConfig                                 build/stm32l4xx_hal_tim.o
                                                   build/stm32l4xx_hal_tim_ex.o
+TP_Read                                           build/ILI9341_Touchscreen.o
+TP_Read_Coordinates                               build/ILI9341_Touchscreen.o
+TP_Touchpad_Pressed                               build/ILI9341_Touchscreen.o
+TP_Write                                          build/ILI9341_Touchscreen.o
 TSC_IRQHandler                                    build/startup_stm32l4p5xx.o
 UART4_IRQHandler                                  build/startup_stm32l4p5xx.o
 UART5_IRQHandler                                  build/startup_stm32l4p5xx.o
@@ -5937,6 +6015,7 @@ __aeabi_d2lz                                      c:/users/morroway/appdata/roam
 __aeabi_d2uiz                                     c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixunsdfsi.o)
                                                   c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard\libgcc.a(_fixunsdfdi.o)
                                                   c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-strtod.o)
+                                                  build/ILI9341_Touchscreen.o
                                                   build/GCodes.o
                                                   build/Functions.o
 __aeabi_d2ulz                                     c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard\libgcc.a(_fixunsdfdi.o)
@@ -6012,6 +6091,7 @@ __aeabi_dmul                                      c:/users/morroway/appdata/roam
                                                   c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-mprec.o)
                                                   c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-dtoa.o)
                                                   c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-strtod.o)
+                                                  build/ILI9341_Touchscreen.o
                                                   build/GCodes.o
                                                   build/Functions.o
 __aeabi_drsub                                     c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
@@ -6030,6 +6110,7 @@ __aeabi_i2d                                       c:/users/morroway/appdata/roam
                                                   c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_pow.o)
                                                   c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(lib_a-e_log.o)
                                                   c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-dtoa.o)
+                                                  build/ILI9341_Touchscreen.o
                                                   build/Functions.o
 __aeabi_idiv0                                     c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
 __aeabi_l2d                                       c:/users/morroway/appdata/roaming/code/user/globalstorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/11.2.1-1.2.2/.content/bin/../lib/gcc/arm-none-eabi/11.2.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)

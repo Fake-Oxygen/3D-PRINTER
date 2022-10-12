@@ -1,0 +1,768 @@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"ILI9341_Touchscreen.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.TP_Read,"ax",%progbits
+  20              		.align	1
+  21              		.global	TP_Read
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	TP_Read:
+  27              	.LFB321:
+  28              		.file 1 "Core/Src/ILI9341_Touchscreen.c"
+   1:Core/Src/ILI9341_Touchscreen.c **** //	MIT License
+   2:Core/Src/ILI9341_Touchscreen.c **** //
+   3:Core/Src/ILI9341_Touchscreen.c **** //	Copyright (c) 2017 Matej Artnak
+   4:Core/Src/ILI9341_Touchscreen.c **** //
+   5:Core/Src/ILI9341_Touchscreen.c **** //	Permission is hereby granted, free of charge, to any person obtaining a copy
+   6:Core/Src/ILI9341_Touchscreen.c **** //	of this software and associated documentation files (the "Software"), to deal
+   7:Core/Src/ILI9341_Touchscreen.c **** //	in the Software without restriction, including without limitation the rights
+   8:Core/Src/ILI9341_Touchscreen.c **** //	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   9:Core/Src/ILI9341_Touchscreen.c **** //	copies of the Software, and to permit persons to whom the Software is
+  10:Core/Src/ILI9341_Touchscreen.c **** //	furnished to do so, subject to the following conditions:
+  11:Core/Src/ILI9341_Touchscreen.c **** //
+  12:Core/Src/ILI9341_Touchscreen.c **** //	The above copyright notice and this permission notice shall be included in all
+  13:Core/Src/ILI9341_Touchscreen.c **** //	copies or substantial portions of the Software.
+  14:Core/Src/ILI9341_Touchscreen.c **** //
+  15:Core/Src/ILI9341_Touchscreen.c **** //	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  16:Core/Src/ILI9341_Touchscreen.c **** //	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  17:Core/Src/ILI9341_Touchscreen.c **** //	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  18:Core/Src/ILI9341_Touchscreen.c **** //	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  19:Core/Src/ILI9341_Touchscreen.c **** //	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  20:Core/Src/ILI9341_Touchscreen.c **** //	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  21:Core/Src/ILI9341_Touchscreen.c **** //	SOFTWARE.
+  22:Core/Src/ILI9341_Touchscreen.c **** //
+  23:Core/Src/ILI9341_Touchscreen.c **** //
+  24:Core/Src/ILI9341_Touchscreen.c **** //-----------------------------------
+  25:Core/Src/ILI9341_Touchscreen.c **** //	ILI9341 Touchscreen library for STM32
+  26:Core/Src/ILI9341_Touchscreen.c **** //-----------------------------------
+  27:Core/Src/ILI9341_Touchscreen.c **** //
+  28:Core/Src/ILI9341_Touchscreen.c **** //	Very simple Touchscreen library for ILI9341.
+  29:Core/Src/ILI9341_Touchscreen.c **** //	Extremly basic reading of position. No runtime calibration, No prediction, basic noise removal. 
+  30:Core/Src/ILI9341_Touchscreen.c **** //	Basic hardcoded calibration values saved in .h file
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 2
+
+
+  31:Core/Src/ILI9341_Touchscreen.c **** //
+  32:Core/Src/ILI9341_Touchscreen.c **** //	Library is written for STM32 HAL library and supports STM32CUBEMX. To use the library with Cube 
+  33:Core/Src/ILI9341_Touchscreen.c **** //	you need to tick the box that generates peripheral initialization code in their own respective .
+  34:Core/Src/ILI9341_Touchscreen.c **** //
+  35:Core/Src/ILI9341_Touchscreen.c **** //
+  36:Core/Src/ILI9341_Touchscreen.c **** //-----------------------------------
+  37:Core/Src/ILI9341_Touchscreen.c **** //	How to use this library
+  38:Core/Src/ILI9341_Touchscreen.c **** //-----------------------------------
+  39:Core/Src/ILI9341_Touchscreen.c **** //
+  40:Core/Src/ILI9341_Touchscreen.c **** //	-If using MCUs other than STM32F7 you will have to change the #include "stm32f7xx_hal.h" in the 
+  41:Core/Src/ILI9341_Touchscreen.c **** //	-define GPIO inputs and outputs then map the Pins and Ports inside the ILI9341_Touchscreen.h
+  42:Core/Src/ILI9341_Touchscreen.c **** //	-Library does not require any initialization calls apart from GPIO initialization. Initialize GP
+  43:Core/Src/ILI9341_Touchscreen.c **** //
+  44:Core/Src/ILI9341_Touchscreen.c **** //		Touchpad GPIO defines
+  45:Core/Src/ILI9341_Touchscreen.c **** //			Outputs:
+  46:Core/Src/ILI9341_Touchscreen.c **** //				CLK
+  47:Core/Src/ILI9341_Touchscreen.c **** //				MOSI
+  48:Core/Src/ILI9341_Touchscreen.c **** //				CS
+  49:Core/Src/ILI9341_Touchscreen.c **** //
+  50:Core/Src/ILI9341_Touchscreen.c **** //			Inputs:
+  51:Core/Src/ILI9341_Touchscreen.c **** //				IRQ
+  52:Core/Src/ILI9341_Touchscreen.c **** //				MISO
+  53:Core/Src/ILI9341_Touchscreen.c **** //
+  54:Core/Src/ILI9341_Touchscreen.c **** //
+  55:Core/Src/ILI9341_Touchscreen.c **** //	-Touchpad library bitbangs SPI interface and only requires basic GPIOs.
+  56:Core/Src/ILI9341_Touchscreen.c **** //	-Setting GPIOs as FREQ_VERY_HIGH Recommended
+  57:Core/Src/ILI9341_Touchscreen.c **** //
+  58:Core/Src/ILI9341_Touchscreen.c **** //	-Warning! Library is written for "ILI9341_Set_Rotation(SCREEN_VERTICAL_1)"	(See ILI9341_STM32_Dr
+  59:Core/Src/ILI9341_Touchscreen.c **** //	-If using different layout you will have to Re-Map X and Y coordinates of the Screen
+  60:Core/Src/ILI9341_Touchscreen.c **** //
+  61:Core/Src/ILI9341_Touchscreen.c **** //
+  62:Core/Src/ILI9341_Touchscreen.c **** //	-NO_OF_POSITION_SAMPLES makes location output less noisy but increases reading time. Increase an
+  63:Core/Src/ILI9341_Touchscreen.c **** //
+  64:Core/Src/ILI9341_Touchscreen.c **** //----------EXAMPLE------------------
+  65:Core/Src/ILI9341_Touchscreen.c **** /*
+  66:Core/Src/ILI9341_Touchscreen.c **** if(TP_Touchpad_Pressed())
+  67:Core/Src/ILI9341_Touchscreen.c **** 	{					
+  68:Core/Src/ILI9341_Touchscreen.c **** 		uint16_t x_pos = 0;
+  69:Core/Src/ILI9341_Touchscreen.c **** 		uint16_t y_pos = 0;
+  70:Core/Src/ILI9341_Touchscreen.c **** 		
+  71:Core/Src/ILI9341_Touchscreen.c **** 		uint16_t position_array[2];
+  72:Core/Src/ILI9341_Touchscreen.c **** 		if(TP_Read_Coordinates(position_array) == TOUCHPAD_DATA_OK)
+  73:Core/Src/ILI9341_Touchscreen.c **** 		{
+  74:Core/Src/ILI9341_Touchscreen.c **** 		x_pos = position_array[0];
+  75:Core/Src/ILI9341_Touchscreen.c **** 		y_pos = position_array[1];
+  76:Core/Src/ILI9341_Touchscreen.c **** 		}							
+  77:Core/Src/ILI9341_Touchscreen.c **** 	}
+  78:Core/Src/ILI9341_Touchscreen.c **** */
+  79:Core/Src/ILI9341_Touchscreen.c **** //-----------------------------------
+  80:Core/Src/ILI9341_Touchscreen.c **** 
+  81:Core/Src/ILI9341_Touchscreen.c **** 
+  82:Core/Src/ILI9341_Touchscreen.c **** #include "ILI9341_Touchscreen.h"
+  83:Core/Src/ILI9341_Touchscreen.c **** #include "stm32l4xx_hal.h"
+  84:Core/Src/ILI9341_Touchscreen.c **** 
+  85:Core/Src/ILI9341_Touchscreen.c **** //Internal Touchpad command, do not call directly
+  86:Core/Src/ILI9341_Touchscreen.c **** uint16_t TP_Read(void)
+  87:Core/Src/ILI9341_Touchscreen.c **** {
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 3
+
+
+  29              		.loc 1 87 1
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 8
+  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  33 0000 80B5     		push	{r7, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 7, -8
+  36              		.cfi_offset 14, -4
+  37 0002 82B0     		sub	sp, sp, #8
+  38              		.cfi_def_cfa_offset 16
+  39 0004 00AF     		add	r7, sp, #0
+  40              		.cfi_def_cfa_register 7
+  88:Core/Src/ILI9341_Touchscreen.c ****     uint8_t i = 16;
+  41              		.loc 1 88 13
+  42 0006 1023     		movs	r3, #16
+  43 0008 FB71     		strb	r3, [r7, #7]
+  89:Core/Src/ILI9341_Touchscreen.c ****     uint16_t value = 0;
+  44              		.loc 1 89 14
+  45 000a 0023     		movs	r3, #0
+  46 000c BB80     		strh	r3, [r7, #4]	@ movhi
+  90:Core/Src/ILI9341_Touchscreen.c **** 
+  91:Core/Src/ILI9341_Touchscreen.c ****     while(i > 0x00)
+  47              		.loc 1 91 10
+  48 000e 1CE0     		b	.L2
+  49              	.L4:
+  92:Core/Src/ILI9341_Touchscreen.c ****     {
+  93:Core/Src/ILI9341_Touchscreen.c ****         value <<= 1;
+  50              		.loc 1 93 15
+  51 0010 BB88     		ldrh	r3, [r7, #4]	@ movhi
+  52 0012 5B00     		lsls	r3, r3, #1
+  53 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+  94:Core/Src/ILI9341_Touchscreen.c **** 
+  95:Core/Src/ILI9341_Touchscreen.c **** 				HAL_GPIO_WritePin(TP_CLK_PORT, TP_CLK_PIN, GPIO_PIN_SET);
+  54              		.loc 1 95 5
+  55 0016 0122     		movs	r2, #1
+  56 0018 4FF40051 		mov	r1, #8192
+  57 001c 0F48     		ldr	r0, .L6
+  58 001e FFF7FEFF 		bl	HAL_GPIO_WritePin
+  96:Core/Src/ILI9341_Touchscreen.c **** 				HAL_GPIO_WritePin(TP_CLK_PORT, TP_CLK_PIN, GPIO_PIN_RESET);
+  59              		.loc 1 96 5
+  60 0022 0022     		movs	r2, #0
+  61 0024 4FF40051 		mov	r1, #8192
+  62 0028 0C48     		ldr	r0, .L6
+  63 002a FFF7FEFF 		bl	HAL_GPIO_WritePin
+  97:Core/Src/ILI9341_Touchscreen.c **** 			
+  98:Core/Src/ILI9341_Touchscreen.c ****         if(HAL_GPIO_ReadPin(TP_MISO_PORT, TP_MISO_PIN) != 0)
+  64              		.loc 1 98 12
+  65 002e 4021     		movs	r1, #64
+  66 0030 4FF09040 		mov	r0, #1207959552
+  67 0034 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+  68 0038 0346     		mov	r3, r0
+  69              		.loc 1 98 11
+  70 003a 002B     		cmp	r3, #0
+  71 003c 02D0     		beq	.L3
+  99:Core/Src/ILI9341_Touchscreen.c ****         {
+ 100:Core/Src/ILI9341_Touchscreen.c ****             value++;
+  72              		.loc 1 100 18
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 4
+
+
+  73 003e BB88     		ldrh	r3, [r7, #4]
+  74 0040 0133     		adds	r3, r3, #1
+  75 0042 BB80     		strh	r3, [r7, #4]	@ movhi
+  76              	.L3:
+ 101:Core/Src/ILI9341_Touchscreen.c ****         }
+ 102:Core/Src/ILI9341_Touchscreen.c **** 
+ 103:Core/Src/ILI9341_Touchscreen.c ****         i--;
+  77              		.loc 1 103 10
+  78 0044 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  79 0046 013B     		subs	r3, r3, #1
+  80 0048 FB71     		strb	r3, [r7, #7]
+  81              	.L2:
+  91:Core/Src/ILI9341_Touchscreen.c ****     {
+  82              		.loc 1 91 13
+  83 004a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  84 004c 002B     		cmp	r3, #0
+  85 004e DFD1     		bne	.L4
+ 104:Core/Src/ILI9341_Touchscreen.c ****     };
+ 105:Core/Src/ILI9341_Touchscreen.c **** 
+ 106:Core/Src/ILI9341_Touchscreen.c ****     return value;
+  86              		.loc 1 106 12
+  87 0050 BB88     		ldrh	r3, [r7, #4]
+ 107:Core/Src/ILI9341_Touchscreen.c **** }
+  88              		.loc 1 107 1
+  89 0052 1846     		mov	r0, r3
+  90 0054 0837     		adds	r7, r7, #8
+  91              		.cfi_def_cfa_offset 8
+  92 0056 BD46     		mov	sp, r7
+  93              		.cfi_def_cfa_register 13
+  94              		@ sp needed
+  95 0058 80BD     		pop	{r7, pc}
+  96              	.L7:
+  97 005a 00BF     		.align	2
+  98              	.L6:
+  99 005c 00100048 		.word	1207963648
+ 100              		.cfi_endproc
+ 101              	.LFE321:
+ 103              		.section	.text.TP_Write,"ax",%progbits
+ 104              		.align	1
+ 105              		.global	TP_Write
+ 106              		.syntax unified
+ 107              		.thumb
+ 108              		.thumb_func
+ 110              	TP_Write:
+ 111              	.LFB322:
+ 108:Core/Src/ILI9341_Touchscreen.c **** 
+ 109:Core/Src/ILI9341_Touchscreen.c **** //Internal Touchpad command, do not call directly
+ 110:Core/Src/ILI9341_Touchscreen.c **** void TP_Write(uint8_t value)
+ 111:Core/Src/ILI9341_Touchscreen.c **** {
+ 112              		.loc 1 111 1
+ 113              		.cfi_startproc
+ 114              		@ args = 0, pretend = 0, frame = 16
+ 115              		@ frame_needed = 1, uses_anonymous_args = 0
+ 116 0000 80B5     		push	{r7, lr}
+ 117              		.cfi_def_cfa_offset 8
+ 118              		.cfi_offset 7, -8
+ 119              		.cfi_offset 14, -4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 5
+
+
+ 120 0002 84B0     		sub	sp, sp, #16
+ 121              		.cfi_def_cfa_offset 24
+ 122 0004 00AF     		add	r7, sp, #0
+ 123              		.cfi_def_cfa_register 7
+ 124 0006 0346     		mov	r3, r0
+ 125 0008 FB71     		strb	r3, [r7, #7]
+ 112:Core/Src/ILI9341_Touchscreen.c ****     uint8_t i = 0x08;
+ 126              		.loc 1 112 13
+ 127 000a 0823     		movs	r3, #8
+ 128 000c FB73     		strb	r3, [r7, #15]
+ 113:Core/Src/ILI9341_Touchscreen.c **** 
+ 114:Core/Src/ILI9341_Touchscreen.c **** 		HAL_GPIO_WritePin(TP_CLK_PORT, TP_CLK_PIN, GPIO_PIN_RESET);	
+ 129              		.loc 1 114 3
+ 130 000e 0022     		movs	r2, #0
+ 131 0010 4FF40051 		mov	r1, #8192
+ 132 0014 1748     		ldr	r0, .L13
+ 133 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 115:Core/Src/ILI9341_Touchscreen.c **** 	
+ 116:Core/Src/ILI9341_Touchscreen.c ****     while(i > 0)
+ 134              		.loc 1 116 10
+ 135 001a 22E0     		b	.L9
+ 136              	.L12:
+ 117:Core/Src/ILI9341_Touchscreen.c ****     {
+ 118:Core/Src/ILI9341_Touchscreen.c ****         if((value & 0x80) != 0x00)
+ 137              		.loc 1 118 27
+ 138 001c 97F90730 		ldrsb	r3, [r7, #7]
+ 139              		.loc 1 118 11
+ 140 0020 002B     		cmp	r3, #0
+ 141 0022 06DA     		bge	.L10
+ 119:Core/Src/ILI9341_Touchscreen.c ****         {
+ 120:Core/Src/ILI9341_Touchscreen.c **** 						HAL_GPIO_WritePin(TP_MOSI_PORT, TP_MOSI_PIN, GPIO_PIN_SET);
+ 142              		.loc 1 120 7
+ 143 0024 0122     		movs	r2, #1
+ 144 0026 4FF40041 		mov	r1, #32768
+ 145 002a 1248     		ldr	r0, .L13
+ 146 002c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 147 0030 05E0     		b	.L11
+ 148              	.L10:
+ 121:Core/Src/ILI9341_Touchscreen.c ****         }
+ 122:Core/Src/ILI9341_Touchscreen.c ****         else
+ 123:Core/Src/ILI9341_Touchscreen.c ****         {
+ 124:Core/Src/ILI9341_Touchscreen.c **** 						HAL_GPIO_WritePin(TP_MOSI_PORT, TP_MOSI_PIN, GPIO_PIN_RESET);
+ 149              		.loc 1 124 7
+ 150 0032 0022     		movs	r2, #0
+ 151 0034 4FF40041 		mov	r1, #32768
+ 152 0038 0E48     		ldr	r0, .L13
+ 153 003a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 154              	.L11:
+ 125:Core/Src/ILI9341_Touchscreen.c ****         }
+ 126:Core/Src/ILI9341_Touchscreen.c **** 
+ 127:Core/Src/ILI9341_Touchscreen.c ****         value <<= 1;
+ 155              		.loc 1 127 15
+ 156 003e FB79     		ldrb	r3, [r7, #7]
+ 157 0040 5B00     		lsls	r3, r3, #1
+ 158 0042 FB71     		strb	r3, [r7, #7]
+ 128:Core/Src/ILI9341_Touchscreen.c **** 				HAL_GPIO_WritePin(TP_CLK_PORT, TP_CLK_PIN, GPIO_PIN_SET);
+ 159              		.loc 1 128 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 6
+
+
+ 160 0044 0122     		movs	r2, #1
+ 161 0046 4FF40051 		mov	r1, #8192
+ 162 004a 0A48     		ldr	r0, .L13
+ 163 004c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 129:Core/Src/ILI9341_Touchscreen.c **** 				HAL_GPIO_WritePin(TP_CLK_PORT, TP_CLK_PIN, GPIO_PIN_RESET);        
+ 164              		.loc 1 129 5
+ 165 0050 0022     		movs	r2, #0
+ 166 0052 4FF40051 		mov	r1, #8192
+ 167 0056 0748     		ldr	r0, .L13
+ 168 0058 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 130:Core/Src/ILI9341_Touchscreen.c ****         i--;
+ 169              		.loc 1 130 10
+ 170 005c FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 171 005e 013B     		subs	r3, r3, #1
+ 172 0060 FB73     		strb	r3, [r7, #15]
+ 173              	.L9:
+ 116:Core/Src/ILI9341_Touchscreen.c ****     {
+ 174              		.loc 1 116 13
+ 175 0062 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 176 0064 002B     		cmp	r3, #0
+ 177 0066 D9D1     		bne	.L12
+ 131:Core/Src/ILI9341_Touchscreen.c ****     };
+ 132:Core/Src/ILI9341_Touchscreen.c **** }
+ 178              		.loc 1 132 1
+ 179 0068 00BF     		nop
+ 180 006a 00BF     		nop
+ 181 006c 1037     		adds	r7, r7, #16
+ 182              		.cfi_def_cfa_offset 8
+ 183 006e BD46     		mov	sp, r7
+ 184              		.cfi_def_cfa_register 13
+ 185              		@ sp needed
+ 186 0070 80BD     		pop	{r7, pc}
+ 187              	.L14:
+ 188 0072 00BF     		.align	2
+ 189              	.L13:
+ 190 0074 00100048 		.word	1207963648
+ 191              		.cfi_endproc
+ 192              	.LFE322:
+ 194              		.global	__aeabi_i2d
+ 195              		.global	__aeabi_dmul
+ 196              		.global	__aeabi_d2uiz
+ 197              		.section	.text.TP_Read_Coordinates,"ax",%progbits
+ 198              		.align	1
+ 199              		.global	TP_Read_Coordinates
+ 200              		.syntax unified
+ 201              		.thumb
+ 202              		.thumb_func
+ 204              	TP_Read_Coordinates:
+ 205              	.LFB323:
+ 133:Core/Src/ILI9341_Touchscreen.c **** 
+ 134:Core/Src/ILI9341_Touchscreen.c **** 
+ 135:Core/Src/ILI9341_Touchscreen.c **** 
+ 136:Core/Src/ILI9341_Touchscreen.c **** //Read coordinates of touchscreen press. Position[0] = X, Position[1] = Y
+ 137:Core/Src/ILI9341_Touchscreen.c **** uint8_t TP_Read_Coordinates(uint16_t Coordinates[2])
+ 138:Core/Src/ILI9341_Touchscreen.c **** {
+ 206              		.loc 1 138 1
+ 207              		.cfi_startproc
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 7
+
+
+ 208              		@ args = 0, pretend = 0, frame = 40
+ 209              		@ frame_needed = 1, uses_anonymous_args = 0
+ 210 0000 90B5     		push	{r4, r7, lr}
+ 211              		.cfi_def_cfa_offset 12
+ 212              		.cfi_offset 4, -12
+ 213              		.cfi_offset 7, -8
+ 214              		.cfi_offset 14, -4
+ 215 0002 8BB0     		sub	sp, sp, #44
+ 216              		.cfi_def_cfa_offset 56
+ 217 0004 00AF     		add	r7, sp, #0
+ 218              		.cfi_def_cfa_register 7
+ 219 0006 7860     		str	r0, [r7, #4]
+ 139:Core/Src/ILI9341_Touchscreen.c **** 		HAL_GPIO_WritePin(TP_CLK_PORT, TP_CLK_PIN, GPIO_PIN_SET);		
+ 220              		.loc 1 139 3
+ 221 0008 0122     		movs	r2, #1
+ 222 000a 4FF40051 		mov	r1, #8192
+ 223 000e 6048     		ldr	r0, .L21+8
+ 224 0010 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 140:Core/Src/ILI9341_Touchscreen.c **** 		HAL_GPIO_WritePin(TP_MOSI_PORT, TP_MOSI_PIN, GPIO_PIN_SET);		
+ 225              		.loc 1 140 3
+ 226 0014 0122     		movs	r2, #1
+ 227 0016 4FF40041 		mov	r1, #32768
+ 228 001a 5D48     		ldr	r0, .L21+8
+ 229 001c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 141:Core/Src/ILI9341_Touchscreen.c **** 		HAL_GPIO_WritePin(TP_CS_PORT, TP_CS_PIN, GPIO_PIN_SET);		
+ 230              		.loc 1 141 3
+ 231 0020 0122     		movs	r2, #1
+ 232 0022 4FF40041 		mov	r1, #32768
+ 233 0026 5B48     		ldr	r0, .L21+12
+ 234 0028 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 142:Core/Src/ILI9341_Touchscreen.c **** 
+ 143:Core/Src/ILI9341_Touchscreen.c **** 	
+ 144:Core/Src/ILI9341_Touchscreen.c **** 	
+ 145:Core/Src/ILI9341_Touchscreen.c ****     uint32_t avg_x, avg_y = 0;		
+ 235              		.loc 1 145 21
+ 236 002c 0023     		movs	r3, #0
+ 237 002e 3B62     		str	r3, [r7, #32]
+ 146:Core/Src/ILI9341_Touchscreen.c **** 		uint16_t rawx, rawy = 0;	
+ 238              		.loc 1 146 18
+ 239 0030 0023     		movs	r3, #0
+ 240 0032 FB81     		strh	r3, [r7, #14]	@ movhi
+ 147:Core/Src/ILI9341_Touchscreen.c **** 		uint32_t calculating_x, calculating_y = 0;
+ 241              		.loc 1 147 27
+ 242 0034 0023     		movs	r3, #0
+ 243 0036 BB61     		str	r3, [r7, #24]
+ 148:Core/Src/ILI9341_Touchscreen.c **** 	
+ 149:Core/Src/ILI9341_Touchscreen.c ****     uint32_t samples = NO_OF_POSITION_SAMPLES;
+ 244              		.loc 1 149 14
+ 245 0038 4FF47A73 		mov	r3, #1000
+ 246 003c 7B61     		str	r3, [r7, #20]
+ 150:Core/Src/ILI9341_Touchscreen.c ****     uint32_t counted_samples = 0;
+ 247              		.loc 1 150 14
+ 248 003e 0023     		movs	r3, #0
+ 249 0040 3B61     		str	r3, [r7, #16]
+ 151:Core/Src/ILI9341_Touchscreen.c **** 
+ 152:Core/Src/ILI9341_Touchscreen.c **** 		HAL_GPIO_WritePin(TP_CS_PORT, TP_CS_PIN, GPIO_PIN_RESET);
+ 250              		.loc 1 152 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 8
+
+
+ 251 0042 0022     		movs	r2, #0
+ 252 0044 4FF40041 		mov	r1, #32768
+ 253 0048 5248     		ldr	r0, .L21+12
+ 254 004a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 153:Core/Src/ILI9341_Touchscreen.c **** 
+ 154:Core/Src/ILI9341_Touchscreen.c **** 	
+ 155:Core/Src/ILI9341_Touchscreen.c ****     while((samples > 0)&&(HAL_GPIO_ReadPin(TP_IRQ_PORT, TP_IRQ_PIN) == 0))
+ 255              		.loc 1 155 10
+ 256 004e 23E0     		b	.L16
+ 257              	.L18:
+ 156:Core/Src/ILI9341_Touchscreen.c ****     {			
+ 157:Core/Src/ILI9341_Touchscreen.c ****         TP_Write(CMD_RDY);
+ 258              		.loc 1 157 9
+ 259 0050 9020     		movs	r0, #144
+ 260 0052 FFF7FEFF 		bl	TP_Write
+ 158:Core/Src/ILI9341_Touchscreen.c **** 
+ 159:Core/Src/ILI9341_Touchscreen.c **** 				rawy = TP_Read();	
+ 261              		.loc 1 159 12
+ 262 0056 FFF7FEFF 		bl	TP_Read
+ 263 005a 0346     		mov	r3, r0
+ 264 005c FB81     		strh	r3, [r7, #14]	@ movhi
+ 160:Core/Src/ILI9341_Touchscreen.c **** 				avg_y += rawy;
+ 265              		.loc 1 160 11
+ 266 005e FB89     		ldrh	r3, [r7, #14]
+ 267 0060 3A6A     		ldr	r2, [r7, #32]
+ 268 0062 1344     		add	r3, r3, r2
+ 269 0064 3B62     		str	r3, [r7, #32]
+ 161:Core/Src/ILI9341_Touchscreen.c **** 				calculating_y += rawy;
+ 270              		.loc 1 161 19
+ 271 0066 FB89     		ldrh	r3, [r7, #14]
+ 272 0068 BA69     		ldr	r2, [r7, #24]
+ 273 006a 1344     		add	r3, r3, r2
+ 274 006c BB61     		str	r3, [r7, #24]
+ 162:Core/Src/ILI9341_Touchscreen.c **** 
+ 163:Core/Src/ILI9341_Touchscreen.c **** 				
+ 164:Core/Src/ILI9341_Touchscreen.c ****         TP_Write(CMD_RDX);
+ 275              		.loc 1 164 9
+ 276 006e D020     		movs	r0, #208
+ 277 0070 FFF7FEFF 		bl	TP_Write
+ 165:Core/Src/ILI9341_Touchscreen.c ****         rawx = TP_Read();
+ 278              		.loc 1 165 16
+ 279 0074 FFF7FEFF 		bl	TP_Read
+ 280 0078 0346     		mov	r3, r0
+ 281 007a BB81     		strh	r3, [r7, #12]	@ movhi
+ 166:Core/Src/ILI9341_Touchscreen.c **** 				avg_x += rawx;
+ 282              		.loc 1 166 11
+ 283 007c BB89     		ldrh	r3, [r7, #12]
+ 284 007e 7A6A     		ldr	r2, [r7, #36]
+ 285 0080 1344     		add	r3, r3, r2
+ 286 0082 7B62     		str	r3, [r7, #36]
+ 167:Core/Src/ILI9341_Touchscreen.c **** 				calculating_x += rawx;
+ 287              		.loc 1 167 19
+ 288 0084 BB89     		ldrh	r3, [r7, #12]
+ 289 0086 FA69     		ldr	r2, [r7, #28]
+ 290 0088 1344     		add	r3, r3, r2
+ 291 008a FB61     		str	r3, [r7, #28]
+ 168:Core/Src/ILI9341_Touchscreen.c ****         samples--;
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 9
+
+
+ 292              		.loc 1 168 16
+ 293 008c 7B69     		ldr	r3, [r7, #20]
+ 294 008e 013B     		subs	r3, r3, #1
+ 295 0090 7B61     		str	r3, [r7, #20]
+ 169:Core/Src/ILI9341_Touchscreen.c **** 				counted_samples++;
+ 296              		.loc 1 169 20
+ 297 0092 3B69     		ldr	r3, [r7, #16]
+ 298 0094 0133     		adds	r3, r3, #1
+ 299 0096 3B61     		str	r3, [r7, #16]
+ 300              	.L16:
+ 155:Core/Src/ILI9341_Touchscreen.c ****     {			
+ 301              		.loc 1 155 24
+ 302 0098 7B69     		ldr	r3, [r7, #20]
+ 303 009a 002B     		cmp	r3, #0
+ 304 009c 07D0     		beq	.L17
+ 155:Core/Src/ILI9341_Touchscreen.c ****     {			
+ 305              		.loc 1 155 27 discriminator 1
+ 306 009e 4FF40061 		mov	r1, #2048
+ 307 00a2 3C48     		ldr	r0, .L21+12
+ 308 00a4 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 309 00a8 0346     		mov	r3, r0
+ 155:Core/Src/ILI9341_Touchscreen.c ****     {			
+ 310              		.loc 1 155 24 discriminator 1
+ 311 00aa 002B     		cmp	r3, #0
+ 312 00ac D0D0     		beq	.L18
+ 313              	.L17:
+ 170:Core/Src/ILI9341_Touchscreen.c ****     };
+ 171:Core/Src/ILI9341_Touchscreen.c **** 		
+ 172:Core/Src/ILI9341_Touchscreen.c **** 		HAL_GPIO_WritePin(TP_CS_PORT, TP_CS_PIN, GPIO_PIN_SET);
+ 314              		.loc 1 172 3
+ 315 00ae 0122     		movs	r2, #1
+ 316 00b0 4FF40041 		mov	r1, #32768
+ 317 00b4 3748     		ldr	r0, .L21+12
+ 318 00b6 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 173:Core/Src/ILI9341_Touchscreen.c **** 
+ 174:Core/Src/ILI9341_Touchscreen.c **** 		
+ 175:Core/Src/ILI9341_Touchscreen.c **** 		if((counted_samples == NO_OF_POSITION_SAMPLES)&&(HAL_GPIO_ReadPin(TP_IRQ_PORT, TP_IRQ_PIN) == 0))
+ 319              		.loc 1 175 5
+ 320 00ba 3B69     		ldr	r3, [r7, #16]
+ 321 00bc B3F57A7F 		cmp	r3, #1000
+ 322 00c0 54D1     		bne	.L19
+ 323              		.loc 1 175 52 discriminator 1
+ 324 00c2 4FF40061 		mov	r1, #2048
+ 325 00c6 3348     		ldr	r0, .L21+12
+ 326 00c8 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 327 00cc 0346     		mov	r3, r0
+ 328              		.loc 1 175 49 discriminator 1
+ 329 00ce 002B     		cmp	r3, #0
+ 330 00d0 4CD1     		bne	.L19
+ 176:Core/Src/ILI9341_Touchscreen.c **** 		{
+ 177:Core/Src/ILI9341_Touchscreen.c **** 		
+ 178:Core/Src/ILI9341_Touchscreen.c **** 		calculating_x /= counted_samples;
+ 331              		.loc 1 178 17
+ 332 00d2 FA69     		ldr	r2, [r7, #28]
+ 333 00d4 3B69     		ldr	r3, [r7, #16]
+ 334 00d6 B2FBF3F3 		udiv	r3, r2, r3
+ 335 00da FB61     		str	r3, [r7, #28]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 10
+
+
+ 179:Core/Src/ILI9341_Touchscreen.c **** 		calculating_y /= counted_samples;
+ 336              		.loc 1 179 17
+ 337 00dc BA69     		ldr	r2, [r7, #24]
+ 338 00de 3B69     		ldr	r3, [r7, #16]
+ 339 00e0 B2FBF3F3 		udiv	r3, r2, r3
+ 340 00e4 BB61     		str	r3, [r7, #24]
+ 180:Core/Src/ILI9341_Touchscreen.c **** 		
+ 181:Core/Src/ILI9341_Touchscreen.c **** 		rawx = calculating_x;
+ 341              		.loc 1 181 8
+ 342 00e6 FB69     		ldr	r3, [r7, #28]
+ 343 00e8 BB81     		strh	r3, [r7, #12]	@ movhi
+ 182:Core/Src/ILI9341_Touchscreen.c **** 		rawy = calculating_y;		
+ 344              		.loc 1 182 8
+ 345 00ea BB69     		ldr	r3, [r7, #24]
+ 346 00ec FB81     		strh	r3, [r7, #14]	@ movhi
+ 183:Core/Src/ILI9341_Touchscreen.c **** 		
+ 184:Core/Src/ILI9341_Touchscreen.c **** 		rawx *= -1;
+ 347              		.loc 1 184 8
+ 348 00ee BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 349 00f0 5B42     		rsbs	r3, r3, #0
+ 350 00f2 BB81     		strh	r3, [r7, #12]	@ movhi
+ 185:Core/Src/ILI9341_Touchscreen.c **** 		rawy *= -1;
+ 351              		.loc 1 185 8
+ 352 00f4 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 353 00f6 5B42     		rsbs	r3, r3, #0
+ 354 00f8 FB81     		strh	r3, [r7, #14]	@ movhi
+ 186:Core/Src/ILI9341_Touchscreen.c **** 		
+ 187:Core/Src/ILI9341_Touchscreen.c **** 		//CONVERTING 16bit Value to Screen coordinates
+ 188:Core/Src/ILI9341_Touchscreen.c ****     // 65535/273 = 240!
+ 189:Core/Src/ILI9341_Touchscreen.c **** 		// 65535/204 = 320!
+ 190:Core/Src/ILI9341_Touchscreen.c ****     Coordinates[0] = ((240 - (rawx/X_TRANSLATION)) - X_OFFSET)*X_MAGNITUDE;
+ 355              		.loc 1 190 35
+ 356 00fa BA89     		ldrh	r2, [r7, #12]
+ 357 00fc 264B     		ldr	r3, .L21+16
+ 358 00fe A3FB0213 		umull	r1, r3, r3, r2
+ 359 0102 D21A     		subs	r2, r2, r3
+ 360 0104 5208     		lsrs	r2, r2, #1
+ 361 0106 1344     		add	r3, r3, r2
+ 362 0108 1B0A     		lsrs	r3, r3, #8
+ 363 010a 9BB2     		uxth	r3, r3
+ 364              		.loc 1 190 52
+ 365 010c C3F1E303 		rsb	r3, r3, #227
+ 366              		.loc 1 190 63
+ 367 0110 1846     		mov	r0, r3
+ 368 0112 FFF7FEFF 		bl	__aeabi_i2d
+ 369 0116 1CA3     		adr	r3, .L21
+ 370 0118 D3E90023 		ldrd	r2, [r3]
+ 371 011c FFF7FEFF 		bl	__aeabi_dmul
+ 372 0120 0246     		mov	r2, r0
+ 373 0122 0B46     		mov	r3, r1
+ 374              		.loc 1 190 20
+ 375 0124 1046     		mov	r0, r2
+ 376 0126 1946     		mov	r1, r3
+ 377 0128 FFF7FEFF 		bl	__aeabi_d2uiz
+ 378 012c 0346     		mov	r3, r0
+ 379 012e 9AB2     		uxth	r2, r3
+ 380 0130 7B68     		ldr	r3, [r7, #4]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 11
+
+
+ 381 0132 1A80     		strh	r2, [r3]	@ movhi
+ 191:Core/Src/ILI9341_Touchscreen.c **** 		Coordinates[1] = ((rawy/Y_TRANSLATION)- Y_OFFSET)*Y_MAGNITUDE;
+ 382              		.loc 1 191 26
+ 383 0134 FB89     		ldrh	r3, [r7, #14]
+ 384 0136 194A     		ldr	r2, .L21+20
+ 385 0138 A2FB0323 		umull	r2, r3, r2, r3
+ 386 013c DB09     		lsrs	r3, r3, #7
+ 387 013e 9BB2     		uxth	r3, r3
+ 388              		.loc 1 191 41
+ 389 0140 0F3B     		subs	r3, r3, #15
+ 390              		.loc 1 191 52
+ 391 0142 1846     		mov	r0, r3
+ 392 0144 FFF7FEFF 		bl	__aeabi_i2d
+ 393 0148 0FA3     		adr	r3, .L21
+ 394 014a D3E90023 		ldrd	r2, [r3]
+ 395 014e FFF7FEFF 		bl	__aeabi_dmul
+ 396 0152 0246     		mov	r2, r0
+ 397 0154 0B46     		mov	r3, r1
+ 398 0156 1046     		mov	r0, r2
+ 399 0158 1946     		mov	r1, r3
+ 400              		.loc 1 191 14
+ 401 015a 7B68     		ldr	r3, [r7, #4]
+ 402 015c 9C1C     		adds	r4, r3, #2
+ 403              		.loc 1 191 18
+ 404 015e FFF7FEFF 		bl	__aeabi_d2uiz
+ 405 0162 0346     		mov	r3, r0
+ 406 0164 9BB2     		uxth	r3, r3
+ 407 0166 2380     		strh	r3, [r4]	@ movhi
+ 192:Core/Src/ILI9341_Touchscreen.c **** 		
+ 193:Core/Src/ILI9341_Touchscreen.c **** 		return TOUCHPAD_DATA_OK;			
+ 408              		.loc 1 193 10
+ 409 0168 0123     		movs	r3, #1
+ 410 016a 07E0     		b	.L20
+ 411              	.L19:
+ 194:Core/Src/ILI9341_Touchscreen.c **** 		}
+ 195:Core/Src/ILI9341_Touchscreen.c **** 		else
+ 196:Core/Src/ILI9341_Touchscreen.c **** 		{
+ 197:Core/Src/ILI9341_Touchscreen.c **** 			Coordinates[0] = 0;
+ 412              		.loc 1 197 19
+ 413 016c 7B68     		ldr	r3, [r7, #4]
+ 414 016e 0022     		movs	r2, #0
+ 415 0170 1A80     		strh	r2, [r3]	@ movhi
+ 198:Core/Src/ILI9341_Touchscreen.c **** 			Coordinates[1] = 0;
+ 416              		.loc 1 198 15
+ 417 0172 7B68     		ldr	r3, [r7, #4]
+ 418 0174 0233     		adds	r3, r3, #2
+ 419              		.loc 1 198 19
+ 420 0176 0022     		movs	r2, #0
+ 421 0178 1A80     		strh	r2, [r3]	@ movhi
+ 199:Core/Src/ILI9341_Touchscreen.c **** 			return TOUCHPAD_DATA_NOISY;
+ 422              		.loc 1 199 11
+ 423 017a 0023     		movs	r3, #0
+ 424              	.L20:
+ 200:Core/Src/ILI9341_Touchscreen.c **** 		}
+ 201:Core/Src/ILI9341_Touchscreen.c **** }
+ 425              		.loc 1 201 1
+ 426 017c 1846     		mov	r0, r3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 12
+
+
+ 427 017e 2C37     		adds	r7, r7, #44
+ 428              		.cfi_def_cfa_offset 12
+ 429 0180 BD46     		mov	sp, r7
+ 430              		.cfi_def_cfa_register 13
+ 431              		@ sp needed
+ 432 0182 90BD     		pop	{r4, r7, pc}
+ 433              	.L22:
+ 434 0184 AFF30080 		.align	3
+ 435              	.L21:
+ 436 0188 8FC2F528 		.word	687194767
+ 437 018c 5C8FF23F 		.word	1072861020
+ 438 0190 00100048 		.word	1207963648
+ 439 0194 00180048 		.word	1207965696
+ 440 0198 E1011EE0 		.word	-534904351
+ 441 019c A1A0A0A0 		.word	-1600085855
+ 442              		.cfi_endproc
+ 443              	.LFE323:
+ 445              		.section	.text.TP_Touchpad_Pressed,"ax",%progbits
+ 446              		.align	1
+ 447              		.global	TP_Touchpad_Pressed
+ 448              		.syntax unified
+ 449              		.thumb
+ 450              		.thumb_func
+ 452              	TP_Touchpad_Pressed:
+ 453              	.LFB324:
+ 202:Core/Src/ILI9341_Touchscreen.c **** 
+ 203:Core/Src/ILI9341_Touchscreen.c **** //Check if Touchpad was pressed. Returns TOUCHPAD_PRESSED (1) or TOUCHPAD_NOT_PRESSED (0)
+ 204:Core/Src/ILI9341_Touchscreen.c **** uint8_t TP_Touchpad_Pressed(void)
+ 205:Core/Src/ILI9341_Touchscreen.c **** {
+ 454              		.loc 1 205 1
+ 455              		.cfi_startproc
+ 456              		@ args = 0, pretend = 0, frame = 0
+ 457              		@ frame_needed = 1, uses_anonymous_args = 0
+ 458 0000 80B5     		push	{r7, lr}
+ 459              		.cfi_def_cfa_offset 8
+ 460              		.cfi_offset 7, -8
+ 461              		.cfi_offset 14, -4
+ 462 0002 00AF     		add	r7, sp, #0
+ 463              		.cfi_def_cfa_register 7
+ 206:Core/Src/ILI9341_Touchscreen.c **** 	if(HAL_GPIO_ReadPin(TP_IRQ_PORT, TP_IRQ_PIN) == 0)
+ 464              		.loc 1 206 5
+ 465 0004 4FF40061 		mov	r1, #2048
+ 466 0008 0548     		ldr	r0, .L26
+ 467 000a FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 468 000e 0346     		mov	r3, r0
+ 469              		.loc 1 206 4
+ 470 0010 002B     		cmp	r3, #0
+ 471 0012 01D1     		bne	.L24
+ 207:Core/Src/ILI9341_Touchscreen.c **** 	{
+ 208:Core/Src/ILI9341_Touchscreen.c **** 		return TOUCHPAD_PRESSED;
+ 472              		.loc 1 208 10
+ 473 0014 0123     		movs	r3, #1
+ 474 0016 00E0     		b	.L25
+ 475              	.L24:
+ 209:Core/Src/ILI9341_Touchscreen.c **** 	}
+ 210:Core/Src/ILI9341_Touchscreen.c **** 	else
+ 211:Core/Src/ILI9341_Touchscreen.c **** 	{
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 13
+
+
+ 212:Core/Src/ILI9341_Touchscreen.c **** 		return TOUCHPAD_NOT_PRESSED;
+ 476              		.loc 1 212 10
+ 477 0018 0023     		movs	r3, #0
+ 478              	.L25:
+ 213:Core/Src/ILI9341_Touchscreen.c **** 	}
+ 214:Core/Src/ILI9341_Touchscreen.c **** }
+ 479              		.loc 1 214 1
+ 480 001a 1846     		mov	r0, r3
+ 481 001c 80BD     		pop	{r7, pc}
+ 482              	.L27:
+ 483 001e 00BF     		.align	2
+ 484              	.L26:
+ 485 0020 00180048 		.word	1207965696
+ 486              		.cfi_endproc
+ 487              	.LFE324:
+ 489              		.text
+ 490              	.Letext0:
+ 491              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 492              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 493              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+ 494              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 ILI9341_Touchscreen.c
+C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s:20     .text.TP_Read:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s:26     .text.TP_Read:0000000000000000 TP_Read
+C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s:99     .text.TP_Read:000000000000005c $d
+C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s:104    .text.TP_Write:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s:110    .text.TP_Write:0000000000000000 TP_Write
+C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s:190    .text.TP_Write:0000000000000074 $d
+C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s:198    .text.TP_Read_Coordinates:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s:204    .text.TP_Read_Coordinates:0000000000000000 TP_Read_Coordinates
+C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s:436    .text.TP_Read_Coordinates:0000000000000188 $d
+C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s:446    .text.TP_Touchpad_Pressed:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s:452    .text.TP_Touchpad_Pressed:0000000000000000 TP_Touchpad_Pressed
+C:\Users\Morroway\AppData\Local\Temp\cckygBLc.s:485    .text.TP_Touchpad_Pressed:0000000000000020 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_GPIO_ReadPin
+__aeabi_i2d
+__aeabi_dmul
+__aeabi_d2uiz

@@ -1,0 +1,2304 @@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"ILI9341_GFX.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.bss.msg_buffer,"aw",%nobits
+  20              		.align	2
+  23              	msg_buffer:
+  24 0000 00000000 		.space	30
+  24      00000000 
+  24      00000000 
+  24      00000000 
+  24      00000000 
+  25              		.section	.bss.RxBuf,"aw",%nobits
+  26              		.align	2
+  29              	RxBuf:
+  30 0000 00000000 		.space	20
+  30      00000000 
+  30      00000000 
+  30      00000000 
+  30      00000000 
+  31              		.section	.rodata.font,"a"
+  32              		.align	2
+  35              	font:
+  36 0000 00000000 		.ascii	"\000\000\000\000\000\000"
+  36      0000
+  37 0006 5C000000 		.ascii	"\\\000\000\000\000\000"
+  37      0000
+  38 000c 06000600 		.ascii	"\006\000\006\000\000\000"
+  38      0000
+  39 0012 287C287C 		.ascii	"(|(|(\000"
+  39      2800
+  40 0018 5C54FE54 		.ascii	"\\T\376Tt\000"
+  40      7400
+  41 001e 44201008 		.ascii	"D \020\010D\000"
+  41      4400
+  42 0024 28545420 		.ascii	"(TT P\000"
+  42      5000
+  43 002a 06000000 		.ascii	"\006\000\000\000\000\000"
+  43      0000
+  44 0030 38440000 		.ascii	"8D\000\000\000\000"
+  44      0000
+  45 0036 44380000 		.ascii	"D8\000\000\000\000"
+  45      0000
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 2
+
+
+  46 003c 02070200 		.ascii	"\002\007\002\000\000\000"
+  46      0000
+  47 0042 10107C10 		.ascii	"\020\020|\020\020\000"
+  47      1000
+  48 0048 C0000000 		.ascii	"\300\000\000\000\000\000"
+  48      0000
+  49 004e 10101010 		.ascii	"\020\020\020\020\020\000"
+  49      1000
+  50 0054 40000000 		.ascii	"@\000\000\000\000\000"
+  50      0000
+  51 005a 60100C00 		.ascii	"`\020\014\000\000\000"
+  51      0000
+  52 0060 7C64544C 		.ascii	"|dTL|\000"
+  52      7C00
+  53 0066 487C4000 		.ascii	"H|@\000\000\000"
+  53      0000
+  54 006c 64545454 		.ascii	"dTTTH\000"
+  54      4800
+  55 0072 44545454 		.ascii	"DTTTl\000"
+  55      6C00
+  56 0078 3C207020 		.ascii	"< p  \000"
+  56      2000
+  57 007e 5C545454 		.ascii	"\\TTT$\000"
+  57      2400
+  58 0084 7C545454 		.ascii	"|TTTt\000"
+  58      7400
+  59 008a 04046414 		.ascii	"\004\004d\024\014\000"
+  59      0C00
+  60 0090 7C545454 		.ascii	"|TTT|\000"
+  60      7C00
+  61 0096 5C545454 		.ascii	"\\TTT|\000"
+  61      7C00
+  62 009c 44000000 		.ascii	"D\000\000\000\000\000"
+  62      0000
+  63 00a2 C4000000 		.ascii	"\304\000\000\000\000\000"
+  63      0000
+  64 00a8 10284400 		.ascii	"\020(D\000\000\000"
+  64      0000
+  65 00ae 28282828 		.ascii	"(((((\000"
+  65      2800
+  66 00b4 44281000 		.ascii	"D(\020\000\000\000"
+  66      0000
+  67 00ba 08045408 		.ascii	"\010\004T\010\000\000"
+  67      0000
+  68 00c0 7C445454 		.ascii	"|DTT\\\000"
+  68      5C00
+  69 00c6 7C242424 		.ascii	"|$$$|\000"
+  69      7C00
+  70 00cc 7C545454 		.ascii	"|TTTl\000"
+  70      6C00
+  71 00d2 7C444444 		.ascii	"|DDDD\000"
+  71      4400
+  72 00d8 7C444444 		.ascii	"|DDD8\000"
+  72      3800
+  73 00de 7C545454 		.ascii	"|TTTD\000"
+  73      4400
+  74 00e4 7C141414 		.ascii	"|\024\024\024\004\000"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 3
+
+
+  74      0400
+  75 00ea 7C444454 		.ascii	"|DDTt\000"
+  75      7400
+  76 00f0 7C101010 		.ascii	"|\020\020\020|\000"
+  76      7C00
+  77 00f6 44447C44 		.ascii	"DD|DD\000"
+  77      4400
+  78 00fc 60404044 		.ascii	"`@@D|\000"
+  78      7C00
+  79 0102 7C101028 		.ascii	"|\020\020(D\000"
+  79      4400
+  80 0108 7C404040 		.ascii	"|@@@@\000"
+  80      4000
+  81 010e 7C081008 		.ascii	"|\010\020\010|\000"
+  81      7C00
+  82 0114 7C081020 		.ascii	"|\010\020 |\000"
+  82      7C00
+  83 011a 38444444 		.ascii	"8DDD8\000"
+  83      3800
+  84 0120 7C141414 		.ascii	"|\024\024\024\010\000"
+  84      0800
+  85 0126 3C246424 		.ascii	"<$d$<\000"
+  85      3C00
+  86 012c 7C141414 		.ascii	"|\024\024\024h\000"
+  86      6800
+  87 0132 5C545454 		.ascii	"\\TTTt\000"
+  87      7400
+  88 0138 04047C04 		.ascii	"\004\004|\004\004\000"
+  88      0400
+  89 013e 7C404040 		.ascii	"|@@@|\000"
+  89      7C00
+  90 0144 0C304030 		.ascii	"\0140@0\014\000"
+  90      0C00
+  91 014a 3C403040 		.ascii	"<@0@<\000"
+  91      3C00
+  92 0150 44281028 		.ascii	"D(\020(D\000"
+  92      4400
+  93 0156 0C106010 		.ascii	"\014\020`\020\014\000"
+  93      0C00
+  94 015c 4464544C 		.ascii	"DdTLD\000"
+  94      4400
+  95 0162 7C440000 		.ascii	"|D\000\000\000\000"
+  95      0000
+  96 0168 0C106000 		.ascii	"\014\020`\000\000\000"
+  96      0000
+  97 016e 447C0000 		.ascii	"D|\000\000\000\000"
+  97      0000
+  98 0174 00010001 		.ascii	"\000\001\000\001\000\000"
+  98      0000
+  99 017a 40404040 		.ascii	"@@@@@@"
+  99      4040
+ 100 0180 00010000 		.ascii	"\000\001\000\000\000\000"
+ 100      0000
+ 101 0186 7C242424 		.ascii	"|$$$|\000"
+ 101      7C00
+ 102 018c 7C545454 		.ascii	"|TTTl\000"
+ 102      6C00
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 4
+
+
+ 103 0192 7C444444 		.ascii	"|DDDD\000"
+ 103      4400
+ 104 0198 7C444444 		.ascii	"|DDD8\000"
+ 104      3800
+ 105 019e 7C545454 		.ascii	"|TTTD\000"
+ 105      4400
+ 106 01a4 7C141414 		.ascii	"|\024\024\024\004\000"
+ 106      0400
+ 107 01aa 7C444454 		.ascii	"|DDTt\000"
+ 107      7400
+ 108 01b0 7C101010 		.ascii	"|\020\020\020|\000"
+ 108      7C00
+ 109 01b6 44447C44 		.ascii	"DD|DD\000"
+ 109      4400
+ 110 01bc 60404044 		.ascii	"`@@D|\000"
+ 110      7C00
+ 111 01c2 7C101028 		.ascii	"|\020\020(D\000"
+ 111      4400
+ 112 01c8 7C404040 		.ascii	"|@@@@\000"
+ 112      4000
+ 113 01ce 7C081008 		.ascii	"|\010\020\010|\000"
+ 113      7C00
+ 114 01d4 7C081020 		.ascii	"|\010\020 |\000"
+ 114      7C00
+ 115 01da 38444444 		.ascii	"8DDD8\000"
+ 115      3800
+ 116 01e0 7C141414 		.ascii	"|\024\024\024\010\000"
+ 116      0800
+ 117 01e6 3C246424 		.ascii	"<$d$<\000"
+ 117      3C00
+ 118 01ec 7C141414 		.ascii	"|\024\024\024h\000"
+ 118      6800
+ 119 01f2 5C545454 		.ascii	"\\TTTt\000"
+ 119      7400
+ 120 01f8 04047C04 		.ascii	"\004\004|\004\004\000"
+ 120      0400
+ 121 01fe 7C404040 		.ascii	"|@@@|\000"
+ 121      7C00
+ 122 0204 0C304030 		.ascii	"\0140@0\014\000"
+ 122      0C00
+ 123 020a 3C403040 		.ascii	"<@0@<\000"
+ 123      3C00
+ 124 0210 44281028 		.ascii	"D(\020(D\000"
+ 124      4400
+ 125 0216 0C106010 		.ascii	"\014\020`\020\014\000"
+ 125      0C00
+ 126 021c 4464544C 		.ascii	"DdTLD\000"
+ 126      4400
+ 127 0222 107C4400 		.ascii	"\020|D\000\000\000"
+ 127      0000
+ 128 0228 6C000000 		.ascii	"l\000\000\000\000\000"
+ 128      0000
+ 129 022e 447C1000 		.ascii	"D|\020\000\000\000"
+ 129      0000
+ 130 0234 02010201 		.ascii	"\002\001\002\001\000\000"
+ 130      0000
+ 131 023a 00000000 		.ascii	"\000\000\000\000\000\000"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 5
+
+
+ 131      0000
+ 132              		.section	.text.ILI9341_Draw_Hollow_Circle,"ax",%progbits
+ 133              		.align	1
+ 134              		.global	ILI9341_Draw_Hollow_Circle
+ 135              		.syntax unified
+ 136              		.thumb
+ 137              		.thumb_func
+ 139              	ILI9341_Draw_Hollow_Circle:
+ 140              	.LFB321:
+ 141              		.file 1 "Core/Src/ILI9341_GFX.c"
+   1:Core/Src/ILI9341_GFX.c **** //	MIT License
+   2:Core/Src/ILI9341_GFX.c **** //
+   3:Core/Src/ILI9341_GFX.c **** //	Copyright (c) 2017 Matej Artnak
+   4:Core/Src/ILI9341_GFX.c **** //
+   5:Core/Src/ILI9341_GFX.c **** //	Permission is hereby granted, free of charge, to any person obtaining a copy
+   6:Core/Src/ILI9341_GFX.c **** //	of this software and associated documentation files (the "Software"), to deal
+   7:Core/Src/ILI9341_GFX.c **** //	in the Software without restriction, including without limitation the rights
+   8:Core/Src/ILI9341_GFX.c **** //	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   9:Core/Src/ILI9341_GFX.c **** //	copies of the Software, and to permit persons to whom the Software is
+  10:Core/Src/ILI9341_GFX.c **** //	furnished to do so, subject to the following conditions:
+  11:Core/Src/ILI9341_GFX.c **** //
+  12:Core/Src/ILI9341_GFX.c **** //	The above copyright notice and this permission notice shall be included in all
+  13:Core/Src/ILI9341_GFX.c **** //	copies or substantial portions of the Software.
+  14:Core/Src/ILI9341_GFX.c **** //
+  15:Core/Src/ILI9341_GFX.c **** //	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  16:Core/Src/ILI9341_GFX.c **** //	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  17:Core/Src/ILI9341_GFX.c **** //	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  18:Core/Src/ILI9341_GFX.c **** //	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  19:Core/Src/ILI9341_GFX.c **** //	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  20:Core/Src/ILI9341_GFX.c **** //	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  21:Core/Src/ILI9341_GFX.c **** //	SOFTWARE.
+  22:Core/Src/ILI9341_GFX.c **** //
+  23:Core/Src/ILI9341_GFX.c **** //
+  24:Core/Src/ILI9341_GFX.c **** //
+  25:Core/Src/ILI9341_GFX.c **** //-----------------------------------
+  26:Core/Src/ILI9341_GFX.c **** //	ILI9341 GFX library for STM32
+  27:Core/Src/ILI9341_GFX.c **** //-----------------------------------
+  28:Core/Src/ILI9341_GFX.c **** //
+  29:Core/Src/ILI9341_GFX.c **** //	Very simple GFX library built upon ILI9342_STM32_Driver library.
+  30:Core/Src/ILI9341_GFX.c **** //	Adds basic shapes, image and font drawing capabilities to ILI9341
+  31:Core/Src/ILI9341_GFX.c **** //
+  32:Core/Src/ILI9341_GFX.c **** //	Library is written for STM32 HAL library and supports STM32CUBEMX. To use the library with Cube 
+  33:Core/Src/ILI9341_GFX.c **** //	you need to tick the box that generates peripheral initialization code in their own respective .
+  34:Core/Src/ILI9341_GFX.c **** //
+  35:Core/Src/ILI9341_GFX.c **** //
+  36:Core/Src/ILI9341_GFX.c **** //-----------------------------------
+  37:Core/Src/ILI9341_GFX.c **** //	How to use this library
+  38:Core/Src/ILI9341_GFX.c **** //-----------------------------------
+  39:Core/Src/ILI9341_GFX.c **** //
+  40:Core/Src/ILI9341_GFX.c **** //	-If using MCUs other than STM32F7 you will have to change the #include "stm32f7xx_hal.h" in the 
+  41:Core/Src/ILI9341_GFX.c **** //
+  42:Core/Src/ILI9341_GFX.c **** //	If using "ILI9341_STM32_Driver" then all other prequisites to use the library have allready been
+  43:Core/Src/ILI9341_GFX.c **** //	Simply include the library and it is ready to be used
+  44:Core/Src/ILI9341_GFX.c **** //
+  45:Core/Src/ILI9341_GFX.c **** //-----------------------------------
+  46:Core/Src/ILI9341_GFX.c **** 
+  47:Core/Src/ILI9341_GFX.c **** #include "ILI9341_STM32_Driver.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 6
+
+
+  48:Core/Src/ILI9341_GFX.c **** #include "ILI9341_GFX.h"
+  49:Core/Src/ILI9341_GFX.c **** #include "5x5_font.h"
+  50:Core/Src/ILI9341_GFX.c **** // #include "spi.h"
+  51:Core/Src/ILI9341_GFX.c **** 
+  52:Core/Src/ILI9341_GFX.c **** /*Draw hollow circle at X,Y location with specified radius and colour. X and Y represent circles ce
+  53:Core/Src/ILI9341_GFX.c **** void ILI9341_Draw_Hollow_Circle(uint16_t X, uint16_t Y, uint16_t Radius, uint16_t Colour)
+  54:Core/Src/ILI9341_GFX.c **** {
+ 142              		.loc 1 54 1
+ 143              		.cfi_startproc
+ 144              		@ args = 0, pretend = 0, frame = 32
+ 145              		@ frame_needed = 1, uses_anonymous_args = 0
+ 146 0000 90B5     		push	{r4, r7, lr}
+ 147              		.cfi_def_cfa_offset 12
+ 148              		.cfi_offset 4, -12
+ 149              		.cfi_offset 7, -8
+ 150              		.cfi_offset 14, -4
+ 151 0002 89B0     		sub	sp, sp, #36
+ 152              		.cfi_def_cfa_offset 48
+ 153 0004 00AF     		add	r7, sp, #0
+ 154              		.cfi_def_cfa_register 7
+ 155 0006 0446     		mov	r4, r0
+ 156 0008 0846     		mov	r0, r1
+ 157 000a 1146     		mov	r1, r2
+ 158 000c 1A46     		mov	r2, r3
+ 159 000e 2346     		mov	r3, r4	@ movhi
+ 160 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 161 0012 0346     		mov	r3, r0	@ movhi
+ 162 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+ 163 0016 0B46     		mov	r3, r1	@ movhi
+ 164 0018 7B80     		strh	r3, [r7, #2]	@ movhi
+ 165 001a 1346     		mov	r3, r2	@ movhi
+ 166 001c 3B80     		strh	r3, [r7]	@ movhi
+  55:Core/Src/ILI9341_GFX.c **** 	int x = Radius - 1;
+ 167              		.loc 1 55 17
+ 168 001e 7B88     		ldrh	r3, [r7, #2]
+ 169              		.loc 1 55 6
+ 170 0020 013B     		subs	r3, r3, #1
+ 171 0022 FB61     		str	r3, [r7, #28]
+  56:Core/Src/ILI9341_GFX.c **** 	int y = 0;
+ 172              		.loc 1 56 6
+ 173 0024 0023     		movs	r3, #0
+ 174 0026 BB61     		str	r3, [r7, #24]
+  57:Core/Src/ILI9341_GFX.c **** 	int dx = 1;
+ 175              		.loc 1 57 6
+ 176 0028 0123     		movs	r3, #1
+ 177 002a 7B61     		str	r3, [r7, #20]
+  58:Core/Src/ILI9341_GFX.c **** 	int dy = 1;
+ 178              		.loc 1 58 6
+ 179 002c 0123     		movs	r3, #1
+ 180 002e 3B61     		str	r3, [r7, #16]
+  59:Core/Src/ILI9341_GFX.c **** 	int err = dx - (Radius << 1);
+ 181              		.loc 1 59 25
+ 182 0030 7B88     		ldrh	r3, [r7, #2]
+ 183 0032 5B00     		lsls	r3, r3, #1
+ 184              		.loc 1 59 6
+ 185 0034 7A69     		ldr	r2, [r7, #20]
+ 186 0036 D31A     		subs	r3, r2, r3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 7
+
+
+ 187 0038 FB60     		str	r3, [r7, #12]
+  60:Core/Src/ILI9341_GFX.c **** 
+  61:Core/Src/ILI9341_GFX.c **** 	while (x >= y)
+ 188              		.loc 1 61 8
+ 189 003a 8DE0     		b	.L2
+ 190              	.L4:
+  62:Core/Src/ILI9341_GFX.c **** 	{
+  63:Core/Src/ILI9341_GFX.c **** 		ILI9341_Draw_Pixel(X + x, Y + y, Colour);
+ 191              		.loc 1 63 3
+ 192 003c FB69     		ldr	r3, [r7, #28]
+ 193 003e 9AB2     		uxth	r2, r3
+ 194 0040 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 195 0042 1344     		add	r3, r3, r2
+ 196 0044 98B2     		uxth	r0, r3
+ 197 0046 BB69     		ldr	r3, [r7, #24]
+ 198 0048 9AB2     		uxth	r2, r3
+ 199 004a BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 200 004c 1344     		add	r3, r3, r2
+ 201 004e 9BB2     		uxth	r3, r3
+ 202 0050 3A88     		ldrh	r2, [r7]
+ 203 0052 1946     		mov	r1, r3
+ 204 0054 FFF7FEFF 		bl	ILI9341_Draw_Pixel
+  64:Core/Src/ILI9341_GFX.c **** 		ILI9341_Draw_Pixel(X + y, Y + x, Colour);
+ 205              		.loc 1 64 3
+ 206 0058 BB69     		ldr	r3, [r7, #24]
+ 207 005a 9AB2     		uxth	r2, r3
+ 208 005c FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 209 005e 1344     		add	r3, r3, r2
+ 210 0060 98B2     		uxth	r0, r3
+ 211 0062 FB69     		ldr	r3, [r7, #28]
+ 212 0064 9AB2     		uxth	r2, r3
+ 213 0066 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 214 0068 1344     		add	r3, r3, r2
+ 215 006a 9BB2     		uxth	r3, r3
+ 216 006c 3A88     		ldrh	r2, [r7]
+ 217 006e 1946     		mov	r1, r3
+ 218 0070 FFF7FEFF 		bl	ILI9341_Draw_Pixel
+  65:Core/Src/ILI9341_GFX.c **** 		ILI9341_Draw_Pixel(X - y, Y + x, Colour);
+ 219              		.loc 1 65 3
+ 220 0074 BB69     		ldr	r3, [r7, #24]
+ 221 0076 9BB2     		uxth	r3, r3
+ 222 0078 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 223 007a D31A     		subs	r3, r2, r3
+ 224 007c 98B2     		uxth	r0, r3
+ 225 007e FB69     		ldr	r3, [r7, #28]
+ 226 0080 9AB2     		uxth	r2, r3
+ 227 0082 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 228 0084 1344     		add	r3, r3, r2
+ 229 0086 9BB2     		uxth	r3, r3
+ 230 0088 3A88     		ldrh	r2, [r7]
+ 231 008a 1946     		mov	r1, r3
+ 232 008c FFF7FEFF 		bl	ILI9341_Draw_Pixel
+  66:Core/Src/ILI9341_GFX.c **** 		ILI9341_Draw_Pixel(X - x, Y + y, Colour);
+ 233              		.loc 1 66 3
+ 234 0090 FB69     		ldr	r3, [r7, #28]
+ 235 0092 9BB2     		uxth	r3, r3
+ 236 0094 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 8
+
+
+ 237 0096 D31A     		subs	r3, r2, r3
+ 238 0098 98B2     		uxth	r0, r3
+ 239 009a BB69     		ldr	r3, [r7, #24]
+ 240 009c 9AB2     		uxth	r2, r3
+ 241 009e BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 242 00a0 1344     		add	r3, r3, r2
+ 243 00a2 9BB2     		uxth	r3, r3
+ 244 00a4 3A88     		ldrh	r2, [r7]
+ 245 00a6 1946     		mov	r1, r3
+ 246 00a8 FFF7FEFF 		bl	ILI9341_Draw_Pixel
+  67:Core/Src/ILI9341_GFX.c **** 		ILI9341_Draw_Pixel(X - x, Y - y, Colour);
+ 247              		.loc 1 67 3
+ 248 00ac FB69     		ldr	r3, [r7, #28]
+ 249 00ae 9BB2     		uxth	r3, r3
+ 250 00b0 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 251 00b2 D31A     		subs	r3, r2, r3
+ 252 00b4 98B2     		uxth	r0, r3
+ 253 00b6 BB69     		ldr	r3, [r7, #24]
+ 254 00b8 9BB2     		uxth	r3, r3
+ 255 00ba BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 256 00bc D31A     		subs	r3, r2, r3
+ 257 00be 9BB2     		uxth	r3, r3
+ 258 00c0 3A88     		ldrh	r2, [r7]
+ 259 00c2 1946     		mov	r1, r3
+ 260 00c4 FFF7FEFF 		bl	ILI9341_Draw_Pixel
+  68:Core/Src/ILI9341_GFX.c **** 		ILI9341_Draw_Pixel(X - y, Y - x, Colour);
+ 261              		.loc 1 68 3
+ 262 00c8 BB69     		ldr	r3, [r7, #24]
+ 263 00ca 9BB2     		uxth	r3, r3
+ 264 00cc FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 265 00ce D31A     		subs	r3, r2, r3
+ 266 00d0 98B2     		uxth	r0, r3
+ 267 00d2 FB69     		ldr	r3, [r7, #28]
+ 268 00d4 9BB2     		uxth	r3, r3
+ 269 00d6 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 270 00d8 D31A     		subs	r3, r2, r3
+ 271 00da 9BB2     		uxth	r3, r3
+ 272 00dc 3A88     		ldrh	r2, [r7]
+ 273 00de 1946     		mov	r1, r3
+ 274 00e0 FFF7FEFF 		bl	ILI9341_Draw_Pixel
+  69:Core/Src/ILI9341_GFX.c **** 		ILI9341_Draw_Pixel(X + y, Y - x, Colour);
+ 275              		.loc 1 69 3
+ 276 00e4 BB69     		ldr	r3, [r7, #24]
+ 277 00e6 9AB2     		uxth	r2, r3
+ 278 00e8 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 279 00ea 1344     		add	r3, r3, r2
+ 280 00ec 98B2     		uxth	r0, r3
+ 281 00ee FB69     		ldr	r3, [r7, #28]
+ 282 00f0 9BB2     		uxth	r3, r3
+ 283 00f2 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 284 00f4 D31A     		subs	r3, r2, r3
+ 285 00f6 9BB2     		uxth	r3, r3
+ 286 00f8 3A88     		ldrh	r2, [r7]
+ 287 00fa 1946     		mov	r1, r3
+ 288 00fc FFF7FEFF 		bl	ILI9341_Draw_Pixel
+  70:Core/Src/ILI9341_GFX.c **** 		ILI9341_Draw_Pixel(X + x, Y - y, Colour);
+ 289              		.loc 1 70 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 9
+
+
+ 290 0100 FB69     		ldr	r3, [r7, #28]
+ 291 0102 9AB2     		uxth	r2, r3
+ 292 0104 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 293 0106 1344     		add	r3, r3, r2
+ 294 0108 98B2     		uxth	r0, r3
+ 295 010a BB69     		ldr	r3, [r7, #24]
+ 296 010c 9BB2     		uxth	r3, r3
+ 297 010e BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 298 0110 D31A     		subs	r3, r2, r3
+ 299 0112 9BB2     		uxth	r3, r3
+ 300 0114 3A88     		ldrh	r2, [r7]
+ 301 0116 1946     		mov	r1, r3
+ 302 0118 FFF7FEFF 		bl	ILI9341_Draw_Pixel
+  71:Core/Src/ILI9341_GFX.c **** 
+  72:Core/Src/ILI9341_GFX.c **** 		if (err <= 0)
+ 303              		.loc 1 72 6
+ 304 011c FB68     		ldr	r3, [r7, #12]
+ 305 011e 002B     		cmp	r3, #0
+ 306 0120 09DC     		bgt	.L3
+  73:Core/Src/ILI9341_GFX.c **** 		{
+  74:Core/Src/ILI9341_GFX.c **** 			y++;
+ 307              		.loc 1 74 5
+ 308 0122 BB69     		ldr	r3, [r7, #24]
+ 309 0124 0133     		adds	r3, r3, #1
+ 310 0126 BB61     		str	r3, [r7, #24]
+  75:Core/Src/ILI9341_GFX.c **** 			err += dy;
+ 311              		.loc 1 75 8
+ 312 0128 FA68     		ldr	r2, [r7, #12]
+ 313 012a 3B69     		ldr	r3, [r7, #16]
+ 314 012c 1344     		add	r3, r3, r2
+ 315 012e FB60     		str	r3, [r7, #12]
+  76:Core/Src/ILI9341_GFX.c **** 			dy += 2;
+ 316              		.loc 1 76 7
+ 317 0130 3B69     		ldr	r3, [r7, #16]
+ 318 0132 0233     		adds	r3, r3, #2
+ 319 0134 3B61     		str	r3, [r7, #16]
+ 320              	.L3:
+  77:Core/Src/ILI9341_GFX.c **** 		}
+  78:Core/Src/ILI9341_GFX.c **** 		if (err > 0)
+ 321              		.loc 1 78 6
+ 322 0136 FB68     		ldr	r3, [r7, #12]
+ 323 0138 002B     		cmp	r3, #0
+ 324 013a 0DDD     		ble	.L2
+  79:Core/Src/ILI9341_GFX.c **** 		{
+  80:Core/Src/ILI9341_GFX.c **** 			x--;
+ 325              		.loc 1 80 5
+ 326 013c FB69     		ldr	r3, [r7, #28]
+ 327 013e 013B     		subs	r3, r3, #1
+ 328 0140 FB61     		str	r3, [r7, #28]
+  81:Core/Src/ILI9341_GFX.c **** 			dx += 2;
+ 329              		.loc 1 81 7
+ 330 0142 7B69     		ldr	r3, [r7, #20]
+ 331 0144 0233     		adds	r3, r3, #2
+ 332 0146 7B61     		str	r3, [r7, #20]
+  82:Core/Src/ILI9341_GFX.c **** 			err += (-Radius << 1) + dx;
+ 333              		.loc 1 82 12
+ 334 0148 7B88     		ldrh	r3, [r7, #2]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 10
+
+
+ 335 014a 5B42     		rsbs	r3, r3, #0
+ 336              		.loc 1 82 20
+ 337 014c 5A00     		lsls	r2, r3, #1
+ 338              		.loc 1 82 26
+ 339 014e 7B69     		ldr	r3, [r7, #20]
+ 340 0150 1344     		add	r3, r3, r2
+ 341              		.loc 1 82 8
+ 342 0152 FA68     		ldr	r2, [r7, #12]
+ 343 0154 1344     		add	r3, r3, r2
+ 344 0156 FB60     		str	r3, [r7, #12]
+ 345              	.L2:
+  61:Core/Src/ILI9341_GFX.c **** 	{
+ 346              		.loc 1 61 11
+ 347 0158 FA69     		ldr	r2, [r7, #28]
+ 348 015a BB69     		ldr	r3, [r7, #24]
+ 349 015c 9A42     		cmp	r2, r3
+ 350 015e BFF66DAF 		bge	.L4
+  83:Core/Src/ILI9341_GFX.c **** 		}
+  84:Core/Src/ILI9341_GFX.c **** 	}
+  85:Core/Src/ILI9341_GFX.c **** }
+ 351              		.loc 1 85 1
+ 352 0162 00BF     		nop
+ 353 0164 00BF     		nop
+ 354 0166 2437     		adds	r7, r7, #36
+ 355              		.cfi_def_cfa_offset 12
+ 356 0168 BD46     		mov	sp, r7
+ 357              		.cfi_def_cfa_register 13
+ 358              		@ sp needed
+ 359 016a 90BD     		pop	{r4, r7, pc}
+ 360              		.cfi_endproc
+ 361              	.LFE321:
+ 363              		.section	.text.ILI9341_Draw_Filled_Circle,"ax",%progbits
+ 364              		.align	1
+ 365              		.global	ILI9341_Draw_Filled_Circle
+ 366              		.syntax unified
+ 367              		.thumb
+ 368              		.thumb_func
+ 370              	ILI9341_Draw_Filled_Circle:
+ 371              	.LFB322:
+  86:Core/Src/ILI9341_GFX.c **** 
+  87:Core/Src/ILI9341_GFX.c **** /*Draw filled circle at X,Y location with specified radius and colour. X and Y represent circles ce
+  88:Core/Src/ILI9341_GFX.c **** void ILI9341_Draw_Filled_Circle(uint16_t X, uint16_t Y, uint16_t Radius, uint16_t Colour)
+  89:Core/Src/ILI9341_GFX.c **** {
+ 372              		.loc 1 89 1
+ 373              		.cfi_startproc
+ 374              		@ args = 0, pretend = 0, frame = 40
+ 375              		@ frame_needed = 1, uses_anonymous_args = 0
+ 376 0000 90B5     		push	{r4, r7, lr}
+ 377              		.cfi_def_cfa_offset 12
+ 378              		.cfi_offset 4, -12
+ 379              		.cfi_offset 7, -8
+ 380              		.cfi_offset 14, -4
+ 381 0002 8BB0     		sub	sp, sp, #44
+ 382              		.cfi_def_cfa_offset 56
+ 383 0004 00AF     		add	r7, sp, #0
+ 384              		.cfi_def_cfa_register 7
+ 385 0006 0446     		mov	r4, r0
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 11
+
+
+ 386 0008 0846     		mov	r0, r1
+ 387 000a 1146     		mov	r1, r2
+ 388 000c 1A46     		mov	r2, r3
+ 389 000e 2346     		mov	r3, r4	@ movhi
+ 390 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 391 0012 0346     		mov	r3, r0	@ movhi
+ 392 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+ 393 0016 0B46     		mov	r3, r1	@ movhi
+ 394 0018 7B80     		strh	r3, [r7, #2]	@ movhi
+ 395 001a 1346     		mov	r3, r2	@ movhi
+ 396 001c 3B80     		strh	r3, [r7]	@ movhi
+  90:Core/Src/ILI9341_GFX.c **** 
+  91:Core/Src/ILI9341_GFX.c **** 	int x = Radius;
+ 397              		.loc 1 91 6
+ 398 001e 7B88     		ldrh	r3, [r7, #2]
+ 399 0020 7B62     		str	r3, [r7, #36]
+  92:Core/Src/ILI9341_GFX.c **** 	int y = 0;
+ 400              		.loc 1 92 6
+ 401 0022 0023     		movs	r3, #0
+ 402 0024 3B62     		str	r3, [r7, #32]
+  93:Core/Src/ILI9341_GFX.c **** 	int xChange = 1 - (Radius << 1);
+ 403              		.loc 1 93 28
+ 404 0026 7B88     		ldrh	r3, [r7, #2]
+ 405 0028 5B00     		lsls	r3, r3, #1
+ 406              		.loc 1 93 6
+ 407 002a C3F10103 		rsb	r3, r3, #1
+ 408 002e FB61     		str	r3, [r7, #28]
+  94:Core/Src/ILI9341_GFX.c **** 	int yChange = 0;
+ 409              		.loc 1 94 6
+ 410 0030 0023     		movs	r3, #0
+ 411 0032 BB61     		str	r3, [r7, #24]
+  95:Core/Src/ILI9341_GFX.c **** 	int radiusError = 0;
+ 412              		.loc 1 95 6
+ 413 0034 0023     		movs	r3, #0
+ 414 0036 7B61     		str	r3, [r7, #20]
+  96:Core/Src/ILI9341_GFX.c **** 
+  97:Core/Src/ILI9341_GFX.c **** 	while (x >= y)
+ 415              		.loc 1 97 8
+ 416 0038 61E0     		b	.L6
+ 417              	.L11:
+ 418              	.LBB2:
+  98:Core/Src/ILI9341_GFX.c **** 	{
+  99:Core/Src/ILI9341_GFX.c **** 		for (int i = X - x; i <= X + x; i++)
+ 419              		.loc 1 99 18
+ 420 003a FA88     		ldrh	r2, [r7, #6]
+ 421              		.loc 1 99 12
+ 422 003c 7B6A     		ldr	r3, [r7, #36]
+ 423 003e D31A     		subs	r3, r2, r3
+ 424 0040 3B61     		str	r3, [r7, #16]
+ 425              		.loc 1 99 3
+ 426 0042 18E0     		b	.L7
+ 427              	.L8:
+ 100:Core/Src/ILI9341_GFX.c **** 		{
+ 101:Core/Src/ILI9341_GFX.c **** 			ILI9341_Draw_Pixel(i, Y + y, Colour);
+ 428              		.loc 1 101 4 discriminator 3
+ 429 0044 3B69     		ldr	r3, [r7, #16]
+ 430 0046 98B2     		uxth	r0, r3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 12
+
+
+ 431 0048 3B6A     		ldr	r3, [r7, #32]
+ 432 004a 9AB2     		uxth	r2, r3
+ 433 004c BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 434 004e 1344     		add	r3, r3, r2
+ 435 0050 9BB2     		uxth	r3, r3
+ 436 0052 3A88     		ldrh	r2, [r7]
+ 437 0054 1946     		mov	r1, r3
+ 438 0056 FFF7FEFF 		bl	ILI9341_Draw_Pixel
+ 102:Core/Src/ILI9341_GFX.c **** 			ILI9341_Draw_Pixel(i, Y - y, Colour);
+ 439              		.loc 1 102 4 discriminator 3
+ 440 005a 3B69     		ldr	r3, [r7, #16]
+ 441 005c 98B2     		uxth	r0, r3
+ 442 005e 3B6A     		ldr	r3, [r7, #32]
+ 443 0060 9BB2     		uxth	r3, r3
+ 444 0062 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 445 0064 D31A     		subs	r3, r2, r3
+ 446 0066 9BB2     		uxth	r3, r3
+ 447 0068 3A88     		ldrh	r2, [r7]
+ 448 006a 1946     		mov	r1, r3
+ 449 006c FFF7FEFF 		bl	ILI9341_Draw_Pixel
+  99:Core/Src/ILI9341_GFX.c **** 		{
+ 450              		.loc 1 99 36 discriminator 3
+ 451 0070 3B69     		ldr	r3, [r7, #16]
+ 452 0072 0133     		adds	r3, r3, #1
+ 453 0074 3B61     		str	r3, [r7, #16]
+ 454              	.L7:
+  99:Core/Src/ILI9341_GFX.c **** 		{
+ 455              		.loc 1 99 30 discriminator 1
+ 456 0076 FA88     		ldrh	r2, [r7, #6]
+ 457 0078 7B6A     		ldr	r3, [r7, #36]
+ 458 007a 1344     		add	r3, r3, r2
+  99:Core/Src/ILI9341_GFX.c **** 		{
+ 459              		.loc 1 99 25 discriminator 1
+ 460 007c 3A69     		ldr	r2, [r7, #16]
+ 461 007e 9A42     		cmp	r2, r3
+ 462 0080 E0DD     		ble	.L8
+ 463              	.LBE2:
+ 464              	.LBB3:
+ 103:Core/Src/ILI9341_GFX.c **** 		}
+ 104:Core/Src/ILI9341_GFX.c **** 		for (int i = X - y; i <= X + y; i++)
+ 465              		.loc 1 104 18
+ 466 0082 FA88     		ldrh	r2, [r7, #6]
+ 467              		.loc 1 104 12
+ 468 0084 3B6A     		ldr	r3, [r7, #32]
+ 469 0086 D31A     		subs	r3, r2, r3
+ 470 0088 FB60     		str	r3, [r7, #12]
+ 471              		.loc 1 104 3
+ 472 008a 18E0     		b	.L9
+ 473              	.L10:
+ 105:Core/Src/ILI9341_GFX.c **** 		{
+ 106:Core/Src/ILI9341_GFX.c **** 			ILI9341_Draw_Pixel(i, Y + x, Colour);
+ 474              		.loc 1 106 4 discriminator 3
+ 475 008c FB68     		ldr	r3, [r7, #12]
+ 476 008e 98B2     		uxth	r0, r3
+ 477 0090 7B6A     		ldr	r3, [r7, #36]
+ 478 0092 9AB2     		uxth	r2, r3
+ 479 0094 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 13
+
+
+ 480 0096 1344     		add	r3, r3, r2
+ 481 0098 9BB2     		uxth	r3, r3
+ 482 009a 3A88     		ldrh	r2, [r7]
+ 483 009c 1946     		mov	r1, r3
+ 484 009e FFF7FEFF 		bl	ILI9341_Draw_Pixel
+ 107:Core/Src/ILI9341_GFX.c **** 			ILI9341_Draw_Pixel(i, Y - x, Colour);
+ 485              		.loc 1 107 4 discriminator 3
+ 486 00a2 FB68     		ldr	r3, [r7, #12]
+ 487 00a4 98B2     		uxth	r0, r3
+ 488 00a6 7B6A     		ldr	r3, [r7, #36]
+ 489 00a8 9BB2     		uxth	r3, r3
+ 490 00aa BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 491 00ac D31A     		subs	r3, r2, r3
+ 492 00ae 9BB2     		uxth	r3, r3
+ 493 00b0 3A88     		ldrh	r2, [r7]
+ 494 00b2 1946     		mov	r1, r3
+ 495 00b4 FFF7FEFF 		bl	ILI9341_Draw_Pixel
+ 104:Core/Src/ILI9341_GFX.c **** 		{
+ 496              		.loc 1 104 36 discriminator 3
+ 497 00b8 FB68     		ldr	r3, [r7, #12]
+ 498 00ba 0133     		adds	r3, r3, #1
+ 499 00bc FB60     		str	r3, [r7, #12]
+ 500              	.L9:
+ 104:Core/Src/ILI9341_GFX.c **** 		{
+ 501              		.loc 1 104 30 discriminator 1
+ 502 00be FA88     		ldrh	r2, [r7, #6]
+ 503 00c0 3B6A     		ldr	r3, [r7, #32]
+ 504 00c2 1344     		add	r3, r3, r2
+ 104:Core/Src/ILI9341_GFX.c **** 		{
+ 505              		.loc 1 104 25 discriminator 1
+ 506 00c4 FA68     		ldr	r2, [r7, #12]
+ 507 00c6 9A42     		cmp	r2, r3
+ 508 00c8 E0DD     		ble	.L10
+ 509              	.LBE3:
+ 108:Core/Src/ILI9341_GFX.c **** 		}
+ 109:Core/Src/ILI9341_GFX.c **** 
+ 110:Core/Src/ILI9341_GFX.c **** 		y++;
+ 510              		.loc 1 110 4
+ 511 00ca 3B6A     		ldr	r3, [r7, #32]
+ 512 00cc 0133     		adds	r3, r3, #1
+ 513 00ce 3B62     		str	r3, [r7, #32]
+ 111:Core/Src/ILI9341_GFX.c **** 		radiusError += yChange;
+ 514              		.loc 1 111 15
+ 515 00d0 7A69     		ldr	r2, [r7, #20]
+ 516 00d2 BB69     		ldr	r3, [r7, #24]
+ 517 00d4 1344     		add	r3, r3, r2
+ 518 00d6 7B61     		str	r3, [r7, #20]
+ 112:Core/Src/ILI9341_GFX.c **** 		yChange += 2;
+ 519              		.loc 1 112 11
+ 520 00d8 BB69     		ldr	r3, [r7, #24]
+ 521 00da 0233     		adds	r3, r3, #2
+ 522 00dc BB61     		str	r3, [r7, #24]
+ 113:Core/Src/ILI9341_GFX.c **** 		if (((radiusError << 1) + xChange) > 0)
+ 523              		.loc 1 113 21
+ 524 00de 7B69     		ldr	r3, [r7, #20]
+ 525 00e0 5A00     		lsls	r2, r3, #1
+ 526              		.loc 1 113 27
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 14
+
+
+ 527 00e2 FB69     		ldr	r3, [r7, #28]
+ 528 00e4 1344     		add	r3, r3, r2
+ 529              		.loc 1 113 6
+ 530 00e6 002B     		cmp	r3, #0
+ 531 00e8 09DD     		ble	.L6
+ 114:Core/Src/ILI9341_GFX.c **** 		{
+ 115:Core/Src/ILI9341_GFX.c **** 			x--;
+ 532              		.loc 1 115 5
+ 533 00ea 7B6A     		ldr	r3, [r7, #36]
+ 534 00ec 013B     		subs	r3, r3, #1
+ 535 00ee 7B62     		str	r3, [r7, #36]
+ 116:Core/Src/ILI9341_GFX.c **** 			radiusError += xChange;
+ 536              		.loc 1 116 16
+ 537 00f0 7A69     		ldr	r2, [r7, #20]
+ 538 00f2 FB69     		ldr	r3, [r7, #28]
+ 539 00f4 1344     		add	r3, r3, r2
+ 540 00f6 7B61     		str	r3, [r7, #20]
+ 117:Core/Src/ILI9341_GFX.c **** 			xChange += 2;
+ 541              		.loc 1 117 12
+ 542 00f8 FB69     		ldr	r3, [r7, #28]
+ 543 00fa 0233     		adds	r3, r3, #2
+ 544 00fc FB61     		str	r3, [r7, #28]
+ 545              	.L6:
+  97:Core/Src/ILI9341_GFX.c **** 	{
+ 546              		.loc 1 97 11
+ 547 00fe 7A6A     		ldr	r2, [r7, #36]
+ 548 0100 3B6A     		ldr	r3, [r7, #32]
+ 549 0102 9A42     		cmp	r2, r3
+ 550 0104 99DA     		bge	.L11
+ 118:Core/Src/ILI9341_GFX.c **** 		}
+ 119:Core/Src/ILI9341_GFX.c **** 	}
+ 120:Core/Src/ILI9341_GFX.c **** 	// Really slow implementation, will require future overhaul
+ 121:Core/Src/ILI9341_GFX.c **** 	// TODO:	https://stackoverflow.com/questions/1201200/fast-algorithm-for-drawing-filled-circles
+ 122:Core/Src/ILI9341_GFX.c **** }
+ 551              		.loc 1 122 1
+ 552 0106 00BF     		nop
+ 553 0108 00BF     		nop
+ 554 010a 2C37     		adds	r7, r7, #44
+ 555              		.cfi_def_cfa_offset 12
+ 556 010c BD46     		mov	sp, r7
+ 557              		.cfi_def_cfa_register 13
+ 558              		@ sp needed
+ 559 010e 90BD     		pop	{r4, r7, pc}
+ 560              		.cfi_endproc
+ 561              	.LFE322:
+ 563              		.section	.text.ILI9341_Draw_Hollow_Rectangle_Coord,"ax",%progbits
+ 564              		.align	1
+ 565              		.global	ILI9341_Draw_Hollow_Rectangle_Coord
+ 566              		.syntax unified
+ 567              		.thumb
+ 568              		.thumb_func
+ 570              	ILI9341_Draw_Hollow_Rectangle_Coord:
+ 571              	.LFB323:
+ 123:Core/Src/ILI9341_GFX.c **** 
+ 124:Core/Src/ILI9341_GFX.c **** /*Draw a hollow rectangle between positions X0,Y0 and X1,Y1 with specified colour*/
+ 125:Core/Src/ILI9341_GFX.c **** void ILI9341_Draw_Hollow_Rectangle_Coord(uint16_t X0, uint16_t Y0, uint16_t X1, uint16_t Y1, uint16
+ 126:Core/Src/ILI9341_GFX.c **** {
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 15
+
+
+ 572              		.loc 1 126 1
+ 573              		.cfi_startproc
+ 574              		@ args = 4, pretend = 0, frame = 24
+ 575              		@ frame_needed = 1, uses_anonymous_args = 0
+ 576 0000 90B5     		push	{r4, r7, lr}
+ 577              		.cfi_def_cfa_offset 12
+ 578              		.cfi_offset 4, -12
+ 579              		.cfi_offset 7, -8
+ 580              		.cfi_offset 14, -4
+ 581 0002 87B0     		sub	sp, sp, #28
+ 582              		.cfi_def_cfa_offset 40
+ 583 0004 00AF     		add	r7, sp, #0
+ 584              		.cfi_def_cfa_register 7
+ 585 0006 0446     		mov	r4, r0
+ 586 0008 0846     		mov	r0, r1
+ 587 000a 1146     		mov	r1, r2
+ 588 000c 1A46     		mov	r2, r3
+ 589 000e 2346     		mov	r3, r4	@ movhi
+ 590 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 591 0012 0346     		mov	r3, r0	@ movhi
+ 592 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+ 593 0016 0B46     		mov	r3, r1	@ movhi
+ 594 0018 7B80     		strh	r3, [r7, #2]	@ movhi
+ 595 001a 1346     		mov	r3, r2	@ movhi
+ 596 001c 3B80     		strh	r3, [r7]	@ movhi
+ 127:Core/Src/ILI9341_GFX.c **** 	uint16_t X_length = 0;
+ 597              		.loc 1 127 11
+ 598 001e 0023     		movs	r3, #0
+ 599 0020 FB82     		strh	r3, [r7, #22]	@ movhi
+ 128:Core/Src/ILI9341_GFX.c **** 	uint16_t Y_length = 0;
+ 600              		.loc 1 128 11
+ 601 0022 0023     		movs	r3, #0
+ 602 0024 BB82     		strh	r3, [r7, #20]	@ movhi
+ 129:Core/Src/ILI9341_GFX.c **** 	uint8_t Negative_X = 0;
+ 603              		.loc 1 129 10
+ 604 0026 0023     		movs	r3, #0
+ 605 0028 FB74     		strb	r3, [r7, #19]
+ 130:Core/Src/ILI9341_GFX.c **** 	uint8_t Negative_Y = 0;
+ 606              		.loc 1 130 10
+ 607 002a 0023     		movs	r3, #0
+ 608 002c BB74     		strb	r3, [r7, #18]
+ 131:Core/Src/ILI9341_GFX.c **** 	float Calc_Negative = 0;
+ 609              		.loc 1 131 8
+ 610 002e 4FF00003 		mov	r3, #0
+ 611 0032 FB60     		str	r3, [r7, #12]	@ float
+ 132:Core/Src/ILI9341_GFX.c **** 
+ 133:Core/Src/ILI9341_GFX.c **** 	Calc_Negative = X1 - X0;
+ 612              		.loc 1 133 21
+ 613 0034 7A88     		ldrh	r2, [r7, #2]
+ 614 0036 FB88     		ldrh	r3, [r7, #6]
+ 615 0038 D31A     		subs	r3, r2, r3
+ 616              		.loc 1 133 16
+ 617 003a 07EE903A 		vmov	s15, r3	@ int
+ 618 003e F8EEE77A 		vcvt.f32.s32	s15, s15
+ 619 0042 C7ED037A 		vstr.32	s15, [r7, #12]
+ 134:Core/Src/ILI9341_GFX.c **** 	if (Calc_Negative < 0)
+ 620              		.loc 1 134 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 16
+
+
+ 621 0046 D7ED037A 		vldr.32	s15, [r7, #12]
+ 622 004a F5EEC07A 		vcmpe.f32	s15, #0
+ 623 004e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 624 0052 01D5     		bpl	.L13
+ 135:Core/Src/ILI9341_GFX.c **** 		Negative_X = 1;
+ 625              		.loc 1 135 14
+ 626 0054 0123     		movs	r3, #1
+ 627 0056 FB74     		strb	r3, [r7, #19]
+ 628              	.L13:
+ 136:Core/Src/ILI9341_GFX.c **** 	Calc_Negative = 0;
+ 629              		.loc 1 136 16
+ 630 0058 4FF00003 		mov	r3, #0
+ 631 005c FB60     		str	r3, [r7, #12]	@ float
+ 137:Core/Src/ILI9341_GFX.c **** 
+ 138:Core/Src/ILI9341_GFX.c **** 	Calc_Negative = Y1 - Y0;
+ 632              		.loc 1 138 21
+ 633 005e 3A88     		ldrh	r2, [r7]
+ 634 0060 BB88     		ldrh	r3, [r7, #4]
+ 635 0062 D31A     		subs	r3, r2, r3
+ 636              		.loc 1 138 16
+ 637 0064 07EE903A 		vmov	s15, r3	@ int
+ 638 0068 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 639 006c C7ED037A 		vstr.32	s15, [r7, #12]
+ 139:Core/Src/ILI9341_GFX.c **** 	if (Calc_Negative < 0)
+ 640              		.loc 1 139 5
+ 641 0070 D7ED037A 		vldr.32	s15, [r7, #12]
+ 642 0074 F5EEC07A 		vcmpe.f32	s15, #0
+ 643 0078 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 644 007c 01D5     		bpl	.L15
+ 140:Core/Src/ILI9341_GFX.c **** 		Negative_Y = 1;
+ 645              		.loc 1 140 14
+ 646 007e 0123     		movs	r3, #1
+ 647 0080 BB74     		strb	r3, [r7, #18]
+ 648              	.L15:
+ 141:Core/Src/ILI9341_GFX.c **** 
+ 142:Core/Src/ILI9341_GFX.c **** 	// DRAW HORIZONTAL!
+ 143:Core/Src/ILI9341_GFX.c **** 	if (!Negative_X)
+ 649              		.loc 1 143 5
+ 650 0082 FB7C     		ldrb	r3, [r7, #19]	@ zero_extendqisi2
+ 651 0084 002B     		cmp	r3, #0
+ 652 0086 04D1     		bne	.L17
+ 144:Core/Src/ILI9341_GFX.c **** 	{
+ 145:Core/Src/ILI9341_GFX.c **** 		X_length = X1 - X0;
+ 653              		.loc 1 145 12
+ 654 0088 7A88     		ldrh	r2, [r7, #2]	@ movhi
+ 655 008a FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 656 008c D31A     		subs	r3, r2, r3
+ 657 008e FB82     		strh	r3, [r7, #22]	@ movhi
+ 658 0090 03E0     		b	.L18
+ 659              	.L17:
+ 146:Core/Src/ILI9341_GFX.c **** 	}
+ 147:Core/Src/ILI9341_GFX.c **** 	else
+ 148:Core/Src/ILI9341_GFX.c **** 	{
+ 149:Core/Src/ILI9341_GFX.c **** 		X_length = X0 - X1;
+ 660              		.loc 1 149 12
+ 661 0092 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 662 0094 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 17
+
+
+ 663 0096 D31A     		subs	r3, r2, r3
+ 664 0098 FB82     		strh	r3, [r7, #22]	@ movhi
+ 665              	.L18:
+ 150:Core/Src/ILI9341_GFX.c **** 	}
+ 151:Core/Src/ILI9341_GFX.c **** 	ILI9341_Draw_Horizontal_Line(X0, Y0, X_length, Colour);
+ 666              		.loc 1 151 2
+ 667 009a 3B8D     		ldrh	r3, [r7, #40]
+ 668 009c FA8A     		ldrh	r2, [r7, #22]
+ 669 009e B988     		ldrh	r1, [r7, #4]
+ 670 00a0 F888     		ldrh	r0, [r7, #6]
+ 671 00a2 FFF7FEFF 		bl	ILI9341_Draw_Horizontal_Line
+ 152:Core/Src/ILI9341_GFX.c **** 	ILI9341_Draw_Horizontal_Line(X0, Y1, X_length, Colour);
+ 672              		.loc 1 152 2
+ 673 00a6 3B8D     		ldrh	r3, [r7, #40]
+ 674 00a8 FA8A     		ldrh	r2, [r7, #22]
+ 675 00aa 3988     		ldrh	r1, [r7]
+ 676 00ac F888     		ldrh	r0, [r7, #6]
+ 677 00ae FFF7FEFF 		bl	ILI9341_Draw_Horizontal_Line
+ 153:Core/Src/ILI9341_GFX.c **** 
+ 154:Core/Src/ILI9341_GFX.c **** 	// DRAW VERTICAL!
+ 155:Core/Src/ILI9341_GFX.c **** 	if (!Negative_Y)
+ 678              		.loc 1 155 5
+ 679 00b2 BB7C     		ldrb	r3, [r7, #18]	@ zero_extendqisi2
+ 680 00b4 002B     		cmp	r3, #0
+ 681 00b6 04D1     		bne	.L19
+ 156:Core/Src/ILI9341_GFX.c **** 	{
+ 157:Core/Src/ILI9341_GFX.c **** 		Y_length = Y1 - Y0;
+ 682              		.loc 1 157 12
+ 683 00b8 3A88     		ldrh	r2, [r7]	@ movhi
+ 684 00ba BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 685 00bc D31A     		subs	r3, r2, r3
+ 686 00be BB82     		strh	r3, [r7, #20]	@ movhi
+ 687 00c0 03E0     		b	.L20
+ 688              	.L19:
+ 158:Core/Src/ILI9341_GFX.c **** 	}
+ 159:Core/Src/ILI9341_GFX.c **** 	else
+ 160:Core/Src/ILI9341_GFX.c **** 	{
+ 161:Core/Src/ILI9341_GFX.c **** 		Y_length = Y0 - Y1;
+ 689              		.loc 1 161 12
+ 690 00c2 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 691 00c4 3B88     		ldrh	r3, [r7]	@ movhi
+ 692 00c6 D31A     		subs	r3, r2, r3
+ 693 00c8 BB82     		strh	r3, [r7, #20]	@ movhi
+ 694              	.L20:
+ 162:Core/Src/ILI9341_GFX.c **** 	}
+ 163:Core/Src/ILI9341_GFX.c **** 	ILI9341_Draw_Vertical_Line(X0, Y0, Y_length, Colour);
+ 695              		.loc 1 163 2
+ 696 00ca 3B8D     		ldrh	r3, [r7, #40]
+ 697 00cc BA8A     		ldrh	r2, [r7, #20]
+ 698 00ce B988     		ldrh	r1, [r7, #4]
+ 699 00d0 F888     		ldrh	r0, [r7, #6]
+ 700 00d2 FFF7FEFF 		bl	ILI9341_Draw_Vertical_Line
+ 164:Core/Src/ILI9341_GFX.c **** 	ILI9341_Draw_Vertical_Line(X1, Y0, Y_length, Colour);
+ 701              		.loc 1 164 2
+ 702 00d6 3B8D     		ldrh	r3, [r7, #40]
+ 703 00d8 BA8A     		ldrh	r2, [r7, #20]
+ 704 00da B988     		ldrh	r1, [r7, #4]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 18
+
+
+ 705 00dc 7888     		ldrh	r0, [r7, #2]
+ 706 00de FFF7FEFF 		bl	ILI9341_Draw_Vertical_Line
+ 165:Core/Src/ILI9341_GFX.c **** 
+ 166:Core/Src/ILI9341_GFX.c **** 	if ((X_length > 0) || (Y_length > 0))
+ 707              		.loc 1 166 5
+ 708 00e2 FB8A     		ldrh	r3, [r7, #22]
+ 709 00e4 002B     		cmp	r3, #0
+ 710 00e6 02D1     		bne	.L21
+ 711              		.loc 1 166 21 discriminator 1
+ 712 00e8 BB8A     		ldrh	r3, [r7, #20]
+ 713 00ea 002B     		cmp	r3, #0
+ 714 00ec 05D0     		beq	.L25
+ 715              	.L21:
+ 167:Core/Src/ILI9341_GFX.c **** 	{
+ 168:Core/Src/ILI9341_GFX.c **** 		ILI9341_Draw_Pixel(X1, Y1, Colour);
+ 716              		.loc 1 168 3
+ 717 00ee 3A8D     		ldrh	r2, [r7, #40]
+ 718 00f0 3988     		ldrh	r1, [r7]
+ 719 00f2 7B88     		ldrh	r3, [r7, #2]
+ 720 00f4 1846     		mov	r0, r3
+ 721 00f6 FFF7FEFF 		bl	ILI9341_Draw_Pixel
+ 722              	.L25:
+ 169:Core/Src/ILI9341_GFX.c **** 	}
+ 170:Core/Src/ILI9341_GFX.c **** }
+ 723              		.loc 1 170 1
+ 724 00fa 00BF     		nop
+ 725 00fc 1C37     		adds	r7, r7, #28
+ 726              		.cfi_def_cfa_offset 12
+ 727 00fe BD46     		mov	sp, r7
+ 728              		.cfi_def_cfa_register 13
+ 729              		@ sp needed
+ 730 0100 90BD     		pop	{r4, r7, pc}
+ 731              		.cfi_endproc
+ 732              	.LFE323:
+ 734              		.section	.text.ILI9341_Draw_Filled_Rectangle_Coord,"ax",%progbits
+ 735              		.align	1
+ 736              		.global	ILI9341_Draw_Filled_Rectangle_Coord
+ 737              		.syntax unified
+ 738              		.thumb
+ 739              		.thumb_func
+ 741              	ILI9341_Draw_Filled_Rectangle_Coord:
+ 742              	.LFB324:
+ 171:Core/Src/ILI9341_GFX.c **** 
+ 172:Core/Src/ILI9341_GFX.c **** /*Draw a filled rectangle between positions X0,Y0 and X1,Y1 with specified colour*/
+ 173:Core/Src/ILI9341_GFX.c **** void ILI9341_Draw_Filled_Rectangle_Coord(uint16_t X0, uint16_t Y0, uint16_t X1, uint16_t Y1, uint16
+ 174:Core/Src/ILI9341_GFX.c **** {
+ 743              		.loc 1 174 1
+ 744              		.cfi_startproc
+ 745              		@ args = 4, pretend = 0, frame = 24
+ 746              		@ frame_needed = 1, uses_anonymous_args = 0
+ 747 0000 90B5     		push	{r4, r7, lr}
+ 748              		.cfi_def_cfa_offset 12
+ 749              		.cfi_offset 4, -12
+ 750              		.cfi_offset 7, -8
+ 751              		.cfi_offset 14, -4
+ 752 0002 89B0     		sub	sp, sp, #36
+ 753              		.cfi_def_cfa_offset 48
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 19
+
+
+ 754 0004 02AF     		add	r7, sp, #8
+ 755              		.cfi_def_cfa 7, 40
+ 756 0006 0446     		mov	r4, r0
+ 757 0008 0846     		mov	r0, r1
+ 758 000a 1146     		mov	r1, r2
+ 759 000c 1A46     		mov	r2, r3
+ 760 000e 2346     		mov	r3, r4	@ movhi
+ 761 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 762 0012 0346     		mov	r3, r0	@ movhi
+ 763 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+ 764 0016 0B46     		mov	r3, r1	@ movhi
+ 765 0018 7B80     		strh	r3, [r7, #2]	@ movhi
+ 766 001a 1346     		mov	r3, r2	@ movhi
+ 767 001c 3B80     		strh	r3, [r7]	@ movhi
+ 175:Core/Src/ILI9341_GFX.c **** 	uint16_t X_length = 0;
+ 768              		.loc 1 175 11
+ 769 001e 0023     		movs	r3, #0
+ 770 0020 FB82     		strh	r3, [r7, #22]	@ movhi
+ 176:Core/Src/ILI9341_GFX.c **** 	uint16_t Y_length = 0;
+ 771              		.loc 1 176 11
+ 772 0022 0023     		movs	r3, #0
+ 773 0024 BB82     		strh	r3, [r7, #20]	@ movhi
+ 177:Core/Src/ILI9341_GFX.c **** 	uint8_t Negative_X = 0;
+ 774              		.loc 1 177 10
+ 775 0026 0023     		movs	r3, #0
+ 776 0028 FB74     		strb	r3, [r7, #19]
+ 178:Core/Src/ILI9341_GFX.c **** 	uint8_t Negative_Y = 0;
+ 777              		.loc 1 178 10
+ 778 002a 0023     		movs	r3, #0
+ 779 002c BB74     		strb	r3, [r7, #18]
+ 179:Core/Src/ILI9341_GFX.c **** 	int32_t Calc_Negative = 0;
+ 780              		.loc 1 179 10
+ 781 002e 0023     		movs	r3, #0
+ 782 0030 BB60     		str	r3, [r7, #8]
+ 180:Core/Src/ILI9341_GFX.c **** 
+ 181:Core/Src/ILI9341_GFX.c **** 	uint16_t X0_true = 0;
+ 783              		.loc 1 181 11
+ 784 0032 0023     		movs	r3, #0
+ 785 0034 3B82     		strh	r3, [r7, #16]	@ movhi
+ 182:Core/Src/ILI9341_GFX.c **** 	uint16_t Y0_true = 0;
+ 786              		.loc 1 182 11
+ 787 0036 0023     		movs	r3, #0
+ 788 0038 FB81     		strh	r3, [r7, #14]	@ movhi
+ 183:Core/Src/ILI9341_GFX.c **** 
+ 184:Core/Src/ILI9341_GFX.c **** 	Calc_Negative = X1 - X0;
+ 789              		.loc 1 184 21
+ 790 003a 7A88     		ldrh	r2, [r7, #2]
+ 791 003c FB88     		ldrh	r3, [r7, #6]
+ 792              		.loc 1 184 16
+ 793 003e D31A     		subs	r3, r2, r3
+ 794 0040 BB60     		str	r3, [r7, #8]
+ 185:Core/Src/ILI9341_GFX.c **** 	if (Calc_Negative < 0)
+ 795              		.loc 1 185 5
+ 796 0042 BB68     		ldr	r3, [r7, #8]
+ 797 0044 002B     		cmp	r3, #0
+ 798 0046 01DA     		bge	.L27
+ 186:Core/Src/ILI9341_GFX.c **** 		Negative_X = 1;
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 20
+
+
+ 799              		.loc 1 186 14
+ 800 0048 0123     		movs	r3, #1
+ 801 004a FB74     		strb	r3, [r7, #19]
+ 802              	.L27:
+ 187:Core/Src/ILI9341_GFX.c **** 	Calc_Negative = 0;
+ 803              		.loc 1 187 16
+ 804 004c 0023     		movs	r3, #0
+ 805 004e BB60     		str	r3, [r7, #8]
+ 188:Core/Src/ILI9341_GFX.c **** 
+ 189:Core/Src/ILI9341_GFX.c **** 	Calc_Negative = Y1 - Y0;
+ 806              		.loc 1 189 21
+ 807 0050 3A88     		ldrh	r2, [r7]
+ 808 0052 BB88     		ldrh	r3, [r7, #4]
+ 809              		.loc 1 189 16
+ 810 0054 D31A     		subs	r3, r2, r3
+ 811 0056 BB60     		str	r3, [r7, #8]
+ 190:Core/Src/ILI9341_GFX.c **** 	if (Calc_Negative < 0)
+ 812              		.loc 1 190 5
+ 813 0058 BB68     		ldr	r3, [r7, #8]
+ 814 005a 002B     		cmp	r3, #0
+ 815 005c 01DA     		bge	.L28
+ 191:Core/Src/ILI9341_GFX.c **** 		Negative_Y = 1;
+ 816              		.loc 1 191 14
+ 817 005e 0123     		movs	r3, #1
+ 818 0060 BB74     		strb	r3, [r7, #18]
+ 819              	.L28:
+ 192:Core/Src/ILI9341_GFX.c **** 
+ 193:Core/Src/ILI9341_GFX.c **** 	// DRAW HORIZONTAL!
+ 194:Core/Src/ILI9341_GFX.c **** 	if (!Negative_X)
+ 820              		.loc 1 194 5
+ 821 0062 FB7C     		ldrb	r3, [r7, #19]	@ zero_extendqisi2
+ 822 0064 002B     		cmp	r3, #0
+ 823 0066 06D1     		bne	.L29
+ 195:Core/Src/ILI9341_GFX.c **** 	{
+ 196:Core/Src/ILI9341_GFX.c **** 		X_length = X1 - X0;
+ 824              		.loc 1 196 12
+ 825 0068 7A88     		ldrh	r2, [r7, #2]	@ movhi
+ 826 006a FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 827 006c D31A     		subs	r3, r2, r3
+ 828 006e FB82     		strh	r3, [r7, #22]	@ movhi
+ 197:Core/Src/ILI9341_GFX.c **** 		X0_true = X0;
+ 829              		.loc 1 197 11
+ 830 0070 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 831 0072 3B82     		strh	r3, [r7, #16]	@ movhi
+ 832 0074 05E0     		b	.L30
+ 833              	.L29:
+ 198:Core/Src/ILI9341_GFX.c **** 	}
+ 199:Core/Src/ILI9341_GFX.c **** 	else
+ 200:Core/Src/ILI9341_GFX.c **** 	{
+ 201:Core/Src/ILI9341_GFX.c **** 		X_length = X0 - X1;
+ 834              		.loc 1 201 12
+ 835 0076 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 836 0078 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 837 007a D31A     		subs	r3, r2, r3
+ 838 007c FB82     		strh	r3, [r7, #22]	@ movhi
+ 202:Core/Src/ILI9341_GFX.c **** 		X0_true = X1;
+ 839              		.loc 1 202 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 21
+
+
+ 840 007e 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 841 0080 3B82     		strh	r3, [r7, #16]	@ movhi
+ 842              	.L30:
+ 203:Core/Src/ILI9341_GFX.c **** 	}
+ 204:Core/Src/ILI9341_GFX.c **** 
+ 205:Core/Src/ILI9341_GFX.c **** 	// DRAW VERTICAL!
+ 206:Core/Src/ILI9341_GFX.c **** 	if (!Negative_Y)
+ 843              		.loc 1 206 5
+ 844 0082 BB7C     		ldrb	r3, [r7, #18]	@ zero_extendqisi2
+ 845 0084 002B     		cmp	r3, #0
+ 846 0086 06D1     		bne	.L31
+ 207:Core/Src/ILI9341_GFX.c **** 	{
+ 208:Core/Src/ILI9341_GFX.c **** 		Y_length = Y1 - Y0;
+ 847              		.loc 1 208 12
+ 848 0088 3A88     		ldrh	r2, [r7]	@ movhi
+ 849 008a BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 850 008c D31A     		subs	r3, r2, r3
+ 851 008e BB82     		strh	r3, [r7, #20]	@ movhi
+ 209:Core/Src/ILI9341_GFX.c **** 		Y0_true = Y0;
+ 852              		.loc 1 209 11
+ 853 0090 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 854 0092 FB81     		strh	r3, [r7, #14]	@ movhi
+ 855 0094 05E0     		b	.L32
+ 856              	.L31:
+ 210:Core/Src/ILI9341_GFX.c **** 	}
+ 211:Core/Src/ILI9341_GFX.c **** 	else
+ 212:Core/Src/ILI9341_GFX.c **** 	{
+ 213:Core/Src/ILI9341_GFX.c **** 		Y_length = Y0 - Y1;
+ 857              		.loc 1 213 12
+ 858 0096 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 859 0098 3B88     		ldrh	r3, [r7]	@ movhi
+ 860 009a D31A     		subs	r3, r2, r3
+ 861 009c BB82     		strh	r3, [r7, #20]	@ movhi
+ 214:Core/Src/ILI9341_GFX.c **** 		Y0_true = Y1;
+ 862              		.loc 1 214 11
+ 863 009e 3B88     		ldrh	r3, [r7]	@ movhi
+ 864 00a0 FB81     		strh	r3, [r7, #14]	@ movhi
+ 865              	.L32:
+ 215:Core/Src/ILI9341_GFX.c **** 	}
+ 216:Core/Src/ILI9341_GFX.c **** 
+ 217:Core/Src/ILI9341_GFX.c **** 	ILI9341_Draw_Rectangle(X0_true, Y0_true, X_length, Y_length, Colour);
+ 866              		.loc 1 217 2
+ 867 00a2 BC8A     		ldrh	r4, [r7, #20]
+ 868 00a4 FA8A     		ldrh	r2, [r7, #22]
+ 869 00a6 F989     		ldrh	r1, [r7, #14]
+ 870 00a8 388A     		ldrh	r0, [r7, #16]
+ 871 00aa 3B8D     		ldrh	r3, [r7, #40]
+ 872 00ac 0093     		str	r3, [sp]
+ 873 00ae 2346     		mov	r3, r4
+ 874 00b0 FFF7FEFF 		bl	ILI9341_Draw_Rectangle
+ 218:Core/Src/ILI9341_GFX.c **** }
+ 875              		.loc 1 218 1
+ 876 00b4 00BF     		nop
+ 877 00b6 1C37     		adds	r7, r7, #28
+ 878              		.cfi_def_cfa_offset 12
+ 879 00b8 BD46     		mov	sp, r7
+ 880              		.cfi_def_cfa_register 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 22
+
+
+ 881              		@ sp needed
+ 882 00ba 90BD     		pop	{r4, r7, pc}
+ 883              		.cfi_endproc
+ 884              	.LFE324:
+ 886              		.section	.text.ILI9341_Draw_Char,"ax",%progbits
+ 887              		.align	1
+ 888              		.global	ILI9341_Draw_Char
+ 889              		.syntax unified
+ 890              		.thumb
+ 891              		.thumb_func
+ 893              	ILI9341_Draw_Char:
+ 894              	.LFB325:
+ 219:Core/Src/ILI9341_GFX.c **** 
+ 220:Core/Src/ILI9341_GFX.c **** /*Draws a character (fonts imported from fonts.h) at X,Y location with specified font colour, size 
+ 221:Core/Src/ILI9341_GFX.c **** /*See fonts.h implementation of font on what is required for changing to a different font when swit
+ 222:Core/Src/ILI9341_GFX.c **** void ILI9341_Draw_Char(char Character, uint8_t X, uint8_t Y, uint16_t Colour, uint16_t Size, uint16
+ 223:Core/Src/ILI9341_GFX.c **** {
+ 895              		.loc 1 223 1
+ 896              		.cfi_startproc
+ 897              		@ args = 8, pretend = 0, frame = 24
+ 898              		@ frame_needed = 1, uses_anonymous_args = 0
+ 899 0000 90B5     		push	{r4, r7, lr}
+ 900              		.cfi_def_cfa_offset 12
+ 901              		.cfi_offset 4, -12
+ 902              		.cfi_offset 7, -8
+ 903              		.cfi_offset 14, -4
+ 904 0002 89B0     		sub	sp, sp, #36
+ 905              		.cfi_def_cfa_offset 48
+ 906 0004 02AF     		add	r7, sp, #8
+ 907              		.cfi_def_cfa 7, 40
+ 908 0006 0446     		mov	r4, r0
+ 909 0008 0846     		mov	r0, r1
+ 910 000a 1146     		mov	r1, r2
+ 911 000c 1A46     		mov	r2, r3
+ 912 000e 2346     		mov	r3, r4
+ 913 0010 FB71     		strb	r3, [r7, #7]
+ 914 0012 0346     		mov	r3, r0
+ 915 0014 BB71     		strb	r3, [r7, #6]
+ 916 0016 0B46     		mov	r3, r1
+ 917 0018 7B71     		strb	r3, [r7, #5]
+ 918 001a 1346     		mov	r3, r2	@ movhi
+ 919 001c 7B80     		strh	r3, [r7, #2]	@ movhi
+ 224:Core/Src/ILI9341_GFX.c **** 	uint8_t function_char;
+ 225:Core/Src/ILI9341_GFX.c **** 	uint8_t i, j;
+ 226:Core/Src/ILI9341_GFX.c **** 
+ 227:Core/Src/ILI9341_GFX.c **** 	function_char = Character;
+ 920              		.loc 1 227 16
+ 921 001e FB79     		ldrb	r3, [r7, #7]
+ 922 0020 FB75     		strb	r3, [r7, #23]
+ 228:Core/Src/ILI9341_GFX.c **** 
+ 229:Core/Src/ILI9341_GFX.c **** 	if (function_char < ' ')
+ 923              		.loc 1 229 5
+ 924 0022 FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
+ 925 0024 1F2B     		cmp	r3, #31
+ 926 0026 02D8     		bhi	.L34
+ 230:Core/Src/ILI9341_GFX.c **** 	{
+ 231:Core/Src/ILI9341_GFX.c **** 		Character = 0;
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 23
+
+
+ 927              		.loc 1 231 13
+ 928 0028 0023     		movs	r3, #0
+ 929 002a FB71     		strb	r3, [r7, #7]
+ 930 002c 02E0     		b	.L35
+ 931              	.L34:
+ 232:Core/Src/ILI9341_GFX.c **** 	}
+ 233:Core/Src/ILI9341_GFX.c **** 	else
+ 234:Core/Src/ILI9341_GFX.c **** 	{
+ 235:Core/Src/ILI9341_GFX.c **** 		function_char -= 32;
+ 932              		.loc 1 235 17
+ 933 002e FB7D     		ldrb	r3, [r7, #23]
+ 934 0030 203B     		subs	r3, r3, #32
+ 935 0032 FB75     		strb	r3, [r7, #23]
+ 936              	.L35:
+ 937              	.LBB4:
+ 236:Core/Src/ILI9341_GFX.c **** 	}
+ 237:Core/Src/ILI9341_GFX.c **** 
+ 238:Core/Src/ILI9341_GFX.c **** 	char temp[CHAR_WIDTH];
+ 239:Core/Src/ILI9341_GFX.c **** 	for (uint8_t k = 0; k < CHAR_WIDTH; k++)
+ 938              		.loc 1 239 15
+ 939 0034 0023     		movs	r3, #0
+ 940 0036 3B75     		strb	r3, [r7, #20]
+ 941              		.loc 1 239 2
+ 942 0038 12E0     		b	.L36
+ 943              	.L37:
+ 240:Core/Src/ILI9341_GFX.c **** 	{
+ 241:Core/Src/ILI9341_GFX.c **** 		temp[k] = font[function_char][k];
+ 944              		.loc 1 241 32 discriminator 3
+ 945 003a FA7D     		ldrb	r2, [r7, #23]	@ zero_extendqisi2
+ 946 003c 387D     		ldrb	r0, [r7, #20]	@ zero_extendqisi2
+ 947              		.loc 1 241 7 discriminator 3
+ 948 003e 397D     		ldrb	r1, [r7, #20]	@ zero_extendqisi2
+ 949              		.loc 1 241 32 discriminator 3
+ 950 0040 3B4C     		ldr	r4, .L44
+ 951 0042 1346     		mov	r3, r2
+ 952 0044 5B00     		lsls	r3, r3, #1
+ 953 0046 1344     		add	r3, r3, r2
+ 954 0048 5B00     		lsls	r3, r3, #1
+ 955 004a 2344     		add	r3, r3, r4
+ 956 004c 0344     		add	r3, r3, r0
+ 957 004e 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 958              		.loc 1 241 11 discriminator 3
+ 959 0050 01F11803 		add	r3, r1, #24
+ 960 0054 3B44     		add	r3, r3, r7
+ 961 0056 03F80C2C 		strb	r2, [r3, #-12]
+ 239:Core/Src/ILI9341_GFX.c **** 	{
+ 962              		.loc 1 239 39 discriminator 3
+ 963 005a 3B7D     		ldrb	r3, [r7, #20]	@ zero_extendqisi2
+ 964 005c 0133     		adds	r3, r3, #1
+ 965 005e 3B75     		strb	r3, [r7, #20]
+ 966              	.L36:
+ 239:Core/Src/ILI9341_GFX.c **** 	{
+ 967              		.loc 1 239 24 discriminator 1
+ 968 0060 3B7D     		ldrb	r3, [r7, #20]	@ zero_extendqisi2
+ 969 0062 052B     		cmp	r3, #5
+ 970 0064 E9D9     		bls	.L37
+ 971              	.LBE4:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 24
+
+
+ 242:Core/Src/ILI9341_GFX.c **** 	}
+ 243:Core/Src/ILI9341_GFX.c **** 
+ 244:Core/Src/ILI9341_GFX.c **** 	// Draw pixels
+ 245:Core/Src/ILI9341_GFX.c **** 	ILI9341_Draw_Rectangle(X, Y, CHAR_WIDTH * Size, CHAR_HEIGHT * Size, Background_Colour);
+ 972              		.loc 1 245 2
+ 973 0066 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 974 0068 98B2     		uxth	r0, r3
+ 975 006a 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 976 006c 99B2     		uxth	r1, r3
+ 977 006e 3B8D     		ldrh	r3, [r7, #40]	@ movhi
+ 978 0070 1A46     		mov	r2, r3	@ movhi
+ 979 0072 5200     		lsls	r2, r2, #1
+ 980 0074 1344     		add	r3, r3, r2
+ 981 0076 5B00     		lsls	r3, r3, #1
+ 982 0078 9AB2     		uxth	r2, r3
+ 983 007a 3B8D     		ldrh	r3, [r7, #40]	@ movhi
+ 984 007c DB00     		lsls	r3, r3, #3
+ 985 007e 9CB2     		uxth	r4, r3
+ 986 0080 BB8D     		ldrh	r3, [r7, #44]
+ 987 0082 0093     		str	r3, [sp]
+ 988 0084 2346     		mov	r3, r4
+ 989 0086 FFF7FEFF 		bl	ILI9341_Draw_Rectangle
+ 246:Core/Src/ILI9341_GFX.c **** 	for (j = 0; j < CHAR_WIDTH; j++)
+ 990              		.loc 1 246 9
+ 991 008a 0023     		movs	r3, #0
+ 992 008c 7B75     		strb	r3, [r7, #21]
+ 993              		.loc 1 246 2
+ 994 008e 47E0     		b	.L38
+ 995              	.L43:
+ 247:Core/Src/ILI9341_GFX.c **** 	{
+ 248:Core/Src/ILI9341_GFX.c **** 		for (i = 0; i < CHAR_HEIGHT; i++)
+ 996              		.loc 1 248 10
+ 997 0090 0023     		movs	r3, #0
+ 998 0092 BB75     		strb	r3, [r7, #22]
+ 999              		.loc 1 248 3
+ 1000 0094 3EE0     		b	.L39
+ 1001              	.L42:
+ 249:Core/Src/ILI9341_GFX.c **** 		{
+ 250:Core/Src/ILI9341_GFX.c **** 			if (temp[j] & (1 << i))
+ 1002              		.loc 1 250 12
+ 1003 0096 7B7D     		ldrb	r3, [r7, #21]	@ zero_extendqisi2
+ 1004 0098 1833     		adds	r3, r3, #24
+ 1005 009a 3B44     		add	r3, r3, r7
+ 1006 009c 13F80C3C 		ldrb	r3, [r3, #-12]	@ zero_extendqisi2
+ 1007 00a0 1A46     		mov	r2, r3
+ 1008              		.loc 1 250 8
+ 1009 00a2 BB7D     		ldrb	r3, [r7, #22]	@ zero_extendqisi2
+ 1010 00a4 42FA03F3 		asr	r3, r2, r3
+ 1011 00a8 03F00103 		and	r3, r3, #1
+ 1012              		.loc 1 250 7
+ 1013 00ac 002B     		cmp	r3, #0
+ 1014 00ae 2ED0     		beq	.L40
+ 251:Core/Src/ILI9341_GFX.c **** 			{
+ 252:Core/Src/ILI9341_GFX.c **** 				if (Size == 1)
+ 1015              		.loc 1 252 8
+ 1016 00b0 3B8D     		ldrh	r3, [r7, #40]
+ 1017 00b2 012B     		cmp	r3, #1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 25
+
+
+ 1018 00b4 10D1     		bne	.L41
+ 253:Core/Src/ILI9341_GFX.c **** 				{
+ 254:Core/Src/ILI9341_GFX.c **** 					ILI9341_Draw_Pixel(X + j, Y + i, Colour);
+ 1019              		.loc 1 254 6
+ 1020 00b6 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 1021 00b8 9AB2     		uxth	r2, r3
+ 1022 00ba 7B7D     		ldrb	r3, [r7, #21]	@ zero_extendqisi2
+ 1023 00bc 9BB2     		uxth	r3, r3
+ 1024 00be 1344     		add	r3, r3, r2
+ 1025 00c0 98B2     		uxth	r0, r3
+ 1026 00c2 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 1027 00c4 9AB2     		uxth	r2, r3
+ 1028 00c6 BB7D     		ldrb	r3, [r7, #22]	@ zero_extendqisi2
+ 1029 00c8 9BB2     		uxth	r3, r3
+ 1030 00ca 1344     		add	r3, r3, r2
+ 1031 00cc 9BB2     		uxth	r3, r3
+ 1032 00ce 7A88     		ldrh	r2, [r7, #2]
+ 1033 00d0 1946     		mov	r1, r3
+ 1034 00d2 FFF7FEFF 		bl	ILI9341_Draw_Pixel
+ 1035 00d6 1AE0     		b	.L40
+ 1036              	.L41:
+ 255:Core/Src/ILI9341_GFX.c **** 				}
+ 256:Core/Src/ILI9341_GFX.c **** 				else
+ 257:Core/Src/ILI9341_GFX.c **** 				{
+ 258:Core/Src/ILI9341_GFX.c **** 					ILI9341_Draw_Rectangle(X + (j * Size), Y + (i * Size), Size, Size, Colour);
+ 1037              		.loc 1 258 6
+ 1038 00d8 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 1039 00da 9AB2     		uxth	r2, r3
+ 1040              		.loc 1 258 36
+ 1041 00dc 7B7D     		ldrb	r3, [r7, #21]	@ zero_extendqisi2
+ 1042 00de 9BB2     		uxth	r3, r3
+ 1043 00e0 398D     		ldrh	r1, [r7, #40]	@ movhi
+ 1044 00e2 11FB03F3 		smulbb	r3, r1, r3
+ 1045 00e6 9BB2     		uxth	r3, r3
+ 1046              		.loc 1 258 6
+ 1047 00e8 1344     		add	r3, r3, r2
+ 1048 00ea 98B2     		uxth	r0, r3
+ 1049 00ec 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 1050 00ee 9AB2     		uxth	r2, r3
+ 1051              		.loc 1 258 52
+ 1052 00f0 BB7D     		ldrb	r3, [r7, #22]	@ zero_extendqisi2
+ 1053 00f2 9BB2     		uxth	r3, r3
+ 1054 00f4 398D     		ldrh	r1, [r7, #40]	@ movhi
+ 1055 00f6 11FB03F3 		smulbb	r3, r1, r3
+ 1056 00fa 9BB2     		uxth	r3, r3
+ 1057              		.loc 1 258 6
+ 1058 00fc 1344     		add	r3, r3, r2
+ 1059 00fe 99B2     		uxth	r1, r3
+ 1060 0100 3C8D     		ldrh	r4, [r7, #40]
+ 1061 0102 3A8D     		ldrh	r2, [r7, #40]
+ 1062 0104 7B88     		ldrh	r3, [r7, #2]
+ 1063 0106 0093     		str	r3, [sp]
+ 1064 0108 2346     		mov	r3, r4
+ 1065 010a FFF7FEFF 		bl	ILI9341_Draw_Rectangle
+ 1066              	.L40:
+ 248:Core/Src/ILI9341_GFX.c **** 		{
+ 1067              		.loc 1 248 33 discriminator 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 26
+
+
+ 1068 010e BB7D     		ldrb	r3, [r7, #22]	@ zero_extendqisi2
+ 1069 0110 0133     		adds	r3, r3, #1
+ 1070 0112 BB75     		strb	r3, [r7, #22]
+ 1071              	.L39:
+ 248:Core/Src/ILI9341_GFX.c **** 		{
+ 1072              		.loc 1 248 17 discriminator 1
+ 1073 0114 BB7D     		ldrb	r3, [r7, #22]	@ zero_extendqisi2
+ 1074 0116 072B     		cmp	r3, #7
+ 1075 0118 BDD9     		bls	.L42
+ 246:Core/Src/ILI9341_GFX.c **** 	{
+ 1076              		.loc 1 246 31 discriminator 2
+ 1077 011a 7B7D     		ldrb	r3, [r7, #21]	@ zero_extendqisi2
+ 1078 011c 0133     		adds	r3, r3, #1
+ 1079 011e 7B75     		strb	r3, [r7, #21]
+ 1080              	.L38:
+ 246:Core/Src/ILI9341_GFX.c **** 	{
+ 1081              		.loc 1 246 16 discriminator 1
+ 1082 0120 7B7D     		ldrb	r3, [r7, #21]	@ zero_extendqisi2
+ 1083 0122 052B     		cmp	r3, #5
+ 1084 0124 B4D9     		bls	.L43
+ 259:Core/Src/ILI9341_GFX.c **** 				}
+ 260:Core/Src/ILI9341_GFX.c **** 			}
+ 261:Core/Src/ILI9341_GFX.c **** 		}
+ 262:Core/Src/ILI9341_GFX.c **** 	}
+ 263:Core/Src/ILI9341_GFX.c **** }
+ 1085              		.loc 1 263 1
+ 1086 0126 00BF     		nop
+ 1087 0128 00BF     		nop
+ 1088 012a 1C37     		adds	r7, r7, #28
+ 1089              		.cfi_def_cfa_offset 12
+ 1090 012c BD46     		mov	sp, r7
+ 1091              		.cfi_def_cfa_register 13
+ 1092              		@ sp needed
+ 1093 012e 90BD     		pop	{r4, r7, pc}
+ 1094              	.L45:
+ 1095              		.align	2
+ 1096              	.L44:
+ 1097 0130 00000000 		.word	font
+ 1098              		.cfi_endproc
+ 1099              	.LFE325:
+ 1101              		.section	.text.ILI9341_Draw_Text,"ax",%progbits
+ 1102              		.align	1
+ 1103              		.global	ILI9341_Draw_Text
+ 1104              		.syntax unified
+ 1105              		.thumb
+ 1106              		.thumb_func
+ 1108              	ILI9341_Draw_Text:
+ 1109              	.LFB326:
+ 264:Core/Src/ILI9341_GFX.c **** 
+ 265:Core/Src/ILI9341_GFX.c **** /*Draws an array of characters (fonts imported from fonts.h) at X,Y location with specified font co
+ 266:Core/Src/ILI9341_GFX.c **** /*See fonts.h implementation of font on what is required for changing to a different font when swit
+ 267:Core/Src/ILI9341_GFX.c **** void ILI9341_Draw_Text(const char *Text, uint8_t X, uint8_t Y, uint16_t Colour, uint16_t Size, uint
+ 268:Core/Src/ILI9341_GFX.c **** {
+ 1110              		.loc 1 268 1
+ 1111              		.cfi_startproc
+ 1112              		@ args = 8, pretend = 0, frame = 8
+ 1113              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 27
+
+
+ 1114 0000 90B5     		push	{r4, r7, lr}
+ 1115              		.cfi_def_cfa_offset 12
+ 1116              		.cfi_offset 4, -12
+ 1117              		.cfi_offset 7, -8
+ 1118              		.cfi_offset 14, -4
+ 1119 0002 85B0     		sub	sp, sp, #20
+ 1120              		.cfi_def_cfa_offset 32
+ 1121 0004 02AF     		add	r7, sp, #8
+ 1122              		.cfi_def_cfa 7, 24
+ 1123 0006 7860     		str	r0, [r7, #4]
+ 1124 0008 0846     		mov	r0, r1
+ 1125 000a 1146     		mov	r1, r2
+ 1126 000c 1A46     		mov	r2, r3
+ 1127 000e 0346     		mov	r3, r0
+ 1128 0010 FB70     		strb	r3, [r7, #3]
+ 1129 0012 0B46     		mov	r3, r1
+ 1130 0014 BB70     		strb	r3, [r7, #2]
+ 1131 0016 1346     		mov	r3, r2	@ movhi
+ 1132 0018 3B80     		strh	r3, [r7]	@ movhi
+ 269:Core/Src/ILI9341_GFX.c **** 	while (*Text)
+ 1133              		.loc 1 269 8
+ 1134 001a 17E0     		b	.L47
+ 1135              	.L48:
+ 270:Core/Src/ILI9341_GFX.c **** 	{
+ 271:Core/Src/ILI9341_GFX.c **** 		ILI9341_Draw_Char(*Text++, X, Y, Colour, Size, Background_Colour);
+ 1136              		.loc 1 271 26
+ 1137 001c 7B68     		ldr	r3, [r7, #4]
+ 1138 001e 5A1C     		adds	r2, r3, #1
+ 1139 0020 7A60     		str	r2, [r7, #4]
+ 1140              		.loc 1 271 3
+ 1141 0022 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 1142 0024 3C88     		ldrh	r4, [r7]
+ 1143 0026 BA78     		ldrb	r2, [r7, #2]	@ zero_extendqisi2
+ 1144 0028 F978     		ldrb	r1, [r7, #3]	@ zero_extendqisi2
+ 1145 002a BB8B     		ldrh	r3, [r7, #28]
+ 1146 002c 0193     		str	r3, [sp, #4]
+ 1147 002e 3B8B     		ldrh	r3, [r7, #24]
+ 1148 0030 0093     		str	r3, [sp]
+ 1149 0032 2346     		mov	r3, r4
+ 1150 0034 FFF7FEFF 		bl	ILI9341_Draw_Char
+ 272:Core/Src/ILI9341_GFX.c **** 		X += CHAR_WIDTH * Size;
+ 1151              		.loc 1 272 5
+ 1152 0038 3B8B     		ldrh	r3, [r7, #24]	@ movhi
+ 1153 003a DBB2     		uxtb	r3, r3
+ 1154 003c 1A46     		mov	r2, r3
+ 1155 003e 5200     		lsls	r2, r2, #1
+ 1156 0040 1344     		add	r3, r3, r2
+ 1157 0042 5B00     		lsls	r3, r3, #1
+ 1158 0044 DAB2     		uxtb	r2, r3
+ 1159 0046 FB78     		ldrb	r3, [r7, #3]
+ 1160 0048 1344     		add	r3, r3, r2
+ 1161 004a FB70     		strb	r3, [r7, #3]
+ 1162              	.L47:
+ 269:Core/Src/ILI9341_GFX.c **** 	while (*Text)
+ 1163              		.loc 1 269 9
+ 1164 004c 7B68     		ldr	r3, [r7, #4]
+ 1165 004e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 28
+
+
+ 1166 0050 002B     		cmp	r3, #0
+ 1167 0052 E3D1     		bne	.L48
+ 273:Core/Src/ILI9341_GFX.c **** 	}
+ 274:Core/Src/ILI9341_GFX.c **** }
+ 1168              		.loc 1 274 1
+ 1169 0054 00BF     		nop
+ 1170 0056 00BF     		nop
+ 1171 0058 0C37     		adds	r7, r7, #12
+ 1172              		.cfi_def_cfa_offset 12
+ 1173 005a BD46     		mov	sp, r7
+ 1174              		.cfi_def_cfa_register 13
+ 1175              		@ sp needed
+ 1176 005c 90BD     		pop	{r4, r7, pc}
+ 1177              		.cfi_endproc
+ 1178              	.LFE326:
+ 1180              		.section	.text.ILI9341_Draw_Image,"ax",%progbits
+ 1181              		.align	1
+ 1182              		.global	ILI9341_Draw_Image
+ 1183              		.syntax unified
+ 1184              		.thumb
+ 1185              		.thumb_func
+ 1187              	ILI9341_Draw_Image:
+ 1188              	.LFB327:
+ 275:Core/Src/ILI9341_GFX.c **** 
+ 276:Core/Src/ILI9341_GFX.c **** /*Draws a full screen picture from flash. Image converted from RGB .jpeg/other to C array using onl
+ 277:Core/Src/ILI9341_GFX.c **** // USING CONVERTER: http://www.digole.com/tools/PicturetoC_Hex_converter.php
+ 278:Core/Src/ILI9341_GFX.c **** // 65K colour (2Bytes / Pixel)
+ 279:Core/Src/ILI9341_GFX.c **** void ILI9341_Draw_Image(const char *Image_Array, uint8_t Orientation)
+ 280:Core/Src/ILI9341_GFX.c **** {
+ 1189              		.loc 1 280 1
+ 1190              		.cfi_startproc
+ 1191              		@ args = 0, pretend = 0, frame = 560
+ 1192              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1193 0000 80B5     		push	{r7, lr}
+ 1194              		.cfi_def_cfa_offset 8
+ 1195              		.cfi_offset 7, -8
+ 1196              		.cfi_offset 14, -4
+ 1197 0002 ADF50C7D 		sub	sp, sp, #560
+ 1198              		.cfi_def_cfa_offset 568
+ 1199 0006 00AF     		add	r7, sp, #0
+ 1200              		.cfi_def_cfa_register 7
+ 1201 0008 07F50C73 		add	r3, r7, #560
+ 1202 000c A3F50B73 		sub	r3, r3, #556
+ 1203 0010 1860     		str	r0, [r3]
+ 1204 0012 0A46     		mov	r2, r1
+ 1205 0014 07F50C73 		add	r3, r7, #560
+ 1206 0018 A3F22D23 		subw	r3, r3, #557
+ 1207 001c 1A70     		strb	r2, [r3]
+ 281:Core/Src/ILI9341_GFX.c **** 	if (Orientation == SCREEN_HORIZONTAL_1)
+ 1208              		.loc 1 281 5
+ 1209 001e 07F50C73 		add	r3, r7, #560
+ 1210 0022 A3F22D23 		subw	r3, r3, #557
+ 1211 0026 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1212 0028 012B     		cmp	r3, #1
+ 1213 002a 5ED1     		bne	.L50
+ 1214              	.LBB5:
+ 282:Core/Src/ILI9341_GFX.c **** 	{
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 29
+
+
+ 283:Core/Src/ILI9341_GFX.c **** 		ILI9341_Set_Rotation(SCREEN_HORIZONTAL_1);
+ 1215              		.loc 1 283 3
+ 1216 002c 0120     		movs	r0, #1
+ 1217 002e FFF7FEFF 		bl	ILI9341_Set_Rotation
+ 284:Core/Src/ILI9341_GFX.c **** 		ILI9341_Set_Address(0, 0, ILI9341_SCREEN_WIDTH, ILI9341_SCREEN_HEIGHT);
+ 1218              		.loc 1 284 3
+ 1219 0032 F023     		movs	r3, #240
+ 1220 0034 4FF4A072 		mov	r2, #320
+ 1221 0038 0021     		movs	r1, #0
+ 1222 003a 0020     		movs	r0, #0
+ 1223 003c FFF7FEFF 		bl	ILI9341_Set_Address
+ 285:Core/Src/ILI9341_GFX.c **** 
+ 286:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, DC_Pin, GPIO_PIN_SET);
+ 1224              		.loc 1 286 3
+ 1225 0040 0122     		movs	r2, #1
+ 1226 0042 4FF40051 		mov	r1, #8192
+ 1227 0046 C448     		ldr	r0, .L71
+ 1228 0048 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 287:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, CS_Pin, GPIO_PIN_RESET);
+ 1229              		.loc 1 287 3
+ 1230 004c 0022     		movs	r2, #0
+ 1231 004e 4FF48051 		mov	r1, #4096
+ 1232 0052 C148     		ldr	r0, .L71
+ 1233 0054 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 288:Core/Src/ILI9341_GFX.c **** 
+ 289:Core/Src/ILI9341_GFX.c **** 		unsigned char Temp_small_buffer[BURST_MAX_SIZE];
+ 290:Core/Src/ILI9341_GFX.c **** 		uint32_t counter = 0;
+ 1234              		.loc 1 290 12
+ 1235 0058 0023     		movs	r3, #0
+ 1236 005a C7F82C32 		str	r3, [r7, #556]
+ 1237              	.LBB6:
+ 291:Core/Src/ILI9341_GFX.c **** 		for (uint32_t i = 0; i < ILI9341_SCREEN_WIDTH * ILI9341_SCREEN_HEIGHT * 2 / BURST_MAX_SIZE; i++)
+ 1238              		.loc 1 291 17
+ 1239 005e 0023     		movs	r3, #0
+ 1240 0060 C7F82832 		str	r3, [r7, #552]
+ 1241              		.loc 1 291 3
+ 1242 0064 35E0     		b	.L51
+ 1243              	.L54:
+ 1244              	.LBB7:
+ 292:Core/Src/ILI9341_GFX.c **** 		{
+ 293:Core/Src/ILI9341_GFX.c **** 			for (uint32_t k = 0; k < BURST_MAX_SIZE; k++)
+ 1245              		.loc 1 293 18
+ 1246 0066 0023     		movs	r3, #0
+ 1247 0068 C7F82432 		str	r3, [r7, #548]
+ 1248              		.loc 1 293 4
+ 1249 006c 19E0     		b	.L52
+ 1250              	.L53:
+ 294:Core/Src/ILI9341_GFX.c **** 			{
+ 295:Core/Src/ILI9341_GFX.c **** 				Temp_small_buffer[k] = Image_Array[counter + k];
+ 1251              		.loc 1 295 48 discriminator 3
+ 1252 006e D7F82C22 		ldr	r2, [r7, #556]
+ 1253 0072 D7F82432 		ldr	r3, [r7, #548]
+ 1254 0076 1344     		add	r3, r3, r2
+ 1255              		.loc 1 295 39 discriminator 3
+ 1256 0078 07F50C72 		add	r2, r7, #560
+ 1257 007c A2F50B72 		sub	r2, r2, #556
+ 1258 0080 1268     		ldr	r2, [r2]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 30
+
+
+ 1259 0082 1344     		add	r3, r3, r2
+ 1260 0084 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 1261              		.loc 1 295 26 discriminator 3
+ 1262 0086 07F50C73 		add	r3, r7, #560
+ 1263 008a A3F50972 		sub	r2, r3, #548
+ 1264 008e D7F82432 		ldr	r3, [r7, #548]
+ 1265 0092 1344     		add	r3, r3, r2
+ 1266 0094 0A46     		mov	r2, r1
+ 1267 0096 1A70     		strb	r2, [r3]
+ 293:Core/Src/ILI9341_GFX.c **** 			{
+ 1268              		.loc 1 293 46 discriminator 3
+ 1269 0098 D7F82432 		ldr	r3, [r7, #548]
+ 1270 009c 0133     		adds	r3, r3, #1
+ 1271 009e C7F82432 		str	r3, [r7, #548]
+ 1272              	.L52:
+ 293:Core/Src/ILI9341_GFX.c **** 			{
+ 1273              		.loc 1 293 27 discriminator 1
+ 1274 00a2 D7F82432 		ldr	r3, [r7, #548]
+ 1275 00a6 B3F5FA7F 		cmp	r3, #500
+ 1276 00aa E0D3     		bcc	.L53
+ 1277              	.LBE7:
+ 296:Core/Src/ILI9341_GFX.c **** 			}
+ 297:Core/Src/ILI9341_GFX.c **** 			SPI_Transmit((unsigned char *)Temp_small_buffer, BURST_MAX_SIZE, 10);
+ 1278              		.loc 1 297 4 discriminator 2
+ 1279 00ac 07F10C03 		add	r3, r7, #12
+ 1280 00b0 0A22     		movs	r2, #10
+ 1281 00b2 4FF4FA71 		mov	r1, #500
+ 1282 00b6 1846     		mov	r0, r3
+ 1283 00b8 FFF7FEFF 		bl	SPI_Transmit
+ 298:Core/Src/ILI9341_GFX.c **** 			counter += BURST_MAX_SIZE;
+ 1284              		.loc 1 298 12 discriminator 2
+ 1285 00bc D7F82C32 		ldr	r3, [r7, #556]
+ 1286 00c0 03F5FA73 		add	r3, r3, #500
+ 1287 00c4 C7F82C32 		str	r3, [r7, #556]
+ 291:Core/Src/ILI9341_GFX.c **** 		{
+ 1288              		.loc 1 291 96 discriminator 2
+ 1289 00c8 D7F82832 		ldr	r3, [r7, #552]
+ 1290 00cc 0133     		adds	r3, r3, #1
+ 1291 00ce C7F82832 		str	r3, [r7, #552]
+ 1292              	.L51:
+ 291:Core/Src/ILI9341_GFX.c **** 		{
+ 1293              		.loc 1 291 26 discriminator 1
+ 1294 00d2 D7F82832 		ldr	r3, [r7, #552]
+ 1295 00d6 B3F5997F 		cmp	r3, #306
+ 1296 00da C4D9     		bls	.L54
+ 1297              	.LBE6:
+ 299:Core/Src/ILI9341_GFX.c **** 		}
+ 300:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, CS_Pin, GPIO_PIN_SET);
+ 1298              		.loc 1 300 3
+ 1299 00dc 0122     		movs	r2, #1
+ 1300 00de 4FF48051 		mov	r1, #4096
+ 1301 00e2 9D48     		ldr	r0, .L71
+ 1302 00e4 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1303              	.LBE5:
+ 301:Core/Src/ILI9341_GFX.c **** 	}
+ 302:Core/Src/ILI9341_GFX.c **** 	else if (Orientation == SCREEN_HORIZONTAL_2)
+ 303:Core/Src/ILI9341_GFX.c **** 	{
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 31
+
+
+ 304:Core/Src/ILI9341_GFX.c **** 		ILI9341_Set_Rotation(SCREEN_HORIZONTAL_2);
+ 305:Core/Src/ILI9341_GFX.c **** 		ILI9341_Set_Address(0, 0, ILI9341_SCREEN_WIDTH, ILI9341_SCREEN_HEIGHT);
+ 306:Core/Src/ILI9341_GFX.c **** 
+ 307:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, DC_Pin, GPIO_PIN_SET);
+ 308:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, CS_Pin, GPIO_PIN_RESET);
+ 309:Core/Src/ILI9341_GFX.c **** 
+ 310:Core/Src/ILI9341_GFX.c **** 		unsigned char Temp_small_buffer[BURST_MAX_SIZE];
+ 311:Core/Src/ILI9341_GFX.c **** 		uint32_t counter = 0;
+ 312:Core/Src/ILI9341_GFX.c **** 		for (uint32_t i = 0; i < ILI9341_SCREEN_WIDTH * ILI9341_SCREEN_HEIGHT * 2 / BURST_MAX_SIZE; i++)
+ 313:Core/Src/ILI9341_GFX.c **** 		{
+ 314:Core/Src/ILI9341_GFX.c **** 			for (uint32_t k = 0; k < BURST_MAX_SIZE; k++)
+ 315:Core/Src/ILI9341_GFX.c **** 			{
+ 316:Core/Src/ILI9341_GFX.c **** 				Temp_small_buffer[k] = Image_Array[counter + k];
+ 317:Core/Src/ILI9341_GFX.c **** 			}
+ 318:Core/Src/ILI9341_GFX.c **** 			SPI_Transmit((unsigned char *)Temp_small_buffer, BURST_MAX_SIZE, 10);
+ 319:Core/Src/ILI9341_GFX.c **** 			counter += BURST_MAX_SIZE;
+ 320:Core/Src/ILI9341_GFX.c **** 		}
+ 321:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, CS_Pin, GPIO_PIN_SET);
+ 322:Core/Src/ILI9341_GFX.c **** 	}
+ 323:Core/Src/ILI9341_GFX.c **** 	else if (Orientation == SCREEN_VERTICAL_2)
+ 324:Core/Src/ILI9341_GFX.c **** 	{
+ 325:Core/Src/ILI9341_GFX.c **** 		ILI9341_Set_Rotation(SCREEN_VERTICAL_2);
+ 326:Core/Src/ILI9341_GFX.c **** 		ILI9341_Set_Address(0, 0, ILI9341_SCREEN_HEIGHT, ILI9341_SCREEN_WIDTH);
+ 327:Core/Src/ILI9341_GFX.c **** 
+ 328:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, DC_Pin, GPIO_PIN_SET);
+ 329:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, CS_Pin, GPIO_PIN_RESET);
+ 330:Core/Src/ILI9341_GFX.c **** 
+ 331:Core/Src/ILI9341_GFX.c **** 		unsigned char Temp_small_buffer[BURST_MAX_SIZE];
+ 332:Core/Src/ILI9341_GFX.c **** 		uint32_t counter = 0;
+ 333:Core/Src/ILI9341_GFX.c **** 		for (uint32_t i = 0; i < ILI9341_SCREEN_WIDTH * ILI9341_SCREEN_HEIGHT * 2 / BURST_MAX_SIZE; i++)
+ 334:Core/Src/ILI9341_GFX.c **** 		{
+ 335:Core/Src/ILI9341_GFX.c **** 			for (uint32_t k = 0; k < BURST_MAX_SIZE; k++)
+ 336:Core/Src/ILI9341_GFX.c **** 			{
+ 337:Core/Src/ILI9341_GFX.c **** 				Temp_small_buffer[k] = Image_Array[counter + k];
+ 338:Core/Src/ILI9341_GFX.c **** 			}
+ 339:Core/Src/ILI9341_GFX.c **** 			SPI_Transmit((unsigned char *)Temp_small_buffer, BURST_MAX_SIZE, 10);
+ 340:Core/Src/ILI9341_GFX.c **** 			counter += BURST_MAX_SIZE;
+ 341:Core/Src/ILI9341_GFX.c **** 		}
+ 342:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, CS_Pin, GPIO_PIN_SET);
+ 343:Core/Src/ILI9341_GFX.c **** 	}
+ 344:Core/Src/ILI9341_GFX.c **** 	else if (Orientation == SCREEN_VERTICAL_1)
+ 345:Core/Src/ILI9341_GFX.c **** 	{
+ 346:Core/Src/ILI9341_GFX.c **** 		ILI9341_Set_Rotation(SCREEN_VERTICAL_1);
+ 347:Core/Src/ILI9341_GFX.c **** 		ILI9341_Set_Address(0, 0, ILI9341_SCREEN_HEIGHT, ILI9341_SCREEN_WIDTH);
+ 348:Core/Src/ILI9341_GFX.c **** 
+ 349:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, DC_Pin, GPIO_PIN_SET);
+ 350:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, CS_Pin, GPIO_PIN_RESET);
+ 351:Core/Src/ILI9341_GFX.c **** 
+ 352:Core/Src/ILI9341_GFX.c **** 		unsigned char Temp_small_buffer[BURST_MAX_SIZE];
+ 353:Core/Src/ILI9341_GFX.c **** 		uint32_t counter = 0;
+ 354:Core/Src/ILI9341_GFX.c **** 		for (uint32_t i = 0; i < ILI9341_SCREEN_WIDTH * ILI9341_SCREEN_HEIGHT * 2 / BURST_MAX_SIZE; i++)
+ 355:Core/Src/ILI9341_GFX.c **** 		{
+ 356:Core/Src/ILI9341_GFX.c **** 			for (uint32_t k = 0; k < BURST_MAX_SIZE; k++)
+ 357:Core/Src/ILI9341_GFX.c **** 			{
+ 358:Core/Src/ILI9341_GFX.c **** 				Temp_small_buffer[k] = Image_Array[counter + k];
+ 359:Core/Src/ILI9341_GFX.c **** 			}
+ 360:Core/Src/ILI9341_GFX.c **** 			SPI_Transmit((unsigned char *)Temp_small_buffer, BURST_MAX_SIZE, 10);
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 32
+
+
+ 361:Core/Src/ILI9341_GFX.c **** 			counter += BURST_MAX_SIZE;
+ 362:Core/Src/ILI9341_GFX.c **** 		}
+ 363:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, CS_Pin, GPIO_PIN_SET);
+ 364:Core/Src/ILI9341_GFX.c **** 	}
+ 365:Core/Src/ILI9341_GFX.c **** }
+ 1304              		.loc 1 365 1
+ 1305 00e8 30E1     		b	.L70
+ 1306              	.L50:
+ 302:Core/Src/ILI9341_GFX.c **** 	{
+ 1307              		.loc 1 302 10
+ 1308 00ea 07F50C73 		add	r3, r7, #560
+ 1309 00ee A3F22D23 		subw	r3, r3, #557
+ 1310 00f2 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1311 00f4 032B     		cmp	r3, #3
+ 1312 00f6 5ED1     		bne	.L56
+ 1313              	.LBB8:
+ 304:Core/Src/ILI9341_GFX.c **** 		ILI9341_Set_Address(0, 0, ILI9341_SCREEN_WIDTH, ILI9341_SCREEN_HEIGHT);
+ 1314              		.loc 1 304 3
+ 1315 00f8 0320     		movs	r0, #3
+ 1316 00fa FFF7FEFF 		bl	ILI9341_Set_Rotation
+ 305:Core/Src/ILI9341_GFX.c **** 
+ 1317              		.loc 1 305 3
+ 1318 00fe F023     		movs	r3, #240
+ 1319 0100 4FF4A072 		mov	r2, #320
+ 1320 0104 0021     		movs	r1, #0
+ 1321 0106 0020     		movs	r0, #0
+ 1322 0108 FFF7FEFF 		bl	ILI9341_Set_Address
+ 307:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, CS_Pin, GPIO_PIN_RESET);
+ 1323              		.loc 1 307 3
+ 1324 010c 0122     		movs	r2, #1
+ 1325 010e 4FF40051 		mov	r1, #8192
+ 1326 0112 9148     		ldr	r0, .L71
+ 1327 0114 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 308:Core/Src/ILI9341_GFX.c **** 
+ 1328              		.loc 1 308 3
+ 1329 0118 0022     		movs	r2, #0
+ 1330 011a 4FF48051 		mov	r1, #4096
+ 1331 011e 8E48     		ldr	r0, .L71
+ 1332 0120 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 311:Core/Src/ILI9341_GFX.c **** 		for (uint32_t i = 0; i < ILI9341_SCREEN_WIDTH * ILI9341_SCREEN_HEIGHT * 2 / BURST_MAX_SIZE; i++)
+ 1333              		.loc 1 311 12
+ 1334 0124 0023     		movs	r3, #0
+ 1335 0126 C7F82032 		str	r3, [r7, #544]
+ 1336              	.LBB9:
+ 312:Core/Src/ILI9341_GFX.c **** 		{
+ 1337              		.loc 1 312 17
+ 1338 012a 0023     		movs	r3, #0
+ 1339 012c C7F81C32 		str	r3, [r7, #540]
+ 312:Core/Src/ILI9341_GFX.c **** 		{
+ 1340              		.loc 1 312 3
+ 1341 0130 35E0     		b	.L57
+ 1342              	.L60:
+ 1343              	.LBB10:
+ 314:Core/Src/ILI9341_GFX.c **** 			{
+ 1344              		.loc 1 314 18
+ 1345 0132 0023     		movs	r3, #0
+ 1346 0134 C7F81832 		str	r3, [r7, #536]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 33
+
+
+ 314:Core/Src/ILI9341_GFX.c **** 			{
+ 1347              		.loc 1 314 4
+ 1348 0138 19E0     		b	.L58
+ 1349              	.L59:
+ 316:Core/Src/ILI9341_GFX.c **** 			}
+ 1350              		.loc 1 316 48 discriminator 3
+ 1351 013a D7F82022 		ldr	r2, [r7, #544]
+ 1352 013e D7F81832 		ldr	r3, [r7, #536]
+ 1353 0142 1344     		add	r3, r3, r2
+ 316:Core/Src/ILI9341_GFX.c **** 			}
+ 1354              		.loc 1 316 39 discriminator 3
+ 1355 0144 07F50C72 		add	r2, r7, #560
+ 1356 0148 A2F50B72 		sub	r2, r2, #556
+ 1357 014c 1268     		ldr	r2, [r2]
+ 1358 014e 1344     		add	r3, r3, r2
+ 1359 0150 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 316:Core/Src/ILI9341_GFX.c **** 			}
+ 1360              		.loc 1 316 26 discriminator 3
+ 1361 0152 07F50C73 		add	r3, r7, #560
+ 1362 0156 A3F50972 		sub	r2, r3, #548
+ 1363 015a D7F81832 		ldr	r3, [r7, #536]
+ 1364 015e 1344     		add	r3, r3, r2
+ 1365 0160 0A46     		mov	r2, r1
+ 1366 0162 1A70     		strb	r2, [r3]
+ 314:Core/Src/ILI9341_GFX.c **** 			{
+ 1367              		.loc 1 314 46 discriminator 3
+ 1368 0164 D7F81832 		ldr	r3, [r7, #536]
+ 1369 0168 0133     		adds	r3, r3, #1
+ 1370 016a C7F81832 		str	r3, [r7, #536]
+ 1371              	.L58:
+ 314:Core/Src/ILI9341_GFX.c **** 			{
+ 1372              		.loc 1 314 27 discriminator 1
+ 1373 016e D7F81832 		ldr	r3, [r7, #536]
+ 1374 0172 B3F5FA7F 		cmp	r3, #500
+ 1375 0176 E0D3     		bcc	.L59
+ 1376              	.LBE10:
+ 318:Core/Src/ILI9341_GFX.c **** 			counter += BURST_MAX_SIZE;
+ 1377              		.loc 1 318 4 discriminator 2
+ 1378 0178 07F10C03 		add	r3, r7, #12
+ 1379 017c 0A22     		movs	r2, #10
+ 1380 017e 4FF4FA71 		mov	r1, #500
+ 1381 0182 1846     		mov	r0, r3
+ 1382 0184 FFF7FEFF 		bl	SPI_Transmit
+ 319:Core/Src/ILI9341_GFX.c **** 		}
+ 1383              		.loc 1 319 12 discriminator 2
+ 1384 0188 D7F82032 		ldr	r3, [r7, #544]
+ 1385 018c 03F5FA73 		add	r3, r3, #500
+ 1386 0190 C7F82032 		str	r3, [r7, #544]
+ 312:Core/Src/ILI9341_GFX.c **** 		{
+ 1387              		.loc 1 312 96 discriminator 2
+ 1388 0194 D7F81C32 		ldr	r3, [r7, #540]
+ 1389 0198 0133     		adds	r3, r3, #1
+ 1390 019a C7F81C32 		str	r3, [r7, #540]
+ 1391              	.L57:
+ 312:Core/Src/ILI9341_GFX.c **** 		{
+ 1392              		.loc 1 312 26 discriminator 1
+ 1393 019e D7F81C32 		ldr	r3, [r7, #540]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 34
+
+
+ 1394 01a2 B3F5997F 		cmp	r3, #306
+ 1395 01a6 C4D9     		bls	.L60
+ 1396              	.LBE9:
+ 321:Core/Src/ILI9341_GFX.c **** 	}
+ 1397              		.loc 1 321 3
+ 1398 01a8 0122     		movs	r2, #1
+ 1399 01aa 4FF48051 		mov	r1, #4096
+ 1400 01ae 6A48     		ldr	r0, .L71
+ 1401 01b0 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1402              	.LBE8:
+ 1403              		.loc 1 365 1
+ 1404 01b4 CAE0     		b	.L70
+ 1405              	.L56:
+ 323:Core/Src/ILI9341_GFX.c **** 	{
+ 1406              		.loc 1 323 10
+ 1407 01b6 07F50C73 		add	r3, r7, #560
+ 1408 01ba A3F22D23 		subw	r3, r3, #557
+ 1409 01be 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1410 01c0 022B     		cmp	r3, #2
+ 1411 01c2 5ED1     		bne	.L61
+ 1412              	.LBB11:
+ 325:Core/Src/ILI9341_GFX.c **** 		ILI9341_Set_Address(0, 0, ILI9341_SCREEN_HEIGHT, ILI9341_SCREEN_WIDTH);
+ 1413              		.loc 1 325 3
+ 1414 01c4 0220     		movs	r0, #2
+ 1415 01c6 FFF7FEFF 		bl	ILI9341_Set_Rotation
+ 326:Core/Src/ILI9341_GFX.c **** 
+ 1416              		.loc 1 326 3
+ 1417 01ca 4FF4A073 		mov	r3, #320
+ 1418 01ce F022     		movs	r2, #240
+ 1419 01d0 0021     		movs	r1, #0
+ 1420 01d2 0020     		movs	r0, #0
+ 1421 01d4 FFF7FEFF 		bl	ILI9341_Set_Address
+ 328:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, CS_Pin, GPIO_PIN_RESET);
+ 1422              		.loc 1 328 3
+ 1423 01d8 0122     		movs	r2, #1
+ 1424 01da 4FF40051 		mov	r1, #8192
+ 1425 01de 5E48     		ldr	r0, .L71
+ 1426 01e0 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 329:Core/Src/ILI9341_GFX.c **** 
+ 1427              		.loc 1 329 3
+ 1428 01e4 0022     		movs	r2, #0
+ 1429 01e6 4FF48051 		mov	r1, #4096
+ 1430 01ea 5B48     		ldr	r0, .L71
+ 1431 01ec FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 332:Core/Src/ILI9341_GFX.c **** 		for (uint32_t i = 0; i < ILI9341_SCREEN_WIDTH * ILI9341_SCREEN_HEIGHT * 2 / BURST_MAX_SIZE; i++)
+ 1432              		.loc 1 332 12
+ 1433 01f0 0023     		movs	r3, #0
+ 1434 01f2 C7F81432 		str	r3, [r7, #532]
+ 1435              	.LBB12:
+ 333:Core/Src/ILI9341_GFX.c **** 		{
+ 1436              		.loc 1 333 17
+ 1437 01f6 0023     		movs	r3, #0
+ 1438 01f8 C7F81032 		str	r3, [r7, #528]
+ 333:Core/Src/ILI9341_GFX.c **** 		{
+ 1439              		.loc 1 333 3
+ 1440 01fc 35E0     		b	.L62
+ 1441              	.L65:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 35
+
+
+ 1442              	.LBB13:
+ 335:Core/Src/ILI9341_GFX.c **** 			{
+ 1443              		.loc 1 335 18
+ 1444 01fe 0023     		movs	r3, #0
+ 1445 0200 C7F80C32 		str	r3, [r7, #524]
+ 335:Core/Src/ILI9341_GFX.c **** 			{
+ 1446              		.loc 1 335 4
+ 1447 0204 19E0     		b	.L63
+ 1448              	.L64:
+ 337:Core/Src/ILI9341_GFX.c **** 			}
+ 1449              		.loc 1 337 48 discriminator 3
+ 1450 0206 D7F81422 		ldr	r2, [r7, #532]
+ 1451 020a D7F80C32 		ldr	r3, [r7, #524]
+ 1452 020e 1344     		add	r3, r3, r2
+ 337:Core/Src/ILI9341_GFX.c **** 			}
+ 1453              		.loc 1 337 39 discriminator 3
+ 1454 0210 07F50C72 		add	r2, r7, #560
+ 1455 0214 A2F50B72 		sub	r2, r2, #556
+ 1456 0218 1268     		ldr	r2, [r2]
+ 1457 021a 1344     		add	r3, r3, r2
+ 1458 021c 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 337:Core/Src/ILI9341_GFX.c **** 			}
+ 1459              		.loc 1 337 26 discriminator 3
+ 1460 021e 07F50C73 		add	r3, r7, #560
+ 1461 0222 A3F50972 		sub	r2, r3, #548
+ 1462 0226 D7F80C32 		ldr	r3, [r7, #524]
+ 1463 022a 1344     		add	r3, r3, r2
+ 1464 022c 0A46     		mov	r2, r1
+ 1465 022e 1A70     		strb	r2, [r3]
+ 335:Core/Src/ILI9341_GFX.c **** 			{
+ 1466              		.loc 1 335 46 discriminator 3
+ 1467 0230 D7F80C32 		ldr	r3, [r7, #524]
+ 1468 0234 0133     		adds	r3, r3, #1
+ 1469 0236 C7F80C32 		str	r3, [r7, #524]
+ 1470              	.L63:
+ 335:Core/Src/ILI9341_GFX.c **** 			{
+ 1471              		.loc 1 335 27 discriminator 1
+ 1472 023a D7F80C32 		ldr	r3, [r7, #524]
+ 1473 023e B3F5FA7F 		cmp	r3, #500
+ 1474 0242 E0D3     		bcc	.L64
+ 1475              	.LBE13:
+ 339:Core/Src/ILI9341_GFX.c **** 			counter += BURST_MAX_SIZE;
+ 1476              		.loc 1 339 4 discriminator 2
+ 1477 0244 07F10C03 		add	r3, r7, #12
+ 1478 0248 0A22     		movs	r2, #10
+ 1479 024a 4FF4FA71 		mov	r1, #500
+ 1480 024e 1846     		mov	r0, r3
+ 1481 0250 FFF7FEFF 		bl	SPI_Transmit
+ 340:Core/Src/ILI9341_GFX.c **** 		}
+ 1482              		.loc 1 340 12 discriminator 2
+ 1483 0254 D7F81432 		ldr	r3, [r7, #532]
+ 1484 0258 03F5FA73 		add	r3, r3, #500
+ 1485 025c C7F81432 		str	r3, [r7, #532]
+ 333:Core/Src/ILI9341_GFX.c **** 		{
+ 1486              		.loc 1 333 96 discriminator 2
+ 1487 0260 D7F81032 		ldr	r3, [r7, #528]
+ 1488 0264 0133     		adds	r3, r3, #1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 36
+
+
+ 1489 0266 C7F81032 		str	r3, [r7, #528]
+ 1490              	.L62:
+ 333:Core/Src/ILI9341_GFX.c **** 		{
+ 1491              		.loc 1 333 26 discriminator 1
+ 1492 026a D7F81032 		ldr	r3, [r7, #528]
+ 1493 026e B3F5997F 		cmp	r3, #306
+ 1494 0272 C4D9     		bls	.L65
+ 1495              	.LBE12:
+ 342:Core/Src/ILI9341_GFX.c **** 	}
+ 1496              		.loc 1 342 3
+ 1497 0274 0122     		movs	r2, #1
+ 1498 0276 4FF48051 		mov	r1, #4096
+ 1499 027a 3748     		ldr	r0, .L71
+ 1500 027c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1501              	.LBE11:
+ 1502              		.loc 1 365 1
+ 1503 0280 64E0     		b	.L70
+ 1504              	.L61:
+ 344:Core/Src/ILI9341_GFX.c **** 	{
+ 1505              		.loc 1 344 10
+ 1506 0282 07F50C73 		add	r3, r7, #560
+ 1507 0286 A3F22D23 		subw	r3, r3, #557
+ 1508 028a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1509 028c 002B     		cmp	r3, #0
+ 1510 028e 5DD1     		bne	.L70
+ 1511              	.LBB14:
+ 346:Core/Src/ILI9341_GFX.c **** 		ILI9341_Set_Address(0, 0, ILI9341_SCREEN_HEIGHT, ILI9341_SCREEN_WIDTH);
+ 1512              		.loc 1 346 3
+ 1513 0290 0020     		movs	r0, #0
+ 1514 0292 FFF7FEFF 		bl	ILI9341_Set_Rotation
+ 347:Core/Src/ILI9341_GFX.c **** 
+ 1515              		.loc 1 347 3
+ 1516 0296 4FF4A073 		mov	r3, #320
+ 1517 029a F022     		movs	r2, #240
+ 1518 029c 0021     		movs	r1, #0
+ 1519 029e 0020     		movs	r0, #0
+ 1520 02a0 FFF7FEFF 		bl	ILI9341_Set_Address
+ 349:Core/Src/ILI9341_GFX.c **** 		HAL_GPIO_WritePin(GPIOC, CS_Pin, GPIO_PIN_RESET);
+ 1521              		.loc 1 349 3
+ 1522 02a4 0122     		movs	r2, #1
+ 1523 02a6 4FF40051 		mov	r1, #8192
+ 1524 02aa 2B48     		ldr	r0, .L71
+ 1525 02ac FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 350:Core/Src/ILI9341_GFX.c **** 
+ 1526              		.loc 1 350 3
+ 1527 02b0 0022     		movs	r2, #0
+ 1528 02b2 4FF48051 		mov	r1, #4096
+ 1529 02b6 2848     		ldr	r0, .L71
+ 1530 02b8 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 353:Core/Src/ILI9341_GFX.c **** 		for (uint32_t i = 0; i < ILI9341_SCREEN_WIDTH * ILI9341_SCREEN_HEIGHT * 2 / BURST_MAX_SIZE; i++)
+ 1531              		.loc 1 353 12
+ 1532 02bc 0023     		movs	r3, #0
+ 1533 02be C7F80832 		str	r3, [r7, #520]
+ 1534              	.LBB15:
+ 354:Core/Src/ILI9341_GFX.c **** 		{
+ 1535              		.loc 1 354 17
+ 1536 02c2 0023     		movs	r3, #0
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 37
+
+
+ 1537 02c4 C7F80432 		str	r3, [r7, #516]
+ 354:Core/Src/ILI9341_GFX.c **** 		{
+ 1538              		.loc 1 354 3
+ 1539 02c8 35E0     		b	.L66
+ 1540              	.L69:
+ 1541              	.LBB16:
+ 356:Core/Src/ILI9341_GFX.c **** 			{
+ 1542              		.loc 1 356 18
+ 1543 02ca 0023     		movs	r3, #0
+ 1544 02cc C7F80032 		str	r3, [r7, #512]
+ 356:Core/Src/ILI9341_GFX.c **** 			{
+ 1545              		.loc 1 356 4
+ 1546 02d0 19E0     		b	.L67
+ 1547              	.L68:
+ 358:Core/Src/ILI9341_GFX.c **** 			}
+ 1548              		.loc 1 358 48 discriminator 3
+ 1549 02d2 D7F80822 		ldr	r2, [r7, #520]
+ 1550 02d6 D7F80032 		ldr	r3, [r7, #512]
+ 1551 02da 1344     		add	r3, r3, r2
+ 358:Core/Src/ILI9341_GFX.c **** 			}
+ 1552              		.loc 1 358 39 discriminator 3
+ 1553 02dc 07F50C72 		add	r2, r7, #560
+ 1554 02e0 A2F50B72 		sub	r2, r2, #556
+ 1555 02e4 1268     		ldr	r2, [r2]
+ 1556 02e6 1344     		add	r3, r3, r2
+ 1557 02e8 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 358:Core/Src/ILI9341_GFX.c **** 			}
+ 1558              		.loc 1 358 26 discriminator 3
+ 1559 02ea 07F50C73 		add	r3, r7, #560
+ 1560 02ee A3F50972 		sub	r2, r3, #548
+ 1561 02f2 D7F80032 		ldr	r3, [r7, #512]
+ 1562 02f6 1344     		add	r3, r3, r2
+ 1563 02f8 0A46     		mov	r2, r1
+ 1564 02fa 1A70     		strb	r2, [r3]
+ 356:Core/Src/ILI9341_GFX.c **** 			{
+ 1565              		.loc 1 356 46 discriminator 3
+ 1566 02fc D7F80032 		ldr	r3, [r7, #512]
+ 1567 0300 0133     		adds	r3, r3, #1
+ 1568 0302 C7F80032 		str	r3, [r7, #512]
+ 1569              	.L67:
+ 356:Core/Src/ILI9341_GFX.c **** 			{
+ 1570              		.loc 1 356 27 discriminator 1
+ 1571 0306 D7F80032 		ldr	r3, [r7, #512]
+ 1572 030a B3F5FA7F 		cmp	r3, #500
+ 1573 030e E0D3     		bcc	.L68
+ 1574              	.LBE16:
+ 360:Core/Src/ILI9341_GFX.c **** 			counter += BURST_MAX_SIZE;
+ 1575              		.loc 1 360 4 discriminator 2
+ 1576 0310 07F10C03 		add	r3, r7, #12
+ 1577 0314 0A22     		movs	r2, #10
+ 1578 0316 4FF4FA71 		mov	r1, #500
+ 1579 031a 1846     		mov	r0, r3
+ 1580 031c FFF7FEFF 		bl	SPI_Transmit
+ 361:Core/Src/ILI9341_GFX.c **** 		}
+ 1581              		.loc 1 361 12 discriminator 2
+ 1582 0320 D7F80832 		ldr	r3, [r7, #520]
+ 1583 0324 03F5FA73 		add	r3, r3, #500
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 38
+
+
+ 1584 0328 C7F80832 		str	r3, [r7, #520]
+ 354:Core/Src/ILI9341_GFX.c **** 		{
+ 1585              		.loc 1 354 96 discriminator 2
+ 1586 032c D7F80432 		ldr	r3, [r7, #516]
+ 1587 0330 0133     		adds	r3, r3, #1
+ 1588 0332 C7F80432 		str	r3, [r7, #516]
+ 1589              	.L66:
+ 354:Core/Src/ILI9341_GFX.c **** 		{
+ 1590              		.loc 1 354 26 discriminator 1
+ 1591 0336 D7F80432 		ldr	r3, [r7, #516]
+ 1592 033a B3F5997F 		cmp	r3, #306
+ 1593 033e C4D9     		bls	.L69
+ 1594              	.LBE15:
+ 363:Core/Src/ILI9341_GFX.c **** 	}
+ 1595              		.loc 1 363 3
+ 1596 0340 0122     		movs	r2, #1
+ 1597 0342 4FF48051 		mov	r1, #4096
+ 1598 0346 0448     		ldr	r0, .L71
+ 1599 0348 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1600              	.L70:
+ 1601              	.LBE14:
+ 1602              		.loc 1 365 1
+ 1603 034c 00BF     		nop
+ 1604 034e 07F50C77 		add	r7, r7, #560
+ 1605              		.cfi_def_cfa_offset 8
+ 1606 0352 BD46     		mov	sp, r7
+ 1607              		.cfi_def_cfa_register 13
+ 1608              		@ sp needed
+ 1609 0354 80BD     		pop	{r7, pc}
+ 1610              	.L72:
+ 1611 0356 00BF     		.align	2
+ 1612              	.L71:
+ 1613 0358 00080048 		.word	1207961600
+ 1614              		.cfi_endproc
+ 1615              	.LFE327:
+ 1617              		.text
+ 1618              	.Letext0:
+ 1619              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 1620              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 1621              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+ 1622              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 1623              		.file 6 "Core/Inc/main.h"
+ 1624              		.file 7 "Core/Inc/5x5_font.h"
+ 1625              		.file 8 "Core/Inc/ILI9341_STM32_Driver.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s 			page 39
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 ILI9341_GFX.c
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:20     .bss.msg_buffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:26     .bss.RxBuf:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:29     .bss.RxBuf:0000000000000000 RxBuf
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:32     .rodata.font:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:35     .rodata.font:0000000000000000 font
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:133    .text.ILI9341_Draw_Hollow_Circle:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:139    .text.ILI9341_Draw_Hollow_Circle:0000000000000000 ILI9341_Draw_Hollow_Circle
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:364    .text.ILI9341_Draw_Filled_Circle:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:370    .text.ILI9341_Draw_Filled_Circle:0000000000000000 ILI9341_Draw_Filled_Circle
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:564    .text.ILI9341_Draw_Hollow_Rectangle_Coord:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:570    .text.ILI9341_Draw_Hollow_Rectangle_Coord:0000000000000000 ILI9341_Draw_Hollow_Rectangle_Coord
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:735    .text.ILI9341_Draw_Filled_Rectangle_Coord:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:741    .text.ILI9341_Draw_Filled_Rectangle_Coord:0000000000000000 ILI9341_Draw_Filled_Rectangle_Coord
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:887    .text.ILI9341_Draw_Char:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:893    .text.ILI9341_Draw_Char:0000000000000000 ILI9341_Draw_Char
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:1097   .text.ILI9341_Draw_Char:0000000000000130 $d
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:1102   .text.ILI9341_Draw_Text:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:1108   .text.ILI9341_Draw_Text:0000000000000000 ILI9341_Draw_Text
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:1181   .text.ILI9341_Draw_Image:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:1187   .text.ILI9341_Draw_Image:0000000000000000 ILI9341_Draw_Image
+C:\Users\Morroway\AppData\Local\Temp\ccXMOFdk.s:1613   .text.ILI9341_Draw_Image:0000000000000358 $d
+
+UNDEFINED SYMBOLS
+ILI9341_Draw_Pixel
+ILI9341_Draw_Horizontal_Line
+ILI9341_Draw_Vertical_Line
+ILI9341_Draw_Rectangle
+ILI9341_Set_Rotation
+ILI9341_Set_Address
+HAL_GPIO_WritePin
+SPI_Transmit
