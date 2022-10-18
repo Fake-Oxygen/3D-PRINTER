@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 1
    2:Core/Src/ILI9341_STM32_Driver.c **** //	MIT License
    3:Core/Src/ILI9341_STM32_Driver.c **** //
    4:Core/Src/ILI9341_STM32_Driver.c **** //	Copyright (c) 2017 Matej Artnak
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 2
 
 
    5:Core/Src/ILI9341_STM32_Driver.c **** //
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 1
   59:Core/Src/ILI9341_STM32_Driver.c **** //	-SPI utilization:			87.12%
   60:Core/Src/ILI9341_STM32_Driver.c **** //	-MB/Second:						5.44
   61:Core/Src/ILI9341_STM32_Driver.c **** //	
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 3
 
 
   62:Core/Src/ILI9341_STM32_Driver.c **** //	ART Accelerator, instruction prefetch, CPI ICACHE and CPU DCACHE settings found in MXCUBE under 
@@ -164,2263 +164,2263 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 1
   62              		.cfi_offset 14, -4
   63 0002 00AF     		add	r7, sp, #0
   64              		.cfi_def_cfa_register 7
-  95:Core/Src/ILI9341_STM32_Driver.c **** MX_SPI5_Init();																							//SPI INIT
-  65              		.loc 1 95 1
-  66 0004 FFF7FEFF 		bl	MX_SPI5_Init
-  96:Core/Src/ILI9341_STM32_Driver.c **** MX_GPIO_Init();																							//GPIO INIT
-  67              		.loc 1 96 1
-  68 0008 FFF7FEFF 		bl	MX_GPIO_Init
+  95:Core/Src/ILI9341_STM32_Driver.c **** // MX_SPI1_Init();																							//SPI INIT
+  96:Core/Src/ILI9341_STM32_Driver.c **** // MX_GPIO_Init();																							//GPIO INIT
   97:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);	//CS OFF
-  69              		.loc 1 97 1
-  70 000c 0022     		movs	r2, #0
-  71 000e 4FF48051 		mov	r1, #4096
-  72 0012 0248     		ldr	r0, .L2
-  73 0014 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  65              		.loc 1 97 1
+  66 0004 0022     		movs	r2, #0
+  67 0006 4FF48051 		mov	r1, #4096
+  68 000a 0248     		ldr	r0, .L2
+  69 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
   98:Core/Src/ILI9341_STM32_Driver.c **** }
-  74              		.loc 1 98 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 4
+  70              		.loc 1 98 1
+  71 0010 00BF     		nop
+  72 0012 80BD     		pop	{r7, pc}
+  73              	.L3:
+  74              		.align	2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 4
 
 
-  75 0018 00BF     		nop
-  76 001a 80BD     		pop	{r7, pc}
-  77              	.L3:
-  78              		.align	2
-  79              	.L2:
-  80 001c 00180048 		.word	1207965696
-  81              		.cfi_endproc
-  82              	.LFE321:
-  84              		.section	.text.ILI9341_SPI_Send,"ax",%progbits
-  85              		.align	1
-  86              		.global	ILI9341_SPI_Send
-  87              		.syntax unified
-  88              		.thumb
-  89              		.thumb_func
-  91              	ILI9341_SPI_Send:
-  92              	.LFB322:
+  75              	.L2:
+  76 0014 00180048 		.word	1207965696
+  77              		.cfi_endproc
+  78              	.LFE321:
+  80              		.section	.text.ILI9341_SPI_Send,"ax",%progbits
+  81              		.align	1
+  82              		.global	ILI9341_SPI_Send
+  83              		.syntax unified
+  84              		.thumb
+  85              		.thumb_func
+  87              	ILI9341_SPI_Send:
+  88              	.LFB322:
   99:Core/Src/ILI9341_STM32_Driver.c **** 
  100:Core/Src/ILI9341_STM32_Driver.c **** /*Send data (char) to LCD*/
  101:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_SPI_Send(unsigned char SPI_Data)
  102:Core/Src/ILI9341_STM32_Driver.c **** {
-  93              		.loc 1 102 1
-  94              		.cfi_startproc
-  95              		@ args = 0, pretend = 0, frame = 8
-  96              		@ frame_needed = 1, uses_anonymous_args = 0
-  97 0000 80B5     		push	{r7, lr}
-  98              		.cfi_def_cfa_offset 8
-  99              		.cfi_offset 7, -8
- 100              		.cfi_offset 14, -4
- 101 0002 82B0     		sub	sp, sp, #8
- 102              		.cfi_def_cfa_offset 16
- 103 0004 00AF     		add	r7, sp, #0
- 104              		.cfi_def_cfa_register 7
- 105 0006 0346     		mov	r3, r0
- 106 0008 FB71     		strb	r3, [r7, #7]
- 103:Core/Src/ILI9341_STM32_Driver.c **** SPI_Transmit(&SPI_Data, 1, 1);
- 107              		.loc 1 103 1
- 108 000a FB1D     		adds	r3, r7, #7
- 109 000c 0122     		movs	r2, #1
- 110 000e 0121     		movs	r1, #1
- 111 0010 1846     		mov	r0, r3
- 112 0012 FFF7FEFF 		bl	SPI_Transmit
+  89              		.loc 1 102 1
+  90              		.cfi_startproc
+  91              		@ args = 0, pretend = 0, frame = 8
+  92              		@ frame_needed = 1, uses_anonymous_args = 0
+  93 0000 80B5     		push	{r7, lr}
+  94              		.cfi_def_cfa_offset 8
+  95              		.cfi_offset 7, -8
+  96              		.cfi_offset 14, -4
+  97 0002 82B0     		sub	sp, sp, #8
+  98              		.cfi_def_cfa_offset 16
+  99 0004 00AF     		add	r7, sp, #0
+ 100              		.cfi_def_cfa_register 7
+ 101 0006 0346     		mov	r3, r0
+ 102 0008 FB71     		strb	r3, [r7, #7]
+ 103:Core/Src/ILI9341_STM32_Driver.c **** SPI_Transmit(SPI_Data, 1, 1);
+ 103              		.loc 1 103 1
+ 104 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 105 000c 0122     		movs	r2, #1
+ 106 000e 0121     		movs	r1, #1
+ 107 0010 1846     		mov	r0, r3
+ 108 0012 FFF7FEFF 		bl	SPI_Transmit
  104:Core/Src/ILI9341_STM32_Driver.c **** }
- 113              		.loc 1 104 1
- 114 0016 00BF     		nop
- 115 0018 0837     		adds	r7, r7, #8
- 116              		.cfi_def_cfa_offset 8
- 117 001a BD46     		mov	sp, r7
- 118              		.cfi_def_cfa_register 13
- 119              		@ sp needed
- 120 001c 80BD     		pop	{r7, pc}
- 121              		.cfi_endproc
- 122              	.LFE322:
- 124              		.section	.text.ILI9341_Write_Command,"ax",%progbits
- 125              		.align	1
- 126              		.global	ILI9341_Write_Command
- 127              		.syntax unified
- 128              		.thumb
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 5
-
-
- 129              		.thumb_func
- 131              	ILI9341_Write_Command:
- 132              	.LFB323:
+ 109              		.loc 1 104 1
+ 110 0016 00BF     		nop
+ 111 0018 0837     		adds	r7, r7, #8
+ 112              		.cfi_def_cfa_offset 8
+ 113 001a BD46     		mov	sp, r7
+ 114              		.cfi_def_cfa_register 13
+ 115              		@ sp needed
+ 116 001c 80BD     		pop	{r7, pc}
+ 117              		.cfi_endproc
+ 118              	.LFE322:
+ 120              		.section	.text.ILI9341_Write_Command,"ax",%progbits
+ 121              		.align	1
+ 122              		.global	ILI9341_Write_Command
+ 123              		.syntax unified
+ 124              		.thumb
+ 125              		.thumb_func
+ 127              	ILI9341_Write_Command:
+ 128              	.LFB323:
  105:Core/Src/ILI9341_STM32_Driver.c **** 
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 5
+
+
  106:Core/Src/ILI9341_STM32_Driver.c **** /* Send command (char) to LCD */
  107:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Write_Command(uint8_t Command)
  108:Core/Src/ILI9341_STM32_Driver.c **** {
- 133              		.loc 1 108 1
- 134              		.cfi_startproc
- 135              		@ args = 0, pretend = 0, frame = 8
- 136              		@ frame_needed = 1, uses_anonymous_args = 0
- 137 0000 80B5     		push	{r7, lr}
- 138              		.cfi_def_cfa_offset 8
- 139              		.cfi_offset 7, -8
- 140              		.cfi_offset 14, -4
- 141 0002 82B0     		sub	sp, sp, #8
- 142              		.cfi_def_cfa_offset 16
- 143 0004 00AF     		add	r7, sp, #0
- 144              		.cfi_def_cfa_register 7
- 145 0006 0346     		mov	r3, r0
- 146 0008 FB71     		strb	r3, [r7, #7]
+ 129              		.loc 1 108 1
+ 130              		.cfi_startproc
+ 131              		@ args = 0, pretend = 0, frame = 8
+ 132              		@ frame_needed = 1, uses_anonymous_args = 0
+ 133 0000 80B5     		push	{r7, lr}
+ 134              		.cfi_def_cfa_offset 8
+ 135              		.cfi_offset 7, -8
+ 136              		.cfi_offset 14, -4
+ 137 0002 82B0     		sub	sp, sp, #8
+ 138              		.cfi_def_cfa_offset 16
+ 139 0004 00AF     		add	r7, sp, #0
+ 140              		.cfi_def_cfa_register 7
+ 141 0006 0346     		mov	r3, r0
+ 142 0008 FB71     		strb	r3, [r7, #7]
  109:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);
- 147              		.loc 1 109 1
- 148 000a 0022     		movs	r2, #0
- 149 000c 4FF48051 		mov	r1, #4096
- 150 0010 0B48     		ldr	r0, .L6
- 151 0012 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 143              		.loc 1 109 1
+ 144 000a 0022     		movs	r2, #0
+ 145 000c 4FF48051 		mov	r1, #4096
+ 146 0010 0B48     		ldr	r0, .L6
+ 147 0012 FFF7FEFF 		bl	HAL_GPIO_WritePin
  110:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_RESET);	
- 152              		.loc 1 110 1
- 153 0016 0022     		movs	r2, #0
- 154 0018 4FF40051 		mov	r1, #8192
- 155 001c 0848     		ldr	r0, .L6
- 156 001e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 148              		.loc 1 110 1
+ 149 0016 0022     		movs	r2, #0
+ 150 0018 4FF40051 		mov	r1, #8192
+ 151 001c 0848     		ldr	r0, .L6
+ 152 001e FFF7FEFF 		bl	HAL_GPIO_WritePin
  111:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_SPI_Send(Command);
- 157              		.loc 1 111 1
- 158 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 159 0024 1846     		mov	r0, r3
- 160 0026 FFF7FEFF 		bl	ILI9341_SPI_Send
+ 153              		.loc 1 111 1
+ 154 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 155 0024 1846     		mov	r0, r3
+ 156 0026 FFF7FEFF 		bl	ILI9341_SPI_Send
  112:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);		
- 161              		.loc 1 112 1
- 162 002a 0122     		movs	r2, #1
- 163 002c 4FF48051 		mov	r1, #4096
- 164 0030 0348     		ldr	r0, .L6
- 165 0032 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 157              		.loc 1 112 1
+ 158 002a 0122     		movs	r2, #1
+ 159 002c 4FF48051 		mov	r1, #4096
+ 160 0030 0348     		ldr	r0, .L6
+ 161 0032 FFF7FEFF 		bl	HAL_GPIO_WritePin
  113:Core/Src/ILI9341_STM32_Driver.c **** }
- 166              		.loc 1 113 1
- 167 0036 00BF     		nop
- 168 0038 0837     		adds	r7, r7, #8
- 169              		.cfi_def_cfa_offset 8
- 170 003a BD46     		mov	sp, r7
- 171              		.cfi_def_cfa_register 13
- 172              		@ sp needed
- 173 003c 80BD     		pop	{r7, pc}
- 174              	.L7:
- 175 003e 00BF     		.align	2
- 176              	.L6:
- 177 0040 00180048 		.word	1207965696
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 6
+ 162              		.loc 1 113 1
+ 163 0036 00BF     		nop
+ 164 0038 0837     		adds	r7, r7, #8
+ 165              		.cfi_def_cfa_offset 8
+ 166 003a BD46     		mov	sp, r7
+ 167              		.cfi_def_cfa_register 13
+ 168              		@ sp needed
+ 169 003c 80BD     		pop	{r7, pc}
+ 170              	.L7:
+ 171 003e 00BF     		.align	2
+ 172              	.L6:
+ 173 0040 00180048 		.word	1207965696
+ 174              		.cfi_endproc
+ 175              	.LFE323:
+ 177              		.section	.text.ILI9341_Write_Data,"ax",%progbits
+ 178              		.align	1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 6
 
 
- 178              		.cfi_endproc
- 179              	.LFE323:
- 181              		.section	.text.ILI9341_Write_Data,"ax",%progbits
- 182              		.align	1
- 183              		.global	ILI9341_Write_Data
- 184              		.syntax unified
- 185              		.thumb
- 186              		.thumb_func
- 188              	ILI9341_Write_Data:
- 189              	.LFB324:
+ 179              		.global	ILI9341_Write_Data
+ 180              		.syntax unified
+ 181              		.thumb
+ 182              		.thumb_func
+ 184              	ILI9341_Write_Data:
+ 185              	.LFB324:
  114:Core/Src/ILI9341_STM32_Driver.c **** 
  115:Core/Src/ILI9341_STM32_Driver.c **** /* Send Data (char) to LCD */
  116:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Write_Data(uint8_t Data)
  117:Core/Src/ILI9341_STM32_Driver.c **** {
- 190              		.loc 1 117 1
- 191              		.cfi_startproc
- 192              		@ args = 0, pretend = 0, frame = 8
- 193              		@ frame_needed = 1, uses_anonymous_args = 0
- 194 0000 80B5     		push	{r7, lr}
- 195              		.cfi_def_cfa_offset 8
- 196              		.cfi_offset 7, -8
- 197              		.cfi_offset 14, -4
- 198 0002 82B0     		sub	sp, sp, #8
- 199              		.cfi_def_cfa_offset 16
- 200 0004 00AF     		add	r7, sp, #0
- 201              		.cfi_def_cfa_register 7
- 202 0006 0346     		mov	r3, r0
- 203 0008 FB71     		strb	r3, [r7, #7]
+ 186              		.loc 1 117 1
+ 187              		.cfi_startproc
+ 188              		@ args = 0, pretend = 0, frame = 8
+ 189              		@ frame_needed = 1, uses_anonymous_args = 0
+ 190 0000 80B5     		push	{r7, lr}
+ 191              		.cfi_def_cfa_offset 8
+ 192              		.cfi_offset 7, -8
+ 193              		.cfi_offset 14, -4
+ 194 0002 82B0     		sub	sp, sp, #8
+ 195              		.cfi_def_cfa_offset 16
+ 196 0004 00AF     		add	r7, sp, #0
+ 197              		.cfi_def_cfa_register 7
+ 198 0006 0346     		mov	r3, r0
+ 199 0008 FB71     		strb	r3, [r7, #7]
  118:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_SET);	
- 204              		.loc 1 118 1
- 205 000a 0122     		movs	r2, #1
- 206 000c 4FF40051 		mov	r1, #8192
- 207 0010 0B48     		ldr	r0, .L9
- 208 0012 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 200              		.loc 1 118 1
+ 201 000a 0122     		movs	r2, #1
+ 202 000c 4FF40051 		mov	r1, #8192
+ 203 0010 0B48     		ldr	r0, .L9
+ 204 0012 FFF7FEFF 		bl	HAL_GPIO_WritePin
  119:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);
- 209              		.loc 1 119 1
- 210 0016 0022     		movs	r2, #0
- 211 0018 4FF48051 		mov	r1, #4096
- 212 001c 0848     		ldr	r0, .L9
- 213 001e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 205              		.loc 1 119 1
+ 206 0016 0022     		movs	r2, #0
+ 207 0018 4FF48051 		mov	r1, #4096
+ 208 001c 0848     		ldr	r0, .L9
+ 209 001e FFF7FEFF 		bl	HAL_GPIO_WritePin
  120:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_SPI_Send(Data);	
- 214              		.loc 1 120 1
- 215 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 216 0024 1846     		mov	r0, r3
- 217 0026 FFF7FEFF 		bl	ILI9341_SPI_Send
+ 210              		.loc 1 120 1
+ 211 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 212 0024 1846     		mov	r0, r3
+ 213 0026 FFF7FEFF 		bl	ILI9341_SPI_Send
  121:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);
- 218              		.loc 1 121 1
- 219 002a 0122     		movs	r2, #1
- 220 002c 4FF48051 		mov	r1, #4096
- 221 0030 0348     		ldr	r0, .L9
- 222 0032 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 214              		.loc 1 121 1
+ 215 002a 0122     		movs	r2, #1
+ 216 002c 4FF48051 		mov	r1, #4096
+ 217 0030 0348     		ldr	r0, .L9
+ 218 0032 FFF7FEFF 		bl	HAL_GPIO_WritePin
  122:Core/Src/ILI9341_STM32_Driver.c **** }
- 223              		.loc 1 122 1
- 224 0036 00BF     		nop
- 225 0038 0837     		adds	r7, r7, #8
- 226              		.cfi_def_cfa_offset 8
- 227 003a BD46     		mov	sp, r7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 7
+ 219              		.loc 1 122 1
+ 220 0036 00BF     		nop
+ 221 0038 0837     		adds	r7, r7, #8
+ 222              		.cfi_def_cfa_offset 8
+ 223 003a BD46     		mov	sp, r7
+ 224              		.cfi_def_cfa_register 13
+ 225              		@ sp needed
+ 226 003c 80BD     		pop	{r7, pc}
+ 227              	.L10:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 7
 
 
- 228              		.cfi_def_cfa_register 13
- 229              		@ sp needed
- 230 003c 80BD     		pop	{r7, pc}
- 231              	.L10:
- 232 003e 00BF     		.align	2
- 233              	.L9:
- 234 0040 00180048 		.word	1207965696
- 235              		.cfi_endproc
- 236              	.LFE324:
- 238              		.section	.text.ILI9341_Set_Address,"ax",%progbits
- 239              		.align	1
- 240              		.global	ILI9341_Set_Address
- 241              		.syntax unified
- 242              		.thumb
- 243              		.thumb_func
- 245              	ILI9341_Set_Address:
- 246              	.LFB325:
+ 228 003e 00BF     		.align	2
+ 229              	.L9:
+ 230 0040 00180048 		.word	1207965696
+ 231              		.cfi_endproc
+ 232              	.LFE324:
+ 234              		.section	.text.ILI9341_Set_Address,"ax",%progbits
+ 235              		.align	1
+ 236              		.global	ILI9341_Set_Address
+ 237              		.syntax unified
+ 238              		.thumb
+ 239              		.thumb_func
+ 241              	ILI9341_Set_Address:
+ 242              	.LFB325:
  123:Core/Src/ILI9341_STM32_Driver.c **** 
  124:Core/Src/ILI9341_STM32_Driver.c **** /* Set Address - Location block - to draw into */
  125:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Set_Address(uint16_t X1, uint16_t Y1, uint16_t X2, uint16_t Y2)
  126:Core/Src/ILI9341_STM32_Driver.c **** {
- 247              		.loc 1 126 1
- 248              		.cfi_startproc
- 249              		@ args = 0, pretend = 0, frame = 8
- 250              		@ frame_needed = 1, uses_anonymous_args = 0
- 251 0000 90B5     		push	{r4, r7, lr}
- 252              		.cfi_def_cfa_offset 12
- 253              		.cfi_offset 4, -12
- 254              		.cfi_offset 7, -8
- 255              		.cfi_offset 14, -4
- 256 0002 83B0     		sub	sp, sp, #12
- 257              		.cfi_def_cfa_offset 24
- 258 0004 00AF     		add	r7, sp, #0
- 259              		.cfi_def_cfa_register 7
- 260 0006 0446     		mov	r4, r0
- 261 0008 0846     		mov	r0, r1
- 262 000a 1146     		mov	r1, r2
- 263 000c 1A46     		mov	r2, r3
- 264 000e 2346     		mov	r3, r4	@ movhi
- 265 0010 FB80     		strh	r3, [r7, #6]	@ movhi
- 266 0012 0346     		mov	r3, r0	@ movhi
- 267 0014 BB80     		strh	r3, [r7, #4]	@ movhi
- 268 0016 0B46     		mov	r3, r1	@ movhi
- 269 0018 7B80     		strh	r3, [r7, #2]	@ movhi
- 270 001a 1346     		mov	r3, r2	@ movhi
- 271 001c 3B80     		strh	r3, [r7]	@ movhi
+ 243              		.loc 1 126 1
+ 244              		.cfi_startproc
+ 245              		@ args = 0, pretend = 0, frame = 8
+ 246              		@ frame_needed = 1, uses_anonymous_args = 0
+ 247 0000 90B5     		push	{r4, r7, lr}
+ 248              		.cfi_def_cfa_offset 12
+ 249              		.cfi_offset 4, -12
+ 250              		.cfi_offset 7, -8
+ 251              		.cfi_offset 14, -4
+ 252 0002 83B0     		sub	sp, sp, #12
+ 253              		.cfi_def_cfa_offset 24
+ 254 0004 00AF     		add	r7, sp, #0
+ 255              		.cfi_def_cfa_register 7
+ 256 0006 0446     		mov	r4, r0
+ 257 0008 0846     		mov	r0, r1
+ 258 000a 1146     		mov	r1, r2
+ 259 000c 1A46     		mov	r2, r3
+ 260 000e 2346     		mov	r3, r4	@ movhi
+ 261 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 262 0012 0346     		mov	r3, r0	@ movhi
+ 263 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+ 264 0016 0B46     		mov	r3, r1	@ movhi
+ 265 0018 7B80     		strh	r3, [r7, #2]	@ movhi
+ 266 001a 1346     		mov	r3, r2	@ movhi
+ 267 001c 3B80     		strh	r3, [r7]	@ movhi
  127:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0x2A);
- 272              		.loc 1 127 1
- 273 001e 2A20     		movs	r0, #42
- 274 0020 FFF7FEFF 		bl	ILI9341_Write_Command
+ 268              		.loc 1 127 1
+ 269 001e 2A20     		movs	r0, #42
+ 270 0020 FFF7FEFF 		bl	ILI9341_Write_Command
  128:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(X1>>8);
- 275              		.loc 1 128 1
- 276 0024 FB88     		ldrh	r3, [r7, #6]
- 277 0026 1B0A     		lsrs	r3, r3, #8
- 278 0028 9BB2     		uxth	r3, r3
- 279 002a DBB2     		uxtb	r3, r3
- 280 002c 1846     		mov	r0, r3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 8
-
-
- 281 002e FFF7FEFF 		bl	ILI9341_Write_Data
+ 271              		.loc 1 128 1
+ 272 0024 FB88     		ldrh	r3, [r7, #6]
+ 273 0026 1B0A     		lsrs	r3, r3, #8
+ 274 0028 9BB2     		uxth	r3, r3
+ 275 002a DBB2     		uxtb	r3, r3
+ 276 002c 1846     		mov	r0, r3
+ 277 002e FFF7FEFF 		bl	ILI9341_Write_Data
  129:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(X1);
- 282              		.loc 1 129 1
- 283 0032 FB88     		ldrh	r3, [r7, #6]	@ movhi
- 284 0034 DBB2     		uxtb	r3, r3
- 285 0036 1846     		mov	r0, r3
- 286 0038 FFF7FEFF 		bl	ILI9341_Write_Data
+ 278              		.loc 1 129 1
+ 279 0032 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 8
+
+
+ 280 0034 DBB2     		uxtb	r3, r3
+ 281 0036 1846     		mov	r0, r3
+ 282 0038 FFF7FEFF 		bl	ILI9341_Write_Data
  130:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(X2>>8);
- 287              		.loc 1 130 1
- 288 003c 7B88     		ldrh	r3, [r7, #2]
- 289 003e 1B0A     		lsrs	r3, r3, #8
- 290 0040 9BB2     		uxth	r3, r3
- 291 0042 DBB2     		uxtb	r3, r3
- 292 0044 1846     		mov	r0, r3
- 293 0046 FFF7FEFF 		bl	ILI9341_Write_Data
+ 283              		.loc 1 130 1
+ 284 003c 7B88     		ldrh	r3, [r7, #2]
+ 285 003e 1B0A     		lsrs	r3, r3, #8
+ 286 0040 9BB2     		uxth	r3, r3
+ 287 0042 DBB2     		uxtb	r3, r3
+ 288 0044 1846     		mov	r0, r3
+ 289 0046 FFF7FEFF 		bl	ILI9341_Write_Data
  131:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(X2);
- 294              		.loc 1 131 1
- 295 004a 7B88     		ldrh	r3, [r7, #2]	@ movhi
- 296 004c DBB2     		uxtb	r3, r3
- 297 004e 1846     		mov	r0, r3
- 298 0050 FFF7FEFF 		bl	ILI9341_Write_Data
+ 290              		.loc 1 131 1
+ 291 004a 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 292 004c DBB2     		uxtb	r3, r3
+ 293 004e 1846     		mov	r0, r3
+ 294 0050 FFF7FEFF 		bl	ILI9341_Write_Data
  132:Core/Src/ILI9341_STM32_Driver.c **** 
  133:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0x2B);
- 299              		.loc 1 133 1
- 300 0054 2B20     		movs	r0, #43
- 301 0056 FFF7FEFF 		bl	ILI9341_Write_Command
+ 295              		.loc 1 133 1
+ 296 0054 2B20     		movs	r0, #43
+ 297 0056 FFF7FEFF 		bl	ILI9341_Write_Command
  134:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(Y1>>8);
- 302              		.loc 1 134 1
- 303 005a BB88     		ldrh	r3, [r7, #4]
- 304 005c 1B0A     		lsrs	r3, r3, #8
- 305 005e 9BB2     		uxth	r3, r3
- 306 0060 DBB2     		uxtb	r3, r3
- 307 0062 1846     		mov	r0, r3
- 308 0064 FFF7FEFF 		bl	ILI9341_Write_Data
+ 298              		.loc 1 134 1
+ 299 005a BB88     		ldrh	r3, [r7, #4]
+ 300 005c 1B0A     		lsrs	r3, r3, #8
+ 301 005e 9BB2     		uxth	r3, r3
+ 302 0060 DBB2     		uxtb	r3, r3
+ 303 0062 1846     		mov	r0, r3
+ 304 0064 FFF7FEFF 		bl	ILI9341_Write_Data
  135:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(Y1);
- 309              		.loc 1 135 1
- 310 0068 BB88     		ldrh	r3, [r7, #4]	@ movhi
- 311 006a DBB2     		uxtb	r3, r3
- 312 006c 1846     		mov	r0, r3
- 313 006e FFF7FEFF 		bl	ILI9341_Write_Data
+ 305              		.loc 1 135 1
+ 306 0068 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 307 006a DBB2     		uxtb	r3, r3
+ 308 006c 1846     		mov	r0, r3
+ 309 006e FFF7FEFF 		bl	ILI9341_Write_Data
  136:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(Y2>>8);
- 314              		.loc 1 136 1
- 315 0072 3B88     		ldrh	r3, [r7]
- 316 0074 1B0A     		lsrs	r3, r3, #8
- 317 0076 9BB2     		uxth	r3, r3
- 318 0078 DBB2     		uxtb	r3, r3
- 319 007a 1846     		mov	r0, r3
- 320 007c FFF7FEFF 		bl	ILI9341_Write_Data
+ 310              		.loc 1 136 1
+ 311 0072 3B88     		ldrh	r3, [r7]
+ 312 0074 1B0A     		lsrs	r3, r3, #8
+ 313 0076 9BB2     		uxth	r3, r3
+ 314 0078 DBB2     		uxtb	r3, r3
+ 315 007a 1846     		mov	r0, r3
+ 316 007c FFF7FEFF 		bl	ILI9341_Write_Data
  137:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(Y2);
- 321              		.loc 1 137 1
- 322 0080 3B88     		ldrh	r3, [r7]	@ movhi
- 323 0082 DBB2     		uxtb	r3, r3
- 324 0084 1846     		mov	r0, r3
- 325 0086 FFF7FEFF 		bl	ILI9341_Write_Data
+ 317              		.loc 1 137 1
+ 318 0080 3B88     		ldrh	r3, [r7]	@ movhi
+ 319 0082 DBB2     		uxtb	r3, r3
+ 320 0084 1846     		mov	r0, r3
+ 321 0086 FFF7FEFF 		bl	ILI9341_Write_Data
  138:Core/Src/ILI9341_STM32_Driver.c **** 
  139:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0x2C);
- 326              		.loc 1 139 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 9
-
-
- 327 008a 2C20     		movs	r0, #44
- 328 008c FFF7FEFF 		bl	ILI9341_Write_Command
+ 322              		.loc 1 139 1
+ 323 008a 2C20     		movs	r0, #44
+ 324 008c FFF7FEFF 		bl	ILI9341_Write_Command
  140:Core/Src/ILI9341_STM32_Driver.c **** }
- 329              		.loc 1 140 1
- 330 0090 00BF     		nop
- 331 0092 0C37     		adds	r7, r7, #12
- 332              		.cfi_def_cfa_offset 12
- 333 0094 BD46     		mov	sp, r7
- 334              		.cfi_def_cfa_register 13
- 335              		@ sp needed
- 336 0096 90BD     		pop	{r4, r7, pc}
- 337              		.cfi_endproc
- 338              	.LFE325:
- 340              		.section	.text.ILI9341_Reset,"ax",%progbits
- 341              		.align	1
- 342              		.global	ILI9341_Reset
- 343              		.syntax unified
- 344              		.thumb
- 345              		.thumb_func
- 347              	ILI9341_Reset:
- 348              	.LFB326:
+ 325              		.loc 1 140 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 9
+
+
+ 326 0090 00BF     		nop
+ 327 0092 0C37     		adds	r7, r7, #12
+ 328              		.cfi_def_cfa_offset 12
+ 329 0094 BD46     		mov	sp, r7
+ 330              		.cfi_def_cfa_register 13
+ 331              		@ sp needed
+ 332 0096 90BD     		pop	{r4, r7, pc}
+ 333              		.cfi_endproc
+ 334              	.LFE325:
+ 336              		.section	.text.ILI9341_Reset,"ax",%progbits
+ 337              		.align	1
+ 338              		.global	ILI9341_Reset
+ 339              		.syntax unified
+ 340              		.thumb
+ 341              		.thumb_func
+ 343              	ILI9341_Reset:
+ 344              	.LFB326:
  141:Core/Src/ILI9341_STM32_Driver.c **** 
  142:Core/Src/ILI9341_STM32_Driver.c **** /*HARDWARE RESET*/
  143:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Reset(void)
  144:Core/Src/ILI9341_STM32_Driver.c **** {
- 349              		.loc 1 144 1
- 350              		.cfi_startproc
- 351              		@ args = 0, pretend = 0, frame = 0
- 352              		@ frame_needed = 1, uses_anonymous_args = 0
- 353 0000 80B5     		push	{r7, lr}
- 354              		.cfi_def_cfa_offset 8
- 355              		.cfi_offset 7, -8
- 356              		.cfi_offset 14, -4
- 357 0002 00AF     		add	r7, sp, #0
- 358              		.cfi_def_cfa_register 7
+ 345              		.loc 1 144 1
+ 346              		.cfi_startproc
+ 347              		@ args = 0, pretend = 0, frame = 0
+ 348              		@ frame_needed = 1, uses_anonymous_args = 0
+ 349 0000 80B5     		push	{r7, lr}
+ 350              		.cfi_def_cfa_offset 8
+ 351              		.cfi_offset 7, -8
+ 352              		.cfi_offset 14, -4
+ 353 0002 00AF     		add	r7, sp, #0
+ 354              		.cfi_def_cfa_register 7
  145:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_RST_PORT, LCD_RST_PIN, GPIO_PIN_SET);
- 359              		.loc 1 145 1
- 360 0004 0122     		movs	r2, #1
- 361 0006 4FF48041 		mov	r1, #16384
- 362 000a 0B48     		ldr	r0, .L13
- 363 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 355              		.loc 1 145 1
+ 356 0004 0122     		movs	r2, #1
+ 357 0006 4FF48041 		mov	r1, #16384
+ 358 000a 0B48     		ldr	r0, .L13
+ 359 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
  146:Core/Src/ILI9341_STM32_Driver.c **** HAL_Delay(200);
- 364              		.loc 1 146 1
- 365 0010 C820     		movs	r0, #200
- 366 0012 FFF7FEFF 		bl	HAL_Delay
+ 360              		.loc 1 146 1
+ 361 0010 C820     		movs	r0, #200
+ 362 0012 FFF7FEFF 		bl	HAL_Delay
  147:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);
- 367              		.loc 1 147 1
- 368 0016 0022     		movs	r2, #0
- 369 0018 4FF48051 		mov	r1, #4096
- 370 001c 0648     		ldr	r0, .L13
- 371 001e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 363              		.loc 1 147 1
+ 364 0016 0022     		movs	r2, #0
+ 365 0018 4FF48051 		mov	r1, #4096
+ 366 001c 0648     		ldr	r0, .L13
+ 367 001e FFF7FEFF 		bl	HAL_GPIO_WritePin
  148:Core/Src/ILI9341_STM32_Driver.c **** HAL_Delay(200);
- 372              		.loc 1 148 1
- 373 0022 C820     		movs	r0, #200
- 374 0024 FFF7FEFF 		bl	HAL_Delay
+ 368              		.loc 1 148 1
+ 369 0022 C820     		movs	r0, #200
+ 370 0024 FFF7FEFF 		bl	HAL_Delay
  149:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_RST_PORT, LCD_RST_PIN, GPIO_PIN_SET);	
- 375              		.loc 1 149 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 10
+ 371              		.loc 1 149 1
+ 372 0028 0122     		movs	r2, #1
+ 373 002a 4FF48041 		mov	r1, #16384
+ 374 002e 0248     		ldr	r0, .L13
+ 375 0030 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 10
 
 
- 376 0028 0122     		movs	r2, #1
- 377 002a 4FF48041 		mov	r1, #16384
- 378 002e 0248     		ldr	r0, .L13
- 379 0030 FFF7FEFF 		bl	HAL_GPIO_WritePin
  150:Core/Src/ILI9341_STM32_Driver.c **** }
- 380              		.loc 1 150 1
- 381 0034 00BF     		nop
- 382 0036 80BD     		pop	{r7, pc}
- 383              	.L14:
- 384              		.align	2
- 385              	.L13:
- 386 0038 00180048 		.word	1207965696
- 387              		.cfi_endproc
- 388              	.LFE326:
- 390              		.section	.text.ILI9341_Set_Rotation,"ax",%progbits
- 391              		.align	1
- 392              		.global	ILI9341_Set_Rotation
- 393              		.syntax unified
- 394              		.thumb
- 395              		.thumb_func
- 397              	ILI9341_Set_Rotation:
- 398              	.LFB327:
+ 376              		.loc 1 150 1
+ 377 0034 00BF     		nop
+ 378 0036 80BD     		pop	{r7, pc}
+ 379              	.L14:
+ 380              		.align	2
+ 381              	.L13:
+ 382 0038 00180048 		.word	1207965696
+ 383              		.cfi_endproc
+ 384              	.LFE326:
+ 386              		.section	.text.ILI9341_Set_Rotation,"ax",%progbits
+ 387              		.align	1
+ 388              		.global	ILI9341_Set_Rotation
+ 389              		.syntax unified
+ 390              		.thumb
+ 391              		.thumb_func
+ 393              	ILI9341_Set_Rotation:
+ 394              	.LFB327:
  151:Core/Src/ILI9341_STM32_Driver.c **** 
  152:Core/Src/ILI9341_STM32_Driver.c **** /*Ser rotation of the screen - changes x0 and y0*/
  153:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Set_Rotation(uint8_t Rotation) 
  154:Core/Src/ILI9341_STM32_Driver.c **** {
- 399              		.loc 1 154 1
- 400              		.cfi_startproc
- 401              		@ args = 0, pretend = 0, frame = 16
- 402              		@ frame_needed = 1, uses_anonymous_args = 0
- 403 0000 80B5     		push	{r7, lr}
- 404              		.cfi_def_cfa_offset 8
- 405              		.cfi_offset 7, -8
- 406              		.cfi_offset 14, -4
- 407 0002 84B0     		sub	sp, sp, #16
- 408              		.cfi_def_cfa_offset 24
- 409 0004 00AF     		add	r7, sp, #0
- 410              		.cfi_def_cfa_register 7
- 411 0006 0346     		mov	r3, r0
- 412 0008 FB71     		strb	r3, [r7, #7]
+ 395              		.loc 1 154 1
+ 396              		.cfi_startproc
+ 397              		@ args = 0, pretend = 0, frame = 16
+ 398              		@ frame_needed = 1, uses_anonymous_args = 0
+ 399 0000 80B5     		push	{r7, lr}
+ 400              		.cfi_def_cfa_offset 8
+ 401              		.cfi_offset 7, -8
+ 402              		.cfi_offset 14, -4
+ 403 0002 84B0     		sub	sp, sp, #16
+ 404              		.cfi_def_cfa_offset 24
+ 405 0004 00AF     		add	r7, sp, #0
+ 406              		.cfi_def_cfa_register 7
+ 407 0006 0346     		mov	r3, r0
+ 408 0008 FB71     		strb	r3, [r7, #7]
  155:Core/Src/ILI9341_STM32_Driver.c **** 	
  156:Core/Src/ILI9341_STM32_Driver.c **** uint8_t screen_rotation = Rotation;
- 413              		.loc 1 156 9
- 414 000a FB79     		ldrb	r3, [r7, #7]
- 415 000c FB73     		strb	r3, [r7, #15]
+ 409              		.loc 1 156 9
+ 410 000a FB79     		ldrb	r3, [r7, #7]
+ 411 000c FB73     		strb	r3, [r7, #15]
  157:Core/Src/ILI9341_STM32_Driver.c **** 
  158:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0x36);
- 416              		.loc 1 158 1
- 417 000e 3620     		movs	r0, #54
- 418 0010 FFF7FEFF 		bl	ILI9341_Write_Command
+ 412              		.loc 1 158 1
+ 413 000e 3620     		movs	r0, #54
+ 414 0010 FFF7FEFF 		bl	ILI9341_Write_Command
  159:Core/Src/ILI9341_STM32_Driver.c **** HAL_Delay(1);
- 419              		.loc 1 159 1
- 420 0014 0120     		movs	r0, #1
- 421 0016 FFF7FEFF 		bl	HAL_Delay
+ 415              		.loc 1 159 1
+ 416 0014 0120     		movs	r0, #1
+ 417 0016 FFF7FEFF 		bl	HAL_Delay
  160:Core/Src/ILI9341_STM32_Driver.c **** 	
  161:Core/Src/ILI9341_STM32_Driver.c **** switch(screen_rotation) 
- 422              		.loc 1 161 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 11
+ 418              		.loc 1 161 1
+ 419 001a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 420 001c 032B     		cmp	r3, #3
+ 421 001e 37D8     		bhi	.L23
+ 422 0020 01A2     		adr	r2, .L18
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 11
 
 
- 423 001a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 424 001c 032B     		cmp	r3, #3
- 425 001e 37D8     		bhi	.L23
- 426 0020 01A2     		adr	r2, .L18
- 427 0022 52F823F0 		ldr	pc, [r2, r3, lsl #2]
- 428 0026 00BF     		.p2align 2
- 429              	.L18:
- 430 0028 39000000 		.word	.L21+1
- 431 002c 4F000000 		.word	.L20+1
- 432 0030 65000000 		.word	.L19+1
- 433 0034 7B000000 		.word	.L17+1
- 434              		.p2align 1
- 435              	.L21:
+ 423 0022 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 424 0026 00BF     		.p2align 2
+ 425              	.L18:
+ 426 0028 39000000 		.word	.L21+1
+ 427 002c 4F000000 		.word	.L20+1
+ 428 0030 65000000 		.word	.L19+1
+ 429 0034 7B000000 		.word	.L17+1
+ 430              		.p2align 1
+ 431              	.L21:
  162:Core/Src/ILI9341_STM32_Driver.c **** 	{
  163:Core/Src/ILI9341_STM32_Driver.c **** 		case SCREEN_VERTICAL_1:
  164:Core/Src/ILI9341_STM32_Driver.c **** 			ILI9341_Write_Data(0x40|0x08);
- 436              		.loc 1 164 4
- 437 0038 4820     		movs	r0, #72
- 438 003a FFF7FEFF 		bl	ILI9341_Write_Data
+ 432              		.loc 1 164 4
+ 433 0038 4820     		movs	r0, #72
+ 434 003a FFF7FEFF 		bl	ILI9341_Write_Data
  165:Core/Src/ILI9341_STM32_Driver.c **** 			LCD_WIDTH = 240;
- 439              		.loc 1 165 14
- 440 003e 174B     		ldr	r3, .L24
- 441 0040 F022     		movs	r2, #240
- 442 0042 1A80     		strh	r2, [r3]	@ movhi
+ 435              		.loc 1 165 14
+ 436 003e 174B     		ldr	r3, .L24
+ 437 0040 F022     		movs	r2, #240
+ 438 0042 1A80     		strh	r2, [r3]	@ movhi
  166:Core/Src/ILI9341_STM32_Driver.c **** 			LCD_HEIGHT = 320;
- 443              		.loc 1 166 15
- 444 0044 164B     		ldr	r3, .L24+4
- 445 0046 4FF4A072 		mov	r2, #320
- 446 004a 1A80     		strh	r2, [r3]	@ movhi
+ 439              		.loc 1 166 15
+ 440 0044 164B     		ldr	r3, .L24+4
+ 441 0046 4FF4A072 		mov	r2, #320
+ 442 004a 1A80     		strh	r2, [r3]	@ movhi
  167:Core/Src/ILI9341_STM32_Driver.c **** 			break;
- 447              		.loc 1 167 4
- 448 004c 21E0     		b	.L22
- 449              	.L20:
+ 443              		.loc 1 167 4
+ 444 004c 21E0     		b	.L22
+ 445              	.L20:
  168:Core/Src/ILI9341_STM32_Driver.c **** 		case SCREEN_HORIZONTAL_1:
  169:Core/Src/ILI9341_STM32_Driver.c **** 			ILI9341_Write_Data(0x20|0x08);
- 450              		.loc 1 169 4
- 451 004e 2820     		movs	r0, #40
- 452 0050 FFF7FEFF 		bl	ILI9341_Write_Data
+ 446              		.loc 1 169 4
+ 447 004e 2820     		movs	r0, #40
+ 448 0050 FFF7FEFF 		bl	ILI9341_Write_Data
  170:Core/Src/ILI9341_STM32_Driver.c **** 			LCD_WIDTH  = 320;
- 453              		.loc 1 170 15
- 454 0054 114B     		ldr	r3, .L24
- 455 0056 4FF4A072 		mov	r2, #320
- 456 005a 1A80     		strh	r2, [r3]	@ movhi
+ 449              		.loc 1 170 15
+ 450 0054 114B     		ldr	r3, .L24
+ 451 0056 4FF4A072 		mov	r2, #320
+ 452 005a 1A80     		strh	r2, [r3]	@ movhi
  171:Core/Src/ILI9341_STM32_Driver.c **** 			LCD_HEIGHT = 240;
- 457              		.loc 1 171 15
- 458 005c 104B     		ldr	r3, .L24+4
- 459 005e F022     		movs	r2, #240
- 460 0060 1A80     		strh	r2, [r3]	@ movhi
+ 453              		.loc 1 171 15
+ 454 005c 104B     		ldr	r3, .L24+4
+ 455 005e F022     		movs	r2, #240
+ 456 0060 1A80     		strh	r2, [r3]	@ movhi
  172:Core/Src/ILI9341_STM32_Driver.c **** 			break;
- 461              		.loc 1 172 4
- 462 0062 16E0     		b	.L22
- 463              	.L19:
+ 457              		.loc 1 172 4
+ 458 0062 16E0     		b	.L22
+ 459              	.L19:
  173:Core/Src/ILI9341_STM32_Driver.c **** 		case SCREEN_VERTICAL_2:
  174:Core/Src/ILI9341_STM32_Driver.c **** 			ILI9341_Write_Data(0x80|0x08);
- 464              		.loc 1 174 4
- 465 0064 8820     		movs	r0, #136
- 466 0066 FFF7FEFF 		bl	ILI9341_Write_Data
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 12
-
-
+ 460              		.loc 1 174 4
+ 461 0064 8820     		movs	r0, #136
+ 462 0066 FFF7FEFF 		bl	ILI9341_Write_Data
  175:Core/Src/ILI9341_STM32_Driver.c **** 			LCD_WIDTH  = 240;
- 467              		.loc 1 175 15
- 468 006a 0C4B     		ldr	r3, .L24
- 469 006c F022     		movs	r2, #240
- 470 006e 1A80     		strh	r2, [r3]	@ movhi
+ 463              		.loc 1 175 15
+ 464 006a 0C4B     		ldr	r3, .L24
+ 465 006c F022     		movs	r2, #240
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 12
+
+
+ 466 006e 1A80     		strh	r2, [r3]	@ movhi
  176:Core/Src/ILI9341_STM32_Driver.c **** 			LCD_HEIGHT = 320;
- 471              		.loc 1 176 15
- 472 0070 0B4B     		ldr	r3, .L24+4
- 473 0072 4FF4A072 		mov	r2, #320
- 474 0076 1A80     		strh	r2, [r3]	@ movhi
+ 467              		.loc 1 176 15
+ 468 0070 0B4B     		ldr	r3, .L24+4
+ 469 0072 4FF4A072 		mov	r2, #320
+ 470 0076 1A80     		strh	r2, [r3]	@ movhi
  177:Core/Src/ILI9341_STM32_Driver.c **** 			break;
- 475              		.loc 1 177 4
- 476 0078 0BE0     		b	.L22
- 477              	.L17:
+ 471              		.loc 1 177 4
+ 472 0078 0BE0     		b	.L22
+ 473              	.L17:
  178:Core/Src/ILI9341_STM32_Driver.c **** 		case SCREEN_HORIZONTAL_2:
  179:Core/Src/ILI9341_STM32_Driver.c **** 			ILI9341_Write_Data(0x40|0x80|0x20|0x08);
- 478              		.loc 1 179 4
- 479 007a E820     		movs	r0, #232
- 480 007c FFF7FEFF 		bl	ILI9341_Write_Data
+ 474              		.loc 1 179 4
+ 475 007a E820     		movs	r0, #232
+ 476 007c FFF7FEFF 		bl	ILI9341_Write_Data
  180:Core/Src/ILI9341_STM32_Driver.c **** 			LCD_WIDTH  = 320;
- 481              		.loc 1 180 15
- 482 0080 064B     		ldr	r3, .L24
- 483 0082 4FF4A072 		mov	r2, #320
- 484 0086 1A80     		strh	r2, [r3]	@ movhi
+ 477              		.loc 1 180 15
+ 478 0080 064B     		ldr	r3, .L24
+ 479 0082 4FF4A072 		mov	r2, #320
+ 480 0086 1A80     		strh	r2, [r3]	@ movhi
  181:Core/Src/ILI9341_STM32_Driver.c **** 			LCD_HEIGHT = 240;
- 485              		.loc 1 181 15
- 486 0088 054B     		ldr	r3, .L24+4
- 487 008a F022     		movs	r2, #240
- 488 008c 1A80     		strh	r2, [r3]	@ movhi
+ 481              		.loc 1 181 15
+ 482 0088 054B     		ldr	r3, .L24+4
+ 483 008a F022     		movs	r2, #240
+ 484 008c 1A80     		strh	r2, [r3]	@ movhi
  182:Core/Src/ILI9341_STM32_Driver.c **** 			break;
- 489              		.loc 1 182 4
- 490 008e 00E0     		b	.L22
- 491              	.L23:
+ 485              		.loc 1 182 4
+ 486 008e 00E0     		b	.L22
+ 487              	.L23:
  183:Core/Src/ILI9341_STM32_Driver.c **** 		default:
  184:Core/Src/ILI9341_STM32_Driver.c **** 			//EXIT IF SCREEN ROTATION NOT VALID!
  185:Core/Src/ILI9341_STM32_Driver.c **** 			break;
- 492              		.loc 1 185 4
- 493 0090 00BF     		nop
- 494              	.L22:
+ 488              		.loc 1 185 4
+ 489 0090 00BF     		nop
+ 490              	.L22:
  186:Core/Src/ILI9341_STM32_Driver.c **** 	}
  187:Core/Src/ILI9341_STM32_Driver.c **** }
- 495              		.loc 1 187 1
- 496 0092 00BF     		nop
- 497 0094 1037     		adds	r7, r7, #16
- 498              		.cfi_def_cfa_offset 8
- 499 0096 BD46     		mov	sp, r7
- 500              		.cfi_def_cfa_register 13
- 501              		@ sp needed
- 502 0098 80BD     		pop	{r7, pc}
- 503              	.L25:
- 504 009a 00BF     		.align	2
- 505              	.L24:
- 506 009c 00000000 		.word	LCD_WIDTH
- 507 00a0 00000000 		.word	LCD_HEIGHT
- 508              		.cfi_endproc
- 509              	.LFE327:
- 511              		.section	.text.ILI9341_Enable,"ax",%progbits
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 13
+ 491              		.loc 1 187 1
+ 492 0092 00BF     		nop
+ 493 0094 1037     		adds	r7, r7, #16
+ 494              		.cfi_def_cfa_offset 8
+ 495 0096 BD46     		mov	sp, r7
+ 496              		.cfi_def_cfa_register 13
+ 497              		@ sp needed
+ 498 0098 80BD     		pop	{r7, pc}
+ 499              	.L25:
+ 500 009a 00BF     		.align	2
+ 501              	.L24:
+ 502 009c 00000000 		.word	LCD_WIDTH
+ 503 00a0 00000000 		.word	LCD_HEIGHT
+ 504              		.cfi_endproc
+ 505              	.LFE327:
+ 507              		.section	.text.ILI9341_Enable,"ax",%progbits
+ 508              		.align	1
+ 509              		.global	ILI9341_Enable
+ 510              		.syntax unified
+ 511              		.thumb
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 13
 
 
- 512              		.align	1
- 513              		.global	ILI9341_Enable
- 514              		.syntax unified
- 515              		.thumb
- 516              		.thumb_func
- 518              	ILI9341_Enable:
- 519              	.LFB328:
+ 512              		.thumb_func
+ 514              	ILI9341_Enable:
+ 515              	.LFB328:
  188:Core/Src/ILI9341_STM32_Driver.c **** 
  189:Core/Src/ILI9341_STM32_Driver.c **** /*Enable LCD display*/
  190:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Enable(void)
  191:Core/Src/ILI9341_STM32_Driver.c **** {
- 520              		.loc 1 191 1
- 521              		.cfi_startproc
- 522              		@ args = 0, pretend = 0, frame = 0
- 523              		@ frame_needed = 1, uses_anonymous_args = 0
- 524 0000 80B5     		push	{r7, lr}
- 525              		.cfi_def_cfa_offset 8
- 526              		.cfi_offset 7, -8
- 527              		.cfi_offset 14, -4
- 528 0002 00AF     		add	r7, sp, #0
- 529              		.cfi_def_cfa_register 7
+ 516              		.loc 1 191 1
+ 517              		.cfi_startproc
+ 518              		@ args = 0, pretend = 0, frame = 0
+ 519              		@ frame_needed = 1, uses_anonymous_args = 0
+ 520 0000 80B5     		push	{r7, lr}
+ 521              		.cfi_def_cfa_offset 8
+ 522              		.cfi_offset 7, -8
+ 523              		.cfi_offset 14, -4
+ 524 0002 00AF     		add	r7, sp, #0
+ 525              		.cfi_def_cfa_register 7
  192:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_RST_PORT, LCD_RST_PIN, GPIO_PIN_SET);
- 530              		.loc 1 192 1
- 531 0004 0122     		movs	r2, #1
- 532 0006 4FF48041 		mov	r1, #16384
- 533 000a 0248     		ldr	r0, .L27
- 534 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 526              		.loc 1 192 1
+ 527 0004 0122     		movs	r2, #1
+ 528 0006 4FF48041 		mov	r1, #16384
+ 529 000a 0248     		ldr	r0, .L27
+ 530 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
  193:Core/Src/ILI9341_STM32_Driver.c **** }
- 535              		.loc 1 193 1
- 536 0010 00BF     		nop
- 537 0012 80BD     		pop	{r7, pc}
- 538              	.L28:
- 539              		.align	2
- 540              	.L27:
- 541 0014 00180048 		.word	1207965696
- 542              		.cfi_endproc
- 543              	.LFE328:
- 545              		.section	.text.ILI9341_Init,"ax",%progbits
- 546              		.align	1
- 547              		.global	ILI9341_Init
- 548              		.syntax unified
- 549              		.thumb
- 550              		.thumb_func
- 552              	ILI9341_Init:
- 553              	.LFB329:
+ 531              		.loc 1 193 1
+ 532 0010 00BF     		nop
+ 533 0012 80BD     		pop	{r7, pc}
+ 534              	.L28:
+ 535              		.align	2
+ 536              	.L27:
+ 537 0014 00180048 		.word	1207965696
+ 538              		.cfi_endproc
+ 539              	.LFE328:
+ 541              		.section	.text.ILI9341_Init,"ax",%progbits
+ 542              		.align	1
+ 543              		.global	ILI9341_Init
+ 544              		.syntax unified
+ 545              		.thumb
+ 546              		.thumb_func
+ 548              	ILI9341_Init:
+ 549              	.LFB329:
  194:Core/Src/ILI9341_STM32_Driver.c **** 
  195:Core/Src/ILI9341_STM32_Driver.c **** /*Initialize LCD display*/
  196:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Init(void)
  197:Core/Src/ILI9341_STM32_Driver.c **** {
- 554              		.loc 1 197 1
- 555              		.cfi_startproc
- 556              		@ args = 0, pretend = 0, frame = 0
- 557              		@ frame_needed = 1, uses_anonymous_args = 0
- 558 0000 80B5     		push	{r7, lr}
- 559              		.cfi_def_cfa_offset 8
- 560              		.cfi_offset 7, -8
- 561              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 14
-
-
- 562 0002 00AF     		add	r7, sp, #0
- 563              		.cfi_def_cfa_register 7
+ 550              		.loc 1 197 1
+ 551              		.cfi_startproc
+ 552              		@ args = 0, pretend = 0, frame = 0
+ 553              		@ frame_needed = 1, uses_anonymous_args = 0
+ 554 0000 80B5     		push	{r7, lr}
+ 555              		.cfi_def_cfa_offset 8
+ 556              		.cfi_offset 7, -8
+ 557              		.cfi_offset 14, -4
+ 558 0002 00AF     		add	r7, sp, #0
+ 559              		.cfi_def_cfa_register 7
  198:Core/Src/ILI9341_STM32_Driver.c **** 
  199:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Enable();
- 564              		.loc 1 199 1
- 565 0004 FFF7FEFF 		bl	ILI9341_Enable
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 14
+
+
+ 560              		.loc 1 199 1
+ 561 0004 FFF7FEFF 		bl	ILI9341_Enable
  200:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_SPI_Init();
- 566              		.loc 1 200 1
- 567 0008 FFF7FEFF 		bl	ILI9341_SPI_Init
+ 562              		.loc 1 200 1
+ 563 0008 FFF7FEFF 		bl	ILI9341_SPI_Init
  201:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Reset();
- 568              		.loc 1 201 1
- 569 000c FFF7FEFF 		bl	ILI9341_Reset
+ 564              		.loc 1 201 1
+ 565 000c FFF7FEFF 		bl	ILI9341_Reset
  202:Core/Src/ILI9341_STM32_Driver.c **** 
  203:Core/Src/ILI9341_STM32_Driver.c **** //SOFTWARE RESET
  204:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0x01);
- 570              		.loc 1 204 1
- 571 0010 0120     		movs	r0, #1
- 572 0012 FFF7FEFF 		bl	ILI9341_Write_Command
+ 566              		.loc 1 204 1
+ 567 0010 0120     		movs	r0, #1
+ 568 0012 FFF7FEFF 		bl	ILI9341_Write_Command
  205:Core/Src/ILI9341_STM32_Driver.c **** HAL_Delay(1000);
- 573              		.loc 1 205 1
- 574 0016 4FF47A70 		mov	r0, #1000
- 575 001a FFF7FEFF 		bl	HAL_Delay
+ 569              		.loc 1 205 1
+ 570 0016 4FF47A70 		mov	r0, #1000
+ 571 001a FFF7FEFF 		bl	HAL_Delay
  206:Core/Src/ILI9341_STM32_Driver.c **** 	
  207:Core/Src/ILI9341_STM32_Driver.c **** //POWER CONTROL A
  208:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xCB);
- 576              		.loc 1 208 1
- 577 001e CB20     		movs	r0, #203
- 578 0020 FFF7FEFF 		bl	ILI9341_Write_Command
+ 572              		.loc 1 208 1
+ 573 001e CB20     		movs	r0, #203
+ 574 0020 FFF7FEFF 		bl	ILI9341_Write_Command
  209:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x39);
- 579              		.loc 1 209 1
- 580 0024 3920     		movs	r0, #57
- 581 0026 FFF7FEFF 		bl	ILI9341_Write_Data
+ 575              		.loc 1 209 1
+ 576 0024 3920     		movs	r0, #57
+ 577 0026 FFF7FEFF 		bl	ILI9341_Write_Data
  210:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x2C);
- 582              		.loc 1 210 1
- 583 002a 2C20     		movs	r0, #44
- 584 002c FFF7FEFF 		bl	ILI9341_Write_Data
+ 578              		.loc 1 210 1
+ 579 002a 2C20     		movs	r0, #44
+ 580 002c FFF7FEFF 		bl	ILI9341_Write_Data
  211:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x00);
- 585              		.loc 1 211 1
- 586 0030 0020     		movs	r0, #0
- 587 0032 FFF7FEFF 		bl	ILI9341_Write_Data
+ 581              		.loc 1 211 1
+ 582 0030 0020     		movs	r0, #0
+ 583 0032 FFF7FEFF 		bl	ILI9341_Write_Data
  212:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x34);
- 588              		.loc 1 212 1
- 589 0036 3420     		movs	r0, #52
- 590 0038 FFF7FEFF 		bl	ILI9341_Write_Data
+ 584              		.loc 1 212 1
+ 585 0036 3420     		movs	r0, #52
+ 586 0038 FFF7FEFF 		bl	ILI9341_Write_Data
  213:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x02);
- 591              		.loc 1 213 1
- 592 003c 0220     		movs	r0, #2
- 593 003e FFF7FEFF 		bl	ILI9341_Write_Data
+ 587              		.loc 1 213 1
+ 588 003c 0220     		movs	r0, #2
+ 589 003e FFF7FEFF 		bl	ILI9341_Write_Data
  214:Core/Src/ILI9341_STM32_Driver.c **** 
  215:Core/Src/ILI9341_STM32_Driver.c **** //POWER CONTROL B
  216:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xCF);
- 594              		.loc 1 216 1
- 595 0042 CF20     		movs	r0, #207
- 596 0044 FFF7FEFF 		bl	ILI9341_Write_Command
+ 590              		.loc 1 216 1
+ 591 0042 CF20     		movs	r0, #207
+ 592 0044 FFF7FEFF 		bl	ILI9341_Write_Command
  217:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x00);
- 597              		.loc 1 217 1
- 598 0048 0020     		movs	r0, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 15
-
-
- 599 004a FFF7FEFF 		bl	ILI9341_Write_Data
+ 593              		.loc 1 217 1
+ 594 0048 0020     		movs	r0, #0
+ 595 004a FFF7FEFF 		bl	ILI9341_Write_Data
  218:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0xC1);
- 600              		.loc 1 218 1
- 601 004e C120     		movs	r0, #193
- 602 0050 FFF7FEFF 		bl	ILI9341_Write_Data
+ 596              		.loc 1 218 1
+ 597 004e C120     		movs	r0, #193
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 15
+
+
+ 598 0050 FFF7FEFF 		bl	ILI9341_Write_Data
  219:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x30);
- 603              		.loc 1 219 1
- 604 0054 3020     		movs	r0, #48
- 605 0056 FFF7FEFF 		bl	ILI9341_Write_Data
+ 599              		.loc 1 219 1
+ 600 0054 3020     		movs	r0, #48
+ 601 0056 FFF7FEFF 		bl	ILI9341_Write_Data
  220:Core/Src/ILI9341_STM32_Driver.c **** 
  221:Core/Src/ILI9341_STM32_Driver.c **** //DRIVER TIMING CONTROL A
  222:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xE8);
- 606              		.loc 1 222 1
- 607 005a E820     		movs	r0, #232
- 608 005c FFF7FEFF 		bl	ILI9341_Write_Command
+ 602              		.loc 1 222 1
+ 603 005a E820     		movs	r0, #232
+ 604 005c FFF7FEFF 		bl	ILI9341_Write_Command
  223:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x85);
- 609              		.loc 1 223 1
- 610 0060 8520     		movs	r0, #133
- 611 0062 FFF7FEFF 		bl	ILI9341_Write_Data
+ 605              		.loc 1 223 1
+ 606 0060 8520     		movs	r0, #133
+ 607 0062 FFF7FEFF 		bl	ILI9341_Write_Data
  224:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x00);
- 612              		.loc 1 224 1
- 613 0066 0020     		movs	r0, #0
- 614 0068 FFF7FEFF 		bl	ILI9341_Write_Data
+ 608              		.loc 1 224 1
+ 609 0066 0020     		movs	r0, #0
+ 610 0068 FFF7FEFF 		bl	ILI9341_Write_Data
  225:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x78);
- 615              		.loc 1 225 1
- 616 006c 7820     		movs	r0, #120
- 617 006e FFF7FEFF 		bl	ILI9341_Write_Data
+ 611              		.loc 1 225 1
+ 612 006c 7820     		movs	r0, #120
+ 613 006e FFF7FEFF 		bl	ILI9341_Write_Data
  226:Core/Src/ILI9341_STM32_Driver.c **** 
  227:Core/Src/ILI9341_STM32_Driver.c **** //DRIVER TIMING CONTROL B
  228:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xEA);
- 618              		.loc 1 228 1
- 619 0072 EA20     		movs	r0, #234
- 620 0074 FFF7FEFF 		bl	ILI9341_Write_Command
+ 614              		.loc 1 228 1
+ 615 0072 EA20     		movs	r0, #234
+ 616 0074 FFF7FEFF 		bl	ILI9341_Write_Command
  229:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x00);
- 621              		.loc 1 229 1
- 622 0078 0020     		movs	r0, #0
- 623 007a FFF7FEFF 		bl	ILI9341_Write_Data
+ 617              		.loc 1 229 1
+ 618 0078 0020     		movs	r0, #0
+ 619 007a FFF7FEFF 		bl	ILI9341_Write_Data
  230:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x00);
- 624              		.loc 1 230 1
- 625 007e 0020     		movs	r0, #0
- 626 0080 FFF7FEFF 		bl	ILI9341_Write_Data
+ 620              		.loc 1 230 1
+ 621 007e 0020     		movs	r0, #0
+ 622 0080 FFF7FEFF 		bl	ILI9341_Write_Data
  231:Core/Src/ILI9341_STM32_Driver.c **** 
  232:Core/Src/ILI9341_STM32_Driver.c **** //POWER ON SEQUENCE CONTROL
  233:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xED);
- 627              		.loc 1 233 1
- 628 0084 ED20     		movs	r0, #237
- 629 0086 FFF7FEFF 		bl	ILI9341_Write_Command
+ 623              		.loc 1 233 1
+ 624 0084 ED20     		movs	r0, #237
+ 625 0086 FFF7FEFF 		bl	ILI9341_Write_Command
  234:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x64);
- 630              		.loc 1 234 1
- 631 008a 6420     		movs	r0, #100
- 632 008c FFF7FEFF 		bl	ILI9341_Write_Data
+ 626              		.loc 1 234 1
+ 627 008a 6420     		movs	r0, #100
+ 628 008c FFF7FEFF 		bl	ILI9341_Write_Data
  235:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x03);
- 633              		.loc 1 235 1
- 634 0090 0320     		movs	r0, #3
- 635 0092 FFF7FEFF 		bl	ILI9341_Write_Data
+ 629              		.loc 1 235 1
+ 630 0090 0320     		movs	r0, #3
+ 631 0092 FFF7FEFF 		bl	ILI9341_Write_Data
  236:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x12);
- 636              		.loc 1 236 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 16
-
-
- 637 0096 1220     		movs	r0, #18
- 638 0098 FFF7FEFF 		bl	ILI9341_Write_Data
+ 632              		.loc 1 236 1
+ 633 0096 1220     		movs	r0, #18
+ 634 0098 FFF7FEFF 		bl	ILI9341_Write_Data
  237:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x81);
- 639              		.loc 1 237 1
- 640 009c 8120     		movs	r0, #129
- 641 009e FFF7FEFF 		bl	ILI9341_Write_Data
+ 635              		.loc 1 237 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 16
+
+
+ 636 009c 8120     		movs	r0, #129
+ 637 009e FFF7FEFF 		bl	ILI9341_Write_Data
  238:Core/Src/ILI9341_STM32_Driver.c **** 
  239:Core/Src/ILI9341_STM32_Driver.c **** //PUMP RATIO CONTROL
  240:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xF7);
- 642              		.loc 1 240 1
- 643 00a2 F720     		movs	r0, #247
- 644 00a4 FFF7FEFF 		bl	ILI9341_Write_Command
+ 638              		.loc 1 240 1
+ 639 00a2 F720     		movs	r0, #247
+ 640 00a4 FFF7FEFF 		bl	ILI9341_Write_Command
  241:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x20);
- 645              		.loc 1 241 1
- 646 00a8 2020     		movs	r0, #32
- 647 00aa FFF7FEFF 		bl	ILI9341_Write_Data
+ 641              		.loc 1 241 1
+ 642 00a8 2020     		movs	r0, #32
+ 643 00aa FFF7FEFF 		bl	ILI9341_Write_Data
  242:Core/Src/ILI9341_STM32_Driver.c **** 
  243:Core/Src/ILI9341_STM32_Driver.c **** //POWER CONTROL,VRH[5:0]
  244:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xC0);
- 648              		.loc 1 244 1
- 649 00ae C020     		movs	r0, #192
- 650 00b0 FFF7FEFF 		bl	ILI9341_Write_Command
+ 644              		.loc 1 244 1
+ 645 00ae C020     		movs	r0, #192
+ 646 00b0 FFF7FEFF 		bl	ILI9341_Write_Command
  245:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x23);
- 651              		.loc 1 245 1
- 652 00b4 2320     		movs	r0, #35
- 653 00b6 FFF7FEFF 		bl	ILI9341_Write_Data
+ 647              		.loc 1 245 1
+ 648 00b4 2320     		movs	r0, #35
+ 649 00b6 FFF7FEFF 		bl	ILI9341_Write_Data
  246:Core/Src/ILI9341_STM32_Driver.c **** 
  247:Core/Src/ILI9341_STM32_Driver.c **** //POWER CONTROL,SAP[2:0];BT[3:0]
  248:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xC1);
- 654              		.loc 1 248 1
- 655 00ba C120     		movs	r0, #193
- 656 00bc FFF7FEFF 		bl	ILI9341_Write_Command
+ 650              		.loc 1 248 1
+ 651 00ba C120     		movs	r0, #193
+ 652 00bc FFF7FEFF 		bl	ILI9341_Write_Command
  249:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x10);
- 657              		.loc 1 249 1
- 658 00c0 1020     		movs	r0, #16
- 659 00c2 FFF7FEFF 		bl	ILI9341_Write_Data
+ 653              		.loc 1 249 1
+ 654 00c0 1020     		movs	r0, #16
+ 655 00c2 FFF7FEFF 		bl	ILI9341_Write_Data
  250:Core/Src/ILI9341_STM32_Driver.c **** 
  251:Core/Src/ILI9341_STM32_Driver.c **** //VCM CONTROL
  252:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xC5);
- 660              		.loc 1 252 1
- 661 00c6 C520     		movs	r0, #197
- 662 00c8 FFF7FEFF 		bl	ILI9341_Write_Command
+ 656              		.loc 1 252 1
+ 657 00c6 C520     		movs	r0, #197
+ 658 00c8 FFF7FEFF 		bl	ILI9341_Write_Command
  253:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x3E);
- 663              		.loc 1 253 1
- 664 00cc 3E20     		movs	r0, #62
- 665 00ce FFF7FEFF 		bl	ILI9341_Write_Data
+ 659              		.loc 1 253 1
+ 660 00cc 3E20     		movs	r0, #62
+ 661 00ce FFF7FEFF 		bl	ILI9341_Write_Data
  254:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x28);
- 666              		.loc 1 254 1
- 667 00d2 2820     		movs	r0, #40
- 668 00d4 FFF7FEFF 		bl	ILI9341_Write_Data
+ 662              		.loc 1 254 1
+ 663 00d2 2820     		movs	r0, #40
+ 664 00d4 FFF7FEFF 		bl	ILI9341_Write_Data
  255:Core/Src/ILI9341_STM32_Driver.c **** 
  256:Core/Src/ILI9341_STM32_Driver.c **** //VCM CONTROL 2
  257:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xC7);
- 669              		.loc 1 257 1
- 670 00d8 C720     		movs	r0, #199
- 671 00da FFF7FEFF 		bl	ILI9341_Write_Command
+ 665              		.loc 1 257 1
+ 666 00d8 C720     		movs	r0, #199
+ 667 00da FFF7FEFF 		bl	ILI9341_Write_Command
  258:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x86);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 17
-
-
- 672              		.loc 1 258 1
- 673 00de 8620     		movs	r0, #134
- 674 00e0 FFF7FEFF 		bl	ILI9341_Write_Data
+ 668              		.loc 1 258 1
+ 669 00de 8620     		movs	r0, #134
+ 670 00e0 FFF7FEFF 		bl	ILI9341_Write_Data
  259:Core/Src/ILI9341_STM32_Driver.c **** 
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 17
+
+
  260:Core/Src/ILI9341_STM32_Driver.c **** //MEMORY ACCESS CONTROL
  261:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0x36);
- 675              		.loc 1 261 1
- 676 00e4 3620     		movs	r0, #54
- 677 00e6 FFF7FEFF 		bl	ILI9341_Write_Command
+ 671              		.loc 1 261 1
+ 672 00e4 3620     		movs	r0, #54
+ 673 00e6 FFF7FEFF 		bl	ILI9341_Write_Command
  262:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x48);
- 678              		.loc 1 262 1
- 679 00ea 4820     		movs	r0, #72
- 680 00ec FFF7FEFF 		bl	ILI9341_Write_Data
+ 674              		.loc 1 262 1
+ 675 00ea 4820     		movs	r0, #72
+ 676 00ec FFF7FEFF 		bl	ILI9341_Write_Data
  263:Core/Src/ILI9341_STM32_Driver.c **** 
  264:Core/Src/ILI9341_STM32_Driver.c **** //PIXEL FORMAT
  265:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0x3A);
- 681              		.loc 1 265 1
- 682 00f0 3A20     		movs	r0, #58
- 683 00f2 FFF7FEFF 		bl	ILI9341_Write_Command
+ 677              		.loc 1 265 1
+ 678 00f0 3A20     		movs	r0, #58
+ 679 00f2 FFF7FEFF 		bl	ILI9341_Write_Command
  266:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x55);
- 684              		.loc 1 266 1
- 685 00f6 5520     		movs	r0, #85
- 686 00f8 FFF7FEFF 		bl	ILI9341_Write_Data
+ 680              		.loc 1 266 1
+ 681 00f6 5520     		movs	r0, #85
+ 682 00f8 FFF7FEFF 		bl	ILI9341_Write_Data
  267:Core/Src/ILI9341_STM32_Driver.c **** 
  268:Core/Src/ILI9341_STM32_Driver.c **** //FRAME RATIO CONTROL, STANDARD RGB COLOR
  269:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xB1);
- 687              		.loc 1 269 1
- 688 00fc B120     		movs	r0, #177
- 689 00fe FFF7FEFF 		bl	ILI9341_Write_Command
+ 683              		.loc 1 269 1
+ 684 00fc B120     		movs	r0, #177
+ 685 00fe FFF7FEFF 		bl	ILI9341_Write_Command
  270:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x00);
- 690              		.loc 1 270 1
- 691 0102 0020     		movs	r0, #0
- 692 0104 FFF7FEFF 		bl	ILI9341_Write_Data
+ 686              		.loc 1 270 1
+ 687 0102 0020     		movs	r0, #0
+ 688 0104 FFF7FEFF 		bl	ILI9341_Write_Data
  271:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x18);
- 693              		.loc 1 271 1
- 694 0108 1820     		movs	r0, #24
- 695 010a FFF7FEFF 		bl	ILI9341_Write_Data
+ 689              		.loc 1 271 1
+ 690 0108 1820     		movs	r0, #24
+ 691 010a FFF7FEFF 		bl	ILI9341_Write_Data
  272:Core/Src/ILI9341_STM32_Driver.c **** 
  273:Core/Src/ILI9341_STM32_Driver.c **** //DISPLAY FUNCTION CONTROL
  274:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xB6);
- 696              		.loc 1 274 1
- 697 010e B620     		movs	r0, #182
- 698 0110 FFF7FEFF 		bl	ILI9341_Write_Command
+ 692              		.loc 1 274 1
+ 693 010e B620     		movs	r0, #182
+ 694 0110 FFF7FEFF 		bl	ILI9341_Write_Command
  275:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x08);
- 699              		.loc 1 275 1
- 700 0114 0820     		movs	r0, #8
- 701 0116 FFF7FEFF 		bl	ILI9341_Write_Data
+ 695              		.loc 1 275 1
+ 696 0114 0820     		movs	r0, #8
+ 697 0116 FFF7FEFF 		bl	ILI9341_Write_Data
  276:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x82);
- 702              		.loc 1 276 1
- 703 011a 8220     		movs	r0, #130
- 704 011c FFF7FEFF 		bl	ILI9341_Write_Data
+ 698              		.loc 1 276 1
+ 699 011a 8220     		movs	r0, #130
+ 700 011c FFF7FEFF 		bl	ILI9341_Write_Data
  277:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x27);
- 705              		.loc 1 277 1
- 706 0120 2720     		movs	r0, #39
- 707 0122 FFF7FEFF 		bl	ILI9341_Write_Data
+ 701              		.loc 1 277 1
+ 702 0120 2720     		movs	r0, #39
+ 703 0122 FFF7FEFF 		bl	ILI9341_Write_Data
  278:Core/Src/ILI9341_STM32_Driver.c **** 
  279:Core/Src/ILI9341_STM32_Driver.c **** //3GAMMA FUNCTION DISABLE
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 18
-
-
  280:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xF2);
- 708              		.loc 1 280 1
- 709 0126 F220     		movs	r0, #242
- 710 0128 FFF7FEFF 		bl	ILI9341_Write_Command
+ 704              		.loc 1 280 1
+ 705 0126 F220     		movs	r0, #242
+ 706 0128 FFF7FEFF 		bl	ILI9341_Write_Command
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 18
+
+
  281:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x00);
- 711              		.loc 1 281 1
- 712 012c 0020     		movs	r0, #0
- 713 012e FFF7FEFF 		bl	ILI9341_Write_Data
+ 707              		.loc 1 281 1
+ 708 012c 0020     		movs	r0, #0
+ 709 012e FFF7FEFF 		bl	ILI9341_Write_Data
  282:Core/Src/ILI9341_STM32_Driver.c **** 
  283:Core/Src/ILI9341_STM32_Driver.c **** //GAMMA CURVE SELECTED
  284:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0x26);
- 714              		.loc 1 284 1
- 715 0132 2620     		movs	r0, #38
- 716 0134 FFF7FEFF 		bl	ILI9341_Write_Command
+ 710              		.loc 1 284 1
+ 711 0132 2620     		movs	r0, #38
+ 712 0134 FFF7FEFF 		bl	ILI9341_Write_Command
  285:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x01);
- 717              		.loc 1 285 1
- 718 0138 0120     		movs	r0, #1
- 719 013a FFF7FEFF 		bl	ILI9341_Write_Data
+ 713              		.loc 1 285 1
+ 714 0138 0120     		movs	r0, #1
+ 715 013a FFF7FEFF 		bl	ILI9341_Write_Data
  286:Core/Src/ILI9341_STM32_Driver.c **** 
  287:Core/Src/ILI9341_STM32_Driver.c **** //POSITIVE GAMMA CORRECTION
  288:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xE0);
- 720              		.loc 1 288 1
- 721 013e E020     		movs	r0, #224
- 722 0140 FFF7FEFF 		bl	ILI9341_Write_Command
+ 716              		.loc 1 288 1
+ 717 013e E020     		movs	r0, #224
+ 718 0140 FFF7FEFF 		bl	ILI9341_Write_Command
  289:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x0F);
- 723              		.loc 1 289 1
- 724 0144 0F20     		movs	r0, #15
- 725 0146 FFF7FEFF 		bl	ILI9341_Write_Data
+ 719              		.loc 1 289 1
+ 720 0144 0F20     		movs	r0, #15
+ 721 0146 FFF7FEFF 		bl	ILI9341_Write_Data
  290:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x31);
- 726              		.loc 1 290 1
- 727 014a 3120     		movs	r0, #49
- 728 014c FFF7FEFF 		bl	ILI9341_Write_Data
+ 722              		.loc 1 290 1
+ 723 014a 3120     		movs	r0, #49
+ 724 014c FFF7FEFF 		bl	ILI9341_Write_Data
  291:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x2B);
- 729              		.loc 1 291 1
- 730 0150 2B20     		movs	r0, #43
- 731 0152 FFF7FEFF 		bl	ILI9341_Write_Data
+ 725              		.loc 1 291 1
+ 726 0150 2B20     		movs	r0, #43
+ 727 0152 FFF7FEFF 		bl	ILI9341_Write_Data
  292:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x0C);
- 732              		.loc 1 292 1
- 733 0156 0C20     		movs	r0, #12
- 734 0158 FFF7FEFF 		bl	ILI9341_Write_Data
+ 728              		.loc 1 292 1
+ 729 0156 0C20     		movs	r0, #12
+ 730 0158 FFF7FEFF 		bl	ILI9341_Write_Data
  293:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x0E);
- 735              		.loc 1 293 1
- 736 015c 0E20     		movs	r0, #14
- 737 015e FFF7FEFF 		bl	ILI9341_Write_Data
+ 731              		.loc 1 293 1
+ 732 015c 0E20     		movs	r0, #14
+ 733 015e FFF7FEFF 		bl	ILI9341_Write_Data
  294:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x08);
- 738              		.loc 1 294 1
- 739 0162 0820     		movs	r0, #8
- 740 0164 FFF7FEFF 		bl	ILI9341_Write_Data
+ 734              		.loc 1 294 1
+ 735 0162 0820     		movs	r0, #8
+ 736 0164 FFF7FEFF 		bl	ILI9341_Write_Data
  295:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x4E);
- 741              		.loc 1 295 1
- 742 0168 4E20     		movs	r0, #78
- 743 016a FFF7FEFF 		bl	ILI9341_Write_Data
+ 737              		.loc 1 295 1
+ 738 0168 4E20     		movs	r0, #78
+ 739 016a FFF7FEFF 		bl	ILI9341_Write_Data
  296:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0xF1);
- 744              		.loc 1 296 1
- 745 016e F120     		movs	r0, #241
- 746 0170 FFF7FEFF 		bl	ILI9341_Write_Data
+ 740              		.loc 1 296 1
+ 741 016e F120     		movs	r0, #241
+ 742 0170 FFF7FEFF 		bl	ILI9341_Write_Data
  297:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x37);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 19
-
-
- 747              		.loc 1 297 1
- 748 0174 3720     		movs	r0, #55
- 749 0176 FFF7FEFF 		bl	ILI9341_Write_Data
+ 743              		.loc 1 297 1
+ 744 0174 3720     		movs	r0, #55
+ 745 0176 FFF7FEFF 		bl	ILI9341_Write_Data
  298:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x07);
- 750              		.loc 1 298 1
- 751 017a 0720     		movs	r0, #7
- 752 017c FFF7FEFF 		bl	ILI9341_Write_Data
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 19
+
+
+ 746              		.loc 1 298 1
+ 747 017a 0720     		movs	r0, #7
+ 748 017c FFF7FEFF 		bl	ILI9341_Write_Data
  299:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x10);
- 753              		.loc 1 299 1
- 754 0180 1020     		movs	r0, #16
- 755 0182 FFF7FEFF 		bl	ILI9341_Write_Data
+ 749              		.loc 1 299 1
+ 750 0180 1020     		movs	r0, #16
+ 751 0182 FFF7FEFF 		bl	ILI9341_Write_Data
  300:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x03);
- 756              		.loc 1 300 1
- 757 0186 0320     		movs	r0, #3
- 758 0188 FFF7FEFF 		bl	ILI9341_Write_Data
+ 752              		.loc 1 300 1
+ 753 0186 0320     		movs	r0, #3
+ 754 0188 FFF7FEFF 		bl	ILI9341_Write_Data
  301:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x0E);
- 759              		.loc 1 301 1
- 760 018c 0E20     		movs	r0, #14
- 761 018e FFF7FEFF 		bl	ILI9341_Write_Data
+ 755              		.loc 1 301 1
+ 756 018c 0E20     		movs	r0, #14
+ 757 018e FFF7FEFF 		bl	ILI9341_Write_Data
  302:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x09);
- 762              		.loc 1 302 1
- 763 0192 0920     		movs	r0, #9
- 764 0194 FFF7FEFF 		bl	ILI9341_Write_Data
+ 758              		.loc 1 302 1
+ 759 0192 0920     		movs	r0, #9
+ 760 0194 FFF7FEFF 		bl	ILI9341_Write_Data
  303:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x00);
- 765              		.loc 1 303 1
- 766 0198 0020     		movs	r0, #0
- 767 019a FFF7FEFF 		bl	ILI9341_Write_Data
+ 761              		.loc 1 303 1
+ 762 0198 0020     		movs	r0, #0
+ 763 019a FFF7FEFF 		bl	ILI9341_Write_Data
  304:Core/Src/ILI9341_STM32_Driver.c **** 
  305:Core/Src/ILI9341_STM32_Driver.c **** //NEGATIVE GAMMA CORRECTION
  306:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0xE1);
- 768              		.loc 1 306 1
- 769 019e E120     		movs	r0, #225
- 770 01a0 FFF7FEFF 		bl	ILI9341_Write_Command
+ 764              		.loc 1 306 1
+ 765 019e E120     		movs	r0, #225
+ 766 01a0 FFF7FEFF 		bl	ILI9341_Write_Command
  307:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x00);
- 771              		.loc 1 307 1
- 772 01a4 0020     		movs	r0, #0
- 773 01a6 FFF7FEFF 		bl	ILI9341_Write_Data
+ 767              		.loc 1 307 1
+ 768 01a4 0020     		movs	r0, #0
+ 769 01a6 FFF7FEFF 		bl	ILI9341_Write_Data
  308:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x0E);
- 774              		.loc 1 308 1
- 775 01aa 0E20     		movs	r0, #14
- 776 01ac FFF7FEFF 		bl	ILI9341_Write_Data
+ 770              		.loc 1 308 1
+ 771 01aa 0E20     		movs	r0, #14
+ 772 01ac FFF7FEFF 		bl	ILI9341_Write_Data
  309:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x14);
- 777              		.loc 1 309 1
- 778 01b0 1420     		movs	r0, #20
- 779 01b2 FFF7FEFF 		bl	ILI9341_Write_Data
+ 773              		.loc 1 309 1
+ 774 01b0 1420     		movs	r0, #20
+ 775 01b2 FFF7FEFF 		bl	ILI9341_Write_Data
  310:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x03);
- 780              		.loc 1 310 1
- 781 01b6 0320     		movs	r0, #3
- 782 01b8 FFF7FEFF 		bl	ILI9341_Write_Data
+ 776              		.loc 1 310 1
+ 777 01b6 0320     		movs	r0, #3
+ 778 01b8 FFF7FEFF 		bl	ILI9341_Write_Data
  311:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x11);
- 783              		.loc 1 311 1
- 784 01bc 1120     		movs	r0, #17
- 785 01be FFF7FEFF 		bl	ILI9341_Write_Data
+ 779              		.loc 1 311 1
+ 780 01bc 1120     		movs	r0, #17
+ 781 01be FFF7FEFF 		bl	ILI9341_Write_Data
  312:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x07);
- 786              		.loc 1 312 1
- 787 01c2 0720     		movs	r0, #7
- 788 01c4 FFF7FEFF 		bl	ILI9341_Write_Data
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 20
-
-
+ 782              		.loc 1 312 1
+ 783 01c2 0720     		movs	r0, #7
+ 784 01c4 FFF7FEFF 		bl	ILI9341_Write_Data
  313:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x31);
- 789              		.loc 1 313 1
- 790 01c8 3120     		movs	r0, #49
- 791 01ca FFF7FEFF 		bl	ILI9341_Write_Data
+ 785              		.loc 1 313 1
+ 786 01c8 3120     		movs	r0, #49
+ 787 01ca FFF7FEFF 		bl	ILI9341_Write_Data
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 20
+
+
  314:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0xC1);
- 792              		.loc 1 314 1
- 793 01ce C120     		movs	r0, #193
- 794 01d0 FFF7FEFF 		bl	ILI9341_Write_Data
+ 788              		.loc 1 314 1
+ 789 01ce C120     		movs	r0, #193
+ 790 01d0 FFF7FEFF 		bl	ILI9341_Write_Data
  315:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x48);
- 795              		.loc 1 315 1
- 796 01d4 4820     		movs	r0, #72
- 797 01d6 FFF7FEFF 		bl	ILI9341_Write_Data
+ 791              		.loc 1 315 1
+ 792 01d4 4820     		movs	r0, #72
+ 793 01d6 FFF7FEFF 		bl	ILI9341_Write_Data
  316:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x08);
- 798              		.loc 1 316 1
- 799 01da 0820     		movs	r0, #8
- 800 01dc FFF7FEFF 		bl	ILI9341_Write_Data
+ 794              		.loc 1 316 1
+ 795 01da 0820     		movs	r0, #8
+ 796 01dc FFF7FEFF 		bl	ILI9341_Write_Data
  317:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x0F);
- 801              		.loc 1 317 1
- 802 01e0 0F20     		movs	r0, #15
- 803 01e2 FFF7FEFF 		bl	ILI9341_Write_Data
+ 797              		.loc 1 317 1
+ 798 01e0 0F20     		movs	r0, #15
+ 799 01e2 FFF7FEFF 		bl	ILI9341_Write_Data
  318:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x0C);
- 804              		.loc 1 318 1
- 805 01e6 0C20     		movs	r0, #12
- 806 01e8 FFF7FEFF 		bl	ILI9341_Write_Data
+ 800              		.loc 1 318 1
+ 801 01e6 0C20     		movs	r0, #12
+ 802 01e8 FFF7FEFF 		bl	ILI9341_Write_Data
  319:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x31);
- 807              		.loc 1 319 1
- 808 01ec 3120     		movs	r0, #49
- 809 01ee FFF7FEFF 		bl	ILI9341_Write_Data
+ 803              		.loc 1 319 1
+ 804 01ec 3120     		movs	r0, #49
+ 805 01ee FFF7FEFF 		bl	ILI9341_Write_Data
  320:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x36);
- 810              		.loc 1 320 1
- 811 01f2 3620     		movs	r0, #54
- 812 01f4 FFF7FEFF 		bl	ILI9341_Write_Data
+ 806              		.loc 1 320 1
+ 807 01f2 3620     		movs	r0, #54
+ 808 01f4 FFF7FEFF 		bl	ILI9341_Write_Data
  321:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x0F);
- 813              		.loc 1 321 1
- 814 01f8 0F20     		movs	r0, #15
- 815 01fa FFF7FEFF 		bl	ILI9341_Write_Data
+ 809              		.loc 1 321 1
+ 810 01f8 0F20     		movs	r0, #15
+ 811 01fa FFF7FEFF 		bl	ILI9341_Write_Data
  322:Core/Src/ILI9341_STM32_Driver.c **** 
  323:Core/Src/ILI9341_STM32_Driver.c **** //EXIT SLEEP
  324:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0x11);
- 816              		.loc 1 324 1
- 817 01fe 1120     		movs	r0, #17
- 818 0200 FFF7FEFF 		bl	ILI9341_Write_Command
+ 812              		.loc 1 324 1
+ 813 01fe 1120     		movs	r0, #17
+ 814 0200 FFF7FEFF 		bl	ILI9341_Write_Command
  325:Core/Src/ILI9341_STM32_Driver.c **** HAL_Delay(120);
- 819              		.loc 1 325 1
- 820 0204 7820     		movs	r0, #120
- 821 0206 FFF7FEFF 		bl	HAL_Delay
+ 815              		.loc 1 325 1
+ 816 0204 7820     		movs	r0, #120
+ 817 0206 FFF7FEFF 		bl	HAL_Delay
  326:Core/Src/ILI9341_STM32_Driver.c **** 
  327:Core/Src/ILI9341_STM32_Driver.c **** //TURN ON DISPLAY
  328:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Command(0x29);
- 822              		.loc 1 328 1
- 823 020a 2920     		movs	r0, #41
- 824 020c FFF7FEFF 		bl	ILI9341_Write_Command
+ 818              		.loc 1 328 1
+ 819 020a 2920     		movs	r0, #41
+ 820 020c FFF7FEFF 		bl	ILI9341_Write_Command
  329:Core/Src/ILI9341_STM32_Driver.c **** 
  330:Core/Src/ILI9341_STM32_Driver.c **** //STARTING ROTATION
  331:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Set_Rotation(SCREEN_VERTICAL_1);
- 825              		.loc 1 331 1
- 826 0210 0020     		movs	r0, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 21
-
-
- 827 0212 FFF7FEFF 		bl	ILI9341_Set_Rotation
+ 821              		.loc 1 331 1
+ 822 0210 0020     		movs	r0, #0
+ 823 0212 FFF7FEFF 		bl	ILI9341_Set_Rotation
  332:Core/Src/ILI9341_STM32_Driver.c **** }
- 828              		.loc 1 332 1
- 829 0216 00BF     		nop
- 830 0218 80BD     		pop	{r7, pc}
- 831              		.cfi_endproc
- 832              	.LFE329:
- 834              		.section	.text.ILI9341_Draw_Colour,"ax",%progbits
- 835              		.align	1
- 836              		.global	ILI9341_Draw_Colour
- 837              		.syntax unified
- 838              		.thumb
- 839              		.thumb_func
- 841              	ILI9341_Draw_Colour:
- 842              	.LFB330:
+ 824              		.loc 1 332 1
+ 825 0216 00BF     		nop
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 21
+
+
+ 826 0218 80BD     		pop	{r7, pc}
+ 827              		.cfi_endproc
+ 828              	.LFE329:
+ 830              		.section	.text.ILI9341_Draw_Colour,"ax",%progbits
+ 831              		.align	1
+ 832              		.global	ILI9341_Draw_Colour
+ 833              		.syntax unified
+ 834              		.thumb
+ 835              		.thumb_func
+ 837              	ILI9341_Draw_Colour:
+ 838              	.LFB330:
  333:Core/Src/ILI9341_STM32_Driver.c **** 
  334:Core/Src/ILI9341_STM32_Driver.c **** //INTERNAL FUNCTION OF LIBRARY, USAGE NOT RECOMENDED, USE Draw_Pixel INSTEAD
  335:Core/Src/ILI9341_STM32_Driver.c **** /*Sends single pixel colour information to LCD*/
  336:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Draw_Colour(uint16_t Colour)
  337:Core/Src/ILI9341_STM32_Driver.c **** {
- 843              		.loc 1 337 1
- 844              		.cfi_startproc
- 845              		@ args = 0, pretend = 0, frame = 16
- 846              		@ frame_needed = 1, uses_anonymous_args = 0
- 847 0000 80B5     		push	{r7, lr}
- 848              		.cfi_def_cfa_offset 8
- 849              		.cfi_offset 7, -8
- 850              		.cfi_offset 14, -4
- 851 0002 84B0     		sub	sp, sp, #16
- 852              		.cfi_def_cfa_offset 24
- 853 0004 00AF     		add	r7, sp, #0
- 854              		.cfi_def_cfa_register 7
- 855 0006 0346     		mov	r3, r0
- 856 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 839              		.loc 1 337 1
+ 840              		.cfi_startproc
+ 841              		@ args = 0, pretend = 0, frame = 16
+ 842              		@ frame_needed = 1, uses_anonymous_args = 0
+ 843 0000 80B5     		push	{r7, lr}
+ 844              		.cfi_def_cfa_offset 8
+ 845              		.cfi_offset 7, -8
+ 846              		.cfi_offset 14, -4
+ 847 0002 84B0     		sub	sp, sp, #16
+ 848              		.cfi_def_cfa_offset 24
+ 849 0004 00AF     		add	r7, sp, #0
+ 850              		.cfi_def_cfa_register 7
+ 851 0006 0346     		mov	r3, r0
+ 852 0008 FB80     		strh	r3, [r7, #6]	@ movhi
  338:Core/Src/ILI9341_STM32_Driver.c **** //SENDS COLOUR
  339:Core/Src/ILI9341_STM32_Driver.c **** unsigned char TempBuffer[2] = {Colour>>8, Colour};	
- 857              		.loc 1 339 15
- 858 000a FB88     		ldrh	r3, [r7, #6]
- 859 000c 1B0A     		lsrs	r3, r3, #8
- 860 000e 9BB2     		uxth	r3, r3
- 861 0010 DBB2     		uxtb	r3, r3
- 862 0012 3B73     		strb	r3, [r7, #12]
- 863 0014 FB88     		ldrh	r3, [r7, #6]	@ movhi
- 864 0016 DBB2     		uxtb	r3, r3
- 865 0018 7B73     		strb	r3, [r7, #13]
+ 853              		.loc 1 339 15
+ 854 000a FB88     		ldrh	r3, [r7, #6]
+ 855 000c 1B0A     		lsrs	r3, r3, #8
+ 856 000e 9BB2     		uxth	r3, r3
+ 857 0010 DBB2     		uxtb	r3, r3
+ 858 0012 3B73     		strb	r3, [r7, #12]
+ 859 0014 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 860 0016 DBB2     		uxtb	r3, r3
+ 861 0018 7B73     		strb	r3, [r7, #13]
  340:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_SET);	
- 866              		.loc 1 340 1
- 867 001a 0122     		movs	r2, #1
- 868 001c 4FF40051 		mov	r1, #8192
- 869 0020 0C48     		ldr	r0, .L31
- 870 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 862              		.loc 1 340 1
+ 863 001a 0122     		movs	r2, #1
+ 864 001c 4FF40051 		mov	r1, #8192
+ 865 0020 0C48     		ldr	r0, .L31
+ 866 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
  341:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);
- 871              		.loc 1 341 1
- 872 0026 0022     		movs	r2, #0
- 873 0028 4FF48051 		mov	r1, #4096
- 874 002c 0948     		ldr	r0, .L31
- 875 002e FFF7FEFF 		bl	HAL_GPIO_WritePin
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 22
-
-
+ 867              		.loc 1 341 1
+ 868 0026 0022     		movs	r2, #0
+ 869 0028 4FF48051 		mov	r1, #4096
+ 870 002c 0948     		ldr	r0, .L31
+ 871 002e FFF7FEFF 		bl	HAL_GPIO_WritePin
  342:Core/Src/ILI9341_STM32_Driver.c **** SPI_Transmit(TempBuffer, 2, 1);	
- 876              		.loc 1 342 1
- 877 0032 07F10C03 		add	r3, r7, #12
- 878 0036 0122     		movs	r2, #1
- 879 0038 0221     		movs	r1, #2
- 880 003a 1846     		mov	r0, r3
- 881 003c FFF7FEFF 		bl	SPI_Transmit
+ 872              		.loc 1 342 1
+ 873 0032 07F10C03 		add	r3, r7, #12
+ 874 0036 0122     		movs	r2, #1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 22
+
+
+ 875 0038 0221     		movs	r1, #2
+ 876 003a 1846     		mov	r0, r3
+ 877 003c FFF7FEFF 		bl	SPI_Transmit
  343:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);
- 882              		.loc 1 343 1
- 883 0040 0122     		movs	r2, #1
- 884 0042 4FF48051 		mov	r1, #4096
- 885 0046 0348     		ldr	r0, .L31
- 886 0048 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 878              		.loc 1 343 1
+ 879 0040 0122     		movs	r2, #1
+ 880 0042 4FF48051 		mov	r1, #4096
+ 881 0046 0348     		ldr	r0, .L31
+ 882 0048 FFF7FEFF 		bl	HAL_GPIO_WritePin
  344:Core/Src/ILI9341_STM32_Driver.c **** }
- 887              		.loc 1 344 1
- 888 004c 00BF     		nop
- 889 004e 1037     		adds	r7, r7, #16
- 890              		.cfi_def_cfa_offset 8
- 891 0050 BD46     		mov	sp, r7
- 892              		.cfi_def_cfa_register 13
- 893              		@ sp needed
- 894 0052 80BD     		pop	{r7, pc}
- 895              	.L32:
- 896              		.align	2
- 897              	.L31:
- 898 0054 00180048 		.word	1207965696
- 899              		.cfi_endproc
- 900              	.LFE330:
- 902              		.section	.text.ILI9341_Draw_Colour_Burst,"ax",%progbits
- 903              		.align	1
- 904              		.global	ILI9341_Draw_Colour_Burst
- 905              		.syntax unified
- 906              		.thumb
- 907              		.thumb_func
- 909              	ILI9341_Draw_Colour_Burst:
- 910              	.LFB331:
+ 883              		.loc 1 344 1
+ 884 004c 00BF     		nop
+ 885 004e 1037     		adds	r7, r7, #16
+ 886              		.cfi_def_cfa_offset 8
+ 887 0050 BD46     		mov	sp, r7
+ 888              		.cfi_def_cfa_register 13
+ 889              		@ sp needed
+ 890 0052 80BD     		pop	{r7, pc}
+ 891              	.L32:
+ 892              		.align	2
+ 893              	.L31:
+ 894 0054 00180048 		.word	1207965696
+ 895              		.cfi_endproc
+ 896              	.LFE330:
+ 898              		.section	.text.ILI9341_Draw_Colour_Burst,"ax",%progbits
+ 899              		.align	1
+ 900              		.global	ILI9341_Draw_Colour_Burst
+ 901              		.syntax unified
+ 902              		.thumb
+ 903              		.thumb_func
+ 905              	ILI9341_Draw_Colour_Burst:
+ 906              	.LFB331:
  345:Core/Src/ILI9341_STM32_Driver.c **** 
  346:Core/Src/ILI9341_STM32_Driver.c **** //INTERNAL FUNCTION OF LIBRARY
  347:Core/Src/ILI9341_STM32_Driver.c **** /*Sends block colour information to LCD*/
  348:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Draw_Colour_Burst(uint16_t Colour, uint32_t Size)
  349:Core/Src/ILI9341_STM32_Driver.c **** {
- 911              		.loc 1 349 1
- 912              		.cfi_startproc
- 913              		@ args = 0, pretend = 0, frame = 48
- 914              		@ frame_needed = 1, uses_anonymous_args = 0
- 915 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
- 916              		.cfi_def_cfa_offset 28
- 917              		.cfi_offset 4, -28
- 918              		.cfi_offset 5, -24
- 919              		.cfi_offset 6, -20
- 920              		.cfi_offset 7, -16
- 921              		.cfi_offset 8, -12
- 922              		.cfi_offset 9, -8
- 923              		.cfi_offset 14, -4
- 924 0004 8DB0     		sub	sp, sp, #52
- 925              		.cfi_def_cfa_offset 80
- 926 0006 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 23
+ 907              		.loc 1 349 1
+ 908              		.cfi_startproc
+ 909              		@ args = 0, pretend = 0, frame = 48
+ 910              		@ frame_needed = 1, uses_anonymous_args = 0
+ 911 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+ 912              		.cfi_def_cfa_offset 28
+ 913              		.cfi_offset 4, -28
+ 914              		.cfi_offset 5, -24
+ 915              		.cfi_offset 6, -20
+ 916              		.cfi_offset 7, -16
+ 917              		.cfi_offset 8, -12
+ 918              		.cfi_offset 9, -8
+ 919              		.cfi_offset 14, -4
+ 920 0004 8DB0     		sub	sp, sp, #52
+ 921              		.cfi_def_cfa_offset 80
+ 922 0006 00AF     		add	r7, sp, #0
+ 923              		.cfi_def_cfa_register 7
+ 924 0008 0346     		mov	r3, r0
+ 925 000a 3960     		str	r1, [r7]
+ 926 000c FB80     		strh	r3, [r7, #6]	@ movhi
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 23
 
 
- 927              		.cfi_def_cfa_register 7
- 928 0008 0346     		mov	r3, r0
- 929 000a 3960     		str	r1, [r7]
- 930 000c FB80     		strh	r3, [r7, #6]	@ movhi
- 931              		.loc 1 349 1
- 932 000e 6B46     		mov	r3, sp
- 933 0010 1E46     		mov	r6, r3
+ 927              		.loc 1 349 1
+ 928 000e 6B46     		mov	r3, sp
+ 929 0010 1E46     		mov	r6, r3
  350:Core/Src/ILI9341_STM32_Driver.c **** //SENDS COLOUR
  351:Core/Src/ILI9341_STM32_Driver.c **** uint32_t Buffer_Size = 0;
- 934              		.loc 1 351 10
- 935 0012 0023     		movs	r3, #0
- 936 0014 FB62     		str	r3, [r7, #44]
+ 930              		.loc 1 351 10
+ 931 0012 0023     		movs	r3, #0
+ 932 0014 FB62     		str	r3, [r7, #44]
  352:Core/Src/ILI9341_STM32_Driver.c **** if((Size*2) < BURST_MAX_SIZE)
- 937              		.loc 1 352 9
- 938 0016 3B68     		ldr	r3, [r7]
- 939 0018 5B00     		lsls	r3, r3, #1
- 940              		.loc 1 352 3
- 941 001a B3F5FA7F 		cmp	r3, #500
- 942 001e 02D2     		bcs	.L34
+ 933              		.loc 1 352 9
+ 934 0016 3B68     		ldr	r3, [r7]
+ 935 0018 5B00     		lsls	r3, r3, #1
+ 936              		.loc 1 352 3
+ 937 001a B3F5207F 		cmp	r3, #640
+ 938 001e 02D2     		bcs	.L34
  353:Core/Src/ILI9341_STM32_Driver.c **** {
  354:Core/Src/ILI9341_STM32_Driver.c **** 	Buffer_Size = Size;
- 943              		.loc 1 354 14
- 944 0020 3B68     		ldr	r3, [r7]
- 945 0022 FB62     		str	r3, [r7, #44]
- 946 0024 02E0     		b	.L35
- 947              	.L34:
+ 939              		.loc 1 354 14
+ 940 0020 3B68     		ldr	r3, [r7]
+ 941 0022 FB62     		str	r3, [r7, #44]
+ 942 0024 02E0     		b	.L35
+ 943              	.L34:
  355:Core/Src/ILI9341_STM32_Driver.c **** }
  356:Core/Src/ILI9341_STM32_Driver.c **** else
  357:Core/Src/ILI9341_STM32_Driver.c **** {
  358:Core/Src/ILI9341_STM32_Driver.c **** 	Buffer_Size = BURST_MAX_SIZE;
- 948              		.loc 1 358 14
- 949 0026 4FF4FA73 		mov	r3, #500
- 950 002a FB62     		str	r3, [r7, #44]
- 951              	.L35:
+ 944              		.loc 1 358 14
+ 945 0026 4FF42073 		mov	r3, #640
+ 946 002a FB62     		str	r3, [r7, #44]
+ 947              	.L35:
  359:Core/Src/ILI9341_STM32_Driver.c **** }
  360:Core/Src/ILI9341_STM32_Driver.c **** 	
  361:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_SET);	
- 952              		.loc 1 361 1
- 953 002c 0122     		movs	r2, #1
- 954 002e 4FF40051 		mov	r1, #8192
- 955 0032 4048     		ldr	r0, .L41
- 956 0034 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 948              		.loc 1 361 1
+ 949 002c 0122     		movs	r2, #1
+ 950 002e 4FF40051 		mov	r1, #8192
+ 951 0032 4048     		ldr	r0, .L41
+ 952 0034 FFF7FEFF 		bl	HAL_GPIO_WritePin
  362:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);
- 957              		.loc 1 362 1
- 958 0038 0022     		movs	r2, #0
- 959 003a 4FF48051 		mov	r1, #4096
- 960 003e 3D48     		ldr	r0, .L41
- 961 0040 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 953              		.loc 1 362 1
+ 954 0038 0022     		movs	r2, #0
+ 955 003a 4FF48051 		mov	r1, #4096
+ 956 003e 3D48     		ldr	r0, .L41
+ 957 0040 FFF7FEFF 		bl	HAL_GPIO_WritePin
  363:Core/Src/ILI9341_STM32_Driver.c **** 
  364:Core/Src/ILI9341_STM32_Driver.c **** unsigned char chifted = 	Colour>>8;;
- 962              		.loc 1 364 15
- 963 0044 FB88     		ldrh	r3, [r7, #6]
- 964 0046 1B0A     		lsrs	r3, r3, #8
- 965 0048 9BB2     		uxth	r3, r3
- 966 004a 87F82330 		strb	r3, [r7, #35]
+ 958              		.loc 1 364 15
+ 959 0044 FB88     		ldrh	r3, [r7, #6]
+ 960 0046 1B0A     		lsrs	r3, r3, #8
+ 961 0048 9BB2     		uxth	r3, r3
+ 962 004a 87F82330 		strb	r3, [r7, #35]
  365:Core/Src/ILI9341_STM32_Driver.c **** unsigned char burst_buffer[Buffer_Size];
- 967              		.loc 1 365 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 24
+ 963              		.loc 1 365 1
+ 964 004e F96A     		ldr	r1, [r7, #44]
+ 965              		.loc 1 365 15
+ 966 0050 0B46     		mov	r3, r1
+ 967 0052 013B     		subs	r3, r3, #1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 24
 
 
- 968 004e F96A     		ldr	r1, [r7, #44]
- 969              		.loc 1 365 15
- 970 0050 0B46     		mov	r3, r1
- 971 0052 013B     		subs	r3, r3, #1
- 972 0054 FB61     		str	r3, [r7, #28]
- 973 0056 0023     		movs	r3, #0
- 974 0058 8846     		mov	r8, r1
- 975 005a 9946     		mov	r9, r3
- 976 005c 4FF00002 		mov	r2, #0
- 977 0060 4FF00003 		mov	r3, #0
- 978 0064 4FEAC903 		lsl	r3, r9, #3
- 979 0068 43EA5873 		orr	r3, r3, r8, lsr #29
- 980 006c 4FEAC802 		lsl	r2, r8, #3
- 981 0070 0023     		movs	r3, #0
- 982 0072 0C46     		mov	r4, r1
- 983 0074 1D46     		mov	r5, r3
- 984 0076 4FF00002 		mov	r2, #0
- 985 007a 4FF00003 		mov	r3, #0
- 986 007e EB00     		lsls	r3, r5, #3
- 987 0080 43EA5473 		orr	r3, r3, r4, lsr #29
- 988 0084 E200     		lsls	r2, r4, #3
- 989 0086 CB1D     		adds	r3, r1, #7
- 990 0088 DB08     		lsrs	r3, r3, #3
- 991 008a DB00     		lsls	r3, r3, #3
- 992 008c ADEB030D 		sub	sp, sp, r3
- 993 0090 6B46     		mov	r3, sp
- 994 0092 0033     		adds	r3, r3, #0
- 995 0094 BB61     		str	r3, [r7, #24]
- 996              	.LBB2:
+ 968 0054 FB61     		str	r3, [r7, #28]
+ 969 0056 0023     		movs	r3, #0
+ 970 0058 8846     		mov	r8, r1
+ 971 005a 9946     		mov	r9, r3
+ 972 005c 4FF00002 		mov	r2, #0
+ 973 0060 4FF00003 		mov	r3, #0
+ 974 0064 4FEAC903 		lsl	r3, r9, #3
+ 975 0068 43EA5873 		orr	r3, r3, r8, lsr #29
+ 976 006c 4FEAC802 		lsl	r2, r8, #3
+ 977 0070 0023     		movs	r3, #0
+ 978 0072 0C46     		mov	r4, r1
+ 979 0074 1D46     		mov	r5, r3
+ 980 0076 4FF00002 		mov	r2, #0
+ 981 007a 4FF00003 		mov	r3, #0
+ 982 007e EB00     		lsls	r3, r5, #3
+ 983 0080 43EA5473 		orr	r3, r3, r4, lsr #29
+ 984 0084 E200     		lsls	r2, r4, #3
+ 985 0086 CB1D     		adds	r3, r1, #7
+ 986 0088 DB08     		lsrs	r3, r3, #3
+ 987 008a DB00     		lsls	r3, r3, #3
+ 988 008c ADEB030D 		sub	sp, sp, r3
+ 989 0090 6B46     		mov	r3, sp
+ 990 0092 0033     		adds	r3, r3, #0
+ 991 0094 BB61     		str	r3, [r7, #24]
+ 992              	.LBB2:
  366:Core/Src/ILI9341_STM32_Driver.c **** for(uint32_t j = 0; j < Buffer_Size; j+=2)
- 997              		.loc 1 366 14
- 998 0096 0023     		movs	r3, #0
- 999 0098 BB62     		str	r3, [r7, #40]
- 1000              		.loc 1 366 1
- 1001 009a 0EE0     		b	.L36
- 1002              	.L37:
+ 993              		.loc 1 366 14
+ 994 0096 0023     		movs	r3, #0
+ 995 0098 BB62     		str	r3, [r7, #40]
+ 996              		.loc 1 366 1
+ 997 009a 0EE0     		b	.L36
+ 998              	.L37:
  367:Core/Src/ILI9341_STM32_Driver.c **** 	{
  368:Core/Src/ILI9341_STM32_Driver.c **** 		burst_buffer[j] = 	chifted;
- 1003              		.loc 1 368 19 discriminator 3
- 1004 009c BA69     		ldr	r2, [r7, #24]
- 1005 009e BB6A     		ldr	r3, [r7, #40]
- 1006 00a0 1344     		add	r3, r3, r2
- 1007 00a2 97F82320 		ldrb	r2, [r7, #35]
- 1008 00a6 1A70     		strb	r2, [r3]
+ 999              		.loc 1 368 19 discriminator 3
+ 1000 009c BA69     		ldr	r2, [r7, #24]
+ 1001 009e BB6A     		ldr	r3, [r7, #40]
+ 1002 00a0 1344     		add	r3, r3, r2
+ 1003 00a2 97F82320 		ldrb	r2, [r7, #35]
+ 1004 00a6 1A70     		strb	r2, [r3]
  369:Core/Src/ILI9341_STM32_Driver.c **** 		burst_buffer[j+1] = Colour;
- 1009              		.loc 1 369 17 discriminator 3
- 1010 00a8 BB6A     		ldr	r3, [r7, #40]
- 1011 00aa 0133     		adds	r3, r3, #1
- 1012              		.loc 1 369 21 discriminator 3
- 1013 00ac FA88     		ldrh	r2, [r7, #6]	@ movhi
- 1014 00ae D1B2     		uxtb	r1, r2
- 1015 00b0 BA69     		ldr	r2, [r7, #24]
- 1016 00b2 D154     		strb	r1, [r2, r3]
+ 1005              		.loc 1 369 17 discriminator 3
+ 1006 00a8 BB6A     		ldr	r3, [r7, #40]
+ 1007 00aa 0133     		adds	r3, r3, #1
+ 1008              		.loc 1 369 21 discriminator 3
+ 1009 00ac FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 1010 00ae D1B2     		uxtb	r1, r2
+ 1011 00b0 BA69     		ldr	r2, [r7, #24]
+ 1012 00b2 D154     		strb	r1, [r2, r3]
  366:Core/Src/ILI9341_STM32_Driver.c **** for(uint32_t j = 0; j < Buffer_Size; j+=2)
- 1017              		.loc 1 366 39 discriminator 3
- 1018 00b4 BB6A     		ldr	r3, [r7, #40]
- 1019 00b6 0233     		adds	r3, r3, #2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 25
+ 1013              		.loc 1 366 39 discriminator 3
+ 1014 00b4 BB6A     		ldr	r3, [r7, #40]
+ 1015 00b6 0233     		adds	r3, r3, #2
+ 1016 00b8 BB62     		str	r3, [r7, #40]
+ 1017              	.L36:
+ 366:Core/Src/ILI9341_STM32_Driver.c **** for(uint32_t j = 0; j < Buffer_Size; j+=2)
+ 1018              		.loc 1 366 23 discriminator 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 25
 
 
- 1020 00b8 BB62     		str	r3, [r7, #40]
- 1021              	.L36:
- 366:Core/Src/ILI9341_STM32_Driver.c **** for(uint32_t j = 0; j < Buffer_Size; j+=2)
- 1022              		.loc 1 366 23 discriminator 1
- 1023 00ba BA6A     		ldr	r2, [r7, #40]
- 1024 00bc FB6A     		ldr	r3, [r7, #44]
- 1025 00be 9A42     		cmp	r2, r3
- 1026 00c0 ECD3     		bcc	.L37
- 1027              	.LBE2:
+ 1019 00ba BA6A     		ldr	r2, [r7, #40]
+ 1020 00bc FB6A     		ldr	r3, [r7, #44]
+ 1021 00be 9A42     		cmp	r2, r3
+ 1022 00c0 ECD3     		bcc	.L37
+ 1023              	.LBE2:
  370:Core/Src/ILI9341_STM32_Driver.c **** 	}
  371:Core/Src/ILI9341_STM32_Driver.c **** 
- 372:Core/Src/ILI9341_STM32_Driver.c **** uint32_t Sending_Size = Size*2;
- 1028              		.loc 1 372 10
- 1029 00c2 3B68     		ldr	r3, [r7]
- 1030 00c4 5B00     		lsls	r3, r3, #1
- 1031 00c6 7B61     		str	r3, [r7, #20]
+ 372:Core/Src/ILI9341_STM32_Driver.c **** uint32_t Sending_Size = Size *2;
+ 1024              		.loc 1 372 10
+ 1025 00c2 3B68     		ldr	r3, [r7]
+ 1026 00c4 5B00     		lsls	r3, r3, #1
+ 1027 00c6 7B61     		str	r3, [r7, #20]
  373:Core/Src/ILI9341_STM32_Driver.c **** uint32_t Sending_in_Block = Sending_Size/Buffer_Size;
- 1032              		.loc 1 373 10
- 1033 00c8 7A69     		ldr	r2, [r7, #20]
- 1034 00ca FB6A     		ldr	r3, [r7, #44]
- 1035 00cc B2FBF3F3 		udiv	r3, r2, r3
- 1036 00d0 3B61     		str	r3, [r7, #16]
+ 1028              		.loc 1 373 10
+ 1029 00c8 7A69     		ldr	r2, [r7, #20]
+ 1030 00ca FB6A     		ldr	r3, [r7, #44]
+ 1031 00cc B2FBF3F3 		udiv	r3, r2, r3
+ 1032 00d0 3B61     		str	r3, [r7, #16]
  374:Core/Src/ILI9341_STM32_Driver.c **** uint32_t Remainder_from_block = Sending_Size%Buffer_Size;
- 1037              		.loc 1 374 10
- 1038 00d2 7B69     		ldr	r3, [r7, #20]
- 1039 00d4 FA6A     		ldr	r2, [r7, #44]
- 1040 00d6 B3FBF2F2 		udiv	r2, r3, r2
- 1041 00da F96A     		ldr	r1, [r7, #44]
- 1042 00dc 01FB02F2 		mul	r2, r1, r2
- 1043 00e0 9B1A     		subs	r3, r3, r2
- 1044 00e2 FB60     		str	r3, [r7, #12]
- 375:Core/Src/ILI9341_STM32_Driver.c **** 
- 376:Core/Src/ILI9341_STM32_Driver.c **** if(Sending_in_Block != 0)
- 1045              		.loc 1 376 3
- 1046 00e4 3B69     		ldr	r3, [r7, #16]
- 1047 00e6 002B     		cmp	r3, #0
- 1048 00e8 10D0     		beq	.L38
- 1049              	.LBB3:
- 377:Core/Src/ILI9341_STM32_Driver.c **** {
- 378:Core/Src/ILI9341_STM32_Driver.c **** 	for(uint32_t j = 0; j < (Sending_in_Block); j++)
- 1050              		.loc 1 378 15
- 1051 00ea 0023     		movs	r3, #0
- 1052 00ec 7B62     		str	r3, [r7, #36]
- 1053              		.loc 1 378 2
- 1054 00ee 09E0     		b	.L39
- 1055              	.L40:
- 379:Core/Src/ILI9341_STM32_Driver.c **** 		{
- 380:Core/Src/ILI9341_STM32_Driver.c **** 		SPI_Transmit( (unsigned char *)burst_buffer, Buffer_Size, 10);	
- 1056              		.loc 1 380 3 discriminator 3
- 1057 00f0 FB6A     		ldr	r3, [r7, #44]
- 1058 00f2 9BB2     		uxth	r3, r3
- 1059 00f4 0A22     		movs	r2, #10
- 1060 00f6 1946     		mov	r1, r3
- 1061 00f8 B869     		ldr	r0, [r7, #24]
- 1062 00fa FFF7FEFF 		bl	SPI_Transmit
- 378:Core/Src/ILI9341_STM32_Driver.c **** 		{
- 1063              		.loc 1 378 47 discriminator 3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 26
-
-
- 1064 00fe 7B6A     		ldr	r3, [r7, #36]
- 1065 0100 0133     		adds	r3, r3, #1
- 1066 0102 7B62     		str	r3, [r7, #36]
- 1067              	.L39:
- 378:Core/Src/ILI9341_STM32_Driver.c **** 		{
- 1068              		.loc 1 378 24 discriminator 1
- 1069 0104 7A6A     		ldr	r2, [r7, #36]
- 1070 0106 3B69     		ldr	r3, [r7, #16]
- 1071 0108 9A42     		cmp	r2, r3
- 1072 010a F1D3     		bcc	.L40
- 1073              	.L38:
- 1074              	.LBE3:
- 381:Core/Src/ILI9341_STM32_Driver.c **** 		}
- 382:Core/Src/ILI9341_STM32_Driver.c **** }
+ 1033              		.loc 1 374 10
+ 1034 00d2 7B69     		ldr	r3, [r7, #20]
+ 1035 00d4 FA6A     		ldr	r2, [r7, #44]
+ 1036 00d6 B3FBF2F2 		udiv	r2, r3, r2
+ 1037 00da F96A     		ldr	r1, [r7, #44]
+ 1038 00dc 01FB02F2 		mul	r2, r1, r2
+ 1039 00e0 9B1A     		subs	r3, r3, r2
+ 1040 00e2 FB60     		str	r3, [r7, #12]
+ 375:Core/Src/ILI9341_STM32_Driver.c **** // unsigned char burst_buffer2[4] = {chifted, chifted, chifted, chifted};
+ 376:Core/Src/ILI9341_STM32_Driver.c **** // SPI_Transmit( burst_buffer, 20, 50);
+ 377:Core/Src/ILI9341_STM32_Driver.c **** if(Sending_in_Block != 0)
+ 1041              		.loc 1 377 3
+ 1042 00e4 3B69     		ldr	r3, [r7, #16]
+ 1043 00e6 002B     		cmp	r3, #0
+ 1044 00e8 10D0     		beq	.L38
+ 1045              	.LBB3:
+ 378:Core/Src/ILI9341_STM32_Driver.c **** {
+ 379:Core/Src/ILI9341_STM32_Driver.c **** 	for(uint32_t j = 0; j < (Sending_in_Block); j++)
+ 1046              		.loc 1 379 15
+ 1047 00ea 0023     		movs	r3, #0
+ 1048 00ec 7B62     		str	r3, [r7, #36]
+ 1049              		.loc 1 379 2
+ 1050 00ee 09E0     		b	.L39
+ 1051              	.L40:
+ 380:Core/Src/ILI9341_STM32_Driver.c **** 		{
+ 381:Core/Src/ILI9341_STM32_Driver.c **** 		
+ 382:Core/Src/ILI9341_STM32_Driver.c **** 		// ILI9341_Set_Address(0,j,LCD_WIDTH,LCD_HEIGHT);	
  383:Core/Src/ILI9341_STM32_Driver.c **** 
- 384:Core/Src/ILI9341_STM32_Driver.c **** //REMAINDER!
- 385:Core/Src/ILI9341_STM32_Driver.c **** SPI_Transmit( (unsigned char *)burst_buffer, Remainder_from_block, 10);	
- 1075              		.loc 1 385 1
- 1076 010c FB68     		ldr	r3, [r7, #12]
- 1077 010e 9BB2     		uxth	r3, r3
- 1078 0110 0A22     		movs	r2, #10
- 1079 0112 1946     		mov	r1, r3
- 1080 0114 B869     		ldr	r0, [r7, #24]
- 1081 0116 FFF7FEFF 		bl	SPI_Transmit
- 386:Core/Src/ILI9341_STM32_Driver.c **** 	
- 387:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);
- 1082              		.loc 1 387 1
- 1083 011a 0122     		movs	r2, #1
- 1084 011c 4FF48051 		mov	r1, #4096
- 1085 0120 0448     		ldr	r0, .L41
- 1086 0122 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1087 0126 B546     		mov	sp, r6
- 388:Core/Src/ILI9341_STM32_Driver.c **** }
- 1088              		.loc 1 388 1
- 1089 0128 00BF     		nop
- 1090 012a 3437     		adds	r7, r7, #52
- 1091              		.cfi_def_cfa_offset 28
- 1092 012c BD46     		mov	sp, r7
- 1093              		.cfi_def_cfa_register 13
- 1094              		@ sp needed
- 1095 012e BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
- 1096              	.L42:
- 1097 0132 00BF     		.align	2
- 1098              	.L41:
- 1099 0134 00180048 		.word	1207965696
- 1100              		.cfi_endproc
- 1101              	.LFE331:
- 1103              		.section	.text.ILI9341_Fill_Screen,"ax",%progbits
- 1104              		.align	1
- 1105              		.global	ILI9341_Fill_Screen
- 1106              		.syntax unified
- 1107              		.thumb
- 1108              		.thumb_func
- 1110              	ILI9341_Fill_Screen:
- 1111              	.LFB332:
- 389:Core/Src/ILI9341_STM32_Driver.c **** 
- 390:Core/Src/ILI9341_STM32_Driver.c **** //FILL THE ENTIRE SCREEN WITH SELECTED COLOUR (either #define-d ones or custom 16bit)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 27
+ 384:Core/Src/ILI9341_STM32_Driver.c **** 
+ 385:Core/Src/ILI9341_STM32_Driver.c **** 		SPI_Transmit( (unsigned char *)burst_buffer, Buffer_Size, 10);	
+ 1052              		.loc 1 385 3 discriminator 3
+ 1053 00f0 FB6A     		ldr	r3, [r7, #44]
+ 1054 00f2 9BB2     		uxth	r3, r3
+ 1055 00f4 0A22     		movs	r2, #10
+ 1056 00f6 1946     		mov	r1, r3
+ 1057 00f8 B869     		ldr	r0, [r7, #24]
+ 1058 00fa FFF7FEFF 		bl	SPI_Transmit
+ 379:Core/Src/ILI9341_STM32_Driver.c **** 		{
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 26
 
 
- 391:Core/Src/ILI9341_STM32_Driver.c **** /*Sets address (entire screen) and Sends Height*Width ammount of colour information to LCD*/
- 392:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Fill_Screen(uint16_t Colour)
- 393:Core/Src/ILI9341_STM32_Driver.c **** {
- 1112              		.loc 1 393 1
- 1113              		.cfi_startproc
- 1114              		@ args = 0, pretend = 0, frame = 8
- 1115              		@ frame_needed = 1, uses_anonymous_args = 0
- 1116 0000 80B5     		push	{r7, lr}
- 1117              		.cfi_def_cfa_offset 8
- 1118              		.cfi_offset 7, -8
- 1119              		.cfi_offset 14, -4
- 1120 0002 82B0     		sub	sp, sp, #8
- 1121              		.cfi_def_cfa_offset 16
- 1122 0004 00AF     		add	r7, sp, #0
- 1123              		.cfi_def_cfa_register 7
- 1124 0006 0346     		mov	r3, r0
- 1125 0008 FB80     		strh	r3, [r7, #6]	@ movhi
- 394:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Set_Address(0,0,LCD_WIDTH,LCD_HEIGHT);	
- 1126              		.loc 1 394 1
- 1127 000a 0E4B     		ldr	r3, .L44
- 1128 000c 1B88     		ldrh	r3, [r3]	@ movhi
- 1129 000e 9AB2     		uxth	r2, r3
- 1130 0010 0D4B     		ldr	r3, .L44+4
- 1131 0012 1B88     		ldrh	r3, [r3]	@ movhi
- 1132 0014 9BB2     		uxth	r3, r3
- 1133 0016 0021     		movs	r1, #0
- 1134 0018 0020     		movs	r0, #0
- 1135 001a FFF7FEFF 		bl	ILI9341_Set_Address
- 395:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Draw_Colour_Burst(Colour, LCD_WIDTH*LCD_HEIGHT);	
- 1136              		.loc 1 395 44
- 1137 001e 094B     		ldr	r3, .L44
- 1138 0020 1B88     		ldrh	r3, [r3]	@ movhi
- 1139 0022 9BB2     		uxth	r3, r3
- 1140 0024 1A46     		mov	r2, r3
- 1141 0026 084B     		ldr	r3, .L44+4
- 1142 0028 1B88     		ldrh	r3, [r3]	@ movhi
- 1143 002a 9BB2     		uxth	r3, r3
- 1144 002c 02FB03F3 		mul	r3, r2, r3
- 1145              		.loc 1 395 1
- 1146 0030 1A46     		mov	r2, r3
- 1147 0032 FB88     		ldrh	r3, [r7, #6]
- 1148 0034 1146     		mov	r1, r2
- 1149 0036 1846     		mov	r0, r3
- 1150 0038 FFF7FEFF 		bl	ILI9341_Draw_Colour_Burst
- 396:Core/Src/ILI9341_STM32_Driver.c **** }
- 1151              		.loc 1 396 1
- 1152 003c 00BF     		nop
- 1153 003e 0837     		adds	r7, r7, #8
- 1154              		.cfi_def_cfa_offset 8
- 1155 0040 BD46     		mov	sp, r7
- 1156              		.cfi_def_cfa_register 13
- 1157              		@ sp needed
- 1158 0042 80BD     		pop	{r7, pc}
- 1159              	.L45:
- 1160              		.align	2
- 1161              	.L44:
- 1162 0044 00000000 		.word	LCD_WIDTH
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 28
+ 1059              		.loc 1 379 47 discriminator 3
+ 1060 00fe 7B6A     		ldr	r3, [r7, #36]
+ 1061 0100 0133     		adds	r3, r3, #1
+ 1062 0102 7B62     		str	r3, [r7, #36]
+ 1063              	.L39:
+ 379:Core/Src/ILI9341_STM32_Driver.c **** 		{
+ 1064              		.loc 1 379 24 discriminator 1
+ 1065 0104 7A6A     		ldr	r2, [r7, #36]
+ 1066 0106 3B69     		ldr	r3, [r7, #16]
+ 1067 0108 9A42     		cmp	r2, r3
+ 1068 010a F1D3     		bcc	.L40
+ 1069              	.L38:
+ 1070              	.LBE3:
+ 386:Core/Src/ILI9341_STM32_Driver.c **** 		}
+ 387:Core/Src/ILI9341_STM32_Driver.c **** }
+ 388:Core/Src/ILI9341_STM32_Driver.c **** 
+ 389:Core/Src/ILI9341_STM32_Driver.c **** //REMAINDER!
+ 390:Core/Src/ILI9341_STM32_Driver.c **** // SPI_Transmit( (unsigned char *)burst_buffer, j*8, 50);	
+ 391:Core/Src/ILI9341_STM32_Driver.c **** SPI_Transmit( (unsigned char *)burst_buffer, Remainder_from_block, 10);	
+ 1071              		.loc 1 391 1
+ 1072 010c FB68     		ldr	r3, [r7, #12]
+ 1073 010e 9BB2     		uxth	r3, r3
+ 1074 0110 0A22     		movs	r2, #10
+ 1075 0112 1946     		mov	r1, r3
+ 1076 0114 B869     		ldr	r0, [r7, #24]
+ 1077 0116 FFF7FEFF 		bl	SPI_Transmit
+ 392:Core/Src/ILI9341_STM32_Driver.c **** 
+ 393:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);
+ 1078              		.loc 1 393 1
+ 1079 011a 0122     		movs	r2, #1
+ 1080 011c 4FF48051 		mov	r1, #4096
+ 1081 0120 0448     		ldr	r0, .L41
+ 1082 0122 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1083 0126 B546     		mov	sp, r6
+ 394:Core/Src/ILI9341_STM32_Driver.c **** }
+ 1084              		.loc 1 394 1
+ 1085 0128 00BF     		nop
+ 1086 012a 3437     		adds	r7, r7, #52
+ 1087              		.cfi_def_cfa_offset 28
+ 1088 012c BD46     		mov	sp, r7
+ 1089              		.cfi_def_cfa_register 13
+ 1090              		@ sp needed
+ 1091 012e BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 1092              	.L42:
+ 1093 0132 00BF     		.align	2
+ 1094              	.L41:
+ 1095 0134 00180048 		.word	1207965696
+ 1096              		.cfi_endproc
+ 1097              	.LFE331:
+ 1099              		.section	.text.ILI9341_Fill_Screen,"ax",%progbits
+ 1100              		.align	1
+ 1101              		.global	ILI9341_Fill_Screen
+ 1102              		.syntax unified
+ 1103              		.thumb
+ 1104              		.thumb_func
+ 1106              	ILI9341_Fill_Screen:
+ 1107              	.LFB332:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 27
 
 
- 1163 0048 00000000 		.word	LCD_HEIGHT
- 1164              		.cfi_endproc
- 1165              	.LFE332:
- 1167              		.section	.text.ILI9341_Draw_Pixel,"ax",%progbits
- 1168              		.align	1
- 1169              		.global	ILI9341_Draw_Pixel
- 1170              		.syntax unified
- 1171              		.thumb
- 1172              		.thumb_func
- 1174              	ILI9341_Draw_Pixel:
- 1175              	.LFB333:
- 397:Core/Src/ILI9341_STM32_Driver.c **** 
- 398:Core/Src/ILI9341_STM32_Driver.c **** //DRAW PIXEL AT XY POSITION WITH SELECTED COLOUR
- 399:Core/Src/ILI9341_STM32_Driver.c **** //
- 400:Core/Src/ILI9341_STM32_Driver.c **** //Location is dependant on screen orientation. x0 and y0 locations change with orientations.
- 401:Core/Src/ILI9341_STM32_Driver.c **** //Using pixels to draw big simple structures is not recommended as it is really slow
- 402:Core/Src/ILI9341_STM32_Driver.c **** //Try using either rectangles or lines if possible
- 403:Core/Src/ILI9341_STM32_Driver.c **** //
- 404:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Draw_Pixel(uint16_t X,uint16_t Y,uint16_t Colour) 
- 405:Core/Src/ILI9341_STM32_Driver.c **** {
- 1176              		.loc 1 405 1
- 1177              		.cfi_startproc
- 1178              		@ args = 0, pretend = 0, frame = 24
- 1179              		@ frame_needed = 1, uses_anonymous_args = 0
- 1180 0000 80B5     		push	{r7, lr}
- 1181              		.cfi_def_cfa_offset 8
- 1182              		.cfi_offset 7, -8
- 1183              		.cfi_offset 14, -4
- 1184 0002 86B0     		sub	sp, sp, #24
- 1185              		.cfi_def_cfa_offset 32
- 1186 0004 00AF     		add	r7, sp, #0
- 1187              		.cfi_def_cfa_register 7
- 1188 0006 0346     		mov	r3, r0
- 1189 0008 FB80     		strh	r3, [r7, #6]	@ movhi
- 1190 000a 0B46     		mov	r3, r1	@ movhi
- 1191 000c BB80     		strh	r3, [r7, #4]	@ movhi
- 1192 000e 1346     		mov	r3, r2	@ movhi
- 1193 0010 7B80     		strh	r3, [r7, #2]	@ movhi
- 406:Core/Src/ILI9341_STM32_Driver.c **** if((X >=LCD_WIDTH) || (Y >=LCD_HEIGHT)) return;	//OUT OF BOUNDS!
- 1194              		.loc 1 406 7
- 1195 0012 644B     		ldr	r3, .L51
- 1196 0014 1B88     		ldrh	r3, [r3]	@ movhi
- 1197 0016 9BB2     		uxth	r3, r3
- 1198              		.loc 1 406 3
- 1199 0018 FA88     		ldrh	r2, [r7, #6]
- 1200 001a 9A42     		cmp	r2, r3
- 1201 001c 80F0BE80 		bcs	.L50
- 1202              		.loc 1 406 26 discriminator 2
- 1203 0020 614B     		ldr	r3, .L51+4
- 1204 0022 1B88     		ldrh	r3, [r3]	@ movhi
- 1205 0024 9BB2     		uxth	r3, r3
- 1206              		.loc 1 406 20 discriminator 2
- 1207 0026 BA88     		ldrh	r2, [r7, #4]
- 1208 0028 9A42     		cmp	r2, r3
- 1209 002a 80F0B780 		bcs	.L50
- 407:Core/Src/ILI9341_STM32_Driver.c **** 	
- 408:Core/Src/ILI9341_STM32_Driver.c **** //ADDRESS
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 29
+ 395:Core/Src/ILI9341_STM32_Driver.c **** 
+ 396:Core/Src/ILI9341_STM32_Driver.c **** //FILL THE ENTIRE SCREEN WITH SELECTED COLOUR (either #define-d ones or custom 16bit)
+ 397:Core/Src/ILI9341_STM32_Driver.c **** /*Sets address (entire screen) and Sends Height*Width ammount of colour information to LCD*/
+ 398:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Fill_Screen(uint16_t Colour)
+ 399:Core/Src/ILI9341_STM32_Driver.c **** {
+ 1108              		.loc 1 399 1
+ 1109              		.cfi_startproc
+ 1110              		@ args = 0, pretend = 0, frame = 8
+ 1111              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1112 0000 80B5     		push	{r7, lr}
+ 1113              		.cfi_def_cfa_offset 8
+ 1114              		.cfi_offset 7, -8
+ 1115              		.cfi_offset 14, -4
+ 1116 0002 82B0     		sub	sp, sp, #8
+ 1117              		.cfi_def_cfa_offset 16
+ 1118 0004 00AF     		add	r7, sp, #0
+ 1119              		.cfi_def_cfa_register 7
+ 1120 0006 0346     		mov	r3, r0
+ 1121 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 400:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Set_Address(0,0,LCD_WIDTH,LCD_HEIGHT);	
+ 1122              		.loc 1 400 1
+ 1123 000a 0E4B     		ldr	r3, .L44
+ 1124 000c 1B88     		ldrh	r3, [r3]	@ movhi
+ 1125 000e 9AB2     		uxth	r2, r3
+ 1126 0010 0D4B     		ldr	r3, .L44+4
+ 1127 0012 1B88     		ldrh	r3, [r3]	@ movhi
+ 1128 0014 9BB2     		uxth	r3, r3
+ 1129 0016 0021     		movs	r1, #0
+ 1130 0018 0020     		movs	r0, #0
+ 1131 001a FFF7FEFF 		bl	ILI9341_Set_Address
+ 401:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Draw_Colour_Burst(Colour, LCD_WIDTH*LCD_HEIGHT);	
+ 1132              		.loc 1 401 44
+ 1133 001e 094B     		ldr	r3, .L44
+ 1134 0020 1B88     		ldrh	r3, [r3]	@ movhi
+ 1135 0022 9BB2     		uxth	r3, r3
+ 1136 0024 1A46     		mov	r2, r3
+ 1137 0026 084B     		ldr	r3, .L44+4
+ 1138 0028 1B88     		ldrh	r3, [r3]	@ movhi
+ 1139 002a 9BB2     		uxth	r3, r3
+ 1140 002c 02FB03F3 		mul	r3, r2, r3
+ 1141              		.loc 1 401 1
+ 1142 0030 1A46     		mov	r2, r3
+ 1143 0032 FB88     		ldrh	r3, [r7, #6]
+ 1144 0034 1146     		mov	r1, r2
+ 1145 0036 1846     		mov	r0, r3
+ 1146 0038 FFF7FEFF 		bl	ILI9341_Draw_Colour_Burst
+ 402:Core/Src/ILI9341_STM32_Driver.c **** }
+ 1147              		.loc 1 402 1
+ 1148 003c 00BF     		nop
+ 1149 003e 0837     		adds	r7, r7, #8
+ 1150              		.cfi_def_cfa_offset 8
+ 1151 0040 BD46     		mov	sp, r7
+ 1152              		.cfi_def_cfa_register 13
+ 1153              		@ sp needed
+ 1154 0042 80BD     		pop	{r7, pc}
+ 1155              	.L45:
+ 1156              		.align	2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 28
 
 
- 409:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_RESET);	
- 1210              		.loc 1 409 1
- 1211 002e 0022     		movs	r2, #0
- 1212 0030 4FF40051 		mov	r1, #8192
- 1213 0034 5D48     		ldr	r0, .L51+8
- 1214 0036 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 410:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);
- 1215              		.loc 1 410 1
- 1216 003a 0022     		movs	r2, #0
- 1217 003c 4FF48051 		mov	r1, #4096
- 1218 0040 5A48     		ldr	r0, .L51+8
- 1219 0042 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 411:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_SPI_Send(0x2A);
- 1220              		.loc 1 411 1
- 1221 0046 2A20     		movs	r0, #42
- 1222 0048 FFF7FEFF 		bl	ILI9341_SPI_Send
- 412:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_SET);	
- 1223              		.loc 1 412 1
- 1224 004c 0122     		movs	r2, #1
- 1225 004e 4FF40051 		mov	r1, #8192
- 1226 0052 5648     		ldr	r0, .L51+8
- 1227 0054 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 413:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);		
- 1228              		.loc 1 413 1
- 1229 0058 0122     		movs	r2, #1
- 1230 005a 4FF48051 		mov	r1, #4096
- 1231 005e 5348     		ldr	r0, .L51+8
- 1232 0060 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 414:Core/Src/ILI9341_STM32_Driver.c **** 
- 415:Core/Src/ILI9341_STM32_Driver.c **** //XDATA
- 416:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);	
- 1233              		.loc 1 416 1
- 1234 0064 0022     		movs	r2, #0
- 1235 0066 4FF48051 		mov	r1, #4096
- 1236 006a 5048     		ldr	r0, .L51+8
- 1237 006c FFF7FEFF 		bl	HAL_GPIO_WritePin
- 417:Core/Src/ILI9341_STM32_Driver.c **** unsigned char Temp_Buffer[4] = {X>>8,X, (X+1)>>8, (X+1)};
- 1238              		.loc 1 417 15
- 1239 0070 FB88     		ldrh	r3, [r7, #6]
- 1240 0072 1B0A     		lsrs	r3, r3, #8
- 1241 0074 9BB2     		uxth	r3, r3
- 1242 0076 DBB2     		uxtb	r3, r3
- 1243 0078 3B75     		strb	r3, [r7, #20]
- 1244 007a FB88     		ldrh	r3, [r7, #6]	@ movhi
- 1245 007c DBB2     		uxtb	r3, r3
- 1246 007e 7B75     		strb	r3, [r7, #21]
- 1247              		.loc 1 417 43
- 1248 0080 FB88     		ldrh	r3, [r7, #6]
- 1249 0082 0133     		adds	r3, r3, #1
- 1250              		.loc 1 417 46
- 1251 0084 1B12     		asrs	r3, r3, #8
- 1252              		.loc 1 417 15
- 1253 0086 DBB2     		uxtb	r3, r3
- 1254 0088 BB75     		strb	r3, [r7, #22]
- 1255              		.loc 1 417 53
- 1256 008a FB88     		ldrh	r3, [r7, #6]	@ movhi
- 1257 008c DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 30
+ 1157              	.L44:
+ 1158 0044 00000000 		.word	LCD_WIDTH
+ 1159 0048 00000000 		.word	LCD_HEIGHT
+ 1160              		.cfi_endproc
+ 1161              	.LFE332:
+ 1163              		.section	.text.ILI9341_Draw_Pixel,"ax",%progbits
+ 1164              		.align	1
+ 1165              		.global	ILI9341_Draw_Pixel
+ 1166              		.syntax unified
+ 1167              		.thumb
+ 1168              		.thumb_func
+ 1170              	ILI9341_Draw_Pixel:
+ 1171              	.LFB333:
+ 403:Core/Src/ILI9341_STM32_Driver.c **** 
+ 404:Core/Src/ILI9341_STM32_Driver.c **** //DRAW PIXEL AT XY POSITION WITH SELECTED COLOUR
+ 405:Core/Src/ILI9341_STM32_Driver.c **** //
+ 406:Core/Src/ILI9341_STM32_Driver.c **** //Location is dependant on screen orientation. x0 and y0 locations change with orientations.
+ 407:Core/Src/ILI9341_STM32_Driver.c **** //Using pixels to draw big simple structures is not recommended as it is really slow
+ 408:Core/Src/ILI9341_STM32_Driver.c **** //Try using either rectangles or lines if possible
+ 409:Core/Src/ILI9341_STM32_Driver.c **** //
+ 410:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Draw_Pixel(uint16_t X,uint16_t Y,uint16_t Colour) 
+ 411:Core/Src/ILI9341_STM32_Driver.c **** {
+ 1172              		.loc 1 411 1
+ 1173              		.cfi_startproc
+ 1174              		@ args = 0, pretend = 0, frame = 24
+ 1175              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1176 0000 80B5     		push	{r7, lr}
+ 1177              		.cfi_def_cfa_offset 8
+ 1178              		.cfi_offset 7, -8
+ 1179              		.cfi_offset 14, -4
+ 1180 0002 86B0     		sub	sp, sp, #24
+ 1181              		.cfi_def_cfa_offset 32
+ 1182 0004 00AF     		add	r7, sp, #0
+ 1183              		.cfi_def_cfa_register 7
+ 1184 0006 0346     		mov	r3, r0
+ 1185 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1186 000a 0B46     		mov	r3, r1	@ movhi
+ 1187 000c BB80     		strh	r3, [r7, #4]	@ movhi
+ 1188 000e 1346     		mov	r3, r2	@ movhi
+ 1189 0010 7B80     		strh	r3, [r7, #2]	@ movhi
+ 412:Core/Src/ILI9341_STM32_Driver.c **** if((X >=LCD_WIDTH) || (Y >=LCD_HEIGHT)) return;	//OUT OF BOUNDS!
+ 1190              		.loc 1 412 7
+ 1191 0012 644B     		ldr	r3, .L51
+ 1192 0014 1B88     		ldrh	r3, [r3]	@ movhi
+ 1193 0016 9BB2     		uxth	r3, r3
+ 1194              		.loc 1 412 3
+ 1195 0018 FA88     		ldrh	r2, [r7, #6]
+ 1196 001a 9A42     		cmp	r2, r3
+ 1197 001c 80F0BE80 		bcs	.L50
+ 1198              		.loc 1 412 26 discriminator 2
+ 1199 0020 614B     		ldr	r3, .L51+4
+ 1200 0022 1B88     		ldrh	r3, [r3]	@ movhi
+ 1201 0024 9BB2     		uxth	r3, r3
+ 1202              		.loc 1 412 20 discriminator 2
+ 1203 0026 BA88     		ldrh	r2, [r7, #4]
+ 1204 0028 9A42     		cmp	r2, r3
+ 1205 002a 80F0B780 		bcs	.L50
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 29
 
 
- 1258 008e 0133     		adds	r3, r3, #1
- 1259 0090 DBB2     		uxtb	r3, r3
- 1260              		.loc 1 417 15
- 1261 0092 FB75     		strb	r3, [r7, #23]
- 418:Core/Src/ILI9341_STM32_Driver.c **** SPI_Transmit(Temp_Buffer, 4, 1);
- 1262              		.loc 1 418 1
- 1263 0094 07F11403 		add	r3, r7, #20
- 1264 0098 0122     		movs	r2, #1
- 1265 009a 0421     		movs	r1, #4
- 1266 009c 1846     		mov	r0, r3
- 1267 009e FFF7FEFF 		bl	SPI_Transmit
- 419:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);
- 1268              		.loc 1 419 1
- 1269 00a2 0122     		movs	r2, #1
- 1270 00a4 4FF48051 		mov	r1, #4096
- 1271 00a8 4048     		ldr	r0, .L51+8
- 1272 00aa FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 413:Core/Src/ILI9341_STM32_Driver.c **** 	
+ 414:Core/Src/ILI9341_STM32_Driver.c **** //ADDRESS
+ 415:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_RESET);	
+ 1206              		.loc 1 415 1
+ 1207 002e 0022     		movs	r2, #0
+ 1208 0030 4FF40051 		mov	r1, #8192
+ 1209 0034 5D48     		ldr	r0, .L51+8
+ 1210 0036 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 416:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);
+ 1211              		.loc 1 416 1
+ 1212 003a 0022     		movs	r2, #0
+ 1213 003c 4FF48051 		mov	r1, #4096
+ 1214 0040 5A48     		ldr	r0, .L51+8
+ 1215 0042 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 417:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_SPI_Send(0x2A);
+ 1216              		.loc 1 417 1
+ 1217 0046 2A20     		movs	r0, #42
+ 1218 0048 FFF7FEFF 		bl	ILI9341_SPI_Send
+ 418:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_SET);	
+ 1219              		.loc 1 418 1
+ 1220 004c 0122     		movs	r2, #1
+ 1221 004e 4FF40051 		mov	r1, #8192
+ 1222 0052 5648     		ldr	r0, .L51+8
+ 1223 0054 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 419:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);		
+ 1224              		.loc 1 419 1
+ 1225 0058 0122     		movs	r2, #1
+ 1226 005a 4FF48051 		mov	r1, #4096
+ 1227 005e 5348     		ldr	r0, .L51+8
+ 1228 0060 FFF7FEFF 		bl	HAL_GPIO_WritePin
  420:Core/Src/ILI9341_STM32_Driver.c **** 
- 421:Core/Src/ILI9341_STM32_Driver.c **** //ADDRESS
- 422:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_RESET);	
- 1273              		.loc 1 422 1
- 1274 00ae 0022     		movs	r2, #0
- 1275 00b0 4FF40051 		mov	r1, #8192
- 1276 00b4 3D48     		ldr	r0, .L51+8
- 1277 00b6 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 423:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);	
- 1278              		.loc 1 423 1
- 1279 00ba 0022     		movs	r2, #0
- 1280 00bc 4FF48051 		mov	r1, #4096
- 1281 00c0 3A48     		ldr	r0, .L51+8
- 1282 00c2 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 424:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_SPI_Send(0x2B);
- 1283              		.loc 1 424 1
- 1284 00c6 2B20     		movs	r0, #43
- 1285 00c8 FFF7FEFF 		bl	ILI9341_SPI_Send
- 425:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_SET);			
- 1286              		.loc 1 425 1
- 1287 00cc 0122     		movs	r2, #1
- 1288 00ce 4FF40051 		mov	r1, #8192
- 1289 00d2 3648     		ldr	r0, .L51+8
- 1290 00d4 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 426:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);			
- 1291              		.loc 1 426 1
- 1292 00d8 0122     		movs	r2, #1
- 1293 00da 4FF48051 		mov	r1, #4096
- 1294 00de 3348     		ldr	r0, .L51+8
- 1295 00e0 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 427:Core/Src/ILI9341_STM32_Driver.c **** 
- 428:Core/Src/ILI9341_STM32_Driver.c **** //YDATA
- 429:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);
- 1296              		.loc 1 429 1
- 1297 00e4 0022     		movs	r2, #0
- 1298 00e6 4FF48051 		mov	r1, #4096
- 1299 00ea 3048     		ldr	r0, .L51+8
- 1300 00ec FFF7FEFF 		bl	HAL_GPIO_WritePin
- 430:Core/Src/ILI9341_STM32_Driver.c **** unsigned char Temp_Buffer1[4] = {Y>>8,Y, (Y+1)>>8, (Y+1)};
- 1301              		.loc 1 430 15
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 31
+ 421:Core/Src/ILI9341_STM32_Driver.c **** //XDATA
+ 422:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);	
+ 1229              		.loc 1 422 1
+ 1230 0064 0022     		movs	r2, #0
+ 1231 0066 4FF48051 		mov	r1, #4096
+ 1232 006a 5048     		ldr	r0, .L51+8
+ 1233 006c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 423:Core/Src/ILI9341_STM32_Driver.c **** unsigned char Temp_Buffer[4] = {X>>8,X, (X+1)>>8, (X+1)};
+ 1234              		.loc 1 423 15
+ 1235 0070 FB88     		ldrh	r3, [r7, #6]
+ 1236 0072 1B0A     		lsrs	r3, r3, #8
+ 1237 0074 9BB2     		uxth	r3, r3
+ 1238 0076 DBB2     		uxtb	r3, r3
+ 1239 0078 3B75     		strb	r3, [r7, #20]
+ 1240 007a FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 1241 007c DBB2     		uxtb	r3, r3
+ 1242 007e 7B75     		strb	r3, [r7, #21]
+ 1243              		.loc 1 423 43
+ 1244 0080 FB88     		ldrh	r3, [r7, #6]
+ 1245 0082 0133     		adds	r3, r3, #1
+ 1246              		.loc 1 423 46
+ 1247 0084 1B12     		asrs	r3, r3, #8
+ 1248              		.loc 1 423 15
+ 1249 0086 DBB2     		uxtb	r3, r3
+ 1250 0088 BB75     		strb	r3, [r7, #22]
+ 1251              		.loc 1 423 53
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 30
 
 
- 1302 00f0 BB88     		ldrh	r3, [r7, #4]
- 1303 00f2 1B0A     		lsrs	r3, r3, #8
- 1304 00f4 9BB2     		uxth	r3, r3
- 1305 00f6 DBB2     		uxtb	r3, r3
- 1306 00f8 3B74     		strb	r3, [r7, #16]
- 1307 00fa BB88     		ldrh	r3, [r7, #4]	@ movhi
- 1308 00fc DBB2     		uxtb	r3, r3
- 1309 00fe 7B74     		strb	r3, [r7, #17]
- 1310              		.loc 1 430 44
- 1311 0100 BB88     		ldrh	r3, [r7, #4]
- 1312 0102 0133     		adds	r3, r3, #1
- 1313              		.loc 1 430 47
- 1314 0104 1B12     		asrs	r3, r3, #8
- 1315              		.loc 1 430 15
- 1316 0106 DBB2     		uxtb	r3, r3
- 1317 0108 BB74     		strb	r3, [r7, #18]
- 1318              		.loc 1 430 54
- 1319 010a BB88     		ldrh	r3, [r7, #4]	@ movhi
- 1320 010c DBB2     		uxtb	r3, r3
- 1321 010e 0133     		adds	r3, r3, #1
- 1322 0110 DBB2     		uxtb	r3, r3
- 1323              		.loc 1 430 15
- 1324 0112 FB74     		strb	r3, [r7, #19]
- 431:Core/Src/ILI9341_STM32_Driver.c **** SPI_Transmit( Temp_Buffer1, 4, 1);
- 1325              		.loc 1 431 1
- 1326 0114 07F11003 		add	r3, r7, #16
- 1327 0118 0122     		movs	r2, #1
- 1328 011a 0421     		movs	r1, #4
- 1329 011c 1846     		mov	r0, r3
- 1330 011e FFF7FEFF 		bl	SPI_Transmit
- 432:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);
- 1331              		.loc 1 432 1
- 1332 0122 0122     		movs	r2, #1
- 1333 0124 4FF48051 		mov	r1, #4096
- 1334 0128 2048     		ldr	r0, .L51+8
- 1335 012a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1252 008a FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 1253 008c DBB2     		uxtb	r3, r3
+ 1254 008e 0133     		adds	r3, r3, #1
+ 1255 0090 DBB2     		uxtb	r3, r3
+ 1256              		.loc 1 423 15
+ 1257 0092 FB75     		strb	r3, [r7, #23]
+ 424:Core/Src/ILI9341_STM32_Driver.c **** SPI_Transmit(Temp_Buffer, 4, 1);
+ 1258              		.loc 1 424 1
+ 1259 0094 07F11403 		add	r3, r7, #20
+ 1260 0098 0122     		movs	r2, #1
+ 1261 009a 0421     		movs	r1, #4
+ 1262 009c 1846     		mov	r0, r3
+ 1263 009e FFF7FEFF 		bl	SPI_Transmit
+ 425:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);
+ 1264              		.loc 1 425 1
+ 1265 00a2 0122     		movs	r2, #1
+ 1266 00a4 4FF48051 		mov	r1, #4096
+ 1267 00a8 4048     		ldr	r0, .L51+8
+ 1268 00aa FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 426:Core/Src/ILI9341_STM32_Driver.c **** 
+ 427:Core/Src/ILI9341_STM32_Driver.c **** //ADDRESS
+ 428:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_RESET);	
+ 1269              		.loc 1 428 1
+ 1270 00ae 0022     		movs	r2, #0
+ 1271 00b0 4FF40051 		mov	r1, #8192
+ 1272 00b4 3D48     		ldr	r0, .L51+8
+ 1273 00b6 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 429:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);	
+ 1274              		.loc 1 429 1
+ 1275 00ba 0022     		movs	r2, #0
+ 1276 00bc 4FF48051 		mov	r1, #4096
+ 1277 00c0 3A48     		ldr	r0, .L51+8
+ 1278 00c2 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 430:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_SPI_Send(0x2B);
+ 1279              		.loc 1 430 1
+ 1280 00c6 2B20     		movs	r0, #43
+ 1281 00c8 FFF7FEFF 		bl	ILI9341_SPI_Send
+ 431:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_SET);			
+ 1282              		.loc 1 431 1
+ 1283 00cc 0122     		movs	r2, #1
+ 1284 00ce 4FF40051 		mov	r1, #8192
+ 1285 00d2 3648     		ldr	r0, .L51+8
+ 1286 00d4 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 432:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);			
+ 1287              		.loc 1 432 1
+ 1288 00d8 0122     		movs	r2, #1
+ 1289 00da 4FF48051 		mov	r1, #4096
+ 1290 00de 3348     		ldr	r0, .L51+8
+ 1291 00e0 FFF7FEFF 		bl	HAL_GPIO_WritePin
  433:Core/Src/ILI9341_STM32_Driver.c **** 
- 434:Core/Src/ILI9341_STM32_Driver.c **** //ADDRESS	
- 435:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_RESET);	
- 1336              		.loc 1 435 1
- 1337 012e 0022     		movs	r2, #0
- 1338 0130 4FF40051 		mov	r1, #8192
- 1339 0134 1D48     		ldr	r0, .L51+8
- 1340 0136 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 436:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);	
- 1341              		.loc 1 436 1
- 1342 013a 0022     		movs	r2, #0
- 1343 013c 4FF48051 		mov	r1, #4096
- 1344 0140 1A48     		ldr	r0, .L51+8
- 1345 0142 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 437:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_SPI_Send(0x2C);
- 1346              		.loc 1 437 1
- 1347 0146 2C20     		movs	r0, #44
- 1348 0148 FFF7FEFF 		bl	ILI9341_SPI_Send
- 438:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_SET);			
- 1349              		.loc 1 438 1
- 1350 014c 0122     		movs	r2, #1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 32
+ 434:Core/Src/ILI9341_STM32_Driver.c **** //YDATA
+ 435:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);
+ 1292              		.loc 1 435 1
+ 1293 00e4 0022     		movs	r2, #0
+ 1294 00e6 4FF48051 		mov	r1, #4096
+ 1295 00ea 3048     		ldr	r0, .L51+8
+ 1296 00ec FFF7FEFF 		bl	HAL_GPIO_WritePin
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 31
 
 
- 1351 014e 4FF40051 		mov	r1, #8192
- 1352 0152 1648     		ldr	r0, .L51+8
- 1353 0154 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 439:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);			
- 1354              		.loc 1 439 1
- 1355 0158 0122     		movs	r2, #1
- 1356 015a 4FF48051 		mov	r1, #4096
- 1357 015e 1348     		ldr	r0, .L51+8
- 1358 0160 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 440:Core/Src/ILI9341_STM32_Driver.c **** 
- 441:Core/Src/ILI9341_STM32_Driver.c **** //COLOUR	
- 442:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);
- 1359              		.loc 1 442 1
- 1360 0164 0022     		movs	r2, #0
- 1361 0166 4FF48051 		mov	r1, #4096
- 1362 016a 1048     		ldr	r0, .L51+8
- 1363 016c FFF7FEFF 		bl	HAL_GPIO_WritePin
- 443:Core/Src/ILI9341_STM32_Driver.c **** unsigned char Temp_Buffer2[2] = {Colour>>8, Colour};
- 1364              		.loc 1 443 15
- 1365 0170 7B88     		ldrh	r3, [r7, #2]
- 1366 0172 1B0A     		lsrs	r3, r3, #8
- 1367 0174 9BB2     		uxth	r3, r3
- 1368 0176 DBB2     		uxtb	r3, r3
- 1369 0178 3B73     		strb	r3, [r7, #12]
- 1370 017a 7B88     		ldrh	r3, [r7, #2]	@ movhi
- 1371 017c DBB2     		uxtb	r3, r3
- 1372 017e 7B73     		strb	r3, [r7, #13]
- 444:Core/Src/ILI9341_STM32_Driver.c **** SPI_Transmit( Temp_Buffer2, 2, 1);
- 1373              		.loc 1 444 1
- 1374 0180 07F10C03 		add	r3, r7, #12
- 1375 0184 0122     		movs	r2, #1
- 1376 0186 0221     		movs	r1, #2
- 1377 0188 1846     		mov	r0, r3
- 1378 018a FFF7FEFF 		bl	SPI_Transmit
- 445:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);
- 1379              		.loc 1 445 1
- 1380 018e 0122     		movs	r2, #1
- 1381 0190 4FF48051 		mov	r1, #4096
- 1382 0194 0548     		ldr	r0, .L51+8
- 1383 0196 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1384 019a 00E0     		b	.L46
- 1385              	.L50:
- 406:Core/Src/ILI9341_STM32_Driver.c **** 	
- 1386              		.loc 1 406 41
- 1387 019c 00BF     		nop
- 1388              	.L46:
- 446:Core/Src/ILI9341_STM32_Driver.c **** 	
- 447:Core/Src/ILI9341_STM32_Driver.c **** }
- 1389              		.loc 1 447 1
- 1390 019e 1837     		adds	r7, r7, #24
- 1391              		.cfi_def_cfa_offset 8
- 1392 01a0 BD46     		mov	sp, r7
- 1393              		.cfi_def_cfa_register 13
- 1394              		@ sp needed
- 1395 01a2 80BD     		pop	{r7, pc}
- 1396              	.L52:
- 1397              		.align	2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 33
+ 436:Core/Src/ILI9341_STM32_Driver.c **** unsigned char Temp_Buffer1[4] = {Y>>8,Y, (Y+1)>>8, (Y+1)};
+ 1297              		.loc 1 436 15
+ 1298 00f0 BB88     		ldrh	r3, [r7, #4]
+ 1299 00f2 1B0A     		lsrs	r3, r3, #8
+ 1300 00f4 9BB2     		uxth	r3, r3
+ 1301 00f6 DBB2     		uxtb	r3, r3
+ 1302 00f8 3B74     		strb	r3, [r7, #16]
+ 1303 00fa BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 1304 00fc DBB2     		uxtb	r3, r3
+ 1305 00fe 7B74     		strb	r3, [r7, #17]
+ 1306              		.loc 1 436 44
+ 1307 0100 BB88     		ldrh	r3, [r7, #4]
+ 1308 0102 0133     		adds	r3, r3, #1
+ 1309              		.loc 1 436 47
+ 1310 0104 1B12     		asrs	r3, r3, #8
+ 1311              		.loc 1 436 15
+ 1312 0106 DBB2     		uxtb	r3, r3
+ 1313 0108 BB74     		strb	r3, [r7, #18]
+ 1314              		.loc 1 436 54
+ 1315 010a BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 1316 010c DBB2     		uxtb	r3, r3
+ 1317 010e 0133     		adds	r3, r3, #1
+ 1318 0110 DBB2     		uxtb	r3, r3
+ 1319              		.loc 1 436 15
+ 1320 0112 FB74     		strb	r3, [r7, #19]
+ 437:Core/Src/ILI9341_STM32_Driver.c **** SPI_Transmit( Temp_Buffer1, 4, 1);
+ 1321              		.loc 1 437 1
+ 1322 0114 07F11003 		add	r3, r7, #16
+ 1323 0118 0122     		movs	r2, #1
+ 1324 011a 0421     		movs	r1, #4
+ 1325 011c 1846     		mov	r0, r3
+ 1326 011e FFF7FEFF 		bl	SPI_Transmit
+ 438:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);
+ 1327              		.loc 1 438 1
+ 1328 0122 0122     		movs	r2, #1
+ 1329 0124 4FF48051 		mov	r1, #4096
+ 1330 0128 2048     		ldr	r0, .L51+8
+ 1331 012a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 439:Core/Src/ILI9341_STM32_Driver.c **** 
+ 440:Core/Src/ILI9341_STM32_Driver.c **** //ADDRESS	
+ 441:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_RESET);	
+ 1332              		.loc 1 441 1
+ 1333 012e 0022     		movs	r2, #0
+ 1334 0130 4FF40051 		mov	r1, #8192
+ 1335 0134 1D48     		ldr	r0, .L51+8
+ 1336 0136 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 442:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);	
+ 1337              		.loc 1 442 1
+ 1338 013a 0022     		movs	r2, #0
+ 1339 013c 4FF48051 		mov	r1, #4096
+ 1340 0140 1A48     		ldr	r0, .L51+8
+ 1341 0142 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 443:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_SPI_Send(0x2C);
+ 1342              		.loc 1 443 1
+ 1343 0146 2C20     		movs	r0, #44
+ 1344 0148 FFF7FEFF 		bl	ILI9341_SPI_Send
+ 444:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_SET);			
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 32
 
 
- 1398              	.L51:
- 1399 01a4 00000000 		.word	LCD_WIDTH
- 1400 01a8 00000000 		.word	LCD_HEIGHT
- 1401 01ac 00180048 		.word	1207965696
- 1402              		.cfi_endproc
- 1403              	.LFE333:
- 1405              		.section	.text.ILI9341_Draw_Rectangle,"ax",%progbits
- 1406              		.align	1
- 1407              		.global	ILI9341_Draw_Rectangle
- 1408              		.syntax unified
- 1409              		.thumb
- 1410              		.thumb_func
- 1412              	ILI9341_Draw_Rectangle:
- 1413              	.LFB334:
- 448:Core/Src/ILI9341_STM32_Driver.c **** 
- 449:Core/Src/ILI9341_STM32_Driver.c **** //DRAW RECTANGLE OF SET SIZE AND HEIGTH AT X and Y POSITION WITH CUSTOM COLOUR
- 450:Core/Src/ILI9341_STM32_Driver.c **** //
- 451:Core/Src/ILI9341_STM32_Driver.c **** //Rectangle is hollow. X and Y positions mark the upper left corner of rectangle
- 452:Core/Src/ILI9341_STM32_Driver.c **** //As with all other draw calls x0 and y0 locations dependant on screen orientation
- 453:Core/Src/ILI9341_STM32_Driver.c **** //
+ 1345              		.loc 1 444 1
+ 1346 014c 0122     		movs	r2, #1
+ 1347 014e 4FF40051 		mov	r1, #8192
+ 1348 0152 1648     		ldr	r0, .L51+8
+ 1349 0154 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 445:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);			
+ 1350              		.loc 1 445 1
+ 1351 0158 0122     		movs	r2, #1
+ 1352 015a 4FF48051 		mov	r1, #4096
+ 1353 015e 1348     		ldr	r0, .L51+8
+ 1354 0160 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 446:Core/Src/ILI9341_STM32_Driver.c **** 
+ 447:Core/Src/ILI9341_STM32_Driver.c **** //COLOUR	
+ 448:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);
+ 1355              		.loc 1 448 1
+ 1356 0164 0022     		movs	r2, #0
+ 1357 0166 4FF48051 		mov	r1, #4096
+ 1358 016a 1048     		ldr	r0, .L51+8
+ 1359 016c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 449:Core/Src/ILI9341_STM32_Driver.c **** unsigned char Temp_Buffer2[2] = {Colour>>8, Colour};
+ 1360              		.loc 1 449 15
+ 1361 0170 7B88     		ldrh	r3, [r7, #2]
+ 1362 0172 1B0A     		lsrs	r3, r3, #8
+ 1363 0174 9BB2     		uxth	r3, r3
+ 1364 0176 DBB2     		uxtb	r3, r3
+ 1365 0178 3B73     		strb	r3, [r7, #12]
+ 1366 017a 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 1367 017c DBB2     		uxtb	r3, r3
+ 1368 017e 7B73     		strb	r3, [r7, #13]
+ 450:Core/Src/ILI9341_STM32_Driver.c **** SPI_Transmit( Temp_Buffer2, 2, 1);
+ 1369              		.loc 1 450 1
+ 1370 0180 07F10C03 		add	r3, r7, #12
+ 1371 0184 0122     		movs	r2, #1
+ 1372 0186 0221     		movs	r1, #2
+ 1373 0188 1846     		mov	r0, r3
+ 1374 018a FFF7FEFF 		bl	SPI_Transmit
+ 451:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);
+ 1375              		.loc 1 451 1
+ 1376 018e 0122     		movs	r2, #1
+ 1377 0190 4FF48051 		mov	r1, #4096
+ 1378 0194 0548     		ldr	r0, .L51+8
+ 1379 0196 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1380 019a 00E0     		b	.L46
+ 1381              	.L50:
+ 412:Core/Src/ILI9341_STM32_Driver.c **** 	
+ 1382              		.loc 1 412 41
+ 1383 019c 00BF     		nop
+ 1384              	.L46:
+ 452:Core/Src/ILI9341_STM32_Driver.c **** 	
+ 453:Core/Src/ILI9341_STM32_Driver.c **** }
+ 1385              		.loc 1 453 1
+ 1386 019e 1837     		adds	r7, r7, #24
+ 1387              		.cfi_def_cfa_offset 8
+ 1388 01a0 BD46     		mov	sp, r7
+ 1389              		.cfi_def_cfa_register 13
+ 1390              		@ sp needed
+ 1391 01a2 80BD     		pop	{r7, pc}
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 33
+
+
+ 1392              	.L52:
+ 1393              		.align	2
+ 1394              	.L51:
+ 1395 01a4 00000000 		.word	LCD_WIDTH
+ 1396 01a8 00000000 		.word	LCD_HEIGHT
+ 1397 01ac 00180048 		.word	1207965696
+ 1398              		.cfi_endproc
+ 1399              	.LFE333:
+ 1401              		.section	.text.ILI9341_Draw_Rectangle,"ax",%progbits
+ 1402              		.align	1
+ 1403              		.global	ILI9341_Draw_Rectangle
+ 1404              		.syntax unified
+ 1405              		.thumb
+ 1406              		.thumb_func
+ 1408              	ILI9341_Draw_Rectangle:
+ 1409              	.LFB334:
  454:Core/Src/ILI9341_STM32_Driver.c **** 
- 455:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Draw_Rectangle(uint16_t X, uint16_t Y, uint16_t Width, uint16_t Height, uint16_t Colou
- 456:Core/Src/ILI9341_STM32_Driver.c **** {
- 1414              		.loc 1 456 1
- 1415              		.cfi_startproc
- 1416              		@ args = 4, pretend = 0, frame = 8
- 1417              		@ frame_needed = 1, uses_anonymous_args = 0
- 1418 0000 90B5     		push	{r4, r7, lr}
- 1419              		.cfi_def_cfa_offset 12
- 1420              		.cfi_offset 4, -12
- 1421              		.cfi_offset 7, -8
- 1422              		.cfi_offset 14, -4
- 1423 0002 83B0     		sub	sp, sp, #12
- 1424              		.cfi_def_cfa_offset 24
- 1425 0004 00AF     		add	r7, sp, #0
- 1426              		.cfi_def_cfa_register 7
- 1427 0006 0446     		mov	r4, r0
- 1428 0008 0846     		mov	r0, r1
- 1429 000a 1146     		mov	r1, r2
- 1430 000c 1A46     		mov	r2, r3
- 1431 000e 2346     		mov	r3, r4	@ movhi
- 1432 0010 FB80     		strh	r3, [r7, #6]	@ movhi
- 1433 0012 0346     		mov	r3, r0	@ movhi
- 1434 0014 BB80     		strh	r3, [r7, #4]	@ movhi
- 1435 0016 0B46     		mov	r3, r1	@ movhi
- 1436 0018 7B80     		strh	r3, [r7, #2]	@ movhi
- 1437 001a 1346     		mov	r3, r2	@ movhi
- 1438 001c 3B80     		strh	r3, [r7]	@ movhi
- 457:Core/Src/ILI9341_STM32_Driver.c **** if((X >=LCD_WIDTH) || (Y >=LCD_HEIGHT)) return;
- 1439              		.loc 1 457 7
- 1440 001e 244B     		ldr	r3, .L60
- 1441 0020 1B88     		ldrh	r3, [r3]	@ movhi
- 1442 0022 9BB2     		uxth	r3, r3
- 1443              		.loc 1 457 3
- 1444 0024 FA88     		ldrh	r2, [r7, #6]
- 1445 0026 9A42     		cmp	r2, r3
- 1446 0028 3DD2     		bcs	.L59
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 34
+ 455:Core/Src/ILI9341_STM32_Driver.c **** //DRAW RECTANGLE OF SET SIZE AND HEIGTH AT X and Y POSITION WITH CUSTOM COLOUR
+ 456:Core/Src/ILI9341_STM32_Driver.c **** //
+ 457:Core/Src/ILI9341_STM32_Driver.c **** //Rectangle is hollow. X and Y positions mark the upper left corner of rectangle
+ 458:Core/Src/ILI9341_STM32_Driver.c **** //As with all other draw calls x0 and y0 locations dependant on screen orientation
+ 459:Core/Src/ILI9341_STM32_Driver.c **** //
+ 460:Core/Src/ILI9341_STM32_Driver.c **** 
+ 461:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Draw_Rectangle(uint16_t X, uint16_t Y, uint16_t Width, uint16_t Height, uint16_t Colou
+ 462:Core/Src/ILI9341_STM32_Driver.c **** {
+ 1410              		.loc 1 462 1
+ 1411              		.cfi_startproc
+ 1412              		@ args = 4, pretend = 0, frame = 8
+ 1413              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1414 0000 90B5     		push	{r4, r7, lr}
+ 1415              		.cfi_def_cfa_offset 12
+ 1416              		.cfi_offset 4, -12
+ 1417              		.cfi_offset 7, -8
+ 1418              		.cfi_offset 14, -4
+ 1419 0002 83B0     		sub	sp, sp, #12
+ 1420              		.cfi_def_cfa_offset 24
+ 1421 0004 00AF     		add	r7, sp, #0
+ 1422              		.cfi_def_cfa_register 7
+ 1423 0006 0446     		mov	r4, r0
+ 1424 0008 0846     		mov	r0, r1
+ 1425 000a 1146     		mov	r1, r2
+ 1426 000c 1A46     		mov	r2, r3
+ 1427 000e 2346     		mov	r3, r4	@ movhi
+ 1428 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1429 0012 0346     		mov	r3, r0	@ movhi
+ 1430 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+ 1431 0016 0B46     		mov	r3, r1	@ movhi
+ 1432 0018 7B80     		strh	r3, [r7, #2]	@ movhi
+ 1433 001a 1346     		mov	r3, r2	@ movhi
+ 1434 001c 3B80     		strh	r3, [r7]	@ movhi
+ 463:Core/Src/ILI9341_STM32_Driver.c **** if((X >=LCD_WIDTH) || (Y >=LCD_HEIGHT)) return;
+ 1435              		.loc 1 463 7
+ 1436 001e 244B     		ldr	r3, .L60
+ 1437 0020 1B88     		ldrh	r3, [r3]	@ movhi
+ 1438 0022 9BB2     		uxth	r3, r3
+ 1439              		.loc 1 463 3
+ 1440 0024 FA88     		ldrh	r2, [r7, #6]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 34
 
 
- 1447              		.loc 1 457 26 discriminator 2
- 1448 002a 224B     		ldr	r3, .L60+4
- 1449 002c 1B88     		ldrh	r3, [r3]	@ movhi
- 1450 002e 9BB2     		uxth	r3, r3
- 1451              		.loc 1 457 20 discriminator 2
- 1452 0030 BA88     		ldrh	r2, [r7, #4]
- 1453 0032 9A42     		cmp	r2, r3
- 1454 0034 37D2     		bcs	.L59
- 458:Core/Src/ILI9341_STM32_Driver.c **** if((X+Width-1)>=LCD_WIDTH)
- 1455              		.loc 1 458 6
- 1456 0036 FA88     		ldrh	r2, [r7, #6]
- 1457 0038 7B88     		ldrh	r3, [r7, #2]
- 1458 003a 1344     		add	r3, r3, r2
- 1459              		.loc 1 458 15
- 1460 003c 1C4A     		ldr	r2, .L60
- 1461 003e 1288     		ldrh	r2, [r2]	@ movhi
- 1462 0040 92B2     		uxth	r2, r2
- 1463              		.loc 1 458 3
- 1464 0042 9342     		cmp	r3, r2
- 1465 0044 05DD     		ble	.L57
- 459:Core/Src/ILI9341_STM32_Driver.c **** 	{
- 460:Core/Src/ILI9341_STM32_Driver.c **** 		Width=LCD_WIDTH-X;
- 1466              		.loc 1 460 18
- 1467 0046 1A4B     		ldr	r3, .L60
- 1468 0048 1B88     		ldrh	r3, [r3]	@ movhi
- 1469 004a 9AB2     		uxth	r2, r3
- 1470              		.loc 1 460 8
- 1471 004c FB88     		ldrh	r3, [r7, #6]	@ movhi
- 1472 004e D31A     		subs	r3, r2, r3
- 1473 0050 7B80     		strh	r3, [r7, #2]	@ movhi
- 1474              	.L57:
- 461:Core/Src/ILI9341_STM32_Driver.c **** 	}
- 462:Core/Src/ILI9341_STM32_Driver.c **** if((Y+Height-1)>=LCD_HEIGHT)
- 1475              		.loc 1 462 6
- 1476 0052 BA88     		ldrh	r2, [r7, #4]
- 1477 0054 3B88     		ldrh	r3, [r7]
- 1478 0056 1344     		add	r3, r3, r2
- 1479              		.loc 1 462 16
- 1480 0058 164A     		ldr	r2, .L60+4
- 1481 005a 1288     		ldrh	r2, [r2]	@ movhi
- 1482 005c 92B2     		uxth	r2, r2
- 1483              		.loc 1 462 3
- 1484 005e 9342     		cmp	r3, r2
- 1485 0060 05DD     		ble	.L58
- 463:Core/Src/ILI9341_STM32_Driver.c **** 	{
- 464:Core/Src/ILI9341_STM32_Driver.c **** 		Height=LCD_HEIGHT-Y;
- 1486              		.loc 1 464 20
- 1487 0062 144B     		ldr	r3, .L60+4
- 1488 0064 1B88     		ldrh	r3, [r3]	@ movhi
- 1489 0066 9AB2     		uxth	r2, r3
- 1490              		.loc 1 464 9
- 1491 0068 BB88     		ldrh	r3, [r7, #4]	@ movhi
- 1492 006a D31A     		subs	r3, r2, r3
- 1493 006c 3B80     		strh	r3, [r7]	@ movhi
- 1494              	.L58:
- 465:Core/Src/ILI9341_STM32_Driver.c **** 	}
- 466:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Set_Address(X, Y, X+Width-1, Y+Height-1);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 35
+ 1441 0026 9A42     		cmp	r2, r3
+ 1442 0028 3DD2     		bcs	.L59
+ 1443              		.loc 1 463 26 discriminator 2
+ 1444 002a 224B     		ldr	r3, .L60+4
+ 1445 002c 1B88     		ldrh	r3, [r3]	@ movhi
+ 1446 002e 9BB2     		uxth	r3, r3
+ 1447              		.loc 1 463 20 discriminator 2
+ 1448 0030 BA88     		ldrh	r2, [r7, #4]
+ 1449 0032 9A42     		cmp	r2, r3
+ 1450 0034 37D2     		bcs	.L59
+ 464:Core/Src/ILI9341_STM32_Driver.c **** if((X+Width-1)>=LCD_WIDTH)
+ 1451              		.loc 1 464 6
+ 1452 0036 FA88     		ldrh	r2, [r7, #6]
+ 1453 0038 7B88     		ldrh	r3, [r7, #2]
+ 1454 003a 1344     		add	r3, r3, r2
+ 1455              		.loc 1 464 15
+ 1456 003c 1C4A     		ldr	r2, .L60
+ 1457 003e 1288     		ldrh	r2, [r2]	@ movhi
+ 1458 0040 92B2     		uxth	r2, r2
+ 1459              		.loc 1 464 3
+ 1460 0042 9342     		cmp	r3, r2
+ 1461 0044 05DD     		ble	.L57
+ 465:Core/Src/ILI9341_STM32_Driver.c **** 	{
+ 466:Core/Src/ILI9341_STM32_Driver.c **** 		Width=LCD_WIDTH-X;
+ 1462              		.loc 1 466 18
+ 1463 0046 1A4B     		ldr	r3, .L60
+ 1464 0048 1B88     		ldrh	r3, [r3]	@ movhi
+ 1465 004a 9AB2     		uxth	r2, r3
+ 1466              		.loc 1 466 8
+ 1467 004c FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 1468 004e D31A     		subs	r3, r2, r3
+ 1469 0050 7B80     		strh	r3, [r7, #2]	@ movhi
+ 1470              	.L57:
+ 467:Core/Src/ILI9341_STM32_Driver.c **** 	}
+ 468:Core/Src/ILI9341_STM32_Driver.c **** if((Y+Height-1)>=LCD_HEIGHT)
+ 1471              		.loc 1 468 6
+ 1472 0052 BA88     		ldrh	r2, [r7, #4]
+ 1473 0054 3B88     		ldrh	r3, [r7]
+ 1474 0056 1344     		add	r3, r3, r2
+ 1475              		.loc 1 468 16
+ 1476 0058 164A     		ldr	r2, .L60+4
+ 1477 005a 1288     		ldrh	r2, [r2]	@ movhi
+ 1478 005c 92B2     		uxth	r2, r2
+ 1479              		.loc 1 468 3
+ 1480 005e 9342     		cmp	r3, r2
+ 1481 0060 05DD     		ble	.L58
+ 469:Core/Src/ILI9341_STM32_Driver.c **** 	{
+ 470:Core/Src/ILI9341_STM32_Driver.c **** 		Height=LCD_HEIGHT-Y;
+ 1482              		.loc 1 470 20
+ 1483 0062 144B     		ldr	r3, .L60+4
+ 1484 0064 1B88     		ldrh	r3, [r3]	@ movhi
+ 1485 0066 9AB2     		uxth	r2, r3
+ 1486              		.loc 1 470 9
+ 1487 0068 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 1488 006a D31A     		subs	r3, r2, r3
+ 1489 006c 3B80     		strh	r3, [r7]	@ movhi
+ 1490              	.L58:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 35
 
 
- 1495              		.loc 1 466 28
- 1496 006e FA88     		ldrh	r2, [r7, #6]	@ movhi
- 1497 0070 7B88     		ldrh	r3, [r7, #2]	@ movhi
- 1498 0072 1344     		add	r3, r3, r2
- 1499 0074 9BB2     		uxth	r3, r3
- 1500              		.loc 1 466 1
- 1501 0076 013B     		subs	r3, r3, #1
- 1502 0078 9CB2     		uxth	r4, r3
- 1503              		.loc 1 466 39
- 1504 007a BA88     		ldrh	r2, [r7, #4]	@ movhi
- 1505 007c 3B88     		ldrh	r3, [r7]	@ movhi
- 1506 007e 1344     		add	r3, r3, r2
- 1507 0080 9BB2     		uxth	r3, r3
- 1508              		.loc 1 466 1
- 1509 0082 013B     		subs	r3, r3, #1
- 1510 0084 9BB2     		uxth	r3, r3
- 1511 0086 B988     		ldrh	r1, [r7, #4]
- 1512 0088 F888     		ldrh	r0, [r7, #6]
- 1513 008a 2246     		mov	r2, r4
- 1514 008c FFF7FEFF 		bl	ILI9341_Set_Address
- 467:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Draw_Colour_Burst(Colour, Height*Width);
- 1515              		.loc 1 467 41
- 1516 0090 3B88     		ldrh	r3, [r7]
- 1517 0092 7A88     		ldrh	r2, [r7, #2]
- 1518 0094 02FB03F3 		mul	r3, r2, r3
- 1519              		.loc 1 467 1
- 1520 0098 1A46     		mov	r2, r3
- 1521 009a 3B8B     		ldrh	r3, [r7, #24]
- 1522 009c 1146     		mov	r1, r2
- 1523 009e 1846     		mov	r0, r3
- 1524 00a0 FFF7FEFF 		bl	ILI9341_Draw_Colour_Burst
- 1525 00a4 00E0     		b	.L53
- 1526              	.L59:
- 457:Core/Src/ILI9341_STM32_Driver.c **** if((X+Width-1)>=LCD_WIDTH)
- 1527              		.loc 1 457 41
- 1528 00a6 00BF     		nop
- 1529              	.L53:
- 468:Core/Src/ILI9341_STM32_Driver.c **** }
- 1530              		.loc 1 468 1
- 1531 00a8 0C37     		adds	r7, r7, #12
- 1532              		.cfi_def_cfa_offset 12
- 1533 00aa BD46     		mov	sp, r7
- 1534              		.cfi_def_cfa_register 13
- 1535              		@ sp needed
- 1536 00ac 90BD     		pop	{r4, r7, pc}
- 1537              	.L61:
- 1538 00ae 00BF     		.align	2
- 1539              	.L60:
- 1540 00b0 00000000 		.word	LCD_WIDTH
- 1541 00b4 00000000 		.word	LCD_HEIGHT
- 1542              		.cfi_endproc
- 1543              	.LFE334:
- 1545              		.section	.text.ILI9341_Draw_Horizontal_Line,"ax",%progbits
- 1546              		.align	1
- 1547              		.global	ILI9341_Draw_Horizontal_Line
- 1548              		.syntax unified
- 1549              		.thumb
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 36
+ 471:Core/Src/ILI9341_STM32_Driver.c **** 	}
+ 472:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Set_Address(X, Y, X+Width-1, Y+Height-1);
+ 1491              		.loc 1 472 28
+ 1492 006e FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 1493 0070 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 1494 0072 1344     		add	r3, r3, r2
+ 1495 0074 9BB2     		uxth	r3, r3
+ 1496              		.loc 1 472 1
+ 1497 0076 013B     		subs	r3, r3, #1
+ 1498 0078 9CB2     		uxth	r4, r3
+ 1499              		.loc 1 472 39
+ 1500 007a BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 1501 007c 3B88     		ldrh	r3, [r7]	@ movhi
+ 1502 007e 1344     		add	r3, r3, r2
+ 1503 0080 9BB2     		uxth	r3, r3
+ 1504              		.loc 1 472 1
+ 1505 0082 013B     		subs	r3, r3, #1
+ 1506 0084 9BB2     		uxth	r3, r3
+ 1507 0086 B988     		ldrh	r1, [r7, #4]
+ 1508 0088 F888     		ldrh	r0, [r7, #6]
+ 1509 008a 2246     		mov	r2, r4
+ 1510 008c FFF7FEFF 		bl	ILI9341_Set_Address
+ 473:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Draw_Colour_Burst(Colour, Height*Width);
+ 1511              		.loc 1 473 41
+ 1512 0090 3B88     		ldrh	r3, [r7]
+ 1513 0092 7A88     		ldrh	r2, [r7, #2]
+ 1514 0094 02FB03F3 		mul	r3, r2, r3
+ 1515              		.loc 1 473 1
+ 1516 0098 1A46     		mov	r2, r3
+ 1517 009a 3B8B     		ldrh	r3, [r7, #24]
+ 1518 009c 1146     		mov	r1, r2
+ 1519 009e 1846     		mov	r0, r3
+ 1520 00a0 FFF7FEFF 		bl	ILI9341_Draw_Colour_Burst
+ 1521 00a4 00E0     		b	.L53
+ 1522              	.L59:
+ 463:Core/Src/ILI9341_STM32_Driver.c **** if((X+Width-1)>=LCD_WIDTH)
+ 1523              		.loc 1 463 41
+ 1524 00a6 00BF     		nop
+ 1525              	.L53:
+ 474:Core/Src/ILI9341_STM32_Driver.c **** }
+ 1526              		.loc 1 474 1
+ 1527 00a8 0C37     		adds	r7, r7, #12
+ 1528              		.cfi_def_cfa_offset 12
+ 1529 00aa BD46     		mov	sp, r7
+ 1530              		.cfi_def_cfa_register 13
+ 1531              		@ sp needed
+ 1532 00ac 90BD     		pop	{r4, r7, pc}
+ 1533              	.L61:
+ 1534 00ae 00BF     		.align	2
+ 1535              	.L60:
+ 1536 00b0 00000000 		.word	LCD_WIDTH
+ 1537 00b4 00000000 		.word	LCD_HEIGHT
+ 1538              		.cfi_endproc
+ 1539              	.LFE334:
+ 1541              		.section	.text.ILI9341_Draw_Horizontal_Line,"ax",%progbits
+ 1542              		.align	1
+ 1543              		.global	ILI9341_Draw_Horizontal_Line
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 36
 
 
- 1550              		.thumb_func
- 1552              	ILI9341_Draw_Horizontal_Line:
- 1553              	.LFB335:
- 469:Core/Src/ILI9341_STM32_Driver.c **** 
- 470:Core/Src/ILI9341_STM32_Driver.c **** //DRAW LINE FROM X,Y LOCATION to X+Width,Y LOCATION
- 471:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Draw_Horizontal_Line(uint16_t X, uint16_t Y, uint16_t Width, uint16_t Colour)
- 472:Core/Src/ILI9341_STM32_Driver.c **** {
- 1554              		.loc 1 472 1
- 1555              		.cfi_startproc
- 1556              		@ args = 0, pretend = 0, frame = 8
- 1557              		@ frame_needed = 1, uses_anonymous_args = 0
- 1558 0000 90B5     		push	{r4, r7, lr}
- 1559              		.cfi_def_cfa_offset 12
- 1560              		.cfi_offset 4, -12
- 1561              		.cfi_offset 7, -8
- 1562              		.cfi_offset 14, -4
- 1563 0002 83B0     		sub	sp, sp, #12
- 1564              		.cfi_def_cfa_offset 24
- 1565 0004 00AF     		add	r7, sp, #0
- 1566              		.cfi_def_cfa_register 7
- 1567 0006 0446     		mov	r4, r0
- 1568 0008 0846     		mov	r0, r1
- 1569 000a 1146     		mov	r1, r2
- 1570 000c 1A46     		mov	r2, r3
- 1571 000e 2346     		mov	r3, r4	@ movhi
- 1572 0010 FB80     		strh	r3, [r7, #6]	@ movhi
- 1573 0012 0346     		mov	r3, r0	@ movhi
- 1574 0014 BB80     		strh	r3, [r7, #4]	@ movhi
- 1575 0016 0B46     		mov	r3, r1	@ movhi
- 1576 0018 7B80     		strh	r3, [r7, #2]	@ movhi
- 1577 001a 1346     		mov	r3, r2	@ movhi
- 1578 001c 3B80     		strh	r3, [r7]	@ movhi
- 473:Core/Src/ILI9341_STM32_Driver.c **** if((X >=LCD_WIDTH) || (Y >=LCD_HEIGHT)) return;
- 1579              		.loc 1 473 7
- 1580 001e 184B     		ldr	r3, .L68
- 1581 0020 1B88     		ldrh	r3, [r3]	@ movhi
- 1582 0022 9BB2     		uxth	r3, r3
- 1583              		.loc 1 473 3
- 1584 0024 FA88     		ldrh	r2, [r7, #6]
- 1585 0026 9A42     		cmp	r2, r3
- 1586 0028 25D2     		bcs	.L67
- 1587              		.loc 1 473 26 discriminator 2
- 1588 002a 164B     		ldr	r3, .L68+4
- 1589 002c 1B88     		ldrh	r3, [r3]	@ movhi
- 1590 002e 9BB2     		uxth	r3, r3
- 1591              		.loc 1 473 20 discriminator 2
- 1592 0030 BA88     		ldrh	r2, [r7, #4]
- 1593 0032 9A42     		cmp	r2, r3
- 1594 0034 1FD2     		bcs	.L67
- 474:Core/Src/ILI9341_STM32_Driver.c **** if((X+Width-1)>=LCD_WIDTH)
- 1595              		.loc 1 474 6
- 1596 0036 FA88     		ldrh	r2, [r7, #6]
- 1597 0038 7B88     		ldrh	r3, [r7, #2]
- 1598 003a 1344     		add	r3, r3, r2
- 1599              		.loc 1 474 15
- 1600 003c 104A     		ldr	r2, .L68
- 1601 003e 1288     		ldrh	r2, [r2]	@ movhi
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 37
+ 1544              		.syntax unified
+ 1545              		.thumb
+ 1546              		.thumb_func
+ 1548              	ILI9341_Draw_Horizontal_Line:
+ 1549              	.LFB335:
+ 475:Core/Src/ILI9341_STM32_Driver.c **** 
+ 476:Core/Src/ILI9341_STM32_Driver.c **** //DRAW LINE FROM X,Y LOCATION to X+Width,Y LOCATION
+ 477:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Draw_Horizontal_Line(uint16_t X, uint16_t Y, uint16_t Width, uint16_t Colour)
+ 478:Core/Src/ILI9341_STM32_Driver.c **** {
+ 1550              		.loc 1 478 1
+ 1551              		.cfi_startproc
+ 1552              		@ args = 0, pretend = 0, frame = 8
+ 1553              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1554 0000 90B5     		push	{r4, r7, lr}
+ 1555              		.cfi_def_cfa_offset 12
+ 1556              		.cfi_offset 4, -12
+ 1557              		.cfi_offset 7, -8
+ 1558              		.cfi_offset 14, -4
+ 1559 0002 83B0     		sub	sp, sp, #12
+ 1560              		.cfi_def_cfa_offset 24
+ 1561 0004 00AF     		add	r7, sp, #0
+ 1562              		.cfi_def_cfa_register 7
+ 1563 0006 0446     		mov	r4, r0
+ 1564 0008 0846     		mov	r0, r1
+ 1565 000a 1146     		mov	r1, r2
+ 1566 000c 1A46     		mov	r2, r3
+ 1567 000e 2346     		mov	r3, r4	@ movhi
+ 1568 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1569 0012 0346     		mov	r3, r0	@ movhi
+ 1570 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+ 1571 0016 0B46     		mov	r3, r1	@ movhi
+ 1572 0018 7B80     		strh	r3, [r7, #2]	@ movhi
+ 1573 001a 1346     		mov	r3, r2	@ movhi
+ 1574 001c 3B80     		strh	r3, [r7]	@ movhi
+ 479:Core/Src/ILI9341_STM32_Driver.c **** if((X >=LCD_WIDTH) || (Y >=LCD_HEIGHT)) return;
+ 1575              		.loc 1 479 7
+ 1576 001e 184B     		ldr	r3, .L68
+ 1577 0020 1B88     		ldrh	r3, [r3]	@ movhi
+ 1578 0022 9BB2     		uxth	r3, r3
+ 1579              		.loc 1 479 3
+ 1580 0024 FA88     		ldrh	r2, [r7, #6]
+ 1581 0026 9A42     		cmp	r2, r3
+ 1582 0028 25D2     		bcs	.L67
+ 1583              		.loc 1 479 26 discriminator 2
+ 1584 002a 164B     		ldr	r3, .L68+4
+ 1585 002c 1B88     		ldrh	r3, [r3]	@ movhi
+ 1586 002e 9BB2     		uxth	r3, r3
+ 1587              		.loc 1 479 20 discriminator 2
+ 1588 0030 BA88     		ldrh	r2, [r7, #4]
+ 1589 0032 9A42     		cmp	r2, r3
+ 1590 0034 1FD2     		bcs	.L67
+ 480:Core/Src/ILI9341_STM32_Driver.c **** if((X+Width-1)>=LCD_WIDTH)
+ 1591              		.loc 1 480 6
+ 1592 0036 FA88     		ldrh	r2, [r7, #6]
+ 1593 0038 7B88     		ldrh	r3, [r7, #2]
+ 1594 003a 1344     		add	r3, r3, r2
+ 1595              		.loc 1 480 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 37
 
 
- 1602 0040 92B2     		uxth	r2, r2
- 1603              		.loc 1 474 3
- 1604 0042 9342     		cmp	r3, r2
- 1605 0044 05DD     		ble	.L66
- 475:Core/Src/ILI9341_STM32_Driver.c **** 	{
- 476:Core/Src/ILI9341_STM32_Driver.c **** 		Width=LCD_WIDTH-X;
- 1606              		.loc 1 476 18
- 1607 0046 0E4B     		ldr	r3, .L68
- 1608 0048 1B88     		ldrh	r3, [r3]	@ movhi
- 1609 004a 9AB2     		uxth	r2, r3
- 1610              		.loc 1 476 8
- 1611 004c FB88     		ldrh	r3, [r7, #6]	@ movhi
- 1612 004e D31A     		subs	r3, r2, r3
- 1613 0050 7B80     		strh	r3, [r7, #2]	@ movhi
- 1614              	.L66:
- 477:Core/Src/ILI9341_STM32_Driver.c **** 	}
- 478:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Set_Address(X, Y, X+Width-1, Y);
- 1615              		.loc 1 478 28
- 1616 0052 FA88     		ldrh	r2, [r7, #6]	@ movhi
- 1617 0054 7B88     		ldrh	r3, [r7, #2]	@ movhi
- 1618 0056 1344     		add	r3, r3, r2
- 1619 0058 9BB2     		uxth	r3, r3
- 1620              		.loc 1 478 1
- 1621 005a 013B     		subs	r3, r3, #1
- 1622 005c 9AB2     		uxth	r2, r3
- 1623 005e BB88     		ldrh	r3, [r7, #4]
- 1624 0060 B988     		ldrh	r1, [r7, #4]
- 1625 0062 F888     		ldrh	r0, [r7, #6]
- 1626 0064 FFF7FEFF 		bl	ILI9341_Set_Address
- 479:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Draw_Colour_Burst(Colour, Width);
- 1627              		.loc 1 479 1
- 1628 0068 7A88     		ldrh	r2, [r7, #2]
- 1629 006a 3B88     		ldrh	r3, [r7]
- 1630 006c 1146     		mov	r1, r2
- 1631 006e 1846     		mov	r0, r3
- 1632 0070 FFF7FEFF 		bl	ILI9341_Draw_Colour_Burst
- 1633 0074 00E0     		b	.L62
- 1634              	.L67:
- 473:Core/Src/ILI9341_STM32_Driver.c **** if((X+Width-1)>=LCD_WIDTH)
- 1635              		.loc 1 473 41
- 1636 0076 00BF     		nop
- 1637              	.L62:
- 480:Core/Src/ILI9341_STM32_Driver.c **** }
- 1638              		.loc 1 480 1
- 1639 0078 0C37     		adds	r7, r7, #12
- 1640              		.cfi_def_cfa_offset 12
- 1641 007a BD46     		mov	sp, r7
- 1642              		.cfi_def_cfa_register 13
- 1643              		@ sp needed
- 1644 007c 90BD     		pop	{r4, r7, pc}
- 1645              	.L69:
- 1646 007e 00BF     		.align	2
- 1647              	.L68:
- 1648 0080 00000000 		.word	LCD_WIDTH
- 1649 0084 00000000 		.word	LCD_HEIGHT
- 1650              		.cfi_endproc
- 1651              	.LFE335:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 38
+ 1596 003c 104A     		ldr	r2, .L68
+ 1597 003e 1288     		ldrh	r2, [r2]	@ movhi
+ 1598 0040 92B2     		uxth	r2, r2
+ 1599              		.loc 1 480 3
+ 1600 0042 9342     		cmp	r3, r2
+ 1601 0044 05DD     		ble	.L66
+ 481:Core/Src/ILI9341_STM32_Driver.c **** 	{
+ 482:Core/Src/ILI9341_STM32_Driver.c **** 		Width=LCD_WIDTH-X;
+ 1602              		.loc 1 482 18
+ 1603 0046 0E4B     		ldr	r3, .L68
+ 1604 0048 1B88     		ldrh	r3, [r3]	@ movhi
+ 1605 004a 9AB2     		uxth	r2, r3
+ 1606              		.loc 1 482 8
+ 1607 004c FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 1608 004e D31A     		subs	r3, r2, r3
+ 1609 0050 7B80     		strh	r3, [r7, #2]	@ movhi
+ 1610              	.L66:
+ 483:Core/Src/ILI9341_STM32_Driver.c **** 	}
+ 484:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Set_Address(X, Y, X+Width-1, Y);
+ 1611              		.loc 1 484 28
+ 1612 0052 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 1613 0054 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 1614 0056 1344     		add	r3, r3, r2
+ 1615 0058 9BB2     		uxth	r3, r3
+ 1616              		.loc 1 484 1
+ 1617 005a 013B     		subs	r3, r3, #1
+ 1618 005c 9AB2     		uxth	r2, r3
+ 1619 005e BB88     		ldrh	r3, [r7, #4]
+ 1620 0060 B988     		ldrh	r1, [r7, #4]
+ 1621 0062 F888     		ldrh	r0, [r7, #6]
+ 1622 0064 FFF7FEFF 		bl	ILI9341_Set_Address
+ 485:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Draw_Colour_Burst(Colour, Width);
+ 1623              		.loc 1 485 1
+ 1624 0068 7A88     		ldrh	r2, [r7, #2]
+ 1625 006a 3B88     		ldrh	r3, [r7]
+ 1626 006c 1146     		mov	r1, r2
+ 1627 006e 1846     		mov	r0, r3
+ 1628 0070 FFF7FEFF 		bl	ILI9341_Draw_Colour_Burst
+ 1629 0074 00E0     		b	.L62
+ 1630              	.L67:
+ 479:Core/Src/ILI9341_STM32_Driver.c **** if((X+Width-1)>=LCD_WIDTH)
+ 1631              		.loc 1 479 41
+ 1632 0076 00BF     		nop
+ 1633              	.L62:
+ 486:Core/Src/ILI9341_STM32_Driver.c **** }
+ 1634              		.loc 1 486 1
+ 1635 0078 0C37     		adds	r7, r7, #12
+ 1636              		.cfi_def_cfa_offset 12
+ 1637 007a BD46     		mov	sp, r7
+ 1638              		.cfi_def_cfa_register 13
+ 1639              		@ sp needed
+ 1640 007c 90BD     		pop	{r4, r7, pc}
+ 1641              	.L69:
+ 1642 007e 00BF     		.align	2
+ 1643              	.L68:
+ 1644 0080 00000000 		.word	LCD_WIDTH
+ 1645 0084 00000000 		.word	LCD_HEIGHT
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 38
 
 
- 1653              		.section	.text.ILI9341_Draw_Vertical_Line,"ax",%progbits
- 1654              		.align	1
- 1655              		.global	ILI9341_Draw_Vertical_Line
- 1656              		.syntax unified
- 1657              		.thumb
- 1658              		.thumb_func
- 1660              	ILI9341_Draw_Vertical_Line:
- 1661              	.LFB336:
- 481:Core/Src/ILI9341_STM32_Driver.c **** 
- 482:Core/Src/ILI9341_STM32_Driver.c **** //DRAW LINE FROM X,Y LOCATION to X,Y+Height LOCATION
- 483:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Draw_Vertical_Line(uint16_t X, uint16_t Y, uint16_t Height, uint16_t Colour)
- 484:Core/Src/ILI9341_STM32_Driver.c **** {
- 1662              		.loc 1 484 1
- 1663              		.cfi_startproc
- 1664              		@ args = 0, pretend = 0, frame = 8
- 1665              		@ frame_needed = 1, uses_anonymous_args = 0
- 1666 0000 90B5     		push	{r4, r7, lr}
- 1667              		.cfi_def_cfa_offset 12
- 1668              		.cfi_offset 4, -12
- 1669              		.cfi_offset 7, -8
- 1670              		.cfi_offset 14, -4
- 1671 0002 83B0     		sub	sp, sp, #12
- 1672              		.cfi_def_cfa_offset 24
- 1673 0004 00AF     		add	r7, sp, #0
- 1674              		.cfi_def_cfa_register 7
- 1675 0006 0446     		mov	r4, r0
- 1676 0008 0846     		mov	r0, r1
- 1677 000a 1146     		mov	r1, r2
- 1678 000c 1A46     		mov	r2, r3
- 1679 000e 2346     		mov	r3, r4	@ movhi
- 1680 0010 FB80     		strh	r3, [r7, #6]	@ movhi
- 1681 0012 0346     		mov	r3, r0	@ movhi
- 1682 0014 BB80     		strh	r3, [r7, #4]	@ movhi
- 1683 0016 0B46     		mov	r3, r1	@ movhi
- 1684 0018 7B80     		strh	r3, [r7, #2]	@ movhi
- 1685 001a 1346     		mov	r3, r2	@ movhi
- 1686 001c 3B80     		strh	r3, [r7]	@ movhi
- 485:Core/Src/ILI9341_STM32_Driver.c **** if((X >=LCD_WIDTH) || (Y >=LCD_HEIGHT)) return;
- 1687              		.loc 1 485 7
- 1688 001e 184B     		ldr	r3, .L76
- 1689 0020 1B88     		ldrh	r3, [r3]	@ movhi
- 1690 0022 9BB2     		uxth	r3, r3
- 1691              		.loc 1 485 3
- 1692 0024 FA88     		ldrh	r2, [r7, #6]
- 1693 0026 9A42     		cmp	r2, r3
- 1694 0028 25D2     		bcs	.L75
- 1695              		.loc 1 485 26 discriminator 2
- 1696 002a 164B     		ldr	r3, .L76+4
- 1697 002c 1B88     		ldrh	r3, [r3]	@ movhi
- 1698 002e 9BB2     		uxth	r3, r3
- 1699              		.loc 1 485 20 discriminator 2
- 1700 0030 BA88     		ldrh	r2, [r7, #4]
- 1701 0032 9A42     		cmp	r2, r3
- 1702 0034 1FD2     		bcs	.L75
- 486:Core/Src/ILI9341_STM32_Driver.c **** if((Y+Height-1)>=LCD_HEIGHT)
- 1703              		.loc 1 486 6
- 1704 0036 BA88     		ldrh	r2, [r7, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 39
+ 1646              		.cfi_endproc
+ 1647              	.LFE335:
+ 1649              		.section	.text.ILI9341_Draw_Vertical_Line,"ax",%progbits
+ 1650              		.align	1
+ 1651              		.global	ILI9341_Draw_Vertical_Line
+ 1652              		.syntax unified
+ 1653              		.thumb
+ 1654              		.thumb_func
+ 1656              	ILI9341_Draw_Vertical_Line:
+ 1657              	.LFB336:
+ 487:Core/Src/ILI9341_STM32_Driver.c **** 
+ 488:Core/Src/ILI9341_STM32_Driver.c **** //DRAW LINE FROM X,Y LOCATION to X,Y+Height LOCATION
+ 489:Core/Src/ILI9341_STM32_Driver.c **** void ILI9341_Draw_Vertical_Line(uint16_t X, uint16_t Y, uint16_t Height, uint16_t Colour)
+ 490:Core/Src/ILI9341_STM32_Driver.c **** {
+ 1658              		.loc 1 490 1
+ 1659              		.cfi_startproc
+ 1660              		@ args = 0, pretend = 0, frame = 8
+ 1661              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1662 0000 90B5     		push	{r4, r7, lr}
+ 1663              		.cfi_def_cfa_offset 12
+ 1664              		.cfi_offset 4, -12
+ 1665              		.cfi_offset 7, -8
+ 1666              		.cfi_offset 14, -4
+ 1667 0002 83B0     		sub	sp, sp, #12
+ 1668              		.cfi_def_cfa_offset 24
+ 1669 0004 00AF     		add	r7, sp, #0
+ 1670              		.cfi_def_cfa_register 7
+ 1671 0006 0446     		mov	r4, r0
+ 1672 0008 0846     		mov	r0, r1
+ 1673 000a 1146     		mov	r1, r2
+ 1674 000c 1A46     		mov	r2, r3
+ 1675 000e 2346     		mov	r3, r4	@ movhi
+ 1676 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1677 0012 0346     		mov	r3, r0	@ movhi
+ 1678 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+ 1679 0016 0B46     		mov	r3, r1	@ movhi
+ 1680 0018 7B80     		strh	r3, [r7, #2]	@ movhi
+ 1681 001a 1346     		mov	r3, r2	@ movhi
+ 1682 001c 3B80     		strh	r3, [r7]	@ movhi
+ 491:Core/Src/ILI9341_STM32_Driver.c **** if((X >=LCD_WIDTH) || (Y >=LCD_HEIGHT)) return;
+ 1683              		.loc 1 491 7
+ 1684 001e 184B     		ldr	r3, .L76
+ 1685 0020 1B88     		ldrh	r3, [r3]	@ movhi
+ 1686 0022 9BB2     		uxth	r3, r3
+ 1687              		.loc 1 491 3
+ 1688 0024 FA88     		ldrh	r2, [r7, #6]
+ 1689 0026 9A42     		cmp	r2, r3
+ 1690 0028 25D2     		bcs	.L75
+ 1691              		.loc 1 491 26 discriminator 2
+ 1692 002a 164B     		ldr	r3, .L76+4
+ 1693 002c 1B88     		ldrh	r3, [r3]	@ movhi
+ 1694 002e 9BB2     		uxth	r3, r3
+ 1695              		.loc 1 491 20 discriminator 2
+ 1696 0030 BA88     		ldrh	r2, [r7, #4]
+ 1697 0032 9A42     		cmp	r2, r3
+ 1698 0034 1FD2     		bcs	.L75
+ 492:Core/Src/ILI9341_STM32_Driver.c **** if((Y+Height-1)>=LCD_HEIGHT)
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 39
 
 
- 1705 0038 7B88     		ldrh	r3, [r7, #2]
- 1706 003a 1344     		add	r3, r3, r2
- 1707              		.loc 1 486 16
- 1708 003c 114A     		ldr	r2, .L76+4
- 1709 003e 1288     		ldrh	r2, [r2]	@ movhi
- 1710 0040 92B2     		uxth	r2, r2
- 1711              		.loc 1 486 3
- 1712 0042 9342     		cmp	r3, r2
- 1713 0044 05DD     		ble	.L74
- 487:Core/Src/ILI9341_STM32_Driver.c **** 	{
- 488:Core/Src/ILI9341_STM32_Driver.c **** 		Height=LCD_HEIGHT-Y;
- 1714              		.loc 1 488 20
- 1715 0046 0F4B     		ldr	r3, .L76+4
- 1716 0048 1B88     		ldrh	r3, [r3]	@ movhi
- 1717 004a 9AB2     		uxth	r2, r3
- 1718              		.loc 1 488 9
- 1719 004c BB88     		ldrh	r3, [r7, #4]	@ movhi
- 1720 004e D31A     		subs	r3, r2, r3
- 1721 0050 7B80     		strh	r3, [r7, #2]	@ movhi
- 1722              	.L74:
- 489:Core/Src/ILI9341_STM32_Driver.c **** 	}
- 490:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Set_Address(X, Y, X, Y+Height-1);
- 1723              		.loc 1 490 31
- 1724 0052 BA88     		ldrh	r2, [r7, #4]	@ movhi
- 1725 0054 7B88     		ldrh	r3, [r7, #2]	@ movhi
- 1726 0056 1344     		add	r3, r3, r2
- 1727 0058 9BB2     		uxth	r3, r3
- 1728              		.loc 1 490 1
- 1729 005a 013B     		subs	r3, r3, #1
- 1730 005c 9BB2     		uxth	r3, r3
- 1731 005e FA88     		ldrh	r2, [r7, #6]
- 1732 0060 B988     		ldrh	r1, [r7, #4]
- 1733 0062 F888     		ldrh	r0, [r7, #6]
- 1734 0064 FFF7FEFF 		bl	ILI9341_Set_Address
- 491:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Draw_Colour_Burst(Colour, Height);
- 1735              		.loc 1 491 1
- 1736 0068 7A88     		ldrh	r2, [r7, #2]
- 1737 006a 3B88     		ldrh	r3, [r7]
- 1738 006c 1146     		mov	r1, r2
- 1739 006e 1846     		mov	r0, r3
- 1740 0070 FFF7FEFF 		bl	ILI9341_Draw_Colour_Burst
- 1741 0074 00E0     		b	.L70
- 1742              	.L75:
- 485:Core/Src/ILI9341_STM32_Driver.c **** if((Y+Height-1)>=LCD_HEIGHT)
- 1743              		.loc 1 485 41
- 1744 0076 00BF     		nop
- 1745              	.L70:
- 492:Core/Src/ILI9341_STM32_Driver.c **** }
- 1746              		.loc 1 492 1
- 1747 0078 0C37     		adds	r7, r7, #12
- 1748              		.cfi_def_cfa_offset 12
- 1749 007a BD46     		mov	sp, r7
- 1750              		.cfi_def_cfa_register 13
- 1751              		@ sp needed
- 1752 007c 90BD     		pop	{r4, r7, pc}
- 1753              	.L77:
- 1754 007e 00BF     		.align	2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 40
+ 1699              		.loc 1 492 6
+ 1700 0036 BA88     		ldrh	r2, [r7, #4]
+ 1701 0038 7B88     		ldrh	r3, [r7, #2]
+ 1702 003a 1344     		add	r3, r3, r2
+ 1703              		.loc 1 492 16
+ 1704 003c 114A     		ldr	r2, .L76+4
+ 1705 003e 1288     		ldrh	r2, [r2]	@ movhi
+ 1706 0040 92B2     		uxth	r2, r2
+ 1707              		.loc 1 492 3
+ 1708 0042 9342     		cmp	r3, r2
+ 1709 0044 05DD     		ble	.L74
+ 493:Core/Src/ILI9341_STM32_Driver.c **** 	{
+ 494:Core/Src/ILI9341_STM32_Driver.c **** 		Height=LCD_HEIGHT-Y;
+ 1710              		.loc 1 494 20
+ 1711 0046 0F4B     		ldr	r3, .L76+4
+ 1712 0048 1B88     		ldrh	r3, [r3]	@ movhi
+ 1713 004a 9AB2     		uxth	r2, r3
+ 1714              		.loc 1 494 9
+ 1715 004c BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 1716 004e D31A     		subs	r3, r2, r3
+ 1717 0050 7B80     		strh	r3, [r7, #2]	@ movhi
+ 1718              	.L74:
+ 495:Core/Src/ILI9341_STM32_Driver.c **** 	}
+ 496:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Set_Address(X, Y, X, Y+Height-1);
+ 1719              		.loc 1 496 31
+ 1720 0052 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 1721 0054 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 1722 0056 1344     		add	r3, r3, r2
+ 1723 0058 9BB2     		uxth	r3, r3
+ 1724              		.loc 1 496 1
+ 1725 005a 013B     		subs	r3, r3, #1
+ 1726 005c 9BB2     		uxth	r3, r3
+ 1727 005e FA88     		ldrh	r2, [r7, #6]
+ 1728 0060 B988     		ldrh	r1, [r7, #4]
+ 1729 0062 F888     		ldrh	r0, [r7, #6]
+ 1730 0064 FFF7FEFF 		bl	ILI9341_Set_Address
+ 497:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Draw_Colour_Burst(Colour, Height);
+ 1731              		.loc 1 497 1
+ 1732 0068 7A88     		ldrh	r2, [r7, #2]
+ 1733 006a 3B88     		ldrh	r3, [r7]
+ 1734 006c 1146     		mov	r1, r2
+ 1735 006e 1846     		mov	r0, r3
+ 1736 0070 FFF7FEFF 		bl	ILI9341_Draw_Colour_Burst
+ 1737 0074 00E0     		b	.L70
+ 1738              	.L75:
+ 491:Core/Src/ILI9341_STM32_Driver.c **** if((Y+Height-1)>=LCD_HEIGHT)
+ 1739              		.loc 1 491 41
+ 1740 0076 00BF     		nop
+ 1741              	.L70:
+ 498:Core/Src/ILI9341_STM32_Driver.c **** }
+ 1742              		.loc 1 498 1
+ 1743 0078 0C37     		adds	r7, r7, #12
+ 1744              		.cfi_def_cfa_offset 12
+ 1745 007a BD46     		mov	sp, r7
+ 1746              		.cfi_def_cfa_register 13
+ 1747              		@ sp needed
+ 1748 007c 90BD     		pop	{r4, r7, pc}
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 40
 
 
- 1755              	.L76:
- 1756 0080 00000000 		.word	LCD_WIDTH
- 1757 0084 00000000 		.word	LCD_HEIGHT
- 1758              		.cfi_endproc
- 1759              	.LFE336:
- 1761              		.text
- 1762              	.Letext0:
- 1763              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 1764              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 1765              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
- 1766              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
- 1767              		.file 6 "Core/Inc/main.h"
- 1768              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 41
+ 1749              	.L77:
+ 1750 007e 00BF     		.align	2
+ 1751              	.L76:
+ 1752 0080 00000000 		.word	LCD_WIDTH
+ 1753 0084 00000000 		.word	LCD_HEIGHT
+ 1754              		.cfi_endproc
+ 1755              	.LFE336:
+ 1757              		.text
+ 1758              	.Letext0:
+ 1759              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 1760              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 1761              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+ 1762              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 1763              		.file 6 "Core/Inc/main.h"
+ 1764              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 41
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ILI9341_STM32_Driver.c
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:20     .bss.msg_buffer:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:26     .bss.RxBuf:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:29     .bss.RxBuf:0000000000000000 RxBuf
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:36     .data.LCD_HEIGHT:0000000000000000 LCD_HEIGHT
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:33     .data.LCD_HEIGHT:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:43     .data.LCD_WIDTH:0000000000000000 LCD_WIDTH
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:40     .data.LCD_WIDTH:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:46     .text.ILI9341_SPI_Init:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:52     .text.ILI9341_SPI_Init:0000000000000000 ILI9341_SPI_Init
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:80     .text.ILI9341_SPI_Init:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:85     .text.ILI9341_SPI_Send:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:91     .text.ILI9341_SPI_Send:0000000000000000 ILI9341_SPI_Send
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:125    .text.ILI9341_Write_Command:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:131    .text.ILI9341_Write_Command:0000000000000000 ILI9341_Write_Command
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:177    .text.ILI9341_Write_Command:0000000000000040 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:182    .text.ILI9341_Write_Data:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:188    .text.ILI9341_Write_Data:0000000000000000 ILI9341_Write_Data
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:234    .text.ILI9341_Write_Data:0000000000000040 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:239    .text.ILI9341_Set_Address:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:245    .text.ILI9341_Set_Address:0000000000000000 ILI9341_Set_Address
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:341    .text.ILI9341_Reset:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:347    .text.ILI9341_Reset:0000000000000000 ILI9341_Reset
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:386    .text.ILI9341_Reset:0000000000000038 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:391    .text.ILI9341_Set_Rotation:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:397    .text.ILI9341_Set_Rotation:0000000000000000 ILI9341_Set_Rotation
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:430    .text.ILI9341_Set_Rotation:0000000000000028 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:434    .text.ILI9341_Set_Rotation:0000000000000038 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:506    .text.ILI9341_Set_Rotation:000000000000009c $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:512    .text.ILI9341_Enable:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:518    .text.ILI9341_Enable:0000000000000000 ILI9341_Enable
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:541    .text.ILI9341_Enable:0000000000000014 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:546    .text.ILI9341_Init:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:552    .text.ILI9341_Init:0000000000000000 ILI9341_Init
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:835    .text.ILI9341_Draw_Colour:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:841    .text.ILI9341_Draw_Colour:0000000000000000 ILI9341_Draw_Colour
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:898    .text.ILI9341_Draw_Colour:0000000000000054 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:903    .text.ILI9341_Draw_Colour_Burst:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:909    .text.ILI9341_Draw_Colour_Burst:0000000000000000 ILI9341_Draw_Colour_Burst
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1099   .text.ILI9341_Draw_Colour_Burst:0000000000000134 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1104   .text.ILI9341_Fill_Screen:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1110   .text.ILI9341_Fill_Screen:0000000000000000 ILI9341_Fill_Screen
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1162   .text.ILI9341_Fill_Screen:0000000000000044 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1168   .text.ILI9341_Draw_Pixel:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1174   .text.ILI9341_Draw_Pixel:0000000000000000 ILI9341_Draw_Pixel
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1399   .text.ILI9341_Draw_Pixel:00000000000001a4 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1406   .text.ILI9341_Draw_Rectangle:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1412   .text.ILI9341_Draw_Rectangle:0000000000000000 ILI9341_Draw_Rectangle
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1540   .text.ILI9341_Draw_Rectangle:00000000000000b0 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1546   .text.ILI9341_Draw_Horizontal_Line:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1552   .text.ILI9341_Draw_Horizontal_Line:0000000000000000 ILI9341_Draw_Horizontal_Line
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1648   .text.ILI9341_Draw_Horizontal_Line:0000000000000080 $d
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1654   .text.ILI9341_Draw_Vertical_Line:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1660   .text.ILI9341_Draw_Vertical_Line:0000000000000000 ILI9341_Draw_Vertical_Line
-C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s:1756   .text.ILI9341_Draw_Vertical_Line:0000000000000080 $d
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccufD8qa.s 			page 42
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:20     .bss.msg_buffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:26     .bss.RxBuf:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:29     .bss.RxBuf:0000000000000000 RxBuf
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:36     .data.LCD_HEIGHT:0000000000000000 LCD_HEIGHT
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:33     .data.LCD_HEIGHT:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:43     .data.LCD_WIDTH:0000000000000000 LCD_WIDTH
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:40     .data.LCD_WIDTH:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:46     .text.ILI9341_SPI_Init:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:52     .text.ILI9341_SPI_Init:0000000000000000 ILI9341_SPI_Init
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:76     .text.ILI9341_SPI_Init:0000000000000014 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:81     .text.ILI9341_SPI_Send:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:87     .text.ILI9341_SPI_Send:0000000000000000 ILI9341_SPI_Send
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:121    .text.ILI9341_Write_Command:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:127    .text.ILI9341_Write_Command:0000000000000000 ILI9341_Write_Command
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:173    .text.ILI9341_Write_Command:0000000000000040 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:178    .text.ILI9341_Write_Data:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:184    .text.ILI9341_Write_Data:0000000000000000 ILI9341_Write_Data
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:230    .text.ILI9341_Write_Data:0000000000000040 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:235    .text.ILI9341_Set_Address:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:241    .text.ILI9341_Set_Address:0000000000000000 ILI9341_Set_Address
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:337    .text.ILI9341_Reset:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:343    .text.ILI9341_Reset:0000000000000000 ILI9341_Reset
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:382    .text.ILI9341_Reset:0000000000000038 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:387    .text.ILI9341_Set_Rotation:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:393    .text.ILI9341_Set_Rotation:0000000000000000 ILI9341_Set_Rotation
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:426    .text.ILI9341_Set_Rotation:0000000000000028 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:430    .text.ILI9341_Set_Rotation:0000000000000038 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:502    .text.ILI9341_Set_Rotation:000000000000009c $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:508    .text.ILI9341_Enable:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:514    .text.ILI9341_Enable:0000000000000000 ILI9341_Enable
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:537    .text.ILI9341_Enable:0000000000000014 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:542    .text.ILI9341_Init:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:548    .text.ILI9341_Init:0000000000000000 ILI9341_Init
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:831    .text.ILI9341_Draw_Colour:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:837    .text.ILI9341_Draw_Colour:0000000000000000 ILI9341_Draw_Colour
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:894    .text.ILI9341_Draw_Colour:0000000000000054 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:899    .text.ILI9341_Draw_Colour_Burst:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:905    .text.ILI9341_Draw_Colour_Burst:0000000000000000 ILI9341_Draw_Colour_Burst
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1095   .text.ILI9341_Draw_Colour_Burst:0000000000000134 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1100   .text.ILI9341_Fill_Screen:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1106   .text.ILI9341_Fill_Screen:0000000000000000 ILI9341_Fill_Screen
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1158   .text.ILI9341_Fill_Screen:0000000000000044 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1164   .text.ILI9341_Draw_Pixel:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1170   .text.ILI9341_Draw_Pixel:0000000000000000 ILI9341_Draw_Pixel
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1395   .text.ILI9341_Draw_Pixel:00000000000001a4 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1402   .text.ILI9341_Draw_Rectangle:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1408   .text.ILI9341_Draw_Rectangle:0000000000000000 ILI9341_Draw_Rectangle
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1536   .text.ILI9341_Draw_Rectangle:00000000000000b0 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1542   .text.ILI9341_Draw_Horizontal_Line:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1548   .text.ILI9341_Draw_Horizontal_Line:0000000000000000 ILI9341_Draw_Horizontal_Line
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1644   .text.ILI9341_Draw_Horizontal_Line:0000000000000080 $d
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1650   .text.ILI9341_Draw_Vertical_Line:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1656   .text.ILI9341_Draw_Vertical_Line:0000000000000000 ILI9341_Draw_Vertical_Line
+C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s:1752   .text.ILI9341_Draw_Vertical_Line:0000000000000080 $d
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccjuRWmw.s 			page 42
 
 
 
 UNDEFINED SYMBOLS
-MX_SPI5_Init
-MX_GPIO_Init
 HAL_GPIO_WritePin
 SPI_Transmit
 HAL_Delay

@@ -92,15 +92,15 @@ volatile uint16_t LCD_WIDTH	 = ILI9341_SCREEN_WIDTH;
 /* Initialize SPI */
 void ILI9341_SPI_Init(void)
 {
-MX_SPI5_Init();																							//SPI INIT
-MX_GPIO_Init();																							//GPIO INIT
+// MX_SPI1_Init();																							//SPI INIT
+// MX_GPIO_Init();																							//GPIO INIT
 HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_RESET);	//CS OFF
 }
 
 /*Send data (char) to LCD*/
 void ILI9341_SPI_Send(unsigned char SPI_Data)
 {
-SPI_Transmit(&SPI_Data, 1, 1);
+SPI_Transmit(SPI_Data, 1, 1);
 }
 
 /* Send command (char) to LCD */
@@ -369,21 +369,27 @@ for(uint32_t j = 0; j < Buffer_Size; j+=2)
 		burst_buffer[j+1] = Colour;
 	}
 
-uint32_t Sending_Size = Size*2;
+uint32_t Sending_Size = Size *2;
 uint32_t Sending_in_Block = Sending_Size/Buffer_Size;
 uint32_t Remainder_from_block = Sending_Size%Buffer_Size;
-
+// unsigned char burst_buffer2[4] = {chifted, chifted, chifted, chifted};
+// SPI_Transmit( burst_buffer, 20, 50);
 if(Sending_in_Block != 0)
 {
 	for(uint32_t j = 0; j < (Sending_in_Block); j++)
 		{
+		
+		// ILI9341_Set_Address(0,j,LCD_WIDTH,LCD_HEIGHT);	
+
+
 		SPI_Transmit( (unsigned char *)burst_buffer, Buffer_Size, 10);	
 		}
 }
 
 //REMAINDER!
+// SPI_Transmit( (unsigned char *)burst_buffer, j*8, 50);	
 SPI_Transmit( (unsigned char *)burst_buffer, Remainder_from_block, 10);	
-	
+
 HAL_GPIO_WritePin(LCD_CS_PORT, LCD_CS_PIN, GPIO_PIN_SET);
 }
 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   * @{
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   */
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 2
 
 
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** /** @defgroup PWR PWR
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   */
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** void HAL_PWR_DeInit(void)
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 3
 
 
   29              		.loc 1 87 1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
   97:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   * @note  RTCSEL that sets the RTC clock source selection is in the RTC back-up domain.
   98:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   *        In order to set or modify the RTC clock, the backup domain access must be
   99:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   *        disabled.
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 4
 
 
  100:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   * @note  LSEON bit that switches on and off the LSE crystal belongs as well to the
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  115:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** {
  117              		.loc 1 115 1
  118              		.cfi_startproc
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 5
 
 
  119              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  133:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****  ===============================================================================
  134:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****                  ##### Peripheral Control functions #####
  135:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****  ===============================================================================
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 6
 
 
  136:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  190:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****           The Sleep mode / Low-power Sleep mode is entered thru HAL_PWR_EnterSLEEPMode() API
  191:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****           in specifying whether or not the regulator is forced to low-power mode and if exit is int
  192:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****           (++) PWR_MAINREGULATOR_ON: Sleep mode (regulator in main mode).
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 7
 
 
  193:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****           (++) PWR_LOWPOWERREGULATOR_ON: Low-power sleep (regulator in low power mode).
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  247:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****                 SRAM1 and register contents are lost except for registers in the Backup domain and
  248:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****                 Standby circuitry. SRAM2 content can be preserved if the bit RRS is set in PWR_CR3 
  249:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****                 To enable this feature, the user can resort to HAL_PWREx_EnableSRAM2ContentRetentio
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 8
 
 
  250:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****                 to set RRS bit.
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  304:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   * @param sConfigPVD: pointer to a PWR_PVDTypeDef structure that contains the PVD
  305:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   *        configuration information.
  306:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   * @note Refer to the electrical characteristics of your device datasheet for
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 9
 
 
  307:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   *         more details about the voltage thresholds corresponding to each
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  195 0036 214A     		ldr	r2, .L16+4
  196 0038 23F48033 		bic	r3, r3, #65536
  197 003c D360     		str	r3, [r2, #12]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 10
 
 
  324:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   __HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE();
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  236 007c 5B68     		ldr	r3, [r3, #4]
  237              		.loc 1 339 24
  238 007e 03F00103 		and	r3, r3, #1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 11
 
 
  239              		.loc 1 339 5
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  282              		.cfi_endproc
  283              	.LFE324:
  285              		.section	.text.HAL_PWR_EnablePVD,"ax",%progbits
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 12
 
 
  286              		.align	1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  333              	HAL_PWR_DisablePVD:
  334              	.LFB326:
  361:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 13
 
 
  362:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** /**
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  377:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   *         This parameter can be one of the following legacy values which set the default polarity
  378:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   *         i.e. detection on high level (rising edge):
  379:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   *           @arg @ref PWR_WAKEUP_PIN1, PWR_WAKEUP_PIN2, PWR_WAKEUP_PIN3, PWR_WAKEUP_PIN4, PWR_WAK
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 14
 
 
  380:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   *
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  401:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** 
  402:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** 
  403:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 15
 
 
  409              		.loc 1 403 1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  452 000c 7B68     		ldr	r3, [r7, #4]
  453 000e 03F01F03 		and	r3, r3, #31
  454 0012 DB43     		mvns	r3, r3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 16
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 16
 
 
  455 0014 0449     		ldr	r1, .L28
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  443:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   */
  444:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** void HAL_PWR_EnterSLEEPMode(uint32_t Regulator, uint8_t SLEEPEntry)
  445:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 17
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 17
 
 
  485              		.loc 1 445 1
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  465:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****     /* If in run mode, first move to low-power run mode.
  466:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****        The system clock frequency must be below 2 MHz at this point. */
  467:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****     if (HAL_IS_BIT_SET(PWR->SR2, PWR_SR2_REGLPF) == RESET)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 18
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 18
 
 
  520              		.loc 1 467 9
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  555              	@ 486 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c" 1
  556 0056 20BF     		wfe
  557              	@ 0 "" 2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 19
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 19
 
 
  487:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****     __WFE();
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  512:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   *         is higher although the startup time is reduced.
  513:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   * @param Regulator: Specifies the regulator state in Stop mode.
  514:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   *          This parameter can be one of the following values:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 20
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 20
 
 
  515:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   *            @arg @ref PWR_MAINREGULATOR_ON  Stop 0 mode (main regulator ON)
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  620              		.loc 1 536 1
  621 0026 00BF     		nop
  622 0028 0837     		adds	r7, r7, #8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 21
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 21
 
 
  623              		.cfi_def_cfa_offset 8
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  656 0012 1360     		str	r3, [r2]
  560:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** 
  561:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   /* Set SLEEPDEEP bit of Cortex System Control Register */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 22
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 22
 
 
  562:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   SET_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SLEEPDEEP_Msk));
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  579:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   *       interruptions handling.
  580:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   * @retval None
  581:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 23
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 23
 
 
  582:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** void HAL_PWR_EnableSleepOnExit(void)
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  737              		.loc 1 596 1
  738              		.cfi_startproc
  739              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 24
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 24
 
 
  740              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  782              		@ link register save eliminated.
  783 0000 80B4     		push	{r7}
  784              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 25
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 25
 
 
  785              		.cfi_offset 7, -4
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  828              		.cfi_def_cfa_register 7
  624:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   /* Clear SEVONPEND bit of Cortex System Control Register */
  625:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c ****   CLEAR_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SEVONPEND_Msk));
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 26
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 26
 
 
  829              		.loc 1 625 3
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  641:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c **** }
  870              		.loc 1 641 1
  871 0004 00BF     		nop
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 27
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 27
 
 
  872 0006 BD46     		mov	sp, r7
@@ -1580,57 +1580,57 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 1
  889              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
  890              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h"
  891              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s 			page 28
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s 			page 28
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_pwr.c
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:20     .text.HAL_PWR_DeInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:26     .text.HAL_PWR_DeInit:0000000000000000 HAL_PWR_DeInit
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:63     .text.HAL_PWR_DeInit:0000000000000028 $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:68     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:74     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 HAL_PWR_EnableBkUpAccess
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:104    .text.HAL_PWR_EnableBkUpAccess:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:109    .text.HAL_PWR_DisableBkUpAccess:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:115    .text.HAL_PWR_DisableBkUpAccess:0000000000000000 HAL_PWR_DisableBkUpAccess
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:145    .text.HAL_PWR_DisableBkUpAccess:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:150    .text.HAL_PWR_ConfigPVD:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:156    .text.HAL_PWR_ConfigPVD:0000000000000000 HAL_PWR_ConfigPVD
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:280    .text.HAL_PWR_ConfigPVD:00000000000000b8 $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:286    .text.HAL_PWR_EnablePVD:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:292    .text.HAL_PWR_EnablePVD:0000000000000000 HAL_PWR_EnablePVD
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:322    .text.HAL_PWR_EnablePVD:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:327    .text.HAL_PWR_DisablePVD:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:333    .text.HAL_PWR_DisablePVD:0000000000000000 HAL_PWR_DisablePVD
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:363    .text.HAL_PWR_DisablePVD:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:368    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:374    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 HAL_PWR_EnableWakeUpPin
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:423    .text.HAL_PWR_EnableWakeUpPin:000000000000003c $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:428    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:434    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 HAL_PWR_DisableWakeUpPin
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:472    .text.HAL_PWR_DisableWakeUpPin:0000000000000028 $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:477    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:483    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 HAL_PWR_EnterSLEEPMode
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:575    .text.HAL_PWR_EnterSLEEPMode:0000000000000060 $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:581    .text.HAL_PWR_EnterSTOPMode:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:587    .text.HAL_PWR_EnterSTOPMode:0000000000000000 HAL_PWR_EnterSTOPMode
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:632    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:638    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 HAL_PWR_EnterSTANDBYMode
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:682    .text.HAL_PWR_EnterSTANDBYMode:000000000000002c $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:688    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:694    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 HAL_PWR_EnableSleepOnExit
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:724    .text.HAL_PWR_EnableSleepOnExit:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:729    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:735    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 HAL_PWR_DisableSleepOnExit
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:765    .text.HAL_PWR_DisableSleepOnExit:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:770    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:776    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 HAL_PWR_EnableSEVOnPend
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:806    .text.HAL_PWR_EnableSEVOnPend:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:811    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:817    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 HAL_PWR_DisableSEVOnPend
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:847    .text.HAL_PWR_DisableSEVOnPend:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:852    .text.HAL_PWR_PVDCallback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccoV9FEn.s:858    .text.HAL_PWR_PVDCallback:0000000000000000 HAL_PWR_PVDCallback
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:20     .text.HAL_PWR_DeInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:26     .text.HAL_PWR_DeInit:0000000000000000 HAL_PWR_DeInit
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:63     .text.HAL_PWR_DeInit:0000000000000028 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:68     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:74     .text.HAL_PWR_EnableBkUpAccess:0000000000000000 HAL_PWR_EnableBkUpAccess
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:104    .text.HAL_PWR_EnableBkUpAccess:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:109    .text.HAL_PWR_DisableBkUpAccess:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:115    .text.HAL_PWR_DisableBkUpAccess:0000000000000000 HAL_PWR_DisableBkUpAccess
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:145    .text.HAL_PWR_DisableBkUpAccess:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:150    .text.HAL_PWR_ConfigPVD:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:156    .text.HAL_PWR_ConfigPVD:0000000000000000 HAL_PWR_ConfigPVD
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:280    .text.HAL_PWR_ConfigPVD:00000000000000b8 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:286    .text.HAL_PWR_EnablePVD:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:292    .text.HAL_PWR_EnablePVD:0000000000000000 HAL_PWR_EnablePVD
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:322    .text.HAL_PWR_EnablePVD:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:327    .text.HAL_PWR_DisablePVD:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:333    .text.HAL_PWR_DisablePVD:0000000000000000 HAL_PWR_DisablePVD
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:363    .text.HAL_PWR_DisablePVD:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:368    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:374    .text.HAL_PWR_EnableWakeUpPin:0000000000000000 HAL_PWR_EnableWakeUpPin
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:423    .text.HAL_PWR_EnableWakeUpPin:000000000000003c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:428    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:434    .text.HAL_PWR_DisableWakeUpPin:0000000000000000 HAL_PWR_DisableWakeUpPin
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:472    .text.HAL_PWR_DisableWakeUpPin:0000000000000028 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:477    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:483    .text.HAL_PWR_EnterSLEEPMode:0000000000000000 HAL_PWR_EnterSLEEPMode
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:575    .text.HAL_PWR_EnterSLEEPMode:0000000000000060 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:581    .text.HAL_PWR_EnterSTOPMode:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:587    .text.HAL_PWR_EnterSTOPMode:0000000000000000 HAL_PWR_EnterSTOPMode
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:632    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:638    .text.HAL_PWR_EnterSTANDBYMode:0000000000000000 HAL_PWR_EnterSTANDBYMode
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:682    .text.HAL_PWR_EnterSTANDBYMode:000000000000002c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:688    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:694    .text.HAL_PWR_EnableSleepOnExit:0000000000000000 HAL_PWR_EnableSleepOnExit
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:724    .text.HAL_PWR_EnableSleepOnExit:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:729    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:735    .text.HAL_PWR_DisableSleepOnExit:0000000000000000 HAL_PWR_DisableSleepOnExit
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:765    .text.HAL_PWR_DisableSleepOnExit:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:770    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:776    .text.HAL_PWR_EnableSEVOnPend:0000000000000000 HAL_PWR_EnableSEVOnPend
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:806    .text.HAL_PWR_EnableSEVOnPend:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:811    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:817    .text.HAL_PWR_DisableSEVOnPend:0000000000000000 HAL_PWR_DisableSEVOnPend
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:847    .text.HAL_PWR_DisableSEVOnPend:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:852    .text.HAL_PWR_PVDCallback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZzoku1.s:858    .text.HAL_PWR_PVDCallback:0000000000000000 HAL_PWR_PVDCallback
 
 UNDEFINED SYMBOLS
 HAL_PWREx_DisableLowPowerRunMode

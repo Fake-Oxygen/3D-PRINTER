@@ -25,6 +25,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include "ILI9341_STM32_Driver.h"
+#include "ILI9341_GFX.h"
+#include "5x5_font.h"
 // #include "Parser.h"
 /* USER CODE END Includes */
 
@@ -49,6 +52,8 @@ DMA_HandleTypeDef hdma_adc1;
 UART_HandleTypeDef hlpuart1;
 UART_HandleTypeDef huart4;
 DMA_HandleTypeDef hdma_lpuart1_rx;
+
+RNG_HandleTypeDef hrng;
 
 SPI_HandleTypeDef hspi1;
 
@@ -78,6 +83,7 @@ static void MX_ADC1_Init(void);
 static void MX_TIM5_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_SPI1_Init(void);
+static void MX_RNG_Init(void);
 /* USER CODE BEGIN PFP */
 /* USER CODE END PFP */
 
@@ -155,6 +161,7 @@ int main(void)
   MX_TIM5_Init();
   MX_TIM2_Init();
   MX_SPI1_Init();
+  MX_RNG_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
@@ -169,24 +176,23 @@ int main(void)
   int steps = 0;
   uint32_t lasttimeX = 0;
   uint32_t lasttimeY = 0;
+  ILI9341_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    if (RxBuf[0] != 0 && isRunning == false)
-    {
-      get_command(RxBuf);
-      memset(&RxBuf[0], 0, sizeof(RxBuf));
-    }
+    // ILI9341_Set_Address(0,0,320,240);	
+    // ILI9341_Draw_Colour_Burst(MAGENTA, 320*240);
+        ILI9341_Set_Rotation(SCREEN_HORIZONTAL_2);
+    ILI9341_Fill_Screen(WHITE);
 
-    if (HAL_GetTick() - last_time > interval && interval > 0)
-    {
-      M105(0, 0);
-      last_time = HAL_GetTick();
-    }
-   
+    // ILI9341_Draw_Text("KURWA", 10, 10, BLACK, 4, WHITE);
+    // ILI9341_Draw_Filled_Rectangle_Coord(0, 100, 200, 130, BLACK);
+    
+    
+    HAL_Delay(3000);
 
     if(READ_PIN(X_STOP_PIN) != 1 && READ_PIN(Y_STOP_PIN) != 1) {
       G0();
@@ -458,6 +464,33 @@ static void MX_UART4_Init(void)
 }
 
 /**
+  * @brief RNG Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_RNG_Init(void)
+{
+
+  /* USER CODE BEGIN RNG_Init 0 */
+
+  /* USER CODE END RNG_Init 0 */
+
+  /* USER CODE BEGIN RNG_Init 1 */
+
+  /* USER CODE END RNG_Init 1 */
+  hrng.Instance = RNG;
+  hrng.Init.ClockErrorDetection = RNG_CED_ENABLE;
+  if (HAL_RNG_Init(&hrng) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN RNG_Init 2 */
+
+  /* USER CODE END RNG_Init 2 */
+
+}
+
+/**
   * @brief SPI1 Initialization Function
   * @param None
   * @retval None
@@ -480,7 +513,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;

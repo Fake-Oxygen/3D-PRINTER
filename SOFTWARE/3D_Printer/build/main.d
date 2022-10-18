@@ -30,6 +30,8 @@ build/main.o: Core/Src/main.c Core/Inc/main.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h \
+ Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rng.h \
+ Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rng_ex.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h \
@@ -37,7 +39,9 @@ build/main.o: Core/Src/main.c Core/Inc/main.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
  Core/Inc/Config.h Core/Inc/Parser.h Core/Inc/main.h Core/Inc/GCodes.h \
- Core/Inc/Functions.h Core/Inc/Functions.h
+ Core/Inc/Functions.h Core/Inc/Functions.h \
+ Core/Inc/ILI9341_STM32_Driver.h Core/Inc/ILI9341_GFX.h \
+ Core/Inc/5x5_font.h
 Core/Inc/main.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 Core/Inc/stm32l4xx_hal_conf.h:
@@ -72,6 +76,8 @@ Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h:
+Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rng.h:
+Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rng_ex.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:
@@ -84,3 +90,6 @@ Core/Inc/main.h:
 Core/Inc/GCodes.h:
 Core/Inc/Functions.h:
 Core/Inc/Functions.h:
+Core/Inc/ILI9341_STM32_Driver.h:
+Core/Inc/ILI9341_GFX.h:
+Core/Inc/5x5_font.h:
