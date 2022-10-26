@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 1
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccemPiTe.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 1
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c **** 
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****     *** GNU Compiler ***
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****     --------------------
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 2
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccemPiTe.s 			page 2
 
 
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****     [..] RAM functions are defined using a specific toolchain attribute
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 1
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c **** 
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c **** /**
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****   * @brief   Enable the Power down in Run Mode
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 3
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccemPiTe.s 			page 3
 
 
   88:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****   * @note    This function should be called and executed from SRAM memory
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 1
   73              		.syntax unified
   74              		.thumb
   75              		.thumb_func
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 4
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccemPiTe.s 			page 4
 
 
   77              	HAL_FLASHEx_DisableRunPowerDown:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 1
  118              		.cfi_endproc
  119              	.LFE322:
  121              		.align	1
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 5
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccemPiTe.s 			page 5
 
 
  122              		.global	HAL_FLASHEx_OB_DBankConfig
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 1
  153              	.L10:
  154              		.loc 1 135 3 discriminator 2
  155 0080 6B4B     		ldr	r3, .L23
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 6
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccemPiTe.s 			page 6
 
 
  156 0082 0122     		movs	r2, #1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 1
  195              		.loc 1 150 9
  196 00c2 5C4B     		ldr	r3, .L23+4
  197 00c4 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 7
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccemPiTe.s 			page 7
 
 
  198 00c6 5B4A     		ldr	r2, .L23+4
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 1
  165:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****       /* Disable WRP zone 1 of 1st bank if needed */
  166:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****       reg = FLASH->WRP1AR;
  238              		.loc 1 166 18
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 8
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccemPiTe.s 			page 8
 
 
  239 0116 474B     		ldr	r3, .L23+4
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 1
  279 015a 23F07F13 		bic	r3, r3, #8323199
  280 015e 354A     		ldr	r2, .L23+4
  281 0160 43F07F03 		orr	r3, r3, #127
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 9
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccemPiTe.s 			page 9
 
 
  282 0164 1363     		str	r3, [r2, #48]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 1
  320 01a2 9A42     		cmp	r2, r3
  321 01a4 07D8     		bhi	.L18
  193:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****       {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 10
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccemPiTe.s 			page 10
 
 
  194:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****         MODIFY_REG(FLASH->WRP2BR, (FLASH_WRP2BR_WRP2B_STRT | FLASH_WRP2BR_WRP2B_END), FLASH_WRP2BR_
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 1
  211:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****         }
  212:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c ****         count--;
  359              		.loc 1 212 14
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 11
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccemPiTe.s 			page 11
 
 
  360 01ee 7B69     		ldr	r3, [r7, #20]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 1
  398              		.cfi_def_cfa_offset 4
  399 0228 BD46     		mov	sp, r7
  400              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 12
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccemPiTe.s 			page 12
 
 
  401              		@ sp needed
@@ -684,20 +684,20 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 1
  422              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
  423              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h"
  424              		.file 8 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h"
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s 			page 13
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccemPiTe.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_flash_ramfunc.c
-C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s:20     .RamFunc:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s:26     .RamFunc:0000000000000000 HAL_FLASHEx_EnableRunPowerDown
-C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s:65     .RamFunc:0000000000000028 $d
-C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s:71     .RamFunc:0000000000000034 $t
-C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s:77     .RamFunc:0000000000000034 HAL_FLASHEx_DisableRunPowerDown
-C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s:115    .RamFunc:000000000000005c $d
-C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s:121    .RamFunc:0000000000000068 $t
-C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s:127    .RamFunc:0000000000000068 HAL_FLASHEx_OB_DBankConfig
-C:\Users\isan\AppData\Local\Temp\cc5BrvOd.s:409    .RamFunc:0000000000000230 $d
+C:\Users\isan\AppData\Local\Temp\ccemPiTe.s:20     .RamFunc:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccemPiTe.s:26     .RamFunc:0000000000000000 HAL_FLASHEx_EnableRunPowerDown
+C:\Users\isan\AppData\Local\Temp\ccemPiTe.s:65     .RamFunc:0000000000000028 $d
+C:\Users\isan\AppData\Local\Temp\ccemPiTe.s:71     .RamFunc:0000000000000034 $t
+C:\Users\isan\AppData\Local\Temp\ccemPiTe.s:77     .RamFunc:0000000000000034 HAL_FLASHEx_DisableRunPowerDown
+C:\Users\isan\AppData\Local\Temp\ccemPiTe.s:115    .RamFunc:000000000000005c $d
+C:\Users\isan\AppData\Local\Temp\ccemPiTe.s:121    .RamFunc:0000000000000068 $t
+C:\Users\isan\AppData\Local\Temp\ccemPiTe.s:127    .RamFunc:0000000000000068 HAL_FLASHEx_OB_DBankConfig
+C:\Users\isan\AppData\Local\Temp\ccemPiTe.s:409    .RamFunc:0000000000000230 $d
 
 UNDEFINED SYMBOLS
 pFlash

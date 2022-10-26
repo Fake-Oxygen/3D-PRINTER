@@ -56,11 +56,11 @@ uint16_t step = 0;
 uint32_t last_time = 0;
 uint32_t value[ADC_CHANNELS];
 gc_reader reader;
-size_t read_count = 0;
 int state = 0;
 
 uint8_t rx_buff[GCODE_BUFF_SIZE];
 uint8_t gcode_buff[GCODE_BUFF_SIZE];
+size_t read_count = 0;
 int i = 0;
 int j = 0;
 int should_print = 0;
@@ -87,15 +87,20 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {
   if (huart->Instance == LPUART1)
   {
-    if(i + Size > GCODE_BUFF_SIZE) {
-      int a = GCODE_BUFF_SIZE - i;
-      memcpy(gcode_buff + i, rx_buff, a);
+    // if(i + Size > GCODE_BUFF_SIZE) {
+    //   int a = GCODE_BUFF_SIZE - i;
+    //   memcpy(gcode_buff + i, rx_buff, a);
 
-      memcpy(gcode_buff, rx_buff + a, Size - a);
-      i = Size - a;
-    } else {
-      memcpy(gcode_buff + i, rx_buff, Size);
-      i += Size;
+    //   memcpy(gcode_buff, rx_buff + a, Size - a);
+    //   i = Size - a;
+    // } else {
+    //   memcpy(gcode_buff + i, rx_buff, Size);
+    //   i += Size;
+    // }
+    // should_print = 1;
+    for(int c = 0; c < Size && read_count < GCODE_BUFF_SIZE; i = (i + 1) % GCODE_BUFF_SIZE, c++) {
+      gcode_buff[i] = rx_buff[c];
+      read_count++;
     }
     should_print = 1;
   }
@@ -171,7 +176,7 @@ int main(void)
     if(should_print) {
       int done_reading_gcode = 0;
       int error_code = GC_READER_ERROR_NOT_OCCURED, new_error;
-      while(j != i % GCODE_BUFF_SIZE) {
+      while(read_count > 0) {
         if(error_code == GC_READER_ERROR_NOT_OCCURED) {
           new_error = read_code(&reader, gcode_buff[j], &done_reading_gcode);
 
@@ -181,12 +186,15 @@ int main(void)
           }
         }
         j = (j + 1) % GCODE_BUFF_SIZE;
+        read_count--;
       }
-      uint8_t result[100];
-      memset(result, 0, 100);
-      sprintf(result, "%c %d\n", reader.code_type, reader.code_id);
-      HAL_UART_Transmit(&hlpuart1, result, strlen(result), 100);
-      memset(&reader, 0, sizeof(gc_reader));
+      if(done_reading_gcode && error_code == GC_READER_ERROR_NOT_OCCURED) {
+        uint8_t result[100];
+        memset(result, 0, 100);
+        sprintf(result, "%c %d\n", reader.code_type, reader.code_id);
+        HAL_UART_Transmit(&hlpuart1, result, strlen(result), 100);
+        memset(&reader, 0, sizeof(gc_reader));
+      }
       should_print = 0;
     }
     // if (rx_buff[0] != '\0') {
