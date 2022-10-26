@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
   29:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
   30:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /** @addtogroup STM32L4xx_LL_Driver
   31:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @{
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 2
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 2
 
 
   32:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
   86:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /* Internal mask for ADC group injected sequencer:                            */
   87:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /* To select into literal LL_ADC_INJ_RANK_x the relevant bits for:            */
   88:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /* - data register offset                                                     */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 3
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 3
 
 
   89:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /* - sequencer rank bits position into the selected register                  */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  143:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /* - injected trigger edge                                                    */
  144:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define ADC_INJ_TRIG_EXT_EDGE_DEFAULT      (ADC_JSQR_JEXTEN_0) /* Trigger edge set to rising edge (
  145:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 4
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 4
 
 
  146:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /* Mask containing trigger source masks for each of possible                  */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  200:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define ADC_CHANNEL_SMPx_BITOFFSET_POS     (20UL)           /* Value equivalent to bitfield "ADC_CH
  201:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
  202:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /* Definition of channels ID number information to be inserted into           */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 5
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 5
 
 
  203:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /* channels literals definition.                                              */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  257:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define ADC_CHANNEL_8_SMP                  (ADC_SMPR1_REGOFFSET | ((24UL) << ADC_CHANNEL_SMPx_BITOF
  258:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define ADC_CHANNEL_9_SMP                  (ADC_SMPR1_REGOFFSET | ((27UL) << ADC_CHANNEL_SMPx_BITOF
  259:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define ADC_CHANNEL_10_SMP                 (ADC_SMPR2_REGOFFSET | (( 0UL) << ADC_CHANNEL_SMPx_BITOF
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 6
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 6
 
 
  260:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define ADC_CHANNEL_11_SMP                 (ADC_SMPR2_REGOFFSET | (( 3UL) << ADC_CHANNEL_SMPx_BITOF
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  314:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define ADC_AWD_TR3_REGOFFSET              (ADC_AWD_CR3_REGOFFSET)
  315:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define ADC_AWD_TRX_REGOFFSET_MASK         (ADC_AWD_TR1_REGOFFSET | ADC_AWD_TR2_REGOFFSET | ADC_AWD
  316:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define ADC_AWD_TRX_REGOFFSET_POS          (ADC_AWD_CRX_REGOFFSET_POS)     /* Position of bits ADC_
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 7
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 7
 
 
  317:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define ADC_AWD_TRX_BIT_HIGH_MASK          (0x00010000UL)                   /* Selection of 1 bit t
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  371:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         is applied.
  372:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  __REG__ Register basis from which the offset is applied.
  373:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  __REG_OFFFSET__ Offset to be applied (unit: number of registers).
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 8
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 8
 
 
  374:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @retval Pointer to register address
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  428:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
  429:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
  430:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Structure definition of some features of ADC instance.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 9
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 9
 
 
  431:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @note   These parameters have an impact on ADC scope: ADC instance.
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  485:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         conditioned to ADC state.
  486:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
  487:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** typedef struct
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 10
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 10
 
 
  488:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** {
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  542:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         Each feature can be updated afterwards with a unitary function
  543:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         and potentially with ADC in a different state than disabled,
  544:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         refer to description of each function for setting
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 11
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 11
 
 
  545:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         conditioned to ADC state.
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  599:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_FLAG_AWD1                   ADC_ISR_AWD1       /*!< ADC flag ADC analog watchdog 1 *
  600:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_FLAG_AWD2                   ADC_ISR_AWD2       /*!< ADC flag ADC analog watchdog 2 *
  601:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_FLAG_AWD3                   ADC_ISR_AWD3       /*!< ADC flag ADC analog watchdog 3 *
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 12
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 12
 
 
  602:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #if defined(ADC_MULTIMODE_SUPPORT)
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  656:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #if defined(ADC_MULTIMODE_SUPPORT)
  657:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_DMA_REG_REGULAR_DATA_MULTI    (0x00000001UL) /* ADC group regular conversion data re
  658:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #endif /* ADC_MULTIMODE_SUPPORT */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 13
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 13
 
 
  659:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  713:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @{
  714:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
  715:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_DATA_ALIGN_RIGHT            (0x00000000UL)         /*!< ADC conversion data alignmen
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 14
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 14
 
 
  716:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_DATA_ALIGN_LEFT             (ADC_CFGR_ALIGN)       /*!< ADC conversion data alignmen
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  770:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_CHANNEL_7                   (ADC_CHANNEL_7_NUMBER  | ADC_CHANNEL_7_SMP  | ADC_CHANNE
  771:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_CHANNEL_8                   (ADC_CHANNEL_8_NUMBER  | ADC_CHANNEL_8_SMP  | ADC_CHANNE
  772:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_CHANNEL_9                   (ADC_CHANNEL_9_NUMBER  | ADC_CHANNEL_9_SMP  | ADC_CHANNE
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 15
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 15
 
 
  773:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_CHANNEL_10                  (ADC_CHANNEL_10_NUMBER | ADC_CHANNEL_10_SMP | ADC_CHANNE
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  827:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_REG_TRIG_EXT_RISING         (                   ADC_CFGR_EXTEN_0)   /*!< ADC group r
  828:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_REG_TRIG_EXT_FALLING        (ADC_CFGR_EXTEN_1                   )   /*!< ADC group r
  829:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_REG_TRIG_EXT_RISINGFALLING  (ADC_CFGR_EXTEN_1 | ADC_CFGR_EXTEN_0)   /*!< ADC group r
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 16
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 16
 
 
  830:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  884:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /** @defgroup ADC_LL_EC_REG_SEQ_SCAN_LENGTH  ADC group regular - Sequencer scan length
  885:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @{
  886:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 17
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 17
 
 
  887:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_REG_SEQ_SCAN_DISABLE        (0x00000000UL)                                          
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  941:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_REG_RANK_16                 (ADC_SQR4_REGOFFSET | ADC_REG_RANK_16_SQRX_BITOFFSET_POS
  942:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
  943:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @}
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 18
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 18
 
 
  944:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  998:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
  999:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /** @defgroup ADC_LL_EC_INJ_SEQ_SCAN_LENGTH  ADC group injected - Sequencer scan length
 1000:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @{
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 19
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 19
 
 
 1001:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1055:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /** @defgroup ADC_LL_EC_AWD_NUMBER Analog watchdog - Analog watchdog number
 1056:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @{
 1057:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 20
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 20
 
 
 1058:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_AWD1                        (ADC_AWD_CR1_CHANNEL_MASK  | ADC_AWD_CR1_REGOFFSET) /*!<
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1112:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_AWD_CHANNEL_13_INJ          ((LL_ADC_CHANNEL_13 & ADC_CHANNEL_ID_MASK) | ADC_CFGR_JA
 1113:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_AWD_CHANNEL_13_REG_INJ      ((LL_ADC_CHANNEL_13 & ADC_CHANNEL_ID_MASK) | ADC_CFGR_JA
 1114:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_AWD_CHANNEL_14_REG          ((LL_ADC_CHANNEL_14 & ADC_CHANNEL_ID_MASK)              
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 21
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 21
 
 
 1115:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_AWD_CHANNEL_14_INJ          ((LL_ADC_CHANNEL_14 & ADC_CHANNEL_ID_MASK) | ADC_CFGR_JA
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1169:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_AWD_THRESHOLD_LOW           (              ADC_TR1_LT1) /*!< ADC analog watchdog thr
 1170:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_AWD_THRESHOLDS_HIGH_LOW     (ADC_TR1_HT1 | ADC_TR1_LT1) /*!< ADC analog watchdog bot
 1171:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 22
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 22
 
 
 1172:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @}
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1226:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
 1227:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #if defined(ADC_MULTIMODE_SUPPORT)
 1228:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /** @defgroup ADC_LL_EC_MULTI_MODE  Multimode - Mode
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 23
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 23
 
 
 1229:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @{
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1283:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
 1284:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #endif /* ADC_MULTIMODE_SUPPORT */
 1285:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 24
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 24
 
 
 1286:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /** @defgroup ADC_LL_EC_LEGACY ADC literals legacy naming
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1340:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /*       - ADC stop conversion time: maximum delay should be a few ADC clock  */
 1341:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /*         cycles                                                             */
 1342:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /*       - ADC conversion time: duration depending on ADC clock and ADC       */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 25
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 25
 
 
 1343:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /*         configuration.                                                     */
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1397:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @retval None
 1398:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
 1399:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define LL_ADC_WriteReg(__INSTANCE__, __REG__, __VALUE__) WRITE_REG(__INSTANCE__->__REG__, (__VALUE
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 26
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 26
 
 
 1400:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1454:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *
 1455:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (1) On STM32L4, parameter available only on ADC instance: ADC1.\n
 1456:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (2) On STM32L4, parameter available only on ADC instance: ADC2.\n
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 27
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 27
 
 
 1457:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (3) On STM32L4, parameter available only on ADC instance: ADC3.\n
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1511:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_DAC1CH2_ADC3 (3)(6)
 1512:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *
 1513:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (1) On STM32L4, parameter available only on ADC instance: ADC1.\n
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 28
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 28
 
 
 1514:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (2) On STM32L4, parameter available only on ADC instance: ADC2.\n
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1568:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_10
 1569:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_11
 1570:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_12
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 29
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 29
 
 
 1571:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_13
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1625:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_10
 1626:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_11
 1627:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_12
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 30
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 30
 
 
 1628:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_13
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1682:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         must not be a value defined from parameter definition of
 1683:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         ADC external channel (LL_ADC_CHANNEL_1, LL_ADC_CHANNEL_2, ...)
 1684:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         or a value from functions where a channel number is
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 31
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 31
 
 
 1685:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         returned from ADC registers,
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1739:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   (((__ADC_INSTANCE__) == ADC1) ?                                              \
 1740:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****    (                                                                           \
 1741:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****     ((__CHANNEL__) == LL_ADC_CHANNEL_VREFINT)    ||                            \
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 32
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 32
 
 
 1742:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****     ((__CHANNEL__) == LL_ADC_CHANNEL_TEMPSENSOR) ||                            \
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1796:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_TEMPSENSOR   (4)
 1797:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_VBAT         (4)
 1798:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_DAC1CH1         (5)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 33
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 33
 
 
 1799:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_DAC1CH2         (5)
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1853:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_9_INJ           (0)
 1854:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_9_REG_INJ
 1855:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_10_REG          (0)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 34
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 34
 
 
 1856:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_10_INJ          (0)
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1910:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (0) On STM32L4, parameter available only on analog watchdog number: AWD1.\n
 1911:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (1) On STM32L4, parameter available only on ADC instance: ADC1.\n
 1912:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (2) On STM32L4, parameter available only on ADC instance: ADC2.\n
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 35
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 35
 
 
 1913:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (3) On STM32L4, parameter available only on ADC instance: ADC3.\n
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1967:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  __AWD_THRESHOLD_12_BITS__ Value between Min_Data=0x000 and Max_Data=0xFFF
 1968:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @retval Value between Min_Data=0x000 and Max_Data=0xFFF
 1969:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 36
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 36
 
 
 1970:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** #define __LL_ADC_ANALOGWD_GET_THRESHOLD_RESOLUTION(__ADC_RESOLUTION__, __AWD_THRESHOLD_12_BITS__) \
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2024:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Helper macro to select, from a ADC instance, to which ADC instance
 2025:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         it has a dependence in multimode (ADC master of the corresponding
 2026:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         ADC common instance).
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 37
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 37
 
 
 2027:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @note   In case of device with multimode available and a mix of
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2081:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @retval Value "0" if all ADC instances sharing the same ADC common instance
 2082:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         are disabled.
 2083:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         Value "1" if at least one ADC instance sharing the same ADC common instance
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 38
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 38
 
 
 2084:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         is enabled.
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2138:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   << ((__ADC_RESOLUTION_CURRENT__) >> (ADC_CFGR_RES_BITOFFSET_POS - 1UL)))   \
 2139:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****  >> ((__ADC_RESOLUTION_TARGET__) >> (ADC_CFGR_RES_BITOFFSET_POS - 1UL))      \
 2140:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** )
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 39
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 39
 
 
 2141:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2195:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** (((uint32_t)(*VREFINT_CAL_ADDR) * VREFINT_CAL_VREF)                          \
 2196:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****  / __LL_ADC_CONVERT_DATA_RESOLUTION((__VREFINT_ADC_DATA__),                  \
 2197:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****                                     (__ADC_RESOLUTION__),                    \
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 40
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 40
 
 
 2198:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****                                     LL_ADC_RESOLUTION_12B)                   \
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2252:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****                  * (__VREFANALOG_VOLTAGE__))                                     \
 2253:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****                 / TEMPSENSOR_CAL_VREFANALOG)                                     \
 2254:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****       - (int32_t) *TEMPSENSOR_CAL1_ADDR)                                         \
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 41
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 41
 
 
 2255:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****    ) * (int32_t)(TEMPSENSOR_CAL2_TEMP - TEMPSENSOR_CAL1_TEMP)                    \
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2309:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****                                              __ADC_RESOLUTION__)            \
 2310:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** (((((int32_t)((((__TEMPSENSOR_ADC_DATA__) * (__VREFANALOG_VOLTAGE__))       \
 2311:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****                / __LL_ADC_DIGITAL_SCALE(__ADC_RESOLUTION__))                \
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 42
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 42
 
 
 2312:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****               * 1000UL)                                                     \
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2366:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_DMA_REG_REGULAR_DATA
 2367:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_DMA_REG_REGULAR_DATA_MULTI (1)
 2368:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 43
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 43
 
 
 2369:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (1) Available on devices with several ADC instances.
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2423:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  ADCxy_COMMON ADC common instance
 2424:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (can be set directly from CMSIS definition or by using helper macro @ref __LL_ADC_COMMO
 2425:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  CommonClock This parameter can be one of the following values:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 44
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 44
 
 
 2426:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CLOCK_SYNC_PCLK_DIV1
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2480:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @note   One or several values can be selected.
 2481:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         Example: (LL_ADC_PATH_INTERNAL_VREFINT |
 2482:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *                   LL_ADC_PATH_INTERNAL_TEMPSENSOR)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 45
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 45
 
 
 2483:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         The values not selected are removed from configuration.
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
   53              		.cfi_def_cfa_offset 4
   54 001e BD46     		mov	sp, r7
   55              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 46
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 46
 
 
   56              		@ sp needed
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2552:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         Remove paths to the current configuration.
 2553:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @note   One or several values can be selected.
 2554:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         Example: (LL_ADC_PATH_INTERNAL_VREFINT |
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 47
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 47
 
 
 2555:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *                   LL_ADC_PATH_INTERNAL_TEMPSENSOR)
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
   88              		.loc 1 2592 10
   89 000c 03F0E073 		and	r3, r3, #29360128
 2593:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** }
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 48
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 48
 
 
   90              		.loc 1 2593 1
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2628:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_SINGLE_ENDED
 2629:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_DIFFERENTIAL_ENDED
 2630:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_BOTH_SINGLE_DIFF_ENDED
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 49
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 49
 
 
 2631:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  CalibrationFactor Value between Min_Data=0x00 and Max_Data=0x7F
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  157              		.cfi_endproc
  158              	.LFE139:
  160              		.section	.text.LL_ADC_GetCalibrationFactor,"ax",%progbits
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 50
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 50
 
 
  161              		.align	1
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  191 001c 03F01003 		and	r3, r3, #16
 2663:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****                              (SingleDiff & ADC_SINGLEDIFF_CALIB_FACTOR_MASK)) >> ((SingleDiff & ADC
  192              		.loc 1 2663 10
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 51
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 51
 
 
  193 0020 22FA03F3 		lsr	r3, r2, r3
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2698:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_RESOLUTION_10B
 2699:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_RESOLUTION_8B
 2700:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_RESOLUTION_6B
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 52
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 52
 
 
 2701:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2755:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           triggers to the speed of the software that reads the data.
 2756:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           Moreover, this avoids risk of overrun for low frequency
 2757:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           applications.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 53
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 53
 
 
 2758:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           How to use this low power mode:
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2812:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           Moreover, this avoids risk of overrun for low frequency
 2813:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           applications.
 2814:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           How to use this low power mode:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 54
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 54
 
 
 2815:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           - It is not recommended to use with interruption or DMA
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2869:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         coming from GPIO pads (ADC_IN1..5).
 2870:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @rmtoll OFR1     OFFSET1_CH     LL_ADC_SetOffset\n
 2871:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         OFR1     OFFSET1        LL_ADC_SetOffset\n
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 55
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 55
 
 
 2872:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         OFR1     OFFSET1_EN     LL_ADC_SetOffset\n
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2926:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  OffsetLevel Value between Min_Data=0x000 and Max_Data=0xFFF
 2927:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @retval None
 2928:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 56
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 56
 
 
 2929:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** __STATIC_INLINE void LL_ADC_SetOffset(ADC_TypeDef *ADCx, uint32_t Offsety, uint32_t Channel, uint32
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  262              		.cfi_restore 7
  263              		.cfi_def_cfa_offset 0
  264 0042 7047     		bx	lr
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 57
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 57
 
 
  265              	.L9:
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2978:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_11
 2979:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_12
 2980:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_13
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 58
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 58
 
 
 2981:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_14
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3012:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   return (uint32_t) READ_BIT(*preg, ADC_OFR1_OFFSET1_CH);
  303              		.loc 1 3012 10
  304 0018 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 59
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 59
 
 
  305 001a 1B68     		ldr	r3, [r3]
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3045:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @note   This function should be needed only in case of offset to be
 3046:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         enabled-disabled dynamically, and should not be needed in other cases:
 3047:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         function LL_ADC_SetOffset() automatically enables the offset.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 60
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 60
 
 
 3048:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @note   On this STM32 series, setting of this feature is conditioned to
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  359 0026 7B69     		ldr	r3, [r7, #20]
  360 0028 1A60     		str	r2, [r3]
 3072:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****              ADC_OFR1_OFFSET1_EN,
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 61
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 61
 
 
 3073:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****              OffsetState);
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3107:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         on either groups regular or injected.
 3108:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @rmtoll SMPR1    SMPPLUS        LL_ADC_SetSamplingTimeCommonConfig
 3109:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  ADCx ADC instance
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 62
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 62
 
 
 3110:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  SamplingTimeCommonConfig This parameter can be one of the following values:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3122:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         settings of sampling time channel wise.
 3123:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @rmtoll SMPR1    SMPPLUS        LL_ADC_GetSamplingTimeCommonConfig
 3124:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  ADCx ADC instance
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 63
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 63
 
 
 3125:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @retval Returned value can be one of the following values:
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3179:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_TRIG_EXT_EXTI_LINE11
 3180:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @retval None
 3181:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 64
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 64
 
 
 3182:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** __STATIC_INLINE void LL_ADC_REG_SetTriggerSource(ADC_TypeDef *ADCx, uint32_t TriggerSource)
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3236:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
 3237:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
 3238:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Get ADC group regular conversion trigger source internal (SW start)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 65
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 65
 
 
 3239:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         or external.
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  469              		.align	1
  470              		.syntax unified
  471              		.thumb
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 66
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 66
 
 
  472              		.thumb_func
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3303:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           sequencer length and each rank affectation to a channel
 3304:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           are defined by channel number.
 3305:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           This function performs configuration of:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 67
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 67
 
 
 3306:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           - Sequence length: Number of ranks in the scan sequence is
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3360:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         - For devices with sequencer not fully configurable
 3361:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           (function "LL_ADC_REG_SetSequencerChannels()" available):
 3362:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           sequencer length and each rank affectation to a channel
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 68
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 68
 
 
 3363:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           are defined by channel number.
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3417:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_SEQ_DISCONT_DISABLE
 3418:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_SEQ_DISCONT_1RANK
 3419:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_SEQ_DISCONT_2RANKS
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 69
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 69
 
 
 3420:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_SEQ_DISCONT_3RANKS
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3474:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         ADC must be disabled or enabled without conversion on going
 3475:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         on group regular.
 3476:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @rmtoll SQR1     SQ1            LL_ADC_REG_SetSequencerRanks\n
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 70
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 70
 
 
 3477:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         SQR1     SQ2            LL_ADC_REG_SetSequencerRanks\n
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3531:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_TEMPSENSOR   (4)
 3532:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_VBAT         (4)
 3533:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_DAC1CH1         (5)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 71
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 71
 
 
 3534:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_DAC1CH2         (5)
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3588:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         SQR2     SQ6            LL_ADC_REG_GetSequencerRanks\n
 3589:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         SQR2     SQ7            LL_ADC_REG_GetSequencerRanks\n
 3590:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         SQR2     SQ8            LL_ADC_REG_GetSequencerRanks\n
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 72
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 72
 
 
 3591:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         SQR2     SQ9            LL_ADC_REG_GetSequencerRanks\n
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3645:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_DAC1CH2_ADC3 (3)(6)
 3646:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *
 3647:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (1) On STM32L4, parameter available only on ADC instance: ADC1.\n
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 73
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 73
 
 
 3648:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (2) On STM32L4, parameter available only on ADC instance: ADC2.\n
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3702:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_CONV_SINGLE
 3703:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_REG_CONV_CONTINUOUS
 3704:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 74
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 74
 
 
 3705:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** __STATIC_INLINE uint32_t LL_ADC_REG_GetContinuousMode(ADC_TypeDef *ADCx)
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3759:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         - Unlimited mode: DMA transfer requests are unlimited,
 3760:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           whatever number of DMA data transfers (number of
 3761:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           ADC conversions).
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 75
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 75
 
 
 3762:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           This ADC mode is intended to be used with DMA mode circular.
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3816:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** __STATIC_INLINE uint32_t LL_ADC_REG_GetDFSDMTransfer(ADC_TypeDef *ADCx)
 3817:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** {
 3818:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   return (uint32_t)(READ_BIT(ADCx->CFGR, ADC_CFGR_DFSDMCFG));
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 76
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 76
 
 
 3819:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** }
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3873:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @note   On this STM32 series, setting trigger source to external trigger
 3874:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         also set trigger polarity to rising edge
 3875:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (default setting for compatibility with some ADC on other
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 77
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 77
 
 
 3876:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         STM32 families having this setting set by HW default value).
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3930:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_INJ_TRIG_EXT_TIM1_TRGO
 3931:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_INJ_TRIG_EXT_TIM1_TRGO2
 3932:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_INJ_TRIG_EXT_TIM1_CH4
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 78
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 78
 
 
 3933:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_INJ_TRIG_EXT_TIM2_TRGO
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  487              		.cfi_def_cfa_register 7
  488 0006 7860     		str	r0, [r7, #4]
 3976:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   return ((READ_BIT(ADCx->JSQR, ADC_JSQR_JEXTEN) == (LL_ADC_INJ_TRIG_SOFTWARE & ADC_JSQR_JEXTEN)) ?
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 79
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 79
 
 
  489              		.loc 1 3976 12
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 3997:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** }
 3998:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
 3999:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 80
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 80
 
 
 4000:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Get ADC group injected conversion trigger polarity.
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4054:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_INJ_SEQ_SCAN_ENABLE_4RANKS
 4055:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
 4056:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** __STATIC_INLINE uint32_t LL_ADC_INJ_GetSequencerLength(ADC_TypeDef *ADCx)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 81
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 81
 
 
 4057:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** {
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4111:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         JSQR     JSQ3           LL_ADC_INJ_SetSequencerRanks\n
 4112:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         JSQR     JSQ4           LL_ADC_INJ_SetSequencerRanks
 4113:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  ADCx ADC instance
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 82
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 82
 
 
 4114:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  Rank This parameter can be one of the following values:
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4168:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** }
 4169:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
 4170:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 83
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 83
 
 
 4171:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Get ADC group injected sequence: channel on the selected
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4225:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *
 4226:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (1) On STM32L4, parameter available only on ADC instance: ADC1.\n
 4227:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (2) On STM32L4, parameter available only on ADC instance: ADC2.\n
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 84
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 84
 
 
 4228:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (3) On STM32L4, parameter available only on ADC instance: ADC3.\n
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4282:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Get ADC group injected conversion trigger:
 4283:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         independent or from ADC group regular.
 4284:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @rmtoll CFGR     JAUTO          LL_ADC_INJ_GetTrigAuto
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 85
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 85
 
 
 4285:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  ADCx ADC instance
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4301:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         If contexts queue is disabled:
 4302:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         - only 1 sequence can be configured
 4303:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           and is active perpetually.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 86
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 86
 
 
 4304:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         If contexts queue is enabled:
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  584 0016 3A68     		ldr	r2, [r7]
  585 0018 1A43     		orrs	r2, r2, r3
  586 001a 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 87
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 87
 
 
  587 001c DA60     		str	r2, [r3, #12]
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4372:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_INJ_GetSequencerRanks()
 4373:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @note   On this STM32 series, to measure internal channels (VrefInt,
 4374:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         TempSensor, ...), measurement paths to internal channels must be
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 88
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 88
 
 
 4375:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         enabled separately.
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4429:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_7
 4430:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_8
 4431:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_9
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 89
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 89
 
 
 4432:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_10
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4486:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_DAC1CH1_ADC3 (3)(6)
 4487:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_DAC1CH2_ADC3 (3)(6)
 4488:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 90
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 90
 
 
 4489:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (1) On STM32L4, parameter available only on ADC instance: ADC1.\n
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4543:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_7
 4544:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_8
 4545:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_9
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 91
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 91
 
 
 4546:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_10
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4600:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****              (ExternalTriggerEdge * (is_trigger_not_sw)) |
 4601:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****              (((Rank4_Channel & ADC_CHANNEL_ID_NUMBER_MASK) >> ADC_CHANNEL_ID_NUMBER_BITOFFSET_POS)
 4602:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****              (((Rank3_Channel & ADC_CHANNEL_ID_NUMBER_MASK) >> ADC_CHANNEL_ID_NUMBER_BITOFFSET_POS)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 92
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 92
 
 
 4603:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****              (((Rank2_Channel & ADC_CHANNEL_ID_NUMBER_MASK) >> ADC_CHANNEL_ID_NUMBER_BITOFFSET_POS)
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4657:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         SMPR2    SMP14          LL_ADC_SetChannelSamplingTime\n
 4658:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         SMPR2    SMP15          LL_ADC_SetChannelSamplingTime\n
 4659:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         SMPR2    SMP16          LL_ADC_SetChannelSamplingTime\n
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 93
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 93
 
 
 4660:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         SMPR2    SMP17          LL_ADC_SetChannelSamplingTime\n
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4714:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @retval None
 4715:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
 4716:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** __STATIC_INLINE void LL_ADC_SetChannelSamplingTime(ADC_TypeDef *ADCx, uint32_t Channel, uint32_t Sa
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 94
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 94
 
 
 4717:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** {
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4727:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** }
  654              		.loc 1 4727 1
  655 004a 00BF     		nop
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 95
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 95
 
 
  656 004c 1C37     		adds	r7, r7, #28
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4764:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_3            (7)
 4765:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_4            (7)
 4766:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_5            (7)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 96
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 96
 
 
 4767:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_CHANNEL_6
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4821:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
 4822:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
 4823:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Set mode single-ended or differential input of the selected
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 97
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 97
 
 
 4824:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         ADC channel.
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  682              		.cfi_def_cfa_offset 4
  683              		.cfi_offset 7, -4
  684 0002 85B0     		sub	sp, sp, #20
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 98
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 98
 
 
  685              		.cfi_def_cfa_offset 24
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4879:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
 4880:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
 4881:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Get mode single-ended or differential input of the selected
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 99
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 99
 
 
 4882:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         ADC channel.
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4936:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         on ADC groups regular and-or injected.
 4937:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @note   Once monitored channels are selected, analog watchdog
 4938:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         is enabled.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 100
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 100
 
 
 4939:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @note   In case of need to define a single channel to monitor
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 4993:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_3_INJ           (0)
 4994:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_3_REG_INJ
 4995:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_4_REG           (0)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 101
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 101
 
 
 4996:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_4_INJ           (0)
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5050:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CH_DAC1CH1_INJ          (0)(2)(5)
 5051:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CH_DAC1CH1_REG_INJ         (2)(5)
 5052:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CH_DAC1CH2_REG          (0)(2)(5)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 102
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 102
 
 
 5053:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CH_DAC1CH2_INJ          (0)(2)(5)
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5107:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         instance:
 5108:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         - AWD standard (instance AWD1):
 5109:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           - channels monitored: can monitor 1 channel or all channels.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 103
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 103
 
 
 5110:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           - groups monitored: ADC groups regular and-or injected.
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5164:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_3_REG_INJ
 5165:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_4_REG           (0)
 5166:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_4_INJ           (0)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 104
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 104
 
 
 5167:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_AWD_CHANNEL_4_REG_INJ
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5221:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   /* (parameter value LL_ADC_AWD_DISABLE).                                    */
 5222:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   /* Else, the selected AWD is enabled and is monitoring a group of channels  */
 5223:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   /* or a single channel.                                                     */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 105
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 105
 
 
 5224:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   if (AnalogWDMonitChannels != 0UL)
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5278:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         instance:
 5279:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         - AWD standard (instance AWD1):
 5280:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           - channels monitored: can monitor 1 channel or all channels.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 106
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 106
 
 
 5281:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *           - groups monitored: ADC groups regular and-or injected.
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5335:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
 5336:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
 5337:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Set ADC analog watchdog threshold value of threshold
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 107
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 107
 
 
 5338:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         high or low.
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5392:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** {
 5393:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   /* Set bits with content of parameter "AWDThresholdValue" with bits         */
 5394:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   /* position in register and register position depending on parameters       */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 108
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 108
 
 
 5395:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   /* "AWDThresholdsHighLow" and "AWDy".                                       */
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5449:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /** @defgroup ADC_LL_EF_Configuration_ADC_oversampling Configuration of ADC transversal scope: over
 5450:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @{
 5451:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 109
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 109
 
 
 5452:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5506:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** }
 5507:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
 5508:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 110
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 110
 
 
 5509:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Set ADC oversampling discontinuous mode (triggered mode)
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5563:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         on either groups regular or injected.
 5564:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @rmtoll CFGR2    OVSS           LL_ADC_ConfigOverSamplingRatioShift\n
 5565:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         CFGR2    OVSR           LL_ADC_ConfigOverSamplingRatioShift
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 111
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 111
 
 
 5566:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  ADCx ADC instance
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5620:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_OVS_SHIFT_RIGHT_1
 5621:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_OVS_SHIFT_RIGHT_2
 5622:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_OVS_SHIFT_RIGHT_3
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 112
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 112
 
 
 5623:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_OVS_SHIFT_RIGHT_4
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5677:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @note   If multimode configuration: the selected ADC instance is
 5678:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         either master or slave depending on hardware.
 5679:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         Refer to reference manual.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 113
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 113
 
 
 5680:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @rmtoll CCR      DUAL           LL_ADC_GetMultimode
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  773              	.LFB213:
 5697:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
 5698:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 114
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 114
 
 
 5699:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Set ADC multimode conversion data transfer: no transfer
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5753:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         each ADC uses its own DMA channel, with its individual
 5754:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         DMA transfer settings.
 5755:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         If ADC multimode transfer by DMA is selected:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 115
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 115
 
 
 5756:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         One DMA channel is used for both ADC (DMA of ADC master)
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5810:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         (can be set directly from CMSIS definition or by using helper macro @ref __LL_ADC_COMMO
 5811:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  MultiTwoSamplingDelay This parameter can be one of the following values:
 5812:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_MULTI_TWOSMP_DELAY_1CYCLE
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 116
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 116
 
 
 5813:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_MULTI_TWOSMP_DELAY_2CYCLES
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5867:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /** @defgroup ADC_LL_EF_Configuration_Leg_Functions Configuration of ADC alternate functions name
 5868:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @{
 5869:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 117
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 117
 
 
 5870:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /* Old functions name kept for legacy purpose, to be replaced by the          */
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  790 000c 23F02043 		bic	r3, r3, #-1610612736
  791 0010 23F03F03 		bic	r3, r3, #63
  792 0014 43F00052 		orr	r2, r3, #536870912
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 118
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 118
 
 
  793 0018 7B68     		ldr	r3, [r7, #4]
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 5940:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** {
 5941:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   return ((READ_BIT(ADCx->CR, ADC_CR_DEEPPWD) == (ADC_CR_DEEPPWD)) ? 1UL : 0UL);
 5942:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** }
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 119
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 119
 
 
 5943:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  834 0010 23F03F03 		bic	r3, r3, #63
  835 0014 7A68     		ldr	r2, [r7, #4]
  836 0016 9360     		str	r3, [r2, #8]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 120
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 120
 
 
 5980:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** }
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 6014:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   MODIFY_REG(ADCx->CR,
 6015:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****              ADC_CR_BITS_PROPERTY_RS,
 6016:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****              ADC_CR_ADEN);
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 121
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 121
 
 
 6017:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** }
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  879              		.loc 1 6050 68 is_stmt 0 discriminator 1
  880 0014 0123     		movs	r3, #1
  881 0016 00E0     		b	.L36
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 122
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 122
 
 
  882              	.L34:
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 6081:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  ADCx ADC instance
 6082:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @param  SingleDiff This parameter can be one of the following values:
 6083:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_SINGLE_ENDED
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 123
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 123
 
 
 6084:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         @arg @ref LL_ADC_DIFFERENTIAL_ENDED
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  951              		.thumb_func
  953              	LL_ADC_IsCalibrationOnGoing:
  954              	.LFB224:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 124
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 124
 
 
 6096:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  999              		.thumb
  1000              		.thumb_func
  1002              	LL_ADC_REG_StartConversion:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 125
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 125
 
 
  1003              	.LFB225:
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  1024 001a 9A60     		str	r2, [r3, #8]
 6140:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****              ADC_CR_BITS_PROPERTY_RS,
 6141:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****              ADC_CR_ADSTART);
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 126
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 126
 
 
 6142:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** }
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  1051              		@ link register save eliminated.
  1052 0000 80B4     		push	{r7}
  1053              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 127
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 127
 
 
  1054              		.cfi_offset 7, -4
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 6186:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
 6187:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Get ADC group regular conversion data, range fit for
 6188:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         all ADC configurations: all ADC resolutions and
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 128
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 128
 
 
 6189:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         all oversampling increased data width (for devices
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 6243:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** }
 6244:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** 
 6245:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h **** /**
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 129
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 129
 
 
 6246:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Get ADC group regular conversion data, range fit for
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 6300:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @brief  Start ADC group injected conversion.
 6301:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   * @note   On this STM32 series, this function is relevant for both
 6302:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         internal trigger (SW start) and external trigger:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 130
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 130
 
 
 6303:Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h ****   *         - If ADC trigger has been set to software start, ADC conversion
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  1127 0026 7047     		bx	lr
  1128              		.cfi_endproc
  1129              	.LFE235:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 131
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 131
 
 
  1131              		.section	.text.LL_ADC_INJ_IsConversionOngoing,"ax",%progbits
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  1156              		.loc 1 6355 76
  1157 0010 082B     		cmp	r3, #8
  1158 0012 01D1     		bne	.L49
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 132
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 132
 
 
  1159              		.loc 1 6355 76 is_stmt 0 discriminator 1
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
   25:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   (@) Sections "ADC peripheral features" and "How to use this driver" are
   26:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       available in file of generic functions "stm32l4xx_hal_adc.c".
   27:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   [..]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 133
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 133
 
 
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   @endverbatim
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
   82:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** @verbatim
   83:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****  ===============================================================================
   84:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****                       ##### IO operation functions #####
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 134
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 134
 
 
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****  ===============================================================================
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  122:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
  123:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   /* Check the parameters */
  124:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   assert_param(IS_ADC_ALL_INSTANCE(hadc->Instance));
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 135
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 135
 
 
  125:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   assert_param(IS_ADC_SINGLE_DIFFERENTIAL(SingleDiff));
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  1241 004e 1846     		mov	r0, r3
  1242 0050 FFF7FEFF 		bl	LL_ADC_StartCalibration
  145:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 136
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 136
 
 
  146:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     /* Wait for calibration completion */
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  162:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     }
  163:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
  164:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     /* Set ADC state */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 137
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 137
 
 
  165:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     ADC_STATE_CLR_SET(hadc->State,
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  1316              		.syntax unified
  1317              		.thumb
  1318              		.thumb_func
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 138
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 138
 
 
  1320              	HAL_ADCEx_Calibration_GetValue:
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  1357              		.syntax unified
  1358              		.thumb
  1359              		.thumb_func
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 139
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 139
 
 
  1361              	HAL_ADCEx_Calibration_SetValue:
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  1390              		.loc 2 225 3 discriminator 2
  1391 001e FB68     		ldr	r3, [r7, #12]
  1392 0020 0122     		movs	r2, #1
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 140
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 140
 
 
  1393 0022 83F85420 		strb	r2, [r3, #84]
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  241:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   {
  242:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     /* Update ADC state machine */
  243:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     SET_BIT(hadc->State, HAL_ADC_STATE_ERROR_CONFIG);
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 141
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 141
 
 
  1432              		.loc 2 243 5
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  257:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
  258:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** /**
  259:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   * @brief  Enable ADC, start conversion of injected group.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 142
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 142
 
 
  260:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   * @note   Interruptions enabled in this function: None.
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  284:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   else
  285:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   {
  286:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     /* In case of software trigger detection enabled, JQDIS must be set
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 143
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 143
 
 
  287:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       (which can be done only if ADSTART and JADSTART are both cleared).
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  1541 0060 73E0     		b	.L68
  1542              	.L70:
  1543              		.loc 2 304 5 discriminator 2
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 144
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 144
 
 
  1544 0062 7B68     		ldr	r3, [r7, #4]
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  326:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       /* - Set state bitfield related to injected operation                   */
  327:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       ADC_STATE_CLR_SET(hadc->State,
  1577              		.loc 2 327 7
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 145
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 145
 
 
  1578 009a 7B68     		ldr	r3, [r7, #4]
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  343:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       /* Clear ADC group injected group conversion flag */
  344:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       /* (To ensure of no unknown state from potential previous ADC operations) */
  345:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       __HAL_ADC_CLEAR_FLAG(hadc, (ADC_FLAG_JEOC | ADC_FLAG_JEOS));
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 146
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 146
 
 
  1617              		.loc 2 345 7
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  367:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****           || (tmp_multimode_config == LL_ADC_MULTI_DUAL_REG_SIMULT)
  1650              		.loc 2 367 11
  1651 010a 7B69     		ldr	r3, [r7, #20]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 147
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 147
 
 
  1652 010c 062B     		cmp	r3, #6
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  389:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
  390:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     }
  391:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     else
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 148
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 148
 
 
  392:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     {
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  414:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   *         has already stopped conversion of ADC slave).
  415:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   * @param hadc ADC handle.
  416:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   * @retval HAL status
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 149
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 149
 
 
  417:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   */
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  435:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     if (LL_ADC_REG_IsConversionOngoing(hadc->Instance) == 0UL)
  1754              		.loc 2 435 9
  1755 0030 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 150
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 150
 
 
  1756 0032 1B68     		ldr	r3, [r3]
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  457:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
  458:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   /* Process unlocked */
  459:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   __HAL_UNLOCK(hadc);
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 151
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 151
 
 
  1789              		.loc 2 459 3
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  475:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   uint32_t tickstart;
  476:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   uint32_t tmp_Flag_End;
  477:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   uint32_t tmp_adc_inj_is_trigger_source_sw_start;
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 152
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 152
 
 
  478:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   uint32_t tmp_adc_reg_is_trigger_source_sw_start;
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  1856 002c 3B68     		ldr	r3, [r7]
  1857 002e B3F1FF3F 		cmp	r3, #-1
  1858 0032 1DD0     		beq	.L95
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 153
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 153
 
 
  506:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     {
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  1899              		.loc 2 502 15
  1900 0070 7B68     		ldr	r3, [r7, #4]
  1901 0072 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 154
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 154
 
 
  502:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   {
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  1940 00ac 9342     		cmp	r3, r2
  1941 00ae 08D0     		beq	.L101
  532:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       || (tmp_multimode_config == LL_ADC_MULTI_INDEPENDENT)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 155
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 155
 
 
  1942              		.loc 2 532 7
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  545:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   tmp_cfgr = READ_REG(hadc->Instance->CFGR);
  546:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** #endif
  547:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 156
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 156
 
 
  548:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   /* Update ADC state machine */
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  565:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       /* (queue empty, triggers are ignored), it can start again            */
  566:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       /* immediately after setting a new context (JADSTART is still set).   */
  567:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       /* Therefore, state of HAL ADC injected group is kept to busy.        */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 157
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 157
 
 
  568:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       if (READ_BIT(tmp_cfgr, ADC_CFGR_JQM) == 0UL)
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2052 0156 03F48043 		and	r3, r3, #16384
  2053              		.loc 2 588 8
  2054 015a 002B     		cmp	r3, #0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 158
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 158
 
 
  2055 015c 08D1     		bne	.L109
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  602:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** /**
  603:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   * @brief  Enable ADC, start conversion of injected group with interruption.
  604:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   * @note   Interruptions enabled in this function according to initialization
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 159
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 159
 
 
  605:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   *         setting : JEOC (end of conversion) or JEOS (end of sequence)
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  629:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   else
  630:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   {
  631:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     /* In case of software trigger detection enabled, JQDIS must be set
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 160
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 160
 
 
  632:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       (which can be done only if ADSTART and JADSTART are both cleared).
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2164 0060 A9E0     		b	.L114
  2165              	.L116:
  2166              		.loc 2 649 5 discriminator 2
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 161
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 161
 
 
  2167 0062 7B68     		ldr	r3, [r7, #4]
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  671:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       /* - Set state bitfield related to injected operation                   */
  672:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       ADC_STATE_CLR_SET(hadc->State,
  2200              		.loc 2 672 7
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 162
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 162
 
 
  2201 009c 7B68     		ldr	r3, [r7, #4]
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  688:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       /* Clear ADC group injected group conversion flag */
  689:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       /* (To ensure of no unknown state from potential previous ADC operations) */
  690:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       __HAL_ADC_CLEAR_FLAG(hadc, (ADC_FLAG_JEOC | ADC_FLAG_JEOS));
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 163
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 163
 
 
  2240              		.loc 2 690 7
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2276 0114 1B68     		ldr	r3, [r3]
  2277 0116 5A68     		ldr	r2, [r3, #4]
  2278 0118 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 164
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 164
 
 
  2279 011a 1B68     		ldr	r3, [r3]
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  730:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** #if defined(ADC_MULTIMODE_SUPPORT)
  731:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       if ((__LL_ADC_MULTI_INSTANCE_MASTER(hadc->Instance) == hadc->Instance)
  2312              		.loc 2 731 12
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 165
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 165
 
 
  2313 0156 7B68     		ldr	r3, [r7, #4]
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2358 0198 FFF7FEFF 		bl	LL_ADC_INJ_StartConversion
  738:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****         {
  2359              		.loc 2 738 12
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 166
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 166
 
 
  2360 019c 0AE0     		b	.L133
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2388              	.L134:
  2389 01c0 00030450 		.word	1342440192
  2390 01c4 00010450 		.word	1342439680
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 167
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 167
 
 
  2391 01c8 00000450 		.word	1342439424
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2418 0008 7B68     		ldr	r3, [r7, #4]
  2419 000a 93F85430 		ldrb	r3, [r3, #84]	@ zero_extendqisi2
  2420 000e 012B     		cmp	r3, #1
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 168
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 168
 
 
  2421 0010 01D1     		bne	.L137
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2459 0052 FFF7FEFF 		bl	ADC_Disable
  2460 0056 0346     		mov	r3, r0
  2461 0058 FB73     		strb	r3, [r7, #15]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 169
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 169
 
 
  812:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2491 008c 1846     		mov	r0, r3
  2492 008e 1037     		adds	r7, r7, #16
  2493              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 170
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 170
 
 
  2494 0090 BD46     		mov	sp, r7
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  862:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   assert_param(IS_FUNCTIONAL_STATE(hadc->Init.ContinuousConvMode));
  863:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   assert_param(IS_ADC_EXTTRIG_EDGE(hadc->Init.ExternalTrigConvEdge));
  864:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   assert_param(IS_FUNCTIONAL_STATE(hadc->Init.DMAContinuousRequests));
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 171
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 171
 
 
  865:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2563              		.loc 2 880 5 is_stmt 0 discriminator 1
  2564 0048 394B     		ldr	r3, .L152+4
  2565 004a 3B61     		str	r3, [r7, #16]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 172
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 172
 
 
  2566 004c 01E0     		b	.L146
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2602 0088 1846     		mov	r0, r3
  2603 008a FFF7FEFF 		bl	ADC_Enable
  2604 008e 0346     		mov	r3, r0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 173
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 173
 
 
  2605 0090 87F87F30 		strb	r3, [r7, #127]
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2638              		.loc 2 919 43
  2639 00ca 1C4A     		ldr	r2, .L152+16
  2640 00cc 5A63     		str	r2, [r3, #52]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 174
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 174
 
 
  920:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  941:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
  942:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       /* Enable conversion of regular group.                                    */
  943:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       /* If software start has been selected, conversion starts immediately.    */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 175
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 175
 
 
  944:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       /* If external trigger has been selected, conversion will start at next   */
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2714              		.thumb_func
  2716              	HAL_ADCEx_MultiModeStop_DMA:
  2717              	.LFB330:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 176
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 176
 
 
  959:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  987:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
  988:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   /* 1. Stop potential multimode conversion on going, on regular and injected groups */
  989:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   tmp_hal_status = ADC_ConversionStop(hadc, ADC_REGULAR_INJECTED_GROUP);
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 177
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 177
 
 
  2744              		.loc 2 989 20 is_stmt 1 discriminator 2
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2783 005c 43F02002 		orr	r2, r3, #32
  2784 0060 7B68     		ldr	r3, [r7, #4]
  2785 0062 9A65     		str	r2, [r3, #88]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 178
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 178
 
 
 1005:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2818 0098 B867     		str	r0, [r7, #120]
 1027:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****         if ((LL_ADC_REG_IsConversionOngoing(hadc->Instance) == 1UL)
  2819              		.loc 2 1027 14
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 179
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 179
 
 
  2820 009a 7B68     		ldr	r3, [r7, #4]
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1020:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****           )
  2859              		.loc 2 1020 12
  2860 00de 012B     		cmp	r3, #1
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 180
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 180
 
 
  2861 00e0 CFD0     		beq	.L164
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2892              		.loc 2 1063 8
  2893 011c 97F87F30 		ldrb	r3, [r7, #127]	@ zero_extendqisi2
  2894 0120 002B     		cmp	r3, #0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 181
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 181
 
 
  2895 0122 15D1     		bne	.L166
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2932 0170 7B68     		ldr	r3, [r7, #4]
  2933 0172 9A65     		str	r2, [r3, #88]
  2934              	.L157:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 182
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 182
 
 
 1081:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****                       HAL_ADC_STATE_REG_BUSY | HAL_ADC_STATE_INJ_BUSY,
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  2973              		.cfi_def_cfa_offset 4
  2974              		.cfi_offset 7, -4
  2975 0002 85B0     		sub	sp, sp, #20
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 183
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 183
 
 
  2976              		.cfi_def_cfa_offset 24
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1118:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   * @note   Reading register JDRx automatically clears ADC flag JEOC
 1119:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   *         (ADC group injected end of unitary conversion).
 1120:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   * @note   This function does not clear ADC flag JEOS
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 184
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 184
 
 
 1121:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   *         (ADC group injected end of sequence conversion)
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3034 001a 9342     		cmp	r3, r2
  3035 001c 1AD8     		bhi	.L177
  3036 001e 3B68     		ldr	r3, [r7]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 185
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 185
 
 
  3037 0020 B3F5877F 		cmp	r3, #270
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3077              		.loc 2 1167 7
  3078 005e 00BF     		nop
  3079              	.L180:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 186
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 186
 
 
 1168:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   }
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1186:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   */
 1187:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** }
  3118              		.loc 2 1187 1
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 187
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 187
 
 
  3119 0008 00BF     		nop
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3156 000a 0C37     		adds	r7, r7, #12
  3157              		.cfi_def_cfa_offset 4
  3158 000c BD46     		mov	sp, r7
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 188
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 188
 
 
  3159              		.cfi_def_cfa_register 13
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3200 0012 7047     		bx	lr
  3201              		.cfi_endproc
  3202              	.LFE335:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 189
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 189
 
 
  3204              		.section	.text.HAL_ADCEx_LevelOutOfWindow3Callback,"ax",%progbits
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3245              		.thumb_func
  3247              	HAL_ADCEx_EndOfSamplingCallback:
  3248              	.LFB337:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 190
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 190
 
 
 1237:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1257:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   *         conversion is on going on injected group.
 1258:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   * @param hadc ADC handle
 1259:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   * @retval HAL status.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 191
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 191
 
 
 1260:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   */
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1278:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     /* Clear HAL_ADC_STATE_REG_BUSY bit */
 1279:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     CLEAR_BIT(hadc->State, HAL_ADC_STATE_REG_BUSY);
  3321              		.loc 2 1279 5
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 192
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 192
 
 
  3322 0030 7B68     		ldr	r3, [r7, #4]
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3356 0072 7B68     		ldr	r3, [r7, #4]
  3357 0074 9B6D     		ldr	r3, [r3, #88]
  3358 0076 43F48052 		orr	r2, r3, #4096
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 193
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 193
 
 
  3359 007a 7B68     		ldr	r3, [r7, #4]
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3394              		.cfi_def_cfa_offset 8
  3395              		.cfi_offset 7, -8
  3396              		.cfi_offset 14, -4
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 194
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 194
 
 
  3397 0002 84B0     		sub	sp, sp, #16
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3431              		.loc 2 1340 5
  3432 003c 7B68     		ldr	r3, [r7, #4]
  3433 003e 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 195
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 195
 
 
  3434 0040 5A68     		ldr	r2, [r3, #4]
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3471 008a 7B68     		ldr	r3, [r7, #4]
  3472 008c 9A65     		str	r2, [r3, #88]
  3473              	.L195:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 196
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 196
 
 
 1358:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     }
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3507              		.cfi_offset 7, -8
  3508              		.cfi_offset 14, -4
  3509 0002 84B0     		sub	sp, sp, #16
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 197
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 197
 
 
  3510              		.cfi_def_cfa_offset 24
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3544 003c 7B68     		ldr	r3, [r7, #4]
  3545 003e 1B68     		ldr	r3, [r3]
  3546 0040 DA68     		ldr	r2, [r3, #12]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 198
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 198
 
 
  3547 0042 7B68     		ldr	r3, [r7, #4]
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3582 0086 0346     		mov	r3, r0
  3583              		.loc 2 1419 8
  3584 0088 002B     		cmp	r3, #0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 199
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 199
 
 
  3585 008a 19D1     		bne	.L202
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3617 00c2 9B6D     		ldr	r3, [r3, #88]
  3618 00c4 43F48052 		orr	r2, r3, #4096
  3619 00c8 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 200
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 200
 
 
  3620 00ca 9A65     		str	r2, [r3, #88]
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3650              		.cfi_startproc
  3651              		@ args = 0, pretend = 0, frame = 128
  3652              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 201
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 201
 
 
  3653 0000 80B5     		push	{r7, lr}
@@ -12058,7 +12058,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3687 0038 9B6D     		ldr	r3, [r3, #88]
  3688 003a 23F48072 		bic	r2, r3, #256
  3689 003e 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 202
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 202
 
 
  3690 0040 9A65     		str	r2, [r3, #88]
@@ -12118,7 +12118,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3727              		.loc 2 1504 14
  3728 0078 0123     		movs	r3, #1
  3729 007a 8EE0     		b	.L218
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 203
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 203
 
 
  3730              	.L211:
@@ -12178,7 +12178,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3765              		.loc 2 1523 13
  3766 00b6 BB6F     		ldr	r3, [r7, #120]
  3767 00b8 012B     		cmp	r3, #1
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 204
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 204
 
 
  3768 00ba 0BD1     		bne	.L213
@@ -12238,7 +12238,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1540:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     /* while DMA transfer is on going)                                        */
 1541:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     /* Note: DMA channel of ADC slave should be stopped after this function   */
 1542:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     /* with HAL_ADCEx_RegularStop_DMA() API.                                  */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 205
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 205
 
 
 1543:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     tmp_hal_status = HAL_DMA_Abort(hadc->DMA_Handle);
@@ -12298,7 +12298,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3838 013a 0346     		mov	r3, r0
  3839              		.loc 2 1561 10
  3840 013c 002B     		cmp	r3, #0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 206
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 206
 
 
  3841 013e 18D1     		bne	.L217
@@ -12358,7 +12358,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1578:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       }
 1579:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       else
 1580:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 207
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 207
 
 
 1581:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****         /* injected (Master or Slave) conversions are still on-going,
@@ -12418,7 +12418,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1605:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****  ===============================================================================
 1606:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     [..]  This section provides functions allowing to:
 1607:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       (+) Configure channels on injected group
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 208
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 208
 
 
 1608:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       (+) Configure multimode when multimode feature is available
@@ -12478,7 +12478,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3920              		.cfi_def_cfa_offset 224
  3921 0004 00AF     		add	r7, sp, #0
  3922              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 209
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 209
 
 
  3923 0006 7860     		str	r0, [r7, #4]
@@ -12538,7 +12538,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1696:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   }
 1697:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   else
 1698:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 210
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 210
 
 
 1699:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     assert_param(IS_ADC_DIFF_CHANNEL(hadc, sConfigInjected->InjectedChannel));
@@ -12598,7 +12598,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  3958 0040 30D1     		bne	.L225
  3959              	.L224:
 1728:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 211
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 211
 
 
 1729:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     /* Configuration of context register JSQR:                                */
@@ -12658,7 +12658,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1749:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       }
 1750:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       else
 1751:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 212
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 212
 
 
 1752:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****         tmp_JSQR_ContextQueueBeingBuilt = (ADC_JSQR_RK(sConfigInjected->InjectedChannel, ADC_INJECT
@@ -12718,7 +12718,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4024 00a8 002B     		cmp	r3, #0
  4025 00aa 1DD1     		bne	.L230
 1774:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 213
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 213
 
 
 1775:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       /* Initialize number of channels that will be configured on the context */
@@ -12778,7 +12778,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1795:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****                                            | (sConfigInjected->ExternalTrigInjecConv & ADC_JSQR_JEX
  4057              		.loc 2 1795 41
  4058 00d6 1343     		orrs	r3, r3, r2
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 214
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 214
 
 
  4059 00d8 C7F8D030 		str	r3, [r7, #208]
@@ -12838,7 +12838,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4089              		.loc 2 1821 40
  4090 0112 7B68     		ldr	r3, [r7, #4]
  4091 0114 1A6E     		ldr	r2, [r3, #96]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 215
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 215
 
 
  4092 0116 D7F8D030 		ldr	r3, [r7, #208]
@@ -12898,7 +12898,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4126 0150 5B7F     		ldrb	r3, [r3, #29]	@ zero_extendqisi2
  4127              		.loc 2 1841 8
  4128 0152 002B     		cmp	r3, #0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 216
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 216
 
 
  4129 0154 10D1     		bne	.L233
@@ -12958,7 +12958,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1864:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   /*  - Channel sampling time                                                 */
 1865:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   /*  - Channel offset                                                        */
 1866:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   tmp_adc_is_conversion_on_going_regular = LL_ADC_REG_IsConversionOngoing(hadc->Instance);
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 217
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 217
 
 
  4161              		.loc 2 1866 44
@@ -13018,7 +13018,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4201 01d8 7B68     		ldr	r3, [r7, #4]
  4202 01da 1B68     		ldr	r3, [r3]
  4203 01dc DA68     		ldr	r2, [r3, #12]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 218
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 218
 
 
  4204 01de 7B68     		ldr	r3, [r7, #4]
@@ -13078,7 +13078,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1898:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       else
 1899:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       {
 1900:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****         CLEAR_BIT(hadc->Instance->CFGR, ADC_CFGR_JAUTO);
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 219
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 219
 
 
  4239              		.loc 2 1900 9
@@ -13138,7 +13138,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1923:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****                  sConfigInjected->InjecOversampling.RightBitShift
 1924:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****                 );
 1925:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     }
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 220
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 220
 
 
 1926:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     else
@@ -13198,7 +13198,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4305 0292 3B68     		ldr	r3, [r7]
  4306 0294 1968     		ldr	r1, [r3]
  4307 0296 3B68     		ldr	r3, [r7]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 221
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 221
 
 
  4308 0298 9B68     		ldr	r3, [r3, #8]
@@ -13258,7 +13258,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4343 02da D7F8C430 		ldr	r3, [r7, #196]
  4344 02de FFF7FEFF 		bl	LL_ADC_SetOffset
  4345 02e2 7BE1     		b	.L234
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 222
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 222
 
 
  4346              	.L335:
@@ -13318,7 +13318,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
   10:Drivers/CMSIS/Include/cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
   11:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
   12:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 223
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 223
 
 
   13:Drivers/CMSIS/Include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
@@ -13378,7 +13378,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
   67:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_UNION
   68:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
   69:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 224
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 224
 
 
   70:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
@@ -13438,7 +13438,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  124:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  125:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Initializes data and bss sections
  126:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details This default implementations initialized all data and additional bss
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 225
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 225
 
 
  127:Drivers/CMSIS/Include/cmsis_gcc.h ****            sections relying on .copy.table and .zero.table specified properly
@@ -13498,7 +13498,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  181:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __VECTOR_TABLE_ATTRIBUTE
  182:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __VECTOR_TABLE_ATTRIBUTE  __attribute((used, section(".vectors")))
  183:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 226
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 226
 
 
  184:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -13558,7 +13558,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  238:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  239:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  240:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 227
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 227
 
 
  241:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -13618,7 +13618,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  295:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  296:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get xPSR Register
  297:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the xPSR Register.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 228
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 228
 
 
  298:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               xPSR Register value
@@ -13678,7 +13678,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  352:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer (non-secure)
  353:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Process Stack Pointer (PSP) when in secure sta
  354:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 229
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 229
 
 
  355:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -13738,7 +13738,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  409:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  410:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_MSP_NS(uint32_t topOfMainStack)
  411:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 230
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 230
 
 
  412:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msp_ns, %0" : : "r" (topOfMainStack) : );
@@ -13798,7 +13798,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  466:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  467:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  468:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask_ns" : "=r" (result) :: "memory");
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 231
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 231
 
 
  469:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
@@ -13858,7 +13858,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  523:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  524:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Base Priority
  525:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Base Priority register.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 232
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 232
 
 
  526:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Base Priority register value
@@ -13918,7 +13918,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  580:Drivers/CMSIS/Include/cmsis_gcc.h ****            or the new value increases the BASEPRI priority level.
  581:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    basePri  Base Priority value to set
  582:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 233
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 233
 
 
  583:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_BASEPRI_MAX(uint32_t basePri)
@@ -13978,7 +13978,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  637:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  638:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR faultmask_ns, %0" : : "r" (faultMask) : "memory");
  639:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 234
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 234
 
 
  640:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -14038,7 +14038,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  694:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  695:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  696:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer Limit
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 235
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 235
 
 
  697:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
@@ -14098,7 +14098,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  751:Drivers/CMSIS/Include/cmsis_gcc.h ****   return 0U;
  752:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
  753:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 236
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 236
 
 
  754:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msplim" : "=r" (result) );
@@ -14158,7 +14158,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  808:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence the write is silently ignored.
  809:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  810:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Main Stack Pointer Limit (MSPLIM) when in secu
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 237
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 237
 
 
  811:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    MainStackPtrLimit  Main Stack Pointer value to set
@@ -14218,7 +14218,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  865:Drivers/CMSIS/Include/cmsis_gcc.h **** // || (__GNUC__ > 7) || (__GNUC__ == 7 && __GNUC_MINOR__ >= 2)
  866:Drivers/CMSIS/Include/cmsis_gcc.h ****   /* see https://gcc.gnu.org/ml/gcc-patches/2017-04/msg00443.html */
  867:Drivers/CMSIS/Include/cmsis_gcc.h ****   __builtin_arm_set_fpscr(fpscr);
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 238
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 238
 
 
  868:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
@@ -14278,7 +14278,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  922:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Send Event is a hint instruction. It causes an event to be signaled to the CPU.
  923:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  924:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __SEV()                             __ASM volatile ("sev")
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 239
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 239
 
 
  925:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -14338,7 +14338,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  979:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  980:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  981:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Reverse byte order (16 bit)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 240
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 240
 
 
  982:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Reverses the byte order within each halfword of a word. For example, 0x12345678 becomes 
@@ -14398,7 +14398,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1036:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    value  is ignored by the processor.
 1037:Drivers/CMSIS/Include/cmsis_gcc.h ****                  If required, a debugger can use it to store additional information about the break
 1038:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 241
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 241
 
 
 1039:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __BKPT(value)                       __ASM volatile ("bkpt "#value)
@@ -14458,7 +14458,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1077:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
 1078:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint8_t __CLZ(uint32_t value)
 1079:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 242
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 242
 
 
 1080:Drivers/CMSIS/Include/cmsis_gcc.h ****   /* Even though __builtin_clz produces a CLZ instruction on ARM, formally
@@ -14518,7 +14518,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4437 0372 D7F8AC30 		ldr	r3, [r7, #172]
  4438              		.syntax unified
  4439              	@ 1055 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 243
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 243
 
 
  4440 0376 93FAA3F3 		rbit r3, r3
@@ -14578,7 +14578,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4486 03c0 002B     		cmp	r3, #0
  4487 03c2 0AD1     		bne	.L257
  4488              		.loc 2 1977 11 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 244
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 244
 
 
  4489 03c4 7B68     		ldr	r3, [r7, #4]
@@ -14638,7 +14638,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4539              	.LBE72:
  4540              		.loc 2 1977 11
  4541 0416 1A46     		mov	r2, r3
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 245
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 245
 
 
  4542              	.L258:
@@ -14698,7 +14698,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4591              	.LBE77:
  4592              	.LBE76:
 1977:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****           == __LL_ADC_CHANNEL_TO_DECIMAL_NB(sConfigInjected->InjectedChannel))
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 246
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 246
 
 
  4593              		.loc 2 1977 10
@@ -14758,7 +14758,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4642              		.syntax unified
  4643 04ba C7F88430 		str	r3, [r7, #132]
 1068:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 247
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 247
 
 
  4644              		.loc 3 1068 10 discriminator 2
@@ -14818,7 +14818,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4694              		.thumb
  4695              		.syntax unified
  4696 0502 BB67     		str	r3, [r7, #120]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 248
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 248
 
 
 1068:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -14878,7 +14878,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4743 054c 0321     		movs	r1, #3
  4744 054e 1846     		mov	r0, r3
  4745 0550 FFF7FEFF 		bl	LL_ADC_GetOffsetChannel
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 249
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 249
 
 
  4746 0554 0346     		mov	r3, r0
@@ -14938,7 +14938,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4795              		.loc 2 1988 14
  4796 058e 3B68     		ldr	r3, [r7]
  4797 0590 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 250
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 250
 
 
  4798 0592 C3F31203 		ubfx	r3, r3, #0, #19
@@ -14998,7 +14998,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4847 05cc 06D1     		bne	.L234
 1989:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       {
 1990:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****         LL_ADC_SetOffsetState(hadc->Instance, LL_ADC_OFFSET_4, LL_ADC_OFFSET_DISABLE);
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 251
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 251
 
 
  4848              		.loc 2 1990 9
@@ -15058,7 +15058,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4883 060e 1868     		ldr	r0, [r3]
 2010:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****                                     (uint32_t)(__LL_ADC_DECIMAL_NB_TO_CHANNEL((__LL_ADC_CHANNEL_TO_
  4884              		.loc 2 2010 48
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 252
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 252
 
 
  4885 0610 3B68     		ldr	r3, [r7]
@@ -15118,7 +15118,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  4935 0652 B3FA83F3 		clz	r3, r3
  4936 0656 DBB2     		uxtb	r3, r3
  4937              	.L294:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 253
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 253
 
 
  4938              	.LBE97:
@@ -15178,7 +15178,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 1089:Drivers/CMSIS/Include/cmsis_gcc.h ****   {
  4989              		.loc 3 1089 6 discriminator 4
  4990 069a 3B6D     		ldr	r3, [r7, #80]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 254
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 254
 
 
  4991 069c 002B     		cmp	r3, #0
@@ -15238,7 +15238,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5042 06e4 7B64     		str	r3, [r7, #68]
  5043              	.LBE103:
  5044              	.LBE102:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 255
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 255
 
 
  5045              	.LBB104:
@@ -15298,7 +15298,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5096              	@ 1055 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
  5097 0732 93FAA3F3 		rbit r3, r3
  5098              	@ 0 "" 2
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 256
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 256
 
 
  5099              		.thumb
@@ -15358,7 +15358,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5149 077a 15E0     		b	.L313
  5150              	.L312:
  5151              		.loc 2 2010 48 discriminator 14
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 257
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 257
 
 
  5152 077c 3B68     		ldr	r3, [r7]
@@ -15418,7 +15418,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5202 07b8 9B0E     		lsrs	r3, r3, #26
  5203 07ba 0133     		adds	r3, r3, #1
  5204 07bc 03F01F03 		and	r3, r3, #31
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 258
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 258
 
 
  5205 07c0 0121     		movs	r1, #1
@@ -15478,7 +15478,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5255 07fe 1B68     		ldr	r3, [r3]
  5256 0800 C3F31203 		ubfx	r3, r3, #0, #19
  5257 0804 002B     		cmp	r3, #0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 259
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 259
 
 
  5258 0806 0DD1     		bne	.L322
@@ -15538,7 +15538,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5308 0844 7B69     		ldr	r3, [r7, #20]
  5309 0846 B3FA83F3 		clz	r3, r3
  5310 084a DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 260
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 260
 
 
  5311              	.L326:
@@ -15598,7 +15598,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5345              		.loc 2 2028 25
  5346 0882 3B68     		ldr	r3, [r7]
  5347 0884 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 261
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 261
 
 
  5348              		.loc 2 2028 8
@@ -15658,7 +15658,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5388              	.L331:
 2043:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****         {
 2044:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****           wait_loop_index--;
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 262
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 262
 
 
  5389              		.loc 2 2044 26
@@ -15718,7 +15718,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2055:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       }
 2056:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     }
 2057:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****     else if ((sConfigInjected->InjectedChannel == ADC_CHANNEL_VREFINT)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 263
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 263
 
 
  5430              		.loc 2 2057 30
@@ -15778,7 +15778,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5464              		.loc 2 2077 1
  5465 094a 1846     		mov	r0, r3
  5466 094c D837     		adds	r7, r7, #216
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 264
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 264
 
 
  5467              		.cfi_def_cfa_offset 8
@@ -15838,7 +15838,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5503              		.cfi_offset 14, -4
  5504 0002 A1B0     		sub	sp, sp, #132
  5505              		.cfi_def_cfa_offset 144
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 265
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 265
 
 
  5506 0004 00AF     		add	r7, sp, #0
@@ -15898,7 +15898,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5538              		.loc 2 2119 3 is_stmt 0 discriminator 1
  5539 0038 414B     		ldr	r3, .L352+4
  5540 003a FB60     		str	r3, [r7, #12]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 266
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 266
 
 
  5541 003c 01E0     		b	.L344
@@ -15958,7 +15958,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5576 0074 0346     		mov	r3, r0
  5577              		.loc 2 2138 6
  5578 0076 002B     		cmp	r3, #0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 267
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 267
 
 
  5579 0078 4AD1     		bne	.L346
@@ -16018,7 +16018,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5608 00aa FFF7FEFF 		bl	LL_ADC_IsEnabled
  5609 00ae 0446     		mov	r4, r0
  5610 00b0 2348     		ldr	r0, .L352+4
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 268
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 268
 
 
  5611 00b2 FFF7FEFF 		bl	LL_ADC_IsEnabled
@@ -16078,7 +16078,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5647              		.loc 2 2180 10
  5648 00fa 002B     		cmp	r3, #0
  5649 00fc 12D1     		bne	.L351
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 269
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 269
 
 
 2181:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****       {
@@ -16138,7 +16138,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5681              		.loc 2 2201 1 discriminator 2
  5682 0132 1846     		mov	r0, r3
  5683 0134 8437     		adds	r7, r7, #132
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 270
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 270
 
 
  5684              		.cfi_def_cfa_offset 12
@@ -16198,7 +16198,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2222:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   tmp_adc_is_conversion_on_going_regular = LL_ADC_REG_IsConversionOngoing(hadc->Instance);
  5720              		.loc 2 2222 44
  5721 0008 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 271
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 271
 
 
  5722 000a 1B68     		ldr	r3, [r3]
@@ -16258,7 +16258,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5759              		.loc 2 2239 20
  5760 004e 0123     		movs	r3, #1
  5761 0050 FB75     		strb	r3, [r7, #23]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 272
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 272
 
 
  5762              	.L356:
@@ -16318,7 +16318,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2260:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   /* Check the parameters */
 2261:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   assert_param(IS_ADC_ALL_INSTANCE(hadc->Instance));
 2262:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 273
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 273
 
 
 2263:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   tmp_adc_is_conversion_on_going_regular = LL_ADC_REG_IsConversionOngoing(hadc->Instance);
@@ -16378,7 +16378,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2280:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c **** }
  5835              		.loc 2 2280 1
  5836 0046 1846     		mov	r0, r3
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 274
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 274
 
 
  5837 0048 1837     		adds	r7, r7, #24
@@ -16438,7 +16438,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5874              		.loc 2 2299 6
  5875 0014 002B     		cmp	r3, #0
  5876 0016 07D1     		bne	.L363
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 275
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 275
 
 
 2300:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   {
@@ -16498,7 +16498,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
 2320:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   *         calibration is lost.
 2321:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   * @note   To exit the ADC deep-power-down mode, the user is expected to
 2322:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   *         resort to HAL_ADC_Init() API as well as to relaunch a calibration
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 276
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 276
 
 
 2323:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   *         with HAL_ADCEx_Calibration_Start() API or to re-apply a previously
@@ -16558,7 +16558,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5946 0028 0123     		movs	r3, #1
  5947 002a FB73     		strb	r3, [r7, #15]
  5948              	.L368:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 277
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 277
 
 
 2344:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c ****   }
@@ -16589,134 +16589,134 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 1
  5971              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_adc_ex.h"
  5972              		.file 12 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h"
  5973              		.file 13 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 278
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 278
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_adc_ex.c
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:20     .text.LL_ADC_SetCommonPathInternalCh:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:25     .text.LL_ADC_SetCommonPathInternalCh:0000000000000000 LL_ADC_SetCommonPathInternalCh
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:65     .text.LL_ADC_GetCommonPathInternalCh:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:70     .text.LL_ADC_GetCommonPathInternalCh:0000000000000000 LL_ADC_GetCommonPathInternalCh
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:105    .text.LL_ADC_SetCalibrationFactor:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:110    .text.LL_ADC_SetCalibrationFactor:0000000000000000 LL_ADC_SetCalibrationFactor
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:161    .text.LL_ADC_GetCalibrationFactor:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:166    .text.LL_ADC_GetCalibrationFactor:0000000000000000 LL_ADC_GetCalibrationFactor
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:209    .text.LL_ADC_SetOffset:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:214    .text.LL_ADC_SetOffset:0000000000000000 LL_ADC_SetOffset
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:268    .text.LL_ADC_SetOffset:0000000000000044 $d
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:273    .text.LL_ADC_GetOffsetChannel:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:278    .text.LL_ADC_GetOffsetChannel:0000000000000000 LL_ADC_GetOffsetChannel
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:322    .text.LL_ADC_SetOffsetState:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:327    .text.LL_ADC_SetOffsetState:0000000000000000 LL_ADC_SetOffsetState
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:376    .text.LL_ADC_SetSamplingTimeCommonConfig:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:381    .text.LL_ADC_SetSamplingTimeCommonConfig:0000000000000000 LL_ADC_SetSamplingTimeCommonConfig
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:420    .text.LL_ADC_REG_IsTriggerSourceSWStart:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:425    .text.LL_ADC_REG_IsTriggerSourceSWStart:0000000000000000 LL_ADC_REG_IsTriggerSourceSWStart
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:469    .text.LL_ADC_INJ_IsTriggerSourceSWStart:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:474    .text.LL_ADC_INJ_IsTriggerSourceSWStart:0000000000000000 LL_ADC_INJ_IsTriggerSourceSWStart
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:518    .text.LL_ADC_INJ_GetTrigAuto:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:523    .text.LL_ADC_INJ_GetTrigAuto:0000000000000000 LL_ADC_INJ_GetTrigAuto
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:558    .text.LL_ADC_INJ_SetQueueMode:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:563    .text.LL_ADC_INJ_SetQueueMode:0000000000000000 LL_ADC_INJ_SetQueueMode
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:603    .text.LL_ADC_SetChannelSamplingTime:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:608    .text.LL_ADC_SetChannelSamplingTime:0000000000000000 LL_ADC_SetChannelSamplingTime
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:669    .text.LL_ADC_SetChannelSingleDiff:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:674    .text.LL_ADC_SetChannelSingleDiff:0000000000000000 LL_ADC_SetChannelSingleDiff
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:722    .text.LL_ADC_SetChannelSingleDiff:0000000000000044 $d
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:727    .text.LL_ADC_GetMultimode:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:732    .text.LL_ADC_GetMultimode:0000000000000000 LL_ADC_GetMultimode
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:767    .text.LL_ADC_EnableDeepPowerDown:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:772    .text.LL_ADC_EnableDeepPowerDown:0000000000000000 LL_ADC_EnableDeepPowerDown
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:810    .text.LL_ADC_DisableInternalRegulator:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:815    .text.LL_ADC_DisableInternalRegulator:0000000000000000 LL_ADC_DisableInternalRegulator
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:852    .text.LL_ADC_IsEnabled:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:857    .text.LL_ADC_IsEnabled:0000000000000000 LL_ADC_IsEnabled
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:901    .text.LL_ADC_StartCalibration:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:906    .text.LL_ADC_StartCalibration:0000000000000000 LL_ADC_StartCalibration
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:948    .text.LL_ADC_IsCalibrationOnGoing:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:953    .text.LL_ADC_IsCalibrationOnGoing:0000000000000000 LL_ADC_IsCalibrationOnGoing
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:997    .text.LL_ADC_REG_StartConversion:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1002   .text.LL_ADC_REG_StartConversion:0000000000000000 LL_ADC_REG_StartConversion
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1040   .text.LL_ADC_REG_IsConversionOngoing:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1045   .text.LL_ADC_REG_IsConversionOngoing:0000000000000000 LL_ADC_REG_IsConversionOngoing
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1089   .text.LL_ADC_INJ_StartConversion:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1094   .text.LL_ADC_INJ_StartConversion:0000000000000000 LL_ADC_INJ_StartConversion
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1132   .text.LL_ADC_INJ_IsConversionOngoing:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1137   .text.LL_ADC_INJ_IsConversionOngoing:0000000000000000 LL_ADC_INJ_IsConversionOngoing
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1181   .text.HAL_ADCEx_Calibration_Start:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1187   .text.HAL_ADCEx_Calibration_Start:0000000000000000 HAL_ADCEx_Calibration_Start
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1314   .text.HAL_ADCEx_Calibration_GetValue:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1320   .text.HAL_ADCEx_Calibration_GetValue:0000000000000000 HAL_ADCEx_Calibration_GetValue
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1355   .text.HAL_ADCEx_Calibration_SetValue:0000000000000000 $t
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 279
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:20     .text.LL_ADC_SetCommonPathInternalCh:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:25     .text.LL_ADC_SetCommonPathInternalCh:0000000000000000 LL_ADC_SetCommonPathInternalCh
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:65     .text.LL_ADC_GetCommonPathInternalCh:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:70     .text.LL_ADC_GetCommonPathInternalCh:0000000000000000 LL_ADC_GetCommonPathInternalCh
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:105    .text.LL_ADC_SetCalibrationFactor:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:110    .text.LL_ADC_SetCalibrationFactor:0000000000000000 LL_ADC_SetCalibrationFactor
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:161    .text.LL_ADC_GetCalibrationFactor:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:166    .text.LL_ADC_GetCalibrationFactor:0000000000000000 LL_ADC_GetCalibrationFactor
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:209    .text.LL_ADC_SetOffset:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:214    .text.LL_ADC_SetOffset:0000000000000000 LL_ADC_SetOffset
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:268    .text.LL_ADC_SetOffset:0000000000000044 $d
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:273    .text.LL_ADC_GetOffsetChannel:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:278    .text.LL_ADC_GetOffsetChannel:0000000000000000 LL_ADC_GetOffsetChannel
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:322    .text.LL_ADC_SetOffsetState:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:327    .text.LL_ADC_SetOffsetState:0000000000000000 LL_ADC_SetOffsetState
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:376    .text.LL_ADC_SetSamplingTimeCommonConfig:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:381    .text.LL_ADC_SetSamplingTimeCommonConfig:0000000000000000 LL_ADC_SetSamplingTimeCommonConfig
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:420    .text.LL_ADC_REG_IsTriggerSourceSWStart:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:425    .text.LL_ADC_REG_IsTriggerSourceSWStart:0000000000000000 LL_ADC_REG_IsTriggerSourceSWStart
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:469    .text.LL_ADC_INJ_IsTriggerSourceSWStart:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:474    .text.LL_ADC_INJ_IsTriggerSourceSWStart:0000000000000000 LL_ADC_INJ_IsTriggerSourceSWStart
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:518    .text.LL_ADC_INJ_GetTrigAuto:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:523    .text.LL_ADC_INJ_GetTrigAuto:0000000000000000 LL_ADC_INJ_GetTrigAuto
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:558    .text.LL_ADC_INJ_SetQueueMode:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:563    .text.LL_ADC_INJ_SetQueueMode:0000000000000000 LL_ADC_INJ_SetQueueMode
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:603    .text.LL_ADC_SetChannelSamplingTime:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:608    .text.LL_ADC_SetChannelSamplingTime:0000000000000000 LL_ADC_SetChannelSamplingTime
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:669    .text.LL_ADC_SetChannelSingleDiff:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:674    .text.LL_ADC_SetChannelSingleDiff:0000000000000000 LL_ADC_SetChannelSingleDiff
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:722    .text.LL_ADC_SetChannelSingleDiff:0000000000000044 $d
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:727    .text.LL_ADC_GetMultimode:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:732    .text.LL_ADC_GetMultimode:0000000000000000 LL_ADC_GetMultimode
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:767    .text.LL_ADC_EnableDeepPowerDown:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:772    .text.LL_ADC_EnableDeepPowerDown:0000000000000000 LL_ADC_EnableDeepPowerDown
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:810    .text.LL_ADC_DisableInternalRegulator:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:815    .text.LL_ADC_DisableInternalRegulator:0000000000000000 LL_ADC_DisableInternalRegulator
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:852    .text.LL_ADC_IsEnabled:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:857    .text.LL_ADC_IsEnabled:0000000000000000 LL_ADC_IsEnabled
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:901    .text.LL_ADC_StartCalibration:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:906    .text.LL_ADC_StartCalibration:0000000000000000 LL_ADC_StartCalibration
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:948    .text.LL_ADC_IsCalibrationOnGoing:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:953    .text.LL_ADC_IsCalibrationOnGoing:0000000000000000 LL_ADC_IsCalibrationOnGoing
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:997    .text.LL_ADC_REG_StartConversion:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1002   .text.LL_ADC_REG_StartConversion:0000000000000000 LL_ADC_REG_StartConversion
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1040   .text.LL_ADC_REG_IsConversionOngoing:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1045   .text.LL_ADC_REG_IsConversionOngoing:0000000000000000 LL_ADC_REG_IsConversionOngoing
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1089   .text.LL_ADC_INJ_StartConversion:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1094   .text.LL_ADC_INJ_StartConversion:0000000000000000 LL_ADC_INJ_StartConversion
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1132   .text.LL_ADC_INJ_IsConversionOngoing:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1137   .text.LL_ADC_INJ_IsConversionOngoing:0000000000000000 LL_ADC_INJ_IsConversionOngoing
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1181   .text.HAL_ADCEx_Calibration_Start:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1187   .text.HAL_ADCEx_Calibration_Start:0000000000000000 HAL_ADCEx_Calibration_Start
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1314   .text.HAL_ADCEx_Calibration_GetValue:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1320   .text.HAL_ADCEx_Calibration_GetValue:0000000000000000 HAL_ADCEx_Calibration_GetValue
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1355   .text.HAL_ADCEx_Calibration_SetValue:0000000000000000 $t
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 279
 
 
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1361   .text.HAL_ADCEx_Calibration_SetValue:0000000000000000 HAL_ADCEx_Calibration_SetValue
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1467   .text.HAL_ADCEx_InjectedStart:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1473   .text.HAL_ADCEx_InjectedStart:0000000000000000 HAL_ADCEx_InjectedStart
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1703   .text.HAL_ADCEx_InjectedStart:0000000000000154 $d
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1710   .text.HAL_ADCEx_InjectedStop:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1716   .text.HAL_ADCEx_InjectedStop:0000000000000000 HAL_ADCEx_InjectedStop
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1808   .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:1814   .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 HAL_ADCEx_InjectedPollForConversion
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2083   .text.HAL_ADCEx_InjectedPollForConversion:000000000000017c $d
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2090   .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2096   .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 HAL_ADCEx_InjectedStart_IT
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2389   .text.HAL_ADCEx_InjectedStart_IT:00000000000001c0 $d
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2396   .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2402   .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 HAL_ADCEx_InjectedStop_IT
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2502   .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2508   .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000000 HAL_ADCEx_MultiModeStart_DMA
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2700   .text.HAL_ADCEx_MultiModeStart_DMA:000000000000012c $d
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2710   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2716   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000000 HAL_ADCEx_MultiModeStop_DMA
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2953   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000188 $d
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2959   .text.HAL_ADCEx_MultiModeGetValue:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:2965   .text.HAL_ADCEx_MultiModeGetValue:0000000000000000 HAL_ADCEx_MultiModeGetValue
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3000   .text.HAL_ADCEx_MultiModeGetValue:000000000000001c $d
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3005   .text.HAL_ADCEx_InjectedGetValue:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3011   .text.HAL_ADCEx_InjectedGetValue:0000000000000000 HAL_ADCEx_InjectedGetValue
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3097   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3103   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 HAL_ADCEx_InjectedConvCpltCallback
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3133   .text.HAL_ADCEx_InjectedQueueOverflowCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3139   .text.HAL_ADCEx_InjectedQueueOverflowCallback:0000000000000000 HAL_ADCEx_InjectedQueueOverflowCallback
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3169   .text.HAL_ADCEx_LevelOutOfWindow2Callback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3175   .text.HAL_ADCEx_LevelOutOfWindow2Callback:0000000000000000 HAL_ADCEx_LevelOutOfWindow2Callback
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3205   .text.HAL_ADCEx_LevelOutOfWindow3Callback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3211   .text.HAL_ADCEx_LevelOutOfWindow3Callback:0000000000000000 HAL_ADCEx_LevelOutOfWindow3Callback
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3241   .text.HAL_ADCEx_EndOfSamplingCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3247   .text.HAL_ADCEx_EndOfSamplingCallback:0000000000000000 HAL_ADCEx_EndOfSamplingCallback
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3277   .text.HAL_ADCEx_RegularStop:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3283   .text.HAL_ADCEx_RegularStop:0000000000000000 HAL_ADCEx_RegularStop
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3381   .text.HAL_ADCEx_RegularStop_IT:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3387   .text.HAL_ADCEx_RegularStop_IT:0000000000000000 HAL_ADCEx_RegularStop_IT
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3493   .text.HAL_ADCEx_RegularStop_DMA:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3499   .text.HAL_ADCEx_RegularStop_DMA:0000000000000000 HAL_ADCEx_RegularStop_DMA
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3641   .text.HAL_ADCEx_RegularMultiModeStop_DMA:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3647   .text.HAL_ADCEx_RegularMultiModeStop_DMA:0000000000000000 HAL_ADCEx_RegularMultiModeStop_DMA
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3897   .text.HAL_ADCEx_RegularMultiModeStop_DMA:00000000000001a4 $d
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3903   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:3909   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 HAL_ADCEx_InjectedConfigChannel
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:4349   .text.HAL_ADCEx_InjectedConfigChannel:00000000000002e4 $d
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:4352   .text.HAL_ADCEx_InjectedConfigChannel:00000000000002e8 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5305   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000840 $d
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5308   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000844 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5475   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000954 $d
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5487   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5493   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000000 HAL_ADCEx_MultiModeConfigChannel
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5692   .text.HAL_ADCEx_MultiModeConfigChannel:000000000000013c $d
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5699   .text.HAL_ADCEx_EnableInjectedQueue:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5705   .text.HAL_ADCEx_EnableInjectedQueue:0000000000000000 HAL_ADCEx_EnableInjectedQueue
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5777   .text.HAL_ADCEx_DisableInjectedQueue:0000000000000000 $t
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc54aVek.s 			page 280
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1361   .text.HAL_ADCEx_Calibration_SetValue:0000000000000000 HAL_ADCEx_Calibration_SetValue
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1467   .text.HAL_ADCEx_InjectedStart:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1473   .text.HAL_ADCEx_InjectedStart:0000000000000000 HAL_ADCEx_InjectedStart
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1703   .text.HAL_ADCEx_InjectedStart:0000000000000154 $d
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1710   .text.HAL_ADCEx_InjectedStop:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1716   .text.HAL_ADCEx_InjectedStop:0000000000000000 HAL_ADCEx_InjectedStop
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1808   .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:1814   .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 HAL_ADCEx_InjectedPollForConversion
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2083   .text.HAL_ADCEx_InjectedPollForConversion:000000000000017c $d
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2090   .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2096   .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 HAL_ADCEx_InjectedStart_IT
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2389   .text.HAL_ADCEx_InjectedStart_IT:00000000000001c0 $d
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2396   .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2402   .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 HAL_ADCEx_InjectedStop_IT
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2502   .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2508   .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000000 HAL_ADCEx_MultiModeStart_DMA
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2700   .text.HAL_ADCEx_MultiModeStart_DMA:000000000000012c $d
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2710   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2716   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000000 HAL_ADCEx_MultiModeStop_DMA
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2953   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000188 $d
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2959   .text.HAL_ADCEx_MultiModeGetValue:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:2965   .text.HAL_ADCEx_MultiModeGetValue:0000000000000000 HAL_ADCEx_MultiModeGetValue
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3000   .text.HAL_ADCEx_MultiModeGetValue:000000000000001c $d
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3005   .text.HAL_ADCEx_InjectedGetValue:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3011   .text.HAL_ADCEx_InjectedGetValue:0000000000000000 HAL_ADCEx_InjectedGetValue
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3097   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3103   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 HAL_ADCEx_InjectedConvCpltCallback
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3133   .text.HAL_ADCEx_InjectedQueueOverflowCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3139   .text.HAL_ADCEx_InjectedQueueOverflowCallback:0000000000000000 HAL_ADCEx_InjectedQueueOverflowCallback
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3169   .text.HAL_ADCEx_LevelOutOfWindow2Callback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3175   .text.HAL_ADCEx_LevelOutOfWindow2Callback:0000000000000000 HAL_ADCEx_LevelOutOfWindow2Callback
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3205   .text.HAL_ADCEx_LevelOutOfWindow3Callback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3211   .text.HAL_ADCEx_LevelOutOfWindow3Callback:0000000000000000 HAL_ADCEx_LevelOutOfWindow3Callback
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3241   .text.HAL_ADCEx_EndOfSamplingCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3247   .text.HAL_ADCEx_EndOfSamplingCallback:0000000000000000 HAL_ADCEx_EndOfSamplingCallback
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3277   .text.HAL_ADCEx_RegularStop:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3283   .text.HAL_ADCEx_RegularStop:0000000000000000 HAL_ADCEx_RegularStop
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3381   .text.HAL_ADCEx_RegularStop_IT:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3387   .text.HAL_ADCEx_RegularStop_IT:0000000000000000 HAL_ADCEx_RegularStop_IT
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3493   .text.HAL_ADCEx_RegularStop_DMA:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3499   .text.HAL_ADCEx_RegularStop_DMA:0000000000000000 HAL_ADCEx_RegularStop_DMA
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3641   .text.HAL_ADCEx_RegularMultiModeStop_DMA:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3647   .text.HAL_ADCEx_RegularMultiModeStop_DMA:0000000000000000 HAL_ADCEx_RegularMultiModeStop_DMA
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3897   .text.HAL_ADCEx_RegularMultiModeStop_DMA:00000000000001a4 $d
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3903   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:3909   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 HAL_ADCEx_InjectedConfigChannel
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:4349   .text.HAL_ADCEx_InjectedConfigChannel:00000000000002e4 $d
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:4352   .text.HAL_ADCEx_InjectedConfigChannel:00000000000002e8 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5305   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000840 $d
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5308   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000844 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5475   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000954 $d
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5487   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5493   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000000 HAL_ADCEx_MultiModeConfigChannel
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5692   .text.HAL_ADCEx_MultiModeConfigChannel:000000000000013c $d
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5699   .text.HAL_ADCEx_EnableInjectedQueue:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5705   .text.HAL_ADCEx_EnableInjectedQueue:0000000000000000 HAL_ADCEx_EnableInjectedQueue
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5777   .text.HAL_ADCEx_DisableInjectedQueue:0000000000000000 $t
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccbrat96.s 			page 280
 
 
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5783   .text.HAL_ADCEx_DisableInjectedQueue:0000000000000000 HAL_ADCEx_DisableInjectedQueue
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5847   .text.HAL_ADCEx_DisableVoltageRegulator:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5853   .text.HAL_ADCEx_DisableVoltageRegulator:0000000000000000 HAL_ADCEx_DisableVoltageRegulator
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5905   .text.HAL_ADCEx_EnterADCDeepPowerDownMode:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc54aVek.s:5911   .text.HAL_ADCEx_EnterADCDeepPowerDownMode:0000000000000000 HAL_ADCEx_EnterADCDeepPowerDownMode
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5783   .text.HAL_ADCEx_DisableInjectedQueue:0000000000000000 HAL_ADCEx_DisableInjectedQueue
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5847   .text.HAL_ADCEx_DisableVoltageRegulator:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5853   .text.HAL_ADCEx_DisableVoltageRegulator:0000000000000000 HAL_ADCEx_DisableVoltageRegulator
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5905   .text.HAL_ADCEx_EnterADCDeepPowerDownMode:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccbrat96.s:5911   .text.HAL_ADCEx_EnterADCDeepPowerDownMode:0000000000000000 HAL_ADCEx_EnterADCDeepPowerDownMode
 
 UNDEFINED SYMBOLS
 ADC_Disable

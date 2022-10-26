@@ -4,6 +4,8 @@
       "name": "STM32",
       "includePath": [
         "Core/Inc",
+        "Core/Inc/gcodes",
+        "Core/Src/gcodes",
         "Drivers/CMSIS/Device/ST/STM32L4xx/Include",
         "Drivers/CMSIS/Include",
         "Drivers/STM32L4xx_HAL_Driver/Inc",
@@ -13,7 +15,8 @@
         "STM32L4P5xx",
         "USE_HAL_DRIVER"
       ],
-      "compilerPath": "C:\\USERS\\ISAN\\APPDATA\\ROAMING\\CODE\\USER\\GLOBALSTORAGE\\BMD.STM32-FOR-VSCODE\\@XPACK-DEV-TOOLS\\ARM-NONE-EABI-GCC\\11.3.1-1.1.2\\.CONTENT\\BIN\\ARM-NONE-EABI-GCC.EXE"
+      "compilerPath": "C:\\USERS\\ISAN\\APPDATA\\ROAMING\\CODE\\USER\\GLOBALSTORAGE\\BMD.STM32-FOR-VSCODE\\@XPACK-DEV-TOOLS\\ARM-NONE-EABI-GCC\\11.3.1-1.1.2\\.CONTENT\\BIN\\ARM-NONE-EABI-GCC.EXE",
+      "configurationProvider": "ms-vscode.makefile-tools"
     }
   ],
   "version": 4

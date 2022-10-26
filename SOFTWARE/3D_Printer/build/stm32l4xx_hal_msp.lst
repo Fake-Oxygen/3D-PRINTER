@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,31 +19,15 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.bss.msg_buffer,"aw",%nobits
-  20              		.align	2
-  23              	msg_buffer:
-  24 0000 00000000 		.space	30
-  24      00000000 
-  24      00000000 
-  24      00000000 
-  24      00000000 
-  25              		.section	.bss.RxBuf,"aw",%nobits
-  26              		.align	2
-  29              	RxBuf:
-  30 0000 00000000 		.space	20
-  30      00000000 
-  30      00000000 
-  30      00000000 
-  30      00000000 
-  31              		.section	.text.HAL_MspInit,"ax",%progbits
-  32              		.align	1
-  33              		.global	HAL_MspInit
-  34              		.syntax unified
-  35              		.thumb
-  36              		.thumb_func
-  38              	HAL_MspInit:
-  39              	.LFB321:
-  40              		.file 1 "Core/Src/stm32l4xx_hal_msp.c"
+  19              		.section	.text.HAL_MspInit,"ax",%progbits
+  20              		.align	1
+  21              		.global	HAL_MspInit
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	HAL_MspInit:
+  27              	.LFB325:
+  28              		.file 1 "Core/Src/stm32l4xx_hal_msp.c"
    1:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE BEGIN Header */
    2:Core/Src/stm32l4xx_hal_msp.c **** /**
    3:Core/Src/stm32l4xx_hal_msp.c ****   ******************************************************************************
@@ -58,9 +42,6 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
   12:Core/Src/stm32l4xx_hal_msp.c ****   *
   13:Core/Src/stm32l4xx_hal_msp.c ****   * This software is licensed under terms that can be found in the LICENSE file
   14:Core/Src/stm32l4xx_hal_msp.c ****   * in the root directory of this software component.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 2
-
-
   15:Core/Src/stm32l4xx_hal_msp.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
   16:Core/Src/stm32l4xx_hal_msp.c ****   *
   17:Core/Src/stm32l4xx_hal_msp.c ****   ******************************************************************************
@@ -77,6 +58,9 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
   28:Core/Src/stm32l4xx_hal_msp.c **** extern DMA_HandleTypeDef hdma_lpuart1_rx;
   29:Core/Src/stm32l4xx_hal_msp.c **** 
   30:Core/Src/stm32l4xx_hal_msp.c **** /* Private typedef -----------------------------------------------------------*/
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 2
+
+
   31:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE BEGIN TD */
   32:Core/Src/stm32l4xx_hal_msp.c **** 
   33:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE END TD */
@@ -116,53 +100,53 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
   67:Core/Src/stm32l4xx_hal_msp.c ****   */
   68:Core/Src/stm32l4xx_hal_msp.c **** void HAL_MspInit(void)
   69:Core/Src/stm32l4xx_hal_msp.c **** {
-  41              		.loc 1 69 1
-  42              		.cfi_startproc
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 3
-
-
-  43              		@ args = 0, pretend = 0, frame = 8
-  44              		@ frame_needed = 1, uses_anonymous_args = 0
-  45              		@ link register save eliminated.
-  46 0000 80B4     		push	{r7}
-  47              		.cfi_def_cfa_offset 4
-  48              		.cfi_offset 7, -4
-  49 0002 83B0     		sub	sp, sp, #12
-  50              		.cfi_def_cfa_offset 16
-  51 0004 00AF     		add	r7, sp, #0
-  52              		.cfi_def_cfa_register 7
-  53              	.LBB2:
+  29              		.loc 1 69 1
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 8
+  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34 0000 80B4     		push	{r7}
+  35              		.cfi_def_cfa_offset 4
+  36              		.cfi_offset 7, -4
+  37 0002 83B0     		sub	sp, sp, #12
+  38              		.cfi_def_cfa_offset 16
+  39 0004 00AF     		add	r7, sp, #0
+  40              		.cfi_def_cfa_register 7
+  41              	.LBB2:
   70:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 0 */
   71:Core/Src/stm32l4xx_hal_msp.c **** 
   72:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END MspInit 0 */
   73:Core/Src/stm32l4xx_hal_msp.c **** 
   74:Core/Src/stm32l4xx_hal_msp.c ****   __HAL_RCC_SYSCFG_CLK_ENABLE();
-  54              		.loc 1 74 3
-  55 0006 0F4B     		ldr	r3, .L2
-  56 0008 1B6E     		ldr	r3, [r3, #96]
-  57 000a 0E4A     		ldr	r2, .L2
-  58 000c 43F00103 		orr	r3, r3, #1
-  59 0010 1366     		str	r3, [r2, #96]
-  60 0012 0C4B     		ldr	r3, .L2
-  61 0014 1B6E     		ldr	r3, [r3, #96]
-  62 0016 03F00103 		and	r3, r3, #1
-  63 001a 7B60     		str	r3, [r7, #4]
-  64 001c 7B68     		ldr	r3, [r7, #4]
-  65              	.LBE2:
-  66              	.LBB3:
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 3
+
+
+  42              		.loc 1 74 3
+  43 0006 0F4B     		ldr	r3, .L2
+  44 0008 1B6E     		ldr	r3, [r3, #96]
+  45 000a 0E4A     		ldr	r2, .L2
+  46 000c 43F00103 		orr	r3, r3, #1
+  47 0010 1366     		str	r3, [r2, #96]
+  48 0012 0C4B     		ldr	r3, .L2
+  49 0014 1B6E     		ldr	r3, [r3, #96]
+  50 0016 03F00103 		and	r3, r3, #1
+  51 001a 7B60     		str	r3, [r7, #4]
+  52 001c 7B68     		ldr	r3, [r7, #4]
+  53              	.LBE2:
+  54              	.LBB3:
   75:Core/Src/stm32l4xx_hal_msp.c ****   __HAL_RCC_PWR_CLK_ENABLE();
-  67              		.loc 1 75 3
-  68 001e 094B     		ldr	r3, .L2
-  69 0020 9B6D     		ldr	r3, [r3, #88]
-  70 0022 084A     		ldr	r2, .L2
-  71 0024 43F08053 		orr	r3, r3, #268435456
-  72 0028 9365     		str	r3, [r2, #88]
-  73 002a 064B     		ldr	r3, .L2
-  74 002c 9B6D     		ldr	r3, [r3, #88]
-  75 002e 03F08053 		and	r3, r3, #268435456
-  76 0032 3B60     		str	r3, [r7]
-  77 0034 3B68     		ldr	r3, [r7]
-  78              	.LBE3:
+  55              		.loc 1 75 3
+  56 001e 094B     		ldr	r3, .L2
+  57 0020 9B6D     		ldr	r3, [r3, #88]
+  58 0022 084A     		ldr	r2, .L2
+  59 0024 43F08053 		orr	r3, r3, #268435456
+  60 0028 9365     		str	r3, [r2, #88]
+  61 002a 064B     		ldr	r3, .L2
+  62 002c 9B6D     		ldr	r3, [r3, #88]
+  63 002e 03F08053 		and	r3, r3, #268435456
+  64 0032 3B60     		str	r3, [r7]
+  65 0034 3B68     		ldr	r3, [r7]
+  66              	.LBE3:
   76:Core/Src/stm32l4xx_hal_msp.c **** 
   77:Core/Src/stm32l4xx_hal_msp.c ****   /* System interrupt init*/
   78:Core/Src/stm32l4xx_hal_msp.c **** 
@@ -170,34 +154,34 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
   80:Core/Src/stm32l4xx_hal_msp.c **** 
   81:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END MspInit 1 */
   82:Core/Src/stm32l4xx_hal_msp.c **** }
-  79              		.loc 1 82 1
-  80 0036 00BF     		nop
-  81 0038 0C37     		adds	r7, r7, #12
-  82              		.cfi_def_cfa_offset 4
-  83 003a BD46     		mov	sp, r7
-  84              		.cfi_def_cfa_register 13
-  85              		@ sp needed
-  86 003c 5DF8047B 		ldr	r7, [sp], #4
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 4
+  67              		.loc 1 82 1
+  68 0036 00BF     		nop
+  69 0038 0C37     		adds	r7, r7, #12
+  70              		.cfi_def_cfa_offset 4
+  71 003a BD46     		mov	sp, r7
+  72              		.cfi_def_cfa_register 13
+  73              		@ sp needed
+  74 003c 5DF8047B 		ldr	r7, [sp], #4
+  75              		.cfi_restore 7
+  76              		.cfi_def_cfa_offset 0
+  77 0040 7047     		bx	lr
+  78              	.L3:
+  79 0042 00BF     		.align	2
+  80              	.L2:
+  81 0044 00100240 		.word	1073876992
+  82              		.cfi_endproc
+  83              	.LFE325:
+  85              		.section	.text.HAL_ADC_MspInit,"ax",%progbits
+  86              		.align	1
+  87              		.global	HAL_ADC_MspInit
+  88              		.syntax unified
+  89              		.thumb
+  90              		.thumb_func
+  92              	HAL_ADC_MspInit:
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 4
 
 
-  87              		.cfi_restore 7
-  88              		.cfi_def_cfa_offset 0
-  89 0040 7047     		bx	lr
-  90              	.L3:
-  91 0042 00BF     		.align	2
-  92              	.L2:
-  93 0044 00100240 		.word	1073876992
-  94              		.cfi_endproc
-  95              	.LFE321:
-  97              		.section	.text.HAL_ADC_MspInit,"ax",%progbits
-  98              		.align	1
-  99              		.global	HAL_ADC_MspInit
- 100              		.syntax unified
- 101              		.thumb
- 102              		.thumb_func
- 104              	HAL_ADC_MspInit:
- 105              	.LFB322:
+  93              	.LFB326:
   83:Core/Src/stm32l4xx_hal_msp.c **** 
   84:Core/Src/stm32l4xx_hal_msp.c **** /**
   85:Core/Src/stm32l4xx_hal_msp.c **** * @brief ADC MSP Initialization
@@ -207,46 +191,43 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
   89:Core/Src/stm32l4xx_hal_msp.c **** */
   90:Core/Src/stm32l4xx_hal_msp.c **** void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
   91:Core/Src/stm32l4xx_hal_msp.c **** {
- 106              		.loc 1 91 1
- 107              		.cfi_startproc
- 108              		@ args = 0, pretend = 0, frame = 192
- 109              		@ frame_needed = 1, uses_anonymous_args = 0
- 110 0000 80B5     		push	{r7, lr}
- 111              		.cfi_def_cfa_offset 8
- 112              		.cfi_offset 7, -8
- 113              		.cfi_offset 14, -4
- 114 0002 B0B0     		sub	sp, sp, #192
- 115              		.cfi_def_cfa_offset 200
- 116 0004 00AF     		add	r7, sp, #0
- 117              		.cfi_def_cfa_register 7
- 118 0006 7860     		str	r0, [r7, #4]
+  94              		.loc 1 91 1
+  95              		.cfi_startproc
+  96              		@ args = 0, pretend = 0, frame = 192
+  97              		@ frame_needed = 1, uses_anonymous_args = 0
+  98 0000 80B5     		push	{r7, lr}
+  99              		.cfi_def_cfa_offset 8
+ 100              		.cfi_offset 7, -8
+ 101              		.cfi_offset 14, -4
+ 102 0002 B0B0     		sub	sp, sp, #192
+ 103              		.cfi_def_cfa_offset 200
+ 104 0004 00AF     		add	r7, sp, #0
+ 105              		.cfi_def_cfa_register 7
+ 106 0006 7860     		str	r0, [r7, #4]
   92:Core/Src/stm32l4xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
- 119              		.loc 1 92 20
- 120 0008 07F1AC03 		add	r3, r7, #172
- 121 000c 0022     		movs	r2, #0
- 122 000e 1A60     		str	r2, [r3]
- 123 0010 5A60     		str	r2, [r3, #4]
- 124 0012 9A60     		str	r2, [r3, #8]
- 125 0014 DA60     		str	r2, [r3, #12]
- 126 0016 1A61     		str	r2, [r3, #16]
+ 107              		.loc 1 92 20
+ 108 0008 07F1AC03 		add	r3, r7, #172
+ 109 000c 0022     		movs	r2, #0
+ 110 000e 1A60     		str	r2, [r3]
+ 111 0010 5A60     		str	r2, [r3, #4]
+ 112 0012 9A60     		str	r2, [r3, #8]
+ 113 0014 DA60     		str	r2, [r3, #12]
+ 114 0016 1A61     		str	r2, [r3, #16]
   93:Core/Src/stm32l4xx_hal_msp.c ****   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
- 127              		.loc 1 93 28
- 128 0018 07F11403 		add	r3, r7, #20
- 129 001c 9822     		movs	r2, #152
- 130 001e 0021     		movs	r1, #0
- 131 0020 1846     		mov	r0, r3
- 132 0022 FFF7FEFF 		bl	memset
+ 115              		.loc 1 93 28
+ 116 0018 07F11403 		add	r3, r7, #20
+ 117 001c 9822     		movs	r2, #152
+ 118 001e 0021     		movs	r1, #0
+ 119 0020 1846     		mov	r0, r3
+ 120 0022 FFF7FEFF 		bl	memset
   94:Core/Src/stm32l4xx_hal_msp.c ****   if(hadc->Instance==ADC1)
- 133              		.loc 1 94 10
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 5
-
-
- 134 0026 7B68     		ldr	r3, [r7, #4]
- 135 0028 1B68     		ldr	r3, [r3]
- 136              		.loc 1 94 5
- 137 002a 3C4A     		ldr	r2, .L9
- 138 002c 9342     		cmp	r3, r2
- 139 002e 71D1     		bne	.L8
+ 121              		.loc 1 94 10
+ 122 0026 7B68     		ldr	r3, [r7, #4]
+ 123 0028 1B68     		ldr	r3, [r3]
+ 124              		.loc 1 94 5
+ 125 002a 3C4A     		ldr	r2, .L9
+ 126 002c 9342     		cmp	r3, r2
+ 127 002e 71D1     		bne	.L8
   95:Core/Src/stm32l4xx_hal_msp.c ****   {
   96:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN ADC1_MspInit 0 */
   97:Core/Src/stm32l4xx_hal_msp.c **** 
@@ -255,190 +236,193 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  100:Core/Src/stm32l4xx_hal_msp.c ****   /** Initializes the peripherals clock
  101:Core/Src/stm32l4xx_hal_msp.c ****   */
  102:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
- 140              		.loc 1 102 40
- 141 0030 4FF48043 		mov	r3, #16384
- 142 0034 7B61     		str	r3, [r7, #20]
+ 128              		.loc 1 102 40
+ 129 0030 4FF48043 		mov	r3, #16384
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 5
+
+
+ 130 0034 7B61     		str	r3, [r7, #20]
  103:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_PLLSAI1;
- 143              		.loc 1 103 37
- 144 0036 4FF08053 		mov	r3, #268435456
- 145 003a C7F89430 		str	r3, [r7, #148]
+ 131              		.loc 1 103 37
+ 132 0036 4FF08053 		mov	r3, #268435456
+ 133 003a C7F89430 		str	r3, [r7, #148]
  104:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1Source = RCC_PLLSOURCE_MSI;
- 146              		.loc 1 104 41
- 147 003e 0123     		movs	r3, #1
- 148 0040 BB61     		str	r3, [r7, #24]
+ 134              		.loc 1 104 41
+ 135 003e 0123     		movs	r3, #1
+ 136 0040 BB61     		str	r3, [r7, #24]
  105:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1M = 1;
- 149              		.loc 1 105 36
- 150 0042 0123     		movs	r3, #1
- 151 0044 FB61     		str	r3, [r7, #28]
+ 137              		.loc 1 105 36
+ 138 0042 0123     		movs	r3, #1
+ 139 0044 FB61     		str	r3, [r7, #28]
  106:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1N = 24;
- 152              		.loc 1 106 36
- 153 0046 1823     		movs	r3, #24
- 154 0048 3B62     		str	r3, [r7, #32]
+ 140              		.loc 1 106 36
+ 141 0046 1823     		movs	r3, #24
+ 142 0048 3B62     		str	r3, [r7, #32]
  107:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1P = RCC_PLLP_DIV2;
- 155              		.loc 1 107 36
- 156 004a 0223     		movs	r3, #2
- 157 004c 7B62     		str	r3, [r7, #36]
+ 143              		.loc 1 107 36
+ 144 004a 0223     		movs	r3, #2
+ 145 004c 7B62     		str	r3, [r7, #36]
  108:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1Q = RCC_PLLQ_DIV4;
- 158              		.loc 1 108 36
- 159 004e 0423     		movs	r3, #4
- 160 0050 BB62     		str	r3, [r7, #40]
+ 146              		.loc 1 108 36
+ 147 004e 0423     		movs	r3, #4
+ 148 0050 BB62     		str	r3, [r7, #40]
  109:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1R = RCC_PLLR_DIV2;
- 161              		.loc 1 109 36
- 162 0052 0223     		movs	r3, #2
- 163 0054 FB62     		str	r3, [r7, #44]
+ 149              		.loc 1 109 36
+ 150 0052 0223     		movs	r3, #2
+ 151 0054 FB62     		str	r3, [r7, #44]
  110:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PLLSAI1.PLLSAI1ClockOut = RCC_PLLSAI1_ADC1CLK;
- 164              		.loc 1 110 43
- 165 0056 4FF08073 		mov	r3, #16777216
- 166 005a 3B63     		str	r3, [r7, #48]
+ 152              		.loc 1 110 43
+ 153 0056 4FF08073 		mov	r3, #16777216
+ 154 005a 3B63     		str	r3, [r7, #48]
  111:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
- 167              		.loc 1 111 9
- 168 005c 07F11403 		add	r3, r7, #20
- 169 0060 1846     		mov	r0, r3
- 170 0062 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
- 171 0066 0346     		mov	r3, r0
- 172              		.loc 1 111 8
- 173 0068 002B     		cmp	r3, #0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 6
-
-
- 174 006a 01D0     		beq	.L6
+ 155              		.loc 1 111 9
+ 156 005c 07F11403 		add	r3, r7, #20
+ 157 0060 1846     		mov	r0, r3
+ 158 0062 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 159 0066 0346     		mov	r3, r0
+ 160              		.loc 1 111 8
+ 161 0068 002B     		cmp	r3, #0
+ 162 006a 01D0     		beq	.L6
  112:Core/Src/stm32l4xx_hal_msp.c ****     {
  113:Core/Src/stm32l4xx_hal_msp.c ****       Error_Handler();
- 175              		.loc 1 113 7
- 176 006c FFF7FEFF 		bl	Error_Handler
- 177              	.L6:
- 178              	.LBB4:
+ 163              		.loc 1 113 7
+ 164 006c FFF7FEFF 		bl	Error_Handler
+ 165              	.L6:
+ 166              	.LBB4:
  114:Core/Src/stm32l4xx_hal_msp.c ****     }
  115:Core/Src/stm32l4xx_hal_msp.c **** 
  116:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock enable */
  117:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_ADC_CLK_ENABLE();
- 179              		.loc 1 117 5
- 180 0070 2B4B     		ldr	r3, .L9+4
- 181 0072 DB6C     		ldr	r3, [r3, #76]
- 182 0074 2A4A     		ldr	r2, .L9+4
- 183 0076 43F40053 		orr	r3, r3, #8192
- 184 007a D364     		str	r3, [r2, #76]
- 185 007c 284B     		ldr	r3, .L9+4
- 186 007e DB6C     		ldr	r3, [r3, #76]
- 187 0080 03F40053 		and	r3, r3, #8192
- 188 0084 3B61     		str	r3, [r7, #16]
- 189 0086 3B69     		ldr	r3, [r7, #16]
- 190              	.LBE4:
- 191              	.LBB5:
+ 167              		.loc 1 117 5
+ 168 0070 2B4B     		ldr	r3, .L9+4
+ 169 0072 DB6C     		ldr	r3, [r3, #76]
+ 170 0074 2A4A     		ldr	r2, .L9+4
+ 171 0076 43F40053 		orr	r3, r3, #8192
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 6
+
+
+ 172 007a D364     		str	r3, [r2, #76]
+ 173 007c 284B     		ldr	r3, .L9+4
+ 174 007e DB6C     		ldr	r3, [r3, #76]
+ 175 0080 03F40053 		and	r3, r3, #8192
+ 176 0084 3B61     		str	r3, [r7, #16]
+ 177 0086 3B69     		ldr	r3, [r7, #16]
+ 178              	.LBE4:
+ 179              	.LBB5:
  118:Core/Src/stm32l4xx_hal_msp.c **** 
  119:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_GPIOC_CLK_ENABLE();
- 192              		.loc 1 119 5
- 193 0088 254B     		ldr	r3, .L9+4
- 194 008a DB6C     		ldr	r3, [r3, #76]
- 195 008c 244A     		ldr	r2, .L9+4
- 196 008e 43F00403 		orr	r3, r3, #4
- 197 0092 D364     		str	r3, [r2, #76]
- 198 0094 224B     		ldr	r3, .L9+4
- 199 0096 DB6C     		ldr	r3, [r3, #76]
- 200 0098 03F00403 		and	r3, r3, #4
- 201 009c FB60     		str	r3, [r7, #12]
- 202 009e FB68     		ldr	r3, [r7, #12]
- 203              	.LBE5:
+ 180              		.loc 1 119 5
+ 181 0088 254B     		ldr	r3, .L9+4
+ 182 008a DB6C     		ldr	r3, [r3, #76]
+ 183 008c 244A     		ldr	r2, .L9+4
+ 184 008e 43F00403 		orr	r3, r3, #4
+ 185 0092 D364     		str	r3, [r2, #76]
+ 186 0094 224B     		ldr	r3, .L9+4
+ 187 0096 DB6C     		ldr	r3, [r3, #76]
+ 188 0098 03F00403 		and	r3, r3, #4
+ 189 009c FB60     		str	r3, [r7, #12]
+ 190 009e FB68     		ldr	r3, [r7, #12]
+ 191              	.LBE5:
  120:Core/Src/stm32l4xx_hal_msp.c ****     /**ADC1 GPIO Configuration
  121:Core/Src/stm32l4xx_hal_msp.c ****     PC0     ------> ADC1_IN1
  122:Core/Src/stm32l4xx_hal_msp.c ****     PC1     ------> ADC1_IN2
  123:Core/Src/stm32l4xx_hal_msp.c ****     */
  124:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1;
- 204              		.loc 1 124 25
- 205 00a0 0323     		movs	r3, #3
- 206 00a2 C7F8AC30 		str	r3, [r7, #172]
+ 192              		.loc 1 124 25
+ 193 00a0 0323     		movs	r3, #3
+ 194 00a2 C7F8AC30 		str	r3, [r7, #172]
  125:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG_ADC_CONTROL;
- 207              		.loc 1 125 26
- 208 00a6 0B23     		movs	r3, #11
- 209 00a8 C7F8B030 		str	r3, [r7, #176]
+ 195              		.loc 1 125 26
+ 196 00a6 0B23     		movs	r3, #11
+ 197 00a8 C7F8B030 		str	r3, [r7, #176]
  126:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
- 210              		.loc 1 126 26
- 211 00ac 0023     		movs	r3, #0
- 212 00ae C7F8B430 		str	r3, [r7, #180]
+ 198              		.loc 1 126 26
+ 199 00ac 0023     		movs	r3, #0
+ 200 00ae C7F8B430 		str	r3, [r7, #180]
  127:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
- 213              		.loc 1 127 5
- 214 00b2 07F1AC03 		add	r3, r7, #172
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 7
-
-
- 215 00b6 1946     		mov	r1, r3
- 216 00b8 1A48     		ldr	r0, .L9+8
- 217 00ba FFF7FEFF 		bl	HAL_GPIO_Init
+ 201              		.loc 1 127 5
+ 202 00b2 07F1AC03 		add	r3, r7, #172
+ 203 00b6 1946     		mov	r1, r3
+ 204 00b8 1A48     		ldr	r0, .L9+8
+ 205 00ba FFF7FEFF 		bl	HAL_GPIO_Init
  128:Core/Src/stm32l4xx_hal_msp.c **** 
  129:Core/Src/stm32l4xx_hal_msp.c ****     /* ADC1 DMA Init */
  130:Core/Src/stm32l4xx_hal_msp.c ****     /* ADC1 Init */
  131:Core/Src/stm32l4xx_hal_msp.c ****     hdma_adc1.Instance = DMA1_Channel1;
- 218              		.loc 1 131 24
- 219 00be 1A4B     		ldr	r3, .L9+12
- 220 00c0 1A4A     		ldr	r2, .L9+16
- 221 00c2 1A60     		str	r2, [r3]
+ 206              		.loc 1 131 24
+ 207 00be 1A4B     		ldr	r3, .L9+12
+ 208 00c0 1A4A     		ldr	r2, .L9+16
+ 209 00c2 1A60     		str	r2, [r3]
  132:Core/Src/stm32l4xx_hal_msp.c ****     hdma_adc1.Init.Request = DMA_REQUEST_ADC1;
- 222              		.loc 1 132 28
- 223 00c4 184B     		ldr	r3, .L9+12
- 224 00c6 0522     		movs	r2, #5
- 225 00c8 5A60     		str	r2, [r3, #4]
+ 210              		.loc 1 132 28
+ 211 00c4 184B     		ldr	r3, .L9+12
+ 212 00c6 0522     		movs	r2, #5
+ 213 00c8 5A60     		str	r2, [r3, #4]
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 7
+
+
  133:Core/Src/stm32l4xx_hal_msp.c ****     hdma_adc1.Init.Direction = DMA_PERIPH_TO_MEMORY;
- 226              		.loc 1 133 30
- 227 00ca 174B     		ldr	r3, .L9+12
- 228 00cc 0022     		movs	r2, #0
- 229 00ce 9A60     		str	r2, [r3, #8]
+ 214              		.loc 1 133 30
+ 215 00ca 174B     		ldr	r3, .L9+12
+ 216 00cc 0022     		movs	r2, #0
+ 217 00ce 9A60     		str	r2, [r3, #8]
  134:Core/Src/stm32l4xx_hal_msp.c ****     hdma_adc1.Init.PeriphInc = DMA_PINC_DISABLE;
- 230              		.loc 1 134 30
- 231 00d0 154B     		ldr	r3, .L9+12
- 232 00d2 0022     		movs	r2, #0
- 233 00d4 DA60     		str	r2, [r3, #12]
+ 218              		.loc 1 134 30
+ 219 00d0 154B     		ldr	r3, .L9+12
+ 220 00d2 0022     		movs	r2, #0
+ 221 00d4 DA60     		str	r2, [r3, #12]
  135:Core/Src/stm32l4xx_hal_msp.c ****     hdma_adc1.Init.MemInc = DMA_MINC_ENABLE;
- 234              		.loc 1 135 27
- 235 00d6 144B     		ldr	r3, .L9+12
- 236 00d8 8022     		movs	r2, #128
- 237 00da 1A61     		str	r2, [r3, #16]
+ 222              		.loc 1 135 27
+ 223 00d6 144B     		ldr	r3, .L9+12
+ 224 00d8 8022     		movs	r2, #128
+ 225 00da 1A61     		str	r2, [r3, #16]
  136:Core/Src/stm32l4xx_hal_msp.c ****     hdma_adc1.Init.PeriphDataAlignment = DMA_PDATAALIGN_WORD;
- 238              		.loc 1 136 40
- 239 00dc 124B     		ldr	r3, .L9+12
- 240 00de 4FF40072 		mov	r2, #512
- 241 00e2 5A61     		str	r2, [r3, #20]
+ 226              		.loc 1 136 40
+ 227 00dc 124B     		ldr	r3, .L9+12
+ 228 00de 4FF40072 		mov	r2, #512
+ 229 00e2 5A61     		str	r2, [r3, #20]
  137:Core/Src/stm32l4xx_hal_msp.c ****     hdma_adc1.Init.MemDataAlignment = DMA_MDATAALIGN_WORD;
- 242              		.loc 1 137 37
- 243 00e4 104B     		ldr	r3, .L9+12
- 244 00e6 4FF40062 		mov	r2, #2048
- 245 00ea 9A61     		str	r2, [r3, #24]
+ 230              		.loc 1 137 37
+ 231 00e4 104B     		ldr	r3, .L9+12
+ 232 00e6 4FF40062 		mov	r2, #2048
+ 233 00ea 9A61     		str	r2, [r3, #24]
  138:Core/Src/stm32l4xx_hal_msp.c ****     hdma_adc1.Init.Mode = DMA_CIRCULAR;
- 246              		.loc 1 138 25
- 247 00ec 0E4B     		ldr	r3, .L9+12
- 248 00ee 2022     		movs	r2, #32
- 249 00f0 DA61     		str	r2, [r3, #28]
+ 234              		.loc 1 138 25
+ 235 00ec 0E4B     		ldr	r3, .L9+12
+ 236 00ee 2022     		movs	r2, #32
+ 237 00f0 DA61     		str	r2, [r3, #28]
  139:Core/Src/stm32l4xx_hal_msp.c ****     hdma_adc1.Init.Priority = DMA_PRIORITY_LOW;
- 250              		.loc 1 139 29
- 251 00f2 0D4B     		ldr	r3, .L9+12
- 252 00f4 0022     		movs	r2, #0
- 253 00f6 1A62     		str	r2, [r3, #32]
+ 238              		.loc 1 139 29
+ 239 00f2 0D4B     		ldr	r3, .L9+12
+ 240 00f4 0022     		movs	r2, #0
+ 241 00f6 1A62     		str	r2, [r3, #32]
  140:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_DMA_Init(&hdma_adc1) != HAL_OK)
- 254              		.loc 1 140 9
- 255 00f8 0B48     		ldr	r0, .L9+12
- 256 00fa FFF7FEFF 		bl	HAL_DMA_Init
- 257 00fe 0346     		mov	r3, r0
- 258              		.loc 1 140 8
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 8
-
-
- 259 0100 002B     		cmp	r3, #0
- 260 0102 01D0     		beq	.L7
+ 242              		.loc 1 140 9
+ 243 00f8 0B48     		ldr	r0, .L9+12
+ 244 00fa FFF7FEFF 		bl	HAL_DMA_Init
+ 245 00fe 0346     		mov	r3, r0
+ 246              		.loc 1 140 8
+ 247 0100 002B     		cmp	r3, #0
+ 248 0102 01D0     		beq	.L7
  141:Core/Src/stm32l4xx_hal_msp.c ****     {
  142:Core/Src/stm32l4xx_hal_msp.c ****       Error_Handler();
- 261              		.loc 1 142 7
- 262 0104 FFF7FEFF 		bl	Error_Handler
- 263              	.L7:
+ 249              		.loc 1 142 7
+ 250 0104 FFF7FEFF 		bl	Error_Handler
+ 251              	.L7:
  143:Core/Src/stm32l4xx_hal_msp.c ****     }
  144:Core/Src/stm32l4xx_hal_msp.c **** 
  145:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_LINKDMA(hadc,DMA_Handle,hdma_adc1);
- 264              		.loc 1 145 5
- 265 0108 7B68     		ldr	r3, [r7, #4]
- 266 010a 074A     		ldr	r2, .L9+12
- 267 010c 1A65     		str	r2, [r3, #80]
- 268 010e 064A     		ldr	r2, .L9+12
- 269 0110 7B68     		ldr	r3, [r7, #4]
- 270 0112 9362     		str	r3, [r2, #40]
- 271              	.L8:
+ 252              		.loc 1 145 5
+ 253 0108 7B68     		ldr	r3, [r7, #4]
+ 254 010a 074A     		ldr	r2, .L9+12
+ 255 010c 1A65     		str	r2, [r3, #80]
+ 256 010e 064A     		ldr	r2, .L9+12
+ 257 0110 7B68     		ldr	r3, [r7, #4]
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 8
+
+
+ 258 0112 9362     		str	r3, [r2, #40]
+ 259              	.L8:
  146:Core/Src/stm32l4xx_hal_msp.c **** 
  147:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN ADC1_MspInit 1 */
  148:Core/Src/stm32l4xx_hal_msp.c **** 
@@ -446,129 +430,129 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  150:Core/Src/stm32l4xx_hal_msp.c ****   }
  151:Core/Src/stm32l4xx_hal_msp.c **** 
  152:Core/Src/stm32l4xx_hal_msp.c **** }
- 272              		.loc 1 152 1
- 273 0114 00BF     		nop
- 274 0116 C037     		adds	r7, r7, #192
- 275              		.cfi_def_cfa_offset 8
- 276 0118 BD46     		mov	sp, r7
- 277              		.cfi_def_cfa_register 13
- 278              		@ sp needed
- 279 011a 80BD     		pop	{r7, pc}
- 280              	.L10:
- 281              		.align	2
- 282              	.L9:
- 283 011c 00000450 		.word	1342439424
- 284 0120 00100240 		.word	1073876992
- 285 0124 00080048 		.word	1207961600
- 286 0128 00000000 		.word	hdma_adc1
- 287 012c 08000240 		.word	1073872904
- 288              		.cfi_endproc
- 289              	.LFE322:
- 291              		.section	.text.HAL_ADC_MspDeInit,"ax",%progbits
- 292              		.align	1
- 293              		.global	HAL_ADC_MspDeInit
- 294              		.syntax unified
- 295              		.thumb
- 296              		.thumb_func
- 298              	HAL_ADC_MspDeInit:
- 299              	.LFB323:
+ 260              		.loc 1 152 1
+ 261 0114 00BF     		nop
+ 262 0116 C037     		adds	r7, r7, #192
+ 263              		.cfi_def_cfa_offset 8
+ 264 0118 BD46     		mov	sp, r7
+ 265              		.cfi_def_cfa_register 13
+ 266              		@ sp needed
+ 267 011a 80BD     		pop	{r7, pc}
+ 268              	.L10:
+ 269              		.align	2
+ 270              	.L9:
+ 271 011c 00000450 		.word	1342439424
+ 272 0120 00100240 		.word	1073876992
+ 273 0124 00080048 		.word	1207961600
+ 274 0128 00000000 		.word	hdma_adc1
+ 275 012c 08000240 		.word	1073872904
+ 276              		.cfi_endproc
+ 277              	.LFE326:
+ 279              		.section	.text.HAL_ADC_MspDeInit,"ax",%progbits
+ 280              		.align	1
+ 281              		.global	HAL_ADC_MspDeInit
+ 282              		.syntax unified
+ 283              		.thumb
+ 284              		.thumb_func
+ 286              	HAL_ADC_MspDeInit:
+ 287              	.LFB327:
  153:Core/Src/stm32l4xx_hal_msp.c **** 
  154:Core/Src/stm32l4xx_hal_msp.c **** /**
  155:Core/Src/stm32l4xx_hal_msp.c **** * @brief ADC MSP De-Initialization
  156:Core/Src/stm32l4xx_hal_msp.c **** * This function freeze the hardware resources used in this example
  157:Core/Src/stm32l4xx_hal_msp.c **** * @param hadc: ADC handle pointer
  158:Core/Src/stm32l4xx_hal_msp.c **** * @retval None
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 9
-
-
  159:Core/Src/stm32l4xx_hal_msp.c **** */
  160:Core/Src/stm32l4xx_hal_msp.c **** void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
  161:Core/Src/stm32l4xx_hal_msp.c **** {
- 300              		.loc 1 161 1
- 301              		.cfi_startproc
- 302              		@ args = 0, pretend = 0, frame = 8
- 303              		@ frame_needed = 1, uses_anonymous_args = 0
- 304 0000 80B5     		push	{r7, lr}
- 305              		.cfi_def_cfa_offset 8
- 306              		.cfi_offset 7, -8
- 307              		.cfi_offset 14, -4
- 308 0002 82B0     		sub	sp, sp, #8
- 309              		.cfi_def_cfa_offset 16
- 310 0004 00AF     		add	r7, sp, #0
- 311              		.cfi_def_cfa_register 7
- 312 0006 7860     		str	r0, [r7, #4]
+ 288              		.loc 1 161 1
+ 289              		.cfi_startproc
+ 290              		@ args = 0, pretend = 0, frame = 8
+ 291              		@ frame_needed = 1, uses_anonymous_args = 0
+ 292 0000 80B5     		push	{r7, lr}
+ 293              		.cfi_def_cfa_offset 8
+ 294              		.cfi_offset 7, -8
+ 295              		.cfi_offset 14, -4
+ 296 0002 82B0     		sub	sp, sp, #8
+ 297              		.cfi_def_cfa_offset 16
+ 298 0004 00AF     		add	r7, sp, #0
+ 299              		.cfi_def_cfa_register 7
+ 300 0006 7860     		str	r0, [r7, #4]
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 9
+
+
  162:Core/Src/stm32l4xx_hal_msp.c ****   if(hadc->Instance==ADC1)
- 313              		.loc 1 162 10
- 314 0008 7B68     		ldr	r3, [r7, #4]
- 315 000a 1B68     		ldr	r3, [r3]
- 316              		.loc 1 162 5
- 317 000c 0A4A     		ldr	r2, .L14
- 318 000e 9342     		cmp	r3, r2
- 319 0010 0ED1     		bne	.L13
+ 301              		.loc 1 162 10
+ 302 0008 7B68     		ldr	r3, [r7, #4]
+ 303 000a 1B68     		ldr	r3, [r3]
+ 304              		.loc 1 162 5
+ 305 000c 0A4A     		ldr	r2, .L14
+ 306 000e 9342     		cmp	r3, r2
+ 307 0010 0ED1     		bne	.L13
  163:Core/Src/stm32l4xx_hal_msp.c ****   {
  164:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN ADC1_MspDeInit 0 */
  165:Core/Src/stm32l4xx_hal_msp.c **** 
  166:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END ADC1_MspDeInit 0 */
  167:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock disable */
  168:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_ADC_CLK_DISABLE();
- 320              		.loc 1 168 5
- 321 0012 0A4B     		ldr	r3, .L14+4
- 322 0014 DB6C     		ldr	r3, [r3, #76]
- 323 0016 094A     		ldr	r2, .L14+4
- 324 0018 23F40053 		bic	r3, r3, #8192
- 325 001c D364     		str	r3, [r2, #76]
+ 308              		.loc 1 168 5
+ 309 0012 0A4B     		ldr	r3, .L14+4
+ 310 0014 DB6C     		ldr	r3, [r3, #76]
+ 311 0016 094A     		ldr	r2, .L14+4
+ 312 0018 23F40053 		bic	r3, r3, #8192
+ 313 001c D364     		str	r3, [r2, #76]
  169:Core/Src/stm32l4xx_hal_msp.c **** 
  170:Core/Src/stm32l4xx_hal_msp.c ****     /**ADC1 GPIO Configuration
  171:Core/Src/stm32l4xx_hal_msp.c ****     PC0     ------> ADC1_IN1
  172:Core/Src/stm32l4xx_hal_msp.c ****     PC1     ------> ADC1_IN2
  173:Core/Src/stm32l4xx_hal_msp.c ****     */
  174:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOC, GPIO_PIN_0|GPIO_PIN_1);
- 326              		.loc 1 174 5
- 327 001e 0321     		movs	r1, #3
- 328 0020 0748     		ldr	r0, .L14+8
- 329 0022 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 314              		.loc 1 174 5
+ 315 001e 0321     		movs	r1, #3
+ 316 0020 0748     		ldr	r0, .L14+8
+ 317 0022 FFF7FEFF 		bl	HAL_GPIO_DeInit
  175:Core/Src/stm32l4xx_hal_msp.c **** 
  176:Core/Src/stm32l4xx_hal_msp.c ****     /* ADC1 DMA DeInit */
  177:Core/Src/stm32l4xx_hal_msp.c ****     HAL_DMA_DeInit(hadc->DMA_Handle);
- 330              		.loc 1 177 5
- 331 0026 7B68     		ldr	r3, [r7, #4]
- 332 0028 1B6D     		ldr	r3, [r3, #80]
- 333 002a 1846     		mov	r0, r3
- 334 002c FFF7FEFF 		bl	HAL_DMA_DeInit
- 335              	.L13:
+ 318              		.loc 1 177 5
+ 319 0026 7B68     		ldr	r3, [r7, #4]
+ 320 0028 1B6D     		ldr	r3, [r3, #80]
+ 321 002a 1846     		mov	r0, r3
+ 322 002c FFF7FEFF 		bl	HAL_DMA_DeInit
+ 323              	.L13:
  178:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN ADC1_MspDeInit 1 */
  179:Core/Src/stm32l4xx_hal_msp.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 10
-
-
  180:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END ADC1_MspDeInit 1 */
  181:Core/Src/stm32l4xx_hal_msp.c ****   }
  182:Core/Src/stm32l4xx_hal_msp.c **** 
  183:Core/Src/stm32l4xx_hal_msp.c **** }
- 336              		.loc 1 183 1
- 337 0030 00BF     		nop
- 338 0032 0837     		adds	r7, r7, #8
- 339              		.cfi_def_cfa_offset 8
- 340 0034 BD46     		mov	sp, r7
- 341              		.cfi_def_cfa_register 13
- 342              		@ sp needed
- 343 0036 80BD     		pop	{r7, pc}
- 344              	.L15:
- 345              		.align	2
- 346              	.L14:
- 347 0038 00000450 		.word	1342439424
- 348 003c 00100240 		.word	1073876992
- 349 0040 00080048 		.word	1207961600
- 350              		.cfi_endproc
- 351              	.LFE323:
- 353              		.section	.text.HAL_UART_MspInit,"ax",%progbits
- 354              		.align	1
- 355              		.global	HAL_UART_MspInit
- 356              		.syntax unified
- 357              		.thumb
- 358              		.thumb_func
- 360              	HAL_UART_MspInit:
- 361              	.LFB324:
+ 324              		.loc 1 183 1
+ 325 0030 00BF     		nop
+ 326 0032 0837     		adds	r7, r7, #8
+ 327              		.cfi_def_cfa_offset 8
+ 328 0034 BD46     		mov	sp, r7
+ 329              		.cfi_def_cfa_register 13
+ 330              		@ sp needed
+ 331 0036 80BD     		pop	{r7, pc}
+ 332              	.L15:
+ 333              		.align	2
+ 334              	.L14:
+ 335 0038 00000450 		.word	1342439424
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 10
+
+
+ 336 003c 00100240 		.word	1073876992
+ 337 0040 00080048 		.word	1207961600
+ 338              		.cfi_endproc
+ 339              	.LFE327:
+ 341              		.section	.text.HAL_UART_MspInit,"ax",%progbits
+ 342              		.align	1
+ 343              		.global	HAL_UART_MspInit
+ 344              		.syntax unified
+ 345              		.thumb
+ 346              		.thumb_func
+ 348              	HAL_UART_MspInit:
+ 349              	.LFB328:
  184:Core/Src/stm32l4xx_hal_msp.c **** 
  185:Core/Src/stm32l4xx_hal_msp.c **** /**
  186:Core/Src/stm32l4xx_hal_msp.c **** * @brief UART MSP Initialization
@@ -578,46 +562,46 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  190:Core/Src/stm32l4xx_hal_msp.c **** */
  191:Core/Src/stm32l4xx_hal_msp.c **** void HAL_UART_MspInit(UART_HandleTypeDef* huart)
  192:Core/Src/stm32l4xx_hal_msp.c **** {
- 362              		.loc 1 192 1
- 363              		.cfi_startproc
- 364              		@ args = 0, pretend = 0, frame = 200
- 365              		@ frame_needed = 1, uses_anonymous_args = 0
- 366 0000 80B5     		push	{r7, lr}
- 367              		.cfi_def_cfa_offset 8
- 368              		.cfi_offset 7, -8
- 369              		.cfi_offset 14, -4
- 370 0002 B2B0     		sub	sp, sp, #200
- 371              		.cfi_def_cfa_offset 208
- 372 0004 00AF     		add	r7, sp, #0
- 373              		.cfi_def_cfa_register 7
- 374 0006 7860     		str	r0, [r7, #4]
+ 350              		.loc 1 192 1
+ 351              		.cfi_startproc
+ 352              		@ args = 0, pretend = 0, frame = 200
+ 353              		@ frame_needed = 1, uses_anonymous_args = 0
+ 354 0000 80B5     		push	{r7, lr}
+ 355              		.cfi_def_cfa_offset 8
+ 356              		.cfi_offset 7, -8
+ 357              		.cfi_offset 14, -4
+ 358 0002 B2B0     		sub	sp, sp, #200
+ 359              		.cfi_def_cfa_offset 208
+ 360 0004 00AF     		add	r7, sp, #0
+ 361              		.cfi_def_cfa_register 7
+ 362 0006 7860     		str	r0, [r7, #4]
  193:Core/Src/stm32l4xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
- 375              		.loc 1 193 20
- 376 0008 07F1B403 		add	r3, r7, #180
- 377 000c 0022     		movs	r2, #0
- 378 000e 1A60     		str	r2, [r3]
- 379 0010 5A60     		str	r2, [r3, #4]
- 380 0012 9A60     		str	r2, [r3, #8]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 11
-
-
- 381 0014 DA60     		str	r2, [r3, #12]
- 382 0016 1A61     		str	r2, [r3, #16]
+ 363              		.loc 1 193 20
+ 364 0008 07F1B403 		add	r3, r7, #180
+ 365 000c 0022     		movs	r2, #0
+ 366 000e 1A60     		str	r2, [r3]
+ 367 0010 5A60     		str	r2, [r3, #4]
+ 368 0012 9A60     		str	r2, [r3, #8]
+ 369 0014 DA60     		str	r2, [r3, #12]
+ 370 0016 1A61     		str	r2, [r3, #16]
  194:Core/Src/stm32l4xx_hal_msp.c ****   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
- 383              		.loc 1 194 28
- 384 0018 07F11C03 		add	r3, r7, #28
- 385 001c 9822     		movs	r2, #152
- 386 001e 0021     		movs	r1, #0
- 387 0020 1846     		mov	r0, r3
- 388 0022 FFF7FEFF 		bl	memset
+ 371              		.loc 1 194 28
+ 372 0018 07F11C03 		add	r3, r7, #28
+ 373 001c 9822     		movs	r2, #152
+ 374 001e 0021     		movs	r1, #0
+ 375 0020 1846     		mov	r0, r3
+ 376 0022 FFF7FEFF 		bl	memset
  195:Core/Src/stm32l4xx_hal_msp.c ****   if(huart->Instance==LPUART1)
- 389              		.loc 1 195 11
- 390 0026 7B68     		ldr	r3, [r7, #4]
- 391 0028 1B68     		ldr	r3, [r3]
- 392              		.loc 1 195 5
- 393 002a 5C4A     		ldr	r2, .L23
- 394 002c 9342     		cmp	r3, r2
- 395 002e 6FD1     		bne	.L17
+ 377              		.loc 1 195 11
+ 378 0026 7B68     		ldr	r3, [r7, #4]
+ 379 0028 1B68     		ldr	r3, [r3]
+ 380              		.loc 1 195 5
+ 381 002a 5C4A     		ldr	r2, .L23
+ 382 002c 9342     		cmp	r3, r2
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 11
+
+
+ 383 002e 6FD1     		bne	.L17
  196:Core/Src/stm32l4xx_hal_msp.c ****   {
  197:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN LPUART1_MspInit 0 */
  198:Core/Src/stm32l4xx_hal_msp.c **** 
@@ -626,184 +610,184 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  201:Core/Src/stm32l4xx_hal_msp.c ****   /** Initializes the peripherals clock
  202:Core/Src/stm32l4xx_hal_msp.c ****   */
  203:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_LPUART1;
- 396              		.loc 1 203 40
- 397 0030 2023     		movs	r3, #32
- 398 0032 FB61     		str	r3, [r7, #28]
+ 384              		.loc 1 203 40
+ 385 0030 2023     		movs	r3, #32
+ 386 0032 FB61     		str	r3, [r7, #28]
  204:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.Lpuart1ClockSelection = RCC_LPUART1CLKSOURCE_PCLK1;
- 399              		.loc 1 204 41
- 400 0034 0023     		movs	r3, #0
- 401 0036 FB66     		str	r3, [r7, #108]
+ 387              		.loc 1 204 41
+ 388 0034 0023     		movs	r3, #0
+ 389 0036 FB66     		str	r3, [r7, #108]
  205:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
- 402              		.loc 1 205 9
- 403 0038 07F11C03 		add	r3, r7, #28
- 404 003c 1846     		mov	r0, r3
- 405 003e FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
- 406 0042 0346     		mov	r3, r0
- 407              		.loc 1 205 8
- 408 0044 002B     		cmp	r3, #0
- 409 0046 01D0     		beq	.L18
+ 390              		.loc 1 205 9
+ 391 0038 07F11C03 		add	r3, r7, #28
+ 392 003c 1846     		mov	r0, r3
+ 393 003e FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 394 0042 0346     		mov	r3, r0
+ 395              		.loc 1 205 8
+ 396 0044 002B     		cmp	r3, #0
+ 397 0046 01D0     		beq	.L18
  206:Core/Src/stm32l4xx_hal_msp.c ****     {
  207:Core/Src/stm32l4xx_hal_msp.c ****       Error_Handler();
- 410              		.loc 1 207 7
- 411 0048 FFF7FEFF 		bl	Error_Handler
- 412              	.L18:
- 413              	.LBB6:
+ 398              		.loc 1 207 7
+ 399 0048 FFF7FEFF 		bl	Error_Handler
+ 400              	.L18:
+ 401              	.LBB6:
  208:Core/Src/stm32l4xx_hal_msp.c ****     }
  209:Core/Src/stm32l4xx_hal_msp.c **** 
  210:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock enable */
  211:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_LPUART1_CLK_ENABLE();
- 414              		.loc 1 211 5
- 415 004c 544B     		ldr	r3, .L23+4
- 416 004e DB6D     		ldr	r3, [r3, #92]
- 417 0050 534A     		ldr	r2, .L23+4
- 418 0052 43F00103 		orr	r3, r3, #1
- 419 0056 D365     		str	r3, [r2, #92]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 12
-
-
- 420 0058 514B     		ldr	r3, .L23+4
- 421 005a DB6D     		ldr	r3, [r3, #92]
- 422 005c 03F00103 		and	r3, r3, #1
- 423 0060 BB61     		str	r3, [r7, #24]
- 424 0062 BB69     		ldr	r3, [r7, #24]
- 425              	.LBE6:
- 426              	.LBB7:
+ 402              		.loc 1 211 5
+ 403 004c 544B     		ldr	r3, .L23+4
+ 404 004e DB6D     		ldr	r3, [r3, #92]
+ 405 0050 534A     		ldr	r2, .L23+4
+ 406 0052 43F00103 		orr	r3, r3, #1
+ 407 0056 D365     		str	r3, [r2, #92]
+ 408 0058 514B     		ldr	r3, .L23+4
+ 409 005a DB6D     		ldr	r3, [r3, #92]
+ 410 005c 03F00103 		and	r3, r3, #1
+ 411 0060 BB61     		str	r3, [r7, #24]
+ 412 0062 BB69     		ldr	r3, [r7, #24]
+ 413              	.LBE6:
+ 414              	.LBB7:
  212:Core/Src/stm32l4xx_hal_msp.c **** 
  213:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_GPIOG_CLK_ENABLE();
- 427              		.loc 1 213 5
- 428 0064 4E4B     		ldr	r3, .L23+4
- 429 0066 DB6C     		ldr	r3, [r3, #76]
- 430 0068 4D4A     		ldr	r2, .L23+4
- 431 006a 43F04003 		orr	r3, r3, #64
- 432 006e D364     		str	r3, [r2, #76]
- 433 0070 4B4B     		ldr	r3, .L23+4
- 434 0072 DB6C     		ldr	r3, [r3, #76]
- 435 0074 03F04003 		and	r3, r3, #64
- 436 0078 7B61     		str	r3, [r7, #20]
- 437 007a 7B69     		ldr	r3, [r7, #20]
- 438              	.LBE7:
+ 415              		.loc 1 213 5
+ 416 0064 4E4B     		ldr	r3, .L23+4
+ 417 0066 DB6C     		ldr	r3, [r3, #76]
+ 418 0068 4D4A     		ldr	r2, .L23+4
+ 419 006a 43F04003 		orr	r3, r3, #64
+ 420 006e D364     		str	r3, [r2, #76]
+ 421 0070 4B4B     		ldr	r3, .L23+4
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 12
+
+
+ 422 0072 DB6C     		ldr	r3, [r3, #76]
+ 423 0074 03F04003 		and	r3, r3, #64
+ 424 0078 7B61     		str	r3, [r7, #20]
+ 425 007a 7B69     		ldr	r3, [r7, #20]
+ 426              	.LBE7:
  214:Core/Src/stm32l4xx_hal_msp.c ****     HAL_PWREx_EnableVddIO2();
- 439              		.loc 1 214 5
- 440 007c FFF7FEFF 		bl	HAL_PWREx_EnableVddIO2
+ 427              		.loc 1 214 5
+ 428 007c FFF7FEFF 		bl	HAL_PWREx_EnableVddIO2
  215:Core/Src/stm32l4xx_hal_msp.c ****     /**LPUART1 GPIO Configuration
  216:Core/Src/stm32l4xx_hal_msp.c ****     PG7     ------> LPUART1_TX
  217:Core/Src/stm32l4xx_hal_msp.c ****     PG8     ------> LPUART1_RX
  218:Core/Src/stm32l4xx_hal_msp.c ****     */
  219:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pin = STLINK_TX_Pin|STLINK_RX_Pin;
- 441              		.loc 1 219 25
- 442 0080 4FF4C073 		mov	r3, #384
- 443 0084 C7F8B430 		str	r3, [r7, #180]
+ 429              		.loc 1 219 25
+ 430 0080 4FF4C073 		mov	r3, #384
+ 431 0084 C7F8B430 		str	r3, [r7, #180]
  220:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
- 444              		.loc 1 220 26
- 445 0088 0223     		movs	r3, #2
- 446 008a C7F8B830 		str	r3, [r7, #184]
+ 432              		.loc 1 220 26
+ 433 0088 0223     		movs	r3, #2
+ 434 008a C7F8B830 		str	r3, [r7, #184]
  221:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
- 447              		.loc 1 221 26
- 448 008e 0023     		movs	r3, #0
- 449 0090 C7F8BC30 		str	r3, [r7, #188]
+ 435              		.loc 1 221 26
+ 436 008e 0023     		movs	r3, #0
+ 437 0090 C7F8BC30 		str	r3, [r7, #188]
  222:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
- 450              		.loc 1 222 27
- 451 0094 0323     		movs	r3, #3
- 452 0096 C7F8C030 		str	r3, [r7, #192]
+ 438              		.loc 1 222 27
+ 439 0094 0323     		movs	r3, #3
+ 440 0096 C7F8C030 		str	r3, [r7, #192]
  223:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF8_LPUART1;
- 453              		.loc 1 223 31
- 454 009a 0823     		movs	r3, #8
- 455 009c C7F8C430 		str	r3, [r7, #196]
+ 441              		.loc 1 223 31
+ 442 009a 0823     		movs	r3, #8
+ 443 009c C7F8C430 		str	r3, [r7, #196]
  224:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
- 456              		.loc 1 224 5
- 457 00a0 07F1B403 		add	r3, r7, #180
- 458 00a4 1946     		mov	r1, r3
- 459 00a6 3F48     		ldr	r0, .L23+8
- 460 00a8 FFF7FEFF 		bl	HAL_GPIO_Init
+ 444              		.loc 1 224 5
+ 445 00a0 07F1B403 		add	r3, r7, #180
+ 446 00a4 1946     		mov	r1, r3
+ 447 00a6 3F48     		ldr	r0, .L23+8
+ 448 00a8 FFF7FEFF 		bl	HAL_GPIO_Init
  225:Core/Src/stm32l4xx_hal_msp.c **** 
  226:Core/Src/stm32l4xx_hal_msp.c ****     /* LPUART1 DMA Init */
  227:Core/Src/stm32l4xx_hal_msp.c ****     /* LPUART1_RX Init */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 13
-
-
  228:Core/Src/stm32l4xx_hal_msp.c ****     hdma_lpuart1_rx.Instance = DMA1_Channel2;
- 461              		.loc 1 228 30
- 462 00ac 3E4B     		ldr	r3, .L23+12
- 463 00ae 3F4A     		ldr	r2, .L23+16
- 464 00b0 1A60     		str	r2, [r3]
+ 449              		.loc 1 228 30
+ 450 00ac 3E4B     		ldr	r3, .L23+12
+ 451 00ae 3F4A     		ldr	r2, .L23+16
+ 452 00b0 1A60     		str	r2, [r3]
  229:Core/Src/stm32l4xx_hal_msp.c ****     hdma_lpuart1_rx.Init.Request = DMA_REQUEST_LPUART1_RX;
- 465              		.loc 1 229 34
- 466 00b2 3D4B     		ldr	r3, .L23+12
- 467 00b4 2322     		movs	r2, #35
- 468 00b6 5A60     		str	r2, [r3, #4]
+ 453              		.loc 1 229 34
+ 454 00b2 3D4B     		ldr	r3, .L23+12
+ 455 00b4 2322     		movs	r2, #35
+ 456 00b6 5A60     		str	r2, [r3, #4]
  230:Core/Src/stm32l4xx_hal_msp.c ****     hdma_lpuart1_rx.Init.Direction = DMA_PERIPH_TO_MEMORY;
- 469              		.loc 1 230 36
- 470 00b8 3B4B     		ldr	r3, .L23+12
- 471 00ba 0022     		movs	r2, #0
- 472 00bc 9A60     		str	r2, [r3, #8]
+ 457              		.loc 1 230 36
+ 458 00b8 3B4B     		ldr	r3, .L23+12
+ 459 00ba 0022     		movs	r2, #0
+ 460 00bc 9A60     		str	r2, [r3, #8]
  231:Core/Src/stm32l4xx_hal_msp.c ****     hdma_lpuart1_rx.Init.PeriphInc = DMA_PINC_DISABLE;
- 473              		.loc 1 231 36
- 474 00be 3A4B     		ldr	r3, .L23+12
- 475 00c0 0022     		movs	r2, #0
- 476 00c2 DA60     		str	r2, [r3, #12]
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 13
+
+
+ 461              		.loc 1 231 36
+ 462 00be 3A4B     		ldr	r3, .L23+12
+ 463 00c0 0022     		movs	r2, #0
+ 464 00c2 DA60     		str	r2, [r3, #12]
  232:Core/Src/stm32l4xx_hal_msp.c ****     hdma_lpuart1_rx.Init.MemInc = DMA_MINC_ENABLE;
- 477              		.loc 1 232 33
- 478 00c4 384B     		ldr	r3, .L23+12
- 479 00c6 8022     		movs	r2, #128
- 480 00c8 1A61     		str	r2, [r3, #16]
+ 465              		.loc 1 232 33
+ 466 00c4 384B     		ldr	r3, .L23+12
+ 467 00c6 8022     		movs	r2, #128
+ 468 00c8 1A61     		str	r2, [r3, #16]
  233:Core/Src/stm32l4xx_hal_msp.c ****     hdma_lpuart1_rx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
- 481              		.loc 1 233 46
- 482 00ca 374B     		ldr	r3, .L23+12
- 483 00cc 0022     		movs	r2, #0
- 484 00ce 5A61     		str	r2, [r3, #20]
+ 469              		.loc 1 233 46
+ 470 00ca 374B     		ldr	r3, .L23+12
+ 471 00cc 0022     		movs	r2, #0
+ 472 00ce 5A61     		str	r2, [r3, #20]
  234:Core/Src/stm32l4xx_hal_msp.c ****     hdma_lpuart1_rx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
- 485              		.loc 1 234 43
- 486 00d0 354B     		ldr	r3, .L23+12
- 487 00d2 0022     		movs	r2, #0
- 488 00d4 9A61     		str	r2, [r3, #24]
+ 473              		.loc 1 234 43
+ 474 00d0 354B     		ldr	r3, .L23+12
+ 475 00d2 0022     		movs	r2, #0
+ 476 00d4 9A61     		str	r2, [r3, #24]
  235:Core/Src/stm32l4xx_hal_msp.c ****     hdma_lpuart1_rx.Init.Mode = DMA_NORMAL;
- 489              		.loc 1 235 31
- 490 00d6 344B     		ldr	r3, .L23+12
- 491 00d8 0022     		movs	r2, #0
- 492 00da DA61     		str	r2, [r3, #28]
+ 477              		.loc 1 235 31
+ 478 00d6 344B     		ldr	r3, .L23+12
+ 479 00d8 0022     		movs	r2, #0
+ 480 00da DA61     		str	r2, [r3, #28]
  236:Core/Src/stm32l4xx_hal_msp.c ****     hdma_lpuart1_rx.Init.Priority = DMA_PRIORITY_LOW;
- 493              		.loc 1 236 35
- 494 00dc 324B     		ldr	r3, .L23+12
- 495 00de 0022     		movs	r2, #0
- 496 00e0 1A62     		str	r2, [r3, #32]
+ 481              		.loc 1 236 35
+ 482 00dc 324B     		ldr	r3, .L23+12
+ 483 00de 0022     		movs	r2, #0
+ 484 00e0 1A62     		str	r2, [r3, #32]
  237:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_DMA_Init(&hdma_lpuart1_rx) != HAL_OK)
- 497              		.loc 1 237 9
- 498 00e2 3148     		ldr	r0, .L23+12
- 499 00e4 FFF7FEFF 		bl	HAL_DMA_Init
- 500 00e8 0346     		mov	r3, r0
- 501              		.loc 1 237 8
- 502 00ea 002B     		cmp	r3, #0
- 503 00ec 01D0     		beq	.L19
+ 485              		.loc 1 237 9
+ 486 00e2 3148     		ldr	r0, .L23+12
+ 487 00e4 FFF7FEFF 		bl	HAL_DMA_Init
+ 488 00e8 0346     		mov	r3, r0
+ 489              		.loc 1 237 8
+ 490 00ea 002B     		cmp	r3, #0
+ 491 00ec 01D0     		beq	.L19
  238:Core/Src/stm32l4xx_hal_msp.c ****     {
  239:Core/Src/stm32l4xx_hal_msp.c ****       Error_Handler();
- 504              		.loc 1 239 7
- 505 00ee FFF7FEFF 		bl	Error_Handler
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 14
-
-
- 506              	.L19:
+ 492              		.loc 1 239 7
+ 493 00ee FFF7FEFF 		bl	Error_Handler
+ 494              	.L19:
  240:Core/Src/stm32l4xx_hal_msp.c ****     }
  241:Core/Src/stm32l4xx_hal_msp.c **** 
  242:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_LINKDMA(huart,hdmarx,hdma_lpuart1_rx);
- 507              		.loc 1 242 5
- 508 00f2 7B68     		ldr	r3, [r7, #4]
- 509 00f4 2C4A     		ldr	r2, .L23+12
- 510 00f6 DA67     		str	r2, [r3, #124]
- 511 00f8 2B4A     		ldr	r2, .L23+12
- 512 00fa 7B68     		ldr	r3, [r7, #4]
- 513 00fc 9362     		str	r3, [r2, #40]
+ 495              		.loc 1 242 5
+ 496 00f2 7B68     		ldr	r3, [r7, #4]
+ 497 00f4 2C4A     		ldr	r2, .L23+12
+ 498 00f6 DA67     		str	r2, [r3, #124]
+ 499 00f8 2B4A     		ldr	r2, .L23+12
+ 500 00fa 7B68     		ldr	r3, [r7, #4]
+ 501 00fc 9362     		str	r3, [r2, #40]
  243:Core/Src/stm32l4xx_hal_msp.c **** 
  244:Core/Src/stm32l4xx_hal_msp.c ****     /* LPUART1 interrupt Init */
  245:Core/Src/stm32l4xx_hal_msp.c ****     HAL_NVIC_SetPriority(LPUART1_IRQn, 0, 0);
- 514              		.loc 1 245 5
- 515 00fe 0022     		movs	r2, #0
- 516 0100 0021     		movs	r1, #0
- 517 0102 4620     		movs	r0, #70
- 518 0104 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 502              		.loc 1 245 5
+ 503 00fe 0022     		movs	r2, #0
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 14
+
+
+ 504 0100 0021     		movs	r1, #0
+ 505 0102 4620     		movs	r0, #70
+ 506 0104 FFF7FEFF 		bl	HAL_NVIC_SetPriority
  246:Core/Src/stm32l4xx_hal_msp.c ****     HAL_NVIC_EnableIRQ(LPUART1_IRQn);
- 519              		.loc 1 246 5
- 520 0108 4620     		movs	r0, #70
- 521 010a FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 507              		.loc 1 246 5
+ 508 0108 4620     		movs	r0, #70
+ 509 010a FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
  247:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN LPUART1_MspInit 1 */
  248:Core/Src/stm32l4xx_hal_msp.c **** 
  249:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END LPUART1_MspInit 1 */
@@ -838,137 +822,134 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  278:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF8_UART4;
  279:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
  280:Core/Src/stm32l4xx_hal_msp.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 15
-
-
  281:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN UART4_MspInit 1 */
  282:Core/Src/stm32l4xx_hal_msp.c **** 
  283:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END UART4_MspInit 1 */
  284:Core/Src/stm32l4xx_hal_msp.c ****   }
  285:Core/Src/stm32l4xx_hal_msp.c **** 
  286:Core/Src/stm32l4xx_hal_msp.c **** }
- 522              		.loc 1 286 1
- 523 010e 40E0     		b	.L22
- 524              	.L17:
+ 510              		.loc 1 286 1
+ 511 010e 40E0     		b	.L22
+ 512              	.L17:
  251:Core/Src/stm32l4xx_hal_msp.c ****   {
- 525              		.loc 1 251 16
- 526 0110 7B68     		ldr	r3, [r7, #4]
- 527 0112 1B68     		ldr	r3, [r3]
+ 513              		.loc 1 251 16
+ 514 0110 7B68     		ldr	r3, [r7, #4]
+ 515 0112 1B68     		ldr	r3, [r3]
  251:Core/Src/stm32l4xx_hal_msp.c ****   {
- 528              		.loc 1 251 10
- 529 0114 264A     		ldr	r2, .L23+20
- 530 0116 9342     		cmp	r3, r2
- 531 0118 3BD1     		bne	.L22
+ 516              		.loc 1 251 10
+ 517 0114 264A     		ldr	r2, .L23+20
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 15
+
+
+ 518 0116 9342     		cmp	r3, r2
+ 519 0118 3BD1     		bne	.L22
  259:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.Uart4ClockSelection = RCC_UART4CLKSOURCE_PCLK1;
- 532              		.loc 1 259 40
- 533 011a 0823     		movs	r3, #8
- 534 011c FB61     		str	r3, [r7, #28]
+ 520              		.loc 1 259 40
+ 521 011a 0823     		movs	r3, #8
+ 522 011c FB61     		str	r3, [r7, #28]
  260:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
- 535              		.loc 1 260 39
- 536 011e 0023     		movs	r3, #0
- 537 0120 7B66     		str	r3, [r7, #100]
+ 523              		.loc 1 260 39
+ 524 011e 0023     		movs	r3, #0
+ 525 0120 7B66     		str	r3, [r7, #100]
  261:Core/Src/stm32l4xx_hal_msp.c ****     {
- 538              		.loc 1 261 9
- 539 0122 07F11C03 		add	r3, r7, #28
- 540 0126 1846     		mov	r0, r3
- 541 0128 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
- 542 012c 0346     		mov	r3, r0
+ 526              		.loc 1 261 9
+ 527 0122 07F11C03 		add	r3, r7, #28
+ 528 0126 1846     		mov	r0, r3
+ 529 0128 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 530 012c 0346     		mov	r3, r0
  261:Core/Src/stm32l4xx_hal_msp.c ****     {
- 543              		.loc 1 261 8
- 544 012e 002B     		cmp	r3, #0
- 545 0130 01D0     		beq	.L21
+ 531              		.loc 1 261 8
+ 532 012e 002B     		cmp	r3, #0
+ 533 0130 01D0     		beq	.L21
  263:Core/Src/stm32l4xx_hal_msp.c ****     }
- 546              		.loc 1 263 7
- 547 0132 FFF7FEFF 		bl	Error_Handler
- 548              	.L21:
- 549              	.LBB8:
+ 534              		.loc 1 263 7
+ 535 0132 FFF7FEFF 		bl	Error_Handler
+ 536              	.L21:
+ 537              	.LBB8:
  267:Core/Src/stm32l4xx_hal_msp.c **** 
- 550              		.loc 1 267 5
- 551 0136 1A4B     		ldr	r3, .L23+4
- 552 0138 9B6D     		ldr	r3, [r3, #88]
- 553 013a 194A     		ldr	r2, .L23+4
- 554 013c 43F40023 		orr	r3, r3, #524288
- 555 0140 9365     		str	r3, [r2, #88]
- 556 0142 174B     		ldr	r3, .L23+4
- 557 0144 9B6D     		ldr	r3, [r3, #88]
- 558 0146 03F40023 		and	r3, r3, #524288
- 559 014a 3B61     		str	r3, [r7, #16]
- 560 014c 3B69     		ldr	r3, [r7, #16]
- 561              	.LBE8:
- 562              	.LBB9:
+ 538              		.loc 1 267 5
+ 539 0136 1A4B     		ldr	r3, .L23+4
+ 540 0138 9B6D     		ldr	r3, [r3, #88]
+ 541 013a 194A     		ldr	r2, .L23+4
+ 542 013c 43F40023 		orr	r3, r3, #524288
+ 543 0140 9365     		str	r3, [r2, #88]
+ 544 0142 174B     		ldr	r3, .L23+4
+ 545 0144 9B6D     		ldr	r3, [r3, #88]
+ 546 0146 03F40023 		and	r3, r3, #524288
+ 547 014a 3B61     		str	r3, [r7, #16]
+ 548 014c 3B69     		ldr	r3, [r7, #16]
+ 549              	.LBE8:
+ 550              	.LBB9:
  269:Core/Src/stm32l4xx_hal_msp.c ****     /**UART4 GPIO Configuration
- 563              		.loc 1 269 5
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 16
-
-
- 564 014e 144B     		ldr	r3, .L23+4
- 565 0150 DB6C     		ldr	r3, [r3, #76]
- 566 0152 134A     		ldr	r2, .L23+4
- 567 0154 43F00103 		orr	r3, r3, #1
- 568 0158 D364     		str	r3, [r2, #76]
- 569 015a 114B     		ldr	r3, .L23+4
- 570 015c DB6C     		ldr	r3, [r3, #76]
- 571 015e 03F00103 		and	r3, r3, #1
- 572 0162 FB60     		str	r3, [r7, #12]
- 573 0164 FB68     		ldr	r3, [r7, #12]
- 574              	.LBE9:
+ 551              		.loc 1 269 5
+ 552 014e 144B     		ldr	r3, .L23+4
+ 553 0150 DB6C     		ldr	r3, [r3, #76]
+ 554 0152 134A     		ldr	r2, .L23+4
+ 555 0154 43F00103 		orr	r3, r3, #1
+ 556 0158 D364     		str	r3, [r2, #76]
+ 557 015a 114B     		ldr	r3, .L23+4
+ 558 015c DB6C     		ldr	r3, [r3, #76]
+ 559 015e 03F00103 		and	r3, r3, #1
+ 560 0162 FB60     		str	r3, [r7, #12]
+ 561 0164 FB68     		ldr	r3, [r7, #12]
+ 562              	.LBE9:
  274:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
- 575              		.loc 1 274 25
- 576 0166 0323     		movs	r3, #3
- 577 0168 C7F8B430 		str	r3, [r7, #180]
+ 563              		.loc 1 274 25
+ 564 0166 0323     		movs	r3, #3
+ 565 0168 C7F8B430 		str	r3, [r7, #180]
  275:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
- 578              		.loc 1 275 26
- 579 016c 0223     		movs	r3, #2
- 580 016e C7F8B830 		str	r3, [r7, #184]
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 16
+
+
+ 566              		.loc 1 275 26
+ 567 016c 0223     		movs	r3, #2
+ 568 016e C7F8B830 		str	r3, [r7, #184]
  276:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
- 581              		.loc 1 276 26
- 582 0172 0023     		movs	r3, #0
- 583 0174 C7F8BC30 		str	r3, [r7, #188]
+ 569              		.loc 1 276 26
+ 570 0172 0023     		movs	r3, #0
+ 571 0174 C7F8BC30 		str	r3, [r7, #188]
  277:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF8_UART4;
- 584              		.loc 1 277 27
- 585 0178 0323     		movs	r3, #3
- 586 017a C7F8C030 		str	r3, [r7, #192]
+ 572              		.loc 1 277 27
+ 573 0178 0323     		movs	r3, #3
+ 574 017a C7F8C030 		str	r3, [r7, #192]
  278:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
- 587              		.loc 1 278 31
- 588 017e 0823     		movs	r3, #8
- 589 0180 C7F8C430 		str	r3, [r7, #196]
+ 575              		.loc 1 278 31
+ 576 017e 0823     		movs	r3, #8
+ 577 0180 C7F8C430 		str	r3, [r7, #196]
  279:Core/Src/stm32l4xx_hal_msp.c **** 
- 590              		.loc 1 279 5
- 591 0184 07F1B403 		add	r3, r7, #180
- 592 0188 1946     		mov	r1, r3
- 593 018a 4FF09040 		mov	r0, #1207959552
- 594 018e FFF7FEFF 		bl	HAL_GPIO_Init
- 595              	.L22:
- 596              		.loc 1 286 1
- 597 0192 00BF     		nop
- 598 0194 C837     		adds	r7, r7, #200
- 599              		.cfi_def_cfa_offset 8
- 600 0196 BD46     		mov	sp, r7
- 601              		.cfi_def_cfa_register 13
- 602              		@ sp needed
- 603 0198 80BD     		pop	{r7, pc}
- 604              	.L24:
- 605 019a 00BF     		.align	2
- 606              	.L23:
- 607 019c 00800040 		.word	1073774592
- 608 01a0 00100240 		.word	1073876992
- 609 01a4 00180048 		.word	1207965696
- 610 01a8 00000000 		.word	hdma_lpuart1_rx
- 611 01ac 1C000240 		.word	1073872924
- 612 01b0 004C0040 		.word	1073761280
- 613              		.cfi_endproc
- 614              	.LFE324:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 17
-
-
- 616              		.section	.text.HAL_UART_MspDeInit,"ax",%progbits
- 617              		.align	1
- 618              		.global	HAL_UART_MspDeInit
- 619              		.syntax unified
- 620              		.thumb
- 621              		.thumb_func
- 623              	HAL_UART_MspDeInit:
- 624              	.LFB325:
+ 578              		.loc 1 279 5
+ 579 0184 07F1B403 		add	r3, r7, #180
+ 580 0188 1946     		mov	r1, r3
+ 581 018a 4FF09040 		mov	r0, #1207959552
+ 582 018e FFF7FEFF 		bl	HAL_GPIO_Init
+ 583              	.L22:
+ 584              		.loc 1 286 1
+ 585 0192 00BF     		nop
+ 586 0194 C837     		adds	r7, r7, #200
+ 587              		.cfi_def_cfa_offset 8
+ 588 0196 BD46     		mov	sp, r7
+ 589              		.cfi_def_cfa_register 13
+ 590              		@ sp needed
+ 591 0198 80BD     		pop	{r7, pc}
+ 592              	.L24:
+ 593 019a 00BF     		.align	2
+ 594              	.L23:
+ 595 019c 00800040 		.word	1073774592
+ 596 01a0 00100240 		.word	1073876992
+ 597 01a4 00180048 		.word	1207965696
+ 598 01a8 00000000 		.word	hdma_lpuart1_rx
+ 599 01ac 1C000240 		.word	1073872924
+ 600 01b0 004C0040 		.word	1073761280
+ 601              		.cfi_endproc
+ 602              	.LFE328:
+ 604              		.section	.text.HAL_UART_MspDeInit,"ax",%progbits
+ 605              		.align	1
+ 606              		.global	HAL_UART_MspDeInit
+ 607              		.syntax unified
+ 608              		.thumb
+ 609              		.thumb_func
+ 611              	HAL_UART_MspDeInit:
+ 612              	.LFB329:
  287:Core/Src/stm32l4xx_hal_msp.c **** 
  288:Core/Src/stm32l4xx_hal_msp.c **** /**
  289:Core/Src/stm32l4xx_hal_msp.c **** * @brief UART MSP De-Initialization
@@ -977,67 +958,70 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  292:Core/Src/stm32l4xx_hal_msp.c **** * @retval None
  293:Core/Src/stm32l4xx_hal_msp.c **** */
  294:Core/Src/stm32l4xx_hal_msp.c **** void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 17
+
+
  295:Core/Src/stm32l4xx_hal_msp.c **** {
- 625              		.loc 1 295 1
- 626              		.cfi_startproc
- 627              		@ args = 0, pretend = 0, frame = 8
- 628              		@ frame_needed = 1, uses_anonymous_args = 0
- 629 0000 80B5     		push	{r7, lr}
- 630              		.cfi_def_cfa_offset 8
- 631              		.cfi_offset 7, -8
- 632              		.cfi_offset 14, -4
- 633 0002 82B0     		sub	sp, sp, #8
- 634              		.cfi_def_cfa_offset 16
- 635 0004 00AF     		add	r7, sp, #0
- 636              		.cfi_def_cfa_register 7
- 637 0006 7860     		str	r0, [r7, #4]
+ 613              		.loc 1 295 1
+ 614              		.cfi_startproc
+ 615              		@ args = 0, pretend = 0, frame = 8
+ 616              		@ frame_needed = 1, uses_anonymous_args = 0
+ 617 0000 80B5     		push	{r7, lr}
+ 618              		.cfi_def_cfa_offset 8
+ 619              		.cfi_offset 7, -8
+ 620              		.cfi_offset 14, -4
+ 621 0002 82B0     		sub	sp, sp, #8
+ 622              		.cfi_def_cfa_offset 16
+ 623 0004 00AF     		add	r7, sp, #0
+ 624              		.cfi_def_cfa_register 7
+ 625 0006 7860     		str	r0, [r7, #4]
  296:Core/Src/stm32l4xx_hal_msp.c ****   if(huart->Instance==LPUART1)
- 638              		.loc 1 296 11
- 639 0008 7B68     		ldr	r3, [r7, #4]
- 640 000a 1B68     		ldr	r3, [r3]
- 641              		.loc 1 296 5
- 642 000c 154A     		ldr	r2, .L29
- 643 000e 9342     		cmp	r3, r2
- 644 0010 13D1     		bne	.L26
+ 626              		.loc 1 296 11
+ 627 0008 7B68     		ldr	r3, [r7, #4]
+ 628 000a 1B68     		ldr	r3, [r3]
+ 629              		.loc 1 296 5
+ 630 000c 154A     		ldr	r2, .L29
+ 631 000e 9342     		cmp	r3, r2
+ 632 0010 13D1     		bne	.L26
  297:Core/Src/stm32l4xx_hal_msp.c ****   {
  298:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN LPUART1_MspDeInit 0 */
  299:Core/Src/stm32l4xx_hal_msp.c **** 
  300:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END LPUART1_MspDeInit 0 */
  301:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock disable */
  302:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_LPUART1_CLK_DISABLE();
- 645              		.loc 1 302 5
- 646 0012 154B     		ldr	r3, .L29+4
- 647 0014 DB6D     		ldr	r3, [r3, #92]
- 648 0016 144A     		ldr	r2, .L29+4
- 649 0018 23F00103 		bic	r3, r3, #1
- 650 001c D365     		str	r3, [r2, #92]
+ 633              		.loc 1 302 5
+ 634 0012 154B     		ldr	r3, .L29+4
+ 635 0014 DB6D     		ldr	r3, [r3, #92]
+ 636 0016 144A     		ldr	r2, .L29+4
+ 637 0018 23F00103 		bic	r3, r3, #1
+ 638 001c D365     		str	r3, [r2, #92]
  303:Core/Src/stm32l4xx_hal_msp.c **** 
  304:Core/Src/stm32l4xx_hal_msp.c ****     /**LPUART1 GPIO Configuration
  305:Core/Src/stm32l4xx_hal_msp.c ****     PG7     ------> LPUART1_TX
  306:Core/Src/stm32l4xx_hal_msp.c ****     PG8     ------> LPUART1_RX
  307:Core/Src/stm32l4xx_hal_msp.c ****     */
  308:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOG, STLINK_TX_Pin|STLINK_RX_Pin);
- 651              		.loc 1 308 5
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 18
-
-
- 652 001e 4FF4C071 		mov	r1, #384
- 653 0022 1248     		ldr	r0, .L29+8
- 654 0024 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 639              		.loc 1 308 5
+ 640 001e 4FF4C071 		mov	r1, #384
+ 641 0022 1248     		ldr	r0, .L29+8
+ 642 0024 FFF7FEFF 		bl	HAL_GPIO_DeInit
  309:Core/Src/stm32l4xx_hal_msp.c **** 
  310:Core/Src/stm32l4xx_hal_msp.c ****     /* LPUART1 DMA DeInit */
  311:Core/Src/stm32l4xx_hal_msp.c ****     HAL_DMA_DeInit(huart->hdmarx);
- 655              		.loc 1 311 5
- 656 0028 7B68     		ldr	r3, [r7, #4]
- 657 002a DB6F     		ldr	r3, [r3, #124]
- 658 002c 1846     		mov	r0, r3
- 659 002e FFF7FEFF 		bl	HAL_DMA_DeInit
+ 643              		.loc 1 311 5
+ 644 0028 7B68     		ldr	r3, [r7, #4]
+ 645 002a DB6F     		ldr	r3, [r3, #124]
+ 646 002c 1846     		mov	r0, r3
+ 647 002e FFF7FEFF 		bl	HAL_DMA_DeInit
  312:Core/Src/stm32l4xx_hal_msp.c **** 
  313:Core/Src/stm32l4xx_hal_msp.c ****     /* LPUART1 interrupt DeInit */
  314:Core/Src/stm32l4xx_hal_msp.c ****     HAL_NVIC_DisableIRQ(LPUART1_IRQn);
- 660              		.loc 1 314 5
- 661 0032 4620     		movs	r0, #70
- 662 0034 FFF7FEFF 		bl	HAL_NVIC_DisableIRQ
+ 648              		.loc 1 314 5
+ 649 0032 4620     		movs	r0, #70
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 18
+
+
+ 650 0034 FFF7FEFF 		bl	HAL_NVIC_DisableIRQ
  315:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN LPUART1_MspDeInit 1 */
  316:Core/Src/stm32l4xx_hal_msp.c **** 
  317:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END LPUART1_MspDeInit 1 */
@@ -1062,59 +1046,59 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  336:Core/Src/stm32l4xx_hal_msp.c ****   }
  337:Core/Src/stm32l4xx_hal_msp.c **** 
  338:Core/Src/stm32l4xx_hal_msp.c **** }
- 663              		.loc 1 338 1
- 664 0038 0FE0     		b	.L28
- 665              	.L26:
+ 651              		.loc 1 338 1
+ 652 0038 0FE0     		b	.L28
+ 653              	.L26:
  319:Core/Src/stm32l4xx_hal_msp.c ****   {
- 666              		.loc 1 319 16
- 667 003a 7B68     		ldr	r3, [r7, #4]
- 668 003c 1B68     		ldr	r3, [r3]
+ 654              		.loc 1 319 16
+ 655 003a 7B68     		ldr	r3, [r7, #4]
+ 656 003c 1B68     		ldr	r3, [r3]
  319:Core/Src/stm32l4xx_hal_msp.c ****   {
- 669              		.loc 1 319 10
- 670 003e 0C4A     		ldr	r2, .L29+12
- 671 0040 9342     		cmp	r3, r2
- 672 0042 0AD1     		bne	.L28
+ 657              		.loc 1 319 10
+ 658 003e 0C4A     		ldr	r2, .L29+12
+ 659 0040 9342     		cmp	r3, r2
+ 660 0042 0AD1     		bne	.L28
  325:Core/Src/stm32l4xx_hal_msp.c **** 
- 673              		.loc 1 325 5
- 674 0044 084B     		ldr	r3, .L29+4
- 675 0046 9B6D     		ldr	r3, [r3, #88]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 19
-
-
- 676 0048 074A     		ldr	r2, .L29+4
- 677 004a 23F40023 		bic	r3, r3, #524288
- 678 004e 9365     		str	r3, [r2, #88]
+ 661              		.loc 1 325 5
+ 662 0044 084B     		ldr	r3, .L29+4
+ 663 0046 9B6D     		ldr	r3, [r3, #88]
+ 664 0048 074A     		ldr	r2, .L29+4
+ 665 004a 23F40023 		bic	r3, r3, #524288
+ 666 004e 9365     		str	r3, [r2, #88]
  331:Core/Src/stm32l4xx_hal_msp.c **** 
- 679              		.loc 1 331 5
- 680 0050 0321     		movs	r1, #3
- 681 0052 4FF09040 		mov	r0, #1207959552
- 682 0056 FFF7FEFF 		bl	HAL_GPIO_DeInit
- 683              	.L28:
- 684              		.loc 1 338 1
- 685 005a 00BF     		nop
- 686 005c 0837     		adds	r7, r7, #8
- 687              		.cfi_def_cfa_offset 8
- 688 005e BD46     		mov	sp, r7
- 689              		.cfi_def_cfa_register 13
- 690              		@ sp needed
- 691 0060 80BD     		pop	{r7, pc}
- 692              	.L30:
- 693 0062 00BF     		.align	2
- 694              	.L29:
- 695 0064 00800040 		.word	1073774592
- 696 0068 00100240 		.word	1073876992
- 697 006c 00180048 		.word	1207965696
- 698 0070 004C0040 		.word	1073761280
- 699              		.cfi_endproc
- 700              	.LFE325:
- 702              		.section	.text.HAL_TIM_Base_MspInit,"ax",%progbits
- 703              		.align	1
- 704              		.global	HAL_TIM_Base_MspInit
- 705              		.syntax unified
- 706              		.thumb
- 707              		.thumb_func
- 709              	HAL_TIM_Base_MspInit:
- 710              	.LFB326:
+ 667              		.loc 1 331 5
+ 668 0050 0321     		movs	r1, #3
+ 669 0052 4FF09040 		mov	r0, #1207959552
+ 670 0056 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 671              	.L28:
+ 672              		.loc 1 338 1
+ 673 005a 00BF     		nop
+ 674 005c 0837     		adds	r7, r7, #8
+ 675              		.cfi_def_cfa_offset 8
+ 676 005e BD46     		mov	sp, r7
+ 677              		.cfi_def_cfa_register 13
+ 678              		@ sp needed
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 19
+
+
+ 679 0060 80BD     		pop	{r7, pc}
+ 680              	.L30:
+ 681 0062 00BF     		.align	2
+ 682              	.L29:
+ 683 0064 00800040 		.word	1073774592
+ 684 0068 00100240 		.word	1073876992
+ 685 006c 00180048 		.word	1207965696
+ 686 0070 004C0040 		.word	1073761280
+ 687              		.cfi_endproc
+ 688              	.LFE329:
+ 690              		.section	.text.HAL_TIM_Base_MspInit,"ax",%progbits
+ 691              		.align	1
+ 692              		.global	HAL_TIM_Base_MspInit
+ 693              		.syntax unified
+ 694              		.thumb
+ 695              		.thumb_func
+ 697              	HAL_TIM_Base_MspInit:
+ 698              	.LFB330:
  339:Core/Src/stm32l4xx_hal_msp.c **** 
  340:Core/Src/stm32l4xx_hal_msp.c **** /**
  341:Core/Src/stm32l4xx_hal_msp.c **** * @brief TIM_Base MSP Initialization
@@ -1124,49 +1108,49 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  345:Core/Src/stm32l4xx_hal_msp.c **** */
  346:Core/Src/stm32l4xx_hal_msp.c **** void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
  347:Core/Src/stm32l4xx_hal_msp.c **** {
- 711              		.loc 1 347 1
- 712              		.cfi_startproc
- 713              		@ args = 0, pretend = 0, frame = 24
- 714              		@ frame_needed = 1, uses_anonymous_args = 0
- 715              		@ link register save eliminated.
- 716 0000 80B4     		push	{r7}
- 717              		.cfi_def_cfa_offset 4
- 718              		.cfi_offset 7, -4
- 719 0002 87B0     		sub	sp, sp, #28
- 720              		.cfi_def_cfa_offset 32
- 721 0004 00AF     		add	r7, sp, #0
- 722              		.cfi_def_cfa_register 7
- 723 0006 7860     		str	r0, [r7, #4]
+ 699              		.loc 1 347 1
+ 700              		.cfi_startproc
+ 701              		@ args = 0, pretend = 0, frame = 24
+ 702              		@ frame_needed = 1, uses_anonymous_args = 0
+ 703              		@ link register save eliminated.
+ 704 0000 80B4     		push	{r7}
+ 705              		.cfi_def_cfa_offset 4
+ 706              		.cfi_offset 7, -4
+ 707 0002 87B0     		sub	sp, sp, #28
+ 708              		.cfi_def_cfa_offset 32
+ 709 0004 00AF     		add	r7, sp, #0
+ 710              		.cfi_def_cfa_register 7
+ 711 0006 7860     		str	r0, [r7, #4]
  348:Core/Src/stm32l4xx_hal_msp.c ****   if(htim_base->Instance==TIM3)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 20
-
-
- 724              		.loc 1 348 15
- 725 0008 7B68     		ldr	r3, [r7, #4]
- 726 000a 1B68     		ldr	r3, [r3]
- 727              		.loc 1 348 5
- 728 000c 1C4A     		ldr	r2, .L36
- 729 000e 9342     		cmp	r3, r2
- 730 0010 0CD1     		bne	.L32
- 731              	.LBB10:
+ 712              		.loc 1 348 15
+ 713 0008 7B68     		ldr	r3, [r7, #4]
+ 714 000a 1B68     		ldr	r3, [r3]
+ 715              		.loc 1 348 5
+ 716 000c 1C4A     		ldr	r2, .L36
+ 717 000e 9342     		cmp	r3, r2
+ 718 0010 0CD1     		bne	.L32
+ 719              	.LBB10:
  349:Core/Src/stm32l4xx_hal_msp.c ****   {
  350:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM3_MspInit 0 */
  351:Core/Src/stm32l4xx_hal_msp.c **** 
  352:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END TIM3_MspInit 0 */
  353:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock enable */
  354:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_TIM3_CLK_ENABLE();
- 732              		.loc 1 354 5
- 733 0012 1C4B     		ldr	r3, .L36+4
- 734 0014 9B6D     		ldr	r3, [r3, #88]
- 735 0016 1B4A     		ldr	r2, .L36+4
- 736 0018 43F00203 		orr	r3, r3, #2
- 737 001c 9365     		str	r3, [r2, #88]
- 738 001e 194B     		ldr	r3, .L36+4
- 739 0020 9B6D     		ldr	r3, [r3, #88]
- 740 0022 03F00203 		and	r3, r3, #2
- 741 0026 7B61     		str	r3, [r7, #20]
- 742 0028 7B69     		ldr	r3, [r7, #20]
- 743              	.LBE10:
+ 720              		.loc 1 354 5
+ 721 0012 1C4B     		ldr	r3, .L36+4
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 20
+
+
+ 722 0014 9B6D     		ldr	r3, [r3, #88]
+ 723 0016 1B4A     		ldr	r2, .L36+4
+ 724 0018 43F00203 		orr	r3, r3, #2
+ 725 001c 9365     		str	r3, [r2, #88]
+ 726 001e 194B     		ldr	r3, .L36+4
+ 727 0020 9B6D     		ldr	r3, [r3, #88]
+ 728 0022 03F00203 		and	r3, r3, #2
+ 729 0026 7B61     		str	r3, [r7, #20]
+ 730 0028 7B69     		ldr	r3, [r7, #20]
+ 731              	.LBE10:
  355:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM3_MspInit 1 */
  356:Core/Src/stm32l4xx_hal_msp.c **** 
  357:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END TIM3_MspInit 1 */
@@ -1195,180 +1179,180 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  380:Core/Src/stm32l4xx_hal_msp.c ****   }
  381:Core/Src/stm32l4xx_hal_msp.c **** 
  382:Core/Src/stm32l4xx_hal_msp.c **** }
- 744              		.loc 1 382 1
- 745 002a 22E0     		b	.L35
- 746              	.L32:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 21
-
-
+ 732              		.loc 1 382 1
+ 733 002a 22E0     		b	.L35
+ 734              	.L32:
  359:Core/Src/stm32l4xx_hal_msp.c ****   {
- 747              		.loc 1 359 20
- 748 002c 7B68     		ldr	r3, [r7, #4]
- 749 002e 1B68     		ldr	r3, [r3]
+ 735              		.loc 1 359 20
+ 736 002c 7B68     		ldr	r3, [r7, #4]
+ 737 002e 1B68     		ldr	r3, [r3]
  359:Core/Src/stm32l4xx_hal_msp.c ****   {
- 750              		.loc 1 359 10
- 751 0030 154A     		ldr	r2, .L36+8
- 752 0032 9342     		cmp	r3, r2
- 753 0034 0CD1     		bne	.L34
- 754              	.LBB11:
+ 738              		.loc 1 359 10
+ 739 0030 154A     		ldr	r2, .L36+8
+ 740 0032 9342     		cmp	r3, r2
+ 741 0034 0CD1     		bne	.L34
+ 742              	.LBB11:
  365:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM4_MspInit 1 */
- 755              		.loc 1 365 5
- 756 0036 134B     		ldr	r3, .L36+4
- 757 0038 9B6D     		ldr	r3, [r3, #88]
- 758 003a 124A     		ldr	r2, .L36+4
- 759 003c 43F00403 		orr	r3, r3, #4
- 760 0040 9365     		str	r3, [r2, #88]
- 761 0042 104B     		ldr	r3, .L36+4
- 762 0044 9B6D     		ldr	r3, [r3, #88]
- 763 0046 03F00403 		and	r3, r3, #4
- 764 004a 3B61     		str	r3, [r7, #16]
- 765 004c 3B69     		ldr	r3, [r7, #16]
- 766              	.LBE11:
- 767              		.loc 1 382 1
- 768 004e 10E0     		b	.L35
- 769              	.L34:
+ 743              		.loc 1 365 5
+ 744 0036 134B     		ldr	r3, .L36+4
+ 745 0038 9B6D     		ldr	r3, [r3, #88]
+ 746 003a 124A     		ldr	r2, .L36+4
+ 747 003c 43F00403 		orr	r3, r3, #4
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 21
+
+
+ 748 0040 9365     		str	r3, [r2, #88]
+ 749 0042 104B     		ldr	r3, .L36+4
+ 750 0044 9B6D     		ldr	r3, [r3, #88]
+ 751 0046 03F00403 		and	r3, r3, #4
+ 752 004a 3B61     		str	r3, [r7, #16]
+ 753 004c 3B69     		ldr	r3, [r7, #16]
+ 754              	.LBE11:
+ 755              		.loc 1 382 1
+ 756 004e 10E0     		b	.L35
+ 757              	.L34:
  370:Core/Src/stm32l4xx_hal_msp.c ****   {
- 770              		.loc 1 370 20
- 771 0050 7B68     		ldr	r3, [r7, #4]
- 772 0052 1B68     		ldr	r3, [r3]
+ 758              		.loc 1 370 20
+ 759 0050 7B68     		ldr	r3, [r7, #4]
+ 760 0052 1B68     		ldr	r3, [r3]
  370:Core/Src/stm32l4xx_hal_msp.c ****   {
- 773              		.loc 1 370 10
- 774 0054 0D4A     		ldr	r2, .L36+12
- 775 0056 9342     		cmp	r3, r2
- 776 0058 0BD1     		bne	.L35
- 777              	.LBB12:
+ 761              		.loc 1 370 10
+ 762 0054 0D4A     		ldr	r2, .L36+12
+ 763 0056 9342     		cmp	r3, r2
+ 764 0058 0BD1     		bne	.L35
+ 765              	.LBB12:
  376:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM5_MspInit 1 */
- 778              		.loc 1 376 5
- 779 005a 0A4B     		ldr	r3, .L36+4
- 780 005c 9B6D     		ldr	r3, [r3, #88]
- 781 005e 094A     		ldr	r2, .L36+4
- 782 0060 43F00803 		orr	r3, r3, #8
- 783 0064 9365     		str	r3, [r2, #88]
- 784 0066 074B     		ldr	r3, .L36+4
- 785 0068 9B6D     		ldr	r3, [r3, #88]
- 786 006a 03F00803 		and	r3, r3, #8
- 787 006e FB60     		str	r3, [r7, #12]
- 788 0070 FB68     		ldr	r3, [r7, #12]
- 789              	.L35:
- 790              	.LBE12:
- 791              		.loc 1 382 1
- 792 0072 00BF     		nop
- 793 0074 1C37     		adds	r7, r7, #28
- 794              		.cfi_def_cfa_offset 4
- 795 0076 BD46     		mov	sp, r7
- 796              		.cfi_def_cfa_register 13
- 797              		@ sp needed
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 22
+ 766              		.loc 1 376 5
+ 767 005a 0A4B     		ldr	r3, .L36+4
+ 768 005c 9B6D     		ldr	r3, [r3, #88]
+ 769 005e 094A     		ldr	r2, .L36+4
+ 770 0060 43F00803 		orr	r3, r3, #8
+ 771 0064 9365     		str	r3, [r2, #88]
+ 772 0066 074B     		ldr	r3, .L36+4
+ 773 0068 9B6D     		ldr	r3, [r3, #88]
+ 774 006a 03F00803 		and	r3, r3, #8
+ 775 006e FB60     		str	r3, [r7, #12]
+ 776 0070 FB68     		ldr	r3, [r7, #12]
+ 777              	.L35:
+ 778              	.LBE12:
+ 779              		.loc 1 382 1
+ 780 0072 00BF     		nop
+ 781 0074 1C37     		adds	r7, r7, #28
+ 782              		.cfi_def_cfa_offset 4
+ 783 0076 BD46     		mov	sp, r7
+ 784              		.cfi_def_cfa_register 13
+ 785              		@ sp needed
+ 786 0078 5DF8047B 		ldr	r7, [sp], #4
+ 787              		.cfi_restore 7
+ 788              		.cfi_def_cfa_offset 0
+ 789 007c 7047     		bx	lr
+ 790              	.L37:
+ 791 007e 00BF     		.align	2
+ 792              	.L36:
+ 793 0080 00040040 		.word	1073742848
+ 794 0084 00100240 		.word	1073876992
+ 795 0088 00080040 		.word	1073743872
+ 796 008c 000C0040 		.word	1073744896
+ 797              		.cfi_endproc
+ 798              	.LFE330:
+ 800              		.section	.text.HAL_TIM_MspPostInit,"ax",%progbits
+ 801              		.align	1
+ 802              		.global	HAL_TIM_MspPostInit
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 22
 
 
- 798 0078 5DF8047B 		ldr	r7, [sp], #4
- 799              		.cfi_restore 7
- 800              		.cfi_def_cfa_offset 0
- 801 007c 7047     		bx	lr
- 802              	.L37:
- 803 007e 00BF     		.align	2
- 804              	.L36:
- 805 0080 00040040 		.word	1073742848
- 806 0084 00100240 		.word	1073876992
- 807 0088 00080040 		.word	1073743872
- 808 008c 000C0040 		.word	1073744896
- 809              		.cfi_endproc
- 810              	.LFE326:
- 812              		.section	.text.HAL_TIM_MspPostInit,"ax",%progbits
- 813              		.align	1
- 814              		.global	HAL_TIM_MspPostInit
- 815              		.syntax unified
- 816              		.thumb
- 817              		.thumb_func
- 819              	HAL_TIM_MspPostInit:
- 820              	.LFB327:
+ 803              		.syntax unified
+ 804              		.thumb
+ 805              		.thumb_func
+ 807              	HAL_TIM_MspPostInit:
+ 808              	.LFB331:
  383:Core/Src/stm32l4xx_hal_msp.c **** 
  384:Core/Src/stm32l4xx_hal_msp.c **** void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim)
  385:Core/Src/stm32l4xx_hal_msp.c **** {
- 821              		.loc 1 385 1
- 822              		.cfi_startproc
- 823              		@ args = 0, pretend = 0, frame = 32
- 824              		@ frame_needed = 1, uses_anonymous_args = 0
- 825 0000 80B5     		push	{r7, lr}
- 826              		.cfi_def_cfa_offset 8
- 827              		.cfi_offset 7, -8
- 828              		.cfi_offset 14, -4
- 829 0002 88B0     		sub	sp, sp, #32
- 830              		.cfi_def_cfa_offset 40
- 831 0004 00AF     		add	r7, sp, #0
- 832              		.cfi_def_cfa_register 7
- 833 0006 7860     		str	r0, [r7, #4]
+ 809              		.loc 1 385 1
+ 810              		.cfi_startproc
+ 811              		@ args = 0, pretend = 0, frame = 32
+ 812              		@ frame_needed = 1, uses_anonymous_args = 0
+ 813 0000 80B5     		push	{r7, lr}
+ 814              		.cfi_def_cfa_offset 8
+ 815              		.cfi_offset 7, -8
+ 816              		.cfi_offset 14, -4
+ 817 0002 88B0     		sub	sp, sp, #32
+ 818              		.cfi_def_cfa_offset 40
+ 819 0004 00AF     		add	r7, sp, #0
+ 820              		.cfi_def_cfa_register 7
+ 821 0006 7860     		str	r0, [r7, #4]
  386:Core/Src/stm32l4xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
- 834              		.loc 1 386 20
- 835 0008 07F10C03 		add	r3, r7, #12
- 836 000c 0022     		movs	r2, #0
- 837 000e 1A60     		str	r2, [r3]
- 838 0010 5A60     		str	r2, [r3, #4]
- 839 0012 9A60     		str	r2, [r3, #8]
- 840 0014 DA60     		str	r2, [r3, #12]
- 841 0016 1A61     		str	r2, [r3, #16]
+ 822              		.loc 1 386 20
+ 823 0008 07F10C03 		add	r3, r7, #12
+ 824 000c 0022     		movs	r2, #0
+ 825 000e 1A60     		str	r2, [r3]
+ 826 0010 5A60     		str	r2, [r3, #4]
+ 827 0012 9A60     		str	r2, [r3, #8]
+ 828 0014 DA60     		str	r2, [r3, #12]
+ 829 0016 1A61     		str	r2, [r3, #16]
  387:Core/Src/stm32l4xx_hal_msp.c ****   if(htim->Instance==TIM3)
- 842              		.loc 1 387 10
- 843 0018 7B68     		ldr	r3, [r7, #4]
- 844 001a 1B68     		ldr	r3, [r3]
- 845              		.loc 1 387 5
- 846 001c 114A     		ldr	r2, .L41
- 847 001e 9342     		cmp	r3, r2
- 848 0020 1BD1     		bne	.L40
- 849              	.LBB13:
+ 830              		.loc 1 387 10
+ 831 0018 7B68     		ldr	r3, [r7, #4]
+ 832 001a 1B68     		ldr	r3, [r3]
+ 833              		.loc 1 387 5
+ 834 001c 114A     		ldr	r2, .L41
+ 835 001e 9342     		cmp	r3, r2
+ 836 0020 1BD1     		bne	.L40
+ 837              	.LBB13:
  388:Core/Src/stm32l4xx_hal_msp.c ****   {
  389:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM3_MspPostInit 0 */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 23
-
-
  390:Core/Src/stm32l4xx_hal_msp.c **** 
  391:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END TIM3_MspPostInit 0 */
  392:Core/Src/stm32l4xx_hal_msp.c **** 
  393:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_GPIOE_CLK_ENABLE();
- 850              		.loc 1 393 5
- 851 0022 114B     		ldr	r3, .L41+4
- 852 0024 DB6C     		ldr	r3, [r3, #76]
- 853 0026 104A     		ldr	r2, .L41+4
- 854 0028 43F01003 		orr	r3, r3, #16
- 855 002c D364     		str	r3, [r2, #76]
- 856 002e 0E4B     		ldr	r3, .L41+4
- 857 0030 DB6C     		ldr	r3, [r3, #76]
- 858 0032 03F01003 		and	r3, r3, #16
- 859 0036 BB60     		str	r3, [r7, #8]
- 860 0038 BB68     		ldr	r3, [r7, #8]
- 861              	.LBE13:
+ 838              		.loc 1 393 5
+ 839 0022 114B     		ldr	r3, .L41+4
+ 840 0024 DB6C     		ldr	r3, [r3, #76]
+ 841 0026 104A     		ldr	r2, .L41+4
+ 842 0028 43F01003 		orr	r3, r3, #16
+ 843 002c D364     		str	r3, [r2, #76]
+ 844 002e 0E4B     		ldr	r3, .L41+4
+ 845 0030 DB6C     		ldr	r3, [r3, #76]
+ 846 0032 03F01003 		and	r3, r3, #16
+ 847 0036 BB60     		str	r3, [r7, #8]
+ 848 0038 BB68     		ldr	r3, [r7, #8]
+ 849              	.LBE13:
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 23
+
+
  394:Core/Src/stm32l4xx_hal_msp.c ****     /**TIM3 GPIO Configuration
  395:Core/Src/stm32l4xx_hal_msp.c ****     PE3     ------> TIM3_CH1
  396:Core/Src/stm32l4xx_hal_msp.c ****     PE4     ------> TIM3_CH2
  397:Core/Src/stm32l4xx_hal_msp.c ****     PE5     ------> TIM3_CH3
  398:Core/Src/stm32l4xx_hal_msp.c ****     */
  399:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5;
- 862              		.loc 1 399 25
- 863 003a 3823     		movs	r3, #56
- 864 003c FB60     		str	r3, [r7, #12]
+ 850              		.loc 1 399 25
+ 851 003a 3823     		movs	r3, #56
+ 852 003c FB60     		str	r3, [r7, #12]
  400:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
- 865              		.loc 1 400 26
- 866 003e 0223     		movs	r3, #2
- 867 0040 3B61     		str	r3, [r7, #16]
+ 853              		.loc 1 400 26
+ 854 003e 0223     		movs	r3, #2
+ 855 0040 3B61     		str	r3, [r7, #16]
  401:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
- 868              		.loc 1 401 26
- 869 0042 0023     		movs	r3, #0
- 870 0044 7B61     		str	r3, [r7, #20]
+ 856              		.loc 1 401 26
+ 857 0042 0023     		movs	r3, #0
+ 858 0044 7B61     		str	r3, [r7, #20]
  402:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
- 871              		.loc 1 402 27
- 872 0046 0023     		movs	r3, #0
- 873 0048 BB61     		str	r3, [r7, #24]
+ 859              		.loc 1 402 27
+ 860 0046 0023     		movs	r3, #0
+ 861 0048 BB61     		str	r3, [r7, #24]
  403:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF2_TIM3;
- 874              		.loc 1 403 31
- 875 004a 0223     		movs	r3, #2
- 876 004c FB61     		str	r3, [r7, #28]
+ 862              		.loc 1 403 31
+ 863 004a 0223     		movs	r3, #2
+ 864 004c FB61     		str	r3, [r7, #28]
  404:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
- 877              		.loc 1 404 5
- 878 004e 07F10C03 		add	r3, r7, #12
- 879 0052 1946     		mov	r1, r3
- 880 0054 0548     		ldr	r0, .L41+8
- 881 0056 FFF7FEFF 		bl	HAL_GPIO_Init
- 882              	.L40:
+ 865              		.loc 1 404 5
+ 866 004e 07F10C03 		add	r3, r7, #12
+ 867 0052 1946     		mov	r1, r3
+ 868 0054 0548     		ldr	r0, .L41+8
+ 869 0056 FFF7FEFF 		bl	HAL_GPIO_Init
+ 870              	.L40:
  405:Core/Src/stm32l4xx_hal_msp.c **** 
  406:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM3_MspPostInit 1 */
  407:Core/Src/stm32l4xx_hal_msp.c **** 
@@ -1376,33 +1360,33 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  409:Core/Src/stm32l4xx_hal_msp.c ****   }
  410:Core/Src/stm32l4xx_hal_msp.c **** 
  411:Core/Src/stm32l4xx_hal_msp.c **** }
- 883              		.loc 1 411 1
- 884 005a 00BF     		nop
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 24
+ 871              		.loc 1 411 1
+ 872 005a 00BF     		nop
+ 873 005c 2037     		adds	r7, r7, #32
+ 874              		.cfi_def_cfa_offset 8
+ 875 005e BD46     		mov	sp, r7
+ 876              		.cfi_def_cfa_register 13
+ 877              		@ sp needed
+ 878 0060 80BD     		pop	{r7, pc}
+ 879              	.L42:
+ 880 0062 00BF     		.align	2
+ 881              	.L41:
+ 882 0064 00040040 		.word	1073742848
+ 883 0068 00100240 		.word	1073876992
+ 884 006c 00100048 		.word	1207963648
+ 885              		.cfi_endproc
+ 886              	.LFE331:
+ 888              		.section	.text.HAL_TIM_Base_MspDeInit,"ax",%progbits
+ 889              		.align	1
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 24
 
 
- 885 005c 2037     		adds	r7, r7, #32
- 886              		.cfi_def_cfa_offset 8
- 887 005e BD46     		mov	sp, r7
- 888              		.cfi_def_cfa_register 13
- 889              		@ sp needed
- 890 0060 80BD     		pop	{r7, pc}
- 891              	.L42:
- 892 0062 00BF     		.align	2
- 893              	.L41:
- 894 0064 00040040 		.word	1073742848
- 895 0068 00100240 		.word	1073876992
- 896 006c 00100048 		.word	1207963648
- 897              		.cfi_endproc
- 898              	.LFE327:
- 900              		.section	.text.HAL_TIM_Base_MspDeInit,"ax",%progbits
- 901              		.align	1
- 902              		.global	HAL_TIM_Base_MspDeInit
- 903              		.syntax unified
- 904              		.thumb
- 905              		.thumb_func
- 907              	HAL_TIM_Base_MspDeInit:
- 908              	.LFB328:
+ 890              		.global	HAL_TIM_Base_MspDeInit
+ 891              		.syntax unified
+ 892              		.thumb
+ 893              		.thumb_func
+ 895              	HAL_TIM_Base_MspDeInit:
+ 896              	.LFB332:
  412:Core/Src/stm32l4xx_hal_msp.c **** /**
  413:Core/Src/stm32l4xx_hal_msp.c **** * @brief TIM_Base MSP De-Initialization
  414:Core/Src/stm32l4xx_hal_msp.c **** * This function freeze the hardware resources used in this example
@@ -1411,42 +1395,39 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  417:Core/Src/stm32l4xx_hal_msp.c **** */
  418:Core/Src/stm32l4xx_hal_msp.c **** void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
  419:Core/Src/stm32l4xx_hal_msp.c **** {
- 909              		.loc 1 419 1
- 910              		.cfi_startproc
- 911              		@ args = 0, pretend = 0, frame = 8
- 912              		@ frame_needed = 1, uses_anonymous_args = 0
- 913              		@ link register save eliminated.
- 914 0000 80B4     		push	{r7}
- 915              		.cfi_def_cfa_offset 4
- 916              		.cfi_offset 7, -4
- 917 0002 83B0     		sub	sp, sp, #12
- 918              		.cfi_def_cfa_offset 16
- 919 0004 00AF     		add	r7, sp, #0
- 920              		.cfi_def_cfa_register 7
- 921 0006 7860     		str	r0, [r7, #4]
+ 897              		.loc 1 419 1
+ 898              		.cfi_startproc
+ 899              		@ args = 0, pretend = 0, frame = 8
+ 900              		@ frame_needed = 1, uses_anonymous_args = 0
+ 901              		@ link register save eliminated.
+ 902 0000 80B4     		push	{r7}
+ 903              		.cfi_def_cfa_offset 4
+ 904              		.cfi_offset 7, -4
+ 905 0002 83B0     		sub	sp, sp, #12
+ 906              		.cfi_def_cfa_offset 16
+ 907 0004 00AF     		add	r7, sp, #0
+ 908              		.cfi_def_cfa_register 7
+ 909 0006 7860     		str	r0, [r7, #4]
  420:Core/Src/stm32l4xx_hal_msp.c ****   if(htim_base->Instance==TIM3)
- 922              		.loc 1 420 15
- 923 0008 7B68     		ldr	r3, [r7, #4]
- 924 000a 1B68     		ldr	r3, [r3]
- 925              		.loc 1 420 5
- 926 000c 134A     		ldr	r2, .L48
- 927 000e 9342     		cmp	r3, r2
- 928 0010 06D1     		bne	.L44
+ 910              		.loc 1 420 15
+ 911 0008 7B68     		ldr	r3, [r7, #4]
+ 912 000a 1B68     		ldr	r3, [r3]
+ 913              		.loc 1 420 5
+ 914 000c 134A     		ldr	r2, .L48
+ 915 000e 9342     		cmp	r3, r2
+ 916 0010 06D1     		bne	.L44
  421:Core/Src/stm32l4xx_hal_msp.c ****   {
  422:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM3_MspDeInit 0 */
  423:Core/Src/stm32l4xx_hal_msp.c **** 
  424:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END TIM3_MspDeInit 0 */
  425:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock disable */
  426:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_TIM3_CLK_DISABLE();
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 25
-
-
- 929              		.loc 1 426 5
- 930 0012 134B     		ldr	r3, .L48+4
- 931 0014 9B6D     		ldr	r3, [r3, #88]
- 932 0016 124A     		ldr	r2, .L48+4
- 933 0018 23F00203 		bic	r3, r3, #2
- 934 001c 9365     		str	r3, [r2, #88]
+ 917              		.loc 1 426 5
+ 918 0012 134B     		ldr	r3, .L48+4
+ 919 0014 9B6D     		ldr	r3, [r3, #88]
+ 920 0016 124A     		ldr	r2, .L48+4
+ 921 0018 23F00203 		bic	r3, r3, #2
+ 922 001c 9365     		str	r3, [r2, #88]
  427:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM3_MspDeInit 1 */
  428:Core/Src/stm32l4xx_hal_msp.c **** 
  429:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END TIM3_MspDeInit 1 */
@@ -1457,6 +1438,9 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  434:Core/Src/stm32l4xx_hal_msp.c **** 
  435:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END TIM4_MspDeInit 0 */
  436:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock disable */
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 25
+
+
  437:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_TIM4_CLK_DISABLE();
  438:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM4_MspDeInit 1 */
  439:Core/Src/stm32l4xx_hal_msp.c **** 
@@ -1475,76 +1459,76 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  452:Core/Src/stm32l4xx_hal_msp.c ****   }
  453:Core/Src/stm32l4xx_hal_msp.c **** 
  454:Core/Src/stm32l4xx_hal_msp.c **** }
- 935              		.loc 1 454 1
- 936 001e 16E0     		b	.L47
- 937              	.L44:
+ 923              		.loc 1 454 1
+ 924 001e 16E0     		b	.L47
+ 925              	.L44:
  431:Core/Src/stm32l4xx_hal_msp.c ****   {
- 938              		.loc 1 431 20
- 939 0020 7B68     		ldr	r3, [r7, #4]
- 940 0022 1B68     		ldr	r3, [r3]
+ 926              		.loc 1 431 20
+ 927 0020 7B68     		ldr	r3, [r7, #4]
+ 928 0022 1B68     		ldr	r3, [r3]
  431:Core/Src/stm32l4xx_hal_msp.c ****   {
- 941              		.loc 1 431 10
- 942 0024 0F4A     		ldr	r2, .L48+8
- 943 0026 9342     		cmp	r3, r2
- 944 0028 06D1     		bne	.L46
+ 929              		.loc 1 431 10
+ 930 0024 0F4A     		ldr	r2, .L48+8
+ 931 0026 9342     		cmp	r3, r2
+ 932 0028 06D1     		bne	.L46
  437:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM4_MspDeInit 1 */
- 945              		.loc 1 437 5
- 946 002a 0D4B     		ldr	r3, .L48+4
- 947 002c 9B6D     		ldr	r3, [r3, #88]
- 948 002e 0C4A     		ldr	r2, .L48+4
- 949 0030 23F00403 		bic	r3, r3, #4
- 950 0034 9365     		str	r3, [r2, #88]
- 951              		.loc 1 454 1
- 952 0036 0AE0     		b	.L47
- 953              	.L46:
+ 933              		.loc 1 437 5
+ 934 002a 0D4B     		ldr	r3, .L48+4
+ 935 002c 9B6D     		ldr	r3, [r3, #88]
+ 936 002e 0C4A     		ldr	r2, .L48+4
+ 937 0030 23F00403 		bic	r3, r3, #4
+ 938 0034 9365     		str	r3, [r2, #88]
+ 939              		.loc 1 454 1
+ 940 0036 0AE0     		b	.L47
+ 941              	.L46:
  442:Core/Src/stm32l4xx_hal_msp.c ****   {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 26
-
-
- 954              		.loc 1 442 20
- 955 0038 7B68     		ldr	r3, [r7, #4]
- 956 003a 1B68     		ldr	r3, [r3]
+ 942              		.loc 1 442 20
+ 943 0038 7B68     		ldr	r3, [r7, #4]
+ 944 003a 1B68     		ldr	r3, [r3]
  442:Core/Src/stm32l4xx_hal_msp.c ****   {
- 957              		.loc 1 442 10
- 958 003c 0A4A     		ldr	r2, .L48+12
- 959 003e 9342     		cmp	r3, r2
- 960 0040 05D1     		bne	.L47
+ 945              		.loc 1 442 10
+ 946 003c 0A4A     		ldr	r2, .L48+12
+ 947 003e 9342     		cmp	r3, r2
+ 948 0040 05D1     		bne	.L47
  448:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN TIM5_MspDeInit 1 */
- 961              		.loc 1 448 5
- 962 0042 074B     		ldr	r3, .L48+4
- 963 0044 9B6D     		ldr	r3, [r3, #88]
- 964 0046 064A     		ldr	r2, .L48+4
- 965 0048 23F00803 		bic	r3, r3, #8
- 966 004c 9365     		str	r3, [r2, #88]
- 967              	.L47:
- 968              		.loc 1 454 1
- 969 004e 00BF     		nop
- 970 0050 0C37     		adds	r7, r7, #12
- 971              		.cfi_def_cfa_offset 4
- 972 0052 BD46     		mov	sp, r7
- 973              		.cfi_def_cfa_register 13
- 974              		@ sp needed
- 975 0054 5DF8047B 		ldr	r7, [sp], #4
- 976              		.cfi_restore 7
- 977              		.cfi_def_cfa_offset 0
- 978 0058 7047     		bx	lr
- 979              	.L49:
- 980 005a 00BF     		.align	2
- 981              	.L48:
- 982 005c 00040040 		.word	1073742848
- 983 0060 00100240 		.word	1073876992
- 984 0064 00080040 		.word	1073743872
- 985 0068 000C0040 		.word	1073744896
- 986              		.cfi_endproc
- 987              	.LFE328:
- 989              		.section	.text.HAL_PCD_MspInit,"ax",%progbits
- 990              		.align	1
- 991              		.global	HAL_PCD_MspInit
- 992              		.syntax unified
- 993              		.thumb
- 994              		.thumb_func
- 996              	HAL_PCD_MspInit:
- 997              	.LFB329:
+ 949              		.loc 1 448 5
+ 950 0042 074B     		ldr	r3, .L48+4
+ 951 0044 9B6D     		ldr	r3, [r3, #88]
+ 952 0046 064A     		ldr	r2, .L48+4
+ 953 0048 23F00803 		bic	r3, r3, #8
+ 954 004c 9365     		str	r3, [r2, #88]
+ 955              	.L47:
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 26
+
+
+ 956              		.loc 1 454 1
+ 957 004e 00BF     		nop
+ 958 0050 0C37     		adds	r7, r7, #12
+ 959              		.cfi_def_cfa_offset 4
+ 960 0052 BD46     		mov	sp, r7
+ 961              		.cfi_def_cfa_register 13
+ 962              		@ sp needed
+ 963 0054 5DF8047B 		ldr	r7, [sp], #4
+ 964              		.cfi_restore 7
+ 965              		.cfi_def_cfa_offset 0
+ 966 0058 7047     		bx	lr
+ 967              	.L49:
+ 968 005a 00BF     		.align	2
+ 969              	.L48:
+ 970 005c 00040040 		.word	1073742848
+ 971 0060 00100240 		.word	1073876992
+ 972 0064 00080040 		.word	1073743872
+ 973 0068 000C0040 		.word	1073744896
+ 974              		.cfi_endproc
+ 975              	.LFE332:
+ 977              		.section	.text.HAL_PCD_MspInit,"ax",%progbits
+ 978              		.align	1
+ 979              		.global	HAL_PCD_MspInit
+ 980              		.syntax unified
+ 981              		.thumb
+ 982              		.thumb_func
+ 984              	HAL_PCD_MspInit:
+ 985              	.LFB333:
  455:Core/Src/stm32l4xx_hal_msp.c **** 
  456:Core/Src/stm32l4xx_hal_msp.c **** /**
  457:Core/Src/stm32l4xx_hal_msp.c **** * @brief PCD MSP Initialization
@@ -1554,45 +1538,45 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  461:Core/Src/stm32l4xx_hal_msp.c **** */
  462:Core/Src/stm32l4xx_hal_msp.c **** void HAL_PCD_MspInit(PCD_HandleTypeDef* hpcd)
  463:Core/Src/stm32l4xx_hal_msp.c **** {
- 998              		.loc 1 463 1
- 999              		.cfi_startproc
- 1000              		@ args = 0, pretend = 0, frame = 192
- 1001              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 27
-
-
- 1002 0000 80B5     		push	{r7, lr}
- 1003              		.cfi_def_cfa_offset 8
- 1004              		.cfi_offset 7, -8
- 1005              		.cfi_offset 14, -4
- 1006 0002 B0B0     		sub	sp, sp, #192
- 1007              		.cfi_def_cfa_offset 200
- 1008 0004 00AF     		add	r7, sp, #0
- 1009              		.cfi_def_cfa_register 7
- 1010 0006 7860     		str	r0, [r7, #4]
+ 986              		.loc 1 463 1
+ 987              		.cfi_startproc
+ 988              		@ args = 0, pretend = 0, frame = 192
+ 989              		@ frame_needed = 1, uses_anonymous_args = 0
+ 990 0000 80B5     		push	{r7, lr}
+ 991              		.cfi_def_cfa_offset 8
+ 992              		.cfi_offset 7, -8
+ 993              		.cfi_offset 14, -4
+ 994 0002 B0B0     		sub	sp, sp, #192
+ 995              		.cfi_def_cfa_offset 200
+ 996 0004 00AF     		add	r7, sp, #0
+ 997              		.cfi_def_cfa_register 7
+ 998 0006 7860     		str	r0, [r7, #4]
  464:Core/Src/stm32l4xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
- 1011              		.loc 1 464 20
- 1012 0008 07F1AC03 		add	r3, r7, #172
- 1013 000c 0022     		movs	r2, #0
- 1014 000e 1A60     		str	r2, [r3]
- 1015 0010 5A60     		str	r2, [r3, #4]
- 1016 0012 9A60     		str	r2, [r3, #8]
- 1017 0014 DA60     		str	r2, [r3, #12]
- 1018 0016 1A61     		str	r2, [r3, #16]
+ 999              		.loc 1 464 20
+ 1000 0008 07F1AC03 		add	r3, r7, #172
+ 1001 000c 0022     		movs	r2, #0
+ 1002 000e 1A60     		str	r2, [r3]
+ 1003 0010 5A60     		str	r2, [r3, #4]
+ 1004 0012 9A60     		str	r2, [r3, #8]
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 27
+
+
+ 1005 0014 DA60     		str	r2, [r3, #12]
+ 1006 0016 1A61     		str	r2, [r3, #16]
  465:Core/Src/stm32l4xx_hal_msp.c ****   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
- 1019              		.loc 1 465 28
- 1020 0018 07F11403 		add	r3, r7, #20
- 1021 001c 9822     		movs	r2, #152
- 1022 001e 0021     		movs	r1, #0
- 1023 0020 1846     		mov	r0, r3
- 1024 0022 FFF7FEFF 		bl	memset
+ 1007              		.loc 1 465 28
+ 1008 0018 07F11403 		add	r3, r7, #20
+ 1009 001c 9822     		movs	r2, #152
+ 1010 001e 0021     		movs	r1, #0
+ 1011 0020 1846     		mov	r0, r3
+ 1012 0022 FFF7FEFF 		bl	memset
  466:Core/Src/stm32l4xx_hal_msp.c ****   if(hpcd->Instance==USB_OTG_FS)
- 1025              		.loc 1 466 10
- 1026 0026 7B68     		ldr	r3, [r7, #4]
- 1027 0028 1B68     		ldr	r3, [r3]
- 1028              		.loc 1 466 5
- 1029 002a B3F1A04F 		cmp	r3, #1342177280
- 1030 002e 6CD1     		bne	.L54
+ 1013              		.loc 1 466 10
+ 1014 0026 7B68     		ldr	r3, [r7, #4]
+ 1015 0028 1B68     		ldr	r3, [r3]
+ 1016              		.loc 1 466 5
+ 1017 002a B3F1A04F 		cmp	r3, #1342177280
+ 1018 002e 6CD1     		bne	.L54
  467:Core/Src/stm32l4xx_hal_msp.c ****   {
  468:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN USB_OTG_FS_MspInit 0 */
  469:Core/Src/stm32l4xx_hal_msp.c **** 
@@ -1601,46 +1585,46 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  472:Core/Src/stm32l4xx_hal_msp.c ****   /** Initializes the peripherals clock
  473:Core/Src/stm32l4xx_hal_msp.c ****   */
  474:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
- 1031              		.loc 1 474 40
- 1032 0030 4FF40053 		mov	r3, #8192
- 1033 0034 7B61     		str	r3, [r7, #20]
+ 1019              		.loc 1 474 40
+ 1020 0030 4FF40053 		mov	r3, #8192
+ 1021 0034 7B61     		str	r3, [r7, #20]
  475:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_HSI48;
- 1034              		.loc 1 475 37
- 1035 0036 0023     		movs	r3, #0
- 1036 0038 C7F88830 		str	r3, [r7, #136]
+ 1022              		.loc 1 475 37
+ 1023 0036 0023     		movs	r3, #0
+ 1024 0038 C7F88830 		str	r3, [r7, #136]
  476:Core/Src/stm32l4xx_hal_msp.c ****     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
- 1037              		.loc 1 476 9
- 1038 003c 07F11403 		add	r3, r7, #20
- 1039 0040 1846     		mov	r0, r3
- 1040 0042 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
- 1041 0046 0346     		mov	r3, r0
- 1042              		.loc 1 476 8
- 1043 0048 002B     		cmp	r3, #0
- 1044 004a 01D0     		beq	.L52
+ 1025              		.loc 1 476 9
+ 1026 003c 07F11403 		add	r3, r7, #20
+ 1027 0040 1846     		mov	r0, r3
+ 1028 0042 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 1029 0046 0346     		mov	r3, r0
+ 1030              		.loc 1 476 8
+ 1031 0048 002B     		cmp	r3, #0
+ 1032 004a 01D0     		beq	.L52
  477:Core/Src/stm32l4xx_hal_msp.c ****     {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 28
-
-
  478:Core/Src/stm32l4xx_hal_msp.c ****       Error_Handler();
- 1045              		.loc 1 478 7
- 1046 004c FFF7FEFF 		bl	Error_Handler
- 1047              	.L52:
- 1048              	.LBB14:
+ 1033              		.loc 1 478 7
+ 1034 004c FFF7FEFF 		bl	Error_Handler
+ 1035              	.L52:
+ 1036              	.LBB14:
  479:Core/Src/stm32l4xx_hal_msp.c ****     }
  480:Core/Src/stm32l4xx_hal_msp.c **** 
  481:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
- 1049              		.loc 1 481 5
- 1050 0050 304B     		ldr	r3, .L55
- 1051 0052 DB6C     		ldr	r3, [r3, #76]
- 1052 0054 2F4A     		ldr	r2, .L55
- 1053 0056 43F00103 		orr	r3, r3, #1
- 1054 005a D364     		str	r3, [r2, #76]
- 1055 005c 2D4B     		ldr	r3, .L55
- 1056 005e DB6C     		ldr	r3, [r3, #76]
- 1057 0060 03F00103 		and	r3, r3, #1
- 1058 0064 3B61     		str	r3, [r7, #16]
- 1059 0066 3B69     		ldr	r3, [r7, #16]
- 1060              	.LBE14:
+ 1037              		.loc 1 481 5
+ 1038 0050 304B     		ldr	r3, .L55
+ 1039 0052 DB6C     		ldr	r3, [r3, #76]
+ 1040 0054 2F4A     		ldr	r2, .L55
+ 1041 0056 43F00103 		orr	r3, r3, #1
+ 1042 005a D364     		str	r3, [r2, #76]
+ 1043 005c 2D4B     		ldr	r3, .L55
+ 1044 005e DB6C     		ldr	r3, [r3, #76]
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 28
+
+
+ 1045 0060 03F00103 		and	r3, r3, #1
+ 1046 0064 3B61     		str	r3, [r7, #16]
+ 1047 0066 3B69     		ldr	r3, [r7, #16]
+ 1048              	.LBE14:
  482:Core/Src/stm32l4xx_hal_msp.c ****     /**USB_OTG_FS GPIO Configuration
  483:Core/Src/stm32l4xx_hal_msp.c ****     PA8     ------> USB_OTG_FS_SOF
  484:Core/Src/stm32l4xx_hal_msp.c ****     PA9     ------> USB_OTG_FS_VBUS
@@ -1649,107 +1633,104 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  487:Core/Src/stm32l4xx_hal_msp.c ****     PA12     ------> USB_OTG_FS_DP
  488:Core/Src/stm32l4xx_hal_msp.c ****     */
  489:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pin = USB_SOF_Pin|USB_ID_Pin|USB_DM_Pin|USB_DP_Pin;
- 1061              		.loc 1 489 25
- 1062 0068 4FF4E853 		mov	r3, #7424
- 1063 006c C7F8AC30 		str	r3, [r7, #172]
+ 1049              		.loc 1 489 25
+ 1050 0068 4FF4E853 		mov	r3, #7424
+ 1051 006c C7F8AC30 		str	r3, [r7, #172]
  490:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
- 1064              		.loc 1 490 26
- 1065 0070 0223     		movs	r3, #2
- 1066 0072 C7F8B030 		str	r3, [r7, #176]
+ 1052              		.loc 1 490 26
+ 1053 0070 0223     		movs	r3, #2
+ 1054 0072 C7F8B030 		str	r3, [r7, #176]
  491:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
- 1067              		.loc 1 491 26
- 1068 0076 0023     		movs	r3, #0
- 1069 0078 C7F8B430 		str	r3, [r7, #180]
+ 1055              		.loc 1 491 26
+ 1056 0076 0023     		movs	r3, #0
+ 1057 0078 C7F8B430 		str	r3, [r7, #180]
  492:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
- 1070              		.loc 1 492 27
- 1071 007c 0323     		movs	r3, #3
- 1072 007e C7F8B830 		str	r3, [r7, #184]
+ 1058              		.loc 1 492 27
+ 1059 007c 0323     		movs	r3, #3
+ 1060 007e C7F8B830 		str	r3, [r7, #184]
  493:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF10_OTG_FS;
- 1073              		.loc 1 493 31
- 1074 0082 0A23     		movs	r3, #10
- 1075 0084 C7F8BC30 		str	r3, [r7, #188]
+ 1061              		.loc 1 493 31
+ 1062 0082 0A23     		movs	r3, #10
+ 1063 0084 C7F8BC30 		str	r3, [r7, #188]
  494:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
- 1076              		.loc 1 494 5
- 1077 0088 07F1AC03 		add	r3, r7, #172
- 1078 008c 1946     		mov	r1, r3
- 1079 008e 4FF09040 		mov	r0, #1207959552
- 1080 0092 FFF7FEFF 		bl	HAL_GPIO_Init
+ 1064              		.loc 1 494 5
+ 1065 0088 07F1AC03 		add	r3, r7, #172
+ 1066 008c 1946     		mov	r1, r3
+ 1067 008e 4FF09040 		mov	r0, #1207959552
+ 1068 0092 FFF7FEFF 		bl	HAL_GPIO_Init
  495:Core/Src/stm32l4xx_hal_msp.c **** 
  496:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pin = USB_VBUS_Pin;
- 1081              		.loc 1 496 25
- 1082 0096 4FF40073 		mov	r3, #512
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 29
-
-
- 1083 009a C7F8AC30 		str	r3, [r7, #172]
+ 1069              		.loc 1 496 25
+ 1070 0096 4FF40073 		mov	r3, #512
+ 1071 009a C7F8AC30 		str	r3, [r7, #172]
  497:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
- 1084              		.loc 1 497 26
- 1085 009e 0023     		movs	r3, #0
- 1086 00a0 C7F8B030 		str	r3, [r7, #176]
+ 1072              		.loc 1 497 26
+ 1073 009e 0023     		movs	r3, #0
+ 1074 00a0 C7F8B030 		str	r3, [r7, #176]
  498:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
- 1087              		.loc 1 498 26
- 1088 00a4 0023     		movs	r3, #0
- 1089 00a6 C7F8B430 		str	r3, [r7, #180]
+ 1075              		.loc 1 498 26
+ 1076 00a4 0023     		movs	r3, #0
+ 1077 00a6 C7F8B430 		str	r3, [r7, #180]
  499:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_Init(USB_VBUS_GPIO_Port, &GPIO_InitStruct);
- 1090              		.loc 1 499 5
- 1091 00aa 07F1AC03 		add	r3, r7, #172
- 1092 00ae 1946     		mov	r1, r3
- 1093 00b0 4FF09040 		mov	r0, #1207959552
- 1094 00b4 FFF7FEFF 		bl	HAL_GPIO_Init
- 1095              	.LBB15:
+ 1078              		.loc 1 499 5
+ 1079 00aa 07F1AC03 		add	r3, r7, #172
+ 1080 00ae 1946     		mov	r1, r3
+ 1081 00b0 4FF09040 		mov	r0, #1207959552
+ 1082 00b4 FFF7FEFF 		bl	HAL_GPIO_Init
+ 1083              	.LBB15:
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 29
+
+
  500:Core/Src/stm32l4xx_hal_msp.c **** 
  501:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock enable */
  502:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_USB_OTG_FS_CLK_ENABLE();
- 1096              		.loc 1 502 5
- 1097 00b8 164B     		ldr	r3, .L55
- 1098 00ba DB6C     		ldr	r3, [r3, #76]
- 1099 00bc 154A     		ldr	r2, .L55
- 1100 00be 43F48053 		orr	r3, r3, #4096
- 1101 00c2 D364     		str	r3, [r2, #76]
- 1102 00c4 134B     		ldr	r3, .L55
- 1103 00c6 DB6C     		ldr	r3, [r3, #76]
- 1104 00c8 03F48053 		and	r3, r3, #4096
- 1105 00cc FB60     		str	r3, [r7, #12]
- 1106 00ce FB68     		ldr	r3, [r7, #12]
- 1107              	.LBE15:
+ 1084              		.loc 1 502 5
+ 1085 00b8 164B     		ldr	r3, .L55
+ 1086 00ba DB6C     		ldr	r3, [r3, #76]
+ 1087 00bc 154A     		ldr	r2, .L55
+ 1088 00be 43F48053 		orr	r3, r3, #4096
+ 1089 00c2 D364     		str	r3, [r2, #76]
+ 1090 00c4 134B     		ldr	r3, .L55
+ 1091 00c6 DB6C     		ldr	r3, [r3, #76]
+ 1092 00c8 03F48053 		and	r3, r3, #4096
+ 1093 00cc FB60     		str	r3, [r7, #12]
+ 1094 00ce FB68     		ldr	r3, [r7, #12]
+ 1095              	.LBE15:
  503:Core/Src/stm32l4xx_hal_msp.c **** 
  504:Core/Src/stm32l4xx_hal_msp.c ****     /* Enable VDDUSB */
  505:Core/Src/stm32l4xx_hal_msp.c ****     if(__HAL_RCC_PWR_IS_CLK_DISABLED())
- 1108              		.loc 1 505 8
- 1109 00d0 104B     		ldr	r3, .L55
- 1110 00d2 9B6D     		ldr	r3, [r3, #88]
- 1111 00d4 03F08053 		and	r3, r3, #268435456
- 1112              		.loc 1 505 7
- 1113 00d8 002B     		cmp	r3, #0
- 1114 00da 14D1     		bne	.L53
- 1115              	.LBB16:
+ 1096              		.loc 1 505 8
+ 1097 00d0 104B     		ldr	r3, .L55
+ 1098 00d2 9B6D     		ldr	r3, [r3, #88]
+ 1099 00d4 03F08053 		and	r3, r3, #268435456
+ 1100              		.loc 1 505 7
+ 1101 00d8 002B     		cmp	r3, #0
+ 1102 00da 14D1     		bne	.L53
+ 1103              	.LBB16:
  506:Core/Src/stm32l4xx_hal_msp.c ****     {
  507:Core/Src/stm32l4xx_hal_msp.c ****       __HAL_RCC_PWR_CLK_ENABLE();
- 1116              		.loc 1 507 7
- 1117 00dc 0D4B     		ldr	r3, .L55
- 1118 00de 9B6D     		ldr	r3, [r3, #88]
- 1119 00e0 0C4A     		ldr	r2, .L55
- 1120 00e2 43F08053 		orr	r3, r3, #268435456
- 1121 00e6 9365     		str	r3, [r2, #88]
- 1122 00e8 0A4B     		ldr	r3, .L55
- 1123 00ea 9B6D     		ldr	r3, [r3, #88]
- 1124 00ec 03F08053 		and	r3, r3, #268435456
- 1125 00f0 BB60     		str	r3, [r7, #8]
- 1126 00f2 BB68     		ldr	r3, [r7, #8]
- 1127              	.LBE16:
+ 1104              		.loc 1 507 7
+ 1105 00dc 0D4B     		ldr	r3, .L55
+ 1106 00de 9B6D     		ldr	r3, [r3, #88]
+ 1107 00e0 0C4A     		ldr	r2, .L55
+ 1108 00e2 43F08053 		orr	r3, r3, #268435456
+ 1109 00e6 9365     		str	r3, [r2, #88]
+ 1110 00e8 0A4B     		ldr	r3, .L55
+ 1111 00ea 9B6D     		ldr	r3, [r3, #88]
+ 1112 00ec 03F08053 		and	r3, r3, #268435456
+ 1113 00f0 BB60     		str	r3, [r7, #8]
+ 1114 00f2 BB68     		ldr	r3, [r7, #8]
+ 1115              	.LBE16:
  508:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_EnableVddUSB();
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 30
-
-
- 1128              		.loc 1 508 7
- 1129 00f4 FFF7FEFF 		bl	HAL_PWREx_EnableVddUSB
+ 1116              		.loc 1 508 7
+ 1117 00f4 FFF7FEFF 		bl	HAL_PWREx_EnableVddUSB
  509:Core/Src/stm32l4xx_hal_msp.c ****       __HAL_RCC_PWR_CLK_DISABLE();
- 1130              		.loc 1 509 7
- 1131 00f8 064B     		ldr	r3, .L55
- 1132 00fa 9B6D     		ldr	r3, [r3, #88]
- 1133 00fc 054A     		ldr	r2, .L55
- 1134 00fe 23F08053 		bic	r3, r3, #268435456
- 1135 0102 9365     		str	r3, [r2, #88]
+ 1118              		.loc 1 509 7
+ 1119 00f8 064B     		ldr	r3, .L55
+ 1120 00fa 9B6D     		ldr	r3, [r3, #88]
+ 1121 00fc 054A     		ldr	r2, .L55
+ 1122 00fe 23F08053 		bic	r3, r3, #268435456
+ 1123 0102 9365     		str	r3, [r2, #88]
  510:Core/Src/stm32l4xx_hal_msp.c ****     }
  511:Core/Src/stm32l4xx_hal_msp.c ****     else
  512:Core/Src/stm32l4xx_hal_msp.c ****     {
@@ -1757,39 +1738,42 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  514:Core/Src/stm32l4xx_hal_msp.c ****     }
  515:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN USB_OTG_FS_MspInit 1 */
  516:Core/Src/stm32l4xx_hal_msp.c **** 
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 30
+
+
  517:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END USB_OTG_FS_MspInit 1 */
  518:Core/Src/stm32l4xx_hal_msp.c ****   }
  519:Core/Src/stm32l4xx_hal_msp.c **** 
  520:Core/Src/stm32l4xx_hal_msp.c **** }
- 1136              		.loc 1 520 1
- 1137 0104 01E0     		b	.L54
- 1138              	.L53:
+ 1124              		.loc 1 520 1
+ 1125 0104 01E0     		b	.L54
+ 1126              	.L53:
  513:Core/Src/stm32l4xx_hal_msp.c ****     }
- 1139              		.loc 1 513 7
- 1140 0106 FFF7FEFF 		bl	HAL_PWREx_EnableVddUSB
- 1141              	.L54:
- 1142              		.loc 1 520 1
- 1143 010a 00BF     		nop
- 1144 010c C037     		adds	r7, r7, #192
- 1145              		.cfi_def_cfa_offset 8
- 1146 010e BD46     		mov	sp, r7
- 1147              		.cfi_def_cfa_register 13
- 1148              		@ sp needed
- 1149 0110 80BD     		pop	{r7, pc}
- 1150              	.L56:
- 1151 0112 00BF     		.align	2
- 1152              	.L55:
- 1153 0114 00100240 		.word	1073876992
- 1154              		.cfi_endproc
- 1155              	.LFE329:
- 1157              		.section	.text.HAL_PCD_MspDeInit,"ax",%progbits
- 1158              		.align	1
- 1159              		.global	HAL_PCD_MspDeInit
- 1160              		.syntax unified
- 1161              		.thumb
- 1162              		.thumb_func
- 1164              	HAL_PCD_MspDeInit:
- 1165              	.LFB330:
+ 1127              		.loc 1 513 7
+ 1128 0106 FFF7FEFF 		bl	HAL_PWREx_EnableVddUSB
+ 1129              	.L54:
+ 1130              		.loc 1 520 1
+ 1131 010a 00BF     		nop
+ 1132 010c C037     		adds	r7, r7, #192
+ 1133              		.cfi_def_cfa_offset 8
+ 1134 010e BD46     		mov	sp, r7
+ 1135              		.cfi_def_cfa_register 13
+ 1136              		@ sp needed
+ 1137 0110 80BD     		pop	{r7, pc}
+ 1138              	.L56:
+ 1139 0112 00BF     		.align	2
+ 1140              	.L55:
+ 1141 0114 00100240 		.word	1073876992
+ 1142              		.cfi_endproc
+ 1143              	.LFE333:
+ 1145              		.section	.text.HAL_PCD_MspDeInit,"ax",%progbits
+ 1146              		.align	1
+ 1147              		.global	HAL_PCD_MspDeInit
+ 1148              		.syntax unified
+ 1149              		.thumb
+ 1150              		.thumb_func
+ 1152              	HAL_PCD_MspDeInit:
+ 1153              	.LFB334:
  521:Core/Src/stm32l4xx_hal_msp.c **** 
  522:Core/Src/stm32l4xx_hal_msp.c **** /**
  523:Core/Src/stm32l4xx_hal_msp.c **** * @brief PCD MSP De-Initialization
@@ -1798,42 +1782,42 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  526:Core/Src/stm32l4xx_hal_msp.c **** * @retval None
  527:Core/Src/stm32l4xx_hal_msp.c **** */
  528:Core/Src/stm32l4xx_hal_msp.c **** void HAL_PCD_MspDeInit(PCD_HandleTypeDef* hpcd)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 31
-
-
  529:Core/Src/stm32l4xx_hal_msp.c **** {
- 1166              		.loc 1 529 1
- 1167              		.cfi_startproc
- 1168              		@ args = 0, pretend = 0, frame = 16
- 1169              		@ frame_needed = 1, uses_anonymous_args = 0
- 1170 0000 80B5     		push	{r7, lr}
- 1171              		.cfi_def_cfa_offset 8
- 1172              		.cfi_offset 7, -8
- 1173              		.cfi_offset 14, -4
- 1174 0002 84B0     		sub	sp, sp, #16
- 1175              		.cfi_def_cfa_offset 24
- 1176 0004 00AF     		add	r7, sp, #0
- 1177              		.cfi_def_cfa_register 7
- 1178 0006 7860     		str	r0, [r7, #4]
+ 1154              		.loc 1 529 1
+ 1155              		.cfi_startproc
+ 1156              		@ args = 0, pretend = 0, frame = 16
+ 1157              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1158 0000 80B5     		push	{r7, lr}
+ 1159              		.cfi_def_cfa_offset 8
+ 1160              		.cfi_offset 7, -8
+ 1161              		.cfi_offset 14, -4
+ 1162 0002 84B0     		sub	sp, sp, #16
+ 1163              		.cfi_def_cfa_offset 24
+ 1164 0004 00AF     		add	r7, sp, #0
+ 1165              		.cfi_def_cfa_register 7
+ 1166 0006 7860     		str	r0, [r7, #4]
  530:Core/Src/stm32l4xx_hal_msp.c ****   if(hpcd->Instance==USB_OTG_FS)
- 1179              		.loc 1 530 10
- 1180 0008 7B68     		ldr	r3, [r7, #4]
- 1181 000a 1B68     		ldr	r3, [r3]
- 1182              		.loc 1 530 5
- 1183 000c B3F1A04F 		cmp	r3, #1342177280
- 1184 0010 28D1     		bne	.L60
+ 1167              		.loc 1 530 10
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 31
+
+
+ 1168 0008 7B68     		ldr	r3, [r7, #4]
+ 1169 000a 1B68     		ldr	r3, [r3]
+ 1170              		.loc 1 530 5
+ 1171 000c B3F1A04F 		cmp	r3, #1342177280
+ 1172 0010 28D1     		bne	.L60
  531:Core/Src/stm32l4xx_hal_msp.c ****   {
  532:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN USB_OTG_FS_MspDeInit 0 */
  533:Core/Src/stm32l4xx_hal_msp.c **** 
  534:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END USB_OTG_FS_MspDeInit 0 */
  535:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock disable */
  536:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_USB_OTG_FS_CLK_DISABLE();
- 1185              		.loc 1 536 5
- 1186 0012 164B     		ldr	r3, .L61
- 1187 0014 DB6C     		ldr	r3, [r3, #76]
- 1188 0016 154A     		ldr	r2, .L61
- 1189 0018 23F48053 		bic	r3, r3, #4096
- 1190 001c D364     		str	r3, [r2, #76]
+ 1173              		.loc 1 536 5
+ 1174 0012 164B     		ldr	r3, .L61
+ 1175 0014 DB6C     		ldr	r3, [r3, #76]
+ 1176 0016 154A     		ldr	r2, .L61
+ 1177 0018 23F48053 		bic	r3, r3, #4096
+ 1178 001c D364     		str	r3, [r2, #76]
  537:Core/Src/stm32l4xx_hal_msp.c **** 
  538:Core/Src/stm32l4xx_hal_msp.c ****     /**USB_OTG_FS GPIO Configuration
  539:Core/Src/stm32l4xx_hal_msp.c ****     PA8     ------> USB_OTG_FS_SOF
@@ -1843,49 +1827,49 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  543:Core/Src/stm32l4xx_hal_msp.c ****     PA12     ------> USB_OTG_FS_DP
  544:Core/Src/stm32l4xx_hal_msp.c ****     */
  545:Core/Src/stm32l4xx_hal_msp.c ****     HAL_GPIO_DeInit(GPIOA, USB_SOF_Pin|USB_VBUS_Pin|USB_ID_Pin|USB_DM_Pin
- 1191              		.loc 1 545 5
- 1192 001e 4FF4F851 		mov	r1, #7936
- 1193 0022 4FF09040 		mov	r0, #1207959552
- 1194 0026 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 1179              		.loc 1 545 5
+ 1180 001e 4FF4F851 		mov	r1, #7936
+ 1181 0022 4FF09040 		mov	r0, #1207959552
+ 1182 0026 FFF7FEFF 		bl	HAL_GPIO_DeInit
  546:Core/Src/stm32l4xx_hal_msp.c ****                           |USB_DP_Pin);
  547:Core/Src/stm32l4xx_hal_msp.c **** 
  548:Core/Src/stm32l4xx_hal_msp.c ****     /* Disable VDDUSB */
  549:Core/Src/stm32l4xx_hal_msp.c ****     if(__HAL_RCC_PWR_IS_CLK_DISABLED())
- 1195              		.loc 1 549 8
- 1196 002a 104B     		ldr	r3, .L61
- 1197 002c 9B6D     		ldr	r3, [r3, #88]
- 1198 002e 03F08053 		and	r3, r3, #268435456
- 1199              		.loc 1 549 7
- 1200 0032 002B     		cmp	r3, #0
- 1201 0034 14D1     		bne	.L59
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 32
-
-
- 1202              	.LBB17:
+ 1183              		.loc 1 549 8
+ 1184 002a 104B     		ldr	r3, .L61
+ 1185 002c 9B6D     		ldr	r3, [r3, #88]
+ 1186 002e 03F08053 		and	r3, r3, #268435456
+ 1187              		.loc 1 549 7
+ 1188 0032 002B     		cmp	r3, #0
+ 1189 0034 14D1     		bne	.L59
+ 1190              	.LBB17:
  550:Core/Src/stm32l4xx_hal_msp.c ****     {
  551:Core/Src/stm32l4xx_hal_msp.c ****       __HAL_RCC_PWR_CLK_ENABLE();
- 1203              		.loc 1 551 7
- 1204 0036 0D4B     		ldr	r3, .L61
- 1205 0038 9B6D     		ldr	r3, [r3, #88]
- 1206 003a 0C4A     		ldr	r2, .L61
- 1207 003c 43F08053 		orr	r3, r3, #268435456
- 1208 0040 9365     		str	r3, [r2, #88]
- 1209 0042 0A4B     		ldr	r3, .L61
- 1210 0044 9B6D     		ldr	r3, [r3, #88]
- 1211 0046 03F08053 		and	r3, r3, #268435456
- 1212 004a FB60     		str	r3, [r7, #12]
- 1213 004c FB68     		ldr	r3, [r7, #12]
- 1214              	.LBE17:
+ 1191              		.loc 1 551 7
+ 1192 0036 0D4B     		ldr	r3, .L61
+ 1193 0038 9B6D     		ldr	r3, [r3, #88]
+ 1194 003a 0C4A     		ldr	r2, .L61
+ 1195 003c 43F08053 		orr	r3, r3, #268435456
+ 1196 0040 9365     		str	r3, [r2, #88]
+ 1197 0042 0A4B     		ldr	r3, .L61
+ 1198 0044 9B6D     		ldr	r3, [r3, #88]
+ 1199 0046 03F08053 		and	r3, r3, #268435456
+ 1200 004a FB60     		str	r3, [r7, #12]
+ 1201 004c FB68     		ldr	r3, [r7, #12]
+ 1202              	.LBE17:
  552:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_DisableVddUSB();
- 1215              		.loc 1 552 7
- 1216 004e FFF7FEFF 		bl	HAL_PWREx_DisableVddUSB
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 32
+
+
+ 1203              		.loc 1 552 7
+ 1204 004e FFF7FEFF 		bl	HAL_PWREx_DisableVddUSB
  553:Core/Src/stm32l4xx_hal_msp.c ****       __HAL_RCC_PWR_CLK_DISABLE();
- 1217              		.loc 1 553 7
- 1218 0052 064B     		ldr	r3, .L61
- 1219 0054 9B6D     		ldr	r3, [r3, #88]
- 1220 0056 054A     		ldr	r2, .L61
- 1221 0058 23F08053 		bic	r3, r3, #268435456
- 1222 005c 9365     		str	r3, [r2, #88]
+ 1205              		.loc 1 553 7
+ 1206 0052 064B     		ldr	r3, .L61
+ 1207 0054 9B6D     		ldr	r3, [r3, #88]
+ 1208 0056 054A     		ldr	r2, .L61
+ 1209 0058 23F08053 		bic	r3, r3, #268435456
+ 1210 005c 9365     		str	r3, [r2, #88]
  554:Core/Src/stm32l4xx_hal_msp.c ****     }
  555:Core/Src/stm32l4xx_hal_msp.c ****     else
  556:Core/Src/stm32l4xx_hal_msp.c ****     {
@@ -1897,87 +1881,83 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 1
  562:Core/Src/stm32l4xx_hal_msp.c ****   }
  563:Core/Src/stm32l4xx_hal_msp.c **** 
  564:Core/Src/stm32l4xx_hal_msp.c **** }
- 1223              		.loc 1 564 1
- 1224 005e 01E0     		b	.L60
- 1225              	.L59:
+ 1211              		.loc 1 564 1
+ 1212 005e 01E0     		b	.L60
+ 1213              	.L59:
  557:Core/Src/stm32l4xx_hal_msp.c ****     }
- 1226              		.loc 1 557 7
- 1227 0060 FFF7FEFF 		bl	HAL_PWREx_DisableVddUSB
- 1228              	.L60:
- 1229              		.loc 1 564 1
- 1230 0064 00BF     		nop
- 1231 0066 1037     		adds	r7, r7, #16
- 1232              		.cfi_def_cfa_offset 8
- 1233 0068 BD46     		mov	sp, r7
- 1234              		.cfi_def_cfa_register 13
- 1235              		@ sp needed
- 1236 006a 80BD     		pop	{r7, pc}
- 1237              	.L62:
- 1238              		.align	2
- 1239              	.L61:
- 1240 006c 00100240 		.word	1073876992
- 1241              		.cfi_endproc
- 1242              	.LFE330:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 33
+ 1214              		.loc 1 557 7
+ 1215 0060 FFF7FEFF 		bl	HAL_PWREx_DisableVddUSB
+ 1216              	.L60:
+ 1217              		.loc 1 564 1
+ 1218 0064 00BF     		nop
+ 1219 0066 1037     		adds	r7, r7, #16
+ 1220              		.cfi_def_cfa_offset 8
+ 1221 0068 BD46     		mov	sp, r7
+ 1222              		.cfi_def_cfa_register 13
+ 1223              		@ sp needed
+ 1224 006a 80BD     		pop	{r7, pc}
+ 1225              	.L62:
+ 1226              		.align	2
+ 1227              	.L61:
+ 1228 006c 00100240 		.word	1073876992
+ 1229              		.cfi_endproc
+ 1230              	.LFE334:
+ 1232              		.text
+ 1233              	.Letext0:
+ 1234              		.file 2 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+ 1235              		.file 3 "c:\\users\\isan\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpac
+ 1236              		.file 4 "c:\\users\\isan\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpac
+ 1237              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h"
+ 1238              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 1239              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h"
+ 1240              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 1241              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 1242              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_adc.h"
+ 1243              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h"
+ 1244              		.file 12 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h"
+ 1245              		.file 13 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h"
+ 1246              		.file 14 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
+ 1247              		.file 15 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 33
 
 
- 1244              		.text
- 1245              	.Letext0:
- 1246              		.file 2 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
- 1247              		.file 3 "c:\\users\\isan\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpac
- 1248              		.file 4 "c:\\users\\isan\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpac
- 1249              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h"
- 1250              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
- 1251              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h"
- 1252              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
- 1253              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
- 1254              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_adc.h"
- 1255              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h"
- 1256              		.file 12 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h"
- 1257              		.file 13 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h"
- 1258              		.file 14 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
- 1259              		.file 15 "Core/Inc/main.h"
- 1260              		.file 16 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
- 1261              		.file 17 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h"
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cc2cztiV.s 			page 34
+ 1248              		.file 16 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h"
+ 1249              		.file 17 "Core/Inc/main.h"
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s 			page 34
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_msp.c
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:20     .bss.msg_buffer:0000000000000000 $d
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:26     .bss.RxBuf:0000000000000000 $d
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:29     .bss.RxBuf:0000000000000000 RxBuf
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:32     .text.HAL_MspInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:38     .text.HAL_MspInit:0000000000000000 HAL_MspInit
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:93     .text.HAL_MspInit:0000000000000044 $d
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:98     .text.HAL_ADC_MspInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:104    .text.HAL_ADC_MspInit:0000000000000000 HAL_ADC_MspInit
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:283    .text.HAL_ADC_MspInit:000000000000011c $d
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:292    .text.HAL_ADC_MspDeInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:298    .text.HAL_ADC_MspDeInit:0000000000000000 HAL_ADC_MspDeInit
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:347    .text.HAL_ADC_MspDeInit:0000000000000038 $d
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:354    .text.HAL_UART_MspInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:360    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:607    .text.HAL_UART_MspInit:000000000000019c $d
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:617    .text.HAL_UART_MspDeInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:623    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:695    .text.HAL_UART_MspDeInit:0000000000000064 $d
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:703    .text.HAL_TIM_Base_MspInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:709    .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:805    .text.HAL_TIM_Base_MspInit:0000000000000080 $d
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:813    .text.HAL_TIM_MspPostInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:819    .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:894    .text.HAL_TIM_MspPostInit:0000000000000064 $d
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:901    .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:907    .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:982    .text.HAL_TIM_Base_MspDeInit:000000000000005c $d
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:990    .text.HAL_PCD_MspInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:996    .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:1153   .text.HAL_PCD_MspInit:0000000000000114 $d
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:1158   .text.HAL_PCD_MspDeInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:1164   .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
-C:\Users\isan\AppData\Local\Temp\cc2cztiV.s:1240   .text.HAL_PCD_MspDeInit:000000000000006c $d
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:20     .text.HAL_MspInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:26     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:81     .text.HAL_MspInit:0000000000000044 $d
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:86     .text.HAL_ADC_MspInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:92     .text.HAL_ADC_MspInit:0000000000000000 HAL_ADC_MspInit
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:271    .text.HAL_ADC_MspInit:000000000000011c $d
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:280    .text.HAL_ADC_MspDeInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:286    .text.HAL_ADC_MspDeInit:0000000000000000 HAL_ADC_MspDeInit
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:335    .text.HAL_ADC_MspDeInit:0000000000000038 $d
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:342    .text.HAL_UART_MspInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:348    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:595    .text.HAL_UART_MspInit:000000000000019c $d
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:605    .text.HAL_UART_MspDeInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:611    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:683    .text.HAL_UART_MspDeInit:0000000000000064 $d
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:691    .text.HAL_TIM_Base_MspInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:697    .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:793    .text.HAL_TIM_Base_MspInit:0000000000000080 $d
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:801    .text.HAL_TIM_MspPostInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:807    .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:882    .text.HAL_TIM_MspPostInit:0000000000000064 $d
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:889    .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:895    .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:970    .text.HAL_TIM_Base_MspDeInit:000000000000005c $d
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:978    .text.HAL_PCD_MspInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:984    .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:1141   .text.HAL_PCD_MspInit:0000000000000114 $d
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:1146   .text.HAL_PCD_MspDeInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:1152   .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
+C:\Users\isan\AppData\Local\Temp\ccHbKG8S.s:1228   .text.HAL_PCD_MspDeInit:000000000000006c $d
 
 UNDEFINED SYMBOLS
 memset

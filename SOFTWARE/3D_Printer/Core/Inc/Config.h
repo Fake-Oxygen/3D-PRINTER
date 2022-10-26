@@ -43,7 +43,6 @@
 #define AVG_SLOPE 0.0025
 #define HOT_END_FAN 0
 #define HOT_END 0
-#define RxBuf_SIZE	20
 #define STEPS_PER_REV 19256.0f
 #define E_MM_PER_REV 23.0f
 #define X_STOP_PIN GPIOF,GPIO_PIN_4
@@ -55,6 +54,7 @@
 #define USER_BUTTON GPIOC,GPIO_PIN_13
 //#define REDUNDANT_TEMP_SENSOR
 #define ENGINE_MIN_SPEED 0.001
+#define STEP_DISTANCE 0.010633082827534683 // dystant o jaki przesunie się pasek w mm/step
 
 // MATHS
 #define SQRT_2_BY_2 0.7071067811865476

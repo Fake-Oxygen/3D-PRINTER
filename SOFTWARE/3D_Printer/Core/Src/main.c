@@ -21,11 +21,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "Functions.h"
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-// #include "Parser.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -60,6 +55,15 @@ PCD_HandleTypeDef hpcd_USB_OTG_FS;
 uint16_t step = 0;
 uint32_t last_time = 0;
 uint32_t value[ADC_CHANNELS];
+gc_reader reader;
+size_t read_count = 0;
+int state = 0;
+
+uint8_t rx_buff[GCODE_BUFF_SIZE];
+uint8_t gcode_buff[GCODE_BUFF_SIZE];
+int i = 0;
+int j = 0;
+int should_print = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -83,28 +87,34 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {
   if (huart->Instance == LPUART1)
   {
-    HAL_UARTEx_ReceiveToIdle_DMA(&hlpuart1, (uint8_t *)RxBuf, RxBuf_SIZE);
-    __HAL_DMA_DISABLE_IT(&hdma_lpuart1_rx, DMA_IT_HT);
+    if(i + Size > GCODE_BUFF_SIZE) {
+      int a = GCODE_BUFF_SIZE - i;
+      memcpy(gcode_buff + i, rx_buff, a);
+
+      memcpy(gcode_buff, rx_buff + a, Size - a);
+      i = Size - a;
+    } else {
+      memcpy(gcode_buff + i, rx_buff, Size);
+      i += Size;
+    }
+    should_print = 1;
   }
+  HAL_UARTEx_ReceiveToIdle_DMA(&hlpuart1, rx_buff, GCODE_BUFF_SIZE);
+  __HAL_DMA_DISABLE_IT(&hdma_lpuart1_rx, DMA_IT_HT);
 }
 
-void DelayMicrosecond(uint16_t time)
-{
-  __HAL_TIM_SET_COUNTER(&htim4, 0);
-  while (__HAL_TIM_GET_COUNTER(&htim4) < time)
-    ;
-}
+// void DelayMicrosecond(uint16_t time)
+// {
+//   __HAL_TIM_SET_COUNTER(&htim4, 0);
+//   while (__HAL_TIM_GET_COUNTER(&htim4) < time)
+//     ;
+// }
 
-int GetTicks()
-{
-  return __HAL_TIM_GET_COUNTER(&htim5);
-}
-
-void print_temperature()
-{
-  sprintf(msg_buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), value[ADC_HOT_END]);
-  HAL_UART_Transmit(&hlpuart1, (uint16_t *)msg_buffer, strlen(msg_buffer), HAL_MAX_DELAY);
-}
+// void print_temperature()
+// {
+//   sprintf(msg_buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), (unsigned int)(value[ADC_HOT_END]));
+//   HAL_UART_Transmit(&hlpuart1, (uint16_t *)msg_buffer, strlen(msg_buffer), HAL_MAX_DELAY);
+// }
 /* USER CODE END 0 */
 
 /**
@@ -150,54 +160,55 @@ int main(void)
   HAL_ADC_Start_DMA(&hadc1, value, ADC_CHANNELS);
   HAL_TIM_Base_Start(&htim4);
   HAL_TIM_Base_Start(&htim5);
-  HAL_UARTEx_ReceiveToIdle_DMA(&hlpuart1, RxBuf, RxBuf_SIZE);
+  HAL_UARTEx_ReceiveToIdle_DMA(&hlpuart1, rx_buff, GCODE_BUFF_SIZE);
   __HAL_DMA_DISABLE_IT(&hdma_lpuart1_rx, DMA_IT_HT);
-  memset(&RxBuf[0], 0, sizeof(RxBuf));
-  reset_args();
-  // int steps = 0;
-  uint32_t lasttimeX = 0;
-  uint32_t lasttimeY = 0;
+  memset(rx_buff, 0, GCODE_BUFF_SIZE);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    if (RxBuf[0] != 0 && isRunning == false)
-    {
-      get_command(RxBuf);
-      memset(&RxBuf[0], 0, sizeof(RxBuf));
-    }
+  while (1) {
+    if(should_print) {
+      int done_reading_gcode = 0;
+      int error_code = GC_READER_ERROR_NOT_OCCURED, new_error;
+      while(j != i % GCODE_BUFF_SIZE) {
+        if(error_code == GC_READER_ERROR_NOT_OCCURED) {
+          new_error = read_code(&reader, gcode_buff[j], &done_reading_gcode);
 
-    if (HAL_GetTick() - last_time > interval && interval > 0)
-    {
-      M105(0, 0);
-      last_time = HAL_GetTick();
-    }
-   
-    G0();
-    G50();
-    M104();
-    // if (steps <= 6500)
-    // {
-    //   MAKE_MOTOR_STEP(X_AXIS_STEP);
-    //   DelayMicrosecond(600);
-    //   steps++;
-    // }
-    if(READ_PIN(USER_BUTTON) == 1)
-    {
-      //CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
-      // if(GetTicks() - lasttimeX >= 800)
-      // {
-      //     MAKE_MOTOR_STEP(X_AXIS_STEP);
-      //     lasttimeX = GetTicks();
-      // }
-      if(GetTicks() - lasttimeY >= 2000)
-      {
-          MAKE_MOTOR_STEP(Y_AXIS_STEP);
-          lasttimeY = GetTicks();
+          if(new_error != GC_READER_ERROR_NOT_OCCURED) {
+            HAL_UART_Transmit(&hlpuart1, "Error occurred!\n", 16, 100);
+            error_code = new_error;
+          }
+        }
+        j = (j + 1) % GCODE_BUFF_SIZE;
       }
+      uint8_t result[100];
+      memset(result, 0, 100);
+      sprintf(result, "%c %d\n", reader.code_type, reader.code_id);
+      HAL_UART_Transmit(&hlpuart1, result, strlen(result), 100);
+      memset(&reader, 0, sizeof(gc_reader));
+      should_print = 0;
     }
+    // if (rx_buff[0] != '\0') {
+    //   int error_code = read_code((char*)rx_buff, &reader);
+    // }
+
+    // if (HAL_GetTick() - last_time > interval && interval > 0)
+    // {
+    //   M105(0, 0);
+    //   last_time = HAL_GetTick();
+    // }
+   
+    // G0();
+    // M104();
+    // if(READ_PIN(USER_BUTTON) == 1)
+    // {
+    //   if(GetTicks() - lasttimeY >= 2000)
+    //   {
+    //       MAKE_MOTOR_STEP(Y_AXIS_STEP);
+    //       lasttimeY = GetTicks();
+    //   }
+    // }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

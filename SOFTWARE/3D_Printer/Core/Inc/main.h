@@ -31,9 +31,12 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "Config.h"
-#include "Parser.h"
-#include "GCodes.h"
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+#include "./gcodes/reader.h"
+#include "config.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -43,6 +46,7 @@ extern "C" {
 
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
+#define GCODE_BUFF_SIZE 64
 
 /* USER CODE END EC */
 
@@ -57,12 +61,10 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-static char msg_buffer[30];
-extern uint32_t value[ADC_CHANNELS]; 
-static uint8_t RxBuf[RxBuf_SIZE];
+// static char msg_buffer[30];
+extern uint32_t value[ADC_CHANNELS];
 
-int GetTicks();
-void DelayMicrosecond(uint16_t time); 
+// void DelayMicrosecond(uint16_t time); 
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

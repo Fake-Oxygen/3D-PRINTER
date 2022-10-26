@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     [..]
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****       The PCD HAL driver can be used as follows:
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 2
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 2
 
 
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****      (#) Declare a PCD_HandleTypeDef handle structure, for example:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** /* Private functions prototypes ----------------------------------------------*/
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** /** @defgroup PCD_Private_Functions PCD Private Functions
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @{
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 3
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 3
 
 
   88:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
   39              		.cfi_offset 14, -4
   40 0002 8FB0     		sub	sp, sp, #60
   41              		.cfi_def_cfa_offset 80
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 4
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 4
 
 
   42 0004 0AAF     		add	r7, sp, #40
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  160:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     hpcd->ResumeCallback = HAL_PCD_ResumeCallback;
  161:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     hpcd->ConnectCallback = HAL_PCD_ConnectCallback;
  162:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     hpcd->DisconnectCallback = HAL_PCD_DisconnectCallback;
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 5
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 5
 
 
  163:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     hpcd->DataOutStageCallback = HAL_PCD_DataOutStageCallback;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
   90 004c 7B68     		ldr	r3, [r7, #4]
   91 004e 1B68     		ldr	r3, [r3]
   92 0050 1846     		mov	r0, r3
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 6
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 6
 
 
   93 0052 FFF7FEFF 		bl	USB_DisableGlobalInt
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  134              		.loc 1 207 3
  135 00a0 4AE0     		b	.L7
  136              	.L8:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 7
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 7
 
 
  208:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   {
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  184 00f0 4033     		adds	r3, r3, #64
  185 00f2 0022     		movs	r2, #0
  186 00f4 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 8
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 8
 
 
  215:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     hpcd->IN_ep[i].maxpacket = 0U;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  234 013e 9A42     		cmp	r2, r3
  235 0140 AFD3     		bcc	.L8
  218:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   }
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 9
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 9
 
 
  219:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  282 018e 1346     		mov	r3, r2
  283 0190 DB00     		lsls	r3, r3, #3
  284 0192 1344     		add	r3, r3, r2
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 10
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 10
 
 
  285 0194 9B00     		lsls	r3, r3, #2
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  329 01de 1B68     		ldr	r3, [r3]
  330 01e0 3B60     		str	r3, [r7]
  331              		.loc 1 232 7
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 11
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 11
 
 
  332 01e2 7E68     		ldr	r6, [r7, #4]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  374              	.L12:
  245:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   }
  246:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 12
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 12
 
 
  247:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   (void)USB_DevDisconnect(hpcd->Instance);
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  417              		.loc 1 260 6
  418 0008 7B68     		ldr	r3, [r7, #4]
  419 000a 002B     		cmp	r3, #0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 13
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 13
 
 
  420 000c 01D1     		bne	.L14
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  448 0036 0022     		movs	r2, #0
  449 0038 83F8BD24 		strb	r2, [r3, #1213]
  287:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 14
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 14
 
 
  288:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   return HAL_OK;
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  489              		.cfi_def_cfa_offset 4
  490 000c BD46     		mov	sp, r7
  491              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 15
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 15
 
 
  492              		@ sp needed
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  533              		.cfi_endproc
  534              	.LFE324:
  536              		.section	.text.HAL_PCD_Start,"ax",%progbits
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 16
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 16
 
 
  537              		.align	1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  367:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****       case HAL_PCD_RESET_CB_ID :
  368:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****         hpcd->ResetCallback = pCallback;
  369:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****         break;
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 17
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 17
 
 
  370:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  424:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   {
  425:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     /* Update the error code */
  426:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     hpcd->ErrorCode |= HAL_PCD_ERROR_INVALID_CALLBACK;
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 18
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 18
 
 
  427:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     /* Return error status */
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  481:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****       case HAL_PCD_RESUME_CB_ID :
  482:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****         hpcd->ResumeCallback = HAL_PCD_ResumeCallback;
  483:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****         break;
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 19
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 19
 
 
  484:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  538:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   }
  539:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
  540:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   /* Release Lock */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 20
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 20
 
 
  541:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   __HAL_UNLOCK(hpcd);
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  595:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   HAL_StatusTypeDef status = HAL_OK;
  596:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
  597:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   /* Process locked */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 21
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 21
 
 
  598:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   __HAL_LOCK(hpcd);
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  652:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     status =  HAL_ERROR;
  653:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   }
  654:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 22
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 22
 
 
  655:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   /* Release Lock */
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  709:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
  710:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     return HAL_ERROR;
  711:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   }
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 23
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 23
 
 
  712:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  766:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** }
  767:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
  768:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** /**
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 24
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 24
 
 
  769:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @brief  Register USB PCD Iso IN incomplete Callback
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  823:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
  824:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   if (hpcd->State == HAL_PCD_STATE_READY)
  825:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 25
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 25
 
 
  826:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     hpcd->ISOINIncompleteCallback = HAL_PCD_ISOINIncompleteCallback; /* Legacy weak ISOINIncomplete
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  880:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
  881:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   return status;
  882:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** }
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 26
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 26
 
 
  883:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  937:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
  938:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   if (hpcd->State == HAL_PCD_STATE_READY)
  939:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 27
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 27
 
 
  940:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     hpcd->LPMCallback = pCallback;
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  994:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** /** @defgroup PCD_Exported_Functions_Group2 Input and Output operation functions
  995:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   *  @brief   Data transfers functions
  996:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   *
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 28
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 28
 
 
  997:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** @verbatim
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1021:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** #if defined (USB_OTG_FS)
 1022:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   if (hpcd->Init.battery_charging_enable == 1U)
  575              		.loc 1 1022 17 is_stmt 1 discriminator 2
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 29
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 29
 
 
  576 0024 7B68     		ldr	r3, [r7, #4]
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  620              		.syntax unified
  621              		.thumb
  622              		.thumb_func
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 30
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 30
 
 
  624              	HAL_PCD_Stop:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  663 0030 1B68     		ldr	r3, [r3]
  664              		.loc 1 1048 9 discriminator 2
  665 0032 1846     		mov	r0, r3
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 31
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 31
 
 
  666 0034 FFF7FEFF 		bl	USB_DevDisconnect
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  706              		.align	1
  707              		.global	HAL_PCD_IRQHandler
  708              		.syntax unified
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 32
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 32
 
 
  709              		.thumb
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  743 001e 002B     		cmp	r3, #0
  744 0020 40F07E84 		bne	.L27
 1085:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 33
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 33
 
 
 1086:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     /* avoid spurious interrupt */
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1101:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     /* Handle RxQLevel Interrupt */
 1102:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     if (__HAL_PCD_GET_FLAG(hpcd, USB_OTG_GINTSTS_RXFLVL))
  784              		.loc 1 1102 9
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 34
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 34
 
 
  785 006e 7B68     		ldr	r3, [r7, #4]
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  829 00c4 1340     		ands	r3, r3, r2
  830              		.loc 1 1112 12
  831 00c6 002B     		cmp	r3, #0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 35
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 35
 
 
  832 00c8 35D0     		beq	.L33
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  876 0110 062B     		cmp	r3, #6
  877 0112 10D1     		bne	.L33
 1122:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****       {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 36
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 36
 
 
 1123:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****         (void)USB_ReadPacket(USBx, (uint8_t *)hpcd->Setup, 8U);
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  918 015e 0023     		movs	r3, #0
  919 0160 7B62     		str	r3, [r7, #36]
 1137:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 37
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 37
 
 
 1138:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****       /* Read in the device interrupt bits */
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  961              		.loc 1 1150 19
  962 01aa 796A     		ldr	r1, [r7, #36]
  963 01ac 7868     		ldr	r0, [r7, #4]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 38
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 38
 
 
  964 01ae FFF7FEFF 		bl	PCD_EP_OutXfrComplete_int
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1002              		.loc 1 1166 22
  1003 01f2 3B69     		ldr	r3, [r7, #16]
  1004 01f4 03F00203 		and	r3, r3, #2
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 39
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 39
 
 
  1005              		.loc 1 1166 14
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1180:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****               hpcd->ISOOUTIncompleteCallback(hpcd, (uint8_t)epnum);
 1181:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** #else
 1182:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****               HAL_PCD_ISOOUTIncompleteCallback(hpcd, (uint8_t)epnum);
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 40
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 40
 
 
  1046              		.loc 1 1182 15
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1198:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****             CLEAR_OUT_EP_INTR(epnum, USB_OTG_DOEPINT_NAK);
  1085              		.loc 1 1198 13
  1086 0284 7B6A     		ldr	r3, [r7, #36]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 41
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 41
 
 
  1087 0286 5A01     		lsls	r2, r3, #5
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1127 02d0 0023     		movs	r3, #0
  1128 02d2 7B62     		str	r3, [r7, #36]
 1212:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 42
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 42
 
 
 1213:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****       while (ep_intr != 0U)
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1223:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
 1224:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****             CLEAR_IN_EP_INTR(epnum, USB_OTG_DIEPINT_XFRC);
  1173              		.loc 1 1224 13
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 43
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 43
 
 
  1174 0322 7B6A     		ldr	r3, [r7, #36]
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1214 036a FB69     		ldr	r3, [r7, #28]
  1215 036c 1344     		add	r3, r3, r2
  1216 036e 03F51063 		add	r3, r3, #2304
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 44
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 44
 
 
  1217 0372 1A46     		mov	r2, r3
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1259 03ba 7B69     		ldr	r3, [r7, #20]
  1260 03bc DB78     		ldrb	r3, [r3, #3]	@ zero_extendqisi2
  1261              		.loc 1 1250 16
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 45
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 45
 
 
  1262 03be 012B     		cmp	r3, #1
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1298 03fa 0133     		adds	r3, r3, #1
  1299 03fc 7B62     		str	r3, [r7, #36]
 1269:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****         ep_intr >>= 1U;
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 46
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 46
 
 
  1300              		.loc 1 1269 17
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1285:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** #else
 1286:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****         HAL_PCDEx_LPM_Callback(hpcd, PCD_LPM_L0_ACTIVE);
  1338              		.loc 1 1286 9
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 47
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 47
 
 
  1339 0448 0021     		movs	r1, #0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1375 048a 012B     		cmp	r3, #1
  1376 048c 02D1     		bne	.L59
 1305:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****       {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 48
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 48
 
 
 1306:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** #if (USE_HAL_PCD_REGISTER_CALLBACKS == 1U)
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1414              		.loc 1 1322 25
  1415 04d4 7B68     		ldr	r3, [r7, #4]
  1416 04d6 0122     		movs	r2, #1
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 49
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 49
 
 
  1417 04d8 83F8F424 		strb	r2, [r3, #1268]
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1449              		.loc 1 1344 25
  1450 0516 FB69     		ldr	r3, [r7, #28]
  1451 0518 03F50063 		add	r3, r3, #2048
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 50
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 50
 
 
  1452 051c 5B68     		ldr	r3, [r3, #4]
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1499 0578 03F53063 		add	r3, r3, #2816
  1500 057c 1A46     		mov	r2, r3
  1501              		.loc 1 1351 32 discriminator 3
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 51
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 51
 
 
  1502 057e 4FF67F33 		movw	r3, #64383
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1549 05de 02F50062 		add	r2, r2, #2048
  1550 05e2 43F00113 		orr	r3, r3, #65537
  1551 05e6 D361     		str	r3, [r2, #28]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 52
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 52
 
 
 1356:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1586 0636 FB69     		ldr	r3, [r7, #28]
  1587 0638 03F50063 		add	r3, r3, #2048
  1588 063c 1B69     		ldr	r3, [r3, #16]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 53
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 53
 
 
  1589 063e FA69     		ldr	r2, [r7, #28]
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1628              		.loc 1 1390 8
  1629 0690 B3F5005F 		cmp	r3, #8192
  1630 0694 24D1     		bne	.L67
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 54
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 54
 
 
 1391:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     {
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1668 06d4 5A69     		ldr	r2, [r3, #20]
  1669 06d6 7B68     		ldr	r3, [r7, #4]
  1670 06d8 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 55
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 55
 
 
  1671 06da 02F40052 		and	r2, r2, #8192
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1707 071e 3B6A     		ldr	r3, [r7, #32]
  1708 0720 9B69     		ldr	r3, [r3, #24]
  1709 0722 23F08002 		bic	r2, r3, #128
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 56
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 56
 
 
  1710 0726 3B6A     		ldr	r3, [r7, #32]
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1435:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
 1436:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     /* Handle Incomplete ISO IN Interrupt */
 1437:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     if (__HAL_PCD_GET_FLAG(hpcd, USB_OTG_GINTSTS_IISOIXFR))
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 57
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 57
 
 
  1751              		.loc 1 1437 9
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1795 07ac 7968     		ldr	r1, [r7, #4]
  1796 07ae 7A6A     		ldr	r2, [r7, #36]
  1797 07b0 1346     		mov	r3, r2
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 58
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 58
 
 
  1798 07b2 DB00     		lsls	r3, r3, #3
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1838 07f6 1846     		mov	r0, r3
  1839 07f8 FFF7FEFF 		bl	USB_ReadInterrupts
  1840 07fc 0346     		mov	r3, r0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 59
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 59
 
 
  1841 07fe 03F40013 		and	r3, r3, #2097152
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1464:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****             ((RegVal & USB_OTG_DOEPCTL_EPENA) == USB_OTG_DOEPCTL_EPENA) &&
  1886              		.loc 1 1464 73
  1887 084c 9A42     		cmp	r2, r3
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 60
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 60
 
 
  1888 084e 21D1     		bne	.L79
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  1931 089a 7B68     		ldr	r3, [r7, #4]
  1932 089c 5B68     		ldr	r3, [r3, #4]
 1459:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****       {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 61
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 61
 
 
  1933              		.loc 1 1459 30 discriminator 1
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1493:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
 1494:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     /* Handle Disconnection event Interrupt */
 1495:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     if (__HAL_PCD_GET_FLAG(hpcd, USB_OTG_GINTSTS_OTGINT))
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 62
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 62
 
 
  1969              		.loc 1 1495 9
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  2010 091e 00BF     		nop
  2011              	.L27:
 1508:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     }
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 63
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 63
 
 
 1509:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   }
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1546:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
 1547:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   if ((wIstr & USB_ISTR_PMAOVR) == USB_ISTR_PMAOVR)
 1548:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 64
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 64
 
 
 1549:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     __HAL_PCD_CLEAR_FLAG(hpcd, USB_ISTR_PMAOVR);
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1603:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     return;
 1604:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   }
 1605:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 65
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 65
 
 
 1606:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   /* Handle LPM Interrupt */
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1660:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @brief  Data OUT stage callback.
 1661:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @param  hpcd PCD handle
 1662:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @param  epnum endpoint number
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 66
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 66
 
 
 1663:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @retval None
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1681:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   */
 1682:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** __weak void HAL_PCD_DataInStageCallback(PCD_HandleTypeDef *hpcd, uint8_t epnum)
 1683:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** {
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 67
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 67
 
 
  2069              		.loc 1 1683 1
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  2110              		@ frame_needed = 1, uses_anonymous_args = 0
  2111              		@ link register save eliminated.
  2112 0000 80B4     		push	{r7}
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 68
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 68
 
 
  2113              		.cfi_def_cfa_offset 4
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  2154              		.cfi_def_cfa_register 7
  2155 0006 7860     		str	r0, [r7, #4]
 1714:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   /* Prevent unused argument(s) compilation warning */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 69
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 69
 
 
 1715:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   UNUSED(hpcd);
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1735:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** }
  2192              		.loc 1 1735 1
  2193 0008 00BF     		nop
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 70
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 70
 
 
  2194 000a 0C37     		adds	r7, r7, #12
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  2235 000e 5DF8047B 		ldr	r7, [sp], #4
  2236              		.cfi_restore 7
  2237              		.cfi_def_cfa_offset 0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 71
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 71
 
 
  2238 0012 7047     		bx	lr
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  2280              		.weak	HAL_PCD_ISOOUTIncompleteCallback
  2281              		.syntax unified
  2282              		.thumb
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 72
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 72
 
 
  2283              		.thumb_func
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  2323              	HAL_PCD_ISOINIncompleteCallback:
  2324              	.LFB336:
 1783:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 73
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 73
 
 
 1784:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** /**
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1802:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @brief  Connection event callback.
 1803:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @param  hpcd PCD handle
 1804:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @retval None
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 74
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 74
 
 
 1805:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   */
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  2401              		@ args = 0, pretend = 0, frame = 8
  2402              		@ frame_needed = 1, uses_anonymous_args = 0
  2403              		@ link register save eliminated.
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 75
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 75
 
 
  2404 0000 80B4     		push	{r7}
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1848:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   */
 1849:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
 1850:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** /**
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 76
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 76
 
 
 1851:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @brief  Connect the USB device
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  2472 002c FB68     		ldr	r3, [r7, #12]
  2473 002e 9B6B     		ldr	r3, [r3, #56]
  2474 0030 43F48032 		orr	r2, r3, #65536
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 77
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 77
 
 
  2475 0034 FB68     		ldr	r3, [r7, #12]
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  2515 0000 80B5     		push	{r7, lr}
  2516              		.cfi_def_cfa_offset 8
  2517              		.cfi_offset 7, -8
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 78
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 78
 
 
  2518              		.cfi_offset 14, -4
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1896:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   }
 1897:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** #endif /* defined (USB_OTG_FS) */
 1898:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 79
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 79
 
 
 1899:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   __HAL_UNLOCK(hpcd);
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  2602              		.loc 1 1912 3
  2603 000c 7B68     		ldr	r3, [r7, #4]
  2604 000e 93F8BC34 		ldrb	r3, [r3, #1212]	@ zero_extendqisi2
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 80
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 80
 
 
  2605 0012 012B     		cmp	r3, #1
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1920:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @brief  Open and configure an endpoint.
 1921:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @param  hpcd PCD handle
 1922:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @param  ep_addr endpoint address
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 81
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 81
 
 
 1923:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @param  ep_mps endpoint max packet size
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  2695 003a 0433     		adds	r3, r3, #4
  2696 003c FB60     		str	r3, [r7, #12]
 1936:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     ep->is_in = 1U;
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 82
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 82
 
 
  2697              		.loc 1 1936 15
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  2739              		.loc 1 1948 6
  2740 0082 002B     		cmp	r3, #0
  2741 0084 04D0     		beq	.L110
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 83
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 83
 
 
 1949:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   {
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1962:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
 1963:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   return ret;
  2783              		.loc 1 1963 10 discriminator 2
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 84
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 84
 
 
  2784 00c6 FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 1978:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     ep = &hpcd->IN_ep[ep_addr & EP_ADDR_MSK];
  2826              		.loc 1 1978 31
  2827 0014 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 85
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 85
 
 
  2828 0016 03F00F02 		and	r2, r3, #15
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  2872 0062 93F8BC34 		ldrb	r3, [r3, #1212]	@ zero_extendqisi2
  2873 0066 012B     		cmp	r3, #1
  2874 0068 01D1     		bne	.L117
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 86
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 86
 
 
  2875              		.loc 1 1988 3 is_stmt 0 discriminator 1
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 2003:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** HAL_StatusTypeDef HAL_PCD_EP_Receive(PCD_HandleTypeDef *hpcd, uint8_t ep_addr, uint8_t *pBuf, uint3
 2004:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** {
  2917              		.loc 1 2004 1
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 87
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 87
 
 
  2918              		.cfi_startproc
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 2014:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   ep->num = ep_addr & EP_ADDR_MSK;
  2963              		.loc 1 2014 21
  2964 0042 FB7A     		ldrb	r3, [r7, #11]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 88
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 88
 
 
  2965 0044 03F00F03 		and	r3, r3, #15
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3008              		.global	HAL_PCD_EP_GetRxCount
  3009              		.syntax unified
  3010              		.thumb
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 89
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 89
 
 
  3011              		.thumb_func
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3056              		.section	.text.HAL_PCD_EP_Transmit,"ax",%progbits
  3057              		.align	1
  3058              		.global	HAL_PCD_EP_Transmit
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 90
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 90
 
 
  3059              		.syntax unified
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3098 002c 1A61     		str	r2, [r3, #16]
 2054:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   ep->xfer_len = len;
  3099              		.loc 1 2054 16
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 91
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 91
 
 
  3100 002e 7B69     		ldr	r3, [r7, #20]
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3139 006c FFF7FEFF 		bl	USB_EPStartXfer
  3140              	.L127:
 2070:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   }
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 92
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 92
 
 
 2071:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3182 0012 7B68     		ldr	r3, [r7, #4]
  3183 0014 5B68     		ldr	r3, [r3, #4]
  3184              		.loc 1 2085 6
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 93
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 93
 
 
  3185 0016 9A42     		cmp	r2, r3
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 2098:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     ep->is_in = 0U;
  3227              		.loc 1 2098 15
  3228 005c FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 94
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 94
 
 
  3229 005e 0022     		movs	r2, #0
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3271 00a2 1A68     		ldr	r2, [r3]
  3272              		.loc 1 2110 55
  3273 00a4 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 95
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 95
 
 
  3274 00a6 03F2C443 		addw	r3, r3, #1220
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3315 0002 84B0     		sub	sp, sp, #16
  3316              		.cfi_def_cfa_offset 24
  3317 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 96
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 96
 
 
  3318              		.cfi_def_cfa_register 7
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 2139:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   {
 2140:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     ep = &hpcd->OUT_ep[ep_addr & EP_ADDR_MSK];
  3359              		.loc 1 2140 32
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 97
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 97
 
 
  3360 0046 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3406 0094 1846     		mov	r0, r3
  3407 0096 FFF7FEFF 		bl	USB_EPClearStall
 2149:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   __HAL_UNLOCK(hpcd);
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 98
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 98
 
 
  3408              		.loc 1 2149 3 discriminator 2
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 2164:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
 2165:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   if ((0x80U & ep_addr) == 0x80U)
  3450              		.loc 1 2165 25
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 99
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 99
 
 
  3451 000c 97F90330 		ldrsb	r3, [r7, #3]
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3493              		.loc 1 2177 10
  3494 0058 FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
 2178:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** }
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 100
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 100
 
 
  3495              		.loc 1 2178 1
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3541 001c 0122     		movs	r2, #1
  3542 001e 83F8BC24 		strb	r2, [r3, #1212]
 2189:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 101
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 101
 
 
 2190:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   if ((ep_addr & 0x80U) == 0x80U)
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3585              		.align	1
  3586              		.global	HAL_PCD_ActivateRemoteWakeup
  3587              		.syntax unified
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 102
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 102
 
 
  3588              		.thumb
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 2215:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @brief  De-activate remote wakeup signalling.
 2216:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @param  hpcd PCD handle
 2217:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @retval HAL status
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 103
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 103
 
 
 2218:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   */
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 2234:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****  ===============================================================================
 2235:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     [..]
 2236:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     This subsection permits to get in run-time the status of the peripheral
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 104
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 104
 
 
 2237:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     and the data flow.
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 2254:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @}
 2255:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   */
 2256:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 105
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 105
 
 
 2257:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** /**
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3741 0022 1344     		add	r3, r3, r2
  3742 0024 0433     		adds	r3, r3, #4
  3743 0026 FB60     		str	r3, [r7, #12]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 106
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 106
 
 
 2282:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 2296:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** 
 2297:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   while (((USBx_INEP(epnum)->DTXFSTS & USB_OTG_DTXFSTS_INEPTFSAV) >= len32b) &&
  3784              		.loc 1 2297 9
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 107
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 107
 
 
  3785 005c 26E0     		b	.L161
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3825 0096 1A69     		ldr	r2, [r3, #16]
  3826 0098 FB69     		ldr	r3, [r7, #28]
  3827 009a 1A44     		add	r2, r2, r3
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 108
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 108
 
 
  3828 009c FB68     		ldr	r3, [r7, #12]
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  3869 00d6 FB68     		ldr	r3, [r7, #12]
  3870 00d8 9A69     		ldr	r2, [r3, #24]
  3871              		.loc 1 2315 25
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 109
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 109
 
 
  3872 00da FB68     		ldr	r3, [r7, #12]
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 2325:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** /**
 2326:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @brief  process EP OUT transfer complete interrupt.
 2327:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @param  hpcd PCD handle
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 110
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 110
 
 
 2328:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   * @param  epnum endpoint number
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
 2339:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   {
 2340:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     /* StupPktRcvd = 1 this is a setup packet */
 2341:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     if ((DoepintReg & USB_OTG_DOEPINT_STPKTRX) == USB_OTG_DOEPINT_STPKTRX)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 111
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 111
 
 
  3962              		.loc 1 2341 21
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  4002              	.L167:
 2356:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c **** #endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
 2357:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****     }
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 112
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 112
 
 
 2358:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.c ****   }
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  4037              		@ args = 0, pretend = 0, frame = 24
  4038              		@ frame_needed = 1, uses_anonymous_args = 0
  4039 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 113
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 113
 
 
  4040              		.cfi_def_cfa_offset 8
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  4084              		.loc 1 2388 5
  4085 0040 3B68     		ldr	r3, [r7]
  4086 0042 5A01     		lsls	r2, r3, #5
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 114
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 114
 
 
  4087 0044 3B69     		ldr	r3, [r7, #16]
@@ -6828,88 +6828,88 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 1
  4121              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h"
  4122              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h"
  4123              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h"
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 115
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 115
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_pcd.c
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:20     .text.HAL_PCD_Init:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:26     .text.HAL_PCD_Init:0000000000000000 HAL_PCD_Init
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:471    .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:396    .text.HAL_PCD_DeInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:402    .text.HAL_PCD_DeInit:0000000000000000 HAL_PCD_DeInit
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:507    .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:465    .text.HAL_PCD_MspInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:501    .text.HAL_PCD_MspDeInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:537    .text.HAL_PCD_Start:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:543    .text.HAL_PCD_Start:0000000000000000 HAL_PCD_Start
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:618    .text.HAL_PCD_Stop:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:624    .text.HAL_PCD_Stop:0000000000000000 HAL_PCD_Stop
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:706    .text.HAL_PCD_IRQHandler:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:712    .text.HAL_PCD_IRQHandler:0000000000000000 HAL_PCD_IRQHandler
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3917   .text.PCD_EP_OutXfrComplete_int:0000000000000000 PCD_EP_OutXfrComplete_int
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:4033   .text.PCD_EP_OutSetupPacket_int:0000000000000000 PCD_EP_OutSetupPacket_int
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2285   .text.HAL_PCD_ISOOUTIncompleteCallback:0000000000000000 HAL_PCD_ISOOUTIncompleteCallback
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2067   .text.HAL_PCD_DataInStageCallback:0000000000000000 HAL_PCD_DataInStageCallback
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2323   .text.HAL_PCD_ISOINIncompleteCallback:0000000000000000 HAL_PCD_ISOINIncompleteCallback
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3710   .text.PCD_WriteEmptyTxFifo:0000000000000000 PCD_WriteEmptyTxFifo
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2249   .text.HAL_PCD_ResumeCallback:0000000000000000 HAL_PCD_ResumeCallback
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2213   .text.HAL_PCD_SuspendCallback:0000000000000000 HAL_PCD_SuspendCallback
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2177   .text.HAL_PCD_ResetCallback:0000000000000000 HAL_PCD_ResetCallback
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2141   .text.HAL_PCD_SOFCallback:0000000000000000 HAL_PCD_SOFCallback
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3433   .text.HAL_PCD_EP_Abort:0000000000000000 HAL_PCD_EP_Abort
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2361   .text.HAL_PCD_ConnectCallback:0000000000000000 HAL_PCD_ConnectCallback
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2397   .text.HAL_PCD_DisconnectCallback:0000000000000000 HAL_PCD_DisconnectCallback
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2023   .text.HAL_PCD_DataOutStageCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2029   .text.HAL_PCD_DataOutStageCallback:0000000000000000 HAL_PCD_DataOutStageCallback
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2061   .text.HAL_PCD_DataInStageCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2099   .text.HAL_PCD_SetupStageCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2105   .text.HAL_PCD_SetupStageCallback:0000000000000000 HAL_PCD_SetupStageCallback
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2135   .text.HAL_PCD_SOFCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2171   .text.HAL_PCD_ResetCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2207   .text.HAL_PCD_SuspendCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2243   .text.HAL_PCD_ResumeCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2279   .text.HAL_PCD_ISOOUTIncompleteCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2317   .text.HAL_PCD_ISOINIncompleteCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2355   .text.HAL_PCD_ConnectCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2391   .text.HAL_PCD_DisconnectCallback:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2427   .text.HAL_PCD_DevConnect:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2433   .text.HAL_PCD_DevConnect:0000000000000000 HAL_PCD_DevConnect
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2503   .text.HAL_PCD_DevDisconnect:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2509   .text.HAL_PCD_DevDisconnect:0000000000000000 HAL_PCD_DevDisconnect
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2579   .text.HAL_PCD_SetAddress:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2585   .text.HAL_PCD_SetAddress:0000000000000000 HAL_PCD_SetAddress
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2646   .text.HAL_PCD_EP_Open:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2652   .text.HAL_PCD_EP_Open:0000000000000000 HAL_PCD_EP_Open
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2798   .text.HAL_PCD_EP_Close:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2804   .text.HAL_PCD_EP_Close:0000000000000000 HAL_PCD_EP_Close
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2909   .text.HAL_PCD_EP_Receive:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:2915   .text.HAL_PCD_EP_Receive:0000000000000000 HAL_PCD_EP_Receive
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3007   .text.HAL_PCD_EP_GetRxCount:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3013   .text.HAL_PCD_EP_GetRxCount:0000000000000000 HAL_PCD_EP_GetRxCount
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3057   .text.HAL_PCD_EP_Transmit:0000000000000000 $t
-ARM GAS  C:\Users\isan\AppData\Local\Temp\cchjYuo3.s 			page 116
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:20     .text.HAL_PCD_Init:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:26     .text.HAL_PCD_Init:0000000000000000 HAL_PCD_Init
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:471    .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:396    .text.HAL_PCD_DeInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:402    .text.HAL_PCD_DeInit:0000000000000000 HAL_PCD_DeInit
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:507    .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:465    .text.HAL_PCD_MspInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:501    .text.HAL_PCD_MspDeInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:537    .text.HAL_PCD_Start:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:543    .text.HAL_PCD_Start:0000000000000000 HAL_PCD_Start
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:618    .text.HAL_PCD_Stop:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:624    .text.HAL_PCD_Stop:0000000000000000 HAL_PCD_Stop
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:706    .text.HAL_PCD_IRQHandler:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:712    .text.HAL_PCD_IRQHandler:0000000000000000 HAL_PCD_IRQHandler
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3917   .text.PCD_EP_OutXfrComplete_int:0000000000000000 PCD_EP_OutXfrComplete_int
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:4033   .text.PCD_EP_OutSetupPacket_int:0000000000000000 PCD_EP_OutSetupPacket_int
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2285   .text.HAL_PCD_ISOOUTIncompleteCallback:0000000000000000 HAL_PCD_ISOOUTIncompleteCallback
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2067   .text.HAL_PCD_DataInStageCallback:0000000000000000 HAL_PCD_DataInStageCallback
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2323   .text.HAL_PCD_ISOINIncompleteCallback:0000000000000000 HAL_PCD_ISOINIncompleteCallback
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3710   .text.PCD_WriteEmptyTxFifo:0000000000000000 PCD_WriteEmptyTxFifo
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2249   .text.HAL_PCD_ResumeCallback:0000000000000000 HAL_PCD_ResumeCallback
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2213   .text.HAL_PCD_SuspendCallback:0000000000000000 HAL_PCD_SuspendCallback
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2177   .text.HAL_PCD_ResetCallback:0000000000000000 HAL_PCD_ResetCallback
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2141   .text.HAL_PCD_SOFCallback:0000000000000000 HAL_PCD_SOFCallback
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3433   .text.HAL_PCD_EP_Abort:0000000000000000 HAL_PCD_EP_Abort
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2361   .text.HAL_PCD_ConnectCallback:0000000000000000 HAL_PCD_ConnectCallback
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2397   .text.HAL_PCD_DisconnectCallback:0000000000000000 HAL_PCD_DisconnectCallback
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2023   .text.HAL_PCD_DataOutStageCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2029   .text.HAL_PCD_DataOutStageCallback:0000000000000000 HAL_PCD_DataOutStageCallback
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2061   .text.HAL_PCD_DataInStageCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2099   .text.HAL_PCD_SetupStageCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2105   .text.HAL_PCD_SetupStageCallback:0000000000000000 HAL_PCD_SetupStageCallback
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2135   .text.HAL_PCD_SOFCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2171   .text.HAL_PCD_ResetCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2207   .text.HAL_PCD_SuspendCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2243   .text.HAL_PCD_ResumeCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2279   .text.HAL_PCD_ISOOUTIncompleteCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2317   .text.HAL_PCD_ISOINIncompleteCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2355   .text.HAL_PCD_ConnectCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2391   .text.HAL_PCD_DisconnectCallback:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2427   .text.HAL_PCD_DevConnect:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2433   .text.HAL_PCD_DevConnect:0000000000000000 HAL_PCD_DevConnect
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2503   .text.HAL_PCD_DevDisconnect:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2509   .text.HAL_PCD_DevDisconnect:0000000000000000 HAL_PCD_DevDisconnect
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2579   .text.HAL_PCD_SetAddress:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2585   .text.HAL_PCD_SetAddress:0000000000000000 HAL_PCD_SetAddress
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2646   .text.HAL_PCD_EP_Open:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2652   .text.HAL_PCD_EP_Open:0000000000000000 HAL_PCD_EP_Open
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2798   .text.HAL_PCD_EP_Close:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2804   .text.HAL_PCD_EP_Close:0000000000000000 HAL_PCD_EP_Close
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2909   .text.HAL_PCD_EP_Receive:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:2915   .text.HAL_PCD_EP_Receive:0000000000000000 HAL_PCD_EP_Receive
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3007   .text.HAL_PCD_EP_GetRxCount:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3013   .text.HAL_PCD_EP_GetRxCount:0000000000000000 HAL_PCD_EP_GetRxCount
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3057   .text.HAL_PCD_EP_Transmit:0000000000000000 $t
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s 			page 116
 
 
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3063   .text.HAL_PCD_EP_Transmit:0000000000000000 HAL_PCD_EP_Transmit
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3155   .text.HAL_PCD_EP_SetStall:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3161   .text.HAL_PCD_EP_SetStall:0000000000000000 HAL_PCD_EP_SetStall
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3299   .text.HAL_PCD_EP_ClrStall:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3305   .text.HAL_PCD_EP_ClrStall:0000000000000000 HAL_PCD_EP_ClrStall
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3427   .text.HAL_PCD_EP_Abort:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3507   .text.HAL_PCD_EP_Flush:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3513   .text.HAL_PCD_EP_Flush:0000000000000000 HAL_PCD_EP_Flush
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3585   .text.HAL_PCD_ActivateRemoteWakeup:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3591   .text.HAL_PCD_ActivateRemoteWakeup:0000000000000000 HAL_PCD_ActivateRemoteWakeup
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3625   .text.HAL_PCD_DeActivateRemoteWakeup:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3631   .text.HAL_PCD_DeActivateRemoteWakeup:0000000000000000 HAL_PCD_DeActivateRemoteWakeup
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3665   .text.HAL_PCD_GetState:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3671   .text.HAL_PCD_GetState:0000000000000000 HAL_PCD_GetState
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3705   .text.PCD_WriteEmptyTxFifo:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:3912   .text.PCD_EP_OutXfrComplete_int:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:4023   .text.PCD_EP_OutXfrComplete_int:0000000000000098 $d
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:4028   .text.PCD_EP_OutSetupPacket_int:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\cchjYuo3.s:4110   .text.PCD_EP_OutSetupPacket_int:0000000000000064 $d
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3063   .text.HAL_PCD_EP_Transmit:0000000000000000 HAL_PCD_EP_Transmit
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3155   .text.HAL_PCD_EP_SetStall:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3161   .text.HAL_PCD_EP_SetStall:0000000000000000 HAL_PCD_EP_SetStall
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3299   .text.HAL_PCD_EP_ClrStall:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3305   .text.HAL_PCD_EP_ClrStall:0000000000000000 HAL_PCD_EP_ClrStall
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3427   .text.HAL_PCD_EP_Abort:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3507   .text.HAL_PCD_EP_Flush:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3513   .text.HAL_PCD_EP_Flush:0000000000000000 HAL_PCD_EP_Flush
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3585   .text.HAL_PCD_ActivateRemoteWakeup:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3591   .text.HAL_PCD_ActivateRemoteWakeup:0000000000000000 HAL_PCD_ActivateRemoteWakeup
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3625   .text.HAL_PCD_DeActivateRemoteWakeup:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3631   .text.HAL_PCD_DeActivateRemoteWakeup:0000000000000000 HAL_PCD_DeActivateRemoteWakeup
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3665   .text.HAL_PCD_GetState:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3671   .text.HAL_PCD_GetState:0000000000000000 HAL_PCD_GetState
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3705   .text.PCD_WriteEmptyTxFifo:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:3912   .text.PCD_EP_OutXfrComplete_int:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:4023   .text.PCD_EP_OutXfrComplete_int:0000000000000098 $d
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:4028   .text.PCD_EP_OutSetupPacket_int:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccEzWP0B.s:4110   .text.PCD_EP_OutSetupPacket_int:0000000000000064 $d
 
 UNDEFINED SYMBOLS
 USB_DisableGlobalInt

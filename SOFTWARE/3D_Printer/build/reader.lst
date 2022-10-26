@@ -1,0 +1,1358 @@
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"reader.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.is_end_char,"ax",%progbits
+  20              		.align	1
+  21              		.global	is_end_char
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	is_end_char:
+  27              	.LFB0:
+  28              		.file 1 "Core/Src/gcodes/reader.c"
+   1:Core/Src/gcodes/reader.c **** #include "reader.h"
+   2:Core/Src/gcodes/reader.c **** 
+   3:Core/Src/gcodes/reader.c **** int is_end_char(char c) {
+  29              		.loc 1 3 25
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 8
+  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34 0000 80B4     		push	{r7}
+  35              		.cfi_def_cfa_offset 4
+  36              		.cfi_offset 7, -4
+  37 0002 83B0     		sub	sp, sp, #12
+  38              		.cfi_def_cfa_offset 16
+  39 0004 00AF     		add	r7, sp, #0
+  40              		.cfi_def_cfa_register 7
+  41 0006 0346     		mov	r3, r0
+  42 0008 FB71     		strb	r3, [r7, #7]
+   4:Core/Src/gcodes/reader.c ****     return c == '\0' || c == END_SYMBOL || c == END_SYMBOL2;
+  43              		.loc 1 4 41
+  44 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  45 000c 002B     		cmp	r3, #0
+  46 000e 05D0     		beq	.L2
+  47              		.loc 1 4 22 discriminator 2
+  48 0010 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  49 0012 0A2B     		cmp	r3, #10
+  50 0014 02D0     		beq	.L2
+  51              		.loc 1 4 41 discriminator 4
+  52 0016 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  53 0018 0D2B     		cmp	r3, #13
+  54 001a 01D1     		bne	.L3
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 2
+
+
+  55              	.L2:
+  56              		.loc 1 4 41 is_stmt 0 discriminator 5
+  57 001c 0123     		movs	r3, #1
+  58 001e 00E0     		b	.L5
+  59              	.L3:
+  60              		.loc 1 4 41 discriminator 6
+  61 0020 0023     		movs	r3, #0
+  62              	.L5:
+   5:Core/Src/gcodes/reader.c **** }
+  63              		.loc 1 5 1 is_stmt 1 discriminator 9
+  64 0022 1846     		mov	r0, r3
+  65 0024 0C37     		adds	r7, r7, #12
+  66              		.cfi_def_cfa_offset 4
+  67 0026 BD46     		mov	sp, r7
+  68              		.cfi_def_cfa_register 13
+  69              		@ sp needed
+  70 0028 5DF8047B 		ldr	r7, [sp], #4
+  71              		.cfi_restore 7
+  72              		.cfi_def_cfa_offset 0
+  73 002c 7047     		bx	lr
+  74              		.cfi_endproc
+  75              	.LFE0:
+  77              		.section	.text.is_type_char,"ax",%progbits
+  78              		.align	1
+  79              		.global	is_type_char
+  80              		.syntax unified
+  81              		.thumb
+  82              		.thumb_func
+  84              	is_type_char:
+  85              	.LFB1:
+   6:Core/Src/gcodes/reader.c **** 
+   7:Core/Src/gcodes/reader.c **** int is_type_char(char c) {
+  86              		.loc 1 7 26
+  87              		.cfi_startproc
+  88              		@ args = 0, pretend = 0, frame = 8
+  89              		@ frame_needed = 1, uses_anonymous_args = 0
+  90              		@ link register save eliminated.
+  91 0000 80B4     		push	{r7}
+  92              		.cfi_def_cfa_offset 4
+  93              		.cfi_offset 7, -4
+  94 0002 83B0     		sub	sp, sp, #12
+  95              		.cfi_def_cfa_offset 16
+  96 0004 00AF     		add	r7, sp, #0
+  97              		.cfi_def_cfa_register 7
+  98 0006 0346     		mov	r3, r0
+  99 0008 FB71     		strb	r3, [r7, #7]
+   8:Core/Src/gcodes/reader.c ****     return c == GCODE_SYMBOL || c == MCODE_SYMBOL;
+ 100              		.loc 1 8 30
+ 101 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 102 000c 472B     		cmp	r3, #71
+ 103 000e 02D0     		beq	.L7
+ 104              		.loc 1 8 30 is_stmt 0 discriminator 2
+ 105 0010 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 106 0012 4D2B     		cmp	r3, #77
+ 107 0014 01D1     		bne	.L8
+ 108              	.L7:
+ 109              		.loc 1 8 30 discriminator 3
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 3
+
+
+ 110 0016 0123     		movs	r3, #1
+ 111 0018 00E0     		b	.L10
+ 112              	.L8:
+ 113              		.loc 1 8 30 discriminator 4
+ 114 001a 0023     		movs	r3, #0
+ 115              	.L10:
+   9:Core/Src/gcodes/reader.c **** }
+ 116              		.loc 1 9 1 is_stmt 1 discriminator 7
+ 117 001c 1846     		mov	r0, r3
+ 118 001e 0C37     		adds	r7, r7, #12
+ 119              		.cfi_def_cfa_offset 4
+ 120 0020 BD46     		mov	sp, r7
+ 121              		.cfi_def_cfa_register 13
+ 122              		@ sp needed
+ 123 0022 5DF8047B 		ldr	r7, [sp], #4
+ 124              		.cfi_restore 7
+ 125              		.cfi_def_cfa_offset 0
+ 126 0026 7047     		bx	lr
+ 127              		.cfi_endproc
+ 128              	.LFE1:
+ 130              		.section	.text.read_to_buff,"ax",%progbits
+ 131              		.align	1
+ 132              		.global	read_to_buff
+ 133              		.syntax unified
+ 134              		.thumb
+ 135              		.thumb_func
+ 137              	read_to_buff:
+ 138              	.LFB2:
+  10:Core/Src/gcodes/reader.c **** 
+  11:Core/Src/gcodes/reader.c **** int read_to_buff(char c, gc_reader *reader) {
+ 139              		.loc 1 11 45
+ 140              		.cfi_startproc
+ 141              		@ args = 0, pretend = 0, frame = 8
+ 142              		@ frame_needed = 1, uses_anonymous_args = 0
+ 143              		@ link register save eliminated.
+ 144 0000 80B4     		push	{r7}
+ 145              		.cfi_def_cfa_offset 4
+ 146              		.cfi_offset 7, -4
+ 147 0002 83B0     		sub	sp, sp, #12
+ 148              		.cfi_def_cfa_offset 16
+ 149 0004 00AF     		add	r7, sp, #0
+ 150              		.cfi_def_cfa_register 7
+ 151 0006 0346     		mov	r3, r0
+ 152 0008 3960     		str	r1, [r7]
+ 153 000a FB71     		strb	r3, [r7, #7]
+  12:Core/Src/gcodes/reader.c ****     if(reader->buff_iter >= BUFF_SIZE - 1) {
+ 154              		.loc 1 12 14
+ 155 000c 3B68     		ldr	r3, [r7]
+ 156 000e 9B69     		ldr	r3, [r3, #24]
+ 157              		.loc 1 12 7
+ 158 0010 122B     		cmp	r3, #18
+ 159 0012 01D9     		bls	.L12
+  13:Core/Src/gcodes/reader.c ****         return 1;
+ 160              		.loc 1 13 16
+ 161 0014 0123     		movs	r3, #1
+ 162 0016 0FE0     		b	.L13
+ 163              	.L12:
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 4
+
+
+  14:Core/Src/gcodes/reader.c ****     }
+  15:Core/Src/gcodes/reader.c ****     reader->buff[reader->buff_iter++] = c;
+ 164              		.loc 1 15 24
+ 165 0018 3B68     		ldr	r3, [r7]
+ 166 001a 9B69     		ldr	r3, [r3, #24]
+ 167              		.loc 1 15 35
+ 168 001c 591C     		adds	r1, r3, #1
+ 169 001e 3A68     		ldr	r2, [r7]
+ 170 0020 9161     		str	r1, [r2, #24]
+ 171              		.loc 1 15 39
+ 172 0022 3A68     		ldr	r2, [r7]
+ 173 0024 1344     		add	r3, r3, r2
+ 174 0026 FA79     		ldrb	r2, [r7, #7]
+ 175 0028 5A70     		strb	r2, [r3, #1]
+  16:Core/Src/gcodes/reader.c ****     reader->buff[reader->buff_iter] = '\0';
+ 176              		.loc 1 16 24
+ 177 002a 3B68     		ldr	r3, [r7]
+ 178 002c 9B69     		ldr	r3, [r3, #24]
+ 179              		.loc 1 16 37
+ 180 002e 3A68     		ldr	r2, [r7]
+ 181 0030 1344     		add	r3, r3, r2
+ 182 0032 0022     		movs	r2, #0
+ 183 0034 5A70     		strb	r2, [r3, #1]
+  17:Core/Src/gcodes/reader.c ****     return 0;
+ 184              		.loc 1 17 12
+ 185 0036 0023     		movs	r3, #0
+ 186              	.L13:
+  18:Core/Src/gcodes/reader.c **** }
+ 187              		.loc 1 18 1
+ 188 0038 1846     		mov	r0, r3
+ 189 003a 0C37     		adds	r7, r7, #12
+ 190              		.cfi_def_cfa_offset 4
+ 191 003c BD46     		mov	sp, r7
+ 192              		.cfi_def_cfa_register 13
+ 193              		@ sp needed
+ 194 003e 5DF8047B 		ldr	r7, [sp], #4
+ 195              		.cfi_restore 7
+ 196              		.cfi_def_cfa_offset 0
+ 197 0042 7047     		bx	lr
+ 198              		.cfi_endproc
+ 199              	.LFE2:
+ 201              		.section	.text.set_param,"ax",%progbits
+ 202              		.align	1
+ 203              		.global	set_param
+ 204              		.syntax unified
+ 205              		.thumb
+ 206              		.thumb_func
+ 208              	set_param:
+ 209              	.LFB3:
+  19:Core/Src/gcodes/reader.c **** 
+  20:Core/Src/gcodes/reader.c **** void set_param(gc_reader *reader) {
+ 210              		.loc 1 20 35
+ 211              		.cfi_startproc
+ 212              		@ args = 0, pretend = 0, frame = 8
+ 213              		@ frame_needed = 1, uses_anonymous_args = 0
+ 214 0000 80B5     		push	{r7, lr}
+ 215              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 5
+
+
+ 216              		.cfi_offset 7, -8
+ 217              		.cfi_offset 14, -4
+ 218 0002 82B0     		sub	sp, sp, #8
+ 219              		.cfi_def_cfa_offset 16
+ 220 0004 00AF     		add	r7, sp, #0
+ 221              		.cfi_def_cfa_register 7
+ 222 0006 7860     		str	r0, [r7, #4]
+  21:Core/Src/gcodes/reader.c ****     switch(reader->curr_param_type) {
+ 223              		.loc 1 21 18
+ 224 0008 7B68     		ldr	r3, [r7, #4]
+ 225 000a 1B7F     		ldrb	r3, [r3, #28]	@ zero_extendqisi2
+ 226              		.loc 1 21 5
+ 227 000c 443B     		subs	r3, r3, #68
+ 228 000e 162B     		cmp	r3, #22
+ 229 0010 00F2F980 		bhi	.L15
+ 230 0014 01A2     		adr	r2, .L17
+ 231 0016 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 232 001a 00BF     		.p2align 2
+ 233              	.L17:
+ 234 001c 85010000 		.word	.L32+1
+ 235 0020 ED010000 		.word	.L31+1
+ 236 0024 B9010000 		.word	.L30+1
+ 237 0028 07020000 		.word	.L15+1
+ 238 002c 9F010000 		.word	.L29+1
+ 239 0030 51010000 		.word	.L28+1
+ 240 0034 6B010000 		.word	.L27+1
+ 241 0038 07020000 		.word	.L15+1
+ 242 003c 07020000 		.word	.L15+1
+ 243 0040 07020000 		.word	.L15+1
+ 244 0044 07020000 		.word	.L15+1
+ 245 0048 07020000 		.word	.L15+1
+ 246 004c A1000000 		.word	.L26+1
+ 247 0050 07020000 		.word	.L15+1
+ 248 0054 D3010000 		.word	.L25+1
+ 249 0058 8D000000 		.word	.L24+1
+ 250 005c 79000000 		.word	.L23+1
+ 251 0060 03010000 		.word	.L22+1
+ 252 0064 1D010000 		.word	.L21+1
+ 253 0068 37010000 		.word	.L20+1
+ 254 006c B5000000 		.word	.L19+1
+ 255 0070 CF000000 		.word	.L18+1
+ 256 0074 E9000000 		.word	.L16+1
+ 257              		.p2align 1
+ 258              	.L23:
+  22:Core/Src/gcodes/reader.c ****     case 'T':
+  23:Core/Src/gcodes/reader.c ****         reader->T = atoi(reader->buff);
+ 259              		.loc 1 23 32
+ 260 0078 7B68     		ldr	r3, [r7, #4]
+ 261 007a 0133     		adds	r3, r3, #1
+ 262              		.loc 1 23 21
+ 263 007c 1846     		mov	r0, r3
+ 264 007e FFF7FEFF 		bl	atoi
+ 265 0082 0346     		mov	r3, r0
+ 266 0084 1A46     		mov	r2, r3
+ 267              		.loc 1 23 19
+ 268 0086 7B68     		ldr	r3, [r7, #4]
+ 269 0088 5A62     		str	r2, [r3, #36]
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 6
+
+
+  24:Core/Src/gcodes/reader.c ****         break;
+ 270              		.loc 1 24 9
+ 271 008a BCE0     		b	.L15
+ 272              	.L24:
+  25:Core/Src/gcodes/reader.c ****     case 'S':
+  26:Core/Src/gcodes/reader.c ****         reader->S = atoi(reader->buff);
+ 273              		.loc 1 26 32
+ 274 008c 7B68     		ldr	r3, [r7, #4]
+ 275 008e 0133     		adds	r3, r3, #1
+ 276              		.loc 1 26 21
+ 277 0090 1846     		mov	r0, r3
+ 278 0092 FFF7FEFF 		bl	atoi
+ 279 0096 0346     		mov	r3, r0
+ 280 0098 1A46     		mov	r2, r3
+ 281              		.loc 1 26 19
+ 282 009a 7B68     		ldr	r3, [r7, #4]
+ 283 009c 9A62     		str	r2, [r3, #40]
+  27:Core/Src/gcodes/reader.c ****         break;
+ 284              		.loc 1 27 9
+ 285 009e B2E0     		b	.L15
+ 286              	.L26:
+  28:Core/Src/gcodes/reader.c ****     case 'P':
+  29:Core/Src/gcodes/reader.c ****         reader->P = atoi(reader->buff);
+ 287              		.loc 1 29 32
+ 288 00a0 7B68     		ldr	r3, [r7, #4]
+ 289 00a2 0133     		adds	r3, r3, #1
+ 290              		.loc 1 29 21
+ 291 00a4 1846     		mov	r0, r3
+ 292 00a6 FFF7FEFF 		bl	atoi
+ 293 00aa 0346     		mov	r3, r0
+ 294 00ac 1A46     		mov	r2, r3
+ 295              		.loc 1 29 19
+ 296 00ae 7B68     		ldr	r3, [r7, #4]
+ 297 00b0 DA62     		str	r2, [r3, #44]
+  30:Core/Src/gcodes/reader.c ****         break;
+ 298              		.loc 1 30 9
+ 299 00b2 A8E0     		b	.L15
+ 300              	.L19:
+  31:Core/Src/gcodes/reader.c ****     case 'X':
+  32:Core/Src/gcodes/reader.c ****         reader->X = atof(reader->buff);
+ 301              		.loc 1 32 32
+ 302 00b4 7B68     		ldr	r3, [r7, #4]
+ 303 00b6 0133     		adds	r3, r3, #1
+ 304              		.loc 1 32 21
+ 305 00b8 1846     		mov	r0, r3
+ 306 00ba FFF7FEFF 		bl	atof
+ 307 00be B0EE407A 		vmov.f32	s14, s0
+ 308 00c2 F0EE607A 		vmov.f32	s15, s1
+ 309              		.loc 1 32 19
+ 310 00c6 7B68     		ldr	r3, [r7, #4]
+ 311 00c8 83ED0C7B 		vstr.64	d7, [r3, #48]
+  33:Core/Src/gcodes/reader.c ****         break;
+ 312              		.loc 1 33 9
+ 313 00cc 9BE0     		b	.L15
+ 314              	.L18:
+  34:Core/Src/gcodes/reader.c ****     case 'Y':
+  35:Core/Src/gcodes/reader.c ****         reader->Y = atof(reader->buff);
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 7
+
+
+ 315              		.loc 1 35 32
+ 316 00ce 7B68     		ldr	r3, [r7, #4]
+ 317 00d0 0133     		adds	r3, r3, #1
+ 318              		.loc 1 35 21
+ 319 00d2 1846     		mov	r0, r3
+ 320 00d4 FFF7FEFF 		bl	atof
+ 321 00d8 B0EE407A 		vmov.f32	s14, s0
+ 322 00dc F0EE607A 		vmov.f32	s15, s1
+ 323              		.loc 1 35 19
+ 324 00e0 7B68     		ldr	r3, [r7, #4]
+ 325 00e2 83ED0E7B 		vstr.64	d7, [r3, #56]
+  36:Core/Src/gcodes/reader.c ****         break;
+ 326              		.loc 1 36 9
+ 327 00e6 8EE0     		b	.L15
+ 328              	.L16:
+  37:Core/Src/gcodes/reader.c ****     case 'Z':
+  38:Core/Src/gcodes/reader.c ****         reader->Z = atof(reader->buff);
+ 329              		.loc 1 38 32
+ 330 00e8 7B68     		ldr	r3, [r7, #4]
+ 331 00ea 0133     		adds	r3, r3, #1
+ 332              		.loc 1 38 21
+ 333 00ec 1846     		mov	r0, r3
+ 334 00ee FFF7FEFF 		bl	atof
+ 335 00f2 B0EE407A 		vmov.f32	s14, s0
+ 336 00f6 F0EE607A 		vmov.f32	s15, s1
+ 337              		.loc 1 38 19
+ 338 00fa 7B68     		ldr	r3, [r7, #4]
+ 339 00fc 83ED107B 		vstr.64	d7, [r3, #64]
+  39:Core/Src/gcodes/reader.c ****         break;
+ 340              		.loc 1 39 9
+ 341 0100 81E0     		b	.L15
+ 342              	.L22:
+  40:Core/Src/gcodes/reader.c ****     case 'U':
+  41:Core/Src/gcodes/reader.c ****         reader->U = atof(reader->buff);
+ 343              		.loc 1 41 32
+ 344 0102 7B68     		ldr	r3, [r7, #4]
+ 345 0104 0133     		adds	r3, r3, #1
+ 346              		.loc 1 41 21
+ 347 0106 1846     		mov	r0, r3
+ 348 0108 FFF7FEFF 		bl	atof
+ 349 010c B0EE407A 		vmov.f32	s14, s0
+ 350 0110 F0EE607A 		vmov.f32	s15, s1
+ 351              		.loc 1 41 19
+ 352 0114 7B68     		ldr	r3, [r7, #4]
+ 353 0116 83ED127B 		vstr.64	d7, [r3, #72]
+  42:Core/Src/gcodes/reader.c ****         break;
+ 354              		.loc 1 42 9
+ 355 011a 74E0     		b	.L15
+ 356              	.L21:
+  43:Core/Src/gcodes/reader.c ****     case 'V':
+  44:Core/Src/gcodes/reader.c ****         reader->V = atof(reader->buff);
+ 357              		.loc 1 44 32
+ 358 011c 7B68     		ldr	r3, [r7, #4]
+ 359 011e 0133     		adds	r3, r3, #1
+ 360              		.loc 1 44 21
+ 361 0120 1846     		mov	r0, r3
+ 362 0122 FFF7FEFF 		bl	atof
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 8
+
+
+ 363 0126 B0EE407A 		vmov.f32	s14, s0
+ 364 012a F0EE607A 		vmov.f32	s15, s1
+ 365              		.loc 1 44 19
+ 366 012e 7B68     		ldr	r3, [r7, #4]
+ 367 0130 83ED147B 		vstr.64	d7, [r3, #80]
+  45:Core/Src/gcodes/reader.c ****         break;
+ 368              		.loc 1 45 9
+ 369 0134 67E0     		b	.L15
+ 370              	.L20:
+  46:Core/Src/gcodes/reader.c ****     case 'W':
+  47:Core/Src/gcodes/reader.c ****         reader->W = atof(reader->buff);
+ 371              		.loc 1 47 32
+ 372 0136 7B68     		ldr	r3, [r7, #4]
+ 373 0138 0133     		adds	r3, r3, #1
+ 374              		.loc 1 47 21
+ 375 013a 1846     		mov	r0, r3
+ 376 013c FFF7FEFF 		bl	atof
+ 377 0140 B0EE407A 		vmov.f32	s14, s0
+ 378 0144 F0EE607A 		vmov.f32	s15, s1
+ 379              		.loc 1 47 19
+ 380 0148 7B68     		ldr	r3, [r7, #4]
+ 381 014a 83ED167B 		vstr.64	d7, [r3, #88]
+  48:Core/Src/gcodes/reader.c ****         break;
+ 382              		.loc 1 48 9
+ 383 014e 5AE0     		b	.L15
+ 384              	.L28:
+  49:Core/Src/gcodes/reader.c ****     case 'I':
+  50:Core/Src/gcodes/reader.c ****         reader->I = atof(reader->buff);
+ 385              		.loc 1 50 32
+ 386 0150 7B68     		ldr	r3, [r7, #4]
+ 387 0152 0133     		adds	r3, r3, #1
+ 388              		.loc 1 50 21
+ 389 0154 1846     		mov	r0, r3
+ 390 0156 FFF7FEFF 		bl	atof
+ 391 015a B0EE407A 		vmov.f32	s14, s0
+ 392 015e F0EE607A 		vmov.f32	s15, s1
+ 393              		.loc 1 50 19
+ 394 0162 7B68     		ldr	r3, [r7, #4]
+ 395 0164 83ED187B 		vstr.64	d7, [r3, #96]
+  51:Core/Src/gcodes/reader.c ****         break;
+ 396              		.loc 1 51 9
+ 397 0168 4DE0     		b	.L15
+ 398              	.L27:
+  52:Core/Src/gcodes/reader.c ****     case 'J':
+  53:Core/Src/gcodes/reader.c ****         reader->J = atof(reader->buff);
+ 399              		.loc 1 53 32
+ 400 016a 7B68     		ldr	r3, [r7, #4]
+ 401 016c 0133     		adds	r3, r3, #1
+ 402              		.loc 1 53 21
+ 403 016e 1846     		mov	r0, r3
+ 404 0170 FFF7FEFF 		bl	atof
+ 405 0174 B0EE407A 		vmov.f32	s14, s0
+ 406 0178 F0EE607A 		vmov.f32	s15, s1
+ 407              		.loc 1 53 19
+ 408 017c 7B68     		ldr	r3, [r7, #4]
+ 409 017e 83ED1A7B 		vstr.64	d7, [r3, #104]
+  54:Core/Src/gcodes/reader.c ****         break;
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 9
+
+
+ 410              		.loc 1 54 9
+ 411 0182 40E0     		b	.L15
+ 412              	.L32:
+  55:Core/Src/gcodes/reader.c ****     case 'D':
+  56:Core/Src/gcodes/reader.c ****         reader->D = atof(reader->buff);
+ 413              		.loc 1 56 32
+ 414 0184 7B68     		ldr	r3, [r7, #4]
+ 415 0186 0133     		adds	r3, r3, #1
+ 416              		.loc 1 56 21
+ 417 0188 1846     		mov	r0, r3
+ 418 018a FFF7FEFF 		bl	atof
+ 419 018e B0EE407A 		vmov.f32	s14, s0
+ 420 0192 F0EE607A 		vmov.f32	s15, s1
+ 421              		.loc 1 56 19
+ 422 0196 7B68     		ldr	r3, [r7, #4]
+ 423 0198 83ED1C7B 		vstr.64	d7, [r3, #112]
+  57:Core/Src/gcodes/reader.c ****         break;
+ 424              		.loc 1 57 9
+ 425 019c 33E0     		b	.L15
+ 426              	.L29:
+  58:Core/Src/gcodes/reader.c ****     case 'H':
+  59:Core/Src/gcodes/reader.c ****         reader->H = atof(reader->buff);
+ 427              		.loc 1 59 32
+ 428 019e 7B68     		ldr	r3, [r7, #4]
+ 429 01a0 0133     		adds	r3, r3, #1
+ 430              		.loc 1 59 21
+ 431 01a2 1846     		mov	r0, r3
+ 432 01a4 FFF7FEFF 		bl	atof
+ 433 01a8 B0EE407A 		vmov.f32	s14, s0
+ 434 01ac F0EE607A 		vmov.f32	s15, s1
+ 435              		.loc 1 59 19
+ 436 01b0 7B68     		ldr	r3, [r7, #4]
+ 437 01b2 83ED1E7B 		vstr.64	d7, [r3, #120]
+  60:Core/Src/gcodes/reader.c ****         break;
+ 438              		.loc 1 60 9
+ 439 01b6 26E0     		b	.L15
+ 440              	.L30:
+  61:Core/Src/gcodes/reader.c ****     case 'F':
+  62:Core/Src/gcodes/reader.c ****         reader->F = atof(reader->buff);
+ 441              		.loc 1 62 32
+ 442 01b8 7B68     		ldr	r3, [r7, #4]
+ 443 01ba 0133     		adds	r3, r3, #1
+ 444              		.loc 1 62 21
+ 445 01bc 1846     		mov	r0, r3
+ 446 01be FFF7FEFF 		bl	atof
+ 447 01c2 B0EE407A 		vmov.f32	s14, s0
+ 448 01c6 F0EE607A 		vmov.f32	s15, s1
+ 449              		.loc 1 62 19
+ 450 01ca 7B68     		ldr	r3, [r7, #4]
+ 451 01cc 83ED207B 		vstr.64	d7, [r3, #128]
+  63:Core/Src/gcodes/reader.c ****         break;
+ 452              		.loc 1 63 9
+ 453 01d0 19E0     		b	.L15
+ 454              	.L25:
+  64:Core/Src/gcodes/reader.c ****     case 'R':
+  65:Core/Src/gcodes/reader.c ****         reader->R = atof(reader->buff);
+ 455              		.loc 1 65 32
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 10
+
+
+ 456 01d2 7B68     		ldr	r3, [r7, #4]
+ 457 01d4 0133     		adds	r3, r3, #1
+ 458              		.loc 1 65 21
+ 459 01d6 1846     		mov	r0, r3
+ 460 01d8 FFF7FEFF 		bl	atof
+ 461 01dc B0EE407A 		vmov.f32	s14, s0
+ 462 01e0 F0EE607A 		vmov.f32	s15, s1
+ 463              		.loc 1 65 19
+ 464 01e4 7B68     		ldr	r3, [r7, #4]
+ 465 01e6 83ED227B 		vstr.64	d7, [r3, #136]
+  66:Core/Src/gcodes/reader.c ****         break;
+ 466              		.loc 1 66 9
+ 467 01ea 0CE0     		b	.L15
+ 468              	.L31:
+  67:Core/Src/gcodes/reader.c ****     case 'E':
+  68:Core/Src/gcodes/reader.c ****         reader->E = atof(reader->buff);
+ 469              		.loc 1 68 32
+ 470 01ec 7B68     		ldr	r3, [r7, #4]
+ 471 01ee 0133     		adds	r3, r3, #1
+ 472              		.loc 1 68 21
+ 473 01f0 1846     		mov	r0, r3
+ 474 01f2 FFF7FEFF 		bl	atof
+ 475 01f6 B0EE407A 		vmov.f32	s14, s0
+ 476 01fa F0EE607A 		vmov.f32	s15, s1
+ 477              		.loc 1 68 19
+ 478 01fe 7B68     		ldr	r3, [r7, #4]
+ 479 0200 83ED247B 		vstr.64	d7, [r3, #144]
+  69:Core/Src/gcodes/reader.c ****         break;
+ 480              		.loc 1 69 9
+ 481 0204 00BF     		nop
+ 482              	.L15:
+  70:Core/Src/gcodes/reader.c ****     }
+  71:Core/Src/gcodes/reader.c ****     reader->buff_iter = 0;
+ 483              		.loc 1 71 23
+ 484 0206 7B68     		ldr	r3, [r7, #4]
+ 485 0208 0022     		movs	r2, #0
+ 486 020a 9A61     		str	r2, [r3, #24]
+  72:Core/Src/gcodes/reader.c **** }
+ 487              		.loc 1 72 1
+ 488 020c 00BF     		nop
+ 489 020e 0837     		adds	r7, r7, #8
+ 490              		.cfi_def_cfa_offset 8
+ 491 0210 BD46     		mov	sp, r7
+ 492              		.cfi_def_cfa_register 13
+ 493              		@ sp needed
+ 494 0212 80BD     		pop	{r7, pc}
+ 495              		.cfi_endproc
+ 496              	.LFE3:
+ 498              		.section	.text.is_checksum_ok,"ax",%progbits
+ 499              		.align	1
+ 500              		.global	is_checksum_ok
+ 501              		.syntax unified
+ 502              		.thumb
+ 503              		.thumb_func
+ 505              	is_checksum_ok:
+ 506              	.LFB4:
+  73:Core/Src/gcodes/reader.c **** 
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 11
+
+
+  74:Core/Src/gcodes/reader.c **** int is_checksum_ok(char *input, gc_reader *reader) {
+ 507              		.loc 1 74 52
+ 508              		.cfi_startproc
+ 509              		@ args = 0, pretend = 0, frame = 16
+ 510              		@ frame_needed = 1, uses_anonymous_args = 0
+ 511              		@ link register save eliminated.
+ 512 0000 80B4     		push	{r7}
+ 513              		.cfi_def_cfa_offset 4
+ 514              		.cfi_offset 7, -4
+ 515 0002 85B0     		sub	sp, sp, #20
+ 516              		.cfi_def_cfa_offset 24
+ 517 0004 00AF     		add	r7, sp, #0
+ 518              		.cfi_def_cfa_register 7
+ 519 0006 7860     		str	r0, [r7, #4]
+ 520 0008 3960     		str	r1, [r7]
+  75:Core/Src/gcodes/reader.c ****     int cs = 0;
+ 521              		.loc 1 75 9
+ 522 000a 0023     		movs	r3, #0
+ 523 000c FB60     		str	r3, [r7, #12]
+ 524              	.LBB2:
+  76:Core/Src/gcodes/reader.c ****     for(int i = 0; input[i] != CHECKSUM_SYMBOL && input[i] != '\0'; i++) {
+ 525              		.loc 1 76 13
+ 526 000e 0023     		movs	r3, #0
+ 527 0010 BB60     		str	r3, [r7, #8]
+ 528              		.loc 1 76 5
+ 529 0012 0AE0     		b	.L35
+ 530              	.L37:
+  77:Core/Src/gcodes/reader.c ****         cs = cs ^ input[i];
+ 531              		.loc 1 77 24 discriminator 4
+ 532 0014 BB68     		ldr	r3, [r7, #8]
+ 533 0016 7A68     		ldr	r2, [r7, #4]
+ 534 0018 1344     		add	r3, r3, r2
+ 535 001a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 536 001c 1A46     		mov	r2, r3
+ 537              		.loc 1 77 12 discriminator 4
+ 538 001e FB68     		ldr	r3, [r7, #12]
+ 539 0020 5340     		eors	r3, r3, r2
+ 540 0022 FB60     		str	r3, [r7, #12]
+  76:Core/Src/gcodes/reader.c ****     for(int i = 0; input[i] != CHECKSUM_SYMBOL && input[i] != '\0'; i++) {
+ 541              		.loc 1 76 70 discriminator 4
+ 542 0024 BB68     		ldr	r3, [r7, #8]
+ 543 0026 0133     		adds	r3, r3, #1
+ 544 0028 BB60     		str	r3, [r7, #8]
+ 545              	.L35:
+  76:Core/Src/gcodes/reader.c ****     for(int i = 0; input[i] != CHECKSUM_SYMBOL && input[i] != '\0'; i++) {
+ 546              		.loc 1 76 25 discriminator 1
+ 547 002a BB68     		ldr	r3, [r7, #8]
+ 548 002c 7A68     		ldr	r2, [r7, #4]
+ 549 002e 1344     		add	r3, r3, r2
+ 550 0030 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  76:Core/Src/gcodes/reader.c ****     for(int i = 0; input[i] != CHECKSUM_SYMBOL && input[i] != '\0'; i++) {
+ 551              		.loc 1 76 48 discriminator 1
+ 552 0032 2A2B     		cmp	r3, #42
+ 553 0034 05D0     		beq	.L36
+  76:Core/Src/gcodes/reader.c ****     for(int i = 0; input[i] != CHECKSUM_SYMBOL && input[i] != '\0'; i++) {
+ 554              		.loc 1 76 56 discriminator 3
+ 555 0036 BB68     		ldr	r3, [r7, #8]
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 12
+
+
+ 556 0038 7A68     		ldr	r2, [r7, #4]
+ 557 003a 1344     		add	r3, r3, r2
+ 558 003c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  76:Core/Src/gcodes/reader.c ****     for(int i = 0; input[i] != CHECKSUM_SYMBOL && input[i] != '\0'; i++) {
+ 559              		.loc 1 76 48 discriminator 3
+ 560 003e 002B     		cmp	r3, #0
+ 561 0040 E8D1     		bne	.L37
+ 562              	.L36:
+ 563              	.LBE2:
+  78:Core/Src/gcodes/reader.c ****     }
+  79:Core/Src/gcodes/reader.c ****     cs &= 0xff;
+ 564              		.loc 1 79 8
+ 565 0042 FB68     		ldr	r3, [r7, #12]
+ 566 0044 DBB2     		uxtb	r3, r3
+ 567 0046 FB60     		str	r3, [r7, #12]
+  80:Core/Src/gcodes/reader.c ****     return cs == reader->checksum;
+ 568              		.loc 1 80 24
+ 569 0048 3B68     		ldr	r3, [r7]
+ 570 004a D3F89C20 		ldr	r2, [r3, #156]
+ 571              		.loc 1 80 15
+ 572 004e FB68     		ldr	r3, [r7, #12]
+ 573 0050 9A42     		cmp	r2, r3
+ 574 0052 0CBF     		ite	eq
+ 575 0054 0123     		moveq	r3, #1
+ 576 0056 0023     		movne	r3, #0
+ 577 0058 DBB2     		uxtb	r3, r3
+  81:Core/Src/gcodes/reader.c **** }
+ 578              		.loc 1 81 1
+ 579 005a 1846     		mov	r0, r3
+ 580 005c 1437     		adds	r7, r7, #20
+ 581              		.cfi_def_cfa_offset 4
+ 582 005e BD46     		mov	sp, r7
+ 583              		.cfi_def_cfa_register 13
+ 584              		@ sp needed
+ 585 0060 5DF8047B 		ldr	r7, [sp], #4
+ 586              		.cfi_restore 7
+ 587              		.cfi_def_cfa_offset 0
+ 588 0064 7047     		bx	lr
+ 589              		.cfi_endproc
+ 590              	.LFE4:
+ 592              		.section	.text.read_code,"ax",%progbits
+ 593              		.align	1
+ 594              		.global	read_code
+ 595              		.syntax unified
+ 596              		.thumb
+ 597              		.thumb_func
+ 599              	read_code:
+ 600              	.LFB5:
+  82:Core/Src/gcodes/reader.c **** 
+  83:Core/Src/gcodes/reader.c **** int read_code(gc_reader *reader, char input, int *is_done) {
+ 601              		.loc 1 83 60
+ 602              		.cfi_startproc
+ 603              		@ args = 0, pretend = 0, frame = 24
+ 604              		@ frame_needed = 1, uses_anonymous_args = 0
+ 605 0000 80B5     		push	{r7, lr}
+ 606              		.cfi_def_cfa_offset 8
+ 607              		.cfi_offset 7, -8
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 13
+
+
+ 608              		.cfi_offset 14, -4
+ 609 0002 86B0     		sub	sp, sp, #24
+ 610              		.cfi_def_cfa_offset 32
+ 611 0004 00AF     		add	r7, sp, #0
+ 612              		.cfi_def_cfa_register 7
+ 613 0006 F860     		str	r0, [r7, #12]
+ 614 0008 0B46     		mov	r3, r1
+ 615 000a 7A60     		str	r2, [r7, #4]
+ 616 000c FB72     		strb	r3, [r7, #11]
+  84:Core/Src/gcodes/reader.c ****     if(input == COMMENT_SYMBOL) {
+ 617              		.loc 1 84 7
+ 618 000e FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 619 0010 3B2B     		cmp	r3, #59
+ 620 0012 02D1     		bne	.L40
+  85:Core/Src/gcodes/reader.c ****         reader->state = GC_READER_STATE_IGNORE_INPUT;
+ 621              		.loc 1 85 23
+ 622 0014 FB68     		ldr	r3, [r7, #12]
+ 623 0016 0622     		movs	r2, #6
+ 624 0018 1A70     		strb	r2, [r3]
+ 625              	.L40:
+  86:Core/Src/gcodes/reader.c ****     }
+  87:Core/Src/gcodes/reader.c ****     if(is_end_char(input)) {
+ 626              		.loc 1 87 8
+ 627 001a FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 628 001c 1846     		mov	r0, r3
+ 629 001e FFF7FEFF 		bl	is_end_char
+ 630 0022 0346     		mov	r3, r0
+ 631              		.loc 1 87 7
+ 632 0024 002B     		cmp	r3, #0
+ 633 0026 0AD0     		beq	.L41
+  88:Core/Src/gcodes/reader.c ****         *is_done = 1;
+ 634              		.loc 1 88 18
+ 635 0028 7B68     		ldr	r3, [r7, #4]
+ 636 002a 0122     		movs	r2, #1
+ 637 002c 1A60     		str	r2, [r3]
+  89:Core/Src/gcodes/reader.c ****         reader->read_checksum &= 0xff;
+ 638              		.loc 1 89 31
+ 639 002e FB68     		ldr	r3, [r7, #12]
+ 640 0030 D3F8A030 		ldr	r3, [r3, #160]
+ 641 0034 DAB2     		uxtb	r2, r3
+ 642 0036 FB68     		ldr	r3, [r7, #12]
+ 643 0038 C3F8A020 		str	r2, [r3, #160]
+ 644 003c 0EE0     		b	.L42
+ 645              	.L41:
+  90:Core/Src/gcodes/reader.c ****     } else if(input != CHECKSUM_SYMBOL && reader->state != GC_READER_STATE_READ_CHECKSUM) {
+ 646              		.loc 1 90 14
+ 647 003e FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 648 0040 2A2B     		cmp	r3, #42
+ 649 0042 0BD0     		beq	.L42
+ 650              		.loc 1 90 49 discriminator 1
+ 651 0044 FB68     		ldr	r3, [r7, #12]
+ 652 0046 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 653              		.loc 1 90 40 discriminator 1
+ 654 0048 042B     		cmp	r3, #4
+ 655 004a 07D0     		beq	.L42
+  91:Core/Src/gcodes/reader.c ****         reader->read_checksum = reader->read_checksum ^ input;
+ 656              		.loc 1 91 39
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 14
+
+
+ 657 004c FB68     		ldr	r3, [r7, #12]
+ 658 004e D3F8A020 		ldr	r2, [r3, #160]
+ 659              		.loc 1 91 55
+ 660 0052 FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 661 0054 5A40     		eors	r2, r2, r3
+ 662              		.loc 1 91 31
+ 663 0056 FB68     		ldr	r3, [r7, #12]
+ 664 0058 C3F8A020 		str	r2, [r3, #160]
+ 665              	.L42:
+  92:Core/Src/gcodes/reader.c ****     }
+  93:Core/Src/gcodes/reader.c ****     
+  94:Core/Src/gcodes/reader.c **** 
+  95:Core/Src/gcodes/reader.c ****     int should_read_checksum_next = 0;
+ 666              		.loc 1 95 9
+ 667 005c 0023     		movs	r3, #0
+ 668 005e 7B61     		str	r3, [r7, #20]
+  96:Core/Src/gcodes/reader.c ****     if(input == CHECKSUM_SYMBOL) {
+ 669              		.loc 1 96 7
+ 670 0060 FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 671 0062 2A2B     		cmp	r3, #42
+ 672 0064 04D1     		bne	.L43
+  97:Core/Src/gcodes/reader.c ****         reader->found_checksum = 1;
+ 673              		.loc 1 97 32
+ 674 0066 FB68     		ldr	r3, [r7, #12]
+ 675 0068 0122     		movs	r2, #1
+ 676 006a 5A77     		strb	r2, [r3, #29]
+  98:Core/Src/gcodes/reader.c ****         should_read_checksum_next = 1;
+ 677              		.loc 1 98 35
+ 678 006c 0123     		movs	r3, #1
+ 679 006e 7B61     		str	r3, [r7, #20]
+ 680              	.L43:
+  99:Core/Src/gcodes/reader.c ****     }
+ 100:Core/Src/gcodes/reader.c **** 
+ 101:Core/Src/gcodes/reader.c ****     if(!*is_done && !should_read_checksum_next) {
+ 681              		.loc 1 101 9
+ 682 0070 7B68     		ldr	r3, [r7, #4]
+ 683 0072 1B68     		ldr	r3, [r3]
+ 684              		.loc 1 101 7
+ 685 0074 002B     		cmp	r3, #0
+ 686 0076 40F0B780 		bne	.L44
+ 687              		.loc 1 101 18 discriminator 1
+ 688 007a 7B69     		ldr	r3, [r7, #20]
+ 689 007c 002B     		cmp	r3, #0
+ 690 007e 40F0B380 		bne	.L44
+ 102:Core/Src/gcodes/reader.c ****         switch(reader->state) {
+ 691              		.loc 1 102 22
+ 692 0082 FB68     		ldr	r3, [r7, #12]
+ 693 0084 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 694              		.loc 1 102 9
+ 695 0086 052B     		cmp	r3, #5
+ 696 0088 00F2AE80 		bhi	.L44
+ 697 008c 01A2     		adr	r2, .L46
+ 698 008e 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 699 0092 00BF     		.p2align 2
+ 700              	.L46:
+ 701 0094 AD000000 		.word	.L51+1
+ 702 0098 DB000000 		.word	.L50+1
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 15
+
+
+ 703 009c 21010000 		.word	.L49+1
+ 704 00a0 2F010000 		.word	.L48+1
+ 705 00a4 9F010000 		.word	.L47+1
+ 706 00a8 63010000 		.word	.L45+1
+ 707              		.p2align 1
+ 708              	.L51:
+ 103:Core/Src/gcodes/reader.c ****         case GC_READER_STATE_READ_TYPE:
+ 104:Core/Src/gcodes/reader.c ****             if(input == LINE_NUMBER_SYMBOL) {
+ 709              		.loc 1 104 15
+ 710 00ac FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 711 00ae 4E2B     		cmp	r3, #78
+ 712 00b0 03D1     		bne	.L52
+ 105:Core/Src/gcodes/reader.c ****                 reader->state = GC_READER_STATE_READ_LINE_NUMBER;
+ 713              		.loc 1 105 31
+ 714 00b2 FB68     		ldr	r3, [r7, #12]
+ 715 00b4 0522     		movs	r2, #5
+ 716 00b6 1A70     		strb	r2, [r3]
+ 106:Core/Src/gcodes/reader.c ****                 break;
+ 717              		.loc 1 106 17
+ 718 00b8 96E0     		b	.L44
+ 719              	.L52:
+ 107:Core/Src/gcodes/reader.c ****             } else if(!is_type_char(input)) {
+ 720              		.loc 1 107 24
+ 721 00ba FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 722 00bc 1846     		mov	r0, r3
+ 723 00be FFF7FEFF 		bl	is_type_char
+ 724 00c2 0346     		mov	r3, r0
+ 725              		.loc 1 107 22
+ 726 00c4 002B     		cmp	r3, #0
+ 727 00c6 01D1     		bne	.L53
+ 108:Core/Src/gcodes/reader.c ****                 return GC_READER_ERROR_TYPE_READ;
+ 728              		.loc 1 108 24
+ 729 00c8 0223     		movs	r3, #2
+ 730 00ca E5E0     		b	.L54
+ 731              	.L53:
+ 109:Core/Src/gcodes/reader.c ****             }
+ 110:Core/Src/gcodes/reader.c ****             reader->code_type = input;
+ 732              		.loc 1 110 31
+ 733 00cc FB68     		ldr	r3, [r7, #12]
+ 734 00ce FA7A     		ldrb	r2, [r7, #11]
+ 735 00d0 9A77     		strb	r2, [r3, #30]
+ 111:Core/Src/gcodes/reader.c ****             reader->state = GC_READER_STATE_READ_CODE;
+ 736              		.loc 1 111 27
+ 737 00d2 FB68     		ldr	r3, [r7, #12]
+ 738 00d4 0122     		movs	r2, #1
+ 739 00d6 1A70     		strb	r2, [r3]
+ 112:Core/Src/gcodes/reader.c ****             break;
+ 740              		.loc 1 112 13
+ 741 00d8 86E0     		b	.L44
+ 742              	.L50:
+ 113:Core/Src/gcodes/reader.c ****         case GC_READER_STATE_READ_CODE:
+ 114:Core/Src/gcodes/reader.c ****             if(input == SEPARATOR_SYMBOL) {
+ 743              		.loc 1 114 15
+ 744 00da FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 745 00dc 202B     		cmp	r3, #32
+ 746 00de 15D1     		bne	.L55
+ 115:Core/Src/gcodes/reader.c ****                 if(reader->buff_iter > 0) {
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 16
+
+
+ 747              		.loc 1 115 26
+ 748 00e0 FB68     		ldr	r3, [r7, #12]
+ 749 00e2 9B69     		ldr	r3, [r3, #24]
+ 750              		.loc 1 115 19
+ 751 00e4 002B     		cmp	r3, #0
+ 752 00e6 0FD0     		beq	.L56
+ 116:Core/Src/gcodes/reader.c ****                     reader->code_id = atoi(reader->buff);
+ 753              		.loc 1 116 50
+ 754 00e8 FB68     		ldr	r3, [r7, #12]
+ 755 00ea 0133     		adds	r3, r3, #1
+ 756              		.loc 1 116 39
+ 757 00ec 1846     		mov	r0, r3
+ 758 00ee FFF7FEFF 		bl	atoi
+ 759 00f2 0346     		mov	r3, r0
+ 760 00f4 1A46     		mov	r2, r3
+ 761              		.loc 1 116 37
+ 762 00f6 FB68     		ldr	r3, [r7, #12]
+ 763 00f8 1A62     		str	r2, [r3, #32]
+ 117:Core/Src/gcodes/reader.c ****                 } else {
+ 118:Core/Src/gcodes/reader.c ****                     return GC_READER_ERROR_CODE_READ;
+ 119:Core/Src/gcodes/reader.c ****                 }
+ 120:Core/Src/gcodes/reader.c ****                 reader->buff_iter = 0;
+ 764              		.loc 1 120 35
+ 765 00fa FB68     		ldr	r3, [r7, #12]
+ 766 00fc 0022     		movs	r2, #0
+ 767 00fe 9A61     		str	r2, [r3, #24]
+ 121:Core/Src/gcodes/reader.c ****                 reader->state = GC_READER_STATE_READ_PARAM_TYPE;
+ 768              		.loc 1 121 31
+ 769 0100 FB68     		ldr	r3, [r7, #12]
+ 770 0102 0222     		movs	r2, #2
+ 771 0104 1A70     		strb	r2, [r3]
+ 122:Core/Src/gcodes/reader.c ****                 break;
+ 772              		.loc 1 122 17
+ 773 0106 6FE0     		b	.L44
+ 774              	.L56:
+ 118:Core/Src/gcodes/reader.c ****                 }
+ 775              		.loc 1 118 28
+ 776 0108 0323     		movs	r3, #3
+ 777 010a C5E0     		b	.L54
+ 778              	.L55:
+ 123:Core/Src/gcodes/reader.c ****             }
+ 124:Core/Src/gcodes/reader.c ****             if(read_to_buff(input, reader)) {
+ 779              		.loc 1 124 16
+ 780 010c FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 781 010e F968     		ldr	r1, [r7, #12]
+ 782 0110 1846     		mov	r0, r3
+ 783 0112 FFF7FEFF 		bl	read_to_buff
+ 784 0116 0346     		mov	r3, r0
+ 785              		.loc 1 124 15
+ 786 0118 002B     		cmp	r3, #0
+ 787 011a 5ED0     		beq	.L78
+ 125:Core/Src/gcodes/reader.c ****                 return GC_READER_ERROR_BUFF_OVERFLOW;
+ 788              		.loc 1 125 24
+ 789 011c 0123     		movs	r3, #1
+ 790 011e BBE0     		b	.L54
+ 791              	.L49:
+ 126:Core/Src/gcodes/reader.c ****             }
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 17
+
+
+ 127:Core/Src/gcodes/reader.c ****             break;
+ 128:Core/Src/gcodes/reader.c ****         case GC_READER_STATE_READ_PARAM_TYPE:
+ 129:Core/Src/gcodes/reader.c ****             reader->curr_param_type = input;
+ 792              		.loc 1 129 37
+ 793 0120 FB68     		ldr	r3, [r7, #12]
+ 794 0122 FA7A     		ldrb	r2, [r7, #11]
+ 795 0124 1A77     		strb	r2, [r3, #28]
+ 130:Core/Src/gcodes/reader.c ****             reader->state = GC_READER_STATE_READ_PARAM;
+ 796              		.loc 1 130 27
+ 797 0126 FB68     		ldr	r3, [r7, #12]
+ 798 0128 0322     		movs	r2, #3
+ 799 012a 1A70     		strb	r2, [r3]
+ 131:Core/Src/gcodes/reader.c ****             break;
+ 800              		.loc 1 131 13
+ 801 012c 5CE0     		b	.L44
+ 802              	.L48:
+ 132:Core/Src/gcodes/reader.c ****         case GC_READER_STATE_READ_PARAM:
+ 133:Core/Src/gcodes/reader.c ****             if(input == SEPARATOR_SYMBOL) {
+ 803              		.loc 1 133 15
+ 804 012e FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 805 0130 202B     		cmp	r3, #32
+ 806 0132 0CD1     		bne	.L59
+ 134:Core/Src/gcodes/reader.c ****                 if(reader->buff_iter > 0) {
+ 807              		.loc 1 134 26
+ 808 0134 FB68     		ldr	r3, [r7, #12]
+ 809 0136 9B69     		ldr	r3, [r3, #24]
+ 810              		.loc 1 134 19
+ 811 0138 002B     		cmp	r3, #0
+ 812 013a 06D0     		beq	.L60
+ 135:Core/Src/gcodes/reader.c ****                     set_param(reader);
+ 813              		.loc 1 135 21
+ 814 013c F868     		ldr	r0, [r7, #12]
+ 815 013e FFF7FEFF 		bl	set_param
+ 136:Core/Src/gcodes/reader.c ****                 } else {
+ 137:Core/Src/gcodes/reader.c ****                     return GC_READER_ERROR_PARAM_READ;
+ 138:Core/Src/gcodes/reader.c ****                 }
+ 139:Core/Src/gcodes/reader.c ****                 reader->state = GC_READER_STATE_READ_PARAM_TYPE;
+ 816              		.loc 1 139 31
+ 817 0142 FB68     		ldr	r3, [r7, #12]
+ 818 0144 0222     		movs	r2, #2
+ 819 0146 1A70     		strb	r2, [r3]
+ 140:Core/Src/gcodes/reader.c ****                 break;
+ 820              		.loc 1 140 17
+ 821 0148 4EE0     		b	.L44
+ 822              	.L60:
+ 137:Core/Src/gcodes/reader.c ****                 }
+ 823              		.loc 1 137 28
+ 824 014a 0423     		movs	r3, #4
+ 825 014c A4E0     		b	.L54
+ 826              	.L59:
+ 141:Core/Src/gcodes/reader.c ****             }
+ 142:Core/Src/gcodes/reader.c ****             if(read_to_buff(input, reader)) {
+ 827              		.loc 1 142 16
+ 828 014e FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 829 0150 F968     		ldr	r1, [r7, #12]
+ 830 0152 1846     		mov	r0, r3
+ 831 0154 FFF7FEFF 		bl	read_to_buff
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 18
+
+
+ 832 0158 0346     		mov	r3, r0
+ 833              		.loc 1 142 15
+ 834 015a 002B     		cmp	r3, #0
+ 835 015c 3FD0     		beq	.L79
+ 143:Core/Src/gcodes/reader.c ****                 return GC_READER_ERROR_BUFF_OVERFLOW;
+ 836              		.loc 1 143 24
+ 837 015e 0123     		movs	r3, #1
+ 838 0160 9AE0     		b	.L54
+ 839              	.L45:
+ 144:Core/Src/gcodes/reader.c ****             }
+ 145:Core/Src/gcodes/reader.c ****             break;
+ 146:Core/Src/gcodes/reader.c ****         case GC_READER_STATE_READ_LINE_NUMBER:
+ 147:Core/Src/gcodes/reader.c ****             if(input == SEPARATOR_SYMBOL) {
+ 840              		.loc 1 147 15
+ 841 0162 FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 842 0164 202B     		cmp	r3, #32
+ 843 0166 10D1     		bne	.L63
+ 148:Core/Src/gcodes/reader.c ****                 reader->line_number = atoi(reader->buff);
+ 844              		.loc 1 148 50
+ 845 0168 FB68     		ldr	r3, [r7, #12]
+ 846 016a 0133     		adds	r3, r3, #1
+ 847              		.loc 1 148 39
+ 848 016c 1846     		mov	r0, r3
+ 849 016e FFF7FEFF 		bl	atoi
+ 850 0172 0346     		mov	r3, r0
+ 851 0174 1A46     		mov	r2, r3
+ 852              		.loc 1 148 37
+ 853 0176 FB68     		ldr	r3, [r7, #12]
+ 854 0178 C3F89820 		str	r2, [r3, #152]
+ 149:Core/Src/gcodes/reader.c ****                 reader->buff_iter = 0;
+ 855              		.loc 1 149 35
+ 856 017c FB68     		ldr	r3, [r7, #12]
+ 857 017e 0022     		movs	r2, #0
+ 858 0180 9A61     		str	r2, [r3, #24]
+ 150:Core/Src/gcodes/reader.c ****                 reader->state = GC_READER_STATE_READ_TYPE;
+ 859              		.loc 1 150 31
+ 860 0182 FB68     		ldr	r3, [r7, #12]
+ 861 0184 0022     		movs	r2, #0
+ 862 0186 1A70     		strb	r2, [r3]
+ 151:Core/Src/gcodes/reader.c ****                 break;
+ 863              		.loc 1 151 17
+ 864 0188 2EE0     		b	.L44
+ 865              	.L63:
+ 152:Core/Src/gcodes/reader.c ****             }
+ 153:Core/Src/gcodes/reader.c ****             if(read_to_buff(input, reader)) {
+ 866              		.loc 1 153 16
+ 867 018a FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 868 018c F968     		ldr	r1, [r7, #12]
+ 869 018e 1846     		mov	r0, r3
+ 870 0190 FFF7FEFF 		bl	read_to_buff
+ 871 0194 0346     		mov	r3, r0
+ 872              		.loc 1 153 15
+ 873 0196 002B     		cmp	r3, #0
+ 874 0198 23D0     		beq	.L80
+ 154:Core/Src/gcodes/reader.c ****                 return GC_READER_ERROR_BUFF_OVERFLOW;
+ 875              		.loc 1 154 24
+ 876 019a 0123     		movs	r3, #1
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 19
+
+
+ 877 019c 7CE0     		b	.L54
+ 878              	.L47:
+ 155:Core/Src/gcodes/reader.c ****             }
+ 156:Core/Src/gcodes/reader.c ****             break;
+ 157:Core/Src/gcodes/reader.c ****         case GC_READER_STATE_READ_CHECKSUM:
+ 158:Core/Src/gcodes/reader.c ****             if(input == SEPARATOR_SYMBOL) {
+ 879              		.loc 1 158 15
+ 880 019e FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 881 01a0 202B     		cmp	r3, #32
+ 882 01a2 10D1     		bne	.L65
+ 159:Core/Src/gcodes/reader.c ****                 reader->checksum = atoi(reader->buff);
+ 883              		.loc 1 159 47
+ 884 01a4 FB68     		ldr	r3, [r7, #12]
+ 885 01a6 0133     		adds	r3, r3, #1
+ 886              		.loc 1 159 36
+ 887 01a8 1846     		mov	r0, r3
+ 888 01aa FFF7FEFF 		bl	atoi
+ 889 01ae 0346     		mov	r3, r0
+ 890 01b0 1A46     		mov	r2, r3
+ 891              		.loc 1 159 34
+ 892 01b2 FB68     		ldr	r3, [r7, #12]
+ 893 01b4 C3F89C20 		str	r2, [r3, #156]
+ 160:Core/Src/gcodes/reader.c ****                 reader->buff_iter = 0;
+ 894              		.loc 1 160 35
+ 895 01b8 FB68     		ldr	r3, [r7, #12]
+ 896 01ba 0022     		movs	r2, #0
+ 897 01bc 9A61     		str	r2, [r3, #24]
+ 161:Core/Src/gcodes/reader.c ****                 reader->state = GC_READER_STATE_IGNORE_INPUT;
+ 898              		.loc 1 161 31
+ 899 01be FB68     		ldr	r3, [r7, #12]
+ 900 01c0 0622     		movs	r2, #6
+ 901 01c2 1A70     		strb	r2, [r3]
+ 162:Core/Src/gcodes/reader.c ****                 break;
+ 902              		.loc 1 162 17
+ 903 01c4 10E0     		b	.L44
+ 904              	.L65:
+ 163:Core/Src/gcodes/reader.c ****             }
+ 164:Core/Src/gcodes/reader.c ****             if(read_to_buff(input, reader)) {
+ 905              		.loc 1 164 16
+ 906 01c6 FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 907 01c8 F968     		ldr	r1, [r7, #12]
+ 908 01ca 1846     		mov	r0, r3
+ 909 01cc FFF7FEFF 		bl	read_to_buff
+ 910 01d0 0346     		mov	r3, r0
+ 911              		.loc 1 164 15
+ 912 01d2 002B     		cmp	r3, #0
+ 913 01d4 07D0     		beq	.L81
+ 165:Core/Src/gcodes/reader.c ****                 return GC_READER_ERROR_BUFF_OVERFLOW;
+ 914              		.loc 1 165 24
+ 915 01d6 0123     		movs	r3, #1
+ 916 01d8 5EE0     		b	.L54
+ 917              	.L78:
+ 127:Core/Src/gcodes/reader.c ****         case GC_READER_STATE_READ_PARAM_TYPE:
+ 918              		.loc 1 127 13
+ 919 01da 00BF     		nop
+ 920 01dc 04E0     		b	.L44
+ 921              	.L79:
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 20
+
+
+ 145:Core/Src/gcodes/reader.c ****         case GC_READER_STATE_READ_LINE_NUMBER:
+ 922              		.loc 1 145 13
+ 923 01de 00BF     		nop
+ 924 01e0 02E0     		b	.L44
+ 925              	.L80:
+ 156:Core/Src/gcodes/reader.c ****         case GC_READER_STATE_READ_CHECKSUM:
+ 926              		.loc 1 156 13
+ 927 01e2 00BF     		nop
+ 928 01e4 00E0     		b	.L44
+ 929              	.L81:
+ 166:Core/Src/gcodes/reader.c ****             }
+ 167:Core/Src/gcodes/reader.c ****             break;
+ 930              		.loc 1 167 13
+ 931 01e6 00BF     		nop
+ 932              	.L44:
+ 168:Core/Src/gcodes/reader.c ****         }
+ 169:Core/Src/gcodes/reader.c ****     }
+ 170:Core/Src/gcodes/reader.c **** 
+ 171:Core/Src/gcodes/reader.c ****     if((*is_done && reader->buff_iter != 0) || should_read_checksum_next) {
+ 933              		.loc 1 171 9
+ 934 01e8 7B68     		ldr	r3, [r7, #4]
+ 935 01ea 1B68     		ldr	r3, [r3]
+ 936              		.loc 1 171 7
+ 937 01ec 002B     		cmp	r3, #0
+ 938 01ee 03D0     		beq	.L67
+ 939              		.loc 1 171 27 discriminator 1
+ 940 01f0 FB68     		ldr	r3, [r7, #12]
+ 941 01f2 9B69     		ldr	r3, [r3, #24]
+ 942              		.loc 1 171 18 discriminator 1
+ 943 01f4 002B     		cmp	r3, #0
+ 944 01f6 02D1     		bne	.L68
+ 945              	.L67:
+ 946              		.loc 1 171 45 discriminator 3
+ 947 01f8 7B69     		ldr	r3, [r7, #20]
+ 948 01fa 002B     		cmp	r3, #0
+ 949 01fc 4BD0     		beq	.L69
+ 950              	.L68:
+ 172:Core/Src/gcodes/reader.c ****         switch(reader->state) {
+ 951              		.loc 1 172 22
+ 952 01fe FB68     		ldr	r3, [r7, #12]
+ 953 0200 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 954              		.loc 1 172 9
+ 955 0202 013B     		subs	r3, r3, #1
+ 956 0204 042B     		cmp	r3, #4
+ 957 0206 3ED8     		bhi	.L70
+ 958 0208 01A2     		adr	r2, .L72
+ 959 020a 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 960 020e 00BF     		.p2align 2
+ 961              	.L72:
+ 962 0210 25020000 		.word	.L75+1
+ 963 0214 87020000 		.word	.L70+1
+ 964 0218 3F020000 		.word	.L74+1
+ 965 021c 63020000 		.word	.L73+1
+ 966 0220 47020000 		.word	.L71+1
+ 967              		.p2align 1
+ 968              	.L75:
+ 173:Core/Src/gcodes/reader.c ****         case GC_READER_STATE_READ_CODE:
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 21
+
+
+ 174:Core/Src/gcodes/reader.c ****             reader->code_id = atoi(reader->buff);
+ 969              		.loc 1 174 42
+ 970 0224 FB68     		ldr	r3, [r7, #12]
+ 971 0226 0133     		adds	r3, r3, #1
+ 972              		.loc 1 174 31
+ 973 0228 1846     		mov	r0, r3
+ 974 022a FFF7FEFF 		bl	atoi
+ 975 022e 0346     		mov	r3, r0
+ 976 0230 1A46     		mov	r2, r3
+ 977              		.loc 1 174 29
+ 978 0232 FB68     		ldr	r3, [r7, #12]
+ 979 0234 1A62     		str	r2, [r3, #32]
+ 175:Core/Src/gcodes/reader.c ****             reader->buff_iter = 0;
+ 980              		.loc 1 175 31
+ 981 0236 FB68     		ldr	r3, [r7, #12]
+ 982 0238 0022     		movs	r2, #0
+ 983 023a 9A61     		str	r2, [r3, #24]
+ 176:Core/Src/gcodes/reader.c ****             break;
+ 984              		.loc 1 176 13
+ 985 023c 23E0     		b	.L70
+ 986              	.L74:
+ 177:Core/Src/gcodes/reader.c ****         case GC_READER_STATE_READ_PARAM:
+ 178:Core/Src/gcodes/reader.c ****             set_param(reader);
+ 987              		.loc 1 178 13
+ 988 023e F868     		ldr	r0, [r7, #12]
+ 989 0240 FFF7FEFF 		bl	set_param
+ 179:Core/Src/gcodes/reader.c ****             break;
+ 990              		.loc 1 179 13
+ 991 0244 1FE0     		b	.L70
+ 992              	.L71:
+ 180:Core/Src/gcodes/reader.c ****         case GC_READER_STATE_READ_LINE_NUMBER:
+ 181:Core/Src/gcodes/reader.c ****             reader->line_number = atoi(reader->buff);
+ 993              		.loc 1 181 46
+ 994 0246 FB68     		ldr	r3, [r7, #12]
+ 995 0248 0133     		adds	r3, r3, #1
+ 996              		.loc 1 181 35
+ 997 024a 1846     		mov	r0, r3
+ 998 024c FFF7FEFF 		bl	atoi
+ 999 0250 0346     		mov	r3, r0
+ 1000 0252 1A46     		mov	r2, r3
+ 1001              		.loc 1 181 33
+ 1002 0254 FB68     		ldr	r3, [r7, #12]
+ 1003 0256 C3F89820 		str	r2, [r3, #152]
+ 182:Core/Src/gcodes/reader.c ****             reader->buff_iter = 0;
+ 1004              		.loc 1 182 31
+ 1005 025a FB68     		ldr	r3, [r7, #12]
+ 1006 025c 0022     		movs	r2, #0
+ 1007 025e 9A61     		str	r2, [r3, #24]
+ 183:Core/Src/gcodes/reader.c ****             break;
+ 1008              		.loc 1 183 13
+ 1009 0260 11E0     		b	.L70
+ 1010              	.L73:
+ 184:Core/Src/gcodes/reader.c ****         case GC_READER_STATE_READ_CHECKSUM:
+ 185:Core/Src/gcodes/reader.c ****             reader->checksum = atoi(reader->buff);
+ 1011              		.loc 1 185 43
+ 1012 0262 FB68     		ldr	r3, [r7, #12]
+ 1013 0264 0133     		adds	r3, r3, #1
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 22
+
+
+ 1014              		.loc 1 185 32
+ 1015 0266 1846     		mov	r0, r3
+ 1016 0268 FFF7FEFF 		bl	atoi
+ 1017 026c 0346     		mov	r3, r0
+ 1018 026e 1A46     		mov	r2, r3
+ 1019              		.loc 1 185 30
+ 1020 0270 FB68     		ldr	r3, [r7, #12]
+ 1021 0272 C3F89C20 		str	r2, [r3, #156]
+ 186:Core/Src/gcodes/reader.c ****             reader->buff_iter = 0;
+ 1022              		.loc 1 186 31
+ 1023 0276 FB68     		ldr	r3, [r7, #12]
+ 1024 0278 0022     		movs	r2, #0
+ 1025 027a 9A61     		str	r2, [r3, #24]
+ 187:Core/Src/gcodes/reader.c ****             reader->state = GC_READER_STATE_IGNORE_INPUT;
+ 1026              		.loc 1 187 27
+ 1027 027c FB68     		ldr	r3, [r7, #12]
+ 1028 027e 0622     		movs	r2, #6
+ 1029 0280 1A70     		strb	r2, [r3]
+ 188:Core/Src/gcodes/reader.c ****             
+ 189:Core/Src/gcodes/reader.c ****             return GC_READER_ERROR_NOT_OCCURED;
+ 1030              		.loc 1 189 20
+ 1031 0282 0023     		movs	r3, #0
+ 1032 0284 08E0     		b	.L54
+ 1033              	.L70:
+ 190:Core/Src/gcodes/reader.c ****             break;
+ 191:Core/Src/gcodes/reader.c ****         }
+ 192:Core/Src/gcodes/reader.c ****         reader->state = !should_read_checksum_next ? GC_READER_STATE_READ_TYPE : GC_READER_STATE_RE
+ 1034              		.loc 1 192 23
+ 1035 0286 7B69     		ldr	r3, [r7, #20]
+ 1036 0288 002B     		cmp	r3, #0
+ 1037 028a 01D1     		bne	.L76
+ 1038              		.loc 1 192 23 is_stmt 0 discriminator 1
+ 1039 028c 0022     		movs	r2, #0
+ 1040 028e 00E0     		b	.L77
+ 1041              	.L76:
+ 1042              		.loc 1 192 23 discriminator 2
+ 1043 0290 0422     		movs	r2, #4
+ 1044              	.L77:
+ 1045              		.loc 1 192 23 discriminator 4
+ 1046 0292 FB68     		ldr	r3, [r7, #12]
+ 1047 0294 1A70     		strb	r2, [r3]
+ 1048              	.L69:
+ 193:Core/Src/gcodes/reader.c ****     }
+ 194:Core/Src/gcodes/reader.c **** 
+ 195:Core/Src/gcodes/reader.c ****     return GC_READER_ERROR_NOT_OCCURED;
+ 1049              		.loc 1 195 12 is_stmt 1
+ 1050 0296 0023     		movs	r3, #0
+ 1051              	.L54:
+ 196:Core/Src/gcodes/reader.c **** }...
+ 1052              		.loc 1 196 1
+ 1053 0298 1846     		mov	r0, r3
+ 1054 029a 1837     		adds	r7, r7, #24
+ 1055              		.cfi_def_cfa_offset 8
+ 1056 029c BD46     		mov	sp, r7
+ 1057              		.cfi_def_cfa_register 13
+ 1058              		@ sp needed
+ 1059 029e 80BD     		pop	{r7, pc}
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 23
+
+
+ 1060              		.cfi_endproc
+ 1061              	.LFE5:
+ 1063              		.text
+ 1064              	.Letext0:
+ 1065              		.file 2 "c:\\users\\isan\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpac
+ 1066              		.file 3 "c:\\users\\isan\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpac
+ 1067              		.file 4 "Core/Inc/gcodes/types.h"
+ 1068              		.file 5 "c:\\users\\isan\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpac
+ARM GAS  C:\Users\isan\AppData\Local\Temp\cc78tj14.s 			page 24
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 reader.c
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:20     .text.is_end_char:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:26     .text.is_end_char:0000000000000000 is_end_char
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:78     .text.is_type_char:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:84     .text.is_type_char:0000000000000000 is_type_char
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:131    .text.read_to_buff:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:137    .text.read_to_buff:0000000000000000 read_to_buff
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:202    .text.set_param:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:208    .text.set_param:0000000000000000 set_param
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:234    .text.set_param:000000000000001c $d
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:257    .text.set_param:0000000000000078 $t
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:499    .text.is_checksum_ok:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:505    .text.is_checksum_ok:0000000000000000 is_checksum_ok
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:593    .text.read_code:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:599    .text.read_code:0000000000000000 read_code
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:701    .text.read_code:0000000000000094 $d
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:707    .text.read_code:00000000000000ac $t
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:962    .text.read_code:0000000000000210 $d
+C:\Users\isan\AppData\Local\Temp\cc78tj14.s:967    .text.read_code:0000000000000224 $t
+
+UNDEFINED SYMBOLS
+atoi
+atof
