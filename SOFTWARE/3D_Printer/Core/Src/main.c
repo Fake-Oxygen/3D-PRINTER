@@ -56,6 +56,7 @@ uint16_t step = 0;
 uint32_t last_time = 0;
 uint32_t value[ADC_CHANNELS];
 gc_reader reader;
+gc_reader current_cmd;
 int state = 0;
 
 uint8_t rx_buff[GCODE_BUFF_SIZE];
@@ -63,7 +64,7 @@ uint8_t gcode_buff[GCODE_BUFF_SIZE];
 size_t read_count = 0;
 int i = 0;
 int j = 0;
-int should_print = 0;
+int should_read_cmd = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -87,22 +88,11 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {
   if (huart->Instance == LPUART1)
   {
-    // if(i + Size > GCODE_BUFF_SIZE) {
-    //   int a = GCODE_BUFF_SIZE - i;
-    //   memcpy(gcode_buff + i, rx_buff, a);
-
-    //   memcpy(gcode_buff, rx_buff + a, Size - a);
-    //   i = Size - a;
-    // } else {
-    //   memcpy(gcode_buff + i, rx_buff, Size);
-    //   i += Size;
-    // }
-    // should_print = 1;
     for(int c = 0; c < Size && read_count < GCODE_BUFF_SIZE; i = (i + 1) % GCODE_BUFF_SIZE, c++) {
       gcode_buff[i] = rx_buff[c];
       read_count++;
     }
-    should_print = 1;
+    should_read_cmd = 1;
   }
   HAL_UARTEx_ReceiveToIdle_DMA(&hlpuart1, rx_buff, GCODE_BUFF_SIZE);
   __HAL_DMA_DISABLE_IT(&hdma_lpuart1_rx, DMA_IT_HT);
@@ -120,6 +110,26 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 //   sprintf(msg_buffer, "temp: %f, value: %d\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), (unsigned int)(value[ADC_HOT_END]));
 //   HAL_UART_Transmit(&hlpuart1, (uint16_t *)msg_buffer, strlen(msg_buffer), HAL_MAX_DELAY);
 // }
+
+void transmit_resp_code(uint8_t *code) {
+  transmit_resp_code_with_comment(code, NULL);
+}
+
+void transmit_resp_code_with_comment(uint8_t *code, uint8_t *comment) {
+  if(comment != NULL) {
+    int len = strlen(code) + strlen(comment) + 2; // 2 = newline + terminator
+    uint8_t *to_send = malloc(len);
+    sprintf(to_send, "%s%s\n", code, comment);
+    HAL_UART_Transmit(&hlpuart1, to_send, len - 1, 100); // bez znaku terminatora
+  } else {
+    HAL_UART_Transmit(&hlpuart1, code, strlen(code), 100);
+  }
+}
+
+void emergency_stop() {
+  memset(&current_cmd, 0, sizeof(gc_reader));
+  state = CONTROLLER_STATE_IDLE;
+}
 /* USER CODE END 0 */
 
 /**
@@ -173,7 +183,8 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1) {
-    if(should_print) {
+    // czytanie instrukcji z usb
+    if(should_read_cmd) {
       int done_reading_gcode = 0;
       int error_code = GC_READER_ERROR_NOT_OCCURED, new_error;
       while(read_count > 0) {
@@ -181,7 +192,7 @@ int main(void)
           new_error = read_code(&reader, gcode_buff[j], &done_reading_gcode);
 
           if(new_error != GC_READER_ERROR_NOT_OCCURED) {
-            HAL_UART_Transmit(&hlpuart1, "Error occurred!\n", 16, 100);
+            transmit_resp_code(RESP_CODE_ERR);
             error_code = new_error;
           }
         }
@@ -189,13 +200,29 @@ int main(void)
         read_count--;
       }
       if(done_reading_gcode && error_code == GC_READER_ERROR_NOT_OCCURED) {
-        uint8_t result[100];
-        memset(result, 0, 100);
-        sprintf(result, "%c %d\n", reader.code_type, reader.code_id);
-        HAL_UART_Transmit(&hlpuart1, result, strlen(result), 100);
+        transmit_resp_code(RESP_CODE_OK);
+        if(state == CONTROLLER_STATE_IDLE) {
+          current_cmd = reader;
+          state = CONTROLLER_STATE_BUSY;
+          transmit_resp_code(RESP_CODE_READY);
+        } else if(reader.code_type == MCODE_SYMBOL) {
+          // sprawdzenie specjalnych instrukcji
+          switch(reader.code_id) {
+          case MCODE_EMERGENCY_STOP:
+            emergency_stop();
+            transmit_resp_code(RESP_CODE_OK);
+            transmit_resp_code(RESP_CODE_READY);
+            break;
+          default:
+            transmit_resp_code(RESP_CODE_BUSY);
+            break;
+          }
+        } else {
+          transmit_resp_code(RESP_CODE_BUSY);
+        }
         memset(&reader, 0, sizeof(gc_reader));
       }
-      should_print = 0;
+      should_read_cmd = 0;
     }
     // if (rx_buff[0] != '\0') {
     //   int error_code = read_code((char*)rx_buff, &reader);

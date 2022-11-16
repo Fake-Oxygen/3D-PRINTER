@@ -48,6 +48,18 @@ extern "C" {
 /* USER CODE BEGIN EC */
 #define GCODE_BUFF_SIZE 64
 
+#define RESP_CODE_OK "okk"
+#define RESP_CODE_ERR "err"
+#define RESP_CODE_CER "cer"
+#define RESP_CODE_BUSY "bsy"
+#define RESP_CODE_READY "rdy"
+
+#define CONTROLLER_STATE_IDLE 0
+#define CONTROLLER_STATE_BUSY 1
+#define CONTROLLER_STATE_ERROR 2
+
+#define MCODE_EMERGENCY_STOP 112
+
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/
