@@ -61,10 +61,7 @@ int state = 0;
 
 uint8_t rx_buff[GCODE_BUFF_SIZE];
 uint8_t gcode_buff[GCODE_BUFF_SIZE];
-size_t read_count = 0;
-int i = 0;
-int j = 0;
-int should_read_cmd = 0;
+int is_done = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -84,16 +81,37 @@ static void MX_TIM5_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+HAL_StatusTypeDef transmit_resp_code(uint8_t *code, uint8_t *comment);
+
 void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {
   if (huart->Instance == LPUART1)
   {
-    for(int c = 0; c < Size && read_count < GCODE_BUFF_SIZE; i = (i + 1) % GCODE_BUFF_SIZE, c++) {
-      gcode_buff[i] = rx_buff[c];
-      read_count++;
+    memcpy(gcode_buff, rx_buff, Size);
+    for(int i = 0; i < Size; i++) {
+      int error_code = read_code(&reader, gcode_buff[i], &is_done);
+      if(error_code != GC_READER_ERROR_NOT_OCCURED) {
+        uint8_t error_code_str[10];
+        transmit_resp_code(RESP_CODE_ERR, itoa(error_code, error_code_str, 10));
+        break;
+      }
+      if(is_done) {
+        transmit_resp_code(RESP_CODE_OK, NULL);
+        if(reader.code_type == MCODE_SYMBOL && reader.code_id == MCODE_EMERGENCY_STOP) {
+          emergency_stop();
+          transmit_resp_code(RESP_CODE_READY, NULL);
+        } else if(state == CONTROLLER_STATE_IDLE) {
+          current_cmd = reader;
+          state = CONTROLLER_STATE_BUSY;
+        } else if(state == CONTROLLER_STATE_BUSY) {
+          transmit_resp_code(RESP_CODE_BUSY, NULL);
+        }
+        memset(&reader, 0, sizeof(gc_reader));
+        is_done = 0;
+      }
     }
-    should_read_cmd = 1;
   }
+
   HAL_UARTEx_ReceiveToIdle_DMA(&hlpuart1, rx_buff, GCODE_BUFF_SIZE);
   __HAL_DMA_DISABLE_IT(&hdma_lpuart1_rx, DMA_IT_HT);
 }
@@ -111,18 +129,21 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 //   HAL_UART_Transmit(&hlpuart1, (uint16_t *)msg_buffer, strlen(msg_buffer), HAL_MAX_DELAY);
 // }
 
-void transmit_resp_code(uint8_t *code) {
-  transmit_resp_code_with_comment(code, NULL);
+HAL_StatusTypeDef transmit_data(uint8_t *data, size_t len) {
+  return HAL_UART_Transmit(&hlpuart1, data, len, 100);
 }
 
-void transmit_resp_code_with_comment(uint8_t *code, uint8_t *comment) {
+HAL_StatusTypeDef transmit_resp_code(uint8_t *code, uint8_t *comment) {
+  uint8_t *to_send;
   if(comment != NULL) {
     int len = strlen(code) + strlen(comment) + 2; // 2 = newline + terminator
-    uint8_t *to_send = malloc(len);
-    sprintf(to_send, "%s%s\n", code, comment);
-    HAL_UART_Transmit(&hlpuart1, to_send, len - 1, 100); // bez znaku terminatora
+    to_send = malloc(len);
+    sprintf(to_send, "%s %s\n", code, comment);
+    return transmit_data(to_send, len); // bez znaku terminatora
   } else {
-    HAL_UART_Transmit(&hlpuart1, code, strlen(code), 100);
+    to_send = malloc(strlen(code) + 2);
+    sprintf(to_send, "%s\n", code);
+    return transmit_data(to_send, strlen(to_send));
   }
 }
 
@@ -183,46 +204,12 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1) {
-    // czytanie instrukcji z usb
-    if(should_read_cmd) {
-      int done_reading_gcode = 0;
-      int error_code = GC_READER_ERROR_NOT_OCCURED, new_error;
-      while(read_count > 0) {
-        if(error_code == GC_READER_ERROR_NOT_OCCURED) {
-          new_error = read_code(&reader, gcode_buff[j], &done_reading_gcode);
-
-          if(new_error != GC_READER_ERROR_NOT_OCCURED) {
-            transmit_resp_code(RESP_CODE_ERR);
-            error_code = new_error;
-          }
-        }
-        j = (j + 1) % GCODE_BUFF_SIZE;
-        read_count--;
-      }
-      if(done_reading_gcode && error_code == GC_READER_ERROR_NOT_OCCURED) {
-        transmit_resp_code(RESP_CODE_OK);
-        if(state == CONTROLLER_STATE_IDLE) {
-          current_cmd = reader;
-          state = CONTROLLER_STATE_BUSY;
-          transmit_resp_code(RESP_CODE_READY);
-        } else if(reader.code_type == MCODE_SYMBOL) {
-          // sprawdzenie specjalnych instrukcji
-          switch(reader.code_id) {
-          case MCODE_EMERGENCY_STOP:
-            emergency_stop();
-            transmit_resp_code(RESP_CODE_OK);
-            transmit_resp_code(RESP_CODE_READY);
-            break;
-          default:
-            transmit_resp_code(RESP_CODE_BUSY);
-            break;
-          }
-        } else {
-          transmit_resp_code(RESP_CODE_BUSY);
-        }
-        memset(&reader, 0, sizeof(gc_reader));
-      }
-      should_read_cmd = 0;
+    // wykonywanie instrukcji
+    if(state == CONTROLLER_STATE_BUSY) {
+      uint8_t result[20];
+      sprintf(result, "%c %d X=%f Y=%f", current_cmd.code_type, current_cmd.code_id, current_cmd.X, current_cmd.Y);
+      state = CONTROLLER_STATE_IDLE;
+      transmit_resp_code(RESP_CODE_READY, result);
     }
     // if (rx_buff[0] != '\0') {
     //   int error_code = read_code((char*)rx_buff, &reader);

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
   28:Core/Src/stm32l4xx_hal_msp.c **** extern DMA_HandleTypeDef hdma_lpuart1_rx;
   29:Core/Src/stm32l4xx_hal_msp.c **** 
   30:Core/Src/stm32l4xx_hal_msp.c **** /* Private typedef -----------------------------------------------------------*/
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 2
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 2
 
 
   31:Core/Src/stm32l4xx_hal_msp.c **** /* USER CODE BEGIN TD */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
   72:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END MspInit 0 */
   73:Core/Src/stm32l4xx_hal_msp.c **** 
   74:Core/Src/stm32l4xx_hal_msp.c ****   __HAL_RCC_SYSCFG_CLK_ENABLE();
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 3
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 3
 
 
   42              		.loc 1 74 3
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
   89              		.thumb
   90              		.thumb_func
   92              	HAL_ADC_MspInit:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 4
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 4
 
 
   93              	.LFB326:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  102:Core/Src/stm32l4xx_hal_msp.c ****     PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
  128              		.loc 1 102 40
  129 0030 4FF48043 		mov	r3, #16384
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 5
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 5
 
 
  130 0034 7B61     		str	r3, [r7, #20]
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  169 0072 DB6C     		ldr	r3, [r3, #76]
  170 0074 2A4A     		ldr	r2, .L9+4
  171 0076 43F40053 		orr	r3, r3, #8192
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 6
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 6
 
 
  172 007a D364     		str	r3, [r2, #76]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  211 00c4 184B     		ldr	r3, .L9+12
  212 00c6 0522     		movs	r2, #5
  213 00c8 5A60     		str	r2, [r3, #4]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 7
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 7
 
 
  133:Core/Src/stm32l4xx_hal_msp.c ****     hdma_adc1.Init.Direction = DMA_PERIPH_TO_MEMORY;
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  255 010c 1A65     		str	r2, [r3, #80]
  256 010e 064A     		ldr	r2, .L9+12
  257 0110 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 8
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 8
 
 
  258 0112 9362     		str	r3, [r2, #40]
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  298 0004 00AF     		add	r7, sp, #0
  299              		.cfi_def_cfa_register 7
  300 0006 7860     		str	r0, [r7, #4]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 9
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 9
 
 
  162:Core/Src/stm32l4xx_hal_msp.c ****   if(hadc->Instance==ADC1)
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  333              		.align	2
  334              	.L14:
  335 0038 00000450 		.word	1342439424
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 10
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 10
 
 
  336 003c 00100240 		.word	1073876992
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  380              		.loc 1 195 5
  381 002a 5C4A     		ldr	r2, .L23
  382 002c 9342     		cmp	r3, r2
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 11
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 11
 
 
  383 002e 6FD1     		bne	.L17
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  419 006a 43F04003 		orr	r3, r3, #64
  420 006e D364     		str	r3, [r2, #76]
  421 0070 4B4B     		ldr	r3, .L23+4
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 12
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 12
 
 
  422 0072 DB6C     		ldr	r3, [r3, #76]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  459 00ba 0022     		movs	r2, #0
  460 00bc 9A60     		str	r2, [r3, #8]
  231:Core/Src/stm32l4xx_hal_msp.c ****     hdma_lpuart1_rx.Init.PeriphInc = DMA_PINC_DISABLE;
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 13
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 13
 
 
  461              		.loc 1 231 36
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  245:Core/Src/stm32l4xx_hal_msp.c ****     HAL_NVIC_SetPriority(LPUART1_IRQn, 0, 0);
  502              		.loc 1 245 5
  503 00fe 0022     		movs	r2, #0
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 14
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 14
 
 
  504 0100 0021     		movs	r1, #0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  251:Core/Src/stm32l4xx_hal_msp.c ****   {
  516              		.loc 1 251 10
  517 0114 264A     		ldr	r2, .L23+20
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 15
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 15
 
 
  518 0116 9342     		cmp	r3, r2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  564 0166 0323     		movs	r3, #3
  565 0168 C7F8B430 		str	r3, [r7, #180]
  275:Core/Src/stm32l4xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 16
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 16
 
 
  566              		.loc 1 275 26
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  292:Core/Src/stm32l4xx_hal_msp.c **** * @retval None
  293:Core/Src/stm32l4xx_hal_msp.c **** */
  294:Core/Src/stm32l4xx_hal_msp.c **** void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 17
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 17
 
 
  295:Core/Src/stm32l4xx_hal_msp.c **** {
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  314:Core/Src/stm32l4xx_hal_msp.c ****     HAL_NVIC_DisableIRQ(LPUART1_IRQn);
  648              		.loc 1 314 5
  649 0032 4620     		movs	r0, #70
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 18
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 18
 
 
  650 0034 FFF7FEFF 		bl	HAL_NVIC_DisableIRQ
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  676 005e BD46     		mov	sp, r7
  677              		.cfi_def_cfa_register 13
  678              		@ sp needed
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 19
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 19
 
 
  679 0060 80BD     		pop	{r7, pc}
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  354:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_TIM3_CLK_ENABLE();
  720              		.loc 1 354 5
  721 0012 1C4B     		ldr	r3, .L36+4
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 20
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 20
 
 
  722 0014 9B6D     		ldr	r3, [r3, #88]
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  745 0038 9B6D     		ldr	r3, [r3, #88]
  746 003a 124A     		ldr	r2, .L36+4
  747 003c 43F00403 		orr	r3, r3, #4
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 21
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 21
 
 
  748 0040 9365     		str	r3, [r2, #88]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  800              		.section	.text.HAL_TIM_MspPostInit,"ax",%progbits
  801              		.align	1
  802              		.global	HAL_TIM_MspPostInit
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 22
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 22
 
 
  803              		.syntax unified
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  847 0036 BB60     		str	r3, [r7, #8]
  848 0038 BB68     		ldr	r3, [r7, #8]
  849              	.LBE13:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 23
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 23
 
 
  394:Core/Src/stm32l4xx_hal_msp.c ****     /**TIM3 GPIO Configuration
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  886              	.LFE331:
  888              		.section	.text.HAL_TIM_Base_MspDeInit,"ax",%progbits
  889              		.align	1
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 24
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 24
 
 
  890              		.global	HAL_TIM_Base_MspDeInit
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  434:Core/Src/stm32l4xx_hal_msp.c **** 
  435:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END TIM4_MspDeInit 0 */
  436:Core/Src/stm32l4xx_hal_msp.c ****     /* Peripheral clock disable */
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 25
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 25
 
 
  437:Core/Src/stm32l4xx_hal_msp.c ****     __HAL_RCC_TIM4_CLK_DISABLE();
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  953 0048 23F00803 		bic	r3, r3, #8
  954 004c 9365     		str	r3, [r2, #88]
  955              	.L47:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 26
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 26
 
 
  956              		.loc 1 454 1
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  1002 000e 1A60     		str	r2, [r3]
  1003 0010 5A60     		str	r2, [r3, #4]
  1004 0012 9A60     		str	r2, [r3, #8]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 27
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 27
 
 
  1005 0014 DA60     		str	r2, [r3, #12]
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  1042 005a D364     		str	r3, [r2, #76]
  1043 005c 2D4B     		ldr	r3, .L55
  1044 005e DB6C     		ldr	r3, [r3, #76]
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 28
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 28
 
 
  1045 0060 03F00103 		and	r3, r3, #1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  1081 00b0 4FF09040 		mov	r0, #1207959552
  1082 00b4 FFF7FEFF 		bl	HAL_GPIO_Init
  1083              	.LBB15:
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 29
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 29
 
 
  500:Core/Src/stm32l4xx_hal_msp.c **** 
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  514:Core/Src/stm32l4xx_hal_msp.c ****     }
  515:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE BEGIN USB_OTG_FS_MspInit 1 */
  516:Core/Src/stm32l4xx_hal_msp.c **** 
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 30
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 30
 
 
  517:Core/Src/stm32l4xx_hal_msp.c ****   /* USER CODE END USB_OTG_FS_MspInit 1 */
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  1166 0006 7860     		str	r0, [r7, #4]
  530:Core/Src/stm32l4xx_hal_msp.c ****   if(hpcd->Instance==USB_OTG_FS)
  1167              		.loc 1 530 10
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 31
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 31
 
 
  1168 0008 7B68     		ldr	r3, [r7, #4]
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  1201 004c FB68     		ldr	r3, [r7, #12]
  1202              	.LBE17:
  552:Core/Src/stm32l4xx_hal_msp.c ****       HAL_PWREx_DisableVddUSB();
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 32
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 32
 
 
  1203              		.loc 1 552 7
@@ -1918,46 +1918,46 @@ ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 1
  1245              		.file 13 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h"
  1246              		.file 14 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
  1247              		.file 15 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 33
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 33
 
 
  1248              		.file 16 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h"
  1249              		.file 17 "Core/Inc/main.h"
-ARM GAS  C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s 			page 34
+ARM GAS  C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s 			page 34
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_msp.c
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:20     .text.HAL_MspInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:26     .text.HAL_MspInit:0000000000000000 HAL_MspInit
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:81     .text.HAL_MspInit:0000000000000044 $d
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:86     .text.HAL_ADC_MspInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:92     .text.HAL_ADC_MspInit:0000000000000000 HAL_ADC_MspInit
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:271    .text.HAL_ADC_MspInit:000000000000011c $d
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:280    .text.HAL_ADC_MspDeInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:286    .text.HAL_ADC_MspDeInit:0000000000000000 HAL_ADC_MspDeInit
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:335    .text.HAL_ADC_MspDeInit:0000000000000038 $d
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:342    .text.HAL_UART_MspInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:348    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:595    .text.HAL_UART_MspInit:000000000000019c $d
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:605    .text.HAL_UART_MspDeInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:611    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:683    .text.HAL_UART_MspDeInit:0000000000000064 $d
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:691    .text.HAL_TIM_Base_MspInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:697    .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:793    .text.HAL_TIM_Base_MspInit:0000000000000080 $d
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:801    .text.HAL_TIM_MspPostInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:807    .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:882    .text.HAL_TIM_MspPostInit:0000000000000064 $d
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:889    .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:895    .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:970    .text.HAL_TIM_Base_MspDeInit:000000000000005c $d
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:978    .text.HAL_PCD_MspInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:984    .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:1141   .text.HAL_PCD_MspInit:0000000000000114 $d
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:1146   .text.HAL_PCD_MspDeInit:0000000000000000 $t
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:1152   .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
-C:\Users\isan\AppData\Local\Temp\ccz3MYKn.s:1228   .text.HAL_PCD_MspDeInit:000000000000006c $d
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:20     .text.HAL_MspInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:26     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:81     .text.HAL_MspInit:0000000000000044 $d
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:86     .text.HAL_ADC_MspInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:92     .text.HAL_ADC_MspInit:0000000000000000 HAL_ADC_MspInit
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:271    .text.HAL_ADC_MspInit:000000000000011c $d
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:280    .text.HAL_ADC_MspDeInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:286    .text.HAL_ADC_MspDeInit:0000000000000000 HAL_ADC_MspDeInit
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:335    .text.HAL_ADC_MspDeInit:0000000000000038 $d
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:342    .text.HAL_UART_MspInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:348    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:595    .text.HAL_UART_MspInit:000000000000019c $d
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:605    .text.HAL_UART_MspDeInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:611    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:683    .text.HAL_UART_MspDeInit:0000000000000064 $d
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:691    .text.HAL_TIM_Base_MspInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:697    .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:793    .text.HAL_TIM_Base_MspInit:0000000000000080 $d
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:801    .text.HAL_TIM_MspPostInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:807    .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:882    .text.HAL_TIM_MspPostInit:0000000000000064 $d
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:889    .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:895    .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:970    .text.HAL_TIM_Base_MspDeInit:000000000000005c $d
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:978    .text.HAL_PCD_MspInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:984    .text.HAL_PCD_MspInit:0000000000000000 HAL_PCD_MspInit
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:1141   .text.HAL_PCD_MspInit:0000000000000114 $d
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:1146   .text.HAL_PCD_MspDeInit:0000000000000000 $t
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:1152   .text.HAL_PCD_MspDeInit:0000000000000000 HAL_PCD_MspDeInit
+C:\Users\isan\AppData\Local\Temp\ccR2j8VU.s:1228   .text.HAL_PCD_MspDeInit:000000000000006c $d
 
 UNDEFINED SYMBOLS
 memset
