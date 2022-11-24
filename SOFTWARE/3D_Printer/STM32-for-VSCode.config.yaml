@@ -83,6 +83,8 @@ includeDirectories:
   - Src/**
   - Core/Src/**
   - Core/Lib/**
+  - Drivers/VL53L0X/core/inc
+  - Drivers/VL53L0X/platform/inc
 
 
 # Files that should be included in the compilation.
@@ -121,6 +123,8 @@ sourceFiles:
   - Src/**
   - Core/Src/**
   - Core/Lib/**
+  - Drivers/VL53L0X/core/src
+  - Drivers/VL53L0X/platform/src
 
 
 # When no makefile is present it will show a warning pop-up.

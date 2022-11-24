@@ -152,7 +152,11 @@ C_INCLUDES =  \
 -IDrivers/CMSIS/Device/ST/STM32L4xx/Include \
 -IDrivers/CMSIS/Include \
 -IDrivers/STM32L4xx_HAL_Driver/Inc \
--IDrivers/STM32L4xx_HAL_Driver/Inc/Legacy
+-IDrivers/STM32L4xx_HAL_Driver/Inc/Legacy \
+-IDrivers/VL53L0X/core/inc \
+-IDrivers/VL53L0X/platform/inc \
+-IDrivers/VL53LL0X/core/inc \
+-IDrivers/VL53LL0X/platform/inc
 
 
 

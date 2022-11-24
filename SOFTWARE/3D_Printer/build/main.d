@@ -41,7 +41,15 @@ build/main.o: Core/Src/main.c Core/Inc/main.h \
  Core/Inc/Config.h Core/Inc/Parser.h Core/Inc/main.h Core/Inc/GCodes.h \
  Core/Inc/Functions.h Core/Inc/Functions.h \
  Core/Inc/ILI9341_STM32_Driver.h Core/Inc/ILI9341_GFX.h \
- Core/Inc/5x5_font.h
+ Core/Inc/5x5_font.h Drivers/VL53L0X/core/inc/vl53l0x_api.h \
+ Drivers/VL53L0X/core/inc/vl53l0x_api_strings.h \
+ Drivers/VL53L0X/core/inc/vl53l0x_def.h \
+ Drivers/VL53L0X/core/inc/vl53l0x_device.h \
+ Drivers/VL53L0X/platform/inc/vl53l0x_types.h \
+ Drivers/VL53L0X/platform/inc/vl53l0x_platform.h \
+ Drivers/VL53L0X/core/inc/vl53l0x_def.h \
+ Drivers/VL53L0X/platform/inc/vl53l0x_platform_log.h \
+ Drivers/VL53L0X/platform/inc/vl53l0x_i2c_platform.h
 Core/Inc/main.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 Core/Inc/stm32l4xx_hal_conf.h:
@@ -93,3 +101,12 @@ Core/Inc/Functions.h:
 Core/Inc/ILI9341_STM32_Driver.h:
 Core/Inc/ILI9341_GFX.h:
 Core/Inc/5x5_font.h:
+Drivers/VL53L0X/core/inc/vl53l0x_api.h:
+Drivers/VL53L0X/core/inc/vl53l0x_api_strings.h:
+Drivers/VL53L0X/core/inc/vl53l0x_def.h:
+Drivers/VL53L0X/core/inc/vl53l0x_device.h:
+Drivers/VL53L0X/platform/inc/vl53l0x_types.h:
+Drivers/VL53L0X/platform/inc/vl53l0x_platform.h:
+Drivers/VL53L0X/core/inc/vl53l0x_def.h:
+Drivers/VL53L0X/platform/inc/vl53l0x_platform_log.h:
+Drivers/VL53L0X/platform/inc/vl53l0x_i2c_platform.h:
