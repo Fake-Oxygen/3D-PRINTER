@@ -1,5 +1,13 @@
-build/stm32l4xx_hal_rng_ex.o: \
- Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng_ex.c \
+build/vl53l0x_api_calibration.o: \
+ Drivers/VL53L0X/core/src/vl53l0x_api_calibration.c \
+ Drivers/VL53L0X/core/inc/vl53l0x_api.h \
+ Drivers/VL53L0X/core/inc/vl53l0x_api_strings.h \
+ Drivers/VL53L0X/core/inc/vl53l0x_def.h \
+ Drivers/VL53L0X/core/inc/vl53l0x_device.h \
+ Drivers/VL53L0X/platform/inc/vl53l0x_types.h \
+ Drivers/VL53L0X/platform/inc/vl53l0x_platform.h \
+ Drivers/VL53L0X/core/inc/vl53l0x_def.h \
+ Drivers/VL53L0X/platform/inc/vl53l0x_platform_log.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  Core/Inc/stm32l4xx_hal_conf.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -38,7 +46,17 @@ build/stm32l4xx_hal_rng_ex.o: \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
- Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
+ Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
+ Drivers/VL53L0X/core/inc/vl53l0x_api_core.h \
+ Drivers/VL53L0X/core/inc/vl53l0x_api_calibration.h
+Drivers/VL53L0X/core/inc/vl53l0x_api.h:
+Drivers/VL53L0X/core/inc/vl53l0x_api_strings.h:
+Drivers/VL53L0X/core/inc/vl53l0x_def.h:
+Drivers/VL53L0X/core/inc/vl53l0x_device.h:
+Drivers/VL53L0X/platform/inc/vl53l0x_types.h:
+Drivers/VL53L0X/platform/inc/vl53l0x_platform.h:
+Drivers/VL53L0X/core/inc/vl53l0x_def.h:
+Drivers/VL53L0X/platform/inc/vl53l0x_platform_log.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 Core/Inc/stm32l4xx_hal_conf.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:
@@ -80,3 +98,5 @@ Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
+Drivers/VL53L0X/core/inc/vl53l0x_api_core.h:
+Drivers/VL53L0X/core/inc/vl53l0x_api_calibration.h:

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright © 2016, STMicroelectronics International N.V.
+ Copyright © 2016, STMicroelectronics International N.V.
  All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
@@ -124,7 +124,7 @@ VL53L0X_API VL53L0X_Error VL53L0X_GetDeviceInfo(VL53L0X_DEV Dev,
  * @return  "Other error code"    See ::VL53L0X_Error
  */
 VL53L0X_API VL53L0X_Error VL53L0X_GetDeviceErrorStatus(VL53L0X_DEV Dev,
-	VL53L0X_DeviceError * pDeviceErrorStatus);
+	VL53L0X_DeviceError *pDeviceErrorStatus);
 
 /**
  * @brief Human readable Range Status string for a given RangeStatus
@@ -145,10 +145,10 @@ VL53L0X_API VL53L0X_Error VL53L0X_GetRangeStatusString(uint8_t RangeStatus,
  *
  * @note This function doesn't access to the device
  *
- * @param  ErrorCode           The error code as stored on ::VL53L0X_DeviceError
- * @param  pDeviceErrorString  The error string corresponding to the ErrorCode
- * @return VL53L0X_ERROR_NONE   Success
- * @return "Other error code"  See ::VL53L0X_Error
+ * @param   ErrorCode           The error code as stored on ::VL53L0X_DeviceError
+ * @param   pDeviceErrorString  The error string corresponding to the ErrorCode
+ * @return  VL53L0X_ERROR_NONE   Success
+ * @return  "Other error code"  See ::VL53L0X_Error
  */
 VL53L0X_API VL53L0X_Error VL53L0X_GetDeviceErrorString(
 	VL53L0X_DeviceError ErrorCode, char *pDeviceErrorString);
@@ -193,7 +193,7 @@ VL53L0X_API VL53L0X_Error VL53L0X_GetPalStateString(VL53L0X_State PalStateCode,
  * @return  "Other error code"    See ::VL53L0X_Error
  */
 VL53L0X_API VL53L0X_Error VL53L0X_GetPalState(VL53L0X_DEV Dev,
-	VL53L0X_State * pPalState);
+	VL53L0X_State *pPalState);
 
 /**
  * @brief Set the power mode for a given Device
@@ -232,7 +232,7 @@ VL53L0X_API VL53L0X_Error VL53L0X_SetPowerMode(VL53L0X_DEV Dev,
  * @return  "Other error code"    See ::VL53L0X_Error
  */
 VL53L0X_API VL53L0X_Error VL53L0X_GetPowerMode(VL53L0X_DEV Dev,
-	VL53L0X_PowerModes * pPowerMode);
+	VL53L0X_PowerModes *pPowerMode);
 
 /**
  * Set or over-hide part to part calibration offset
@@ -391,8 +391,7 @@ VL53L0X_API VL53L0X_Error VL53L0X_SetDeviceAddress(VL53L0X_DEV Dev,
  * If application cannot execute device reset or need to run VL53L0X_DataInit
  * multiple time then it  must ensure proper offset calibration saving and
  * restore on its own by using @a VL53L0X_GetOffsetCalibrationData() on first
- * power up and then @a VL53L0X_SetOffsetCalibrationData() in all subsequent
- * init.
+ * power up and then @a VL53L0X_SetOffsetCalibrationData() in all subsequent init
  * This function will change the VL53L0X_State from VL53L0X_STATE_POWERDOWN to
  * VL53L0X_STATE_WAIT_STATICINIT.
  *
@@ -543,8 +542,8 @@ VL53L0X_API VL53L0X_Error VL53L0X_GetDeviceParameters(VL53L0X_DEV Dev,
  *
  *
  * @return  VL53L0X_ERROR_NONE               Success
- * @return  VL53L0X_ERROR_MODE_NOT_SUPPORTED This error occurs when DeviceMode
- *                                           is not in the supported list
+ * @return  VL53L0X_ERROR_MODE_NOT_SUPPORTED This error occurs when DeviceMode is
+ *                                          not in the supported list
  */
 VL53L0X_API VL53L0X_Error VL53L0X_SetDeviceMode(VL53L0X_DEV Dev,
 	VL53L0X_DeviceModes DeviceMode);
@@ -572,7 +571,7 @@ VL53L0X_API VL53L0X_Error VL53L0X_SetDeviceMode(VL53L0X_DEV Dev,
  * DeviceMode is not in the supported list
  */
 VL53L0X_API VL53L0X_Error VL53L0X_GetDeviceMode(VL53L0X_DEV Dev,
-	VL53L0X_DeviceModes * pDeviceMode);
+	VL53L0X_DeviceModes *pDeviceMode);
 
 /**
  * @brief  Sets the resolution of range measurements.
@@ -602,8 +601,8 @@ VL53L0X_API VL53L0X_Error VL53L0X_SetRangeFractionEnable(VL53L0X_DEV Dev,
  *
  * @note This function Accesses the device
  *
- * @param   Dev        Device Handle
- * @param   pEnable    Output Parameter reporting the fraction enable state.
+ * @param   Dev               Device Handle
+ * @param   pEnable           Output Parameter reporting the fraction enable state.
  *
  * @return  VL53L0X_ERROR_NONE                   Success
  * @return  "Other error code"                  See ::VL53L0X_Error
@@ -654,7 +653,7 @@ VL53L0X_API VL53L0X_Error VL53L0X_SetHistogramMode(VL53L0X_DEV Dev,
  * @return  "Other error code"    See ::VL53L0X_Error
  */
 VL53L0X_API VL53L0X_Error VL53L0X_GetHistogramMode(VL53L0X_DEV Dev,
-	VL53L0X_HistogramModes * pHistogramMode);
+	VL53L0X_HistogramModes *pHistogramMode);
 
 /**
  * @brief Set Ranging Timing Budget in microseconds
@@ -947,8 +946,7 @@ VL53L0X_API VL53L0X_Error VL53L0X_GetXTalkCompensationEnable(VL53L0X_DEV Dev,
  * @return  VL53L0X_ERROR_NONE              Success
  * @return  "Other error code"             See ::VL53L0X_Error
  */
-VL53L0X_API VL53L0X_Error VL53L0X_SetXTalkCompensationRateMegaCps(
-	VL53L0X_DEV Dev,
+VL53L0X_API VL53L0X_Error VL53L0X_SetXTalkCompensationRateMegaCps(VL53L0X_DEV Dev,
 	FixPoint1616_t XTalkCompensationRateMegaCps);
 
 /**
@@ -965,8 +963,7 @@ VL53L0X_API VL53L0X_Error VL53L0X_SetXTalkCompensationRateMegaCps(
  * @return  VL53L0X_ERROR_NONE              Success
  * @return  "Other error code"             See ::VL53L0X_Error
  */
-VL53L0X_API VL53L0X_Error VL53L0X_GetXTalkCompensationRateMegaCps(
-	VL53L0X_DEV Dev,
+VL53L0X_API VL53L0X_Error VL53L0X_GetXTalkCompensationRateMegaCps(VL53L0X_DEV Dev,
 	FixPoint1616_t *pXTalkCompensationRateMegaCps);
 
 /**
@@ -1217,6 +1214,36 @@ VL53L0X_API VL53L0X_Error VL53L0X_SetWrapAroundCheckEnable(VL53L0X_DEV Dev,
 VL53L0X_API VL53L0X_Error VL53L0X_GetWrapAroundCheckEnable(VL53L0X_DEV Dev,
 		uint8_t *pWrapAroundCheckEnable);
 
+/**
+ * @brief   Set Dmax Calibration Parameters for a given device
+ * When one of the parameter is zero, this function will get parameter
+ * from NVM.
+ * @note This function doesn't Access to the device
+ *
+ * @param   Dev                    Device Handle
+ * @param   RangeMilliMeter        Calibration Distance
+ * @param   SignalRateRtnMegaCps   Signal rate return read at CalDistance
+ * @return  VL53L0X_ERROR_NONE      Success
+ * @return  "Other error code"     See ::VL53L0X_Error
+ */
+VL53L0X_API VL53L0X_Error VL53L0X_SetDmaxCalParameters(VL53L0X_DEV Dev,
+		uint16_t RangeMilliMeter, FixPoint1616_t SignalRateRtnMegaCps);
+
+/**
+ * @brief  Get Dmax Calibration Parameters for a given device
+ *
+ *
+ * @note This function Access to the device
+ *
+ * @param   Dev                     Device Handle
+ * @param   pRangeMilliMeter        Pointer to Calibration Distance
+ * @param   pSignalRateRtnMegaCps   Pointer to Signal rate return
+ * @return  VL53L0X_ERROR_NONE       Success
+ * @return  "Other error code"      See ::VL53L0X_Error
+ */
+VL53L0X_API VL53L0X_Error VL53L0X_GetDmaxCalParameters(VL53L0X_DEV Dev,
+	uint16_t *pRangeMilliMeter, FixPoint1616_t *pSignalRateRtnMegaCps);
+
 /** @} VL53L0X_parameters_group */
 
 /** @defgroup VL53L0X_measurement_group VL53L0X Measurement Functions
@@ -1390,8 +1417,8 @@ VL53L0X_API VL53L0X_Error VL53L0X_StartMeasurement(VL53L0X_DEV Dev);
  * @details Will set the device in standby mode at end of current measurement\n
  *          Not necessary in single mode as device shall return automatically
  *          in standby mode at end of measurement.
- *          This function will change the VL53L0X_State from
- *          VL53L0X_STATE_RUNNING to VL53L0X_STATE_IDLE.
+ *          This function will change the VL53L0X_State from VL53L0X_STATE_RUNNING
+ *          to VL53L0X_STATE_IDLE.
  *
  * @note This function Access to the device
  *
@@ -1433,8 +1460,7 @@ VL53L0X_API VL53L0X_Error VL53L0X_GetMeasurementDataReady(VL53L0X_DEV Dev,
  * @param   MaxLoop    Max Number of polling loop (timeout).
  * @return  VL53L0X_ERROR_NOT_IMPLEMENTED   Not implemented
  */
-VL53L0X_API VL53L0X_Error VL53L0X_WaitDeviceReadyForNewMeasurement(
-	VL53L0X_DEV Dev,
+VL53L0X_API VL53L0X_Error VL53L0X_WaitDeviceReadyForNewMeasurement(VL53L0X_DEV Dev,
 	uint32_t MaxLoop);
 
 /**
@@ -1499,8 +1525,8 @@ VL53L0X_API VL53L0X_Error VL53L0X_GetHistogramMeasurementData(VL53L0X_DEV Dev,
  * measurement data
  *
  * @par Function Description
- * This function will change the device mode to
- * VL53L0X_DEVICEMODE_SINGLE_RANGING with @a VL53L0X_SetDeviceMode(),
+ * This function will change the device mode to VL53L0X_DEVICEMODE_SINGLE_RANGING
+ * with @a VL53L0X_SetDeviceMode(),
  * It performs measurement with @a VL53L0X_PerformSingleMeasurement()
  * It get data from last successful Ranging measurement with
  * @a VL53L0X_GetRangingMeasurementData.
@@ -1516,8 +1542,7 @@ VL53L0X_API VL53L0X_Error VL53L0X_GetHistogramMeasurementData(VL53L0X_DEV Dev,
  * @return  VL53L0X_ERROR_NONE         Success
  * @return  "Other error code"        See ::VL53L0X_Error
  */
-VL53L0X_API VL53L0X_Error VL53L0X_PerformSingleRangingMeasurement(
-	VL53L0X_DEV Dev,
+VL53L0X_API VL53L0X_Error VL53L0X_PerformSingleRangingMeasurement(VL53L0X_DEV Dev,
 	VL53L0X_RangingMeasurementData_t *pRangingMeasurementData);
 
 /**
@@ -1536,8 +1561,7 @@ VL53L0X_API VL53L0X_Error VL53L0X_PerformSingleRangingMeasurement(
  * @param   pHistogramMeasurementData  Pointer to the data structure to fill up.
  * @return  VL53L0X_ERROR_NOT_IMPLEMENTED   Not implemented
  */
-VL53L0X_API VL53L0X_Error VL53L0X_PerformSingleHistogramMeasurement(
-	VL53L0X_DEV Dev,
+VL53L0X_API VL53L0X_Error VL53L0X_PerformSingleHistogramMeasurement(VL53L0X_DEV Dev,
 	VL53L0X_HistogramMeasurementData_t *pHistogramMeasurementData);
 
 /**
@@ -1614,7 +1638,7 @@ VL53L0X_API VL53L0X_Error VL53L0X_GetMaxNumberOfROIZones(VL53L0X_DEV Dev,
  * @param   Polarity              Set interrupt polarity. Active high
  *   or active low see ::VL53L0X_InterruptPolarity
  * @return  VL53L0X_ERROR_NONE                            Success
- * @return  VL53L0X_ERROR_GPIO_NOT_EXISTING               Only Pin=0 is accepted
+ * @return  VL53L0X_ERROR_GPIO_NOT_EXISTING               Only Pin=0 is accepted.
  * @return  VL53L0X_ERROR_GPIO_FUNCTIONALITY_NOT_SUPPORTED    This error occurs
  * when Functionality programmed is not in the supported list:
  *                             Supported value are:
@@ -1642,7 +1666,7 @@ VL53L0X_API VL53L0X_Error VL53L0X_SetGpioConfig(VL53L0X_DEV Dev, uint8_t Pin,
  * @param   pPolarity             Pointer to interrupt polarity.
  *  Active high or active low see ::VL53L0X_InterruptPolarity
  * @return  VL53L0X_ERROR_NONE                            Success
- * @return  VL53L0X_ERROR_GPIO_NOT_EXISTING               Only Pin=0 is accepted
+ * @return  VL53L0X_ERROR_GPIO_NOT_EXISTING               Only Pin=0 is accepted.
  * @return  VL53L0X_ERROR_GPIO_FUNCTIONALITY_NOT_SUPPORTED   This error occurs
  * when Functionality programmed is not in the supported list:
  *                      Supported value are:
@@ -1654,9 +1678,9 @@ VL53L0X_API VL53L0X_Error VL53L0X_SetGpioConfig(VL53L0X_DEV Dev, uint8_t Pin,
  * @return  "Other error code"    See ::VL53L0X_Error
  */
 VL53L0X_API VL53L0X_Error VL53L0X_GetGpioConfig(VL53L0X_DEV Dev, uint8_t Pin,
-	VL53L0X_DeviceModes * pDeviceMode,
-	VL53L0X_GpioFunctionality * pFunctionality,
-	VL53L0X_InterruptPolarity * pPolarity);
+	VL53L0X_DeviceModes *pDeviceMode,
+	VL53L0X_GpioFunctionality *pFunctionality,
+	VL53L0X_InterruptPolarity *pPolarity);
 
 /**
  * @brief Set low and high Interrupt thresholds for a given mode

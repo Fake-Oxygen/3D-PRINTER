@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       Once the device started from reset, the user application has to:
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       (+) Configure the clock source to be used to drive the System clock
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           (if the application needs higher frequency/performance)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 2
 
 
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       (+) Configure the System clock frequency and Flash settings
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** /** @defgroup RCC_Private_Macros RCC Private Macros
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   * @{
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 3
 
 
   88:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #define __MCO1_CLK_ENABLE()   __HAL_RCC_GPIOA_CLK_ENABLE()
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  142:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  143:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****          (+) HSE (high-speed external): 4 to 48 MHz crystal oscillator used directly or
  144:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****              through the PLL as System clock source. Can be used also optionally as RTC clock sourc
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 4
 
 
  145:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  199:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****                 equal or lower than to 48 MHz. This clock is derived of the main PLL or PLLSAI1
  200:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****                 through PLLQ divider. You have to enable the peripheral clock and use
  201:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****                 HAL_RCCEx_PeriphCLKConfig() function to configure this clock.
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 5
 
 
  202:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****            (+@) IWDG clock which is always the LSI clock.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  256:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   *            - AHB, APB1 and APB2 prescalers set to 1.
  257:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   *            - CSS, MCO1 OFF
  258:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   *            - All interrupts disabled
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 6
 
 
  259:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   *            - All interrupt and reset flags cleared
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
   61 0026 01D9     		bls	.L2
  281:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     {
  282:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       return HAL_TIMEOUT;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 7
 
 
   62              		.loc 1 282 14
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
   98 0064 0123     		movs	r3, #1
   99 0066 5EE0     		b	.L3
  100              	.L5:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 8
 
 
  299:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   }
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  134 009c 0B60     		str	r3, [r1]
  318:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  319:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #elif defined(RCC_PLLSAI1_SUPPORT)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 9
 
 
  320:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  335:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  158              		.loc 1 335 82
  159 00c0 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 10
 
 
  160 00c2 F0D1     		bne	.L9
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  373:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Reset HSEBYP bit */
  374:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   CLEAR_BIT(RCC->CR, RCC_CR_HSEBYP);
  191              		.loc 1 374 3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 11
 
 
  192 00fa 0D4B     		ldr	r3, .L10
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  235              		.global	HAL_RCC_OscConfig
  236              		.syntax unified
  237              		.thumb
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 12
 
 
  238              		.thumb_func
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  417:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  418:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   sysclk_source = __HAL_RCC_GET_SYSCLK_SOURCE();
  263              		.loc 1 418 19
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 13
 
 
  264 0014 974B     		ldr	r3, .L102
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  303              		.loc 1 433 72 discriminator 1
  304 0058 7B68     		ldr	r3, [r7, #4]
  305 005a DB69     		ldr	r3, [r3, #28]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 14
 
 
  306              		.loc 1 433 51 discriminator 1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  448:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           {
  449:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****             return HAL_ERROR;
  346              		.loc 1 449 20
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 15
 
 
  347 00a0 0123     		movs	r3, #1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  389 00f6 0B60     		str	r3, [r1]
  462:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           /* Adjusts the Multiple Speed oscillator (MSI) calibration value.*/
  463:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           __HAL_RCC_MSI_CALIBRATIONVALUE_ADJUST(RCC_OscInitStruct->MSICalibrationValue);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 16
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 16
 
 
  390              		.loc 1 463 11
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  430 013a 03F01F03 		and	r3, r3, #31
  431              		.loc 1 477 53
  432 013e 22FA03F3 		lsr	r3, r2, r3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 17
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 17
 
 
  433              		.loc 1 477 25
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  499:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         while(READ_BIT(RCC->CR, RCC_CR_MSIRDY) == 0U)
  466              		.loc 1 499 14
  467 0178 08E0     		b	.L26
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 18
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 18
 
 
  468              	.L27:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  510 01c4 2B49     		ldr	r1, .L102
  511 01c6 1343     		orrs	r3, r3, r2
  512 01c8 4B60     		str	r3, [r1, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 19
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 19
 
 
  513 01ca 1AE0     		b	.L15
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  433:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       {
  549              		.loc 1 433 9
  550 0200 00BF     		nop
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 20
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 20
 
 
  551              	.L15:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  587 0234 0123     		movs	r3, #1
  588 0236 55E3     		b	.L14
  589              	.L32:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 21
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 21
 
 
  544:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       }
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  638 029a 1360     		str	r3, [r2]
  639              	.L35:
  550:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 22
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 22
 
 
  551:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       /* Check the HSE State */
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  569:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         tickstart = HAL_GetTick();
  674              		.loc 1 569 21
  675 02cc FFF7FEFF 		bl	HAL_GetTick
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 23
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 23
 
 
  676 02d0 B861     		str	r0, [r7, #24]
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  584:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   {
  585:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     /* Check the parameters */
  586:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     assert_param(IS_RCC_HSI(RCC_OscInitStruct->HSIState));
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 24
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 24
 
 
  587:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     assert_param(IS_RCC_HSI_CALIBRATION_VALUE(RCC_OscInitStruct->HSICalibrationValue));
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  751 033c 1343     		orrs	r3, r3, r2
  752 033e 4B60     		str	r3, [r1, #4]
  594:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 25
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 25
 
 
  753              		.loc 1 594 9
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  787              		.loc 1 617 15
  788 0370 544B     		ldr	r3, .L104
  789 0372 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 26
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 26
 
 
  790 0374 03F48063 		and	r3, r3, #1024
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  825 03b0 022B     		cmp	r3, #2
  826 03b2 01D9     		bls	.L49
  640:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 27
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 27
 
 
  641:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****             return HAL_TIMEOUT;
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  661:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
  662:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       if (RCC_OscInitStruct->LSIDiv != (csr_temp & RCC_CSR_LSIPREDIV))
  859              		.loc 1 662 28
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 28
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 28
 
 
  860 03e2 7B68     		ldr	r3, [r7, #4]
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  897 0422 FFF7FEFF 		bl	HAL_GetTick
  898 0426 B861     		str	r0, [r7, #24]
  679:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 29
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 29
 
 
  680:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           /* Wait till LSI is disabled */
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  934 0460 184B     		ldr	r3, .L104
  935 0462 D3F89430 		ldr	r3, [r3, #148]
  936 0466 174A     		ldr	r2, .L104
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 30
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 30
 
 
  937 0468 43F00103 		orr	r3, r3, #1
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  972 04a2 23F00103 		bic	r3, r3, #1
  973 04a6 C2F89430 		str	r3, [r2, #148]
  714:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 31
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 31
 
 
  715:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       /* Get Start Tick*/
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1011 04de 002B     		cmp	r3, #0
  1012 04e0 00F0BD80 		beq	.L62
  1013              	.LBB3:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 32
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 32
 
 
  730:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   {
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1050 0522 1B68     		ldr	r3, [r3]
  1051 0524 6D4A     		ldr	r2, .L106+4
  1052 0526 43F48073 		orr	r3, r3, #256
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 33
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 33
 
 
  1053 052a 1360     		str	r3, [r2]
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  766:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       MODIFY_REG(RCC->BDCR, RCC_BDCR_LSESYSDIS, (RCC_OscInitStruct->LSEState & RCC_BDCR_LSESYSDIS))
  1088              		.loc 1 766 7
  1089 055e 5E4B     		ldr	r3, .L106
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 34
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 34
 
 
  1090 0560 D3F89030 		ldr	r3, [r3, #144]
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1128              		.loc 1 782 7
  1129 05b8 474B     		ldr	r3, .L106
  1130 05ba D3F89030 		ldr	r3, [r3, #144]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 35
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 35
 
 
  1131 05be 464A     		ldr	r2, .L106
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  796:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       {
  1167              		.loc 1 796 13
  1168 05fe 364B     		ldr	r3, .L106
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 36
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 36
 
 
  1169 0600 D3F89030 		ldr	r3, [r3, #144]
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  818:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #if defined(RCC_BDCR_LSESYSDIS)
  819:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       /* By default, stop disabling LSE propagation */
  820:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       CLEAR_BIT(RCC->BDCR, RCC_BDCR_LSESYSDIS);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 37
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 37
 
 
  1203              		.loc 1 820 7
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1236              		.loc 1 841 7
  1237 0672 194B     		ldr	r3, .L106
  1238 0674 D3F89830 		ldr	r3, [r3, #152]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 38
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 38
 
 
  1239 0678 174A     		ldr	r2, .L106
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1274 06b4 23F00103 		bic	r3, r3, #1
  1275 06b8 C2F89830 		str	r3, [r2, #152]
  859:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 39
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 39
 
 
  860:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       /* Get Start Tick*/
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1309 06ee 7B68     		ldr	r3, [r7, #4]
  1310 06f0 DB6A     		ldr	r3, [r3, #44]
  1311              		.loc 1 878 5
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 40
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 40
 
 
  1312 06f2 002B     		cmp	r3, #0
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  897:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****          (READ_BIT(pll_config, RCC_PLLCFGR_PLLN)    != (RCC_OscInitStruct->PLL.PLLN << RCC_PLLCFGR_
  1347              		.loc 1 897 11
  1348 0728 FB69     		ldr	r3, [r7, #28]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 41
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 41
 
 
  1349 072a 03F4FE42 		and	r2, r3, #32512
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1391 0766 5B08     		lsrs	r3, r3, #1
  1392              		.loc 1 906 96
  1393 0768 013B     		subs	r3, r3, #1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 42
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 42
 
 
  1394              		.loc 1 906 102
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1427 0798 23F08073 		bic	r3, r3, #16777216
  1428 079c 1360     		str	r3, [r2]
  927:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 43
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 43
 
 
  928:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****             /* Get Start Tick*/
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1466 07d8 1143     		orrs	r1, r1, r2
  1467 07da 7A68     		ldr	r2, [r7, #4]
  1468 07dc 926B     		ldr	r2, [r2, #56]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 44
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 44
 
 
  1469 07de 1202     		lsls	r2, r2, #8
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1502              		.loc 1 963 25
  1503 0820 FFF7FEFF 		bl	HAL_GetTick
  1504 0824 B861     		str	r0, [r7, #24]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 45
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 45
 
 
  964:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  985:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         if(READ_BIT(RCC->CR, RCC_CR_PLLRDY) == 0U)
  1535              		.loc 1 985 12
  1536 084c 274B     		ldr	r3, .L108
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 46
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 46
 
 
  1537 084e 1B68     		ldr	r3, [r3]
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1574 088a 184B     		ldr	r3, .L108
  1575 088c 1B68     		ldr	r3, [r3]
  1576 088e 03F00073 		and	r3, r3, #33554432
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 47
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 47
 
 
  997:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           {
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1608 08c0 0323     		movs	r3, #3
  1609 08c2 0FE0     		b	.L14
  1610              	.L98:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 48
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 48
 
 
 1019:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         {
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1643              		.align	2
  1644              	.L108:
  1645 08ec 00100240 		.word	1073876992
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 49
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 49
 
 
  1646 08f0 0C809D01 		.word	27099148
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1086:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   *
 1087:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   * @note   You can use HAL_RCC_GetClockConfig() function to know which clock is
 1088:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   *         currently used as system clock source.
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 50
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 50
 
 
 1089:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   *
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1118:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Increasing the number of wait states because of higher CPU frequency */
 1119:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   if(FLatency > __HAL_FLASH_GET_LATENCY())
  1685              		.loc 1 1119 17
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 51
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 51
 
 
  1686 0018 904B     		ldr	r3, .L129
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1721              		.loc 1 1138 25
  1722 0054 7B68     		ldr	r3, [r7, #4]
  1723 0056 9A68     		ldr	r2, [r3, #8]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 52
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 52
 
 
  1724              		.loc 1 1138 43
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1155:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         return HAL_ERROR;
  1762              		.loc 1 1155 16
  1763 0096 0123     		movs	r3, #1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 53
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 53
 
 
  1764 0098 DCE0     		b	.L112
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1176:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       {
 1177:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         /* Check the HSE ready flag */
 1178:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****         if(READ_BIT(RCC->CR, RCC_CR_HSERDY) == 0U)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 54
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 54
 
 
  1798              		.loc 1 1178 12
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1198:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****           return HAL_ERROR;
  1833              		.loc 1 1198 18
  1834 0104 0123     		movs	r3, #1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 55
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 55
 
 
  1835 0106 A5E0     		b	.L112
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1870 0144 8B60     		str	r3, [r1, #8]
 1218:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
 1219:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     /* Get Start Tick*/
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 56
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 56
 
 
 1220:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     tickstart = HAL_GetTick();
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1906 0178 802B     		cmp	r3, #128
  1907 017a 05D1     		bne	.L124
 1235:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 57
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 57
 
 
 1236:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     MODIFY_REG(RCC->CFGR, RCC_CFGR_HPRE, RCC_SYSCLK_DIV1);
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1946 01ba 03F00F03 		and	r3, r3, #15
  1947              		.loc 1 1251 5
  1948 01be 3A68     		ldr	r2, [r7]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 58
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 58
 
 
  1949 01c0 9A42     		cmp	r2, r3
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  1986 0200 1343     		orrs	r3, r3, r2
  1987 0202 8B60     		str	r3, [r1, #8]
  1988              	.L127:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 59
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 59
 
 
 1269:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   }
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  2029 0246 1B68     		ldr	r3, [r3]
  2030 0248 1846     		mov	r0, r3
  2031 024a FFF7FEFF 		bl	HAL_InitTick
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 60
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 60
 
 
  2032 024e 0346     		mov	r3, r0
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1305:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** @endverbatim
 1306:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   * @{
 1307:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 61
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 61
 
 
 1308:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1346:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Prevent unused argument(s) compilation warning if no assert_param check */
 1347:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   UNUSED(RCC_MCOx);
 1348:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 62
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 62
 
 
 1349:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* MCO Clock Enable */
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  2123 005a 8B60     		str	r3, [r1, #8]
 1362:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** }
  2124              		.loc 1 1362 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 63
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 63
 
 
  2125 005c 00BF     		nop
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1396:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** uint32_t HAL_RCC_GetSysClockFreq(void)
 1397:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** {
  2148              		.loc 1 1397 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 64
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 64
 
 
  2149              		.cfi_startproc
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1410:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     /* Get SYSCLK source */
 1411:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     if(READ_BIT(RCC->CR, RCC_CR_MSIRGSEL) == 0U)
  2191              		.loc 1 1411 8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 65
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 65
 
 
  2192 0034 344B     		ldr	r3, .L149
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  2231              	.L136:
 1426:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     }
 1427:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 66
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 66
 
 
 1428:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   else if(sysclk_source == RCC_CFGR_SWS_HSI)
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  2261 009a 022B     		cmp	r3, #2
  2262 009c 03D0     		beq	.L143
  2263 009e BB68     		ldr	r3, [r7, #8]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 67
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 67
 
 
  2264 00a0 032B     		cmp	r3, #3
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  2302 00d0 7A69     		ldr	r2, [r7, #20]
  2303 00d2 03FB02F2 		mul	r2, r3, r2
  2304              		.loc 1 1468 12
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 68
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 68
 
 
  2305 00d6 7B68     		ldr	r3, [r7, #4]
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  2355              	HAL_RCC_GetHCLKFreq:
  2356              	.LFB326:
 1475:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 69
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 69
 
 
 1476:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** /**
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1494:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   */
 1495:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** uint32_t HAL_RCC_GetPCLK1Freq(void)
 1496:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 70
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 70
 
 
  2395              		.loc 1 1496 1
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1507:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** uint32_t HAL_RCC_GetPCLK2Freq(void)
 1508:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** {
  2441              		.loc 1 1508 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 71
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 71
 
 
  2442              		.cfi_startproc
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1520:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** void HAL_RCC_GetOscConfig(RCC_OscInitTypeDef  *RCC_OscInitStruct)
 1521:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** {
  2487              		.loc 1 1521 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 72
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 72
 
 
  2488              		.cfi_startproc
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1540:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   {
 1541:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     RCC_OscInitStruct->HSEState = RCC_HSE_ON;
  2524              		.loc 1 1541 33
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 73
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 73
 
 
  2525 0034 7B68     		ldr	r3, [r7, #4]
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1559:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   RCC_OscInitStruct->MSIClockRange = READ_BIT(RCC->CR, RCC_CR_MSIRANGE);
  2562              		.loc 1 1559 38
  2563 006a 5B4B     		ldr	r3, .L184
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 74
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 74
 
 
  2564 006c 1B68     		ldr	r3, [r3]
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1575:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   {
 1576:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #if defined(RCC_BDCR_LSESYSDIS)
 1577:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     if((RCC->BDCR & RCC_BDCR_LSESYSDIS) == RCC_BDCR_LSESYSDIS)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 75
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 75
 
 
  2603              		.loc 1 1577 12
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  2642 00f0 06E0     		b	.L173
  2643              	.L175:
 1593:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 76
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 76
 
 
 1594:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****     else
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  2674 011c 2E4B     		ldr	r3, .L184
  2675 011e D3F89430 		ldr	r3, [r3, #148]
  2676              		.loc 1 1617 16
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 77
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 77
 
 
  2677 0122 03F01003 		and	r3, r3, #16
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1639:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** #endif /* RCC_HSI48_SUPPORT */
 1640:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
 1641:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Get the PLL configuration -----------------------------------------------*/
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 78
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 78
 
 
 1642:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   if(READ_BIT(RCC->CR, RCC_CR_PLLON) == RCC_CR_PLLON)
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  2753 0196 7B68     		ldr	r3, [r7, #4]
  2754 0198 9A63     		str	r2, [r3, #56]
 1653:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   RCC_OscInitStruct->PLL.PLLQ = (((READ_BIT(RCC->PLLCFGR, RCC_PLLCFGR_PLLQ) >> RCC_PLLCFGR_PLLQ_Pos
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 79
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 79
 
 
  2755              		.loc 1 1653 36
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  2793              		.cfi_def_cfa_offset 4
  2794 01d0 BD46     		mov	sp, r7
  2795              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 80
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 80
 
 
  2796              		@ sp needed
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1687:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
 1688:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   /* Get the SYSCLK configuration --------------------------------------------*/
 1689:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   RCC_ClkInitStruct->SYSCLKSource = READ_BIT(RCC->CFGR, RCC_CFGR_SW);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 81
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 81
 
 
  2835              		.loc 1 1689 37
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  2876 0052 BD46     		mov	sp, r7
  2877              		.cfi_def_cfa_register 13
  2878              		@ sp needed
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 82
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 82
 
 
  2879 0054 5DF8047B 		ldr	r7, [sp], #4
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  2920              		@ sp needed
  2921 0014 5DF8047B 		ldr	r7, [sp], #4
  2922              		.cfi_restore 7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 83
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 83
 
 
  2923              		.cfi_def_cfa_offset 0
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  2963 001c 1A62     		str	r2, [r3, #32]
  2964              	.L194:
 1734:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 84
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 84
 
 
 1735:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** }
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  3010              		.thumb
  3011              		.thumb_func
  3013              	HAL_RCC_GetResetSource:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 85
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 85
 
 
  3014              	.LFB334:
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  3048 002a 5DF8047B 		ldr	r7, [sp], #4
  3049              		.cfi_restore 7
  3050              		.cfi_def_cfa_offset 0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 86
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 86
 
 
  3051 002e 7047     		bx	lr
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  3083              		.loc 1 1790 6
  3084 000c 274B     		ldr	r3, .L211
  3085 000e 9B6D     		ldr	r3, [r3, #88]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 87
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 87
 
 
  3086 0010 03F08053 		and	r3, r3, #268435456
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1805:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       /* MSI > 16Mhz */
 1806:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       if(msirange > RCC_MSIRANGE_10)
  3126              		.loc 1 1806 9
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 88
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 88
 
 
  3127 0058 7B68     		ldr	r3, [r7, #4]
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  3154 007c 0123     		movs	r3, #1
  3155 007e 3B61     		str	r3, [r7, #16]
  3156              	.L206:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 89
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 89
 
 
 1834:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****       }
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
 1868:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c **** 
 1869:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c ****   return HAL_OK;
  3177              		.loc 1 1869 10
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 90
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 90
 
 
  3178 00a2 0023     		movs	r3, #0
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  3218 0008 DB68     		ldr	r3, [r3, #12]
  3219              		.loc 1 1885 13
  3220 000a 03F00303 		and	r3, r3, #3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 91
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 91
 
 
  3221 000e FB60     		str	r3, [r7, #12]
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  3259              		.loc 1 1901 16
  3260 0048 03F00F03 		and	r3, r3, #15
  3261 004c 7B61     		str	r3, [r7, #20]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 92
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 92
 
 
  3262 004e 05E0     		b	.L219
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  3301 0082 03F07F03 		and	r3, r3, #127
  3302              		.loc 1 1916 20
  3303 0086 3A69     		ldr	r2, [r7, #16]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 93
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 93
 
 
  3304 0088 03FB02F2 		mul	r2, r3, r2
@@ -5578,73 +5578,73 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 1
  3354              		.file 6 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h"
  3355              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
  3356              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 94
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 94
 
 
  3357              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
  3358              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
  3359              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 95
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 95
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_rcc.c
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:20     .text.HAL_RCC_DeInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:26     .text.HAL_RCC_DeInit:0000000000000000 HAL_RCC_DeInit
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:225    .text.HAL_RCC_DeInit:0000000000000130 $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:234    .text.HAL_RCC_OscConfig:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:240    .text.HAL_RCC_OscConfig:0000000000000000 HAL_RCC_OscConfig
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:3065   .text.RCC_SetFlashLatencyFromMSIRange:0000000000000000 RCC_SetFlashLatencyFromMSIRange
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2146   .text.HAL_RCC_GetSysClockFreq:0000000000000000 HAL_RCC_GetSysClockFreq
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:623    .text.HAL_RCC_OscConfig:0000000000000274 $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:629    .text.HAL_RCC_OscConfig:0000000000000284 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:995    .text.HAL_RCC_OscConfig:00000000000004c4 $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:998    .text.HAL_RCC_OscConfig:00000000000004c8 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:1297   .text.HAL_RCC_OscConfig:00000000000006d8 $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:1301   .text.HAL_RCC_OscConfig:00000000000006e0 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:1645   .text.HAL_RCC_OscConfig:00000000000008ec $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:1652   .text.HAL_RCC_ClockConfig:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:1658   .text.HAL_RCC_ClockConfig:0000000000000000 HAL_RCC_ClockConfig
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:3202   .text.RCC_GetSysClockFreqFromPLLSource:0000000000000000 RCC_GetSysClockFreqFromPLLSource
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2048   .text.HAL_RCC_ClockConfig:000000000000025c $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2058   .text.HAL_RCC_MCOConfig:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2064   .text.HAL_RCC_MCOConfig:0000000000000000 HAL_RCC_MCOConfig
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2135   .text.HAL_RCC_MCOConfig:0000000000000064 $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2140   .text.HAL_RCC_GetSysClockFreq:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2341   .text.HAL_RCC_GetSysClockFreq:0000000000000108 $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2349   .text.HAL_RCC_GetHCLKFreq:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2355   .text.HAL_RCC_GetHCLKFreq:0000000000000000 HAL_RCC_GetHCLKFreq
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2382   .text.HAL_RCC_GetHCLKFreq:0000000000000014 $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2387   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2393   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 HAL_RCC_GetPCLK1Freq
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2427   .text.HAL_RCC_GetPCLK1Freq:0000000000000024 $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2433   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2439   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 HAL_RCC_GetPCLK2Freq
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2473   .text.HAL_RCC_GetPCLK2Freq:0000000000000024 $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2479   .text.HAL_RCC_GetOscConfig:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2485   .text.HAL_RCC_GetOscConfig:0000000000000000 HAL_RCC_GetOscConfig
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2804   .text.HAL_RCC_GetOscConfig:00000000000001d8 $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2809   .text.HAL_RCC_GetClockConfig:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2815   .text.HAL_RCC_GetClockConfig:0000000000000000 HAL_RCC_GetClockConfig
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2886   .text.HAL_RCC_GetClockConfig:000000000000005c $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2892   .text.HAL_RCC_EnableCSS:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2898   .text.HAL_RCC_EnableCSS:0000000000000000 HAL_RCC_EnableCSS
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2928   .text.HAL_RCC_EnableCSS:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2933   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2939   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 HAL_RCC_NMI_IRQHandler
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2982   .text.HAL_RCC_CSSCallback:0000000000000000 HAL_RCC_CSSCallback
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2971   .text.HAL_RCC_NMI_IRQHandler:0000000000000024 $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:2976   .text.HAL_RCC_CSSCallback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:3007   .text.HAL_RCC_GetResetSource:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:3013   .text.HAL_RCC_GetResetSource:0000000000000000 HAL_RCC_GetResetSource
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:3055   .text.HAL_RCC_GetResetSource:0000000000000030 $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:3060   .text.RCC_SetFlashLatencyFromMSIRange:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:3191   .text.RCC_SetFlashLatencyFromMSIRange:00000000000000ac $d
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:3197   .text.RCC_GetSysClockFreqFromPLLSource:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s:3341   .text.RCC_GetSysClockFreqFromPLLSource:00000000000000bc $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:20     .text.HAL_RCC_DeInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:26     .text.HAL_RCC_DeInit:0000000000000000 HAL_RCC_DeInit
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:225    .text.HAL_RCC_DeInit:0000000000000130 $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:234    .text.HAL_RCC_OscConfig:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:240    .text.HAL_RCC_OscConfig:0000000000000000 HAL_RCC_OscConfig
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:3065   .text.RCC_SetFlashLatencyFromMSIRange:0000000000000000 RCC_SetFlashLatencyFromMSIRange
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2146   .text.HAL_RCC_GetSysClockFreq:0000000000000000 HAL_RCC_GetSysClockFreq
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:623    .text.HAL_RCC_OscConfig:0000000000000274 $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:629    .text.HAL_RCC_OscConfig:0000000000000284 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:995    .text.HAL_RCC_OscConfig:00000000000004c4 $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:998    .text.HAL_RCC_OscConfig:00000000000004c8 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:1297   .text.HAL_RCC_OscConfig:00000000000006d8 $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:1301   .text.HAL_RCC_OscConfig:00000000000006e0 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:1645   .text.HAL_RCC_OscConfig:00000000000008ec $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:1652   .text.HAL_RCC_ClockConfig:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:1658   .text.HAL_RCC_ClockConfig:0000000000000000 HAL_RCC_ClockConfig
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:3202   .text.RCC_GetSysClockFreqFromPLLSource:0000000000000000 RCC_GetSysClockFreqFromPLLSource
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2048   .text.HAL_RCC_ClockConfig:000000000000025c $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2058   .text.HAL_RCC_MCOConfig:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2064   .text.HAL_RCC_MCOConfig:0000000000000000 HAL_RCC_MCOConfig
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2135   .text.HAL_RCC_MCOConfig:0000000000000064 $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2140   .text.HAL_RCC_GetSysClockFreq:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2341   .text.HAL_RCC_GetSysClockFreq:0000000000000108 $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2349   .text.HAL_RCC_GetHCLKFreq:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2355   .text.HAL_RCC_GetHCLKFreq:0000000000000000 HAL_RCC_GetHCLKFreq
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2382   .text.HAL_RCC_GetHCLKFreq:0000000000000014 $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2387   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2393   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 HAL_RCC_GetPCLK1Freq
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2427   .text.HAL_RCC_GetPCLK1Freq:0000000000000024 $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2433   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2439   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 HAL_RCC_GetPCLK2Freq
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2473   .text.HAL_RCC_GetPCLK2Freq:0000000000000024 $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2479   .text.HAL_RCC_GetOscConfig:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2485   .text.HAL_RCC_GetOscConfig:0000000000000000 HAL_RCC_GetOscConfig
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2804   .text.HAL_RCC_GetOscConfig:00000000000001d8 $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2809   .text.HAL_RCC_GetClockConfig:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2815   .text.HAL_RCC_GetClockConfig:0000000000000000 HAL_RCC_GetClockConfig
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2886   .text.HAL_RCC_GetClockConfig:000000000000005c $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2892   .text.HAL_RCC_EnableCSS:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2898   .text.HAL_RCC_EnableCSS:0000000000000000 HAL_RCC_EnableCSS
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2928   .text.HAL_RCC_EnableCSS:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2933   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2939   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 HAL_RCC_NMI_IRQHandler
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2982   .text.HAL_RCC_CSSCallback:0000000000000000 HAL_RCC_CSSCallback
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2971   .text.HAL_RCC_NMI_IRQHandler:0000000000000024 $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:2976   .text.HAL_RCC_CSSCallback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:3007   .text.HAL_RCC_GetResetSource:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:3013   .text.HAL_RCC_GetResetSource:0000000000000000 HAL_RCC_GetResetSource
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:3055   .text.HAL_RCC_GetResetSource:0000000000000030 $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:3060   .text.RCC_SetFlashLatencyFromMSIRange:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:3191   .text.RCC_SetFlashLatencyFromMSIRange:00000000000000ac $d
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:3197   .text.RCC_GetSysClockFreqFromPLLSource:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s:3341   .text.RCC_GetSysClockFreqFromPLLSource:00000000000000bc $d
 
 UNDEFINED SYMBOLS
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccdrpgaq.s 			page 96
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccopIi1a.s 			page 96
 
 
 HAL_GetTick

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright © 2016, STMicroelectronics International N.V.
+Copyright © 2016, STMicroelectronics International N.V.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -68,12 +68,10 @@ VL53L0X_Error set_sequence_step_timeout(VL53L0X_DEV Dev,
 			VL53L0X_SequenceStepId SequenceStepId,
 			uint32_t TimeOutMicroSecs);
 
-VL53L0X_Error VL53L0X_set_measurement_timing_budget_micro_seconds(
-	VL53L0X_DEV Dev,
+VL53L0X_Error VL53L0X_set_measurement_timing_budget_micro_seconds(VL53L0X_DEV Dev,
 	uint32_t MeasurementTimingBudgetMicroSeconds);
 
-VL53L0X_Error VL53L0X_get_measurement_timing_budget_micro_seconds(
-		VL53L0X_DEV Dev,
+VL53L0X_Error VL53L0X_get_measurement_timing_budget_micro_seconds(VL53L0X_DEV Dev,
 		uint32_t *pMeasurementTimingBudgetMicroSeconds);
 
 VL53L0X_Error VL53L0X_load_tuning_settings(VL53L0X_DEV Dev,
@@ -81,10 +79,7 @@ VL53L0X_Error VL53L0X_load_tuning_settings(VL53L0X_DEV Dev,
 
 VL53L0X_Error VL53L0X_calc_sigma_estimate(VL53L0X_DEV Dev,
 		VL53L0X_RangingMeasurementData_t *pRangingMeasurementData,
-		FixPoint1616_t *pSigmaEstimate);
-
-VL53L0X_Error VL53L0X_calc_dmax(
-	VL53L0X_DEV Dev, FixPoint1616_t ambRateMeas, uint32_t *pdmax_mm);
+		FixPoint1616_t *pSigmaEstimate, uint32_t *pDmax_mm);
 
 VL53L0X_Error VL53L0X_get_total_xtalk_rate(VL53L0X_DEV Dev,
 	VL53L0X_RangingMeasurementData_t *pRangingMeasurementData,

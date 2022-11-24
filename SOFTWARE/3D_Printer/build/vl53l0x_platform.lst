@@ -1,0 +1,1274 @@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"vl53l0x_platform.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	_I2CBuffer
+  20              		.section	.bss._I2CBuffer,"aw",%nobits
+  21              		.align	2
+  24              	_I2CBuffer:
+  25 0000 00000000 		.space	64
+  25      00000000 
+  25      00000000 
+  25      00000000 
+  25      00000000 
+  26              		.section	.text._I2CWrite,"ax",%progbits
+  27              		.align	1
+  28              		.global	_I2CWrite
+  29              		.syntax unified
+  30              		.thumb
+  31              		.thumb_func
+  33              	_I2CWrite:
+  34              	.LFB324:
+  35              		.file 1 "Drivers/VL53L0X/platform/src/vl53l0x_platform.c"
+   1:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** //?????#include "hal.h"
+   2:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #include "vl53l0x_platform.h"
+   3:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #include "vl53l0x_api.h"
+   4:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+   5:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #include "stm32l4xx_hal.h"
+   6:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #include <string.h>
+   7:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+   8:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #define I2C_TIME_OUT_BASE   10
+   9:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #define I2C_TIME_OUT_BYTE   1
+  10:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #define VL53L0X_OsDelay(...) HAL_Delay(2)
+  11:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+  12:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+  13:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #ifndef HAL_I2C_MODULE_ENABLED
+  14:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #warning "HAL I2C module must be enable "
+  15:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #endif
+  16:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** //extern I2C_HandleTypeDef hi2c1;
+  17:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** //#define VL53L0X_pI2cHandle    (&hi2c1)
+  18:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+  19:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** /* when not customized by application define dummy one */
+  20:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #ifndef VL53L0X_GetI2cBus
+  21:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** /** This macro can be overloaded by user to enforce i2c sharing in RTOS context
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 2
+
+
+  22:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****  */
+  23:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #   define VL53L0X_GetI2cBus(...) (void)0
+  24:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #endif
+  25:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+  26:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #ifndef VL53L0X_PutI2cBus
+  27:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** /** This macro can be overloaded by user to enforce i2c sharing in RTOS context
+  28:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****  */
+  29:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #   define VL53L0X_PutI2cBus(...) (void)0
+  30:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #endif
+  31:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+  32:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #ifndef VL53L0X_OsDelay
+  33:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #   define  VL53L0X_OsDelay(...) (void)0
+  34:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #endif
+  35:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+  36:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+  37:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** uint8_t _I2CBuffer[64];
+  38:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+  39:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** int _I2CWrite(VL53L0X_DEV Dev, uint8_t *pdata, uint32_t count) {
+  36              		.loc 1 39 64
+  37              		.cfi_startproc
+  38              		@ args = 0, pretend = 0, frame = 24
+  39              		@ frame_needed = 1, uses_anonymous_args = 0
+  40 0000 80B5     		push	{r7, lr}
+  41              		.cfi_def_cfa_offset 8
+  42              		.cfi_offset 7, -8
+  43              		.cfi_offset 14, -4
+  44 0002 88B0     		sub	sp, sp, #32
+  45              		.cfi_def_cfa_offset 40
+  46 0004 02AF     		add	r7, sp, #8
+  47              		.cfi_def_cfa 7, 32
+  48 0006 F860     		str	r0, [r7, #12]
+  49 0008 B960     		str	r1, [r7, #8]
+  50 000a 7A60     		str	r2, [r7, #4]
+  40:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     int status;
+  41:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     int i2c_time_out = I2C_TIME_OUT_BASE+ count* I2C_TIME_OUT_BYTE;
+  51              		.loc 1 41 41
+  52 000c 7B68     		ldr	r3, [r7, #4]
+  53 000e 0A33     		adds	r3, r3, #10
+  54              		.loc 1 41 9
+  55 0010 7B61     		str	r3, [r7, #20]
+  42:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+  43:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status = HAL_I2C_Master_Transmit(Dev->I2cHandle, Dev->I2cDevAddr, pdata, count, i2c_time_out);
+  56              		.loc 1 43 14
+  57 0012 FB68     		ldr	r3, [r7, #12]
+  58 0014 D3F85C01 		ldr	r0, [r3, #348]
+  59              		.loc 1 43 57
+  60 0018 FB68     		ldr	r3, [r7, #12]
+  61 001a 93F86031 		ldrb	r3, [r3, #352]	@ zero_extendqisi2
+  62              		.loc 1 43 14
+  63 001e 99B2     		uxth	r1, r3
+  64 0020 7B68     		ldr	r3, [r7, #4]
+  65 0022 9AB2     		uxth	r2, r3
+  66 0024 7B69     		ldr	r3, [r7, #20]
+  67 0026 0093     		str	r3, [sp]
+  68 0028 1346     		mov	r3, r2
+  69 002a BA68     		ldr	r2, [r7, #8]
+  70 002c FFF7FEFF 		bl	HAL_I2C_Master_Transmit
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 3
+
+
+  71 0030 0346     		mov	r3, r0
+  72              		.loc 1 43 12
+  73 0032 3B61     		str	r3, [r7, #16]
+  44:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (status) {
+  45:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         //VL6180x_ErrLog("I2C error 0x%x %d len", dev->I2cAddr, len);
+  46:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         //XNUCLEO6180XA1_I2C1_Init(&hi2c1);
+  47:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+  48:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return status;
+  74              		.loc 1 48 12
+  75 0034 3B69     		ldr	r3, [r7, #16]
+  49:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** }
+  76              		.loc 1 49 1
+  77 0036 1846     		mov	r0, r3
+  78 0038 1837     		adds	r7, r7, #24
+  79              		.cfi_def_cfa_offset 8
+  80 003a BD46     		mov	sp, r7
+  81              		.cfi_def_cfa_register 13
+  82              		@ sp needed
+  83 003c 80BD     		pop	{r7, pc}
+  84              		.cfi_endproc
+  85              	.LFE324:
+  87              		.section	.text._I2CRead,"ax",%progbits
+  88              		.align	1
+  89              		.global	_I2CRead
+  90              		.syntax unified
+  91              		.thumb
+  92              		.thumb_func
+  94              	_I2CRead:
+  95              	.LFB325:
+  50:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+  51:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** int _I2CRead(VL53L0X_DEV Dev, uint8_t *pdata, uint32_t count) {
+  96              		.loc 1 51 63
+  97              		.cfi_startproc
+  98              		@ args = 0, pretend = 0, frame = 24
+  99              		@ frame_needed = 1, uses_anonymous_args = 0
+ 100 0000 80B5     		push	{r7, lr}
+ 101              		.cfi_def_cfa_offset 8
+ 102              		.cfi_offset 7, -8
+ 103              		.cfi_offset 14, -4
+ 104 0002 88B0     		sub	sp, sp, #32
+ 105              		.cfi_def_cfa_offset 40
+ 106 0004 02AF     		add	r7, sp, #8
+ 107              		.cfi_def_cfa 7, 32
+ 108 0006 F860     		str	r0, [r7, #12]
+ 109 0008 B960     		str	r1, [r7, #8]
+ 110 000a 7A60     		str	r2, [r7, #4]
+  52:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     int status;
+  53:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     int i2c_time_out = I2C_TIME_OUT_BASE+ count* I2C_TIME_OUT_BYTE;
+ 111              		.loc 1 53 41
+ 112 000c 7B68     		ldr	r3, [r7, #4]
+ 113 000e 0A33     		adds	r3, r3, #10
+ 114              		.loc 1 53 9
+ 115 0010 7B61     		str	r3, [r7, #20]
+  54:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+  55:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status = HAL_I2C_Master_Receive(Dev->I2cHandle, Dev->I2cDevAddr|1, pdata, count, i2c_time_out);
+ 116              		.loc 1 55 14
+ 117 0012 FB68     		ldr	r3, [r7, #12]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 4
+
+
+ 118 0014 D3F85C01 		ldr	r0, [r3, #348]
+ 119              		.loc 1 55 56
+ 120 0018 FB68     		ldr	r3, [r7, #12]
+ 121 001a 93F86031 		ldrb	r3, [r3, #352]	@ zero_extendqisi2
+ 122              		.loc 1 55 14
+ 123 001e 43F00103 		orr	r3, r3, #1
+ 124 0022 DBB2     		uxtb	r3, r3
+ 125 0024 99B2     		uxth	r1, r3
+ 126 0026 7B68     		ldr	r3, [r7, #4]
+ 127 0028 9AB2     		uxth	r2, r3
+ 128 002a 7B69     		ldr	r3, [r7, #20]
+ 129 002c 0093     		str	r3, [sp]
+ 130 002e 1346     		mov	r3, r2
+ 131 0030 BA68     		ldr	r2, [r7, #8]
+ 132 0032 FFF7FEFF 		bl	HAL_I2C_Master_Receive
+ 133 0036 0346     		mov	r3, r0
+ 134              		.loc 1 55 12
+ 135 0038 3B61     		str	r3, [r7, #16]
+  56:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (status) {
+  57:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         //VL6180x_ErrLog("I2C error 0x%x %d len", dev->I2cAddr, len);
+  58:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         //XNUCLEO6180XA1_I2C1_Init(&hi2c1);
+  59:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+  60:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return status;
+ 136              		.loc 1 60 12
+ 137 003a 3B69     		ldr	r3, [r7, #16]
+  61:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** }
+ 138              		.loc 1 61 1
+ 139 003c 1846     		mov	r0, r3
+ 140 003e 1837     		adds	r7, r7, #24
+ 141              		.cfi_def_cfa_offset 8
+ 142 0040 BD46     		mov	sp, r7
+ 143              		.cfi_def_cfa_register 13
+ 144              		@ sp needed
+ 145 0042 80BD     		pop	{r7, pc}
+ 146              		.cfi_endproc
+ 147              	.LFE325:
+ 149              		.section	.text.VL53L0X_WriteMulti,"ax",%progbits
+ 150              		.align	1
+ 151              		.global	VL53L0X_WriteMulti
+ 152              		.syntax unified
+ 153              		.thumb
+ 154              		.thumb_func
+ 156              	VL53L0X_WriteMulti:
+ 157              	.LFB326:
+  62:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+  63:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** // the ranging_sensor_comms.dll will take care of the page selection
+  64:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** VL53L0X_Error VL53L0X_WriteMulti(VL53L0X_DEV Dev, uint8_t index, uint8_t *pdata, uint32_t count) {
+ 158              		.loc 1 64 98
+ 159              		.cfi_startproc
+ 160              		@ args = 0, pretend = 0, frame = 24
+ 161              		@ frame_needed = 1, uses_anonymous_args = 0
+ 162 0000 80B5     		push	{r7, lr}
+ 163              		.cfi_def_cfa_offset 8
+ 164              		.cfi_offset 7, -8
+ 165              		.cfi_offset 14, -4
+ 166 0002 86B0     		sub	sp, sp, #24
+ 167              		.cfi_def_cfa_offset 32
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 5
+
+
+ 168 0004 00AF     		add	r7, sp, #0
+ 169              		.cfi_def_cfa_register 7
+ 170 0006 F860     		str	r0, [r7, #12]
+ 171 0008 7A60     		str	r2, [r7, #4]
+ 172 000a 3B60     		str	r3, [r7]
+ 173 000c 0B46     		mov	r3, r1
+ 174 000e FB72     		strb	r3, [r7, #11]
+  65:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     int status_int;
+  66:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_Error Status = VL53L0X_ERROR_NONE;
+ 175              		.loc 1 66 19
+ 176 0010 0023     		movs	r3, #0
+ 177 0012 FB75     		strb	r3, [r7, #23]
+  67:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (count > sizeof(_I2CBuffer) - 1) {
+ 178              		.loc 1 67 8
+ 179 0014 3B68     		ldr	r3, [r7]
+ 180 0016 3F2B     		cmp	r3, #63
+ 181 0018 02D9     		bls	.L6
+  68:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         return VL53L0X_ERROR_INVALID_PARAMS;
+ 182              		.loc 1 68 16
+ 183 001a 6FF00303 		mvn	r3, #3
+ 184 001e 16E0     		b	.L7
+ 185              	.L6:
+  69:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+  70:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     _I2CBuffer[0] = index;
+ 186              		.loc 1 70 19
+ 187 0020 0D4A     		ldr	r2, .L9
+ 188 0022 FB7A     		ldrb	r3, [r7, #11]
+ 189 0024 1370     		strb	r3, [r2]
+  71:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     memcpy(&_I2CBuffer[1], pdata, count);
+ 190              		.loc 1 71 5
+ 191 0026 3A68     		ldr	r2, [r7]
+ 192 0028 7968     		ldr	r1, [r7, #4]
+ 193 002a 0C48     		ldr	r0, .L9+4
+ 194 002c FFF7FEFF 		bl	memcpy
+  72:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_GetI2cBus();
+  73:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status_int = _I2CWrite(Dev, _I2CBuffer, count + 1);
+ 195              		.loc 1 73 18
+ 196 0030 3B68     		ldr	r3, [r7]
+ 197 0032 0133     		adds	r3, r3, #1
+ 198 0034 1A46     		mov	r2, r3
+ 199 0036 0849     		ldr	r1, .L9
+ 200 0038 F868     		ldr	r0, [r7, #12]
+ 201 003a FFF7FEFF 		bl	_I2CWrite
+ 202 003e 3861     		str	r0, [r7, #16]
+  74:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (status_int != 0) {
+ 203              		.loc 1 74 8
+ 204 0040 3B69     		ldr	r3, [r7, #16]
+ 205 0042 002B     		cmp	r3, #0
+ 206 0044 01D0     		beq	.L8
+  75:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
+ 207              		.loc 1 75 16
+ 208 0046 EC23     		movs	r3, #236
+ 209 0048 FB75     		strb	r3, [r7, #23]
+ 210              	.L8:
+  76:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+  77:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_PutI2cBus();
+  78:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return Status;
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 6
+
+
+ 211              		.loc 1 78 12
+ 212 004a 97F91730 		ldrsb	r3, [r7, #23]
+ 213              	.L7:
+  79:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** }
+ 214              		.loc 1 79 1
+ 215 004e 1846     		mov	r0, r3
+ 216 0050 1837     		adds	r7, r7, #24
+ 217              		.cfi_def_cfa_offset 8
+ 218 0052 BD46     		mov	sp, r7
+ 219              		.cfi_def_cfa_register 13
+ 220              		@ sp needed
+ 221 0054 80BD     		pop	{r7, pc}
+ 222              	.L10:
+ 223 0056 00BF     		.align	2
+ 224              	.L9:
+ 225 0058 00000000 		.word	_I2CBuffer
+ 226 005c 01000000 		.word	_I2CBuffer+1
+ 227              		.cfi_endproc
+ 228              	.LFE326:
+ 230              		.section	.text.VL53L0X_ReadMulti,"ax",%progbits
+ 231              		.align	1
+ 232              		.global	VL53L0X_ReadMulti
+ 233              		.syntax unified
+ 234              		.thumb
+ 235              		.thumb_func
+ 237              	VL53L0X_ReadMulti:
+ 238              	.LFB327:
+  80:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+  81:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** // the ranging_sensor_comms.dll will take care of the page selection
+  82:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** VL53L0X_Error VL53L0X_ReadMulti(VL53L0X_DEV Dev, uint8_t index, uint8_t *pdata, uint32_t count) {
+ 239              		.loc 1 82 97
+ 240              		.cfi_startproc
+ 241              		@ args = 0, pretend = 0, frame = 24
+ 242              		@ frame_needed = 1, uses_anonymous_args = 0
+ 243 0000 80B5     		push	{r7, lr}
+ 244              		.cfi_def_cfa_offset 8
+ 245              		.cfi_offset 7, -8
+ 246              		.cfi_offset 14, -4
+ 247 0002 86B0     		sub	sp, sp, #24
+ 248              		.cfi_def_cfa_offset 32
+ 249 0004 00AF     		add	r7, sp, #0
+ 250              		.cfi_def_cfa_register 7
+ 251 0006 F860     		str	r0, [r7, #12]
+ 252 0008 7A60     		str	r2, [r7, #4]
+ 253 000a 3B60     		str	r3, [r7]
+ 254 000c 0B46     		mov	r3, r1
+ 255 000e FB72     		strb	r3, [r7, #11]
+  83:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_Error Status = VL53L0X_ERROR_NONE;
+ 256              		.loc 1 83 19
+ 257 0010 0023     		movs	r3, #0
+ 258 0012 FB75     		strb	r3, [r7, #23]
+  84:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     int32_t status_int;
+  85:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_GetI2cBus();
+  86:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status_int = _I2CWrite(Dev, &index, 1);
+ 259              		.loc 1 86 18
+ 260 0014 07F10B03 		add	r3, r7, #11
+ 261 0018 0122     		movs	r2, #1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 7
+
+
+ 262 001a 1946     		mov	r1, r3
+ 263 001c F868     		ldr	r0, [r7, #12]
+ 264 001e FFF7FEFF 		bl	_I2CWrite
+ 265 0022 3861     		str	r0, [r7, #16]
+  87:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (status_int != 0) {
+ 266              		.loc 1 87 8
+ 267 0024 3B69     		ldr	r3, [r7, #16]
+ 268 0026 002B     		cmp	r3, #0
+ 269 0028 02D0     		beq	.L12
+  88:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
+ 270              		.loc 1 88 16
+ 271 002a EC23     		movs	r3, #236
+ 272 002c FB75     		strb	r3, [r7, #23]
+  89:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         goto done;
+ 273              		.loc 1 89 9
+ 274 002e 0CE0     		b	.L13
+ 275              	.L12:
+  90:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+  91:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status_int = _I2CRead(Dev, pdata, count);
+ 276              		.loc 1 91 18
+ 277 0030 3A68     		ldr	r2, [r7]
+ 278 0032 7968     		ldr	r1, [r7, #4]
+ 279 0034 F868     		ldr	r0, [r7, #12]
+ 280 0036 FFF7FEFF 		bl	_I2CRead
+ 281 003a 3861     		str	r0, [r7, #16]
+  92:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (status_int != 0) {
+ 282              		.loc 1 92 8
+ 283 003c 3B69     		ldr	r3, [r7, #16]
+ 284 003e 002B     		cmp	r3, #0
+ 285 0040 02D0     		beq	.L15
+  93:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
+ 286              		.loc 1 93 16
+ 287 0042 EC23     		movs	r3, #236
+ 288 0044 FB75     		strb	r3, [r7, #23]
+ 289 0046 00E0     		b	.L13
+ 290              	.L15:
+  94:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+  95:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** done:
+ 291              		.loc 1 95 1
+ 292 0048 00BF     		nop
+ 293              	.L13:
+  96:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_PutI2cBus();
+  97:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return Status;
+ 294              		.loc 1 97 12
+ 295 004a 97F91730 		ldrsb	r3, [r7, #23]
+  98:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** }
+ 296              		.loc 1 98 1
+ 297 004e 1846     		mov	r0, r3
+ 298 0050 1837     		adds	r7, r7, #24
+ 299              		.cfi_def_cfa_offset 8
+ 300 0052 BD46     		mov	sp, r7
+ 301              		.cfi_def_cfa_register 13
+ 302              		@ sp needed
+ 303 0054 80BD     		pop	{r7, pc}
+ 304              		.cfi_endproc
+ 305              	.LFE327:
+ 307              		.section	.text.VL53L0X_WrByte,"ax",%progbits
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 8
+
+
+ 308              		.align	1
+ 309              		.global	VL53L0X_WrByte
+ 310              		.syntax unified
+ 311              		.thumb
+ 312              		.thumb_func
+ 314              	VL53L0X_WrByte:
+ 315              	.LFB328:
+  99:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 100:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** VL53L0X_Error VL53L0X_WrByte(VL53L0X_DEV Dev, uint8_t index, uint8_t data) {
+ 316              		.loc 1 100 76
+ 317              		.cfi_startproc
+ 318              		@ args = 0, pretend = 0, frame = 16
+ 319              		@ frame_needed = 1, uses_anonymous_args = 0
+ 320 0000 80B5     		push	{r7, lr}
+ 321              		.cfi_def_cfa_offset 8
+ 322              		.cfi_offset 7, -8
+ 323              		.cfi_offset 14, -4
+ 324 0002 84B0     		sub	sp, sp, #16
+ 325              		.cfi_def_cfa_offset 24
+ 326 0004 00AF     		add	r7, sp, #0
+ 327              		.cfi_def_cfa_register 7
+ 328 0006 7860     		str	r0, [r7, #4]
+ 329 0008 0B46     		mov	r3, r1
+ 330 000a FB70     		strb	r3, [r7, #3]
+ 331 000c 1346     		mov	r3, r2
+ 332 000e BB70     		strb	r3, [r7, #2]
+ 101:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_Error Status = VL53L0X_ERROR_NONE;
+ 333              		.loc 1 101 19
+ 334 0010 0023     		movs	r3, #0
+ 335 0012 FB73     		strb	r3, [r7, #15]
+ 102:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     int32_t status_int;
+ 103:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 104:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     _I2CBuffer[0] = index;
+ 336              		.loc 1 104 19
+ 337 0014 0B4A     		ldr	r2, .L19
+ 338 0016 FB78     		ldrb	r3, [r7, #3]
+ 339 0018 1370     		strb	r3, [r2]
+ 105:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     _I2CBuffer[1] = data;
+ 340              		.loc 1 105 19
+ 341 001a 0A4A     		ldr	r2, .L19
+ 342 001c BB78     		ldrb	r3, [r7, #2]
+ 343 001e 5370     		strb	r3, [r2, #1]
+ 106:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 107:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_GetI2cBus();
+ 108:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status_int = _I2CWrite(Dev, _I2CBuffer, 2);
+ 344              		.loc 1 108 18
+ 345 0020 0222     		movs	r2, #2
+ 346 0022 0849     		ldr	r1, .L19
+ 347 0024 7868     		ldr	r0, [r7, #4]
+ 348 0026 FFF7FEFF 		bl	_I2CWrite
+ 349 002a B860     		str	r0, [r7, #8]
+ 109:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (status_int != 0) {
+ 350              		.loc 1 109 8
+ 351 002c BB68     		ldr	r3, [r7, #8]
+ 352 002e 002B     		cmp	r3, #0
+ 353 0030 01D0     		beq	.L17
+ 110:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 9
+
+
+ 354              		.loc 1 110 16
+ 355 0032 EC23     		movs	r3, #236
+ 356 0034 FB73     		strb	r3, [r7, #15]
+ 357              	.L17:
+ 111:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+ 112:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_PutI2cBus();
+ 113:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return Status;
+ 358              		.loc 1 113 12
+ 359 0036 97F90F30 		ldrsb	r3, [r7, #15]
+ 114:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** }
+ 360              		.loc 1 114 1
+ 361 003a 1846     		mov	r0, r3
+ 362 003c 1037     		adds	r7, r7, #16
+ 363              		.cfi_def_cfa_offset 8
+ 364 003e BD46     		mov	sp, r7
+ 365              		.cfi_def_cfa_register 13
+ 366              		@ sp needed
+ 367 0040 80BD     		pop	{r7, pc}
+ 368              	.L20:
+ 369 0042 00BF     		.align	2
+ 370              	.L19:
+ 371 0044 00000000 		.word	_I2CBuffer
+ 372              		.cfi_endproc
+ 373              	.LFE328:
+ 375              		.section	.text.VL53L0X_WrWord,"ax",%progbits
+ 376              		.align	1
+ 377              		.global	VL53L0X_WrWord
+ 378              		.syntax unified
+ 379              		.thumb
+ 380              		.thumb_func
+ 382              	VL53L0X_WrWord:
+ 383              	.LFB329:
+ 115:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 116:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** VL53L0X_Error VL53L0X_WrWord(VL53L0X_DEV Dev, uint8_t index, uint16_t data) {
+ 384              		.loc 1 116 77
+ 385              		.cfi_startproc
+ 386              		@ args = 0, pretend = 0, frame = 16
+ 387              		@ frame_needed = 1, uses_anonymous_args = 0
+ 388 0000 80B5     		push	{r7, lr}
+ 389              		.cfi_def_cfa_offset 8
+ 390              		.cfi_offset 7, -8
+ 391              		.cfi_offset 14, -4
+ 392 0002 84B0     		sub	sp, sp, #16
+ 393              		.cfi_def_cfa_offset 24
+ 394 0004 00AF     		add	r7, sp, #0
+ 395              		.cfi_def_cfa_register 7
+ 396 0006 7860     		str	r0, [r7, #4]
+ 397 0008 0B46     		mov	r3, r1
+ 398 000a FB70     		strb	r3, [r7, #3]
+ 399 000c 1346     		mov	r3, r2	@ movhi
+ 400 000e 3B80     		strh	r3, [r7]	@ movhi
+ 117:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_Error Status = VL53L0X_ERROR_NONE;
+ 401              		.loc 1 117 19
+ 402 0010 0023     		movs	r3, #0
+ 403 0012 FB73     		strb	r3, [r7, #15]
+ 118:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     int32_t status_int;
+ 119:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 10
+
+
+ 120:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     _I2CBuffer[0] = index;
+ 404              		.loc 1 120 19
+ 405 0014 0E4A     		ldr	r2, .L24
+ 406 0016 FB78     		ldrb	r3, [r7, #3]
+ 407 0018 1370     		strb	r3, [r2]
+ 121:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     _I2CBuffer[1] = data >> 8;
+ 408              		.loc 1 121 19
+ 409 001a 3B88     		ldrh	r3, [r7]
+ 410 001c 1B0A     		lsrs	r3, r3, #8
+ 411 001e 9BB2     		uxth	r3, r3
+ 412 0020 DAB2     		uxtb	r2, r3
+ 413 0022 0B4B     		ldr	r3, .L24
+ 414 0024 5A70     		strb	r2, [r3, #1]
+ 122:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     _I2CBuffer[2] = data & 0x00FF;
+ 415              		.loc 1 122 19
+ 416 0026 3B88     		ldrh	r3, [r7]	@ movhi
+ 417 0028 DAB2     		uxtb	r2, r3
+ 418 002a 094B     		ldr	r3, .L24
+ 419 002c 9A70     		strb	r2, [r3, #2]
+ 123:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 124:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_GetI2cBus();
+ 125:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status_int = _I2CWrite(Dev, _I2CBuffer, 3);
+ 420              		.loc 1 125 18
+ 421 002e 0322     		movs	r2, #3
+ 422 0030 0749     		ldr	r1, .L24
+ 423 0032 7868     		ldr	r0, [r7, #4]
+ 424 0034 FFF7FEFF 		bl	_I2CWrite
+ 425 0038 B860     		str	r0, [r7, #8]
+ 126:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (status_int != 0) {
+ 426              		.loc 1 126 8
+ 427 003a BB68     		ldr	r3, [r7, #8]
+ 428 003c 002B     		cmp	r3, #0
+ 429 003e 01D0     		beq	.L22
+ 127:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
+ 430              		.loc 1 127 16
+ 431 0040 EC23     		movs	r3, #236
+ 432 0042 FB73     		strb	r3, [r7, #15]
+ 433              	.L22:
+ 128:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+ 129:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_PutI2cBus();
+ 130:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return Status;
+ 434              		.loc 1 130 12
+ 435 0044 97F90F30 		ldrsb	r3, [r7, #15]
+ 131:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** }
+ 436              		.loc 1 131 1
+ 437 0048 1846     		mov	r0, r3
+ 438 004a 1037     		adds	r7, r7, #16
+ 439              		.cfi_def_cfa_offset 8
+ 440 004c BD46     		mov	sp, r7
+ 441              		.cfi_def_cfa_register 13
+ 442              		@ sp needed
+ 443 004e 80BD     		pop	{r7, pc}
+ 444              	.L25:
+ 445              		.align	2
+ 446              	.L24:
+ 447 0050 00000000 		.word	_I2CBuffer
+ 448              		.cfi_endproc
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 11
+
+
+ 449              	.LFE329:
+ 451              		.section	.text.VL53L0X_WrDWord,"ax",%progbits
+ 452              		.align	1
+ 453              		.global	VL53L0X_WrDWord
+ 454              		.syntax unified
+ 455              		.thumb
+ 456              		.thumb_func
+ 458              	VL53L0X_WrDWord:
+ 459              	.LFB330:
+ 132:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 133:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** VL53L0X_Error VL53L0X_WrDWord(VL53L0X_DEV Dev, uint8_t index, uint32_t data) {
+ 460              		.loc 1 133 78
+ 461              		.cfi_startproc
+ 462              		@ args = 0, pretend = 0, frame = 24
+ 463              		@ frame_needed = 1, uses_anonymous_args = 0
+ 464 0000 80B5     		push	{r7, lr}
+ 465              		.cfi_def_cfa_offset 8
+ 466              		.cfi_offset 7, -8
+ 467              		.cfi_offset 14, -4
+ 468 0002 86B0     		sub	sp, sp, #24
+ 469              		.cfi_def_cfa_offset 32
+ 470 0004 00AF     		add	r7, sp, #0
+ 471              		.cfi_def_cfa_register 7
+ 472 0006 F860     		str	r0, [r7, #12]
+ 473 0008 0B46     		mov	r3, r1
+ 474 000a 7A60     		str	r2, [r7, #4]
+ 475 000c FB72     		strb	r3, [r7, #11]
+ 134:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_Error Status = VL53L0X_ERROR_NONE;
+ 476              		.loc 1 134 19
+ 477 000e 0023     		movs	r3, #0
+ 478 0010 FB75     		strb	r3, [r7, #23]
+ 135:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     int32_t status_int;
+ 136:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     _I2CBuffer[0] = index;
+ 479              		.loc 1 136 19
+ 480 0012 134A     		ldr	r2, .L29
+ 481 0014 FB7A     		ldrb	r3, [r7, #11]
+ 482 0016 1370     		strb	r3, [r2]
+ 137:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     _I2CBuffer[1] = (data >> 24) & 0xFF;
+ 483              		.loc 1 137 27
+ 484 0018 7B68     		ldr	r3, [r7, #4]
+ 485 001a 1B0E     		lsrs	r3, r3, #24
+ 486              		.loc 1 137 19
+ 487 001c DAB2     		uxtb	r2, r3
+ 488 001e 104B     		ldr	r3, .L29
+ 489 0020 5A70     		strb	r2, [r3, #1]
+ 138:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     _I2CBuffer[2] = (data >> 16) & 0xFF;
+ 490              		.loc 1 138 27
+ 491 0022 7B68     		ldr	r3, [r7, #4]
+ 492 0024 1B0C     		lsrs	r3, r3, #16
+ 493              		.loc 1 138 19
+ 494 0026 DAB2     		uxtb	r2, r3
+ 495 0028 0D4B     		ldr	r3, .L29
+ 496 002a 9A70     		strb	r2, [r3, #2]
+ 139:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     _I2CBuffer[3] = (data >> 8)  & 0xFF;
+ 497              		.loc 1 139 27
+ 498 002c 7B68     		ldr	r3, [r7, #4]
+ 499 002e 1B0A     		lsrs	r3, r3, #8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 12
+
+
+ 500              		.loc 1 139 19
+ 501 0030 DAB2     		uxtb	r2, r3
+ 502 0032 0B4B     		ldr	r3, .L29
+ 503 0034 DA70     		strb	r2, [r3, #3]
+ 140:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     _I2CBuffer[4] = (data >> 0 ) & 0xFF;
+ 504              		.loc 1 140 19
+ 505 0036 7B68     		ldr	r3, [r7, #4]
+ 506 0038 DAB2     		uxtb	r2, r3
+ 507 003a 094B     		ldr	r3, .L29
+ 508 003c 1A71     		strb	r2, [r3, #4]
+ 141:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_GetI2cBus();
+ 142:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status_int = _I2CWrite(Dev, _I2CBuffer, 5);
+ 509              		.loc 1 142 18
+ 510 003e 0522     		movs	r2, #5
+ 511 0040 0749     		ldr	r1, .L29
+ 512 0042 F868     		ldr	r0, [r7, #12]
+ 513 0044 FFF7FEFF 		bl	_I2CWrite
+ 514 0048 3861     		str	r0, [r7, #16]
+ 143:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (status_int != 0) {
+ 515              		.loc 1 143 8
+ 516 004a 3B69     		ldr	r3, [r7, #16]
+ 517 004c 002B     		cmp	r3, #0
+ 518 004e 01D0     		beq	.L27
+ 144:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
+ 519              		.loc 1 144 16
+ 520 0050 EC23     		movs	r3, #236
+ 521 0052 FB75     		strb	r3, [r7, #23]
+ 522              	.L27:
+ 145:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+ 146:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_PutI2cBus();
+ 147:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return Status;
+ 523              		.loc 1 147 12
+ 524 0054 97F91730 		ldrsb	r3, [r7, #23]
+ 148:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** }
+ 525              		.loc 1 148 1
+ 526 0058 1846     		mov	r0, r3
+ 527 005a 1837     		adds	r7, r7, #24
+ 528              		.cfi_def_cfa_offset 8
+ 529 005c BD46     		mov	sp, r7
+ 530              		.cfi_def_cfa_register 13
+ 531              		@ sp needed
+ 532 005e 80BD     		pop	{r7, pc}
+ 533              	.L30:
+ 534              		.align	2
+ 535              	.L29:
+ 536 0060 00000000 		.word	_I2CBuffer
+ 537              		.cfi_endproc
+ 538              	.LFE330:
+ 540              		.section	.text.VL53L0X_UpdateByte,"ax",%progbits
+ 541              		.align	1
+ 542              		.global	VL53L0X_UpdateByte
+ 543              		.syntax unified
+ 544              		.thumb
+ 545              		.thumb_func
+ 547              	VL53L0X_UpdateByte:
+ 548              	.LFB331:
+ 149:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 13
+
+
+ 150:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** VL53L0X_Error VL53L0X_UpdateByte(VL53L0X_DEV Dev, uint8_t index, uint8_t AndData, uint8_t OrData) {
+ 549              		.loc 1 150 99
+ 550              		.cfi_startproc
+ 551              		@ args = 0, pretend = 0, frame = 16
+ 552              		@ frame_needed = 1, uses_anonymous_args = 0
+ 553 0000 80B5     		push	{r7, lr}
+ 554              		.cfi_def_cfa_offset 8
+ 555              		.cfi_offset 7, -8
+ 556              		.cfi_offset 14, -4
+ 557 0002 84B0     		sub	sp, sp, #16
+ 558              		.cfi_def_cfa_offset 24
+ 559 0004 00AF     		add	r7, sp, #0
+ 560              		.cfi_def_cfa_register 7
+ 561 0006 7860     		str	r0, [r7, #4]
+ 562 0008 0846     		mov	r0, r1
+ 563 000a 1146     		mov	r1, r2
+ 564 000c 1A46     		mov	r2, r3
+ 565 000e 0346     		mov	r3, r0
+ 566 0010 FB70     		strb	r3, [r7, #3]
+ 567 0012 0B46     		mov	r3, r1
+ 568 0014 BB70     		strb	r3, [r7, #2]
+ 569 0016 1346     		mov	r3, r2
+ 570 0018 7B70     		strb	r3, [r7, #1]
+ 151:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_Error Status = VL53L0X_ERROR_NONE;
+ 571              		.loc 1 151 19
+ 572 001a 0023     		movs	r3, #0
+ 573 001c FB73     		strb	r3, [r7, #15]
+ 152:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     uint8_t data;
+ 153:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 154:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     Status = VL53L0X_RdByte(Dev, index, &data);
+ 574              		.loc 1 154 14
+ 575 001e 07F10E02 		add	r2, r7, #14
+ 576 0022 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 577 0024 1946     		mov	r1, r3
+ 578 0026 7868     		ldr	r0, [r7, #4]
+ 579 0028 FFF7FEFF 		bl	VL53L0X_RdByte
+ 580 002c 0346     		mov	r3, r0
+ 581 002e FB73     		strb	r3, [r7, #15]
+ 155:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (Status) {
+ 582              		.loc 1 155 8
+ 583 0030 97F90F30 		ldrsb	r3, [r7, #15]
+ 584 0034 002B     		cmp	r3, #0
+ 585 0036 10D1     		bne	.L35
+ 156:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         goto done;
+ 157:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+ 158:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     data = (data & AndData) | OrData;
+ 586              		.loc 1 158 10
+ 587 0038 BA7B     		ldrb	r2, [r7, #14]	@ zero_extendqisi2
+ 588 003a BB78     		ldrb	r3, [r7, #2]
+ 589 003c 1340     		ands	r3, r3, r2
+ 590 003e DAB2     		uxtb	r2, r3
+ 591 0040 7B78     		ldrb	r3, [r7, #1]
+ 592 0042 1343     		orrs	r3, r3, r2
+ 593 0044 DBB2     		uxtb	r3, r3
+ 594 0046 BB73     		strb	r3, [r7, #14]
+ 159:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     Status = VL53L0X_WrByte(Dev, index, data);
+ 595              		.loc 1 159 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 14
+
+
+ 596 0048 BA7B     		ldrb	r2, [r7, #14]	@ zero_extendqisi2
+ 597 004a FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 598 004c 1946     		mov	r1, r3
+ 599 004e 7868     		ldr	r0, [r7, #4]
+ 600 0050 FFF7FEFF 		bl	VL53L0X_WrByte
+ 601 0054 0346     		mov	r3, r0
+ 602 0056 FB73     		strb	r3, [r7, #15]
+ 603 0058 00E0     		b	.L33
+ 604              	.L35:
+ 156:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         goto done;
+ 605              		.loc 1 156 9
+ 606 005a 00BF     		nop
+ 607              	.L33:
+ 160:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** done:
+ 161:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return Status;
+ 608              		.loc 1 161 12
+ 609 005c 97F90F30 		ldrsb	r3, [r7, #15]
+ 162:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** }
+ 610              		.loc 1 162 1
+ 611 0060 1846     		mov	r0, r3
+ 612 0062 1037     		adds	r7, r7, #16
+ 613              		.cfi_def_cfa_offset 8
+ 614 0064 BD46     		mov	sp, r7
+ 615              		.cfi_def_cfa_register 13
+ 616              		@ sp needed
+ 617 0066 80BD     		pop	{r7, pc}
+ 618              		.cfi_endproc
+ 619              	.LFE331:
+ 621              		.section	.text.VL53L0X_RdByte,"ax",%progbits
+ 622              		.align	1
+ 623              		.global	VL53L0X_RdByte
+ 624              		.syntax unified
+ 625              		.thumb
+ 626              		.thumb_func
+ 628              	VL53L0X_RdByte:
+ 629              	.LFB332:
+ 163:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 164:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** VL53L0X_Error VL53L0X_RdByte(VL53L0X_DEV Dev, uint8_t index, uint8_t *data) {
+ 630              		.loc 1 164 77
+ 631              		.cfi_startproc
+ 632              		@ args = 0, pretend = 0, frame = 24
+ 633              		@ frame_needed = 1, uses_anonymous_args = 0
+ 634 0000 80B5     		push	{r7, lr}
+ 635              		.cfi_def_cfa_offset 8
+ 636              		.cfi_offset 7, -8
+ 637              		.cfi_offset 14, -4
+ 638 0002 86B0     		sub	sp, sp, #24
+ 639              		.cfi_def_cfa_offset 32
+ 640 0004 00AF     		add	r7, sp, #0
+ 641              		.cfi_def_cfa_register 7
+ 642 0006 F860     		str	r0, [r7, #12]
+ 643 0008 0B46     		mov	r3, r1
+ 644 000a 7A60     		str	r2, [r7, #4]
+ 645 000c FB72     		strb	r3, [r7, #11]
+ 165:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_Error Status = VL53L0X_ERROR_NONE;
+ 646              		.loc 1 165 19
+ 647 000e 0023     		movs	r3, #0
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 15
+
+
+ 648 0010 FB75     		strb	r3, [r7, #23]
+ 166:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     int32_t status_int;
+ 167:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 168:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_GetI2cBus();
+ 169:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status_int = _I2CWrite(Dev, &index, 1);
+ 649              		.loc 1 169 18
+ 650 0012 07F10B03 		add	r3, r7, #11
+ 651 0016 0122     		movs	r2, #1
+ 652 0018 1946     		mov	r1, r3
+ 653 001a F868     		ldr	r0, [r7, #12]
+ 654 001c FFF7FEFF 		bl	_I2CWrite
+ 655 0020 3861     		str	r0, [r7, #16]
+ 170:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if( status_int ){
+ 656              		.loc 1 170 7
+ 657 0022 3B69     		ldr	r3, [r7, #16]
+ 658 0024 002B     		cmp	r3, #0
+ 659 0026 02D0     		beq	.L37
+ 171:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
+ 660              		.loc 1 171 16
+ 661 0028 EC23     		movs	r3, #236
+ 662 002a FB75     		strb	r3, [r7, #23]
+ 172:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         goto done;
+ 663              		.loc 1 172 9
+ 664 002c 0CE0     		b	.L38
+ 665              	.L37:
+ 173:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+ 174:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status_int = _I2CRead(Dev, data, 1);
+ 666              		.loc 1 174 18
+ 667 002e 0122     		movs	r2, #1
+ 668 0030 7968     		ldr	r1, [r7, #4]
+ 669 0032 F868     		ldr	r0, [r7, #12]
+ 670 0034 FFF7FEFF 		bl	_I2CRead
+ 671 0038 3861     		str	r0, [r7, #16]
+ 175:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (status_int != 0) {
+ 672              		.loc 1 175 8
+ 673 003a 3B69     		ldr	r3, [r7, #16]
+ 674 003c 002B     		cmp	r3, #0
+ 675 003e 02D0     		beq	.L40
+ 176:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
+ 676              		.loc 1 176 16
+ 677 0040 EC23     		movs	r3, #236
+ 678 0042 FB75     		strb	r3, [r7, #23]
+ 679 0044 00E0     		b	.L38
+ 680              	.L40:
+ 177:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+ 178:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** done:
+ 681              		.loc 1 178 1
+ 682 0046 00BF     		nop
+ 683              	.L38:
+ 179:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_PutI2cBus();
+ 180:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return Status;
+ 684              		.loc 1 180 12
+ 685 0048 97F91730 		ldrsb	r3, [r7, #23]
+ 181:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** }
+ 686              		.loc 1 181 1
+ 687 004c 1846     		mov	r0, r3
+ 688 004e 1837     		adds	r7, r7, #24
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 16
+
+
+ 689              		.cfi_def_cfa_offset 8
+ 690 0050 BD46     		mov	sp, r7
+ 691              		.cfi_def_cfa_register 13
+ 692              		@ sp needed
+ 693 0052 80BD     		pop	{r7, pc}
+ 694              		.cfi_endproc
+ 695              	.LFE332:
+ 697              		.section	.text.VL53L0X_RdWord,"ax",%progbits
+ 698              		.align	1
+ 699              		.global	VL53L0X_RdWord
+ 700              		.syntax unified
+ 701              		.thumb
+ 702              		.thumb_func
+ 704              	VL53L0X_RdWord:
+ 705              	.LFB333:
+ 182:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 183:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** VL53L0X_Error VL53L0X_RdWord(VL53L0X_DEV Dev, uint8_t index, uint16_t *data) {
+ 706              		.loc 1 183 78
+ 707              		.cfi_startproc
+ 708              		@ args = 0, pretend = 0, frame = 24
+ 709              		@ frame_needed = 1, uses_anonymous_args = 0
+ 710 0000 80B5     		push	{r7, lr}
+ 711              		.cfi_def_cfa_offset 8
+ 712              		.cfi_offset 7, -8
+ 713              		.cfi_offset 14, -4
+ 714 0002 86B0     		sub	sp, sp, #24
+ 715              		.cfi_def_cfa_offset 32
+ 716 0004 00AF     		add	r7, sp, #0
+ 717              		.cfi_def_cfa_register 7
+ 718 0006 F860     		str	r0, [r7, #12]
+ 719 0008 0B46     		mov	r3, r1
+ 720 000a 7A60     		str	r2, [r7, #4]
+ 721 000c FB72     		strb	r3, [r7, #11]
+ 184:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_Error Status = VL53L0X_ERROR_NONE;
+ 722              		.loc 1 184 19
+ 723 000e 0023     		movs	r3, #0
+ 724 0010 FB75     		strb	r3, [r7, #23]
+ 185:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     int32_t status_int;
+ 186:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 187:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_GetI2cBus();
+ 188:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status_int = _I2CWrite(Dev, &index, 1);
+ 725              		.loc 1 188 18
+ 726 0012 07F10B03 		add	r3, r7, #11
+ 727 0016 0122     		movs	r2, #1
+ 728 0018 1946     		mov	r1, r3
+ 729 001a F868     		ldr	r0, [r7, #12]
+ 730 001c FFF7FEFF 		bl	_I2CWrite
+ 731 0020 3861     		str	r0, [r7, #16]
+ 189:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 190:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if( status_int ){
+ 732              		.loc 1 190 7
+ 733 0022 3B69     		ldr	r3, [r7, #16]
+ 734 0024 002B     		cmp	r3, #0
+ 735 0026 02D0     		beq	.L42
+ 191:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
+ 736              		.loc 1 191 16
+ 737 0028 EC23     		movs	r3, #236
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 17
+
+
+ 738 002a FB75     		strb	r3, [r7, #23]
+ 192:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         goto done;
+ 739              		.loc 1 192 9
+ 740 002c 17E0     		b	.L43
+ 741              	.L42:
+ 193:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+ 194:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status_int = _I2CRead(Dev, _I2CBuffer, 2);
+ 742              		.loc 1 194 18
+ 743 002e 0222     		movs	r2, #2
+ 744 0030 0E49     		ldr	r1, .L46
+ 745 0032 F868     		ldr	r0, [r7, #12]
+ 746 0034 FFF7FEFF 		bl	_I2CRead
+ 747 0038 3861     		str	r0, [r7, #16]
+ 195:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (status_int != 0) {
+ 748              		.loc 1 195 8
+ 749 003a 3B69     		ldr	r3, [r7, #16]
+ 750 003c 002B     		cmp	r3, #0
+ 751 003e 02D0     		beq	.L44
+ 196:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
+ 752              		.loc 1 196 16
+ 753 0040 EC23     		movs	r3, #236
+ 754 0042 FB75     		strb	r3, [r7, #23]
+ 197:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         goto done;
+ 755              		.loc 1 197 9
+ 756 0044 0BE0     		b	.L43
+ 757              	.L44:
+ 198:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+ 199:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 200:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     *data = ((uint16_t)_I2CBuffer[0]<<8) + (uint16_t)_I2CBuffer[1];
+ 758              		.loc 1 200 34
+ 759 0046 094B     		ldr	r3, .L46
+ 760 0048 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 761 004a 9BB2     		uxth	r3, r3
+ 762              		.loc 1 200 37
+ 763 004c 1B02     		lsls	r3, r3, #8
+ 764 004e 9AB2     		uxth	r2, r3
+ 765              		.loc 1 200 64
+ 766 0050 064B     		ldr	r3, .L46
+ 767 0052 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 768 0054 9BB2     		uxth	r3, r3
+ 769              		.loc 1 200 42
+ 770 0056 1344     		add	r3, r3, r2
+ 771 0058 9AB2     		uxth	r2, r3
+ 772              		.loc 1 200 11
+ 773 005a 7B68     		ldr	r3, [r7, #4]
+ 774 005c 1A80     		strh	r2, [r3]	@ movhi
+ 775              	.L43:
+ 201:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** done:
+ 202:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_PutI2cBus();
+ 203:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return Status;
+ 776              		.loc 1 203 12
+ 777 005e 97F91730 		ldrsb	r3, [r7, #23]
+ 204:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** }
+ 778              		.loc 1 204 1
+ 779 0062 1846     		mov	r0, r3
+ 780 0064 1837     		adds	r7, r7, #24
+ 781              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 18
+
+
+ 782 0066 BD46     		mov	sp, r7
+ 783              		.cfi_def_cfa_register 13
+ 784              		@ sp needed
+ 785 0068 80BD     		pop	{r7, pc}
+ 786              	.L47:
+ 787 006a 00BF     		.align	2
+ 788              	.L46:
+ 789 006c 00000000 		.word	_I2CBuffer
+ 790              		.cfi_endproc
+ 791              	.LFE333:
+ 793              		.section	.text.VL53L0X_RdDWord,"ax",%progbits
+ 794              		.align	1
+ 795              		.global	VL53L0X_RdDWord
+ 796              		.syntax unified
+ 797              		.thumb
+ 798              		.thumb_func
+ 800              	VL53L0X_RdDWord:
+ 801              	.LFB334:
+ 205:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 206:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** VL53L0X_Error VL53L0X_RdDWord(VL53L0X_DEV Dev, uint8_t index, uint32_t *data) {
+ 802              		.loc 1 206 79
+ 803              		.cfi_startproc
+ 804              		@ args = 0, pretend = 0, frame = 24
+ 805              		@ frame_needed = 1, uses_anonymous_args = 0
+ 806 0000 80B5     		push	{r7, lr}
+ 807              		.cfi_def_cfa_offset 8
+ 808              		.cfi_offset 7, -8
+ 809              		.cfi_offset 14, -4
+ 810 0002 86B0     		sub	sp, sp, #24
+ 811              		.cfi_def_cfa_offset 32
+ 812 0004 00AF     		add	r7, sp, #0
+ 813              		.cfi_def_cfa_register 7
+ 814 0006 F860     		str	r0, [r7, #12]
+ 815 0008 0B46     		mov	r3, r1
+ 816 000a 7A60     		str	r2, [r7, #4]
+ 817 000c FB72     		strb	r3, [r7, #11]
+ 207:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_Error Status = VL53L0X_ERROR_NONE;
+ 818              		.loc 1 207 19
+ 819 000e 0023     		movs	r3, #0
+ 820 0010 FB75     		strb	r3, [r7, #23]
+ 208:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     int32_t status_int;
+ 209:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 210:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_GetI2cBus();
+ 211:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status_int = _I2CWrite(Dev, &index, 1);
+ 821              		.loc 1 211 18
+ 822 0012 07F10B03 		add	r3, r7, #11
+ 823 0016 0122     		movs	r2, #1
+ 824 0018 1946     		mov	r1, r3
+ 825 001a F868     		ldr	r0, [r7, #12]
+ 826 001c FFF7FEFF 		bl	_I2CWrite
+ 827 0020 3861     		str	r0, [r7, #16]
+ 212:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (status_int != 0) {
+ 828              		.loc 1 212 8
+ 829 0022 3B69     		ldr	r3, [r7, #16]
+ 830 0024 002B     		cmp	r3, #0
+ 831 0026 02D0     		beq	.L49
+ 213:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 19
+
+
+ 832              		.loc 1 213 16
+ 833 0028 EC23     		movs	r3, #236
+ 834 002a FB75     		strb	r3, [r7, #23]
+ 214:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         goto done;
+ 835              		.loc 1 214 9
+ 836 002c 1BE0     		b	.L50
+ 837              	.L49:
+ 215:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+ 216:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status_int = _I2CRead(Dev, _I2CBuffer, 4);
+ 838              		.loc 1 216 18
+ 839 002e 0422     		movs	r2, #4
+ 840 0030 1049     		ldr	r1, .L53
+ 841 0032 F868     		ldr	r0, [r7, #12]
+ 842 0034 FFF7FEFF 		bl	_I2CRead
+ 843 0038 3861     		str	r0, [r7, #16]
+ 217:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     if (status_int != 0) {
+ 844              		.loc 1 217 8
+ 845 003a 3B69     		ldr	r3, [r7, #16]
+ 846 003c 002B     		cmp	r3, #0
+ 847 003e 02D0     		beq	.L51
+ 218:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
+ 848              		.loc 1 218 16
+ 849 0040 EC23     		movs	r3, #236
+ 850 0042 FB75     		strb	r3, [r7, #23]
+ 219:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         goto done;
+ 851              		.loc 1 219 9
+ 852 0044 0FE0     		b	.L50
+ 853              	.L51:
+ 220:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
+ 221:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 222:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     *data = ((uint32_t)_I2CBuffer[0]<<24) + ((uint32_t)_I2CBuffer[1]<<16) + ((uint32_t)_I2CBuffer[2
+ 854              		.loc 1 222 34
+ 855 0046 0B4B     		ldr	r3, .L53
+ 856 0048 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 857              		.loc 1 222 37
+ 858 004a 1A06     		lsls	r2, r3, #24
+ 859              		.loc 1 222 66
+ 860 004c 094B     		ldr	r3, .L53
+ 861 004e 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 862              		.loc 1 222 69
+ 863 0050 1B04     		lsls	r3, r3, #16
+ 864              		.loc 1 222 43
+ 865 0052 1A44     		add	r2, r2, r3
+ 866              		.loc 1 222 98
+ 867 0054 074B     		ldr	r3, .L53
+ 868 0056 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 869              		.loc 1 222 101
+ 870 0058 1B02     		lsls	r3, r3, #8
+ 871              		.loc 1 222 75
+ 872 005a 1344     		add	r3, r3, r2
+ 873              		.loc 1 222 128
+ 874 005c 054A     		ldr	r2, .L53
+ 875 005e D278     		ldrb	r2, [r2, #3]	@ zero_extendqisi2
+ 876              		.loc 1 222 106
+ 877 0060 1A44     		add	r2, r2, r3
+ 878              		.loc 1 222 11
+ 879 0062 7B68     		ldr	r3, [r7, #4]
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 20
+
+
+ 880 0064 1A60     		str	r2, [r3]
+ 881              	.L50:
+ 223:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 224:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** done:
+ 225:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_PutI2cBus();
+ 226:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return Status;
+ 882              		.loc 1 226 12
+ 883 0066 97F91730 		ldrsb	r3, [r7, #23]
+ 227:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** }
+ 884              		.loc 1 227 1
+ 885 006a 1846     		mov	r0, r3
+ 886 006c 1837     		adds	r7, r7, #24
+ 887              		.cfi_def_cfa_offset 8
+ 888 006e BD46     		mov	sp, r7
+ 889              		.cfi_def_cfa_register 13
+ 890              		@ sp needed
+ 891 0070 80BD     		pop	{r7, pc}
+ 892              	.L54:
+ 893 0072 00BF     		.align	2
+ 894              	.L53:
+ 895 0074 00000000 		.word	_I2CBuffer
+ 896              		.cfi_endproc
+ 897              	.LFE334:
+ 899              		.section	.text.VL53L0X_PollingDelay,"ax",%progbits
+ 900              		.align	1
+ 901              		.global	VL53L0X_PollingDelay
+ 902              		.syntax unified
+ 903              		.thumb
+ 904              		.thumb_func
+ 906              	VL53L0X_PollingDelay:
+ 907              	.LFB335:
+ 228:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 229:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** VL53L0X_Error VL53L0X_PollingDelay(VL53L0X_DEV Dev) {
+ 908              		.loc 1 229 53
+ 909              		.cfi_startproc
+ 910              		@ args = 0, pretend = 0, frame = 16
+ 911              		@ frame_needed = 1, uses_anonymous_args = 0
+ 912 0000 80B5     		push	{r7, lr}
+ 913              		.cfi_def_cfa_offset 8
+ 914              		.cfi_offset 7, -8
+ 915              		.cfi_offset 14, -4
+ 916 0002 84B0     		sub	sp, sp, #16
+ 917              		.cfi_def_cfa_offset 24
+ 918 0004 00AF     		add	r7, sp, #0
+ 919              		.cfi_def_cfa_register 7
+ 920 0006 7860     		str	r0, [r7, #4]
+ 230:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_Error status = VL53L0X_ERROR_NONE;
+ 921              		.loc 1 230 19
+ 922 0008 0023     		movs	r3, #0
+ 923 000a FB73     		strb	r3, [r7, #15]
+ 231:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
+ 232:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     // do nothing
+ 233:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_OsDelay();
+ 924              		.loc 1 233 5
+ 925 000c 0220     		movs	r0, #2
+ 926 000e FFF7FEFF 		bl	HAL_Delay
+ 234:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return status;
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 21
+
+
+ 927              		.loc 1 234 12
+ 928 0012 97F90F30 		ldrsb	r3, [r7, #15]
+ 235:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** }
+ 929              		.loc 1 235 1
+ 930 0016 1846     		mov	r0, r3
+ 931 0018 1037     		adds	r7, r7, #16
+ 932              		.cfi_def_cfa_offset 8
+ 933 001a BD46     		mov	sp, r7
+ 934              		.cfi_def_cfa_register 13
+ 935              		@ sp needed
+ 936 001c 80BD     		pop	{r7, pc}
+ 937              		.cfi_endproc
+ 938              	.LFE335:
+ 940              		.text
+ 941              	.Letext0:
+ 942              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 943              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 944              		.file 4 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 945              		.file 5 "Drivers/VL53L0X/platform/inc/vl53l0x_types.h"
+ 946              		.file 6 "Drivers/VL53L0X/core/inc/vl53l0x_device.h"
+ 947              		.file 7 "Drivers/VL53L0X/core/inc/vl53l0x_def.h"
+ 948              		.file 8 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4p5xx.h"
+ 949              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 950              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 951              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h"
+ 952              		.file 12 "Drivers/VL53L0X/platform/inc/vl53l0x_platform.h"
+ 953              		.file 13 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\
+ 954              		.file 14 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s 			page 22
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 vl53l0x_platform.c
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:24     .bss._I2CBuffer:0000000000000000 _I2CBuffer
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:21     .bss._I2CBuffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:27     .text._I2CWrite:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:33     .text._I2CWrite:0000000000000000 _I2CWrite
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:88     .text._I2CRead:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:94     .text._I2CRead:0000000000000000 _I2CRead
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:150    .text.VL53L0X_WriteMulti:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:156    .text.VL53L0X_WriteMulti:0000000000000000 VL53L0X_WriteMulti
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:225    .text.VL53L0X_WriteMulti:0000000000000058 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:231    .text.VL53L0X_ReadMulti:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:237    .text.VL53L0X_ReadMulti:0000000000000000 VL53L0X_ReadMulti
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:308    .text.VL53L0X_WrByte:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:314    .text.VL53L0X_WrByte:0000000000000000 VL53L0X_WrByte
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:371    .text.VL53L0X_WrByte:0000000000000044 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:376    .text.VL53L0X_WrWord:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:382    .text.VL53L0X_WrWord:0000000000000000 VL53L0X_WrWord
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:447    .text.VL53L0X_WrWord:0000000000000050 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:452    .text.VL53L0X_WrDWord:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:458    .text.VL53L0X_WrDWord:0000000000000000 VL53L0X_WrDWord
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:536    .text.VL53L0X_WrDWord:0000000000000060 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:541    .text.VL53L0X_UpdateByte:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:547    .text.VL53L0X_UpdateByte:0000000000000000 VL53L0X_UpdateByte
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:628    .text.VL53L0X_RdByte:0000000000000000 VL53L0X_RdByte
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:622    .text.VL53L0X_RdByte:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:698    .text.VL53L0X_RdWord:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:704    .text.VL53L0X_RdWord:0000000000000000 VL53L0X_RdWord
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:789    .text.VL53L0X_RdWord:000000000000006c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:794    .text.VL53L0X_RdDWord:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:800    .text.VL53L0X_RdDWord:0000000000000000 VL53L0X_RdDWord
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:895    .text.VL53L0X_RdDWord:0000000000000074 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:900    .text.VL53L0X_PollingDelay:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZ6AecJ.s:906    .text.VL53L0X_PollingDelay:0000000000000000 VL53L0X_PollingDelay
+
+UNDEFINED SYMBOLS
+HAL_I2C_Master_Transmit
+HAL_I2C_Master_Receive
+memcpy
+HAL_Delay

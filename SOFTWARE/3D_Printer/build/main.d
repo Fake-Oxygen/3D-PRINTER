@@ -48,8 +48,7 @@ build/main.o: Core/Src/main.c Core/Inc/main.h \
  Drivers/VL53L0X/platform/inc/vl53l0x_types.h \
  Drivers/VL53L0X/platform/inc/vl53l0x_platform.h \
  Drivers/VL53L0X/core/inc/vl53l0x_def.h \
- Drivers/VL53L0X/platform/inc/vl53l0x_platform_log.h \
- Drivers/VL53L0X/platform/inc/vl53l0x_i2c_platform.h
+ Drivers/VL53L0X/platform/inc/vl53l0x_platform_log.h
 Core/Inc/main.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 Core/Inc/stm32l4xx_hal_conf.h:
@@ -109,4 +108,3 @@ Drivers/VL53L0X/platform/inc/vl53l0x_types.h:
 Drivers/VL53L0X/platform/inc/vl53l0x_platform.h:
 Drivers/VL53L0X/core/inc/vl53l0x_def.h:
 Drivers/VL53L0X/platform/inc/vl53l0x_platform_log.h:
-Drivers/VL53L0X/platform/inc/vl53l0x_i2c_platform.h:

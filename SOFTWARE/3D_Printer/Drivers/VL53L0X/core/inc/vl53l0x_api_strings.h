@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright © 2016, STMicroelectronics International N.V.
+Copyright © 2016, STMicroelectronics International N.V.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -56,8 +56,7 @@ VL53L0X_Error VL53L0X_get_sequence_steps_info(
 		VL53L0X_SequenceStepId SequenceStepId,
 		char *pSequenceStepsString);
 
-VL53L0X_Error VL53L0X_get_limit_check_info(VL53L0X_DEV Dev,
-	uint16_t LimitCheckId,
+VL53L0X_Error VL53L0X_get_limit_check_info(VL53L0X_DEV Dev, uint16_t LimitCheckId,
 	char *pLimitCheckString);
 
 

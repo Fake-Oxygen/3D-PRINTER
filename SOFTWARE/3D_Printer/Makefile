@@ -71,7 +71,13 @@ Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.c \
-Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng_ex.c
+Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng_ex. \
+Drivers/VL53L0X/core/src/vl53l0x_api.c \
+Drivers/VL53L0X/core/src/vl53l0x_api_calibration.c \
+Drivers/VL53L0X/core/src/vl53l0x_api_core. \
+Drivers/VL53L0X/core/src/vl53l0x_api_ranging.c \
+Drivers/VL53L0X/core/src/vl53l0x_api_strings.c \
+Drivers/VL53L0X/platform/src/vl53l0x_platform.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -133,8 +139,8 @@ C_INCLUDES =  \
 -IDrivers/STM32L4xx_HAL_Driver/Inc/Legacy \
 -IDrivers/CMSIS/Device/ST/STM32L4xx/Include \
 -IDrivers/CMSIS/Include \
--IDrivers/VL53LL0X/core/inc \
--IDrivers/VL53LL0X/platform/inc
+-IDrivers/VL53L0X/core/inc \
+-IDrivers/VL53L0X/platform/inc
 
 
 # compile gcc flags

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright © 2016, STMicroelectronics International N.V.
+Copyright © 2016, STMicroelectronics International N.V.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -37,8 +37,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "vl53l0x_types.h"
 
 
-/** @defgroup VL53L0X_DevSpecDefines_group VL53L0X cut1.1 Device
- * Specific Defines
+/** @defgroup VL53L0X_DevSpecDefines_group VL53L0X cut1.1 Device Specific Defines
  *  @brief VL53L0X cut1.1 Device Specific Defines
  *  @{
  */
@@ -54,22 +53,22 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 typedef uint8_t VL53L0X_DeviceError;
 
-#define VL53L0X_DEVICEERROR_NONE                       ((VL53L0X_DeviceError) 0)
+#define VL53L0X_DEVICEERROR_NONE                        ((VL53L0X_DeviceError) 0)
 	/*!< 0  NoError  */
-#define VL53L0X_DEVICEERROR_VCSELCONTINUITYTESTFAILURE ((VL53L0X_DeviceError) 1)
-#define VL53L0X_DEVICEERROR_VCSELWATCHDOGTESTFAILURE   ((VL53L0X_DeviceError) 2)
-#define VL53L0X_DEVICEERROR_NOVHVVALUEFOUND            ((VL53L0X_DeviceError) 3)
-#define VL53L0X_DEVICEERROR_MSRCNOTARGET               ((VL53L0X_DeviceError) 4)
-#define VL53L0X_DEVICEERROR_SNRCHECK                   ((VL53L0X_DeviceError) 5)
-#define VL53L0X_DEVICEERROR_RANGEPHASECHECK            ((VL53L0X_DeviceError) 6)
-#define VL53L0X_DEVICEERROR_SIGMATHRESHOLDCHECK        ((VL53L0X_DeviceError) 7)
-#define VL53L0X_DEVICEERROR_TCC                        ((VL53L0X_DeviceError) 8)
-#define VL53L0X_DEVICEERROR_PHASECONSISTENCY           ((VL53L0X_DeviceError) 9)
-#define VL53L0X_DEVICEERROR_MINCLIP                   ((VL53L0X_DeviceError) 10)
-#define VL53L0X_DEVICEERROR_RANGECOMPLETE             ((VL53L0X_DeviceError) 11)
-#define VL53L0X_DEVICEERROR_ALGOUNDERFLOW             ((VL53L0X_DeviceError) 12)
-#define VL53L0X_DEVICEERROR_ALGOOVERFLOW              ((VL53L0X_DeviceError) 13)
-#define VL53L0X_DEVICEERROR_RANGEIGNORETHRESHOLD      ((VL53L0X_DeviceError) 14)
+#define VL53L0X_DEVICEERROR_VCSELCONTINUITYTESTFAILURE  ((VL53L0X_DeviceError) 1)
+#define VL53L0X_DEVICEERROR_VCSELWATCHDOGTESTFAILURE    ((VL53L0X_DeviceError) 2)
+#define VL53L0X_DEVICEERROR_NOVHVVALUEFOUND             ((VL53L0X_DeviceError) 3)
+#define VL53L0X_DEVICEERROR_MSRCNOTARGET                ((VL53L0X_DeviceError) 4)
+#define VL53L0X_DEVICEERROR_SNRCHECK                    ((VL53L0X_DeviceError) 5)
+#define VL53L0X_DEVICEERROR_RANGEPHASECHECK             ((VL53L0X_DeviceError) 6)
+#define VL53L0X_DEVICEERROR_SIGMATHRESHOLDCHECK         ((VL53L0X_DeviceError) 7)
+#define VL53L0X_DEVICEERROR_TCC                         ((VL53L0X_DeviceError) 8)
+#define VL53L0X_DEVICEERROR_PHASECONSISTENCY            ((VL53L0X_DeviceError) 9)
+#define VL53L0X_DEVICEERROR_MINCLIP                     ((VL53L0X_DeviceError) 10)
+#define VL53L0X_DEVICEERROR_RANGECOMPLETE               ((VL53L0X_DeviceError) 11)
+#define VL53L0X_DEVICEERROR_ALGOUNDERFLOW               ((VL53L0X_DeviceError) 12)
+#define VL53L0X_DEVICEERROR_ALGOOVERFLOW                ((VL53L0X_DeviceError) 13)
+#define VL53L0X_DEVICEERROR_RANGEIGNORETHRESHOLD        ((VL53L0X_DeviceError) 14)
 
 /** @} end of VL53L0X_DeviceError_group */
 
@@ -105,7 +104,7 @@ typedef uint8_t VL53L0X_GpioFunctionality;
 #define VL53L0X_GPIOFUNCTIONALITY_THRESHOLD_CROSSED_LOW   \
 	((VL53L0X_GpioFunctionality)  1) /*!< Level Low (value < thresh_low)  */
 #define VL53L0X_GPIOFUNCTIONALITY_THRESHOLD_CROSSED_HIGH   \
-	((VL53L0X_GpioFunctionality)  2) /*!< Level High (value>thresh_high) */
+	((VL53L0X_GpioFunctionality)  2) /*!< Level High (value > thresh_high) */
 #define VL53L0X_GPIOFUNCTIONALITY_THRESHOLD_CROSSED_OUT    \
 	((VL53L0X_GpioFunctionality)  3)
 	/*!< Out Of Window (value < thresh_low OR value > thresh_high)  */
@@ -125,22 +124,18 @@ typedef uint8_t VL53L0X_GpioFunctionality;
 	/** mask existing bit in #VL53L0X_REG_SYSRANGE_START*/
 	#define VL53L0X_REG_SYSRANGE_MODE_MASK          0x0F
 	/** bit 0 in #VL53L0X_REG_SYSRANGE_START write 1 toggle state in
-	 * continuous mode and arm next shot in single shot mode
-	 */
+	 * continuous mode and arm next shot in single shot mode */
 	#define VL53L0X_REG_SYSRANGE_MODE_START_STOP    0x01
 	/** bit 1 write 0 in #VL53L0X_REG_SYSRANGE_START set single shot mode */
 	#define VL53L0X_REG_SYSRANGE_MODE_SINGLESHOT    0x00
 	/** bit 1 write 1 in #VL53L0X_REG_SYSRANGE_START set back-to-back
-	 *  operation mode
-	 */
+	 *  operation mode */
 	#define VL53L0X_REG_SYSRANGE_MODE_BACKTOBACK    0x02
 	/** bit 2 write 1 in #VL53L0X_REG_SYSRANGE_START set timed operation
-	 *  mode
-	 */
+	 *  mode */
 	#define VL53L0X_REG_SYSRANGE_MODE_TIMED         0x04
 	/** bit 3 write 1 in #VL53L0X_REG_SYSRANGE_START set histogram operation
-	 *  mode
-	 */
+	 *  mode */
 	#define VL53L0X_REG_SYSRANGE_MODE_HISTOGRAM     0x08
 
 

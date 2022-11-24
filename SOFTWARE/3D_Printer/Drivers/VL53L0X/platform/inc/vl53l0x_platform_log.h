@@ -38,6 +38,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 extern "C" {
 #endif
 
+
 /**
  * @file vl53l0x_platform_log.h
  *
@@ -70,47 +71,49 @@ enum {
 };
 
 
-#ifdef VL53L0X_LOG_ENABLE
+#if defined(VL53L0X_LOG_ENABLE) && (TRACE_UART==1)
 
-#include <sys/time.h>
+#include <stdarg.h>
+extern int uart_printf(const char *msg, ...);
+extern int uart_vprintf(const char *msg, va_list ap);
+
+#define trace_printf uart_printf
+#define trace_vprintf uart_vprintf
+
 
 extern uint32_t _trace_level;
 
 
 
 int32_t VL53L0X_trace_config(char *filename, uint32_t modules, uint32_t level, uint32_t functions);
-
 void trace_print_module_function(uint32_t module, uint32_t level, uint32_t function, const char *format, ...);
 
 
 //extern FILE * log_file;
 
-#define LOG_GET_TIME() (int)clock()
+#define LOG_GET_TIME() (int)HAL_GetTick()
 
 #define _LOG_FUNCTION_START(module, fmt, ... ) \
         trace_print_module_function(module, _trace_level, TRACE_FUNCTION_ALL, "%ld <START> %s "fmt"\n", LOG_GET_TIME(), __FUNCTION__, ##__VA_ARGS__);
 
 #define _LOG_FUNCTION_END(module, status, ... )\
-        trace_print_module_function(module, _trace_level, TRACE_FUNCTION_ALL, "%ld <END> %s %d\n", LOG_GET_TIME(), __FUNCTION__, (int)status, ##__VA_ARGS__)
+        trace_print_module_function(module, _trace_level, TRACE_FUNCTION_ALL, "%d <END> %s %d\n", LOG_GET_TIME(), __FUNCTION__, (int)status, ##__VA_ARGS__)
 
 #define _LOG_FUNCTION_END_FMT(module, status, fmt, ... )\
-        trace_print_module_function(module, _trace_level, TRACE_FUNCTION_ALL, "%ld <END> %s %d "fmt"\n", LOG_GET_TIME(),  __FUNCTION__, (int)status,##__VA_ARGS__)
+        trace_print_module_function(module, _trace_level, TRACE_FUNCTION_ALL, "%d <END> %s %d "fmt"\n", LOG_GET_TIME(),  __FUNCTION__, (int)status,##__VA_ARGS__)
 
-// __func__ is gcc only
-//#define VL53L0X_ErrLog( fmt, ...)  fprintf(stderr, "VL53L0X_ErrLog %s" fmt "\n", __func__, ##__VA_ARGS__)
 
-#else /* VL53L0X_LOG_ENABLE no logging */
+#else /* VL53L0X_LOG_ENABLE no logging or no TRACE_UART */
     #define VL53L0X_ErrLog(...) (void)0
     #define _LOG_FUNCTION_START(module, fmt, ... ) (void)0
     #define _LOG_FUNCTION_END(module, status, ... ) (void)0
     #define _LOG_FUNCTION_END_FMT(module, status, fmt, ... ) (void)0
+    #define trace_vprintf(...) (void)0
+    #define VL53L0X_trace_config(...) (void)0
+
 #endif /* else */
 
-#define VL53L0X_COPYSTRING(str, ...) strcpy(str, ##__VA_ARGS__)
-
-#ifdef __cplusplus
-}
-#endif
+#define VL53L0_COPYSTRING(str, ...) strcpy(str, ##__VA_ARGS__)
 
 #endif  /* _VL53L0X_PLATFORM_LOG_H_ */
 
