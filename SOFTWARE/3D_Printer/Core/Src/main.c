@@ -224,7 +224,7 @@ int main(void)
   VL53L0X_SetLimitCheckEnable(Dev, VL53L0X_CHECKENABLE_SIGNAL_RATE_FINAL_RANGE, 1);
   VL53L0X_SetLimitCheckValue(Dev, VL53L0X_CHECKENABLE_SIGNAL_RATE_FINAL_RANGE, (FixPoint1616_t)(0.1*65536));
   VL53L0X_SetLimitCheckValue(Dev, VL53L0X_CHECKENABLE_SIGMA_FINAL_RANGE, (FixPoint1616_t)(60*65536));
-  VL53L0X_SetMeasurementTimingBudgetMicroSeconds(Dev, 33000);
+  VL53L0X_SetMeasurementTimingBudgetMicroSeconds(Dev, 2000000);
   VL53L0X_SetVcselPulsePeriod(Dev, VL53L0X_VCSEL_PERIOD_PRE_RANGE, 18);
   VL53L0X_SetVcselPulsePeriod(Dev, VL53L0X_VCSEL_PERIOD_FINAL_RANGE, 14);
   /* USER CODE END 2 */
@@ -248,7 +248,7 @@ int main(void)
     // ILI9341_Draw_Filled_Rectangle_Coord(0, 100, 200, 130, BLACK);
     
     
-    HAL_Delay(3000);
+    HAL_Delay(400);
 
     if(READ_PIN(X_STOP_PIN) != 1 && READ_PIN(Y_STOP_PIN) != 1) {
       G0();

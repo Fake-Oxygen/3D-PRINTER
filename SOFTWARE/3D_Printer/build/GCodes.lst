@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
   54              		.align	3
   57              	Cur_Z:
   58 0000 00000000 		.space	8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 2
 
 
   58      00000000 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
    1:Core/Src/GCodes.c **** #include "GCodes.h"
    2:Core/Src/GCodes.c **** 
    3:Core/Src/GCodes.c **** double Cur_E = 0;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 3
 
 
    4:Core/Src/GCodes.c **** double Cur_X = 0;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
  164              		.syntax unified
  165              		.thumb
  166              		.thumb_func
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 4
 
 
  168              	M155:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
  218              		.thumb
  219              		.thumb_func
  221              	G0:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 5
 
 
  222              	.LFB323:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
  269              		.loc 1 37 22
  270 0050 674B     		ldr	r3, .L9+48
  271 0052 D3E90001 		ldrd	r0, [r3]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 6
 
 
  272 0056 674B     		ldr	r3, .L9+52
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
  322 00da FFF7FEFF 		bl	__aeabi_ui2d
  323 00de 0246     		mov	r2, r0
  324 00e0 0B46     		mov	r3, r1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 7
 
 
  325              		.loc 1 41 32
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
   43:Core/Src/GCodes.c ****     Move(E_dif, last_time_E, E_AXIS, speed);
  378              		.loc 1 43 5
  379 0158 2C4B     		ldr	r3, .L9+76
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 8
 
 
  380 015a 1B68     		ldr	r3, [r3]
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
  429 01bc BDE8B083 		pop	{r4, r5, r7, r8, r9, pc}
  430              	.L10:
  431              		.align	3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 9
 
 
  432              	.L9:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
  484 000e FFF7FEFF 		bl	GetTemperature
  485 0012 53EC102B 		vmov	r2, r3, d0
  486              		.loc 1 51 14
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 10
 
 
  487 0016 1046     		mov	r0, r2
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
  538 007c 1946     		mov	r1, r3
  539 007e FFF7FEFF 		bl	__aeabi_d2uiz
  540 0082 0346     		mov	r3, r0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 11
 
 
  541 0084 9BB2     		uxth	r3, r3
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
  587 0004 00AF     		add	r7, sp, #0
  588              		.cfi_def_cfa_register 7
  589 0006 0346     		mov	r3, r0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 12
 
 
  590 0008 FB80     		strh	r3, [r7, #6]	@ movhi
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
   72:Core/Src/GCodes.c ****     MoveAndWait(1, 400, X_AXIS, CLOCKWISE, CLOCKWISE);
  638              		.loc 1 72 5
  639 0022 0023     		movs	r3, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 13
 
 
  640 0024 0093     		str	r3, [sp]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
   79:Core/Src/GCodes.c ****     MoveAndWait(0, 1000, Y_AXIS, COUNTERCLOCKWISE, CLOCKWISE);
  688              		.loc 1 79 5
  689 0098 0023     		movs	r3, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 14
 
 
  690 009a 0093     		str	r3, [sp]
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
  740              		.text
  741              	.Letext0:
  742              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 15
 
 
  743              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
@@ -847,56 +847,56 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 1
  746              		.file 6 "Core/Inc/GCodes.h"
  747              		.file 7 "Core/Inc/Functions.h"
  748              		.file 8 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 16
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 GCodes.c
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:20     .bss.msg_buffer:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:26     .bss.RxBuf:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:29     .bss.RxBuf:0000000000000000 RxBuf
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:36     .bss.Cur_E:0000000000000000 Cur_E
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:33     .bss.Cur_E:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:43     .bss.Cur_X:0000000000000000 Cur_X
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:40     .bss.Cur_X:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:50     .bss.Cur_Y:0000000000000000 Cur_Y
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:47     .bss.Cur_Y:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:57     .bss.Cur_Z:0000000000000000 Cur_Z
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:54     .bss.Cur_Z:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:64     .bss.Cur_F:0000000000000000 Cur_F
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:61     .bss.Cur_F:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:70     .bss.isRunning:0000000000000000 isRunning
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:71     .bss.isRunning:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:77     .bss.last_time_E:0000000000000000 last_time_E
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:74     .bss.last_time_E:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:84     .bss.last_time_X:0000000000000000 last_time_X
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:81     .bss.last_time_X:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:91     .bss.last_time_Y:0000000000000000 last_time_Y
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:88     .bss.last_time_Y:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:98     .bss.last_time_Z:0000000000000000 last_time_Z
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:95     .bss.last_time_Z:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:105    .bss.last_tick_A:0000000000000000 last_tick_A
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:102    .bss.last_tick_A:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:112    .bss.last_tick_B:0000000000000000 last_tick_B
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:109    .bss.last_tick_B:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:119    .bss.last_tick_AB:0000000000000000 last_tick_AB
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:116    .bss.last_tick_AB:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:122    .text.M105:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:128    .text.M105:0000000000000000 M105
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:162    .text.M155:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:168    .text.M155:0000000000000000 M155
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:215    .text.G0:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:221    .text.G0:0000000000000000 G0
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:433    .text.G0:00000000000001c0 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:457    .text.M104:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:463    .text.M104:0000000000000000 M104
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:559    .text.M104:00000000000000a0 $d
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:569    .text.M106:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:575    .text.M106:0000000000000000 M106
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:608    .text.G28:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:614    .text.G28:0000000000000000 G28
-C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s:731    .text.G28:00000000000000f0 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:20     .bss.msg_buffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:26     .bss.RxBuf:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:29     .bss.RxBuf:0000000000000000 RxBuf
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:36     .bss.Cur_E:0000000000000000 Cur_E
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:33     .bss.Cur_E:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:43     .bss.Cur_X:0000000000000000 Cur_X
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:40     .bss.Cur_X:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:50     .bss.Cur_Y:0000000000000000 Cur_Y
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:47     .bss.Cur_Y:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:57     .bss.Cur_Z:0000000000000000 Cur_Z
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:54     .bss.Cur_Z:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:64     .bss.Cur_F:0000000000000000 Cur_F
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:61     .bss.Cur_F:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:70     .bss.isRunning:0000000000000000 isRunning
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:71     .bss.isRunning:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:77     .bss.last_time_E:0000000000000000 last_time_E
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:74     .bss.last_time_E:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:84     .bss.last_time_X:0000000000000000 last_time_X
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:81     .bss.last_time_X:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:91     .bss.last_time_Y:0000000000000000 last_time_Y
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:88     .bss.last_time_Y:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:98     .bss.last_time_Z:0000000000000000 last_time_Z
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:95     .bss.last_time_Z:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:105    .bss.last_tick_A:0000000000000000 last_tick_A
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:102    .bss.last_tick_A:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:112    .bss.last_tick_B:0000000000000000 last_tick_B
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:109    .bss.last_tick_B:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:119    .bss.last_tick_AB:0000000000000000 last_tick_AB
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:116    .bss.last_tick_AB:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:122    .text.M105:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:128    .text.M105:0000000000000000 M105
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:162    .text.M155:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:168    .text.M155:0000000000000000 M155
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:215    .text.G0:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:221    .text.G0:0000000000000000 G0
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:433    .text.G0:00000000000001c0 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:457    .text.M104:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:463    .text.M104:0000000000000000 M104
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:559    .text.M104:00000000000000a0 $d
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:569    .text.M106:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:575    .text.M106:0000000000000000 M106
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:608    .text.G28:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:614    .text.G28:0000000000000000 G28
+C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s:731    .text.G28:00000000000000f0 $d
 
 UNDEFINED SYMBOLS
 print_temperature
@@ -907,7 +907,7 @@ __aeabi_ddiv
 __aeabi_ui2d
 __aeabi_d2uiz
 __aeabi_dcmpgt
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJfT9bt.s 			page 17
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccSTSiQo.s 			page 17
 
 
 sqrt
