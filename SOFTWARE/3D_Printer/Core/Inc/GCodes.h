@@ -38,6 +38,7 @@ extern uint32_t last_tick_AB;
 void M104();
 void M105(uint16_t R, uint16_t T);
 void M106(uint16_t S);
+void M140();
 uint16_t M155(uint16_t S);
 void G0();
 void G28();

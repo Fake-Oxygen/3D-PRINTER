@@ -7,9 +7,8 @@ double E = 0;
 double X = 0;
 double Y = 0;
 double Z = 0;
-uint16_t temp_goal = 0;
-uint16_t Cur_temp = 0;
-
+uint16_t hot_end_temp_goal = 0;
+uint16_t hot_bed_temp_goal = 0;
 
 void reset_args()
 {
@@ -35,11 +34,15 @@ void get_command(uint8_t buf[])
             M105(R, T);
             break;
         case 104:
-            temp_goal = S;
+            hot_end_temp_goal = S;
             M104();
             break;
         case 106:
             M106(S);
+            break;
+        case 140:
+            hot_bed_temp_goal = S;
+            M140();
             break;
         case 155:
             interval = M155(S);

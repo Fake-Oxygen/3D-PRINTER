@@ -7,7 +7,7 @@
 #include <stdbool.h>
 
 extern uint16_t F;
-extern uint16_t interval;
+extern uint16_t interval, hot_end_temp_goal, hot_bed_temp_goal;
 extern double X, Y, Z, E;
 
 void reset_args();

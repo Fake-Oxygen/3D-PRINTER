@@ -1,0 +1,471 @@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"user_diskio.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.bss.msg_buffer,"aw",%nobits
+  20              		.align	2
+  23              	msg_buffer:
+  24 0000 00000000 		.space	30
+  24      00000000 
+  24      00000000 
+  24      00000000 
+  24      00000000 
+  25              		.section	.bss.RxBuf,"aw",%nobits
+  26              		.align	2
+  29              	RxBuf:
+  30 0000 00000000 		.space	20
+  30      00000000 
+  30      00000000 
+  30      00000000 
+  30      00000000 
+  31              		.section	.data.Stat,"aw"
+  34              	Stat:
+  35 0000 01       		.byte	1
+  36              		.global	USER_Driver
+  37              		.section	.data.USER_Driver,"aw"
+  38              		.align	2
+  41              	USER_Driver:
+  42 0000 00000000 		.word	USER_initialize
+  43 0004 00000000 		.word	USER_status
+  44 0008 00000000 		.word	USER_read
+  45 000c 00000000 		.word	USER_write
+  46 0010 00000000 		.word	USER_ioctl
+  47              		.section	.text.USER_initialize,"ax",%progbits
+  48              		.align	1
+  49              		.global	USER_initialize
+  50              		.syntax unified
+  51              		.thumb
+  52              		.thumb_func
+  54              	USER_initialize:
+  55              	.LFB321:
+  56              		.file 1 "FATFS/Target/user_diskio.c"
+   1:FATFS/Target/user_diskio.c **** /* USER CODE BEGIN Header */
+   2:FATFS/Target/user_diskio.c **** /**
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s 			page 2
+
+
+   3:FATFS/Target/user_diskio.c ****  ******************************************************************************
+   4:FATFS/Target/user_diskio.c ****   * @file    user_diskio.c
+   5:FATFS/Target/user_diskio.c ****   * @brief   This file includes a diskio driver skeleton to be completed by the user.
+   6:FATFS/Target/user_diskio.c ****   ******************************************************************************
+   7:FATFS/Target/user_diskio.c ****   * @attention
+   8:FATFS/Target/user_diskio.c ****   *
+   9:FATFS/Target/user_diskio.c ****   * Copyright (c) 2022 STMicroelectronics.
+  10:FATFS/Target/user_diskio.c ****   * All rights reserved.
+  11:FATFS/Target/user_diskio.c ****   *
+  12:FATFS/Target/user_diskio.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  13:FATFS/Target/user_diskio.c ****   * in the root directory of this software component.
+  14:FATFS/Target/user_diskio.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  15:FATFS/Target/user_diskio.c ****   *
+  16:FATFS/Target/user_diskio.c ****   ******************************************************************************
+  17:FATFS/Target/user_diskio.c ****   */
+  18:FATFS/Target/user_diskio.c ****  /* USER CODE END Header */
+  19:FATFS/Target/user_diskio.c **** 
+  20:FATFS/Target/user_diskio.c **** #ifdef USE_OBSOLETE_USER_CODE_SECTION_0
+  21:FATFS/Target/user_diskio.c **** /*
+  22:FATFS/Target/user_diskio.c ****  * Warning: the user section 0 is no more in use (starting from CubeMx version 4.16.0)
+  23:FATFS/Target/user_diskio.c ****  * To be suppressed in the future.
+  24:FATFS/Target/user_diskio.c ****  * Kept to ensure backward compatibility with previous CubeMx versions when
+  25:FATFS/Target/user_diskio.c ****  * migrating projects.
+  26:FATFS/Target/user_diskio.c ****  * User code previously added there should be copied in the new user sections before
+  27:FATFS/Target/user_diskio.c ****  * the section contents can be deleted.
+  28:FATFS/Target/user_diskio.c ****  */
+  29:FATFS/Target/user_diskio.c **** /* USER CODE BEGIN 0 */
+  30:FATFS/Target/user_diskio.c **** /* USER CODE END 0 */
+  31:FATFS/Target/user_diskio.c **** #endif
+  32:FATFS/Target/user_diskio.c **** 
+  33:FATFS/Target/user_diskio.c **** /* USER CODE BEGIN DECL */
+  34:FATFS/Target/user_diskio.c **** 
+  35:FATFS/Target/user_diskio.c **** /* Includes ------------------------------------------------------------------*/
+  36:FATFS/Target/user_diskio.c **** #include <string.h>
+  37:FATFS/Target/user_diskio.c **** #include "ff_gen_drv.h"
+  38:FATFS/Target/user_diskio.c **** #include "user_diskio_spi.h"
+  39:FATFS/Target/user_diskio.c **** /* Private typedef -----------------------------------------------------------*/
+  40:FATFS/Target/user_diskio.c **** /* Private define ------------------------------------------------------------*/
+  41:FATFS/Target/user_diskio.c **** 
+  42:FATFS/Target/user_diskio.c **** /* Private variables ---------------------------------------------------------*/
+  43:FATFS/Target/user_diskio.c **** /* Disk status */
+  44:FATFS/Target/user_diskio.c **** static volatile DSTATUS Stat = STA_NOINIT;
+  45:FATFS/Target/user_diskio.c **** 
+  46:FATFS/Target/user_diskio.c **** /* USER CODE END DECL */
+  47:FATFS/Target/user_diskio.c **** 
+  48:FATFS/Target/user_diskio.c **** /* Private function prototypes -----------------------------------------------*/
+  49:FATFS/Target/user_diskio.c **** DSTATUS USER_initialize (BYTE pdrv);
+  50:FATFS/Target/user_diskio.c **** DSTATUS USER_status (BYTE pdrv);
+  51:FATFS/Target/user_diskio.c **** DRESULT USER_read (BYTE pdrv, BYTE *buff, DWORD sector, UINT count);
+  52:FATFS/Target/user_diskio.c **** #if _USE_WRITE == 1
+  53:FATFS/Target/user_diskio.c ****   DRESULT USER_write (BYTE pdrv, const BYTE *buff, DWORD sector, UINT count);
+  54:FATFS/Target/user_diskio.c **** #endif /* _USE_WRITE == 1 */
+  55:FATFS/Target/user_diskio.c **** #if _USE_IOCTL == 1
+  56:FATFS/Target/user_diskio.c ****   DRESULT USER_ioctl (BYTE pdrv, BYTE cmd, void *buff);
+  57:FATFS/Target/user_diskio.c **** #endif /* _USE_IOCTL == 1 */
+  58:FATFS/Target/user_diskio.c **** 
+  59:FATFS/Target/user_diskio.c **** Diskio_drvTypeDef  USER_Driver =
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s 			page 3
+
+
+  60:FATFS/Target/user_diskio.c **** {
+  61:FATFS/Target/user_diskio.c ****   USER_initialize,
+  62:FATFS/Target/user_diskio.c ****   USER_status,
+  63:FATFS/Target/user_diskio.c ****   USER_read,
+  64:FATFS/Target/user_diskio.c **** #if  _USE_WRITE
+  65:FATFS/Target/user_diskio.c ****   USER_write,
+  66:FATFS/Target/user_diskio.c **** #endif  /* _USE_WRITE == 1 */
+  67:FATFS/Target/user_diskio.c **** #if  _USE_IOCTL == 1
+  68:FATFS/Target/user_diskio.c ****   USER_ioctl,
+  69:FATFS/Target/user_diskio.c **** #endif /* _USE_IOCTL == 1 */
+  70:FATFS/Target/user_diskio.c **** };
+  71:FATFS/Target/user_diskio.c **** 
+  72:FATFS/Target/user_diskio.c **** /* Private functions ---------------------------------------------------------*/
+  73:FATFS/Target/user_diskio.c **** 
+  74:FATFS/Target/user_diskio.c **** /**
+  75:FATFS/Target/user_diskio.c ****   * @brief  Initializes a Drive
+  76:FATFS/Target/user_diskio.c ****   * @param  pdrv: Physical drive number (0..)
+  77:FATFS/Target/user_diskio.c ****   * @retval DSTATUS: Operation status
+  78:FATFS/Target/user_diskio.c ****   */
+  79:FATFS/Target/user_diskio.c **** DSTATUS USER_initialize (
+  80:FATFS/Target/user_diskio.c **** 	BYTE pdrv           /* Physical drive nmuber to identify the drive */
+  81:FATFS/Target/user_diskio.c **** )
+  82:FATFS/Target/user_diskio.c **** {
+  57              		.loc 1 82 1
+  58              		.cfi_startproc
+  59              		@ args = 0, pretend = 0, frame = 8
+  60              		@ frame_needed = 1, uses_anonymous_args = 0
+  61 0000 80B5     		push	{r7, lr}
+  62              		.cfi_def_cfa_offset 8
+  63              		.cfi_offset 7, -8
+  64              		.cfi_offset 14, -4
+  65 0002 82B0     		sub	sp, sp, #8
+  66              		.cfi_def_cfa_offset 16
+  67 0004 00AF     		add	r7, sp, #0
+  68              		.cfi_def_cfa_register 7
+  69 0006 0346     		mov	r3, r0
+  70 0008 FB71     		strb	r3, [r7, #7]
+  83:FATFS/Target/user_diskio.c ****   /* USER CODE BEGIN INIT */
+  84:FATFS/Target/user_diskio.c ****     return USER_SPI_initialize(pdrv);
+  71              		.loc 1 84 12
+  72 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  73 000c 1846     		mov	r0, r3
+  74 000e FFF7FEFF 		bl	USER_SPI_initialize
+  75 0012 0346     		mov	r3, r0
+  85:FATFS/Target/user_diskio.c ****   /* USER CODE END INIT */
+  86:FATFS/Target/user_diskio.c **** }
+  76              		.loc 1 86 1
+  77 0014 1846     		mov	r0, r3
+  78 0016 0837     		adds	r7, r7, #8
+  79              		.cfi_def_cfa_offset 8
+  80 0018 BD46     		mov	sp, r7
+  81              		.cfi_def_cfa_register 13
+  82              		@ sp needed
+  83 001a 80BD     		pop	{r7, pc}
+  84              		.cfi_endproc
+  85              	.LFE321:
+  87              		.section	.text.USER_status,"ax",%progbits
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s 			page 4
+
+
+  88              		.align	1
+  89              		.global	USER_status
+  90              		.syntax unified
+  91              		.thumb
+  92              		.thumb_func
+  94              	USER_status:
+  95              	.LFB322:
+  87:FATFS/Target/user_diskio.c **** 
+  88:FATFS/Target/user_diskio.c **** /**
+  89:FATFS/Target/user_diskio.c ****   * @brief  Gets Disk Status
+  90:FATFS/Target/user_diskio.c ****   * @param  pdrv: Physical drive number (0..)
+  91:FATFS/Target/user_diskio.c ****   * @retval DSTATUS: Operation status
+  92:FATFS/Target/user_diskio.c ****   */
+  93:FATFS/Target/user_diskio.c **** DSTATUS USER_status (
+  94:FATFS/Target/user_diskio.c **** 	BYTE pdrv       /* Physical drive number to identify the drive */
+  95:FATFS/Target/user_diskio.c **** )
+  96:FATFS/Target/user_diskio.c **** {
+  96              		.loc 1 96 1
+  97              		.cfi_startproc
+  98              		@ args = 0, pretend = 0, frame = 8
+  99              		@ frame_needed = 1, uses_anonymous_args = 0
+ 100 0000 80B5     		push	{r7, lr}
+ 101              		.cfi_def_cfa_offset 8
+ 102              		.cfi_offset 7, -8
+ 103              		.cfi_offset 14, -4
+ 104 0002 82B0     		sub	sp, sp, #8
+ 105              		.cfi_def_cfa_offset 16
+ 106 0004 00AF     		add	r7, sp, #0
+ 107              		.cfi_def_cfa_register 7
+ 108 0006 0346     		mov	r3, r0
+ 109 0008 FB71     		strb	r3, [r7, #7]
+  97:FATFS/Target/user_diskio.c ****   /* USER CODE BEGIN STATUS */
+  98:FATFS/Target/user_diskio.c ****     return USER_SPI_status(pdrv);
+ 110              		.loc 1 98 12
+ 111 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 112 000c 1846     		mov	r0, r3
+ 113 000e FFF7FEFF 		bl	USER_SPI_status
+ 114 0012 0346     		mov	r3, r0
+  99:FATFS/Target/user_diskio.c ****   /* USER CODE END STATUS */
+ 100:FATFS/Target/user_diskio.c **** }
+ 115              		.loc 1 100 1
+ 116 0014 1846     		mov	r0, r3
+ 117 0016 0837     		adds	r7, r7, #8
+ 118              		.cfi_def_cfa_offset 8
+ 119 0018 BD46     		mov	sp, r7
+ 120              		.cfi_def_cfa_register 13
+ 121              		@ sp needed
+ 122 001a 80BD     		pop	{r7, pc}
+ 123              		.cfi_endproc
+ 124              	.LFE322:
+ 126              		.section	.text.USER_read,"ax",%progbits
+ 127              		.align	1
+ 128              		.global	USER_read
+ 129              		.syntax unified
+ 130              		.thumb
+ 131              		.thumb_func
+ 133              	USER_read:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s 			page 5
+
+
+ 134              	.LFB323:
+ 101:FATFS/Target/user_diskio.c **** 
+ 102:FATFS/Target/user_diskio.c **** /**
+ 103:FATFS/Target/user_diskio.c ****   * @brief  Reads Sector(s)
+ 104:FATFS/Target/user_diskio.c ****   * @param  pdrv: Physical drive number (0..)
+ 105:FATFS/Target/user_diskio.c ****   * @param  *buff: Data buffer to store read data
+ 106:FATFS/Target/user_diskio.c ****   * @param  sector: Sector address (LBA)
+ 107:FATFS/Target/user_diskio.c ****   * @param  count: Number of sectors to read (1..128)
+ 108:FATFS/Target/user_diskio.c ****   * @retval DRESULT: Operation result
+ 109:FATFS/Target/user_diskio.c ****   */
+ 110:FATFS/Target/user_diskio.c **** DRESULT USER_read (
+ 111:FATFS/Target/user_diskio.c **** 	BYTE pdrv,      /* Physical drive nmuber to identify the drive */
+ 112:FATFS/Target/user_diskio.c **** 	BYTE *buff,     /* Data buffer to store read data */
+ 113:FATFS/Target/user_diskio.c **** 	DWORD sector,   /* Sector address in LBA */
+ 114:FATFS/Target/user_diskio.c **** 	UINT count      /* Number of sectors to read */
+ 115:FATFS/Target/user_diskio.c **** )
+ 116:FATFS/Target/user_diskio.c **** {
+ 135              		.loc 1 116 1
+ 136              		.cfi_startproc
+ 137              		@ args = 0, pretend = 0, frame = 16
+ 138              		@ frame_needed = 1, uses_anonymous_args = 0
+ 139 0000 80B5     		push	{r7, lr}
+ 140              		.cfi_def_cfa_offset 8
+ 141              		.cfi_offset 7, -8
+ 142              		.cfi_offset 14, -4
+ 143 0002 84B0     		sub	sp, sp, #16
+ 144              		.cfi_def_cfa_offset 24
+ 145 0004 00AF     		add	r7, sp, #0
+ 146              		.cfi_def_cfa_register 7
+ 147 0006 B960     		str	r1, [r7, #8]
+ 148 0008 7A60     		str	r2, [r7, #4]
+ 149 000a 3B60     		str	r3, [r7]
+ 150 000c 0346     		mov	r3, r0
+ 151 000e FB73     		strb	r3, [r7, #15]
+ 117:FATFS/Target/user_diskio.c ****   /* USER CODE BEGIN READ */
+ 118:FATFS/Target/user_diskio.c ****     return USER_SPI_read(pdrv, buff, sector, count);
+ 152              		.loc 1 118 12
+ 153 0010 F87B     		ldrb	r0, [r7, #15]	@ zero_extendqisi2
+ 154 0012 3B68     		ldr	r3, [r7]
+ 155 0014 7A68     		ldr	r2, [r7, #4]
+ 156 0016 B968     		ldr	r1, [r7, #8]
+ 157 0018 FFF7FEFF 		bl	USER_SPI_read
+ 158 001c 0346     		mov	r3, r0
+ 119:FATFS/Target/user_diskio.c ****   /* USER CODE END READ */
+ 120:FATFS/Target/user_diskio.c **** }
+ 159              		.loc 1 120 1
+ 160 001e 1846     		mov	r0, r3
+ 161 0020 1037     		adds	r7, r7, #16
+ 162              		.cfi_def_cfa_offset 8
+ 163 0022 BD46     		mov	sp, r7
+ 164              		.cfi_def_cfa_register 13
+ 165              		@ sp needed
+ 166 0024 80BD     		pop	{r7, pc}
+ 167              		.cfi_endproc
+ 168              	.LFE323:
+ 170              		.section	.text.USER_write,"ax",%progbits
+ 171              		.align	1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s 			page 6
+
+
+ 172              		.global	USER_write
+ 173              		.syntax unified
+ 174              		.thumb
+ 175              		.thumb_func
+ 177              	USER_write:
+ 178              	.LFB324:
+ 121:FATFS/Target/user_diskio.c **** 
+ 122:FATFS/Target/user_diskio.c **** /**
+ 123:FATFS/Target/user_diskio.c ****   * @brief  Writes Sector(s)
+ 124:FATFS/Target/user_diskio.c ****   * @param  pdrv: Physical drive number (0..)
+ 125:FATFS/Target/user_diskio.c ****   * @param  *buff: Data to be written
+ 126:FATFS/Target/user_diskio.c ****   * @param  sector: Sector address (LBA)
+ 127:FATFS/Target/user_diskio.c ****   * @param  count: Number of sectors to write (1..128)
+ 128:FATFS/Target/user_diskio.c ****   * @retval DRESULT: Operation result
+ 129:FATFS/Target/user_diskio.c ****   */
+ 130:FATFS/Target/user_diskio.c **** #if _USE_WRITE == 1
+ 131:FATFS/Target/user_diskio.c **** DRESULT USER_write (
+ 132:FATFS/Target/user_diskio.c **** 	BYTE pdrv,          /* Physical drive nmuber to identify the drive */
+ 133:FATFS/Target/user_diskio.c **** 	const BYTE *buff,   /* Data to be written */
+ 134:FATFS/Target/user_diskio.c **** 	DWORD sector,       /* Sector address in LBA */
+ 135:FATFS/Target/user_diskio.c **** 	UINT count          /* Number of sectors to write */
+ 136:FATFS/Target/user_diskio.c **** )
+ 137:FATFS/Target/user_diskio.c **** {
+ 179              		.loc 1 137 1
+ 180              		.cfi_startproc
+ 181              		@ args = 0, pretend = 0, frame = 16
+ 182              		@ frame_needed = 1, uses_anonymous_args = 0
+ 183 0000 80B5     		push	{r7, lr}
+ 184              		.cfi_def_cfa_offset 8
+ 185              		.cfi_offset 7, -8
+ 186              		.cfi_offset 14, -4
+ 187 0002 84B0     		sub	sp, sp, #16
+ 188              		.cfi_def_cfa_offset 24
+ 189 0004 00AF     		add	r7, sp, #0
+ 190              		.cfi_def_cfa_register 7
+ 191 0006 B960     		str	r1, [r7, #8]
+ 192 0008 7A60     		str	r2, [r7, #4]
+ 193 000a 3B60     		str	r3, [r7]
+ 194 000c 0346     		mov	r3, r0
+ 195 000e FB73     		strb	r3, [r7, #15]
+ 138:FATFS/Target/user_diskio.c ****   /* USER CODE BEGIN WRITE */
+ 139:FATFS/Target/user_diskio.c ****   /* USER CODE HERE */
+ 140:FATFS/Target/user_diskio.c ****     return USER_SPI_write(pdrv, buff, sector, count);
+ 196              		.loc 1 140 12
+ 197 0010 F87B     		ldrb	r0, [r7, #15]	@ zero_extendqisi2
+ 198 0012 3B68     		ldr	r3, [r7]
+ 199 0014 7A68     		ldr	r2, [r7, #4]
+ 200 0016 B968     		ldr	r1, [r7, #8]
+ 201 0018 FFF7FEFF 		bl	USER_SPI_write
+ 202 001c 0346     		mov	r3, r0
+ 141:FATFS/Target/user_diskio.c ****   /* USER CODE END WRITE */
+ 142:FATFS/Target/user_diskio.c **** }
+ 203              		.loc 1 142 1
+ 204 001e 1846     		mov	r0, r3
+ 205 0020 1037     		adds	r7, r7, #16
+ 206              		.cfi_def_cfa_offset 8
+ 207 0022 BD46     		mov	sp, r7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s 			page 7
+
+
+ 208              		.cfi_def_cfa_register 13
+ 209              		@ sp needed
+ 210 0024 80BD     		pop	{r7, pc}
+ 211              		.cfi_endproc
+ 212              	.LFE324:
+ 214              		.section	.text.USER_ioctl,"ax",%progbits
+ 215              		.align	1
+ 216              		.global	USER_ioctl
+ 217              		.syntax unified
+ 218              		.thumb
+ 219              		.thumb_func
+ 221              	USER_ioctl:
+ 222              	.LFB325:
+ 143:FATFS/Target/user_diskio.c **** #endif /* _USE_WRITE == 1 */
+ 144:FATFS/Target/user_diskio.c **** 
+ 145:FATFS/Target/user_diskio.c **** /**
+ 146:FATFS/Target/user_diskio.c ****   * @brief  I/O control operation
+ 147:FATFS/Target/user_diskio.c ****   * @param  pdrv: Physical drive number (0..)
+ 148:FATFS/Target/user_diskio.c ****   * @param  cmd: Control code
+ 149:FATFS/Target/user_diskio.c ****   * @param  *buff: Buffer to send/receive control data
+ 150:FATFS/Target/user_diskio.c ****   * @retval DRESULT: Operation result
+ 151:FATFS/Target/user_diskio.c ****   */
+ 152:FATFS/Target/user_diskio.c **** #if _USE_IOCTL == 1
+ 153:FATFS/Target/user_diskio.c **** DRESULT USER_ioctl (
+ 154:FATFS/Target/user_diskio.c **** 	BYTE pdrv,      /* Physical drive nmuber (0..) */
+ 155:FATFS/Target/user_diskio.c **** 	BYTE cmd,       /* Control code */
+ 156:FATFS/Target/user_diskio.c **** 	void *buff      /* Buffer to send/receive control data */
+ 157:FATFS/Target/user_diskio.c **** )
+ 158:FATFS/Target/user_diskio.c **** {
+ 223              		.loc 1 158 1
+ 224              		.cfi_startproc
+ 225              		@ args = 0, pretend = 0, frame = 8
+ 226              		@ frame_needed = 1, uses_anonymous_args = 0
+ 227 0000 80B5     		push	{r7, lr}
+ 228              		.cfi_def_cfa_offset 8
+ 229              		.cfi_offset 7, -8
+ 230              		.cfi_offset 14, -4
+ 231 0002 82B0     		sub	sp, sp, #8
+ 232              		.cfi_def_cfa_offset 16
+ 233 0004 00AF     		add	r7, sp, #0
+ 234              		.cfi_def_cfa_register 7
+ 235 0006 0346     		mov	r3, r0
+ 236 0008 3A60     		str	r2, [r7]
+ 237 000a FB71     		strb	r3, [r7, #7]
+ 238 000c 0B46     		mov	r3, r1
+ 239 000e BB71     		strb	r3, [r7, #6]
+ 159:FATFS/Target/user_diskio.c ****   /* USER CODE BEGIN IOCTL */
+ 160:FATFS/Target/user_diskio.c ****     return USER_SPI_ioctl(pdrv, cmd, buff);
+ 240              		.loc 1 160 12
+ 241 0010 B979     		ldrb	r1, [r7, #6]	@ zero_extendqisi2
+ 242 0012 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 243 0014 3A68     		ldr	r2, [r7]
+ 244 0016 1846     		mov	r0, r3
+ 245 0018 FFF7FEFF 		bl	USER_SPI_ioctl
+ 246 001c 0346     		mov	r3, r0
+ 161:FATFS/Target/user_diskio.c ****   /* USER CODE END IOCTL */
+ 162:FATFS/Target/user_diskio.c **** }
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s 			page 8
+
+
+ 247              		.loc 1 162 1
+ 248 001e 1846     		mov	r0, r3
+ 249 0020 0837     		adds	r7, r7, #8
+ 250              		.cfi_def_cfa_offset 8
+ 251 0022 BD46     		mov	sp, r7
+ 252              		.cfi_def_cfa_register 13
+ 253              		@ sp needed
+ 254 0024 80BD     		pop	{r7, pc}
+ 255              		.cfi_endproc
+ 256              	.LFE325:
+ 258              		.text
+ 259              	.Letext0:
+ 260              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 261              		.file 3 "Middlewares/Third_Party/FatFs/src/integer.h"
+ 262              		.file 4 "Middlewares/Third_Party/FatFs/src/diskio.h"
+ 263              		.file 5 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 264              		.file 6 "Core/Inc/main.h"
+ 265              		.file 7 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
+ 266              		.file 8 "FATFS/Target/user_diskio_spi.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 user_diskio.c
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:20     .bss.msg_buffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:26     .bss.RxBuf:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:29     .bss.RxBuf:0000000000000000 RxBuf
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:34     .data.Stat:0000000000000000 Stat
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:41     .data.USER_Driver:0000000000000000 USER_Driver
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:38     .data.USER_Driver:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:54     .text.USER_initialize:0000000000000000 USER_initialize
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:94     .text.USER_status:0000000000000000 USER_status
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:133    .text.USER_read:0000000000000000 USER_read
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:177    .text.USER_write:0000000000000000 USER_write
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:221    .text.USER_ioctl:0000000000000000 USER_ioctl
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:48     .text.USER_initialize:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:88     .text.USER_status:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:127    .text.USER_read:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:171    .text.USER_write:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccJihbm6.s:215    .text.USER_ioctl:0000000000000000 $t
+
+UNDEFINED SYMBOLS
+USER_SPI_initialize
+USER_SPI_status
+USER_SPI_read
+USER_SPI_write
+USER_SPI_ioctl

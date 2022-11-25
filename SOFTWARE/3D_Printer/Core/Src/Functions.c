@@ -46,6 +46,9 @@ void SetHeating(uint16_t heater, uint16_t power)
     case HOT_END:
         TIM3->CCR2 = power;
         break;
+    case HOT_BED:
+        TIM3->CCR1 = power;
+        break;
     }
 }
 

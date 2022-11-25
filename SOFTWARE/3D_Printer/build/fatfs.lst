@@ -1,0 +1,230 @@
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 6
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"fatfs.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.bss.msg_buffer,"aw",%nobits
+  20              		.align	2
+  23              	msg_buffer:
+  24 0000 00000000 		.space	30
+  24      00000000 
+  24      00000000 
+  24      00000000 
+  24      00000000 
+  25              		.section	.bss.RxBuf,"aw",%nobits
+  26              		.align	2
+  29              	RxBuf:
+  30 0000 00000000 		.space	20
+  30      00000000 
+  30      00000000 
+  30      00000000 
+  30      00000000 
+  31              		.global	retUSER
+  32              		.section	.bss.retUSER,"aw",%nobits
+  35              	retUSER:
+  36 0000 00       		.space	1
+  37              		.global	USERPath
+  38              		.section	.bss.USERPath,"aw",%nobits
+  39              		.align	2
+  42              	USERPath:
+  43 0000 00000000 		.space	4
+  44              		.global	USERFatFS
+  45              		.section	.bss.USERFatFS,"aw",%nobits
+  46              		.align	2
+  49              	USERFatFS:
+  50 0000 00000000 		.space	560
+  50      00000000 
+  50      00000000 
+  50      00000000 
+  50      00000000 
+  51              		.global	USERFile
+  52              		.section	.bss.USERFile,"aw",%nobits
+  53              		.align	2
+  56              	USERFile:
+  57 0000 00000000 		.space	560
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s 			page 2
+
+
+  57      00000000 
+  57      00000000 
+  57      00000000 
+  57      00000000 
+  58              		.section	.text.MX_FATFS_Init,"ax",%progbits
+  59              		.align	1
+  60              		.global	MX_FATFS_Init
+  61              		.syntax unified
+  62              		.thumb
+  63              		.thumb_func
+  65              	MX_FATFS_Init:
+  66              	.LFB321:
+  67              		.file 1 "FATFS/App/fatfs.c"
+   1:FATFS/App/fatfs.c **** /* USER CODE BEGIN Header */
+   2:FATFS/App/fatfs.c **** /**
+   3:FATFS/App/fatfs.c ****   ******************************************************************************
+   4:FATFS/App/fatfs.c ****   * @file   fatfs.c
+   5:FATFS/App/fatfs.c ****   * @brief  Code for fatfs applications
+   6:FATFS/App/fatfs.c ****   ******************************************************************************
+   7:FATFS/App/fatfs.c ****   * @attention
+   8:FATFS/App/fatfs.c ****   *
+   9:FATFS/App/fatfs.c ****   * Copyright (c) 2022 STMicroelectronics.
+  10:FATFS/App/fatfs.c ****   * All rights reserved.
+  11:FATFS/App/fatfs.c ****   *
+  12:FATFS/App/fatfs.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  13:FATFS/App/fatfs.c ****   * in the root directory of this software component.
+  14:FATFS/App/fatfs.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  15:FATFS/App/fatfs.c ****   *
+  16:FATFS/App/fatfs.c ****   ******************************************************************************
+  17:FATFS/App/fatfs.c ****   */
+  18:FATFS/App/fatfs.c **** /* USER CODE END Header */
+  19:FATFS/App/fatfs.c **** #include "fatfs.h"
+  20:FATFS/App/fatfs.c **** 
+  21:FATFS/App/fatfs.c **** uint8_t retUSER;    /* Return value for USER */
+  22:FATFS/App/fatfs.c **** char USERPath[4];   /* USER logical drive path */
+  23:FATFS/App/fatfs.c **** FATFS USERFatFS;    /* File system object for USER logical drive */
+  24:FATFS/App/fatfs.c **** FIL USERFile;       /* File object for USER */
+  25:FATFS/App/fatfs.c **** 
+  26:FATFS/App/fatfs.c **** /* USER CODE BEGIN Variables */
+  27:FATFS/App/fatfs.c **** 
+  28:FATFS/App/fatfs.c **** /* USER CODE END Variables */
+  29:FATFS/App/fatfs.c **** 
+  30:FATFS/App/fatfs.c **** void MX_FATFS_Init(void)
+  31:FATFS/App/fatfs.c **** {
+  68              		.loc 1 31 1
+  69              		.cfi_startproc
+  70              		@ args = 0, pretend = 0, frame = 0
+  71              		@ frame_needed = 1, uses_anonymous_args = 0
+  72 0000 80B5     		push	{r7, lr}
+  73              		.cfi_def_cfa_offset 8
+  74              		.cfi_offset 7, -8
+  75              		.cfi_offset 14, -4
+  76 0002 00AF     		add	r7, sp, #0
+  77              		.cfi_def_cfa_register 7
+  32:FATFS/App/fatfs.c ****   /*## FatFS: Link the USER driver ###########################*/
+  33:FATFS/App/fatfs.c ****   retUSER = FATFS_LinkDriver(&USER_Driver, USERPath);
+  78              		.loc 1 33 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s 			page 3
+
+
+  79 0004 0449     		ldr	r1, .L2
+  80 0006 0548     		ldr	r0, .L2+4
+  81 0008 FFF7FEFF 		bl	FATFS_LinkDriver
+  82 000c 0346     		mov	r3, r0
+  83 000e 1A46     		mov	r2, r3
+  84              		.loc 1 33 11
+  85 0010 034B     		ldr	r3, .L2+8
+  86 0012 1A70     		strb	r2, [r3]
+  34:FATFS/App/fatfs.c **** 
+  35:FATFS/App/fatfs.c ****   /* USER CODE BEGIN Init */
+  36:FATFS/App/fatfs.c ****   /* additional user code for init */
+  37:FATFS/App/fatfs.c ****   /* USER CODE END Init */
+  38:FATFS/App/fatfs.c **** }
+  87              		.loc 1 38 1
+  88 0014 00BF     		nop
+  89 0016 80BD     		pop	{r7, pc}
+  90              	.L3:
+  91              		.align	2
+  92              	.L2:
+  93 0018 00000000 		.word	USERPath
+  94 001c 00000000 		.word	USER_Driver
+  95 0020 00000000 		.word	retUSER
+  96              		.cfi_endproc
+  97              	.LFE321:
+  99              		.section	.text.get_fattime,"ax",%progbits
+ 100              		.align	1
+ 101              		.global	get_fattime
+ 102              		.syntax unified
+ 103              		.thumb
+ 104              		.thumb_func
+ 106              	get_fattime:
+ 107              	.LFB322:
+  39:FATFS/App/fatfs.c **** 
+  40:FATFS/App/fatfs.c **** /**
+  41:FATFS/App/fatfs.c ****   * @brief  Gets Time from RTC
+  42:FATFS/App/fatfs.c ****   * @param  None
+  43:FATFS/App/fatfs.c ****   * @retval Time in DWORD
+  44:FATFS/App/fatfs.c ****   */
+  45:FATFS/App/fatfs.c **** DWORD get_fattime(void)
+  46:FATFS/App/fatfs.c **** {
+ 108              		.loc 1 46 1
+ 109              		.cfi_startproc
+ 110              		@ args = 0, pretend = 0, frame = 0
+ 111              		@ frame_needed = 1, uses_anonymous_args = 0
+ 112              		@ link register save eliminated.
+ 113 0000 80B4     		push	{r7}
+ 114              		.cfi_def_cfa_offset 4
+ 115              		.cfi_offset 7, -4
+ 116 0002 00AF     		add	r7, sp, #0
+ 117              		.cfi_def_cfa_register 7
+  47:FATFS/App/fatfs.c ****   /* USER CODE BEGIN get_fattime */
+  48:FATFS/App/fatfs.c ****   return 0;
+ 118              		.loc 1 48 10
+ 119 0004 0023     		movs	r3, #0
+  49:FATFS/App/fatfs.c ****   /* USER CODE END get_fattime */
+  50:FATFS/App/fatfs.c **** }
+ 120              		.loc 1 50 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s 			page 4
+
+
+ 121 0006 1846     		mov	r0, r3
+ 122 0008 BD46     		mov	sp, r7
+ 123              		.cfi_def_cfa_register 13
+ 124              		@ sp needed
+ 125 000a 5DF8047B 		ldr	r7, [sp], #4
+ 126              		.cfi_restore 7
+ 127              		.cfi_def_cfa_offset 0
+ 128 000e 7047     		bx	lr
+ 129              		.cfi_endproc
+ 130              	.LFE322:
+ 132              		.text
+ 133              	.Letext0:
+ 134              		.file 2 "Middlewares/Third_Party/FatFs/src/integer.h"
+ 135              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 136              		.file 4 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 137              		.file 5 "Core/Inc/main.h"
+ 138              		.file 6 "Middlewares/Third_Party/FatFs/src/ff.h"
+ 139              		.file 7 "Middlewares/Third_Party/FatFs/src/diskio.h"
+ 140              		.file 8 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
+ 141              		.file 9 "FATFS/Target/user_diskio.h"
+ 142              		.file 10 "FATFS/App/fatfs.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 fatfs.c
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:20     .bss.msg_buffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:26     .bss.RxBuf:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:29     .bss.RxBuf:0000000000000000 RxBuf
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:35     .bss.retUSER:0000000000000000 retUSER
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:36     .bss.retUSER:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:42     .bss.USERPath:0000000000000000 USERPath
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:39     .bss.USERPath:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:49     .bss.USERFatFS:0000000000000000 USERFatFS
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:46     .bss.USERFatFS:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:56     .bss.USERFile:0000000000000000 USERFile
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:53     .bss.USERFile:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:59     .text.MX_FATFS_Init:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:65     .text.MX_FATFS_Init:0000000000000000 MX_FATFS_Init
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:93     .text.MX_FATFS_Init:0000000000000018 $d
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:100    .text.get_fattime:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccrxKIj0.s:106    .text.get_fattime:0000000000000000 get_fattime
+
+UNDEFINED SYMBOLS
+FATFS_LinkDriver
+USER_Driver

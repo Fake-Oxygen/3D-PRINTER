@@ -93,6 +93,8 @@ void SPI_Transmit(uint8_t *pData, uint16_t Size, uint32_t Timeout);
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
+#define SD_CS_Pin GPIO_PIN_10
+#define SD_CS_GPIO_Port GPIOG
 #define CS_Pin GPIO_PIN_12
 #define CS_GPIO_Port GPIOG
 #define DC_Pin GPIO_PIN_13
@@ -102,9 +104,10 @@ void SPI_Transmit(uint8_t *pData, uint16_t Size, uint32_t Timeout);
 #define SWO_Pin GPIO_PIN_3
 #define SWO_GPIO_Port GPIOB
 #define LD2_Pin GPIO_PIN_7
-#define LD2_GPIO_Port GPIOB
-/* USER CODE BEGIN Private defines */
+#define LD2_GPIO_Port 
 
+/* USER CODE BEGIN Private defines */
+#define SD_SPI_HANDLE hspi2
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

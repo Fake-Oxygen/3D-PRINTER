@@ -31,6 +31,7 @@ uint16_t M155(uint16_t S)
 
 void G0()
 {
+    isRunning = true;
     double E_dif = E - Cur_E;
     double Z_dif = Z - Cur_Z;
     double dif_x = X - Cur_X;
@@ -41,19 +42,24 @@ void G0()
     uint32_t speed = (double)1 / (double)F * (double)60 * E_MM_PER_REV / STEPS_PER_REV * (double)1000000;
     Move(Z_dif, last_time_Z, Z_AXIS, speed);
     Move(E_dif, last_time_E, E_AXIS, speed);
-    if(fabs(dif_x) > OFFSET_P || fabs(dif_y) > OFFSET_P) {
+    if (fabs(dif_x) > OFFSET_P || fabs(dif_y) > OFFSET_P)
+    {
         MoveXY(dir_x, dir_y);
+    }
+    else
+    {
+        isRunning = false;
     }
 }
 
 void M104()
 {
-    Cur_temp = GetTemperature(ADC_HOT_END, value[ADC_HOT_END]);
-    if (Cur_temp <= temp_goal)
+    uint16_t Cur_temp = GetTemperature(ADC_HOT_END, value[ADC_HOT_END]);
+    if (Cur_temp <= hot_end_temp_goal)
     {
-        SetHeating(HOT_END, -9.0f / 10.0f * (double)Cur_temp + (double)temp_goal + 100.0f);
+        SetHeating(HOT_END, -9.0f / 10.0f * (double)Cur_temp + (double)hot_end_temp_goal + 100.0f);
     }
-    else 
+    else
     {
         SetHeating(HOT_END, 0);
     }
@@ -65,8 +71,22 @@ void M106(uint16_t S)
     SetFanSpeed(HOT_END_FAN, S);
 }
 
+void M140()
+{
+    uint16_t Cur_temp = GetTemperature(ADC_BED, value[ADC_BED]);
+    if (Cur_temp <= hot_bed_temp_goal)
+    {
+        SetHeating(HOT_BED, -9.0f / 10.0f * (double)Cur_temp + (double)hot_bed_temp_goal + 100.0f);
+    }
+    else
+    {
+        SetHeating(HOT_BED, 0);
+    }
+}
+
 void G28()
 {
+    isRunning = true;
     Cur_E = 0;
     E = 0;
     MoveAndWait(1, 400, X_AXIS, CLOCKWISE, CLOCKWISE);
@@ -81,4 +101,5 @@ void G28()
     MoveAndWait(0, 1000, Y_AXIS, COUNTERCLOCKWISE, CLOCKWISE);
     Cur_Y = 0;
     Y = 0;
+    isRunning = false;
 }
