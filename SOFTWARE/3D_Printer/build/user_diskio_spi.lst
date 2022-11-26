@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
   59              		.thumb
   60              		.thumb_func
   62              	SPI_Timer_On:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 2
 
 
   63              	.LFB321:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
   53:FATFS/Target/user_diskio_spi.c **** #define	ACMD41	(0x80+41)	/* SEND_OP_COND (SDC) */
   54:FATFS/Target/user_diskio_spi.c **** #define CMD8	(8)			/* SEND_IF_COND */
   55:FATFS/Target/user_diskio_spi.c **** #define CMD9	(9)			/* SEND_CSD */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 3
 
 
   56:FATFS/Target/user_diskio_spi.c **** #define CMD10	(10)		/* SEND_CID */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
   91:FATFS/Target/user_diskio_spi.c ****     spiTimerTickDelay = waitTicks;
   84              		.loc 1 91 23
   85 0012 044A     		ldr	r2, .L2+4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 4
 
 
   86 0014 7B68     		ldr	r3, [r7, #4]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
   96:FATFS/Target/user_diskio_spi.c **** }
  138              		.loc 1 96 1
  139 001e 1846     		mov	r0, r3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 5
 
 
  140 0020 80BD     		pop	{r7, pc}
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  181              		.loc 1 111 1
  182 001e 1846     		mov	r0, r3
  183 0020 1037     		adds	r7, r7, #16
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 6
 
 
  184              		.cfi_def_cfa_offset 8
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  229 0014 D418     		adds	r4, r2, r3
  230              		.loc 1 122 15 discriminator 3
  231 0016 FF20     		movs	r0, #255
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 7
 
 
  232 0018 FFF7FEFF 		bl	xchg_spi
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  274              		.cfi_offset 14, -4
  275 0002 84B0     		sub	sp, sp, #16
  276              		.cfi_def_cfa_offset 24
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 8
 
 
  277 0004 00AF     		add	r7, sp, #0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  139:FATFS/Target/user_diskio_spi.c **** #endif
  140:FATFS/Target/user_diskio_spi.c **** 
  141:FATFS/Target/user_diskio_spi.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 9
 
 
  142:FATFS/Target/user_diskio_spi.c **** /*-----------------------------------------------------------------------*/
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  360 0028 7B69     		ldr	r3, [r7, #20]
  361 002a D31A     		subs	r3, r2, r3
  362              		.loc 1 162 21 discriminator 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 10
 
 
  363 002c 3A69     		ldr	r2, [r7, #16]
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  405 0006 4FF48061 		mov	r1, #1024
  406 000a 0448     		ldr	r0, .L23
  407 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 11
 
 
  177:FATFS/Target/user_diskio_spi.c **** 	xchg_spi(0xFF);	/* Dummy clock (force DO hi-z for multiple slave SPI) */
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  448 0016 4FF4FA70 		mov	r0, #500
  449 001a FFF7FEFF 		bl	wait_ready
  450 001e 0346     		mov	r3, r0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 12
 
 
  451              		.loc 1 192 5
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  490              		.cfi_def_cfa_offset 24
  491 0004 00AF     		add	r7, sp, #0
  492              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 13
 
 
  493 0006 7860     		str	r0, [r7, #4]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  533              		.loc 1 223 9
  534 0048 0123     		movs	r3, #1
  535              	.L34:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 14
 
 
  224:FATFS/Target/user_diskio_spi.c **** }
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  573 0014 0346     		mov	r3, r0
  574              		.loc 1 242 5
  575 0016 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 15
 
 
  576 0018 01D1     		bne	.L36
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  619 005e 1037     		adds	r7, r7, #16
  620              		.cfi_def_cfa_offset 8
  621 0060 BD46     		mov	sp, r7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 16
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 16
 
 
  622              		.cfi_def_cfa_register 13
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  272:FATFS/Target/user_diskio_spi.c **** 		res = send_cmd(CMD55, 0);
  660              		.loc 1 272 9
  661 001c 0021     		movs	r1, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 17
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 17
 
 
  662 001e 3720     		movs	r0, #55
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  703              		.loc 1 285 22
  704 0064 3B68     		ldr	r3, [r7]
  705 0066 1B0C     		lsrs	r3, r3, #16
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 18
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 18
 
 
  706              		.loc 1 285 2
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  751 00ae FFF7FEFF 		bl	xchg_spi
  752              	.L45:
  295:FATFS/Target/user_diskio_spi.c **** 	n = 10;								/* Wait for response (10 bytes max) */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 19
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 19
 
 
  753              		.loc 1 295 4
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  307:FATFS/Target/user_diskio_spi.c **** 
  308:FATFS/Target/user_diskio_spi.c **** ---------------------------------------------------------------------------*/
  309:FATFS/Target/user_diskio_spi.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 20
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 20
 
 
  310:FATFS/Target/user_diskio_spi.c **** //The following functions are defined as inline because they aren't the functions that
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  831 0024 1B78     		ldrb	r3, [r3]
  832 0026 DBB2     		uxtb	r3, r3
  833 0028 CBE0     		b	.L71
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 21
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 21
 
 
  834              	.L51:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  880 007c 0346     		mov	r3, r0
  881              		.loc 1 338 6
  882 007e 012B     		cmp	r3, #1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 22
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 22
 
 
  883 0080 51D1     		bne	.L55
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  934              		.loc 1 341 31 discriminator 1
  935 00ce 002B     		cmp	r3, #0
  936 00d0 F2D1     		bne	.L59
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 23
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 23
 
 
  937              	.L58:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  988              	.L62:
  989              		.loc 1 344 9 discriminator 2
  990 0120 0423     		movs	r3, #4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 24
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 24
 
 
  991              	.L63:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1036 0160 F2D1     		bne	.L67
  1037              	.L66:
  354:FATFS/Target/user_diskio_spi.c **** 			if (!SPI_Timer_Status() || send_cmd(CMD16, 512) != 0)	/* Set block length: 512 */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 25
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 25
 
 
  1038              		.loc 1 354 9
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1083 01b2 1A70     		strb	r2, [r3]
  1084 01b4 02E0     		b	.L70
  1085              	.L69:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 26
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 26
 
 
  364:FATFS/Target/user_diskio_spi.c **** 	} else {			/* Failed */
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1125              		@ frame_needed = 1, uses_anonymous_args = 0
  1126              		@ link register save eliminated.
  1127 0000 80B4     		push	{r7}
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 27
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 27
 
 
  1128              		.cfi_def_cfa_offset 4
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  389:FATFS/Target/user_diskio_spi.c **** /* Read sector(s)                                                        */
  390:FATFS/Target/user_diskio_spi.c **** /*-----------------------------------------------------------------------*/
  391:FATFS/Target/user_diskio_spi.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 28
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 28
 
 
  392:FATFS/Target/user_diskio_spi.c **** inline DRESULT USER_SPI_read (
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1219 0032 254B     		ldr	r3, .L92+4
  1220 0034 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1221 0036 03F00803 		and	r3, r3, #8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 29
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 29
 
 
  1222              		.loc 1 402 5
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1265 007c 4FF40071 		mov	r1, #512
  1266 0080 B868     		ldr	r0, [r7, #8]
  1267 0082 FFF7FEFF 		bl	rcvr_datablock
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 30
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 30
 
 
  1268 0086 0346     		mov	r3, r0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1312              		.align	2
  1313              	.L92:
  1314 00c4 00000000 		.word	Stat
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 31
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 31
 
 
  1315 00c8 00000000 		.word	CardType
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1355 001c 0423     		movs	r3, #4
  1356 001e 63E0     		b	.L97
  1357              	.L96:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 32
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 32
 
 
  439:FATFS/Target/user_diskio_spi.c **** 	if (Stat & STA_NOINIT) return RES_NOTRDY;	/* Check drive status */
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1405 0068 36D1     		bne	.L102
  446:FATFS/Target/user_diskio_spi.c **** 			&& xmit_datablock(buff, 0xFE)) {
  1406              		.loc 1 446 7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 33
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 33
 
 
  1407 006a FE21     		movs	r1, #254
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  456:FATFS/Target/user_diskio_spi.c **** 			} while (--count);
  1452              		.loc 1 456 13
  1453 00b6 3B68     		ldr	r3, [r7]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 34
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 34
 
 
  1454 00b8 013B     		subs	r3, r3, #1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1500              	.LFE335:
  1502              		.section	.text.USER_SPI_ioctl,"ax",%progbits
  1503              		.align	1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 35
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 35
 
 
  1504              		.global	USER_SPI_ioctl
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1538 001c 1B78     		ldrb	r3, [r3]
  1539 001e DBB2     		uxtb	r3, r3
  1540 0020 03F00103 		and	r3, r3, #1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 36
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 36
 
 
  1541              		.loc 1 484 5
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1585 0074 40F01D81 		bne	.L138
  1586              		.loc 1 494 35 discriminator 1
  1587 0078 07F10C03 		add	r3, r7, #12
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 37
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 37
 
 
  1588 007c 1021     		movs	r1, #16
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1637 00c2 BB7D     		ldrb	r3, [r7, #22]	@ zero_extendqisi2
  1638              		.loc 1 499 42
  1639 00c4 DB09     		lsrs	r3, r3, #7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 38
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 38
 
 
  1640 00c6 DBB2     		uxtb	r3, r3
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1690              		.loc 1 503 8
  1691 010c 0023     		movs	r3, #0
  1692 010e 87F82F30 		strb	r3, [r7, #47]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 39
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 39
 
 
  504:FATFS/Target/user_diskio_spi.c **** 		}
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1738 0162 97F82E30 		ldrb	r3, [r7, #46]	@ zero_extendqisi2
  1739 0166 002B     		cmp	r3, #0
  1740 0168 F3D1     		bne	.L128
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 40
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 40
 
 
  513:FATFS/Target/user_diskio_spi.c **** 					*(DWORD*)buff = 16UL << (csd[10] >> 4);
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  519:FATFS/Target/user_diskio_spi.c **** 					*(DWORD*)buff = (((csd[10] & 63) << 1) + ((WORD)(csd[11] & 128) >> 7) + 1) << ((csd[13] >> 6) 
  1776              		.loc 1 519 18
  1777 01a8 4C4B     		ldr	r3, .L144+4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 41
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 41
 
 
  1778 01aa 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1817 01de 9BB2     		uxth	r3, r3
  1818 01e0 03F01F03 		and	r3, r3, #31
  522:FATFS/Target/user_diskio_spi.c **** 				}
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 42
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 42
 
 
  1819              		.loc 1 522 52
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1860 0220 FFF7FEFF 		bl	USER_SPI_ioctl
  1861 0224 0346     		mov	r3, r0
  1862              		.loc 1 531 6
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 43
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 43
 
 
  1863 0226 002B     		cmp	r3, #0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1911 026a FFF7FEFF 		bl	send_cmd
  1912 026e 0346     		mov	r3, r0
  1913              		.loc 1 537 6
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 44
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 44
 
 
  1914 0270 002B     		cmp	r3, #0
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  1959 02b6 00BF     		nop
  1960 02b8 06E0     		b	.L121
  1961              	.L140:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 45
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 45
 
 
  530:FATFS/Target/user_diskio_spi.c **** 		if (USER_SPI_ioctl(drv, MMC_GET_CSD, csd)) break;	/* Get CSD */
@@ -2698,71 +2698,71 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 1
  2007              		.file 9 "Middlewares/Third_Party/FatFs/src/integer.h"
  2008              		.file 10 "Middlewares/Third_Party/FatFs/src/diskio.h"
  2009              		.file 11 "Core/Inc/main.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 46
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 46
 
 
  2010              		.file 12 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 47
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 47
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 user_diskio_spi.c
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:20     .bss.msg_buffer:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:26     .bss.RxBuf:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:29     .bss.RxBuf:0000000000000000 RxBuf
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:34     .data.Stat:0000000000000000 Stat
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:39     .bss.CardType:0000000000000000 CardType
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:40     .bss.CardType:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:46     .bss.spiTimerTickStart:0000000000000000 spiTimerTickStart
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:43     .bss.spiTimerTickStart:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:53     .bss.spiTimerTickDelay:0000000000000000 spiTimerTickDelay
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:50     .bss.spiTimerTickDelay:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:56     .text.SPI_Timer_On:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:62     .text.SPI_Timer_On:0000000000000000 SPI_Timer_On
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:99     .text.SPI_Timer_On:0000000000000020 $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:105    .text.SPI_Timer_Status:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:111    .text.SPI_Timer_Status:0000000000000000 SPI_Timer_Status
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:144    .text.SPI_Timer_Status:0000000000000024 $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:150    .text.xchg_spi:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:155    .text.xchg_spi:0000000000000000 xchg_spi
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:192    .text.xchg_spi:0000000000000028 $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:197    .text.rcvr_spi_multi:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:202    .text.rcvr_spi_multi:0000000000000000 rcvr_spi_multi
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:260    .text.xmit_spi_multi:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:265    .text.xmit_spi_multi:0000000000000000 xmit_spi_multi
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:320    .text.wait_ready:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:325    .text.wait_ready:0000000000000000 wait_ready
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:386    .text.despiselect:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:391    .text.despiselect:0000000000000000 despiselect
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:417    .text.despiselect:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:422    .text.spiselect:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:427    .text.spiselect:0000000000000000 spiselect
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:469    .text.spiselect:0000000000000034 $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:474    .text.rcvr_datablock:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:479    .text.rcvr_datablock:0000000000000000 rcvr_datablock
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:548    .text.xmit_datablock:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:553    .text.xmit_datablock:0000000000000000 xmit_datablock
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:629    .text.send_cmd:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:634    .text.send_cmd:0000000000000000 send_cmd
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:790    .text.USER_SPI_initialize:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:796    .text.USER_SPI_initialize:0000000000000000 USER_SPI_initialize
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1107   .text.USER_SPI_initialize:00000000000001cc $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1114   .text.USER_SPI_status:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1120   .text.USER_SPI_status:0000000000000000 USER_SPI_status
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1163   .text.USER_SPI_status:0000000000000028 $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1168   .text.USER_SPI_read:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1174   .text.USER_SPI_read:0000000000000000 USER_SPI_read
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1314   .text.USER_SPI_read:00000000000000c4 $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1320   .text.USER_SPI_write:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1326   .text.USER_SPI_write:0000000000000000 USER_SPI_write
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1497   .text.USER_SPI_write:00000000000000f0 $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1503   .text.USER_SPI_ioctl:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1509   .text.USER_SPI_ioctl:0000000000000000 USER_SPI_ioctl
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1559   .text.USER_SPI_ioctl:0000000000000040 $d
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1564   .text.USER_SPI_ioctl:0000000000000054 $t
-C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s:1993   .text.USER_SPI_ioctl:00000000000002d8 $d
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccig6Szd.s 			page 48
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:20     .bss.msg_buffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:26     .bss.RxBuf:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:29     .bss.RxBuf:0000000000000000 RxBuf
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:34     .data.Stat:0000000000000000 Stat
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:39     .bss.CardType:0000000000000000 CardType
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:40     .bss.CardType:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:46     .bss.spiTimerTickStart:0000000000000000 spiTimerTickStart
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:43     .bss.spiTimerTickStart:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:53     .bss.spiTimerTickDelay:0000000000000000 spiTimerTickDelay
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:50     .bss.spiTimerTickDelay:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:56     .text.SPI_Timer_On:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:62     .text.SPI_Timer_On:0000000000000000 SPI_Timer_On
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:99     .text.SPI_Timer_On:0000000000000020 $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:105    .text.SPI_Timer_Status:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:111    .text.SPI_Timer_Status:0000000000000000 SPI_Timer_Status
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:144    .text.SPI_Timer_Status:0000000000000024 $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:150    .text.xchg_spi:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:155    .text.xchg_spi:0000000000000000 xchg_spi
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:192    .text.xchg_spi:0000000000000028 $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:197    .text.rcvr_spi_multi:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:202    .text.rcvr_spi_multi:0000000000000000 rcvr_spi_multi
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:260    .text.xmit_spi_multi:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:265    .text.xmit_spi_multi:0000000000000000 xmit_spi_multi
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:320    .text.wait_ready:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:325    .text.wait_ready:0000000000000000 wait_ready
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:386    .text.despiselect:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:391    .text.despiselect:0000000000000000 despiselect
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:417    .text.despiselect:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:422    .text.spiselect:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:427    .text.spiselect:0000000000000000 spiselect
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:469    .text.spiselect:0000000000000034 $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:474    .text.rcvr_datablock:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:479    .text.rcvr_datablock:0000000000000000 rcvr_datablock
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:548    .text.xmit_datablock:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:553    .text.xmit_datablock:0000000000000000 xmit_datablock
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:629    .text.send_cmd:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:634    .text.send_cmd:0000000000000000 send_cmd
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:790    .text.USER_SPI_initialize:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:796    .text.USER_SPI_initialize:0000000000000000 USER_SPI_initialize
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1107   .text.USER_SPI_initialize:00000000000001cc $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1114   .text.USER_SPI_status:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1120   .text.USER_SPI_status:0000000000000000 USER_SPI_status
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1163   .text.USER_SPI_status:0000000000000028 $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1168   .text.USER_SPI_read:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1174   .text.USER_SPI_read:0000000000000000 USER_SPI_read
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1314   .text.USER_SPI_read:00000000000000c4 $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1320   .text.USER_SPI_write:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1326   .text.USER_SPI_write:0000000000000000 USER_SPI_write
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1497   .text.USER_SPI_write:00000000000000f0 $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1503   .text.USER_SPI_ioctl:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1509   .text.USER_SPI_ioctl:0000000000000000 USER_SPI_ioctl
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1559   .text.USER_SPI_ioctl:0000000000000040 $d
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1564   .text.USER_SPI_ioctl:0000000000000054 $t
+C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s:1993   .text.USER_SPI_ioctl:00000000000002d8 $d
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccVdePJV.s 			page 48
 
 
 

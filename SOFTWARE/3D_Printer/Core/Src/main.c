@@ -248,42 +248,42 @@ int main(void)
   VL53L0X_SetVcselPulsePeriod(Dev, VL53L0X_VCSEL_PERIOD_PRE_RANGE, 18);
   VL53L0X_SetVcselPulsePeriod(Dev, VL53L0X_VCSEL_PERIOD_FINAL_RANGE, 14);
 
-  HAL_Delay(1000);
-  FATFS FatFs;  // Fatfs handle
-  FIL fil;      // File handle
-  FRESULT fres; // Result after operations
-
-  fres = f_mount(&FatFs, "", 1); // 1=mount now
   // HAL_Delay(1000);
-  while (fres != FR_OK)
-  {
-    myprintf("f_mount error (%i)\r\n", fres);
-    HAL_Delay(500);
-    fres = f_mount(&FatFs, "", 1); // 1=mount now
-  }
+  // FATFS FatFs;  // Fatfs handle
+  // FIL fil;      // File handle
+  // FRESULT fres; // Result after operations
 
-  DWORD free_clusters, free_sectors, total_sectors;
+  // fres = f_mount(&FatFs, "", 1); // 1=mount now
+  // // HAL_Delay(1000);
+  // while (fres != FR_OK)
+  // {
+  //   myprintf("f_mount error (%i)\r\n", fres);
+  //   HAL_Delay(500);
+  //   fres = f_mount(&FatFs, "", 1); // 1=mount now
+  // }
 
-  FATFS *getFreeFs;
+  // DWORD free_clusters, free_sectors, total_sectors;
 
-  fres = f_getfree("", &free_clusters, &getFreeFs);
-  while (fres != FR_OK)
-  {
-    myprintf("f_getfree error (%i)\r\n", fres);
-    HAL_Delay(500);
-    fres = f_getfree("", &free_clusters, &getFreeFs);
-  }
-  total_sectors = (getFreeFs->n_fatent - 2) * getFreeFs->csize;
-  free_sectors = free_clusters * getFreeFs->csize;
-  myprintf("SD card stats:\r\n%10lu KiB total drive space.\r\n%10lu KiB available.\r\n", total_sectors / 2, free_sectors / 2);
-  fres = f_open(&fil, "AA8_cube.txt", FA_READ);
-  while (fres != FR_OK)
-  {
-    myprintf("f_open error (%i)\r\n");
-    HAL_Delay(500);
-    fres = f_open(&fil, "AA8_cube.txt", FA_READ);
-  }
-  myprintf("I was able to open 'AA8_cube.txt' for reading!\r\n");
+  // FATFS *getFreeFs;
+
+  // fres = f_getfree("", &free_clusters, &getFreeFs);
+  // while (fres != FR_OK)
+  // {
+  //   myprintf("f_getfree error (%i)\r\n", fres);
+  //   HAL_Delay(500);
+  //   fres = f_getfree("", &free_clusters, &getFreeFs);
+  // }
+  // total_sectors = (getFreeFs->n_fatent - 2) * getFreeFs->csize;
+  // free_sectors = free_clusters * getFreeFs->csize;
+  // myprintf("SD card stats:\r\n%10lu KiB total drive space.\r\n%10lu KiB available.\r\n", total_sectors / 2, free_sectors / 2);
+  // fres = f_open(&fil, "AA8_cube.txt", FA_READ);
+  // while (fres != FR_OK)
+  // {
+  //   myprintf("f_open error (%i)\r\n");
+  //   HAL_Delay(500);
+  //   fres = f_open(&fil, "AA8_cube.txt", FA_READ);
+  // }
+  // myprintf("I was able to open 'AA8_cube.txt' for reading!\r\n");
 
   /* USER CODE END 2 */
 
@@ -327,10 +327,10 @@ int main(void)
 
     // HAL_Delay(400);
 
-    if (READ_PIN(X_STOP_PIN) != 1 && READ_PIN(Y_STOP_PIN) != 1)
-    {
+    // if (READ_PIN(X_STOP_PIN) != 1 && READ_PIN(Y_STOP_PIN) != 1)
+    // {
       G0();
-    }
+    // }
     M104();
     M140();
     if (steps <= 6500)
@@ -358,7 +358,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
   }
-  f_close(&fil);
+  // f_close(&fil);
   /* USER CODE END 3 */
 }
 

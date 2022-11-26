@@ -51,15 +51,17 @@ void get_command(uint8_t buf[])
         break;
     case 'G':
         HAL_Delay(1);
-        switch(atoi(buf + 1))
+        switch (atoi(buf + 1))
         {
-            case 0:
-            case 1:
-                 G0();
-                break;
-            case 28:
-                G28();
-                break;
+        case 0:
+        case 1:
+            CurStepsA = 1;
+            CurStepsB = 1;
+            G0();
+            break;
+        case 28:
+            G28();
+            break;
         }
         break;
     }

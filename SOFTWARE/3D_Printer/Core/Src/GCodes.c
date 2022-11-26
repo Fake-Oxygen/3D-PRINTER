@@ -42,9 +42,10 @@ void G0()
     uint32_t speed = (double)1 / (double)F * (double)60 * E_MM_PER_REV / STEPS_PER_REV * (double)1000000;
     Move(Z_dif, last_time_Z, Z_AXIS, speed);
     Move(E_dif, last_time_E, E_AXIS, speed);
+   
     if (fabs(dif_x) > OFFSET_P || fabs(dif_y) > OFFSET_P)
     {
-        MoveXY(dir_x, dir_y);
+         MoveXY2(dif_x, dif_y);
     }
     else
     {

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   * @{
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   */
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 2
 
 
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** /** @defgroup PWREx PWREx
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** 
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** /* Private macro -------------------------------------------------------------*/
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** /* Private variables ---------------------------------------------------------*/
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 3
 
 
   88:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** /* Private function prototypes -----------------------------------------------*/
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  121:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****     else if (READ_BIT(PWR->CR5, PWR_CR5_R1MODE) == PWR_CR5_R1MODE)
   50              		.loc 1 121 14
   51 0018 084B     		ldr	r3, .L5
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 4
 
 
   52 001a D3F88030 		ldr	r3, [r3, #128]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  141:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   *          This parameter can be one of the following values:
  142:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   @if STM32L4S9xx
  143:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   *            @arg @ref PWR_REGULATOR_VOLTAGE_SCALE1_BOOST when available, Regulator voltage outpu
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 5
 
 
  144:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   *                                                typical output voltage at 1.2 V,
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  174:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****     {
  175:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****       /* Make sure Range 1 Boost is enabled */
  176:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****       CLEAR_BIT(PWR->CR5, PWR_CR5_R1MODE);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 6
 
 
  113              		.loc 1 176 7
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  155 006a 002B     		cmp	r3, #0
  156 006c F2D1     		bne	.L12
  157              	.L11:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 7
 
 
  186:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****       }
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  192 00b0 43F48073 		orr	r3, r3, #256
  193 00b4 C2F88030 		str	r3, [r2, #128]
  206:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 8
 
 
  207:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****       /* Set Range 1 */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  235 00fc 5B69     		ldr	r3, [r3, #20]
  236 00fe 03F48063 		and	r3, r3, #1024
  237              		.loc 1 216 10
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 9
 
 
  238 0102 B3F5806F 		cmp	r3, #1024
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  249:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****       {
  250:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****         wait_loop_index--;
  251:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****       }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 10
 
 
  252:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****       if (HAL_IS_BIT_SET(PWR->SR2, PWR_SR2_VOSF))
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  276:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   * @param  ResistorSelection specifies the resistor impedance.
  277:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   *          This parameter can be one of the following values:
  278:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   *            @arg @ref PWR_BATTERY_CHARGING_RESISTOR_5     5 kOhms resistor
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 11
 
 
  279:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   *            @arg @ref PWR_BATTERY_CHARGING_RESISTOR_1_5 1.5 kOhms resistor
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  333 0030 00700040 		.word	1073770496
  334              		.cfi_endproc
  335              	.LFE323:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 12
 
 
  337              		.section	.text.HAL_PWREx_DisableBatteryCharging,"ax",%progbits
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  383              		.thumb_func
  385              	HAL_PWREx_EnableVddUSB:
  386              	.LFB325:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 13
 
 
  302:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  317:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   * @brief Disable VDDUSB supply.
  318:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   * @retval None
  319:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 14
 
 
  320:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** void HAL_PWREx_DisableVddUSB(void)
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  470              		.cfi_startproc
  471              		@ args = 0, pretend = 0, frame = 0
  472              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 15
 
 
  473              		@ link register save eliminated.
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  519              		.cfi_def_cfa_register 7
  344:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   CLEAR_BIT(PWR->CR2, PWR_CR2_IOSV);
  520              		.loc 1 344 3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 16
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 16
 
 
  521 0004 054B     		ldr	r3, .L38
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  566 000e 9360     		str	r3, [r2, #8]
  356:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** }
  567              		.loc 1 356 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 17
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 17
 
 
  568 0010 00BF     		nop
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  614              		.cfi_restore 7
  615              		.cfi_def_cfa_offset 0
  616 0018 7047     		bx	lr
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 18
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 18
 
 
  617              	.L45:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  393:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  647              		.loc 1 393 21
  648 000a 0023     		movs	r3, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 19
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 19
 
 
  649 000c FB73     		strb	r3, [r7, #15]
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  691 0066 9A6A     		ldr	r2, [r3, #40]
  692 0068 3F49     		ldr	r1, .L60
  693 006a 3B68     		ldr	r3, [r7]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 20
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 20
 
 
  694 006c 1343     		orrs	r3, r3, r2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  738 00b4 2C49     		ldr	r1, .L60
  739 00b6 1340     		ands	r3, r3, r2
  740 00b8 CB63     		str	r3, [r1, #60]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 21
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 21
 
 
  416:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****        break;
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  431:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****     case PWR_GPIO_G:
  432:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****        SET_BIT(PWR->PUCRG, GPIONumber);
  780              		.loc 1 432 8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 22
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 22
 
 
  781 00f4 1C4B     		ldr	r3, .L60
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  821 0134 3B68     		ldr	r3, [r7]
  822 0136 C3F30B03 		ubfx	r3, r3, #0, #12
  823 013a 0B49     		ldr	r1, .L60
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 23
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 23
 
 
  824 013c 1343     		orrs	r3, r3, r2
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  869              		.thumb_func
  871              	HAL_PWREx_DisableGPIOPullUp:
  872              	.LFB332:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 24
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 24
 
 
  457:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  902 002c 85000000 		.word	.L69+1
  903 0030 95000000 		.word	.L68+1
  904 0034 A5000000 		.word	.L67+1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 25
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 25
 
 
  905 0038 B5000000 		.word	.L66+1
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  946 0078 3B68     		ldr	r3, [r7]
  947 007a DB43     		mvns	r3, r3
  948 007c 1C49     		ldr	r1, .L76
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 26
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 26
 
 
  949 007e 1340     		ands	r3, r3, r2
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  511:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** #endif
  512:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****     case PWR_GPIO_H:
  513:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****        CLEAR_BIT(PWR->PUCRH, (GPIONumber & PWR_PORTH_AVAILABLE_PINS));
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 27
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 27
 
 
  987              		.loc 1 513 8
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1028              		.cfi_def_cfa_offset 0
  1029 00ec 7047     		bx	lr
  1030              	.L77:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 28
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 28
 
 
  1031 00ee 00BF     		.align	2
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1060              		.loc 1 553 21
  1061 000a 0023     		movs	r3, #0
  1062 000c FB73     		strb	r3, [r7, #15]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 29
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 29
 
 
  554:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** 
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1105 0068 3B68     		ldr	r3, [r7]
  1106 006a 23F01003 		bic	r3, r3, #16
  1107 006e 3E49     		ldr	r1, .L92
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 30
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 30
 
 
  1108 0070 1343     		orrs	r3, r3, r2
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1152 00b6 1340     		ands	r3, r3, r2
  1153 00b8 8B63     		str	r3, [r1, #56]
  576:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****        break;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 31
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 31
 
 
  1154              		.loc 1 576 8
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  592:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****        SET_BIT(PWR->PDCRG, GPIONumber);
  1193              		.loc 1 592 8
  1194 00f4 1C4B     		ldr	r3, .L92
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 32
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 32
 
 
  1195 00f6 5A6D     		ldr	r2, [r3, #84]
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1235 0136 C3F30B03 		ubfx	r3, r3, #0, #12
  1236 013a 0B49     		ldr	r1, .L92
  1237 013c 1343     		orrs	r3, r3, r2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 33
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 33
 
 
  1238 013e 4B66     		str	r3, [r1, #100]
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1284              	HAL_PWREx_DisableGPIOPullDown:
  1285              	.LFB334:
  617:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 34
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 34
 
 
  618:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1316 0030 99000000 		.word	.L100+1
  1317 0034 A9000000 		.word	.L99+1
  1318 0038 B9000000 		.word	.L98+1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 35
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 35
 
 
  1319 003c CB000000 		.word	.L96+1
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1360 007c 3B68     		ldr	r3, [r7]
  1361 007e DB43     		mvns	r3, r3
  1362 0080 1C49     		ldr	r1, .L108
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 36
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 36
 
 
  1363 0082 1340     		ands	r3, r3, r2
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  671:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** #endif
  672:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****     case PWR_GPIO_H:
  673:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** #if defined (STM32L496xx) || defined (STM32L4A6xx)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 37
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 37
 
 
  674:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****        CLEAR_BIT(PWR->PDCRH, ((GPIONumber & PWR_PORTH_AVAILABLE_PINS) & (~(PWR_GPIO_BIT_3))));
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1438              		.cfi_def_cfa_register 13
  1439              		@ sp needed
  1440 00ec 5DF8047B 		ldr	r7, [sp], #4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 38
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 38
 
 
  1441              		.cfi_restore 7
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1480              		@ sp needed
  1481 0014 5DF8047B 		ldr	r7, [sp], #4
  1482              		.cfi_restore 7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 39
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 39
 
 
  1483              		.cfi_def_cfa_offset 0
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1527 001a 00BF     		.align	2
  1528              	.L114:
  1529 001c 00700040 		.word	1073770496
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 40
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 40
 
 
  1530              		.cfi_endproc
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1570              		.loc 1 737 1
  1571              		.cfi_startproc
  1572              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 41
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 41
 
 
  1573              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1611              		.loc 1 755 6
  1612 0008 7B68     		ldr	r3, [r7, #4]
  1613 000a 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 42
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 42
 
 
  1614 000c 06D1     		bne	.L119
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  771:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   }
  772:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** 
  773:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   return HAL_OK;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 43
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 43
 
 
  1653              		.loc 1 773 10
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1697 000a 43F40063 		orr	r3, r3, #2048
  1698 000e 9360     		str	r3, [r2, #8]
  786:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 44
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 44
 
 
  1699              		.loc 1 786 1
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1744              		@ sp needed
  1745 0014 5DF8047B 		ldr	r7, [sp], #4
  1746              		.cfi_restore 7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 45
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 45
 
 
  1747              		.cfi_def_cfa_offset 0
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1789 0018 7047     		bx	lr
  1790              	.L134:
  1791 001a 00BF     		.align	2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 46
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 46
 
 
  1792              	.L133:
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1836              	.LFE343:
  1838              		.section	.text.HAL_PWREx_EnableSRAM3ContentRetention,"ax",%progbits
  1839              		.align	1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 47
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 47
 
 
  1840              		.global	HAL_PWREx_EnableSRAM3ContentRetention
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1882              		.syntax unified
  1883              		.thumb
  1884              		.thumb_func
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 48
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 48
 
 
  1886              	HAL_PWREx_DisableSRAM3ContentRetention:
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  851:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** 
  852:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** #if defined(PWR_CR3_DSIPDEN)
  853:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** /**
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 49
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 49
 
 
  854:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   * @brief Enable pull-down activation on DSI pins.
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  1955 001a 00BF     		.align	2
  1956              	.L145:
  1957 001c 00700040 		.word	1073770496
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 50
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 50
 
 
  1958              		.cfi_endproc
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2006              		.thumb
  2007              		.thumb_func
  2009              	HAL_PWREx_EnablePVM2:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 51
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 51
 
 
  2010              	.LFB348:
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  905:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   * @brief Disable the Power Voltage Monitoring 2: VDDIO2 versus 0.9V.
  906:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   * @retval None
  907:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 52
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 52
 
 
  908:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** void HAL_PWREx_DisablePVM2(void)
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2095              		@ args = 0, pretend = 0, frame = 0
  2096              		@ frame_needed = 1, uses_anonymous_args = 0
  2097              		@ link register save eliminated.
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 53
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 53
 
 
  2098 0000 80B4     		push	{r7}
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2144              		.loc 1 930 3
  2145 0004 054B     		ldr	r3, .L160
  2146 0006 5B68     		ldr	r3, [r3, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 54
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 54
 
 
  2147 0008 044A     		ldr	r2, .L160
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2192 0010 00BF     		nop
  2193 0012 BD46     		mov	sp, r7
  2194              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 55
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 55
 
 
  2195              		@ sp needed
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2242 001a 00BF     		.align	2
  2243              	.L166:
  2244 001c 00700040 		.word	1073770496
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 56
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 56
 
 
  2245              		.cfi_endproc
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  979:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   switch (sConfigPVM->PVMType)
  2273              		.loc 1 979 21
  2274 000c 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 57
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 57
 
 
  2275 000e 1B68     		ldr	r3, [r3]
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2318              		.loc 1 990 28
  2319 0066 03F48033 		and	r3, r3, #65536
  2320              		.loc 1 990 9
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 58
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 58
 
 
  2321 006a 002B     		cmp	r3, #0
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
 1006:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** 
 1007:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****       if((sConfigPVM->Mode & PVM_FALLING_EDGE) == PVM_FALLING_EDGE)
  2360              		.loc 1 1007 21
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 59
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 59
 
 
  2361 00aa 7B68     		ldr	r3, [r7, #4]
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
 1022:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****       /* Configure interrupt mode */
 1023:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****       if((sConfigPVM->Mode & PVM_MODE_IT) == PVM_MODE_IT)
  2401              		.loc 1 1023 21
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 60
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 60
 
 
  2402 00f6 7B68     		ldr	r3, [r7, #4]
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2442 0136 564A     		ldr	r2, .L196
  2443 0138 43F01003 		orr	r3, r3, #16
  2444 013c 9362     		str	r3, [r2, #40]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 61
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 61
 
 
  2445              	.L181:
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2484 0182 434A     		ldr	r2, .L196
  2485 0184 23F02003 		bic	r3, r3, #32
  2486 0188 9362     		str	r3, [r2, #40]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 62
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 62
 
 
 1053:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** 
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
 1069:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****         __HAL_PWR_PVM3_EXTI_ENABLE_RISING_EDGE();
  2525              		.loc 1 1069 9
  2526 01c6 324B     		ldr	r3, .L196
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 63
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 63
 
 
  2527 01c8 9B6A     		ldr	r3, [r3, #40]
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2567              		.loc 1 1083 7
  2568 0210 1F4B     		ldr	r3, .L196
  2569 0212 9B6A     		ldr	r3, [r3, #40]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 64
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 64
 
 
  2570 0214 1E4A     		ldr	r2, .L196
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2609 0254 002B     		cmp	r3, #0
  2610 0256 05D0     		beq	.L189
 1099:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****       {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 65
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 65
 
 
 1100:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****         __HAL_PWR_PVM4_EXTI_ENABLE_RISING_EDGE();
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2650 028c 00BF     		nop
  2651 028e 02E0     		b	.L178
  2652              	.L197:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 66
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 66
 
 
  2653              		.align	2
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2689              		@ link register save eliminated.
  2690 0000 80B4     		push	{r7}
  2691              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 67
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 67
 
 
  2692              		.cfi_offset 7, -4
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2733              		.cfi_offset 7, -4
  2734 0002 83B0     		sub	sp, sp, #12
  2735              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 68
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 68
 
 
  2736 0004 00AF     		add	r7, sp, #0
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
 1157:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   if (HAL_IS_BIT_SET(PWR->SR2, PWR_SR2_REGLPF))
  2776              		.loc 1 1157 7 is_stmt 1
  2777 0044 074B     		ldr	r3, .L207
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 69
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 69
 
 
  2778 0046 5B69     		ldr	r3, [r3, #20]
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
 1173:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   *        after receiving the frame if it is not a wakeup frame. In this case, the HSI clock is pr
 1174:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   *        only to the peripheral requesting it.
 1175:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   *        SRAM1, SRAM2 and register contents are preserved.
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 70
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 70
 
 
 1176:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   *        The BOR is available.
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2848 0026 01D1     		bne	.L210
 1201:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   {
 1202:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****     /* Request Wait For Interrupt */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 71
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 71
 
 
 1203:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****     __WFI();
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2890 0048 7047     		bx	lr
  2891              	.L213:
  2892 004a 00BF     		.align	2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 72
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 72
 
 
  2893              	.L212:
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
 1243:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** 
 1244:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   /* Stop 1 mode with Low-Power Regulator */
 1245:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   MODIFY_REG(PWR->CR1, PWR_CR1_LPMS, PWR_CR1_LPMS_STOP1);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 73
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 73
 
 
  2922              		.loc 1 1245 3
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  2960              	@ 0 "" 2
  2961              		.thumb
  2962              		.syntax unified
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 74
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 74
 
 
  2963              	.L216:
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
 1283:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   * @note  When exiting Stop 2 mode by issuing an interrupt or a wakeup event,
 1284:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   *         the HSI RC oscillator is selected as system clock if STOPWUCK bit in RCC_CFGR register
 1285:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   *         is set; the MSI oscillator is selected if STOPWUCK is cleared.
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 75
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 75
 
 
 1286:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   * @param STOPEntry  specifies if Stop mode in entered with WFI or WFE instruction.
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  3030              		.syntax unified
  3031              	@ 1307 "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" 1
  3032 002c 30BF     		wfi
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 76
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 76
 
 
  3033              	@ 0 "" 2
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  3075 0054 00ED00E0 		.word	-536810240
  3076              		.cfi_endproc
  3077              	.LFE359:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 77
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 77
 
 
  3079              		.section	.text.HAL_PWREx_EnterSHUTDOWNMode,"ax",%progbits
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
 1343:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** /* This option is used to ensure that store operations are completed */
 1344:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** #if defined ( __CC_ARM)
 1345:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   __force_stores();
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 78
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 78
 
 
 1346:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c **** #endif
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  3152 0002 00AF     		add	r7, sp, #0
  3153              		.cfi_def_cfa_register 7
 1361:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   /* Check PWR exti flag */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 79
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 79
 
 
 1362:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   if(__HAL_PWR_PVD_EXTI_GET_FLAG() != 0x0U)
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  3187 003a 002B     		cmp	r3, #0
  3188 003c 04D0     		beq	.L230
 1383:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 80
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 80
 
 
 1384:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****     /* PWR PVM2 interrupt user callback */
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  3221 0070 4022     		movs	r2, #64
  3222 0072 5A63     		str	r2, [r3, #52]
  3223              	.L233:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 81
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 81
 
 
 1406:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c ****   }
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  3266              		.align	1
  3267              		.weak	HAL_PWREx_PVM2Callback
  3268              		.syntax unified
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 82
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 82
 
 
  3269              		.thumb
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  3305              		.loc 1 1441 1
  3306              		.cfi_startproc
  3307              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 83
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 83
 
 
  3308              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  3349              		.cfi_def_cfa_register 13
  3350              		@ sp needed
  3351 0008 5DF8047B 		ldr	r7, [sp], #4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 84
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 84
 
 
  3352              		.cfi_restore 7
@@ -4996,155 +4996,155 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 1
  3365              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
  3366              		.file 8 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h"
  3367              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 85
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 85
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_pwr_ex.c
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:20     .text.HAL_PWREx_GetVoltageRange:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:26     .text.HAL_PWREx_GetVoltageRange:0000000000000000 HAL_PWREx_GetVoltageRange
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:76     .text.HAL_PWREx_GetVoltageRange:000000000000003c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:81     .text.HAL_PWREx_ControlVoltageScaling:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:87     .text.HAL_PWREx_ControlVoltageScaling:0000000000000000 HAL_PWREx_ControlVoltageScaling
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:277    .text.HAL_PWREx_ControlVoltageScaling:000000000000013c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:284    .text.HAL_PWREx_EnableBatteryCharging:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:290    .text.HAL_PWREx_EnableBatteryCharging:0000000000000000 HAL_PWREx_EnableBatteryCharging
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:333    .text.HAL_PWREx_EnableBatteryCharging:0000000000000030 $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:338    .text.HAL_PWREx_DisableBatteryCharging:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:344    .text.HAL_PWREx_DisableBatteryCharging:0000000000000000 HAL_PWREx_DisableBatteryCharging
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:374    .text.HAL_PWREx_DisableBatteryCharging:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:379    .text.HAL_PWREx_EnableVddUSB:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:385    .text.HAL_PWREx_EnableVddUSB:0000000000000000 HAL_PWREx_EnableVddUSB
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:415    .text.HAL_PWREx_EnableVddUSB:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:420    .text.HAL_PWREx_DisableVddUSB:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:426    .text.HAL_PWREx_DisableVddUSB:0000000000000000 HAL_PWREx_DisableVddUSB
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:456    .text.HAL_PWREx_DisableVddUSB:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:461    .text.HAL_PWREx_EnableVddIO2:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:467    .text.HAL_PWREx_EnableVddIO2:0000000000000000 HAL_PWREx_EnableVddIO2
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:497    .text.HAL_PWREx_EnableVddIO2:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:502    .text.HAL_PWREx_DisableVddIO2:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:508    .text.HAL_PWREx_DisableVddIO2:0000000000000000 HAL_PWREx_DisableVddIO2
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:538    .text.HAL_PWREx_DisableVddIO2:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:543    .text.HAL_PWREx_EnableInternalWakeUpLine:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:549    .text.HAL_PWREx_EnableInternalWakeUpLine:0000000000000000 HAL_PWREx_EnableInternalWakeUpLine
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:579    .text.HAL_PWREx_EnableInternalWakeUpLine:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:584    .text.HAL_PWREx_DisableInternalWakeUpLine:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:590    .text.HAL_PWREx_DisableInternalWakeUpLine:0000000000000000 HAL_PWREx_DisableInternalWakeUpLine
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:620    .text.HAL_PWREx_DisableInternalWakeUpLine:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:625    .text.HAL_PWREx_EnableGPIOPullUp:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:631    .text.HAL_PWREx_EnableGPIOPullUp:0000000000000000 HAL_PWREx_EnableGPIOPullUp
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:658    .text.HAL_PWREx_EnableGPIOPullUp:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:667    .text.HAL_PWREx_EnableGPIOPullUp:0000000000000040 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:860    .text.HAL_PWREx_EnableGPIOPullUp:0000000000000168 $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:865    .text.HAL_PWREx_DisableGPIOPullUp:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:871    .text.HAL_PWREx_DisableGPIOPullUp:0000000000000000 HAL_PWREx_DisableGPIOPullUp
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:898    .text.HAL_PWREx_DisableGPIOPullUp:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:907    .text.HAL_PWREx_DisableGPIOPullUp:0000000000000040 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1033   .text.HAL_PWREx_DisableGPIOPullUp:00000000000000f0 $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1038   .text.HAL_PWREx_EnableGPIOPullDown:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1044   .text.HAL_PWREx_EnableGPIOPullDown:0000000000000000 HAL_PWREx_EnableGPIOPullDown
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1071   .text.HAL_PWREx_EnableGPIOPullDown:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1080   .text.HAL_PWREx_EnableGPIOPullDown:0000000000000040 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1273   .text.HAL_PWREx_EnableGPIOPullDown:0000000000000168 $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1278   .text.HAL_PWREx_DisableGPIOPullDown:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1284   .text.HAL_PWREx_DisableGPIOPullDown:0000000000000000 HAL_PWREx_DisableGPIOPullDown
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1311   .text.HAL_PWREx_DisableGPIOPullDown:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1320   .text.HAL_PWREx_DisableGPIOPullDown:0000000000000040 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1447   .text.HAL_PWREx_DisableGPIOPullDown:00000000000000f4 $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1452   .text.HAL_PWREx_EnablePullUpPullDownConfig:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1458   .text.HAL_PWREx_EnablePullUpPullDownConfig:0000000000000000 HAL_PWREx_EnablePullUpPullDownConfig
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1488   .text.HAL_PWREx_EnablePullUpPullDownConfig:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1493   .text.HAL_PWREx_DisablePullUpPullDownConfig:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1499   .text.HAL_PWREx_DisablePullUpPullDownConfig:0000000000000000 HAL_PWREx_DisablePullUpPullDownConfig
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 86
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:20     .text.HAL_PWREx_GetVoltageRange:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:26     .text.HAL_PWREx_GetVoltageRange:0000000000000000 HAL_PWREx_GetVoltageRange
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:76     .text.HAL_PWREx_GetVoltageRange:000000000000003c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:81     .text.HAL_PWREx_ControlVoltageScaling:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:87     .text.HAL_PWREx_ControlVoltageScaling:0000000000000000 HAL_PWREx_ControlVoltageScaling
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:277    .text.HAL_PWREx_ControlVoltageScaling:000000000000013c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:284    .text.HAL_PWREx_EnableBatteryCharging:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:290    .text.HAL_PWREx_EnableBatteryCharging:0000000000000000 HAL_PWREx_EnableBatteryCharging
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:333    .text.HAL_PWREx_EnableBatteryCharging:0000000000000030 $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:338    .text.HAL_PWREx_DisableBatteryCharging:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:344    .text.HAL_PWREx_DisableBatteryCharging:0000000000000000 HAL_PWREx_DisableBatteryCharging
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:374    .text.HAL_PWREx_DisableBatteryCharging:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:379    .text.HAL_PWREx_EnableVddUSB:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:385    .text.HAL_PWREx_EnableVddUSB:0000000000000000 HAL_PWREx_EnableVddUSB
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:415    .text.HAL_PWREx_EnableVddUSB:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:420    .text.HAL_PWREx_DisableVddUSB:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:426    .text.HAL_PWREx_DisableVddUSB:0000000000000000 HAL_PWREx_DisableVddUSB
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:456    .text.HAL_PWREx_DisableVddUSB:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:461    .text.HAL_PWREx_EnableVddIO2:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:467    .text.HAL_PWREx_EnableVddIO2:0000000000000000 HAL_PWREx_EnableVddIO2
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:497    .text.HAL_PWREx_EnableVddIO2:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:502    .text.HAL_PWREx_DisableVddIO2:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:508    .text.HAL_PWREx_DisableVddIO2:0000000000000000 HAL_PWREx_DisableVddIO2
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:538    .text.HAL_PWREx_DisableVddIO2:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:543    .text.HAL_PWREx_EnableInternalWakeUpLine:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:549    .text.HAL_PWREx_EnableInternalWakeUpLine:0000000000000000 HAL_PWREx_EnableInternalWakeUpLine
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:579    .text.HAL_PWREx_EnableInternalWakeUpLine:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:584    .text.HAL_PWREx_DisableInternalWakeUpLine:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:590    .text.HAL_PWREx_DisableInternalWakeUpLine:0000000000000000 HAL_PWREx_DisableInternalWakeUpLine
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:620    .text.HAL_PWREx_DisableInternalWakeUpLine:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:625    .text.HAL_PWREx_EnableGPIOPullUp:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:631    .text.HAL_PWREx_EnableGPIOPullUp:0000000000000000 HAL_PWREx_EnableGPIOPullUp
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:658    .text.HAL_PWREx_EnableGPIOPullUp:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:667    .text.HAL_PWREx_EnableGPIOPullUp:0000000000000040 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:860    .text.HAL_PWREx_EnableGPIOPullUp:0000000000000168 $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:865    .text.HAL_PWREx_DisableGPIOPullUp:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:871    .text.HAL_PWREx_DisableGPIOPullUp:0000000000000000 HAL_PWREx_DisableGPIOPullUp
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:898    .text.HAL_PWREx_DisableGPIOPullUp:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:907    .text.HAL_PWREx_DisableGPIOPullUp:0000000000000040 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1033   .text.HAL_PWREx_DisableGPIOPullUp:00000000000000f0 $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1038   .text.HAL_PWREx_EnableGPIOPullDown:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1044   .text.HAL_PWREx_EnableGPIOPullDown:0000000000000000 HAL_PWREx_EnableGPIOPullDown
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1071   .text.HAL_PWREx_EnableGPIOPullDown:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1080   .text.HAL_PWREx_EnableGPIOPullDown:0000000000000040 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1273   .text.HAL_PWREx_EnableGPIOPullDown:0000000000000168 $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1278   .text.HAL_PWREx_DisableGPIOPullDown:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1284   .text.HAL_PWREx_DisableGPIOPullDown:0000000000000000 HAL_PWREx_DisableGPIOPullDown
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1311   .text.HAL_PWREx_DisableGPIOPullDown:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1320   .text.HAL_PWREx_DisableGPIOPullDown:0000000000000040 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1447   .text.HAL_PWREx_DisableGPIOPullDown:00000000000000f4 $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1452   .text.HAL_PWREx_EnablePullUpPullDownConfig:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1458   .text.HAL_PWREx_EnablePullUpPullDownConfig:0000000000000000 HAL_PWREx_EnablePullUpPullDownConfig
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1488   .text.HAL_PWREx_EnablePullUpPullDownConfig:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1493   .text.HAL_PWREx_DisablePullUpPullDownConfig:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1499   .text.HAL_PWREx_DisablePullUpPullDownConfig:0000000000000000 HAL_PWREx_DisablePullUpPullDownConfig
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 86
 
 
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1529   .text.HAL_PWREx_DisablePullUpPullDownConfig:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1534   .text.HAL_PWREx_EnableSRAM2ContentRetention:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1540   .text.HAL_PWREx_EnableSRAM2ContentRetention:0000000000000000 HAL_PWREx_EnableSRAM2ContentRetention
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1596   .text.HAL_PWREx_SetSRAM2ContentRetention:0000000000000000 HAL_PWREx_SetSRAM2ContentRetention
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1562   .text.HAL_PWREx_DisableSRAM2ContentRetention:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1568   .text.HAL_PWREx_DisableSRAM2ContentRetention:0000000000000000 HAL_PWREx_DisableSRAM2ContentRetention
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1590   .text.HAL_PWREx_SetSRAM2ContentRetention:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1670   .text.HAL_PWREx_SetSRAM2ContentRetention:0000000000000064 $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1675   .text.HAL_PWREx_EnableBORPVD_ULP:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1681   .text.HAL_PWREx_EnableBORPVD_ULP:0000000000000000 HAL_PWREx_EnableBORPVD_ULP
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1711   .text.HAL_PWREx_EnableBORPVD_ULP:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1716   .text.HAL_PWREx_DisableBORPVD_ULP:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1722   .text.HAL_PWREx_DisableBORPVD_ULP:0000000000000000 HAL_PWREx_DisableBORPVD_ULP
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1752   .text.HAL_PWREx_DisableBORPVD_ULP:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1757   .text.HAL_PWREx_EnableExtSMPS_0V95:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1763   .text.HAL_PWREx_EnableExtSMPS_0V95:0000000000000000 HAL_PWREx_EnableExtSMPS_0V95
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1793   .text.HAL_PWREx_EnableExtSMPS_0V95:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1798   .text.HAL_PWREx_DisableExtSMPS_0V95:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1804   .text.HAL_PWREx_DisableExtSMPS_0V95:0000000000000000 HAL_PWREx_DisableExtSMPS_0V95
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1834   .text.HAL_PWREx_DisableExtSMPS_0V95:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1839   .text.HAL_PWREx_EnableSRAM3ContentRetention:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1845   .text.HAL_PWREx_EnableSRAM3ContentRetention:0000000000000000 HAL_PWREx_EnableSRAM3ContentRetention
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1875   .text.HAL_PWREx_EnableSRAM3ContentRetention:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1880   .text.HAL_PWREx_DisableSRAM3ContentRetention:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1886   .text.HAL_PWREx_DisableSRAM3ContentRetention:0000000000000000 HAL_PWREx_DisableSRAM3ContentRetention
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1916   .text.HAL_PWREx_DisableSRAM3ContentRetention:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1921   .text.HAL_PWREx_EnablePVM1:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1927   .text.HAL_PWREx_EnablePVM1:0000000000000000 HAL_PWREx_EnablePVM1
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1957   .text.HAL_PWREx_EnablePVM1:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1962   .text.HAL_PWREx_DisablePVM1:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1968   .text.HAL_PWREx_DisablePVM1:0000000000000000 HAL_PWREx_DisablePVM1
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:1998   .text.HAL_PWREx_DisablePVM1:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2003   .text.HAL_PWREx_EnablePVM2:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2009   .text.HAL_PWREx_EnablePVM2:0000000000000000 HAL_PWREx_EnablePVM2
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2039   .text.HAL_PWREx_EnablePVM2:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2044   .text.HAL_PWREx_DisablePVM2:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2050   .text.HAL_PWREx_DisablePVM2:0000000000000000 HAL_PWREx_DisablePVM2
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2080   .text.HAL_PWREx_DisablePVM2:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2085   .text.HAL_PWREx_EnablePVM3:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2091   .text.HAL_PWREx_EnablePVM3:0000000000000000 HAL_PWREx_EnablePVM3
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2121   .text.HAL_PWREx_EnablePVM3:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2126   .text.HAL_PWREx_DisablePVM3:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2132   .text.HAL_PWREx_DisablePVM3:0000000000000000 HAL_PWREx_DisablePVM3
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2162   .text.HAL_PWREx_DisablePVM3:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2167   .text.HAL_PWREx_EnablePVM4:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2173   .text.HAL_PWREx_EnablePVM4:0000000000000000 HAL_PWREx_EnablePVM4
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2203   .text.HAL_PWREx_EnablePVM4:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2208   .text.HAL_PWREx_DisablePVM4:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2214   .text.HAL_PWREx_DisablePVM4:0000000000000000 HAL_PWREx_DisablePVM4
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2244   .text.HAL_PWREx_DisablePVM4:000000000000001c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2249   .text.HAL_PWREx_ConfigPVM:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2255   .text.HAL_PWREx_ConfigPVM:0000000000000000 HAL_PWREx_ConfigPVM
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2655   .text.HAL_PWREx_ConfigPVM:0000000000000290 $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2658   .text.HAL_PWREx_ConfigPVM:0000000000000294 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2677   .text.HAL_PWREx_EnableLowPowerRunMode:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2683   .text.HAL_PWREx_EnableLowPowerRunMode:0000000000000000 HAL_PWREx_EnableLowPowerRunMode
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2713   .text.HAL_PWREx_EnableLowPowerRunMode:000000000000001c $d
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s 			page 87
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1529   .text.HAL_PWREx_DisablePullUpPullDownConfig:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1534   .text.HAL_PWREx_EnableSRAM2ContentRetention:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1540   .text.HAL_PWREx_EnableSRAM2ContentRetention:0000000000000000 HAL_PWREx_EnableSRAM2ContentRetention
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1596   .text.HAL_PWREx_SetSRAM2ContentRetention:0000000000000000 HAL_PWREx_SetSRAM2ContentRetention
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1562   .text.HAL_PWREx_DisableSRAM2ContentRetention:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1568   .text.HAL_PWREx_DisableSRAM2ContentRetention:0000000000000000 HAL_PWREx_DisableSRAM2ContentRetention
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1590   .text.HAL_PWREx_SetSRAM2ContentRetention:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1670   .text.HAL_PWREx_SetSRAM2ContentRetention:0000000000000064 $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1675   .text.HAL_PWREx_EnableBORPVD_ULP:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1681   .text.HAL_PWREx_EnableBORPVD_ULP:0000000000000000 HAL_PWREx_EnableBORPVD_ULP
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1711   .text.HAL_PWREx_EnableBORPVD_ULP:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1716   .text.HAL_PWREx_DisableBORPVD_ULP:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1722   .text.HAL_PWREx_DisableBORPVD_ULP:0000000000000000 HAL_PWREx_DisableBORPVD_ULP
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1752   .text.HAL_PWREx_DisableBORPVD_ULP:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1757   .text.HAL_PWREx_EnableExtSMPS_0V95:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1763   .text.HAL_PWREx_EnableExtSMPS_0V95:0000000000000000 HAL_PWREx_EnableExtSMPS_0V95
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1793   .text.HAL_PWREx_EnableExtSMPS_0V95:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1798   .text.HAL_PWREx_DisableExtSMPS_0V95:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1804   .text.HAL_PWREx_DisableExtSMPS_0V95:0000000000000000 HAL_PWREx_DisableExtSMPS_0V95
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1834   .text.HAL_PWREx_DisableExtSMPS_0V95:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1839   .text.HAL_PWREx_EnableSRAM3ContentRetention:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1845   .text.HAL_PWREx_EnableSRAM3ContentRetention:0000000000000000 HAL_PWREx_EnableSRAM3ContentRetention
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1875   .text.HAL_PWREx_EnableSRAM3ContentRetention:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1880   .text.HAL_PWREx_DisableSRAM3ContentRetention:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1886   .text.HAL_PWREx_DisableSRAM3ContentRetention:0000000000000000 HAL_PWREx_DisableSRAM3ContentRetention
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1916   .text.HAL_PWREx_DisableSRAM3ContentRetention:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1921   .text.HAL_PWREx_EnablePVM1:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1927   .text.HAL_PWREx_EnablePVM1:0000000000000000 HAL_PWREx_EnablePVM1
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1957   .text.HAL_PWREx_EnablePVM1:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1962   .text.HAL_PWREx_DisablePVM1:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1968   .text.HAL_PWREx_DisablePVM1:0000000000000000 HAL_PWREx_DisablePVM1
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:1998   .text.HAL_PWREx_DisablePVM1:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2003   .text.HAL_PWREx_EnablePVM2:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2009   .text.HAL_PWREx_EnablePVM2:0000000000000000 HAL_PWREx_EnablePVM2
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2039   .text.HAL_PWREx_EnablePVM2:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2044   .text.HAL_PWREx_DisablePVM2:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2050   .text.HAL_PWREx_DisablePVM2:0000000000000000 HAL_PWREx_DisablePVM2
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2080   .text.HAL_PWREx_DisablePVM2:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2085   .text.HAL_PWREx_EnablePVM3:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2091   .text.HAL_PWREx_EnablePVM3:0000000000000000 HAL_PWREx_EnablePVM3
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2121   .text.HAL_PWREx_EnablePVM3:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2126   .text.HAL_PWREx_DisablePVM3:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2132   .text.HAL_PWREx_DisablePVM3:0000000000000000 HAL_PWREx_DisablePVM3
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2162   .text.HAL_PWREx_DisablePVM3:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2167   .text.HAL_PWREx_EnablePVM4:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2173   .text.HAL_PWREx_EnablePVM4:0000000000000000 HAL_PWREx_EnablePVM4
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2203   .text.HAL_PWREx_EnablePVM4:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2208   .text.HAL_PWREx_DisablePVM4:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2214   .text.HAL_PWREx_DisablePVM4:0000000000000000 HAL_PWREx_DisablePVM4
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2244   .text.HAL_PWREx_DisablePVM4:000000000000001c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2249   .text.HAL_PWREx_ConfigPVM:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2255   .text.HAL_PWREx_ConfigPVM:0000000000000000 HAL_PWREx_ConfigPVM
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2655   .text.HAL_PWREx_ConfigPVM:0000000000000290 $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2658   .text.HAL_PWREx_ConfigPVM:0000000000000294 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2677   .text.HAL_PWREx_EnableLowPowerRunMode:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2683   .text.HAL_PWREx_EnableLowPowerRunMode:0000000000000000 HAL_PWREx_EnableLowPowerRunMode
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2713   .text.HAL_PWREx_EnableLowPowerRunMode:000000000000001c $d
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s 			page 87
 
 
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2718   .text.HAL_PWREx_DisableLowPowerRunMode:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2724   .text.HAL_PWREx_DisableLowPowerRunMode:0000000000000000 HAL_PWREx_DisableLowPowerRunMode
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2804   .text.HAL_PWREx_DisableLowPowerRunMode:0000000000000064 $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2811   .text.HAL_PWREx_EnterSTOP0Mode:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2817   .text.HAL_PWREx_EnterSTOP0Mode:0000000000000000 HAL_PWREx_EnterSTOP0Mode
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2894   .text.HAL_PWREx_EnterSTOP0Mode:000000000000004c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2900   .text.HAL_PWREx_EnterSTOP1Mode:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2906   .text.HAL_PWREx_EnterSTOP1Mode:0000000000000000 HAL_PWREx_EnterSTOP1Mode
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2984   .text.HAL_PWREx_EnterSTOP1Mode:0000000000000050 $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2990   .text.HAL_PWREx_EnterSTOP2Mode:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:2996   .text.HAL_PWREx_EnterSTOP2Mode:0000000000000000 HAL_PWREx_EnterSTOP2Mode
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3074   .text.HAL_PWREx_EnterSTOP2Mode:0000000000000050 $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3080   .text.HAL_PWREx_EnterSHUTDOWNMode:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3086   .text.HAL_PWREx_EnterSHUTDOWNMode:0000000000000000 HAL_PWREx_EnterSHUTDOWNMode
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3130   .text.HAL_PWREx_EnterSHUTDOWNMode:000000000000002c $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3136   .text.HAL_PWREx_PVD_PVM_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3142   .text.HAL_PWREx_PVD_PVM_IRQHandler:0000000000000000 HAL_PWREx_PVD_PVM_IRQHandler
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3241   .text.HAL_PWREx_PVM1Callback:0000000000000000 HAL_PWREx_PVM1Callback
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3272   .text.HAL_PWREx_PVM2Callback:0000000000000000 HAL_PWREx_PVM2Callback
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3303   .text.HAL_PWREx_PVM3Callback:0000000000000000 HAL_PWREx_PVM3Callback
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3334   .text.HAL_PWREx_PVM4Callback:0000000000000000 HAL_PWREx_PVM4Callback
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3230   .text.HAL_PWREx_PVD_PVM_IRQHandler:0000000000000078 $d
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3235   .text.HAL_PWREx_PVM1Callback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3266   .text.HAL_PWREx_PVM2Callback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3297   .text.HAL_PWREx_PVM3Callback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccD7bkgo.s:3328   .text.HAL_PWREx_PVM4Callback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2718   .text.HAL_PWREx_DisableLowPowerRunMode:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2724   .text.HAL_PWREx_DisableLowPowerRunMode:0000000000000000 HAL_PWREx_DisableLowPowerRunMode
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2804   .text.HAL_PWREx_DisableLowPowerRunMode:0000000000000064 $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2811   .text.HAL_PWREx_EnterSTOP0Mode:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2817   .text.HAL_PWREx_EnterSTOP0Mode:0000000000000000 HAL_PWREx_EnterSTOP0Mode
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2894   .text.HAL_PWREx_EnterSTOP0Mode:000000000000004c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2900   .text.HAL_PWREx_EnterSTOP1Mode:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2906   .text.HAL_PWREx_EnterSTOP1Mode:0000000000000000 HAL_PWREx_EnterSTOP1Mode
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2984   .text.HAL_PWREx_EnterSTOP1Mode:0000000000000050 $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2990   .text.HAL_PWREx_EnterSTOP2Mode:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:2996   .text.HAL_PWREx_EnterSTOP2Mode:0000000000000000 HAL_PWREx_EnterSTOP2Mode
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3074   .text.HAL_PWREx_EnterSTOP2Mode:0000000000000050 $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3080   .text.HAL_PWREx_EnterSHUTDOWNMode:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3086   .text.HAL_PWREx_EnterSHUTDOWNMode:0000000000000000 HAL_PWREx_EnterSHUTDOWNMode
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3130   .text.HAL_PWREx_EnterSHUTDOWNMode:000000000000002c $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3136   .text.HAL_PWREx_PVD_PVM_IRQHandler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3142   .text.HAL_PWREx_PVD_PVM_IRQHandler:0000000000000000 HAL_PWREx_PVD_PVM_IRQHandler
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3241   .text.HAL_PWREx_PVM1Callback:0000000000000000 HAL_PWREx_PVM1Callback
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3272   .text.HAL_PWREx_PVM2Callback:0000000000000000 HAL_PWREx_PVM2Callback
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3303   .text.HAL_PWREx_PVM3Callback:0000000000000000 HAL_PWREx_PVM3Callback
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3334   .text.HAL_PWREx_PVM4Callback:0000000000000000 HAL_PWREx_PVM4Callback
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3230   .text.HAL_PWREx_PVD_PVM_IRQHandler:0000000000000078 $d
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3235   .text.HAL_PWREx_PVM1Callback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3266   .text.HAL_PWREx_PVM2Callback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3297   .text.HAL_PWREx_PVM3Callback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccwPEJi2.s:3328   .text.HAL_PWREx_PVM4Callback:0000000000000000 $t
 
 UNDEFINED SYMBOLS
 SystemCoreClock

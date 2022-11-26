@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       The SPI HAL driver can be used as follows:
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       (#) Declare a SPI_HandleTypeDef handle structure, for example:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 2
 
 
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           SPI_HandleTypeDef  hspi;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             (++) AbortCpltCallback     : SPI Abort callback
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             (++) MspInitCallback       : SPI Msp Init callback
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****             (++) MspDeInitCallback     : SPI Msp DeInit callback
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 3
 
 
   88:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           This function takes as parameters the HAL peripheral handle, the Callback ID
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  142:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****        +-------------------------------------------------------------------------------------------
  143:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****        |         |                | 2Lines Fullduplex   |     2Lines RxOnly    |         1Line     
  144:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****        | Process | Transfer mode  |---------------------|----------------------|-------------------
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 4
 
 
  145:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****        |         |                |  Master  |  Slave   |  Master   |  Slave   |  Master   |  Slave
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  199:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /* Includes ------------------------------------------------------------------*/
  200:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #include "stm32l4xx_hal.h"
  201:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 5
 
 
  202:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /** @addtogroup STM32L4xx_HAL_Driver
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  256:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_AbortRx_ISR(SPI_HandleTypeDef *hspi);
  257:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_AbortTx_ISR(SPI_HandleTypeDef *hspi);
  258:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_CloseRxTx_ISR(SPI_HandleTypeDef *hspi);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 6
 
 
  259:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_CloseRx_ISR(SPI_HandleTypeDef *hspi);
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  313:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
  314:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** HAL_StatusTypeDef HAL_SPI_Init(SPI_HandleTypeDef *hspi)
  315:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 7
 
 
   29              		.loc 1 315 1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
   59              		.loc 1 339 8
   60 001e B3F5827F 		cmp	r3, #260
   61 0022 09D0     		beq	.L5
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 8
 
 
  340:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
   87 0048 06D1     		bne	.L6
  369:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  370:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Allocate lock resource and initialize it */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 9
 
 
  371:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->Lock = HAL_UNLOCKED;
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  109 0070 7B68     		ldr	r3, [r7, #4]
  110 0072 DB68     		ldr	r3, [r3, #12]
  111              		.loc 1 403 6
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 10
 
 
  112 0074 B3F5E06F 		cmp	r3, #1792
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  147 00b0 1A43     		orrs	r2, r2, r3
  148 00b2 7B68     		ldr	r3, [r7, #4]
  149 00b4 1B69     		ldr	r3, [r3, #16]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 11
 
 
  150 00b6 03F00203 		and	r3, r3, #2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  452:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
  453:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
  454:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 12
 
 
  455:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  205 0138 83F85D20 		strb	r2, [r3, #93]
  479:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  480:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   return HAL_OK;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 13
 
 
  206              		.loc 1 480 10
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  248 0010 1AE0     		b	.L12
  249              	.L11:
  495:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 14
 
 
  496:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  523:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  524:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   return HAL_OK;
  277              		.loc 1 524 10
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 15
 
 
  278 0046 0023     		movs	r3, #0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  317 000c BD46     		mov	sp, r7
  318              		.cfi_def_cfa_register 13
  319              		@ sp needed
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 16
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 16
 
 
  320 000e 5DF8047B 		ldr	r7, [sp], #4
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  360              		.cfi_endproc
  361              	.LFE324:
  363              		.section	.text.HAL_SPI_Transmit,"ax",%progbits
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 17
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 17
 
 
  364              		.align	1
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  605:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->RxHalfCpltCallback = pCallback;
  606:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         break;
  607:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 18
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 18
 
 
  608:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       case HAL_SPI_TX_RX_HALF_COMPLETE_CB_ID :
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  662:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
  663:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Return error status */
  664:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     status =  HAL_ERROR;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 19
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 19
 
 
  665:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  719:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       case HAL_SPI_ABORT_CB_ID :
  720:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->AbortCpltCallback = HAL_SPI_AbortCpltCallback;       /* Legacy weak AbortCpltCallback
  721:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         break;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 20
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 20
 
 
  722:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  776:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @}
  777:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
  778:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 21
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 21
 
 
  779:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /** @defgroup SPI_Exported_Functions_Group2 IO operation functions
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  382 0004 00AF     		add	r7, sp, #0
  383              		.cfi_def_cfa_register 7
  384 0006 F860     		str	r0, [r7, #12]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 22
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 22
 
 
  385 0008 B960     		str	r1, [r7, #8]
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  421              		.loc 1 840 5
  422 0044 3DE1     		b	.L19
  423              	.L18:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 23
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 23
 
 
  841:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  461 007a 0022     		movs	r2, #0
  462 007c 1A64     		str	r2, [r3, #64]
  858:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->RxXferSize  = 0U;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 24
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 24
 
 
  463              		.loc 1 858 21
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  874:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
  875:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SPI_RESET_CRC(hspi);
  876:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 25
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 25
 
 
  877:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  541              		.loc 1 891 28
  542 00fe 1A88     		ldrh	r2, [r3]
  543              		.loc 1 891 11
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 26
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 26
 
 
  544 0100 FB68     		ldr	r3, [r7, #12]
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  587 013e 9A1C     		adds	r2, r3, #2
  588 0140 FB68     		ldr	r3, [r7, #12]
  589 0142 9A63     		str	r2, [r3, #56]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 27
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 27
 
 
  903:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->TxXferCount--;
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  633 0180 CED1     		bne	.L31
  634 0182 7CE0     		b	.L32
  635              	.L24:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 28
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 28
 
 
  912:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         }
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  675 01ba 9AB2     		uxth	r2, r3
  676 01bc FB68     		ldr	r3, [r7, #12]
  677 01be DA87     		strh	r2, [r3, #62]	@ movhi
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 29
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 29
 
 
  678 01c0 58E0     		b	.L36
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  940:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         if (hspi->TxXferCount > 1U)
  719              		.loc 1 940 17
  720 01f8 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 30
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 30
 
 
  721 01fa DB8F     		ldrh	r3, [r3, #62]	@ movhi
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  765 0236 FB68     		ldr	r3, [r7, #12]
  766 0238 9B6B     		ldr	r3, [r3, #56]
  767              		.loc 1 950 27
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 31
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 31
 
 
  768 023a 5A1C     		adds	r2, r3, #1
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  811 0278 9BB2     		uxth	r3, r3
  935:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  812              		.loc 1 935 30
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 32
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 32
 
 
  813 027a 002B     		cmp	r3, #0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  845 02aa 1B68     		ldr	r3, [r3]
  846 02ac 9B68     		ldr	r3, [r3, #8]
  847 02ae 3B61     		str	r3, [r7, #16]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 33
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 33
 
 
  848 02b0 3B69     		ldr	r3, [r7, #16]
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  890              		.syntax unified
  891              		.thumb
  892              		.thumb_func
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 34
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 34
 
 
  894              	HAL_SPI_Receive:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  927 0024 0ED1     		bne	.L46
 1017:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 1018:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->State = HAL_SPI_STATE_BUSY_RX;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 35
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 35
 
 
  928              		.loc 1 1018 17
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  969 006e FB75     		strb	r3, [r7, #23]
 1032:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     goto error;
  970              		.loc 1 1032 5
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 36
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 36
 
 
  971 0070 E9E0     		b	.L50
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1008              		.loc 1 1049 21
  1009 00a8 FB68     		ldr	r3, [r7, #12]
  1010 00aa 0022     		movs	r2, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 37
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 37
 
 
  1011 00ac 9A63     		str	r2, [r3, #56]
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1071:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   else
 1072:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 1073:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Set RX Fifo threshold according the reception data length: 8bit */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 38
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 38
 
 
 1074:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SET_BIT(hspi->Instance->CR2, SPI_RXFIFO_THRESHOLD);
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1085 0128 07D0     		beq	.L56
 1087:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 1088:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Enable SPI peripheral */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 39
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 39
 
 
 1089:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     __HAL_SPI_ENABLE(hspi);
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1125              		.loc 1 1103 26
  1126 0166 FB68     		ldr	r3, [r7, #12]
  1127 0168 1B6C     		ldr	r3, [r3, #64]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 40
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 40
 
 
  1128 016a 5A1C     		adds	r2, r3, #1
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1096:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
  1172              		.loc 1 1096 30
  1173 01b0 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 41
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 41
 
 
  1174 01b2 C8D1     		bne	.L62
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1213              	.L65:
 1128:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
 1129:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       else
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 42
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 42
 
 
 1130:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1148:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Read the latest data */
 1149:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     if (SPI_WaitFlagStateUntilTimeout(hspi, SPI_FLAG_RXNE, SET, Timeout, tickstart) != HAL_OK)
 1150:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 43
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 43
 
 
 1151:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* the latest data has not been received */
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1205:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
 1206:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
 1207:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 44
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 44
 
 
 1208:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1278 0248 0122     		movs	r2, #1
  1279 024a 83F85D20 		strb	r2, [r3, #93]
 1232:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __HAL_UNLOCK(hspi);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 45
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 45
 
 
  1280              		.loc 1 1232 3
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1320 0008 B960     		str	r1, [r7, #8]
  1321 000a 7A60     		str	r2, [r7, #4]
  1322 000c 7B80     		strh	r3, [r7, #2]	@ movhi
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 46
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 46
 
 
 1249:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   uint16_t             initial_TxXferCount;
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1277:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   tmp_mode            = hspi->Init.Mode;
  1349              		.loc 1 1277 23 discriminator 2
  1350 003c FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 47
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 47
 
 
  1351 003e 5B68     		ldr	r3, [r3, #4]
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1390 0076 002B     		cmp	r3, #0
  1391 0078 02D0     		beq	.L77
  1392              		.loc 1 1292 46 discriminator 2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 48
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 48
 
 
  1393 007a 7B88     		ldrh	r3, [r7, #2]
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1309:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->pTxBuffPtr  = (uint8_t *)pTxData;
  1431              		.loc 1 1309 21
  1432 00b8 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 49
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 49
 
 
  1433 00ba BA68     		ldr	r2, [r7, #8]
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1467 00ee 1B68     		ldr	r3, [r3]
  1468 00f0 22F48052 		bic	r2, r2, #4096
  1469 00f4 5A60     		str	r2, [r3, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 50
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 50
 
 
  1470 00f6 07E0     		b	.L82
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1506              		.loc 1 1347 20
  1507 0130 FB68     		ldr	r3, [r7, #12]
  1508 0132 5B68     		ldr	r3, [r3, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 51
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 51
 
 
  1509              		.loc 1 1347 8
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1554 0172 FB68     		ldr	r3, [r7, #12]
  1555 0174 DB8F     		ldrh	r3, [r3, #62]	@ movhi
  1556 0176 9BB2     		uxth	r3, r3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 52
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 52
 
 
  1557              		.loc 1 1356 52 discriminator 1
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1375:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
 1376:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
 1377:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 53
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 53
 
 
 1378:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* Check RXNE flag */
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1386:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
 1387:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       if (((HAL_GetTick() - tickstart) >=  Timeout) && (Timeout != HAL_MAX_DELAY))
  1639              		.loc 1 1387 13
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 54
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 54
 
 
  1640 01f2 FFF7FEFF 		bl	HAL_GetTick
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1680 0230 03D0     		beq	.L92
  1681              		.loc 1 1397 45 discriminator 1
  1682 0232 7B8A     		ldrh	r3, [r7, #18]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 55
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 55
 
 
  1683 0234 012B     		cmp	r3, #1
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1727              		.loc 1 1407 49
  1728 0274 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
  1729              		.loc 1 1407 46
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 56
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 56
 
 
  1730 0276 1A70     		strb	r2, [r3]
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1774 02b6 012B     		cmp	r3, #1
  1775 02b8 12D9     		bls	.L97
 1418:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 57
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 57
 
 
 1419:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           hspi->Instance->DR = *((uint16_t *)hspi->pTxBuffPtr);
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1821              		.loc 1 1427 15
  1822 02f8 FB68     		ldr	r3, [r7, #12]
  1823 02fa DB8F     		ldrh	r3, [r3, #62]	@ movhi
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 58
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 58
 
 
  1824 02fc 9BB2     		uxth	r3, r3
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1856 032e 23D9     		bls	.L100
 1450:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         {
 1451:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           *((uint16_t *)hspi->pRxBuffPtr) = (uint16_t)hspi->Instance->DR;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 59
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 59
 
 
  1857              		.loc 1 1451 59
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1900              		.loc 1 1462 66
  1901 0378 FB68     		ldr	r3, [r7, #12]
  1902 037a 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 60
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 60
 
 
  1903              		.loc 1 1462 61
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1950 03c2 3B6B     		ldr	r3, [r7, #48]
  1951 03c4 002B     		cmp	r3, #0
  1952 03c6 03D1     		bne	.L95
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 61
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 61
 
 
  1953              	.L103:
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1498:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
 1499:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* Initialize the 8bit temporary pointer */
 1500:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       ptmpreg8 = (__IO uint8_t *)&hspi->Instance->DR;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 62
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 62
 
 
 1501:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* Read 8bit CRC */
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  1991 0406 00E0     		b	.L76
  1992              	.L105:
 1539:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 63
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 63
 
 
 1540:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2032 0000 80B4     		push	{r7}
  2033              		.cfi_def_cfa_offset 4
  2034              		.cfi_offset 7, -4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 64
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 64
 
 
  2035 0002 87B0     		sub	sp, sp, #28
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2074              		.loc 1 1571 11
  2075 003a FB68     		ldr	r3, [r7, #12]
  2076 003c 93F85D30 		ldrb	r3, [r3, #93]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 65
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 65
 
 
  2077 0040 DBB2     		uxtb	r3, r3
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2115              		.loc 1 1587 21
  2116 007a FB68     		ldr	r3, [r7, #12]
  2117 007c 0022     		movs	r2, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 66
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 66
 
 
  2118 007e A3F84620 		strh	r2, [r3, #70]	@ movhi
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2154              		.loc 1 1605 5
  2155 00ba FB68     		ldr	r3, [r7, #12]
  2156 00bc 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 67
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 67
 
 
  2157 00be 1A68     		ldr	r2, [r3]
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1626:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 1627:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** error :
  2191              		.loc 1 1627 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 68
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 68
 
 
  2192 00fa 00BF     		nop
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2234              		.cfi_def_cfa_offset 8
  2235              		.cfi_offset 7, -8
  2236              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 69
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 69
 
 
  2237 0002 86B0     		sub	sp, sp, #24
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2280 0048 82E0     		b	.L121
  2281              	.L122:
  2282              		.loc 1 1652 3 discriminator 2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 70
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 70
 
 
  2283 004a FB68     		ldr	r3, [r7, #12]
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2321 0082 1A66     		str	r2, [r3, #96]
 1669:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->pRxBuffPtr  = (uint8_t *)pData;
  2322              		.loc 1 1669 21
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 71
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 71
 
 
  2323 0084 FB68     		ldr	r3, [r7, #12]
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2363 00ca 5A60     		str	r2, [r3, #4]
 1684:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->RxISR = SPI_RxISR_16BIT;
  2364              		.loc 1 1684 17
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 72
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 72
 
 
  2365 00cc FB68     		ldr	r3, [r7, #12]
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2405              	.L129:
 1699:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 1700:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 73
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 73
 
 
 1701:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2431 0140 1A60     		str	r2, [r3]
  2432 0142 00E0     		b	.L124
  2433              	.L130:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 74
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 74
 
 
 1730:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2471              		@ args = 0, pretend = 0, frame = 24
  2472              		@ frame_needed = 1, uses_anonymous_args = 0
  2473              		@ link register save eliminated.
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 75
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 75
 
 
  2474 0000 80B4     		push	{r7}
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2513              		.loc 1 1763 7 discriminator 1
  2514 003c 3B69     		ldr	r3, [r7, #16]
  2515 003e B3F5827F 		cmp	r3, #260
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 76
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 76
 
 
  2516 0042 06D1     		bne	.L137
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2556 0076 DBB2     		uxtb	r3, r3
  2557              		.loc 1 1777 6
  2558 0078 042B     		cmp	r3, #4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 77
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 77
 
 
  2559 007a 03D0     		beq	.L141
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2598 00ba 06D9     		bls	.L142
 1793:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 1794:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->RxISR     = SPI_2linesRxISR_16BIT;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 78
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 78
 
 
  2599              		.loc 1 1794 21
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2626 00e2 012B     		cmp	r3, #1
  2627 00e4 08D9     		bls	.L145
  2628              	.L144:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 79
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 79
 
 
 1822:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1839:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     __HAL_SPI_ENABLE(hspi);
  2666              		.loc 1 1839 5
  2667 0126 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 80
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 80
 
 
  2668 0128 1B68     		ldr	r3, [r3]
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1848:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /**
 1849:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @brief  Transmit an amount of data in non-blocking mode with DMA.
 1850:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @param  hspi pointer to a SPI_HandleTypeDef structure that contains
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 81
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 81
 
 
 1851:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   *               the configuration information for SPI module.
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2751 002e DBB2     		uxtb	r3, r3
  2752              		.loc 1 1869 6 discriminator 2
  2753 0030 012B     		cmp	r3, #1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 82
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 82
 
 
  2754 0032 02D0     		beq	.L153
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1886:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount = Size;
  2792              		.loc 1 1886 21
  2793 0066 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 83
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 83
 
 
  2794 0068 FA88     		ldrh	r2, [r7, #6]	@ movhi
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2834 00ae FB68     		ldr	r3, [r7, #12]
  2835 00b0 1B68     		ldr	r3, [r3]
  2836 00b2 42F48042 		orr	r2, r2, #16384
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 84
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 84
 
 
  2837 00b6 1A60     		str	r2, [r3]
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2868 00e0 1B68     		ldr	r3, [r3]
  2869 00e2 22F48042 		bic	r2, r2, #16384
  2870 00e6 5A60     		str	r2, [r3, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 85
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 85
 
 
 1924:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Packing mode is enabled only if the DMA setting is HALWORD */
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  2913              		.loc 1 1935 7
  2914 012c FB68     		ldr	r3, [r7, #12]
  2915 012e 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 86
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 86
 
 
  2916 0130 5A68     		ldr	r2, [r3, #4]
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1945:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SET_BIT(hspi->ErrorCode, HAL_SPI_ERROR_DMA);
  2959              		.loc 1 1945 5
  2960 0170 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 87
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 87
 
 
  2961 0172 1B6E     		ldr	r3, [r3, #96]
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3000 01b2 42F02002 		orr	r2, r2, #32
  3001 01b6 5A60     		str	r2, [r3, #4]
 1961:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 88
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 88
 
 
 1962:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Enable Tx DMA Request */
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 1976:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @param  pData pointer to data buffer
 1977:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @note   When the CRC feature is enabled the pData Length must be Size + 1.
 1978:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @param  Size amount of data to be sent
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 89
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 89
 
 
 1979:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @retval HAL status
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3080 002c FB88     		ldrh	r3, [r7, #6]
  3081 002e BA68     		ldr	r2, [r7, #8]
  3082 0030 B968     		ldr	r1, [r7, #8]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 90
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 90
 
 
  3083 0032 F868     		ldr	r0, [r7, #12]
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3123              		.loc 1 2010 15
  3124 0070 0123     		movs	r3, #1
  3125 0072 FB75     		strb	r3, [r7, #23]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 91
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 91
 
 
 2011:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     goto error;
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2026:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2027:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Configure communication direction : 1Line */
 2028:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (hspi->Init.Direction == SPI_DIRECTION_1LINE)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 92
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 92
 
 
  3165              		.loc 1 2028 17
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2046:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 2047:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Set RX Fifo threshold according the reception data length: 16bit */
 2048:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     CLEAR_BIT(hspi->Instance->CR2, SPI_RXFIFO_THRESHOLD);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 93
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 93
 
 
  3202              		.loc 1 2048 5
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3244 0142 11D1     		bne	.L175
 2061:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
 2062:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         CLEAR_BIT(hspi->Instance->CR2, SPI_CR2_LDMARX);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 94
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 94
 
 
  3245              		.loc 1 2062 9
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3287 0190 9B6D     		ldr	r3, [r3, #88]
  3288              		.loc 1 2074 38
  3289 0192 2A4A     		ldr	r2, .L178
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 95
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 95
 
 
  3290 0194 1A63     		str	r2, [r3, #48]
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3330 01cc 0346     		mov	r3, r0
 2086:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****                                  hspi->RxXferCount))
  3331              		.loc 1 2086 6
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 96
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 96
 
 
  3332 01ce 002B     		cmp	r3, #0
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2105:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __HAL_SPI_ENABLE_IT(hspi, (SPI_IT_ERR));
  3369              		.loc 1 2105 3
  3370 020a FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 97
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 97
 
 
  3371 020c 1B68     		ldr	r3, [r3]
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3418              	.LFB333:
 2115:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2116:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /**
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 98
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 98
 
 
 2117:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @brief  Transmit and Receive an amount of data in non-blocking mode with DMA.
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3448 0020 FB68     		ldr	r3, [r7, #12]
  3449 0022 0122     		movs	r2, #1
  3450 0024 83F85C20 		strb	r2, [r3, #92]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 99
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 99
 
 
 2142:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3492              		.loc 1 2154 46 discriminator 2
  3493 0064 7B88     		ldrh	r3, [r7, #2]
  3494 0066 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 100
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 100
 
 
  3495 0068 02D1     		bne	.L187
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3532 009c FB68     		ldr	r3, [r7, #12]
  3533 009e 7A68     		ldr	r2, [r7, #4]
  3534 00a0 1A64     		str	r2, [r3, #64]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 101
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 101
 
 
 2172:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->RxXferSize  = Size;
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3566 00d8 FB68     		ldr	r3, [r7, #12]
  3567 00da 1B68     		ldr	r3, [r3]
  3568 00dc 5A68     		ldr	r2, [r3, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 102
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 102
 
 
  3569 00de FB68     		ldr	r3, [r7, #12]
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3611              		.loc 1 2206 27
  3612 0128 5B08     		lsrs	r3, r3, #1
  3613 012a 9AB2     		uxth	r2, r3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 103
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 103
 
 
  3614 012c FB68     		ldr	r3, [r7, #12]
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2220:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       if ((hspi->RxXferCount & 0x1U) == 0x0U)
  3655              		.loc 1 2220 16
  3656 0170 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 104
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 104
 
 
  3657 0172 B3F84630 		ldrh	r3, [r3, #70]	@ movhi
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3703              	.L190:
 2229:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       }
 2230:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 105
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 105
 
 
 2231:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3740 01fa 9B6D     		ldr	r3, [r3, #88]
  3741              		.loc 1 2248 35
  3742 01fc 454A     		ldr	r2, .L199+16
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 106
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 106
 
 
  3743 01fe 5A63     		str	r2, [r3, #52]
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2260:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2261:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->State = HAL_SPI_STATE_READY;
  3784              		.loc 1 2261 17
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 107
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 107
 
 
  3785 023c FB68     		ldr	r3, [r7, #12]
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3824 0276 FB68     		ldr	r3, [r7, #12]
  3825 0278 586D     		ldr	r0, [r3, #84]
  3826              		.loc 1 2276 62
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 108
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 108
 
 
  3827 027a FB68     		ldr	r3, [r7, #12]
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3867              		.loc 1 2288 22
  3868 02b6 1B68     		ldr	r3, [r3]
  3869              		.loc 1 2288 28
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 109
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 109
 
 
  3870 02b8 03F04003 		and	r3, r3, #64
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3909 02fc 1837     		adds	r7, r7, #24
  3910              		.cfi_def_cfa_offset 8
  3911 02fe BD46     		mov	sp, r7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 110
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 110
 
 
  3912              		.cfi_def_cfa_register 13
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2324:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Initialized local variable  */
 2325:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   errorcode = HAL_OK;
  3948              		.loc 1 2325 13
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 111
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 111
 
 
  3949 0008 0023     		movs	r3, #0
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  3989 004a 002B     		cmp	r3, #0
  3990 004c 06D1     		bne	.L203
 2340:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 112
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 112
 
 
 2341:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         SET_BIT(hspi->ErrorCode, HAL_SPI_ERROR_ABORT);
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4029              		.loc 1 2356 17
  4030 0086 BB69     		ldr	r3, [r7, #24]
  4031              		.loc 1 2356 10
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 113
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 113
 
 
  4032 0088 002B     		cmp	r3, #0
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4071 00c2 002B     		cmp	r3, #0
  4072 00c4 3DD0     		beq	.L210
 2372:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 114
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 114
 
 
 2373:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* Set the SPI DMA Abort callback :
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2388:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         hspi->ErrorCode = HAL_SPI_ERROR_ABORT;
  4112              		.loc 1 2388 25
  4113 010a 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 115
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 115
 
 
  4114 010c 4022     		movs	r2, #64
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2406:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     if (hspi->hdmarx != NULL)
  4151              		.loc 1 2406 13
  4152 0150 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 116
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 116
 
 
  4153 0152 9B6D     		ldr	r3, [r3, #88]
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4191 0192 8021     		movs	r1, #128
  4192 0194 7868     		ldr	r0, [r7, #4]
  4193 0196 FFF7FEFF 		bl	SPI_WaitFlagStateUntilTimeout
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 117
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 117
 
 
  4194 019a 0346     		mov	r3, r0
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4232 01da 0022     		movs	r2, #0
  4233 01dc A3F84620 		strh	r2, [r3, #70]	@ movhi
 2439:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->TxXferCount = 0U;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 118
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 118
 
 
  4234              		.loc 1 2439 21
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4272 0214 7B68     		ldr	r3, [r7, #4]
  4273 0216 1B68     		ldr	r3, [r3]
  4274 0218 9B68     		ldr	r3, [r3, #8]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 119
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 119
 
 
  4275 021a FB60     		str	r3, [r7, #12]
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2476:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @retval HAL status
 2477:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
 2478:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** HAL_StatusTypeDef HAL_SPI_Abort_IT(SPI_HandleTypeDef *hspi)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 120
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 120
 
 
 2479:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4351 0036 5A60     		str	r2, [r3, #4]
 2493:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2494:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Change Rx and Tx Irq Handler to Disable TXEIE, RXNEIE and ERRIE interrupts */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 121
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 121
 
 
 2495:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (HAL_IS_BIT_SET(hspi->Instance->CR2, SPI_CR2_TXEIE))
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4391              		.loc 1 2509 11
  4392 0072 3B69     		ldr	r3, [r7, #16]
  4393 0074 7B61     		str	r3, [r7, #20]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 122
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 122
 
 
  4394              	.L223:
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4433              	.L229:
 2525:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Reset Timeout Counter */
 2526:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     count = resetcount;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 123
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 123
 
 
  4434              		.loc 1 2526 11
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4468 00dc 7B68     		ldr	r3, [r7, #4]
  4469 00de 9B6D     		ldr	r3, [r3, #88]
  4470              		.loc 1 2546 6
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 124
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 124
 
 
  4471 00e0 002B     		cmp	r3, #0
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4507              		.loc 1 2564 8
  4508 0116 002B     		cmp	r3, #0
  4509 0118 11D0     		beq	.L235
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 125
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 125
 
 
 2565:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4546              		.loc 1 2582 8
  4547 0150 002B     		cmp	r3, #0
  4548 0152 11D0     		beq	.L237
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 126
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 126
 
 
 2583:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4584 0188 0022     		movs	r2, #0
  4585 018a DA87     		strh	r2, [r3, #62]	@ movhi
 2602:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 127
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 127
 
 
 2603:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Check error during Abort procedure */
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4625              	.LBE6:
 2618:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2619:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Restore hspi->State to Ready */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 128
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 128
 
 
 2620:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->State = HAL_SPI_STATE_READY;
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2637:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @retval HAL status
 2638:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
 2639:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** HAL_StatusTypeDef HAL_SPI_DMAPause(SPI_HandleTypeDef *hspi)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 129
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 129
 
 
 2640:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4707 0038 1846     		mov	r0, r3
  4708 003a 0C37     		adds	r7, r7, #12
  4709              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 130
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 130
 
 
  4710 003c BD46     		mov	sp, r7
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2663:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2664:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Enable the SPI DMA Tx & Rx requests */
 2665:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   SET_BIT(hspi->Instance->CR2, SPI_CR2_TXDMAEN | SPI_CR2_RXDMAEN);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 131
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 131
 
 
  4755              		.loc 1 2665 3 is_stmt 1 discriminator 2
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4796              		@ frame_needed = 1, uses_anonymous_args = 0
  4797 0000 80B5     		push	{r7, lr}
  4798              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 132
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 132
 
 
  4799              		.cfi_offset 7, -8
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4835 0034 7B68     		ldr	r3, [r7, #4]
  4836 0036 9B6D     		ldr	r3, [r3, #88]
  4837              		.loc 1 2698 6
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 133
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 133
 
 
  4838 0038 002B     		cmp	r3, #0
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  4879              		@ sp needed
  4880 007c 80BD     		pop	{r7, pc}
  4881              		.cfi_endproc
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 134
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 134
 
 
  4882              	.LFE338:
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2726:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       (SPI_CHECK_FLAG(itflag, SPI_FLAG_RXNE) != RESET) && (SPI_CHECK_IT_SOURCE(itsource, SPI_IT_RXN
  4924              		.loc 1 2726 8 discriminator 1
  4925 0022 BB69     		ldr	r3, [r7, #24]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 135
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 135
 
 
  4926 0024 03F00103 		and	r3, r3, #1
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2738:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2739:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* SPI in Error Treatment --------------------------------------------------*/
 2740:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (((SPI_CHECK_FLAG(itflag, SPI_FLAG_MODF) != RESET) || (SPI_CHECK_FLAG(itflag, SPI_FLAG_OVR) !=
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 136
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 136
 
 
  4968              		.loc 1 2740 47
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5013              		.loc 1 2749 9
  5014 00ac 0023     		movs	r3, #0
  5015 00ae 7B61     		str	r3, [r7, #20]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 137
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 137
 
 
  5016 00b0 7B68     		ldr	r3, [r7, #4]
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2762:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       __HAL_SPI_CLEAR_MODFFLAG(hspi);
  5058              		.loc 1 2762 7
  5059 00f2 0023     		movs	r3, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 138
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 138
 
 
  5060 00f4 FB60     		str	r3, [r7, #12]
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2773:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
 2774:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* Disable all interrupts */
 2775:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       __HAL_SPI_DISABLE_IT(hspi, SPI_IT_RXNE | SPI_IT_TXE | SPI_IT_ERR);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 139
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 139
 
 
  5104              		.loc 1 2775 7
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5145 0182 9B6D     		ldr	r3, [r3, #88]
  5146              		.loc 1 2788 43
  5147 0184 174A     		ldr	r2, .L271
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 140
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 140
 
 
  5148 0186 9A63     		str	r2, [r3, #56]
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5188 01c6 1B6E     		ldr	r3, [r3, #96]
  5189 01c8 43F04002 		orr	r2, r3, #64
  5190 01cc 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 141
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 141
 
 
  5191 01ce 1A66     		str	r2, [r3, #96]
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5229              	.LFB340:
 2819:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 2820:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /**
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 142
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 142
 
 
 2821:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @brief  Tx Transfer completed callback.
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2841:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
 2842:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** __weak void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
 2843:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 143
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 143
 
 
  5266              		.loc 1 2843 1
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5306              		@ link register save eliminated.
  5307 0000 80B4     		push	{r7}
  5308              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 144
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 144
 
 
  5309              		.cfi_offset 7, -4
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5349              		.cfi_def_cfa_register 7
  5350 0006 7860     		str	r0, [r7, #4]
 2876:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Prevent unused argument(s) compilation warning */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 145
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 145
 
 
 2877:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   UNUSED(hspi);
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 2897:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****    */
 2898:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
  5387              		.loc 1 2898 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 146
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 146
 
 
  5388 0008 00BF     		nop
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5428              		.cfi_def_cfa_register 13
  5429              		@ sp needed
  5430 000e 5DF8047B 		ldr	r7, [sp], #4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 147
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 147
 
 
  5431              		.cfi_restore 7
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5468              		.cfi_def_cfa_offset 0
  5469 0012 7047     		bx	lr
  5470              		.cfi_endproc
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 148
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 148
 
 
  5471              	.LFE346:
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5513              		.thumb
  5514              		.thumb_func
  5516              	HAL_SPI_GetState:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 149
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 149
 
 
  5517              	.LFB348:
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5540              		.cfi_def_cfa_register 13
  5541              		@ sp needed
  5542 0016 5DF8047B 		ldr	r7, [sp], #4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 150
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 150
 
 
  5543              		.cfi_restore 7
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5588              		.section	.text.SPI_DMATransmitCplt,"ax",%progbits
  5589              		.align	1
  5590              		.syntax unified
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 151
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 151
 
 
  5591              		.thumb
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5616              		.loc 1 3021 12
  5617 0014 7B68     		ldr	r3, [r7, #4]
  5618 0016 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 152
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 152
 
 
  5619              		.loc 1 3021 22
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5658              		.loc 1 3036 19
  5659 005e 7B69     		ldr	r3, [r7, #20]
  5660 0060 9B68     		ldr	r3, [r3, #8]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 153
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 153
 
 
  5661              		.loc 1 3036 8
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3053:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
 3054:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 3055:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Call user Tx complete callback */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 154
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 154
 
 
 3056:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_HAL_SPI_REGISTER_CALLBACKS == 1U)
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3073:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 3074:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __IO uint32_t tmpreg = 0U;
 3075:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __IO uint8_t  *ptmpreg8;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 155
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 155
 
 
 3076:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   __IO uint8_t  tmpreg8 = 0;
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3109:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         ptmpreg8 = (__IO uint8_t *)&hspi->Instance->DR;
 3110:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         /* Read 8bit CRC */
 3111:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         tmpreg8 = *ptmpreg8;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 156
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 156
 
 
 3112:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         /* To avoid GCC warning */
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5784 005a 5A68     		ldr	r2, [r3, #4]
  5785 005c FB68     		ldr	r3, [r7, #12]
  5786 005e 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 157
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 157
 
 
  5787 0060 22F00102 		bic	r2, r2, #1
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3164:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_HAL_SPI_REGISTER_CALLBACKS == 1U)
 3165:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       hspi->ErrorCallback(hspi);
 3166:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #else
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 158
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 158
 
 
 3167:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       HAL_SPI_ErrorCallback(hspi);
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5853              		.cfi_offset 14, -4
  5854 0002 84B0     		sub	sp, sp, #16
  5855              		.cfi_def_cfa_offset 24
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 159
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 159
 
 
  5856 0004 00AF     		add	r7, sp, #0
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3214:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           /* Error on the CRC reception */
 3215:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           SET_BIT(hspi->ErrorCode, HAL_SPI_ERROR_CRC);
 3216:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 160
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 160
 
 
 3217:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         /* Initialize the 8bit temporary pointer */
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3247:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3248:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->TxXferCount = 0U;
  5908              		.loc 1 3248 23
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 161
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 161
 
 
  5909 005e FB68     		ldr	r3, [r7, #12]
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5935              	.L296:
 3277:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
 3278:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 162
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 162
 
 
  5936              		.loc 1 3278 1
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  5974              		.loc 1 3296 1
  5975 0014 00BF     		nop
  5976 0016 1037     		adds	r7, r7, #16
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 163
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 163
 
 
  5977              		.cfi_def_cfa_offset 8
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6015 0016 1037     		adds	r7, r7, #16
  6016              		.cfi_def_cfa_offset 8
  6017 0018 BD46     		mov	sp, r7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 164
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 164
 
 
  6018              		.cfi_def_cfa_register 13
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6056 0018 BD46     		mov	sp, r7
  6057              		.cfi_def_cfa_register 13
  6058              		@ sp needed
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 165
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 165
 
 
  6059 001a 80BD     		pop	{r7, pc}
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6100 0026 FB68     		ldr	r3, [r7, #12]
  6101 0028 1A66     		str	r2, [r3, #96]
 3348:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->State = HAL_SPI_STATE_READY;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 166
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 166
 
 
  6102              		.loc 1 3348 15
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6141              		.loc 1 3365 22
  6142 0008 7B68     		ldr	r3, [r7, #4]
  6143 000a 9B6A     		ldr	r3, [r3, #40]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 167
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 167
 
 
  6144 000c FB60     		str	r3, [r7, #12]
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6179 0000 80B5     		push	{r7, lr}
  6180              		.cfi_def_cfa_offset 8
  6181              		.cfi_offset 7, -8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 168
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 168
 
 
  6182              		.cfi_offset 14, -4
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6222              		.loc 1 3400 3
  6223 0042 7B69     		ldr	r3, [r7, #20]
  6224 0044 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 169
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 169
 
 
  6225 0046 1A68     		ldr	r2, [r3]
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3417:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* No Abort process still ongoing : All DMA Stream/Channel are aborted, call user Abort Complete 
 3418:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->RxXferCount = 0U;
  6263              		.loc 1 3418 21
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 170
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 170
 
 
  6264 0086 7B69     		ldr	r3, [r7, #20]
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3431:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3432:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Restore hspi->State to Ready */
 3433:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->State  = HAL_SPI_STATE_READY;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 171
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 171
 
 
  6306              		.loc 1 3433 16
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6342              		.cfi_offset 7, -8
  6343              		.cfi_offset 14, -4
  6344 0002 88B0     		sub	sp, sp, #32
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 172
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 172
 
 
  6345              		.cfi_def_cfa_offset 40
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6387 004e 02D0     		beq	.L313
 3465:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 3466:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->ErrorCode = HAL_SPI_ERROR_ABORT;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 173
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 173
 
 
  6388              		.loc 1 3466 21
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3483:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3484:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* No Abort process still ongoing : All DMA Stream/Channel are aborted, call user Abort Complete 
 3485:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->RxXferCount = 0U;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 174
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 174
 
 
  6426              		.loc 1 3485 21
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6468              	.LBE15:
 3498:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3499:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Restore hspi->State to Ready */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 175
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 175
 
 
 3500:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   hspi->State  = HAL_SPI_STATE_READY;
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6506              		.cfi_offset 14, -4
  6507 0002 82B0     		sub	sp, sp, #8
  6508              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 176
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 176
 
 
  6509 0004 00AF     		add	r7, sp, #0
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6553 004a 7B68     		ldr	r3, [r7, #4]
  6554 004c 1B68     		ldr	r3, [r3]
  6555 004e 5A68     		ldr	r2, [r3, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 177
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 177
 
 
  6556 0050 7B68     		ldr	r3, [r7, #4]
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6598 0094 0FD1     		bne	.L323
 3540:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 3541:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 178
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 178
 
 
 3542:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     if (hspi->Init.CRCCalculation == SPI_CRCCALCULATION_ENABLE)
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3560:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 3561:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /**
 3562:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @brief  Rx 8-bit handler for Transmit and Receive in Interrupt mode.
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 179
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 179
 
 
 3563:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @param  hspi pointer to a SPI_HandleTypeDef structure that contains
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3604:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (hspi->TxXferCount >= 2U)
  6650              		.loc 1 3604 11
  6651 0008 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 180
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 180
 
 
  6652 000a DB8F     		ldrh	r3, [r3, #62]	@ movhi
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6696 0046 7B68     		ldr	r3, [r7, #4]
  6697 0048 9B6B     		ldr	r3, [r3, #56]
  6698              		.loc 1 3614 21
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 181
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 181
 
 
  6699 004a 5A1C     		adds	r2, r3, #1
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6732 0080 002B     		cmp	r3, #0
  6733 0082 02D1     		bne	.L328
 3636:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 182
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 182
 
 
 3637:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       SPI_CloseRxTx_ISR(hspi);
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6775              		.loc 1 3651 21
  6776 000e 7B68     		ldr	r3, [r7, #4]
  6777 0010 1B6C     		ldr	r3, [r3, #64]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 183
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 183
 
 
  6778              		.loc 1 3651 37
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6815 0052 9BB2     		uxth	r3, r3
  6816              		.loc 1 3668 8
  6817 0054 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 184
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 184
 
 
  6818 0056 02D1     		bne	.L331
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3701:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   *               the configuration information for SPI module.
 3702:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @retval None
 3703:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 185
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 185
 
 
 3704:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_2linesTxISR_16BIT(struct __SPI_HandleTypeDef *hspi)
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3713:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
 3714:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 3715:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     if (hspi->Init.CRCCalculation == SPI_CRCCALCULATION_ENABLE)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 186
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 186
 
 
 3716:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3734:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3735:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 3736:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** /**
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 187
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 187
 
 
 3737:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   * @brief  Manage the CRC 8-bit receive in Interrupt context.
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6944 0010 7B68     		ldr	r3, [r7, #4]
  6945 0012 1B6C     		ldr	r3, [r3, #64]
  6946              		.loc 1 3771 24
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 188
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 188
 
 
  6947 0014 1278     		ldrb	r2, [r2]
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  6978              		.loc 1 3794 1
  6979 0048 00BF     		nop
  6980 004a 0837     		adds	r7, r7, #8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 189
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 189
 
 
  6981              		.cfi_def_cfa_offset 8
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7005 0002 82B0     		sub	sp, sp, #8
  7006              		.cfi_def_cfa_offset 16
  7007 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 190
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 190
 
 
  7008              		.cfi_def_cfa_register 7
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3845:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       return;
 3846:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
 3847:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_SPI_CRC */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 191
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 191
 
 
 3848:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SPI_CloseRx_ISR(hspi);
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7087 0010 0C33     		adds	r3, r3, #12
  7088              		.loc 1 3860 43
  7089 0012 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 192
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 192
 
 
  7090              		.loc 1 3860 40
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7130              		.section	.text.SPI_TxISR_16BIT,"ax",%progbits
  7131              		.align	1
  7132              		.syntax unified
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 193
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 193
 
 
  7133              		.thumb
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7175 002a DA87     		strh	r2, [r3, #62]	@ movhi
 3889:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
 3890:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (hspi->TxXferCount == 0U)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 194
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 194
 
 
  7176              		.loc 1 3890 11
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7207              		.cfi_startproc
  7208              		@ args = 4, pretend = 0, frame = 32
  7209              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 195
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 195
 
 
  7210 0000 80B5     		push	{r7, lr}
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7250              		.loc 1 3929 8
  7251 0038 3B68     		ldr	r3, [r7]
  7252 003a B3F1FF3F 		cmp	r3, #-1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 196
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 196
 
 
  7253 003e 50D0     		beq	.L348
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7295              	.L352:
 3942:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         {
 3943:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           /* Disable SPI peripheral */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 197
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 197
 
 
 3944:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****           __HAL_SPI_DISABLE(hspi);
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7335              		.loc 1 3958 16
  7336 00ce 0323     		movs	r3, #3
  7337 00d0 17E0     		b	.L354
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 198
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 198
 
 
  7338              	.L350:
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7377              		.cfi_def_cfa_offset 8
  7378 0106 BD46     		mov	sp, r7
  7379              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 199
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 199
 
 
  7380              		@ sp needed
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 3991:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Adjust Timeout value  in case of end of transfer */
 3992:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   tmp_timeout = Timeout - (HAL_GetTick() - Tickstart);
  7416              		.loc 1 3992 28
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 200
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 200
 
 
  7417 0012 FFF7FEFF 		bl	HAL_GetTick
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7460 0056 04D1     		bne	.L361
 4004:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
 4005:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       /* Flush Data Register by a blank read */
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 201
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 201
 
 
 4006:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       tmpreg8 = *ptmpreg8;
@@ -12058,7 +12058,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7498 0090 FB68     		ldr	r3, [r7, #12]
  7499 0092 5B68     		ldr	r3, [r3, #4]
  7500              		.loc 1 4022 12
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 202
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 202
 
 
  7501 0094 B3F5827F 		cmp	r3, #260
@@ -12118,7 +12118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7545 00e6 1A60     		str	r2, [r3]
  7546              	.L366:
 4033:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****         }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 203
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 203
 
 
 4034:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** 
@@ -12178,7 +12178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7583 0118 9A42     		cmp	r2, r3
  7584 011a 96D1     		bne	.L369
 4048:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     }
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 204
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 204
 
 
 4049:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
@@ -12238,7 +12238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 4064:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if ((hspi->Init.Mode == SPI_MODE_MASTER) && ((hspi->Init.Direction == SPI_DIRECTION_1LINE)
  7626              		.loc 1 4064 18
  7627 000c FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 205
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 205
 
 
  7628 000e 5B68     		ldr	r3, [r3, #4]
@@ -12298,7 +12298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 4075:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     return HAL_TIMEOUT;
  7672              		.loc 1 4075 12
  7673 005c 0323     		movs	r3, #3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 206
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 206
 
 
  7674 005e 23E0     		b	.L376
@@ -12358,7 +12358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 4087:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   }
 4088:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   return HAL_OK;
  7717              		.loc 1 4088 10
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 207
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 207
 
 
  7718 00a6 0023     		movs	r3, #0
@@ -12418,7 +12418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7761 001a FFF7FEFF 		bl	SPI_WaitFifoStateUntilTimeout
  7762 001e 0346     		mov	r3, r0
  7763              		.loc 1 4101 6
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 208
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 208
 
 
  7764 0020 002B     		cmp	r3, #0
@@ -12478,7 +12478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7804 0066 F868     		ldr	r0, [r7, #12]
  7805 0068 FFF7FEFF 		bl	SPI_WaitFifoStateUntilTimeout
  7806 006c 0346     		mov	r3, r0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 209
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 209
 
 
  7807              		.loc 1 4115 6
@@ -12538,7 +12538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  7847              		.cfi_def_cfa_offset 8
  7848              		.cfi_offset 7, -8
  7849              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 210
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 210
 
 
  7850 0002 84B0     		sub	sp, sp, #16
@@ -12598,7 +12598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 4154:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #if (USE_HAL_SPI_REGISTER_CALLBACKS == 1U)
 4155:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     hspi->ErrorCallback(hspi);
 4156:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #else
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 211
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 211
 
 
 4157:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     HAL_SPI_ErrorCallback(hspi);
@@ -12658,7 +12658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 4191:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       hspi->ErrorCallback(hspi);
 4192:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #else
 4193:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       HAL_SPI_ErrorCallback(hspi);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 212
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 212
 
 
 4194:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
@@ -12718,7 +12718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 4206:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   */
 4207:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_CloseRx_ISR(SPI_HandleTypeDef *hspi)
 4208:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 213
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 213
 
 
  7942              		.loc 1 4208 1
@@ -12778,7 +12778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 4220:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   /* Check if CRC error occurred */
 4221:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   if (__HAL_SPI_GET_FLAG(hspi, SPI_FLAG_CRCERR) != RESET)
 4222:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 214
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 214
 
 
 4223:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     SET_BIT(hspi->ErrorCode, HAL_SPI_ERROR_CRC);
@@ -12838,7 +12838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  8004              		.cfi_def_cfa_offset 8
  8005 005c BD46     		mov	sp, r7
  8006              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 215
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 215
 
 
  8007              		@ sp needed
@@ -12898,7 +12898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  8044              		.loc 1 4275 7
  8045 001e FA68     		ldr	r2, [r7, #12]
  8046 0020 6421     		movs	r1, #100
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 216
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 216
 
 
  8047 0022 7868     		ldr	r0, [r7, #4]
@@ -12958,7 +12958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  8089 0064 002B     		cmp	r3, #0
  8090 0066 03D0     		beq	.L398
 4288:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****   {
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 217
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 217
 
 
 4289:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     /* Call user error callback */
@@ -13018,7 +13018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  8120              		.loc 1 4314 1
  8121              		.cfi_startproc
  8122              		@ args = 0, pretend = 0, frame = 16
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 218
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 218
 
 
  8123              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -13078,7 +13078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  8163              		.loc 1 4328 8
  8164 003e 002B     		cmp	r3, #0
  8165 0040 06D1     		bne	.L402
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 219
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 219
 
 
 4329:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****     {
@@ -13138,7 +13138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  8205              		.loc 1 4343 7
  8206 0084 FFF7FEFF 		bl	HAL_GetTick
  8207 0088 0346     		mov	r3, r0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 220
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 220
 
 
  8208 008a 0093     		str	r3, [sp]
@@ -13198,7 +13198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
 4357:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** static void SPI_AbortTx_ISR(SPI_HandleTypeDef *hspi)
 4358:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c **** {
  8251              		.loc 1 4358 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 221
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 221
 
 
  8252              		.cfi_startproc
@@ -13258,7 +13258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  8293 003a 7B68     		ldr	r3, [r7, #4]
  8294 003c 1A66     		str	r2, [r3, #96]
 4372:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c ****       break;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 222
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 222
 
 
  8295              		.loc 1 4372 7
@@ -13318,7 +13318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  8335 0080 FFF7FEFF 		bl	HAL_GetTick
  8336 0084 0346     		mov	r3, r0
  8337 0086 0093     		str	r3, [sp]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 223
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 223
 
 
  8338 0088 6423     		movs	r3, #100
@@ -13378,7 +13378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  8376 00c8 1B6E     		ldr	r3, [r3, #96]
  8377 00ca 43F04002 		orr	r2, r3, #64
  8378 00ce 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 224
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 224
 
 
  8379 00d0 1A66     		str	r2, [r3, #96]
@@ -13438,7 +13438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  8420 0118 7868     		ldr	r0, [r7, #4]
  8421 011a FFF7FEFF 		bl	SPI_WaitFifoStateUntilTimeout
  8422 011e 0346     		mov	r3, r0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 225
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 225
 
 
  8423              		.loc 1 4415 8
@@ -13485,142 +13485,142 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 1
  8459              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h"
  8460              		.file 9 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h"
  8461              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 226
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 226
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32l4xx_hal_spi.c
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:20     .text.HAL_SPI_Init:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:26     .text.HAL_SPI_Init:0000000000000000 HAL_SPI_Init
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:298    .text.HAL_SPI_MspInit:0000000000000000 HAL_SPI_MspInit
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:221    .text.HAL_SPI_DeInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:227    .text.HAL_SPI_DeInit:0000000000000000 HAL_SPI_DeInit
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:334    .text.HAL_SPI_MspDeInit:0000000000000000 HAL_SPI_MspDeInit
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:292    .text.HAL_SPI_MspInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:328    .text.HAL_SPI_MspDeInit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:364    .text.HAL_SPI_Transmit:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:370    .text.HAL_SPI_Transmit:0000000000000000 HAL_SPI_Transmit
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7737   .text.SPI_EndRxTxTransaction:0000000000000000 SPI_EndRxTxTransaction
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:888    .text.HAL_SPI_Receive:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:894    .text.HAL_SPI_Receive:0000000000000000 HAL_SPI_Receive
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:1305   .text.HAL_SPI_TransmitReceive:0000000000000000 HAL_SPI_TransmitReceive
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7609   .text.SPI_EndRxTransaction:0000000000000000 SPI_EndRxTransaction
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:1299   .text.HAL_SPI_TransmitReceive:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:2019   .text.HAL_SPI_Transmit_IT:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:2025   .text.HAL_SPI_Transmit_IT:0000000000000000 HAL_SPI_Transmit_IT
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:2215   .text.HAL_SPI_Transmit_IT:0000000000000114 $d
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7136   .text.SPI_TxISR_16BIT:0000000000000000 SPI_TxISR_16BIT
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7065   .text.SPI_TxISR_8BIT:0000000000000000 SPI_TxISR_8BIT
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:2221   .text.HAL_SPI_Receive_IT:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:2227   .text.HAL_SPI_Receive_IT:0000000000000000 HAL_SPI_Receive_IT
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:2467   .text.HAL_SPI_TransmitReceive_IT:0000000000000000 HAL_SPI_TransmitReceive_IT
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:2455   .text.HAL_SPI_Receive_IT:0000000000000158 $d
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6995   .text.SPI_RxISR_16BIT:0000000000000000 SPI_RxISR_16BIT
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6923   .text.SPI_RxISR_8BIT:0000000000000000 SPI_RxISR_8BIT
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:2461   .text.HAL_SPI_TransmitReceive_IT:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:2700   .text.HAL_SPI_TransmitReceive_IT:0000000000000150 $d
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6755   .text.SPI_2linesRxISR_16BIT:0000000000000000 SPI_2linesRxISR_16BIT
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6840   .text.SPI_2linesTxISR_16BIT:0000000000000000 SPI_2linesTxISR_16BIT
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6497   .text.SPI_2linesRxISR_8BIT:0000000000000000 SPI_2linesRxISR_8BIT
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6635   .text.SPI_2linesTxISR_8BIT:0000000000000000 SPI_2linesTxISR_8BIT
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:2708   .text.HAL_SPI_Transmit_DMA:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:2714   .text.HAL_SPI_Transmit_DMA:0000000000000000 HAL_SPI_Transmit_DMA
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:3029   .text.HAL_SPI_Transmit_DMA:00000000000001dc $d
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5952   .text.SPI_DMAHalfTransmitCplt:0000000000000000 SPI_DMAHalfTransmitCplt
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5594   .text.SPI_DMATransmitCplt:0000000000000000 SPI_DMATransmitCplt
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6069   .text.SPI_DMAError:0000000000000000 SPI_DMAError
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:3036   .text.HAL_SPI_Receive_DMA:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:3042   .text.HAL_SPI_Receive_DMA:0000000000000000 HAL_SPI_Receive_DMA
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:3417   .text.HAL_SPI_TransmitReceive_DMA:0000000000000000 HAL_SPI_TransmitReceive_DMA
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:3404   .text.HAL_SPI_Receive_DMA:000000000000023c $d
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5991   .text.SPI_DMAHalfReceiveCplt:0000000000000000 SPI_DMAHalfReceiveCplt
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5719   .text.SPI_DMAReceiveCplt:0000000000000000 SPI_DMAReceiveCplt
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:3411   .text.HAL_SPI_TransmitReceive_DMA:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:3918   .text.HAL_SPI_TransmitReceive_DMA:0000000000000304 $d
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6030   .text.SPI_DMAHalfTransmitReceiveCplt:0000000000000000 SPI_DMAHalfTransmitReceiveCplt
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5844   .text.SPI_DMATransmitReceiveCplt:0000000000000000 SPI_DMATransmitReceiveCplt
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:3927   .text.HAL_SPI_Abort:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:3933   .text.HAL_SPI_Abort:0000000000000000 HAL_SPI_Abort
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7395   .text.SPI_WaitFifoStateUntilTimeout:0000000000000000 SPI_WaitFifoStateUntilTimeout
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7204   .text.SPI_WaitFlagStateUntilTimeout:0000000000000000 SPI_WaitFlagStateUntilTimeout
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:4295   .text.HAL_SPI_Abort:0000000000000230 $d
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:8249   .text.SPI_AbortTx_ISR:0000000000000000 SPI_AbortTx_ISR
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 227
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:20     .text.HAL_SPI_Init:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:26     .text.HAL_SPI_Init:0000000000000000 HAL_SPI_Init
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:298    .text.HAL_SPI_MspInit:0000000000000000 HAL_SPI_MspInit
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:221    .text.HAL_SPI_DeInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:227    .text.HAL_SPI_DeInit:0000000000000000 HAL_SPI_DeInit
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:334    .text.HAL_SPI_MspDeInit:0000000000000000 HAL_SPI_MspDeInit
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:292    .text.HAL_SPI_MspInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:328    .text.HAL_SPI_MspDeInit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:364    .text.HAL_SPI_Transmit:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:370    .text.HAL_SPI_Transmit:0000000000000000 HAL_SPI_Transmit
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7737   .text.SPI_EndRxTxTransaction:0000000000000000 SPI_EndRxTxTransaction
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:888    .text.HAL_SPI_Receive:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:894    .text.HAL_SPI_Receive:0000000000000000 HAL_SPI_Receive
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:1305   .text.HAL_SPI_TransmitReceive:0000000000000000 HAL_SPI_TransmitReceive
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7609   .text.SPI_EndRxTransaction:0000000000000000 SPI_EndRxTransaction
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:1299   .text.HAL_SPI_TransmitReceive:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:2019   .text.HAL_SPI_Transmit_IT:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:2025   .text.HAL_SPI_Transmit_IT:0000000000000000 HAL_SPI_Transmit_IT
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:2215   .text.HAL_SPI_Transmit_IT:0000000000000114 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7136   .text.SPI_TxISR_16BIT:0000000000000000 SPI_TxISR_16BIT
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7065   .text.SPI_TxISR_8BIT:0000000000000000 SPI_TxISR_8BIT
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:2221   .text.HAL_SPI_Receive_IT:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:2227   .text.HAL_SPI_Receive_IT:0000000000000000 HAL_SPI_Receive_IT
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:2467   .text.HAL_SPI_TransmitReceive_IT:0000000000000000 HAL_SPI_TransmitReceive_IT
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:2455   .text.HAL_SPI_Receive_IT:0000000000000158 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6995   .text.SPI_RxISR_16BIT:0000000000000000 SPI_RxISR_16BIT
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6923   .text.SPI_RxISR_8BIT:0000000000000000 SPI_RxISR_8BIT
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:2461   .text.HAL_SPI_TransmitReceive_IT:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:2700   .text.HAL_SPI_TransmitReceive_IT:0000000000000150 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6755   .text.SPI_2linesRxISR_16BIT:0000000000000000 SPI_2linesRxISR_16BIT
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6840   .text.SPI_2linesTxISR_16BIT:0000000000000000 SPI_2linesTxISR_16BIT
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6497   .text.SPI_2linesRxISR_8BIT:0000000000000000 SPI_2linesRxISR_8BIT
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6635   .text.SPI_2linesTxISR_8BIT:0000000000000000 SPI_2linesTxISR_8BIT
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:2708   .text.HAL_SPI_Transmit_DMA:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:2714   .text.HAL_SPI_Transmit_DMA:0000000000000000 HAL_SPI_Transmit_DMA
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:3029   .text.HAL_SPI_Transmit_DMA:00000000000001dc $d
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5952   .text.SPI_DMAHalfTransmitCplt:0000000000000000 SPI_DMAHalfTransmitCplt
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5594   .text.SPI_DMATransmitCplt:0000000000000000 SPI_DMATransmitCplt
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6069   .text.SPI_DMAError:0000000000000000 SPI_DMAError
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:3036   .text.HAL_SPI_Receive_DMA:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:3042   .text.HAL_SPI_Receive_DMA:0000000000000000 HAL_SPI_Receive_DMA
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:3417   .text.HAL_SPI_TransmitReceive_DMA:0000000000000000 HAL_SPI_TransmitReceive_DMA
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:3404   .text.HAL_SPI_Receive_DMA:000000000000023c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5991   .text.SPI_DMAHalfReceiveCplt:0000000000000000 SPI_DMAHalfReceiveCplt
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5719   .text.SPI_DMAReceiveCplt:0000000000000000 SPI_DMAReceiveCplt
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:3411   .text.HAL_SPI_TransmitReceive_DMA:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:3918   .text.HAL_SPI_TransmitReceive_DMA:0000000000000304 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6030   .text.SPI_DMAHalfTransmitReceiveCplt:0000000000000000 SPI_DMAHalfTransmitReceiveCplt
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5844   .text.SPI_DMATransmitReceiveCplt:0000000000000000 SPI_DMATransmitReceiveCplt
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:3927   .text.HAL_SPI_Abort:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:3933   .text.HAL_SPI_Abort:0000000000000000 HAL_SPI_Abort
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7395   .text.SPI_WaitFifoStateUntilTimeout:0000000000000000 SPI_WaitFifoStateUntilTimeout
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7204   .text.SPI_WaitFlagStateUntilTimeout:0000000000000000 SPI_WaitFlagStateUntilTimeout
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:4295   .text.HAL_SPI_Abort:0000000000000230 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:8249   .text.SPI_AbortTx_ISR:0000000000000000 SPI_AbortTx_ISR
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 227
 
 
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:8118   .text.SPI_AbortRx_ISR:0000000000000000 SPI_AbortRx_ISR
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:4303   .text.HAL_SPI_Abort_IT:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:4309   .text.HAL_SPI_Abort_IT:0000000000000000 HAL_SPI_Abort_IT
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5480   .text.HAL_SPI_AbortCpltCallback:0000000000000000 HAL_SPI_AbortCpltCallback
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:4647   .text.HAL_SPI_Abort_IT:00000000000001dc $d
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6173   .text.SPI_DMATxAbortCallback:0000000000000000 SPI_DMATxAbortCallback
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6334   .text.SPI_DMARxAbortCallback:0000000000000000 SPI_DMARxAbortCallback
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:4657   .text.HAL_SPI_DMAPause:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:4663   .text.HAL_SPI_DMAPause:0000000000000000 HAL_SPI_DMAPause
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:4721   .text.HAL_SPI_DMAResume:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:4727   .text.HAL_SPI_DMAResume:0000000000000000 HAL_SPI_DMAResume
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:4785   .text.HAL_SPI_DMAStop:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:4791   .text.HAL_SPI_DMAStop:0000000000000000 HAL_SPI_DMAStop
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:4885   .text.HAL_SPI_IRQHandler:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:4891   .text.HAL_SPI_IRQHandler:0000000000000000 HAL_SPI_IRQHandler
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5444   .text.HAL_SPI_ErrorCallback:0000000000000000 HAL_SPI_ErrorCallback
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5217   .text.HAL_SPI_IRQHandler:00000000000001e4 $d
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6126   .text.SPI_DMAAbortOnError:0000000000000000 SPI_DMAAbortOnError
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5222   .text.HAL_SPI_TxCpltCallback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5228   .text.HAL_SPI_TxCpltCallback:0000000000000000 HAL_SPI_TxCpltCallback
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5258   .text.HAL_SPI_RxCpltCallback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5264   .text.HAL_SPI_RxCpltCallback:0000000000000000 HAL_SPI_RxCpltCallback
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5294   .text.HAL_SPI_TxRxCpltCallback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5300   .text.HAL_SPI_TxRxCpltCallback:0000000000000000 HAL_SPI_TxRxCpltCallback
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5330   .text.HAL_SPI_TxHalfCpltCallback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5336   .text.HAL_SPI_TxHalfCpltCallback:0000000000000000 HAL_SPI_TxHalfCpltCallback
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5366   .text.HAL_SPI_RxHalfCpltCallback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5372   .text.HAL_SPI_RxHalfCpltCallback:0000000000000000 HAL_SPI_RxHalfCpltCallback
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5402   .text.HAL_SPI_TxRxHalfCpltCallback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5408   .text.HAL_SPI_TxRxHalfCpltCallback:0000000000000000 HAL_SPI_TxRxHalfCpltCallback
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5438   .text.HAL_SPI_ErrorCallback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5474   .text.HAL_SPI_AbortCpltCallback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5510   .text.HAL_SPI_GetState:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5516   .text.HAL_SPI_GetState:0000000000000000 HAL_SPI_GetState
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5550   .text.HAL_SPI_GetError:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5556   .text.HAL_SPI_GetError:0000000000000000 HAL_SPI_GetError
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5589   .text.SPI_DMATransmitCplt:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5714   .text.SPI_DMAReceiveCplt:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5839   .text.SPI_DMATransmitReceiveCplt:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5947   .text.SPI_DMAHalfTransmitCplt:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:5986   .text.SPI_DMAHalfReceiveCplt:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6025   .text.SPI_DMAHalfTransmitReceiveCplt:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6064   .text.SPI_DMAError:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6121   .text.SPI_DMAAbortOnError:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6168   .text.SPI_DMATxAbortCallback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6329   .text.SPI_DMARxAbortCallback:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6492   .text.SPI_2linesRxISR_8BIT:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7840   .text.SPI_CloseRxTx_ISR:0000000000000000 SPI_CloseRxTx_ISR
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6630   .text.SPI_2linesTxISR_8BIT:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6750   .text.SPI_2linesRxISR_16BIT:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6835   .text.SPI_2linesTxISR_16BIT:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6918   .text.SPI_RxISR_8BIT:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7940   .text.SPI_CloseRx_ISR:0000000000000000 SPI_CloseRx_ISR
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:6990   .text.SPI_RxISR_16BIT:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7060   .text.SPI_TxISR_8BIT:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:8018   .text.SPI_CloseTx_ISR:0000000000000000 SPI_CloseTx_ISR
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7131   .text.SPI_TxISR_16BIT:0000000000000000 $t
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s 			page 228
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:8118   .text.SPI_AbortRx_ISR:0000000000000000 SPI_AbortRx_ISR
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:4303   .text.HAL_SPI_Abort_IT:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:4309   .text.HAL_SPI_Abort_IT:0000000000000000 HAL_SPI_Abort_IT
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5480   .text.HAL_SPI_AbortCpltCallback:0000000000000000 HAL_SPI_AbortCpltCallback
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:4647   .text.HAL_SPI_Abort_IT:00000000000001dc $d
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6173   .text.SPI_DMATxAbortCallback:0000000000000000 SPI_DMATxAbortCallback
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6334   .text.SPI_DMARxAbortCallback:0000000000000000 SPI_DMARxAbortCallback
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:4657   .text.HAL_SPI_DMAPause:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:4663   .text.HAL_SPI_DMAPause:0000000000000000 HAL_SPI_DMAPause
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:4721   .text.HAL_SPI_DMAResume:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:4727   .text.HAL_SPI_DMAResume:0000000000000000 HAL_SPI_DMAResume
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:4785   .text.HAL_SPI_DMAStop:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:4791   .text.HAL_SPI_DMAStop:0000000000000000 HAL_SPI_DMAStop
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:4885   .text.HAL_SPI_IRQHandler:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:4891   .text.HAL_SPI_IRQHandler:0000000000000000 HAL_SPI_IRQHandler
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5444   .text.HAL_SPI_ErrorCallback:0000000000000000 HAL_SPI_ErrorCallback
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5217   .text.HAL_SPI_IRQHandler:00000000000001e4 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6126   .text.SPI_DMAAbortOnError:0000000000000000 SPI_DMAAbortOnError
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5222   .text.HAL_SPI_TxCpltCallback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5228   .text.HAL_SPI_TxCpltCallback:0000000000000000 HAL_SPI_TxCpltCallback
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5258   .text.HAL_SPI_RxCpltCallback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5264   .text.HAL_SPI_RxCpltCallback:0000000000000000 HAL_SPI_RxCpltCallback
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5294   .text.HAL_SPI_TxRxCpltCallback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5300   .text.HAL_SPI_TxRxCpltCallback:0000000000000000 HAL_SPI_TxRxCpltCallback
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5330   .text.HAL_SPI_TxHalfCpltCallback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5336   .text.HAL_SPI_TxHalfCpltCallback:0000000000000000 HAL_SPI_TxHalfCpltCallback
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5366   .text.HAL_SPI_RxHalfCpltCallback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5372   .text.HAL_SPI_RxHalfCpltCallback:0000000000000000 HAL_SPI_RxHalfCpltCallback
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5402   .text.HAL_SPI_TxRxHalfCpltCallback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5408   .text.HAL_SPI_TxRxHalfCpltCallback:0000000000000000 HAL_SPI_TxRxHalfCpltCallback
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5438   .text.HAL_SPI_ErrorCallback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5474   .text.HAL_SPI_AbortCpltCallback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5510   .text.HAL_SPI_GetState:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5516   .text.HAL_SPI_GetState:0000000000000000 HAL_SPI_GetState
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5550   .text.HAL_SPI_GetError:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5556   .text.HAL_SPI_GetError:0000000000000000 HAL_SPI_GetError
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5589   .text.SPI_DMATransmitCplt:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5714   .text.SPI_DMAReceiveCplt:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5839   .text.SPI_DMATransmitReceiveCplt:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5947   .text.SPI_DMAHalfTransmitCplt:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:5986   .text.SPI_DMAHalfReceiveCplt:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6025   .text.SPI_DMAHalfTransmitReceiveCplt:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6064   .text.SPI_DMAError:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6121   .text.SPI_DMAAbortOnError:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6168   .text.SPI_DMATxAbortCallback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6329   .text.SPI_DMARxAbortCallback:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6492   .text.SPI_2linesRxISR_8BIT:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7840   .text.SPI_CloseRxTx_ISR:0000000000000000 SPI_CloseRxTx_ISR
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6630   .text.SPI_2linesTxISR_8BIT:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6750   .text.SPI_2linesRxISR_16BIT:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6835   .text.SPI_2linesTxISR_16BIT:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6918   .text.SPI_RxISR_8BIT:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7940   .text.SPI_CloseRx_ISR:0000000000000000 SPI_CloseRx_ISR
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:6990   .text.SPI_RxISR_16BIT:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7060   .text.SPI_TxISR_8BIT:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:8018   .text.SPI_CloseTx_ISR:0000000000000000 SPI_CloseTx_ISR
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7131   .text.SPI_TxISR_16BIT:0000000000000000 $t
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s 			page 228
 
 
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7199   .text.SPI_WaitFlagStateUntilTimeout:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7385   .text.SPI_WaitFlagStateUntilTimeout:000000000000010c $d
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7390   .text.SPI_WaitFifoStateUntilTimeout:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7599   .text.SPI_WaitFifoStateUntilTimeout:0000000000000128 $d
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7604   .text.SPI_EndRxTransaction:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7732   .text.SPI_EndRxTxTransaction:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7835   .text.SPI_CloseRxTx_ISR:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:7935   .text.SPI_CloseRx_ISR:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:8013   .text.SPI_CloseTx_ISR:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:8113   .text.SPI_AbortRx_ISR:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:8238   .text.SPI_AbortRx_ISR:00000000000000b8 $d
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:8244   .text.SPI_AbortTx_ISR:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccNAxgJY.s:8446   .text.SPI_AbortTx_ISR:000000000000013c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7199   .text.SPI_WaitFlagStateUntilTimeout:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7385   .text.SPI_WaitFlagStateUntilTimeout:000000000000010c $d
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7390   .text.SPI_WaitFifoStateUntilTimeout:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7599   .text.SPI_WaitFifoStateUntilTimeout:0000000000000128 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7604   .text.SPI_EndRxTransaction:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7732   .text.SPI_EndRxTxTransaction:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7835   .text.SPI_CloseRxTx_ISR:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:7935   .text.SPI_CloseRx_ISR:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:8013   .text.SPI_CloseTx_ISR:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:8113   .text.SPI_AbortRx_ISR:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:8238   .text.SPI_AbortRx_ISR:00000000000000b8 $d
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:8244   .text.SPI_AbortTx_ISR:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccZPv3vt.s:8446   .text.SPI_AbortTx_ISR:000000000000013c $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick
