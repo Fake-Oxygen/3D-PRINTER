@@ -48,7 +48,7 @@ void G0()
     }
     else
     {
-        isRunning = false;
+        // isRunning = false;
     }
 }
 
@@ -89,16 +89,16 @@ void G28()
     isRunning = true;
     Cur_E = 0;
     E = 0;
-    MoveAndWait(1, 400, X_AXIS, CLOCKWISE, CLOCKWISE);
-    MoveAndWait(0, 1000, X_AXIS, COUNTERCLOCKWISE, COUNTERCLOCKWISE);
-    MoveAndWait(1, 1000, X_AXIS, CLOCKWISE, CLOCKWISE);
-    MoveAndWait(0, 1000, X_AXIS, COUNTERCLOCKWISE, COUNTERCLOCKWISE);
+    // MoveAndWait(1, 400, X_AXIS, CLOCKWISE, CLOCKWISE);
+    // MoveAndWait(0, 300, X_AXIS, COUNTERCLOCKWISE, COUNTERCLOCKWISE);
+    // MoveAndWait(1, 300, X_AXIS, CLOCKWISE, CLOCKWISE);
+    // MoveAndWait(0, 300, X_AXIS, COUNTERCLOCKWISE, COUNTERCLOCKWISE);
     Cur_X = 0;
     X = 0;
-    MoveAndWait(1, 400, Y_AXIS, CLOCKWISE, COUNTERCLOCKWISE);
-    MoveAndWait(0, 1000, Y_AXIS, COUNTERCLOCKWISE, CLOCKWISE);
-    MoveAndWait(1, 1000, Y_AXIS, CLOCKWISE, COUNTERCLOCKWISE);
-    MoveAndWait(0, 1000, Y_AXIS, COUNTERCLOCKWISE, CLOCKWISE);
+    // MoveAndWait(1, 400, Y_AXIS, CLOCKWISE, COUNTERCLOCKWISE);
+    // MoveAndWait(0, 300, Y_AXIS, COUNTERCLOCKWISE, CLOCKWISE);
+    // MoveAndWait(1, 300, Y_AXIS, CLOCKWISE, COUNTERCLOCKWISE);
+    // MoveAndWait(0, 300, Y_AXIS, COUNTERCLOCKWISE, CLOCKWISE);
     Cur_Y = 0;
     Y = 0;
     isRunning = false;

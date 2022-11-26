@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
   19:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** /* when not customized by application define dummy one */
   20:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** #ifndef VL53L0X_GetI2cBus
   21:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** /** This macro can be overloaded by user to enforce i2c sharing in RTOS context
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 2
 
 
   22:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****  */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
   68 0028 1346     		mov	r3, r2
   69 002a BA68     		ldr	r2, [r7, #8]
   70 002c FFF7FEFF 		bl	HAL_I2C_Master_Transmit
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 3
 
 
   71 0030 0346     		mov	r3, r0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
   55:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     status = HAL_I2C_Master_Receive(Dev->I2cHandle, Dev->I2cDevAddr|1, pdata, count, i2c_time_out);
  116              		.loc 1 55 14
  117 0012 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 4
 
 
  118 0014 D3F85C01 		ldr	r0, [r3, #348]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  165              		.cfi_offset 14, -4
  166 0002 86B0     		sub	sp, sp, #24
  167              		.cfi_def_cfa_offset 32
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 5
 
 
  168 0004 00AF     		add	r7, sp, #0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
   76:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     }
   77:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_PutI2cBus();
   78:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return Status;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 6
 
 
  211              		.loc 1 78 12
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  259              		.loc 1 86 18
  260 0014 07F10B03 		add	r3, r7, #11
  261 0018 0122     		movs	r2, #1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 7
 
 
  262 001a 1946     		mov	r1, r3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  304              		.cfi_endproc
  305              	.LFE327:
  307              		.section	.text.VL53L0X_WrByte,"ax",%progbits
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 8
 
 
  308              		.align	1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  352 002e 002B     		cmp	r3, #0
  353 0030 01D0     		beq	.L17
  110:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 9
 
 
  354              		.loc 1 110 16
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  403 0012 FB73     		strb	r3, [r7, #15]
  118:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     int32_t status_int;
  119:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 10
 
 
  120:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     _I2CBuffer[0] = index;
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  446              	.L24:
  447 0050 00000000 		.word	_I2CBuffer
  448              		.cfi_endproc
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 11
 
 
  449              	.LFE329:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  497              		.loc 1 139 27
  498 002c 7B68     		ldr	r3, [r7, #4]
  499 002e 1B0A     		lsrs	r3, r3, #8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 12
 
 
  500              		.loc 1 139 19
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  547              	VL53L0X_UpdateByte:
  548              	.LFB331:
  149:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 13
 
 
  150:Drivers/VL53L0X/platform/src/vl53l0x_platform.c **** VL53L0X_Error VL53L0X_UpdateByte(VL53L0X_DEV Dev, uint8_t index, uint8_t AndData, uint8_t OrData) {
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  594 0046 BB73     		strb	r3, [r7, #14]
  159:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     Status = VL53L0X_WrByte(Dev, index, data);
  595              		.loc 1 159 14
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 14
 
 
  596 0048 BA7B     		ldrb	r2, [r7, #14]	@ zero_extendqisi2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  165:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     VL53L0X_Error Status = VL53L0X_ERROR_NONE;
  646              		.loc 1 165 19
  647 000e 0023     		movs	r3, #0
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 15
 
 
  648 0010 FB75     		strb	r3, [r7, #23]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  686              		.loc 1 181 1
  687 004c 1846     		mov	r0, r3
  688 004e 1837     		adds	r7, r7, #24
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 16
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 16
 
 
  689              		.cfi_def_cfa_offset 8
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  191:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
  736              		.loc 1 191 16
  737 0028 EC23     		movs	r3, #236
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 17
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 17
 
 
  738 002a FB75     		strb	r3, [r7, #23]
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  779 0062 1846     		mov	r0, r3
  780 0064 1837     		adds	r7, r7, #24
  781              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 18
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 18
 
 
  782 0066 BD46     		mov	sp, r7
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  830 0024 002B     		cmp	r3, #0
  831 0026 02D0     		beq	.L49
  213:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****         Status = VL53L0X_ERROR_CONTROL_INTERFACE;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 19
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 19
 
 
  832              		.loc 1 213 16
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  877 0060 1A44     		add	r2, r2, r3
  878              		.loc 1 222 11
  879 0062 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 20
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 20
 
 
  880 0064 1A60     		str	r2, [r3]
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  925 000c 0220     		movs	r0, #2
  926 000e FFF7FEFF 		bl	HAL_Delay
  234:Drivers/VL53L0X/platform/src/vl53l0x_platform.c ****     return status;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 21
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 21
 
 
  927              		.loc 1 234 12
@@ -1229,43 +1229,43 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 1
  952              		.file 12 "Drivers/VL53L0X/platform/inc/vl53l0x_platform.h"
  953              		.file 13 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\
  954              		.file 14 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s 			page 22
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 vl53l0x_platform.c
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:24     .bss._I2CBuffer:0000000000000000 _I2CBuffer
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:21     .bss._I2CBuffer:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:27     .text._I2CWrite:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:33     .text._I2CWrite:0000000000000000 _I2CWrite
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:88     .text._I2CRead:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:94     .text._I2CRead:0000000000000000 _I2CRead
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:150    .text.VL53L0X_WriteMulti:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:156    .text.VL53L0X_WriteMulti:0000000000000000 VL53L0X_WriteMulti
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:225    .text.VL53L0X_WriteMulti:0000000000000058 $d
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:231    .text.VL53L0X_ReadMulti:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:237    .text.VL53L0X_ReadMulti:0000000000000000 VL53L0X_ReadMulti
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:308    .text.VL53L0X_WrByte:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:314    .text.VL53L0X_WrByte:0000000000000000 VL53L0X_WrByte
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:371    .text.VL53L0X_WrByte:0000000000000044 $d
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:376    .text.VL53L0X_WrWord:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:382    .text.VL53L0X_WrWord:0000000000000000 VL53L0X_WrWord
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:447    .text.VL53L0X_WrWord:0000000000000050 $d
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:452    .text.VL53L0X_WrDWord:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:458    .text.VL53L0X_WrDWord:0000000000000000 VL53L0X_WrDWord
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:536    .text.VL53L0X_WrDWord:0000000000000060 $d
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:541    .text.VL53L0X_UpdateByte:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:547    .text.VL53L0X_UpdateByte:0000000000000000 VL53L0X_UpdateByte
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:628    .text.VL53L0X_RdByte:0000000000000000 VL53L0X_RdByte
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:622    .text.VL53L0X_RdByte:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:698    .text.VL53L0X_RdWord:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:704    .text.VL53L0X_RdWord:0000000000000000 VL53L0X_RdWord
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:789    .text.VL53L0X_RdWord:000000000000006c $d
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:794    .text.VL53L0X_RdDWord:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:800    .text.VL53L0X_RdDWord:0000000000000000 VL53L0X_RdDWord
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:895    .text.VL53L0X_RdDWord:0000000000000074 $d
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:900    .text.VL53L0X_PollingDelay:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cctABQIZ.s:906    .text.VL53L0X_PollingDelay:0000000000000000 VL53L0X_PollingDelay
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:24     .bss._I2CBuffer:0000000000000000 _I2CBuffer
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:21     .bss._I2CBuffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:27     .text._I2CWrite:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:33     .text._I2CWrite:0000000000000000 _I2CWrite
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:88     .text._I2CRead:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:94     .text._I2CRead:0000000000000000 _I2CRead
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:150    .text.VL53L0X_WriteMulti:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:156    .text.VL53L0X_WriteMulti:0000000000000000 VL53L0X_WriteMulti
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:225    .text.VL53L0X_WriteMulti:0000000000000058 $d
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:231    .text.VL53L0X_ReadMulti:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:237    .text.VL53L0X_ReadMulti:0000000000000000 VL53L0X_ReadMulti
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:308    .text.VL53L0X_WrByte:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:314    .text.VL53L0X_WrByte:0000000000000000 VL53L0X_WrByte
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:371    .text.VL53L0X_WrByte:0000000000000044 $d
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:376    .text.VL53L0X_WrWord:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:382    .text.VL53L0X_WrWord:0000000000000000 VL53L0X_WrWord
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:447    .text.VL53L0X_WrWord:0000000000000050 $d
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:452    .text.VL53L0X_WrDWord:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:458    .text.VL53L0X_WrDWord:0000000000000000 VL53L0X_WrDWord
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:536    .text.VL53L0X_WrDWord:0000000000000060 $d
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:541    .text.VL53L0X_UpdateByte:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:547    .text.VL53L0X_UpdateByte:0000000000000000 VL53L0X_UpdateByte
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:628    .text.VL53L0X_RdByte:0000000000000000 VL53L0X_RdByte
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:622    .text.VL53L0X_RdByte:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:698    .text.VL53L0X_RdWord:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:704    .text.VL53L0X_RdWord:0000000000000000 VL53L0X_RdWord
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:789    .text.VL53L0X_RdWord:000000000000006c $d
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:794    .text.VL53L0X_RdDWord:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:800    .text.VL53L0X_RdDWord:0000000000000000 VL53L0X_RdDWord
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:895    .text.VL53L0X_RdDWord:0000000000000074 $d
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:900    .text.VL53L0X_PollingDelay:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\cc6jbgF0.s:906    .text.VL53L0X_PollingDelay:0000000000000000 VL53L0X_PollingDelay
 
 UNDEFINED SYMBOLS
 HAL_I2C_Master_Transmit

@@ -62,22 +62,28 @@ void SetFanSpeed(uint16_t fan, uint16_t speed)
     }
 }
 
-void MoveXY(double dir_x, double dir_y) {
+void MoveXY(double dir_x, double dir_y)
+{
     double engine_dir_B = dir_x * SQRT_2_BY_2 - dir_y * SQRT_2_BY_2; // engine B (image Y)
     double engine_dir_A = dir_x * SQRT_2_BY_2 + dir_y * SQRT_2_BY_2; // engine A (image X)
 
     double feed_rate_A = fabs(F * engine_dir_A); // F = feed rate
     double feed_rate_B = fabs(F * engine_dir_B);
 
-    if(feed_rate_A > 0) {
+    if (feed_rate_A > 0)
+    {
         uint32_t speed_A = (double)1 / (double)feed_rate_A * (double)60 * XY_MM_PER_REV / XY_STEPS_PER_REV * (double)1000000;
 
-        if(GetTicks() - last_tick_A >= speed_A && fabs(engine_dir_A) > ENGINE_MIN_SPEED) {
+        if (GetTicks() - last_tick_A >= speed_A && fabs(engine_dir_A) > ENGINE_MIN_SPEED)
+        {
             // isRunning = true;
-            if(engine_dir_A > 0) {
+            if (engine_dir_A > 0)
+            {
                 CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
                 MAKE_MOTOR_STEP(X_AXIS_STEP);
-            } else if(engine_dir_A < 0) {
+            }
+            else if (engine_dir_A < 0)
+            {
                 CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
                 MAKE_MOTOR_STEP(X_AXIS_STEP);
             }
@@ -85,15 +91,20 @@ void MoveXY(double dir_x, double dir_y) {
         }
     }
 
-    if(feed_rate_B > 0) {
+    if (feed_rate_B > 0)
+    {
         uint32_t speed_B = (double)1 / (double)feed_rate_B * (double)60 * XY_MM_PER_REV / XY_STEPS_PER_REV * (double)1000000;
 
-        if(GetTicks() - last_tick_B >= speed_B && fabs(engine_dir_B) > ENGINE_MIN_SPEED) {
+        if (GetTicks() - last_tick_B >= speed_B && fabs(engine_dir_B) > ENGINE_MIN_SPEED)
+        {
             // isRunning = true;
-            if(engine_dir_B > 0) {
+            if (engine_dir_B > 0)
+            {
                 CHANGE_MOTOR_DIR(Y_AXIS_DIR, COUNTERCLOCKWISE);
                 MAKE_MOTOR_STEP(Y_AXIS_STEP);
-            } else if(engine_dir_B < 0) {
+            }
+            else if (engine_dir_B < 0)
+            {
                 CHANGE_MOTOR_DIR(Y_AXIS_DIR, CLOCKWISE);
                 MAKE_MOTOR_STEP(Y_AXIS_STEP);
             }
@@ -101,24 +112,30 @@ void MoveXY(double dir_x, double dir_y) {
         }
     }
 
-    if(F > 0) {
+    if (F > 0)
+    {
         uint32_t speed_AB = (double)1 / (double)F * (double)60 * XY_MM_PER_REV / XY_STEPS_PER_REV * (double)1000000;
-        if(GetTicks() - last_tick_AB >= speed_AB) {
-            //dirs have to sum up to 1 or -1
-            //1-smaller diff/larger dif
-            if(dir_x > 0) {
+        if (GetTicks() - last_tick_AB >= speed_AB)
+        {
+            // dirs have to sum up to 1 or -1
+            // 1-smaller diff/larger dif
+            if (dir_x > 0)
+            {
                 Cur_X += dir_x * dir_x * XY_MM_PER_REV / XY_STEPS_PER_REV;
             }
-            else {
+            else
+            {
                 Cur_X -= dir_x * dir_x * XY_MM_PER_REV / XY_STEPS_PER_REV;
             }
-            if(dir_y > 0) {
+            if (dir_y > 0)
+            {
                 Cur_Y += dir_y * dir_y * XY_MM_PER_REV / XY_STEPS_PER_REV;
             }
-            else {
+            else
+            {
                 Cur_Y -= dir_y * dir_y * XY_MM_PER_REV / XY_STEPS_PER_REV;
             }
-            
+
             last_tick_AB = GetTicks();
         }
     }
@@ -238,5 +255,46 @@ void MoveAndWait(uint16_t state, uint16_t speed, uint16_t axis, uint16_t dir_X, 
             DelayMicrosecond(speed);
         }
         break;
+    }
+}
+
+void MoveXY2(double difx, double dify)
+{
+    // To muszą być stałe
+    double difA = difx + dify;
+    double difB = difx - dify;
+    double feedrateA = fabs(difA) / (fabs(difA) + fabs(difB));
+    double feedrateB = fabs(difB) / (fabs(difA) + fabs(difB));
+    uint32_t speed_A = (XY_STEPS_PER_REV / XY_MM_PER_REV) * (double)feedrateA / MIN_TO_MS;
+    uint32_t speed_B = (XY_STEPS_PER_REV / XY_MM_PER_REV) * (double)feedrateB / MIN_TO_MS;
+    if (GetTicks() - last_tick_A >= speed_A)
+    {
+        if (difA < 0)
+        {
+            CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
+            Cur_X -= 0.5 * (speed_A * (GetTicks() - last_tick_A) + speed_B * (GetTicks() - last_tick_B));
+        }
+        else
+        {
+            CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
+            Cur_X += 0.5 * (speed_A * (GetTicks() - last_tick_A) + speed_B * (GetTicks() - last_tick_B));
+        }
+        MAKE_MOTOR_STEP(X_AXIS_STEP);
+        last_tick_A = GetTicks();
+    }
+    if (GetTicks() - last_tick_B >= speed_B)
+    {
+        if (difB < 0)
+        {
+            CHANGE_MOTOR_DIR(X_AXIS_DIR, CLOCKWISE);
+            Cur_Y -= 0.5 * (speed_A * (GetTicks() - last_tick_A) - speed_B * (GetTicks() - last_tick_B));
+        }
+        else
+        {
+            CHANGE_MOTOR_DIR(X_AXIS_DIR, COUNTERCLOCKWISE);
+            Cur_Y += 0.5 * (speed_A * (GetTicks() - last_tick_A) - speed_B * (GetTicks() - last_tick_B));
+        }
+        MAKE_MOTOR_STEP(Y_AXIS_STEP);
+        last_tick_B = GetTicks();
     }
 }

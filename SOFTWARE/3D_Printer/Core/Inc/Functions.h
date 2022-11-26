@@ -18,6 +18,7 @@ void SetHeating(uint16_t heater, uint16_t power);
 void MoveXY(double dir_x, double dir_y);
 void Move(double dif, uint32_t last_time, uint16_t axis, uint16_t speed);
 void MoveAndWait(uint16_t state, uint16_t speed, uint16_t axis, uint16_t dir_X, uint16_t dir_Y);
+void MoveXY2(double difx, double dify);
 // void line_append(uint8_t value, UART_HandleTypeDef *hlpuart);
 
 #endif
