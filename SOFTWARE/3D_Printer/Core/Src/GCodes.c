@@ -31,9 +31,11 @@ uint16_t M155(uint16_t S)
 
 void G0()
 {
-    isRunning = true;
-    double E_dif = E - Cur_E;
-    double Z_dif = Z - Cur_Z;
+    // isRunning = true;
+    // double E_dif = E - Cur_E;
+    // double Z_dif = Z - Cur_Z;
+    double E_dif = 0;
+    double Z_dif = 0;
     double dif_x = X - Cur_X;
     double dif_y = Y - Cur_Y;
     double xy_len = sqrt(dif_x * dif_x + dif_y * dif_y);
@@ -45,11 +47,15 @@ void G0()
    
     if (fabs(dif_x) > OFFSET_P || fabs(dif_y) > OFFSET_P)
     {
-         MoveXY2(dif_x, dif_y);
+         MoveXY2(1*dif_x, -1*dif_y);
     }
     else
     {
         // isRunning = false;
+    }
+    if(E_dif == 0 && Z_dif == 0 && dif_x == 0 && dif_y == 0)
+    {
+        isRunning = false;
     }
 }
 
@@ -90,8 +96,8 @@ void G28()
     isRunning = true;
     Cur_E = 0;
     E = 0;
-    // MoveAndWait(1, 400, X_AXIS, CLOCKWISE, CLOCKWISE);
-    // MoveAndWait(0, 300, X_AXIS, COUNTERCLOCKWISE, COUNTERCLOCKWISE);
+    // MoveAndWait(1, 400, X_AXIS, COUNTERCLOCKWISE, COUNTERCLOCKWISE);
+    // MoveAndWait(0, 300, X_AXIS, CLOCKWISE, CLOCKWISE);
     // MoveAndWait(1, 300, X_AXIS, CLOCKWISE, CLOCKWISE);
     // MoveAndWait(0, 300, X_AXIS, COUNTERCLOCKWISE, COUNTERCLOCKWISE);
     Cur_X = 0;

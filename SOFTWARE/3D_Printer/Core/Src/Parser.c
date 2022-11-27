@@ -87,6 +87,9 @@ void split_gcode(uint8_t buf[])
         case 'S':
             S = atoi(buf2 + 1);
             break;
+        case 'F':
+            F = atoi(buf2 + 1);
+            break;
         case 'X':
             X = atof(buf2 + 1);
             break;
@@ -98,9 +101,6 @@ void split_gcode(uint8_t buf[])
             break;
         case 'E':
             E = atof(buf2 + 1);
-            break;
-        case 'F':
-            F = atoi(buf2 + 1);
             break;
         }
         HAL_Delay(1);

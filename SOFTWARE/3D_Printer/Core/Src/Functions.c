@@ -152,7 +152,7 @@ void Move(double dif, uint32_t last_time, uint16_t axis, uint16_t speed)
     {
         if (GetTicks() - last_time >= speed && speed > 0)
         {
-            isRunning = true;
+            // isRunning = true;
             if (dif < 0)
             {
                 switch (axis)
@@ -230,7 +230,7 @@ void Move(double dif, uint32_t last_time, uint16_t axis, uint16_t speed)
     }
     else
     {
-        isRunning = false;
+        // isRunning = false;
     }
 }
 

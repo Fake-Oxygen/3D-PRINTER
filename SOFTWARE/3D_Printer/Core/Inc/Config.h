@@ -49,7 +49,7 @@
 #define HOT_END_FAN 0
 #define HOT_END 0
 #define HOT_BED 1
-#define RxBuf_SIZE	20
+#define RxBuf_SIZE	40
 #define STEPS_PER_REV 19256.0f
 #define E_MM_PER_REV 23.0f
 #define X_STOP_PIN GPIOF,GPIO_PIN_4
