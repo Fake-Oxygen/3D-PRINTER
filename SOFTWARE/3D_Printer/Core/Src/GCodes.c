@@ -32,9 +32,9 @@ uint16_t M155(uint16_t S)
 void G0()
 {
     // isRunning = true;
-    // double E_dif = E - Cur_E;
+    double E_dif = E - Cur_E;
     // double Z_dif = Z - Cur_Z;
-    double E_dif = 0;
+    // double E_dif = 0;
     double Z_dif = 0;
     double dif_x = X - Cur_X;
     double dif_y = Y - Cur_Y;
@@ -43,17 +43,10 @@ void G0()
     double dir_y = dif_y / xy_len;
     uint32_t speed = (double)1 / (double)F * (double)60 * E_MM_PER_REV / STEPS_PER_REV * (double)1000000;
     Move(Z_dif, last_time_Z, Z_AXIS, speed);
-    Move(E_dif, last_time_E, E_AXIS, speed);
-   
-    if (fabs(dif_x) > OFFSET_P || fabs(dif_y) > OFFSET_P)
-    {
-         MoveXY2(1*dif_x, -1*dif_y);
-    }
-    else
-    {
-        // isRunning = false;
-    }
-    if(E_dif == 0 && Z_dif == 0 && dif_x == 0 && dif_y == 0)
+    // Move(E_dif, last_time_E, E_AXIS, speed);
+    Move2(E_dif);
+    MoveXY2(1 * dif_x, -1 * dif_y);
+    if (E_dif == 0 && Z_dif == 0 && dif_x == 0 && dif_y == 0)
     {
         isRunning = false;
     }

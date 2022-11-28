@@ -2,6 +2,7 @@
 
 uint16_t CurStepsA = 1;
 uint16_t CurStepsB = 1;
+uint16_t CurStepsE = 1;
 
 void SelectDriver(uint16_t axis)
 {
@@ -310,10 +311,38 @@ void MoveXY2(double difx, double dify)
             CurStepsB++;
         }
     }
-    if(stepsB == CurStepsB - 1 && stepsA == CurStepsA - 1)
+    if (stepsB == CurStepsB - 1 && stepsA == CurStepsA - 1)
     {
         Cur_X = X;
         Cur_Y = Y;
-        isRunning = false;
+    }
+}
+
+void Move2(double dife)
+{
+    uint32_t speed_E = (double)1 / (double)F * (double)60 * E_MM_PER_REV / STEPS_PER_REV * (double)1000000;
+    uint16_t stepsE = abs(dife / E_MM_PER_REV * STEPS_PER_REV);
+    if (stepsE >= CurStepsE)
+    {
+        if (GetTicks() - last_time_E >= speed_E)
+        {
+            if (dife < 0)
+            {
+                CHANGE_MOTOR_DIR(E_AXIS_DIR, COUNTERCLOCKWISE);
+                // Cur_X -= 0.5 * (speed_A * (GetTicks() - last_tick_A) + speed_B * (GetTicks() - last_tick_B));
+            }
+            else
+            {
+                CHANGE_MOTOR_DIR(E_AXIS_DIR, CLOCKWISE);
+                // Cur_X += 0.5 * (speed_A * (GetTicks() - last_tick_A) + speed_B * (GetTicks() - last_tick_B));
+            }
+            MAKE_MOTOR_STEP(E_AXIS_STEP);
+            last_time_E = GetTicks();
+            CurStepsE++;
+        }
+    }
+    if (stepsE == CurStepsE - 1)
+    {
+        Cur_E = E;
     }
 }

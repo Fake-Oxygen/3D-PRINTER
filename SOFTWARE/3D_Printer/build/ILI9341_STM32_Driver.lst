@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
    2:Core/Src/ILI9341_STM32_Driver.c **** //	MIT License
    3:Core/Src/ILI9341_STM32_Driver.c **** //
    4:Core/Src/ILI9341_STM32_Driver.c **** //	Copyright (c) 2017 Matej Artnak
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 2
 
 
    5:Core/Src/ILI9341_STM32_Driver.c **** //
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
   59:Core/Src/ILI9341_STM32_Driver.c **** //	-SPI utilization:			87.12%
   60:Core/Src/ILI9341_STM32_Driver.c **** //	-MB/Second:						5.44
   61:Core/Src/ILI9341_STM32_Driver.c **** //	
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 3
 
 
   62:Core/Src/ILI9341_STM32_Driver.c **** //	ART Accelerator, instruction prefetch, CPI ICACHE and CPU DCACHE settings found in MXCUBE under 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
   72 0012 80BD     		pop	{r7, pc}
   73              	.L3:
   74              		.align	2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 4
 
 
   75              	.L2:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  127              	ILI9341_Write_Command:
  128              	.LFB323:
  105:Core/Src/ILI9341_STM32_Driver.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 5
 
 
  106:Core/Src/ILI9341_STM32_Driver.c **** /* Send command (char) to LCD */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  175              	.LFE323:
  177              		.section	.text.ILI9341_Write_Data,"ax",%progbits
  178              		.align	1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 6
 
 
  179              		.global	ILI9341_Write_Data
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  225              		@ sp needed
  226 003c 80BD     		pop	{r7, pc}
  227              	.L10:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 7
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 7
 
 
  228 003e 00BF     		.align	2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  129:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(X1);
  278              		.loc 1 129 1
  279 0032 FB88     		ldrh	r3, [r7, #6]	@ movhi
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 8
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 8
 
 
  280 0034 DBB2     		uxtb	r3, r3
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  324 008c FFF7FEFF 		bl	ILI9341_Write_Command
  140:Core/Src/ILI9341_STM32_Driver.c **** }
  325              		.loc 1 140 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 9
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 9
 
 
  326 0090 00BF     		nop
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  373 002a 4FF48041 		mov	r1, #16384
  374 002e 0248     		ldr	r0, .L13
  375 0030 FFF7FEFF 		bl	HAL_GPIO_WritePin
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 10
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 10
 
 
  150:Core/Src/ILI9341_STM32_Driver.c **** }
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  420 001c 032B     		cmp	r3, #3
  421 001e 37D8     		bhi	.L23
  422 0020 01A2     		adr	r2, .L18
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 11
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 11
 
 
  423 0022 52F823F0 		ldr	pc, [r2, r3, lsl #2]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  463              		.loc 1 175 15
  464 006a 0C4B     		ldr	r3, .L24
  465 006c F022     		movs	r2, #240
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 12
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 12
 
 
  466 006e 1A80     		strh	r2, [r3]	@ movhi
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  509              		.global	ILI9341_Enable
  510              		.syntax unified
  511              		.thumb
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 13
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 13
 
 
  512              		.thumb_func
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  559              		.cfi_def_cfa_register 7
  198:Core/Src/ILI9341_STM32_Driver.c **** 
  199:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Enable();
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 14
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 14
 
 
  560              		.loc 1 199 1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  218:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0xC1);
  596              		.loc 1 218 1
  597 004e C120     		movs	r0, #193
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 15
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 15
 
 
  598 0050 FFF7FEFF 		bl	ILI9341_Write_Data
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  634 0098 FFF7FEFF 		bl	ILI9341_Write_Data
  237:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x81);
  635              		.loc 1 237 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 16
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 16
 
 
  636 009c 8120     		movs	r0, #129
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  669 00de 8620     		movs	r0, #134
  670 00e0 FFF7FEFF 		bl	ILI9341_Write_Data
  259:Core/Src/ILI9341_STM32_Driver.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 17
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 17
 
 
  260:Core/Src/ILI9341_STM32_Driver.c **** //MEMORY ACCESS CONTROL
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  704              		.loc 1 280 1
  705 0126 F220     		movs	r0, #242
  706 0128 FFF7FEFF 		bl	ILI9341_Write_Command
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 18
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 18
 
 
  281:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x00);
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  744 0174 3720     		movs	r0, #55
  745 0176 FFF7FEFF 		bl	ILI9341_Write_Data
  298:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0x07);
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 19
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 19
 
 
  746              		.loc 1 298 1
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  785              		.loc 1 313 1
  786 01c8 3120     		movs	r0, #49
  787 01ca FFF7FEFF 		bl	ILI9341_Write_Data
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 20
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 20
 
 
  314:Core/Src/ILI9341_STM32_Driver.c **** ILI9341_Write_Data(0xC1);
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  332:Core/Src/ILI9341_STM32_Driver.c **** }
  824              		.loc 1 332 1
  825 0216 00BF     		nop
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 21
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 21
 
 
  826 0218 80BD     		pop	{r7, pc}
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  872              		.loc 1 342 1
  873 0032 07F10C03 		add	r3, r7, #12
  874 0036 0122     		movs	r2, #1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 22
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 22
 
 
  875 0038 0221     		movs	r1, #2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  924 0008 0346     		mov	r3, r0
  925 000a 3960     		str	r1, [r7]
  926 000c FB80     		strh	r3, [r7, #6]	@ movhi
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 23
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 23
 
 
  927              		.loc 1 349 1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  965              		.loc 1 365 15
  966 0050 0B46     		mov	r3, r1
  967 0052 013B     		subs	r3, r3, #1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 24
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 24
 
 
  968 0054 FB61     		str	r3, [r7, #28]
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1017              	.L36:
  366:Core/Src/ILI9341_STM32_Driver.c **** for(uint32_t j = 0; j < Buffer_Size; j+=2)
  1018              		.loc 1 366 23 discriminator 1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 25
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 25
 
 
  1019 00ba BA6A     		ldr	r2, [r7, #40]
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1057 00f8 B869     		ldr	r0, [r7, #24]
  1058 00fa FFF7FEFF 		bl	SPI_Transmit
  379:Core/Src/ILI9341_STM32_Driver.c **** 		{
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 26
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 26
 
 
  1059              		.loc 1 379 47 discriminator 3
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1104              		.thumb_func
  1106              	ILI9341_Fill_Screen:
  1107              	.LFB332:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 27
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 27
 
 
  395:Core/Src/ILI9341_STM32_Driver.c **** 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1154 0042 80BD     		pop	{r7, pc}
  1155              	.L45:
  1156              		.align	2
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 28
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 28
 
 
  1157              	.L44:
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1203 0026 BA88     		ldrh	r2, [r7, #4]
  1204 0028 9A42     		cmp	r2, r3
  1205 002a 80F0B780 		bcs	.L50
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 29
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 29
 
 
  413:Core/Src/ILI9341_STM32_Driver.c **** 	
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1249 0086 DBB2     		uxtb	r3, r3
  1250 0088 BB75     		strb	r3, [r7, #22]
  1251              		.loc 1 423 53
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 30
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 30
 
 
  1252 008a FB88     		ldrh	r3, [r7, #6]	@ movhi
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1294 00e6 4FF48051 		mov	r1, #4096
  1295 00ea 3048     		ldr	r0, .L51+8
  1296 00ec FFF7FEFF 		bl	HAL_GPIO_WritePin
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 31
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 31
 
 
  436:Core/Src/ILI9341_STM32_Driver.c **** unsigned char Temp_Buffer1[4] = {Y>>8,Y, (Y+1)>>8, (Y+1)};
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1343 0146 2C20     		movs	r0, #44
  1344 0148 FFF7FEFF 		bl	ILI9341_SPI_Send
  444:Core/Src/ILI9341_STM32_Driver.c **** HAL_GPIO_WritePin(LCD_DC_PORT, LCD_DC_PIN, GPIO_PIN_SET);			
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 32
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 32
 
 
  1345              		.loc 1 444 1
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1389              		.cfi_def_cfa_register 13
  1390              		@ sp needed
  1391 01a2 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 33
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 33
 
 
  1392              	.L52:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1438 0022 9BB2     		uxth	r3, r3
  1439              		.loc 1 463 3
  1440 0024 FA88     		ldrh	r2, [r7, #6]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 34
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 34
 
 
  1441 0026 9A42     		cmp	r2, r3
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1488 006a D31A     		subs	r3, r2, r3
  1489 006c 3B80     		strh	r3, [r7]	@ movhi
  1490              	.L58:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 35
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 35
 
 
  471:Core/Src/ILI9341_STM32_Driver.c **** 	}
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1541              		.section	.text.ILI9341_Draw_Horizontal_Line,"ax",%progbits
  1542              		.align	1
  1543              		.global	ILI9341_Draw_Horizontal_Line
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 36
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 36
 
 
  1544              		.syntax unified
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1593 0038 7B88     		ldrh	r3, [r7, #2]
  1594 003a 1344     		add	r3, r3, r2
  1595              		.loc 1 480 15
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 37
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 37
 
 
  1596 003c 104A     		ldr	r2, .L68
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1643              	.L68:
  1644 0080 00000000 		.word	LCD_WIDTH
  1645 0084 00000000 		.word	LCD_HEIGHT
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 38
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 38
 
 
  1646              		.cfi_endproc
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1697 0032 9A42     		cmp	r2, r3
  1698 0034 1FD2     		bcs	.L75
  492:Core/Src/ILI9341_STM32_Driver.c **** if((Y+Height-1)>=LCD_HEIGHT)
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 39
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 39
 
 
  1699              		.loc 1 492 6
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1746              		.cfi_def_cfa_register 13
  1747              		@ sp needed
  1748 007c 90BD     		pop	{r4, r7, pc}
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 40
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 40
 
 
  1749              	.L77:
@@ -2356,67 +2356,67 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 1
  1762              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
  1763              		.file 6 "Core/Inc/main.h"
  1764              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 41
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 41
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ILI9341_STM32_Driver.c
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:20     .bss.msg_buffer:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:26     .bss.RxBuf:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:29     .bss.RxBuf:0000000000000000 RxBuf
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:36     .data.LCD_HEIGHT:0000000000000000 LCD_HEIGHT
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:33     .data.LCD_HEIGHT:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:43     .data.LCD_WIDTH:0000000000000000 LCD_WIDTH
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:40     .data.LCD_WIDTH:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:46     .text.ILI9341_SPI_Init:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:52     .text.ILI9341_SPI_Init:0000000000000000 ILI9341_SPI_Init
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:76     .text.ILI9341_SPI_Init:0000000000000014 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:81     .text.ILI9341_SPI_Send:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:87     .text.ILI9341_SPI_Send:0000000000000000 ILI9341_SPI_Send
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:121    .text.ILI9341_Write_Command:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:127    .text.ILI9341_Write_Command:0000000000000000 ILI9341_Write_Command
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:173    .text.ILI9341_Write_Command:0000000000000040 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:178    .text.ILI9341_Write_Data:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:184    .text.ILI9341_Write_Data:0000000000000000 ILI9341_Write_Data
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:230    .text.ILI9341_Write_Data:0000000000000040 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:235    .text.ILI9341_Set_Address:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:241    .text.ILI9341_Set_Address:0000000000000000 ILI9341_Set_Address
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:337    .text.ILI9341_Reset:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:343    .text.ILI9341_Reset:0000000000000000 ILI9341_Reset
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:382    .text.ILI9341_Reset:0000000000000038 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:387    .text.ILI9341_Set_Rotation:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:393    .text.ILI9341_Set_Rotation:0000000000000000 ILI9341_Set_Rotation
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:426    .text.ILI9341_Set_Rotation:0000000000000028 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:430    .text.ILI9341_Set_Rotation:0000000000000038 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:502    .text.ILI9341_Set_Rotation:000000000000009c $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:508    .text.ILI9341_Enable:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:514    .text.ILI9341_Enable:0000000000000000 ILI9341_Enable
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:537    .text.ILI9341_Enable:0000000000000014 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:542    .text.ILI9341_Init:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:548    .text.ILI9341_Init:0000000000000000 ILI9341_Init
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:831    .text.ILI9341_Draw_Colour:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:837    .text.ILI9341_Draw_Colour:0000000000000000 ILI9341_Draw_Colour
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:894    .text.ILI9341_Draw_Colour:0000000000000054 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:899    .text.ILI9341_Draw_Colour_Burst:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:905    .text.ILI9341_Draw_Colour_Burst:0000000000000000 ILI9341_Draw_Colour_Burst
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1095   .text.ILI9341_Draw_Colour_Burst:0000000000000134 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1100   .text.ILI9341_Fill_Screen:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1106   .text.ILI9341_Fill_Screen:0000000000000000 ILI9341_Fill_Screen
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1158   .text.ILI9341_Fill_Screen:0000000000000044 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1164   .text.ILI9341_Draw_Pixel:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1170   .text.ILI9341_Draw_Pixel:0000000000000000 ILI9341_Draw_Pixel
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1395   .text.ILI9341_Draw_Pixel:00000000000001a4 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1402   .text.ILI9341_Draw_Rectangle:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1408   .text.ILI9341_Draw_Rectangle:0000000000000000 ILI9341_Draw_Rectangle
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1536   .text.ILI9341_Draw_Rectangle:00000000000000b0 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1542   .text.ILI9341_Draw_Horizontal_Line:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1548   .text.ILI9341_Draw_Horizontal_Line:0000000000000000 ILI9341_Draw_Horizontal_Line
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1644   .text.ILI9341_Draw_Horizontal_Line:0000000000000080 $d
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1650   .text.ILI9341_Draw_Vertical_Line:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1656   .text.ILI9341_Draw_Vertical_Line:0000000000000000 ILI9341_Draw_Vertical_Line
-C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s:1752   .text.ILI9341_Draw_Vertical_Line:0000000000000080 $d
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccKP6zOU.s 			page 42
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:20     .bss.msg_buffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:26     .bss.RxBuf:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:29     .bss.RxBuf:0000000000000000 RxBuf
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:36     .data.LCD_HEIGHT:0000000000000000 LCD_HEIGHT
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:33     .data.LCD_HEIGHT:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:43     .data.LCD_WIDTH:0000000000000000 LCD_WIDTH
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:40     .data.LCD_WIDTH:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:46     .text.ILI9341_SPI_Init:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:52     .text.ILI9341_SPI_Init:0000000000000000 ILI9341_SPI_Init
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:76     .text.ILI9341_SPI_Init:0000000000000014 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:81     .text.ILI9341_SPI_Send:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:87     .text.ILI9341_SPI_Send:0000000000000000 ILI9341_SPI_Send
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:121    .text.ILI9341_Write_Command:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:127    .text.ILI9341_Write_Command:0000000000000000 ILI9341_Write_Command
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:173    .text.ILI9341_Write_Command:0000000000000040 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:178    .text.ILI9341_Write_Data:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:184    .text.ILI9341_Write_Data:0000000000000000 ILI9341_Write_Data
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:230    .text.ILI9341_Write_Data:0000000000000040 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:235    .text.ILI9341_Set_Address:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:241    .text.ILI9341_Set_Address:0000000000000000 ILI9341_Set_Address
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:337    .text.ILI9341_Reset:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:343    .text.ILI9341_Reset:0000000000000000 ILI9341_Reset
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:382    .text.ILI9341_Reset:0000000000000038 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:387    .text.ILI9341_Set_Rotation:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:393    .text.ILI9341_Set_Rotation:0000000000000000 ILI9341_Set_Rotation
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:426    .text.ILI9341_Set_Rotation:0000000000000028 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:430    .text.ILI9341_Set_Rotation:0000000000000038 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:502    .text.ILI9341_Set_Rotation:000000000000009c $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:508    .text.ILI9341_Enable:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:514    .text.ILI9341_Enable:0000000000000000 ILI9341_Enable
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:537    .text.ILI9341_Enable:0000000000000014 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:542    .text.ILI9341_Init:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:548    .text.ILI9341_Init:0000000000000000 ILI9341_Init
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:831    .text.ILI9341_Draw_Colour:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:837    .text.ILI9341_Draw_Colour:0000000000000000 ILI9341_Draw_Colour
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:894    .text.ILI9341_Draw_Colour:0000000000000054 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:899    .text.ILI9341_Draw_Colour_Burst:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:905    .text.ILI9341_Draw_Colour_Burst:0000000000000000 ILI9341_Draw_Colour_Burst
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1095   .text.ILI9341_Draw_Colour_Burst:0000000000000134 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1100   .text.ILI9341_Fill_Screen:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1106   .text.ILI9341_Fill_Screen:0000000000000000 ILI9341_Fill_Screen
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1158   .text.ILI9341_Fill_Screen:0000000000000044 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1164   .text.ILI9341_Draw_Pixel:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1170   .text.ILI9341_Draw_Pixel:0000000000000000 ILI9341_Draw_Pixel
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1395   .text.ILI9341_Draw_Pixel:00000000000001a4 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1402   .text.ILI9341_Draw_Rectangle:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1408   .text.ILI9341_Draw_Rectangle:0000000000000000 ILI9341_Draw_Rectangle
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1536   .text.ILI9341_Draw_Rectangle:00000000000000b0 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1542   .text.ILI9341_Draw_Horizontal_Line:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1548   .text.ILI9341_Draw_Horizontal_Line:0000000000000000 ILI9341_Draw_Horizontal_Line
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1644   .text.ILI9341_Draw_Horizontal_Line:0000000000000080 $d
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1650   .text.ILI9341_Draw_Vertical_Line:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1656   .text.ILI9341_Draw_Vertical_Line:0000000000000000 ILI9341_Draw_Vertical_Line
+C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s:1752   .text.ILI9341_Draw_Vertical_Line:0000000000000080 $d
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccBcbqy8.s 			page 42
 
 
 

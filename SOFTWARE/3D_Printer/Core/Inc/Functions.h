@@ -13,6 +13,7 @@
 
 extern uint16_t CurStepsA;
 extern uint16_t CurStepsB;
+extern uint16_t CurStepsE;
 
 void SelectDriver(uint16_t axis);
 double GetTemperature(uint16_t adc, uint16_t value);
@@ -22,6 +23,7 @@ void MoveXY(double dir_x, double dir_y);
 void Move(double dif, uint32_t last_time, uint16_t axis, uint16_t speed);
 void MoveAndWait(uint16_t state, uint16_t speed, uint16_t axis, uint16_t dir_X, uint16_t dir_Y);
 void MoveXY2(double difx, double dify);
+void Move2(double dife);
 // void line_append(uint8_t value, UART_HandleTypeDef *hlpuart);
 
 #endif
