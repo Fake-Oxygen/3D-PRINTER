@@ -64,6 +64,7 @@ static uint8_t RxBuf[RxBuf_SIZE];
 int GetTicks();
 void DelayMicrosecond(uint16_t time); 
 void SPI_Transmit(uint8_t *pData, uint16_t Size, uint32_t Timeout);
+void myprintf(const char *fmt, ...);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

@@ -1,5 +1,5 @@
-build/ILI9341_Touchscreen.o: Core/Src/ILI9341_Touchscreen.c \
- Core/Inc/ILI9341_Touchscreen.h \
+build/ILI9341_Touchscreen.o: Drivers/IL9341/src/ILI9341_Touchscreen.c \
+ Drivers/IL9341/inc/ILI9341_Touchscreen.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  Core/Inc/stm32l4xx_hal_conf.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -39,7 +39,7 @@ build/ILI9341_Touchscreen.o: Core/Src/ILI9341_Touchscreen.c \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
-Core/Inc/ILI9341_Touchscreen.h:
+Drivers/IL9341/inc/ILI9341_Touchscreen.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 Core/Inc/stm32l4xx_hal_conf.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:

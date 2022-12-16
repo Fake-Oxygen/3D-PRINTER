@@ -85,6 +85,7 @@ includeDirectories:
   - Core/Lib/**
   - Drivers/VL53L0X/core/inc
   - Drivers/VL53L0X/platform/inc
+  - Drivers/IL9341/inc
 
 
 # Files that should be included in the compilation.
@@ -132,6 +133,9 @@ sourceFiles:
   - Drivers/VL53L0X/core/src/vl53l0x_api_strings.c
   - Drivers/VL53L0X/platform/src/vl53l0x_platform.c
   - FATFS/Target/user_diskio_spi.c 
+  - Drivers/IL9341/src/ILI9341_GFX.c 
+  - Drivers/IL9341/src/ILI9341_STM32_Driver.c 
+  - Drivers/IL9341/src/ILI9341_Touchscreen.c 
 
 # When no makefile is present it will show a warning pop-up.
 # However when compilation without the CubeMX Makefile is desired, this can be turned of.

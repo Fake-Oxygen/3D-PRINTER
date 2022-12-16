@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 1
   59              		.global	F
   60              		.section	.bss.F,"aw",%nobits
   61              		.align	1
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 2
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 2
 
 
   64              	F:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 1
   10:Core/Src/Parser.c **** uint16_t hot_end_temp_goal = 0;
   11:Core/Src/Parser.c **** uint16_t hot_bed_temp_goal = 0;
   12:Core/Src/Parser.c **** 
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 3
 
 
   13:Core/Src/Parser.c **** void reset_args()
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 1
  167              		.thumb_func
  169              	get_command:
  170              	.LFB322:
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 4
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 4
 
 
   19:Core/Src/Parser.c **** 
@@ -200,7 +200,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 1
   22:Core/Src/Parser.c ****     char *command;
   23:Core/Src/Parser.c ****     char *delim = " ";
  184              		.loc 1 23 11
- 185 0008 3E4B     		ldr	r3, .L17
+ 185 0008 404B     		ldr	r3, .L17
  186 000a FB60     		str	r3, [r7, #12]
   24:Core/Src/Parser.c **** 
   25:Core/Src/Parser.c ****     split_gcode(buf);
@@ -221,7 +221,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 1
  199 0020 472B     		cmp	r3, #71
  200 0022 42D0     		beq	.L5
  201 0024 4D2B     		cmp	r3, #77
- 202 0026 62D1     		bne	.L6
+ 202 0026 65D1     		bne	.L6
   28:Core/Src/Parser.c ****     {
   29:Core/Src/Parser.c ****     case 'M':
   30:Core/Src/Parser.c ****         HAL_Delay(1);
@@ -238,30 +238,30 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 1
  212 0038 0346     		mov	r3, r0
  213 003a 9B2B     		cmp	r3, #155
  214 003c 2AD0     		beq	.L7
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 5
 
 
  215 003e 9B2B     		cmp	r3, #155
- 216 0040 54DC     		bgt	.L16
+ 216 0040 57DC     		bgt	.L16
  217 0042 8C2B     		cmp	r3, #140
  218 0044 1FD0     		beq	.L9
  219 0046 8C2B     		cmp	r3, #140
- 220 0048 50DC     		bgt	.L16
+ 220 0048 53DC     		bgt	.L16
  221 004a 6A2B     		cmp	r3, #106
  222 004c 15D0     		beq	.L10
  223 004e 6A2B     		cmp	r3, #106
- 224 0050 4CDC     		bgt	.L16
+ 224 0050 4FDC     		bgt	.L16
  225 0052 682B     		cmp	r3, #104
  226 0054 0AD0     		beq	.L11
  227 0056 692B     		cmp	r3, #105
- 228 0058 48D1     		bne	.L16
+ 228 0058 4BD1     		bne	.L16
   32:Core/Src/Parser.c ****         {
   33:Core/Src/Parser.c ****         case 105:
   34:Core/Src/Parser.c ****             M105(R, T);
  229              		.loc 1 34 13
- 230 005a 2B4B     		ldr	r3, .L17+4
+ 230 005a 2D4B     		ldr	r3, .L17+4
  231 005c 1B88     		ldrh	r3, [r3]
- 232 005e 2B4A     		ldr	r2, .L17+8
+ 232 005e 2D4A     		ldr	r2, .L17+8
  233 0060 1288     		ldrh	r2, [r2]
  234 0062 1146     		mov	r1, r2
  235 0064 1846     		mov	r0, r3
@@ -273,9 +273,9 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 1
   36:Core/Src/Parser.c ****         case 104:
   37:Core/Src/Parser.c ****             hot_end_temp_goal = S;
  240              		.loc 1 37 31
- 241 006c 284B     		ldr	r3, .L17+12
+ 241 006c 2A4B     		ldr	r3, .L17+12
  242 006e 1A88     		ldrh	r2, [r3]
- 243 0070 284B     		ldr	r3, .L17+16
+ 243 0070 2A4B     		ldr	r3, .L17+16
  244 0072 1A80     		strh	r2, [r3]	@ movhi
   38:Core/Src/Parser.c ****             M104();
  245              		.loc 1 38 13
@@ -287,7 +287,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 1
   40:Core/Src/Parser.c ****         case 106:
   41:Core/Src/Parser.c ****             M106(S);
  250              		.loc 1 41 13
- 251 007a 254B     		ldr	r3, .L17+12
+ 251 007a 274B     		ldr	r3, .L17+12
  252 007c 1B88     		ldrh	r3, [r3]
  253 007e 1846     		mov	r0, r3
  254 0080 FFF7FEFF 		bl	M106
@@ -298,12 +298,12 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 1
   43:Core/Src/Parser.c ****         case 140:
   44:Core/Src/Parser.c ****             hot_bed_temp_goal = S;
  258              		.loc 1 44 31
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 6
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 6
 
 
- 259 0086 224B     		ldr	r3, .L17+12
+ 259 0086 244B     		ldr	r3, .L17+12
  260 0088 1A88     		ldrh	r2, [r3]
- 261 008a 234B     		ldr	r3, .L17+20
+ 261 008a 254B     		ldr	r3, .L17+20
  262 008c 1A80     		strh	r2, [r3]	@ movhi
   45:Core/Src/Parser.c ****             M140();
  263              		.loc 1 45 13
@@ -315,14 +315,14 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 1
   47:Core/Src/Parser.c ****         case 155:
   48:Core/Src/Parser.c ****             interval = M155(S);
  268              		.loc 1 48 24
- 269 0094 1E4B     		ldr	r3, .L17+12
+ 269 0094 204B     		ldr	r3, .L17+12
  270 0096 1B88     		ldrh	r3, [r3]
  271 0098 1846     		mov	r0, r3
  272 009a FFF7FEFF 		bl	M155
  273 009e 0346     		mov	r3, r0
  274 00a0 1A46     		mov	r2, r3
  275              		.loc 1 48 22
- 276 00a2 1E4B     		ldr	r3, .L17+24
+ 276 00a2 204B     		ldr	r3, .L17+24
  277 00a4 1A80     		strh	r2, [r3]	@ movhi
   49:Core/Src/Parser.c ****             break;
  278              		.loc 1 49 13
@@ -331,7 +331,7 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 1
   50:Core/Src/Parser.c ****         }
   51:Core/Src/Parser.c ****         break;
  281              		.loc 1 51 9 discriminator 1
- 282 00a8 20E0     		b	.L16
+ 282 00a8 23E0     		b	.L16
  283              	.L5:
   52:Core/Src/Parser.c ****     case 'G':
   53:Core/Src/Parser.c ****         HAL_Delay(1);
@@ -356,421 +356,428 @@ ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 1
   58:Core/Src/Parser.c ****             CurStepsA = 1;
   59:Core/Src/Parser.c ****             CurStepsB = 1;
   60:Core/Src/Parser.c ****             CurStepsE = 1;
-  61:Core/Src/Parser.c ****             G0();
-  62:Core/Src/Parser.c ****             break;
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 7
+  61:Core/Src/Parser.c ****             CurStepsZ = 1;
+  62:Core/Src/Parser.c ****             G0();
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 7
 
 
-  63:Core/Src/Parser.c ****         case 28:
-  64:Core/Src/Parser.c ****             G28();
-  65:Core/Src/Parser.c ****             break;
-  66:Core/Src/Parser.c ****         }
-  67:Core/Src/Parser.c ****         break;
- 298              		.loc 1 67 9
- 299 00c4 13E0     		b	.L6
+  63:Core/Src/Parser.c ****             break;
+  64:Core/Src/Parser.c ****         case 28:
+  65:Core/Src/Parser.c ****             G28();
+  66:Core/Src/Parser.c ****             break;
+  67:Core/Src/Parser.c ****         }
+  68:Core/Src/Parser.c ****         break;
+ 298              		.loc 1 68 9
+ 299 00c4 16E0     		b	.L6
  300              	.L12:
  301 00c6 1C2B     		cmp	r3, #28
- 302 00c8 0CD0     		beq	.L15
- 303 00ca 10E0     		b	.L6
+ 302 00c8 0FD0     		beq	.L15
+ 303 00ca 13E0     		b	.L6
  304              	.L13:
   58:Core/Src/Parser.c ****             CurStepsB = 1;
  305              		.loc 1 58 23
- 306 00cc 144B     		ldr	r3, .L17+28
+ 306 00cc 164B     		ldr	r3, .L17+28
  307 00ce 0122     		movs	r2, #1
  308 00d0 1A80     		strh	r2, [r3]	@ movhi
   59:Core/Src/Parser.c ****             CurStepsE = 1;
  309              		.loc 1 59 23
- 310 00d2 144B     		ldr	r3, .L17+32
+ 310 00d2 164B     		ldr	r3, .L17+32
  311 00d4 0122     		movs	r2, #1
  312 00d6 1A80     		strh	r2, [r3]	@ movhi
-  60:Core/Src/Parser.c ****             G0();
+  60:Core/Src/Parser.c ****             CurStepsZ = 1;
  313              		.loc 1 60 23
- 314 00d8 134B     		ldr	r3, .L17+36
+ 314 00d8 154B     		ldr	r3, .L17+36
  315 00da 0122     		movs	r2, #1
  316 00dc 1A80     		strh	r2, [r3]	@ movhi
-  61:Core/Src/Parser.c ****             break;
- 317              		.loc 1 61 13
- 318 00de FFF7FEFF 		bl	G0
-  62:Core/Src/Parser.c ****         case 28:
- 319              		.loc 1 62 13
- 320 00e2 02E0     		b	.L14
- 321              	.L15:
-  64:Core/Src/Parser.c ****             break;
- 322              		.loc 1 64 13
- 323 00e4 FFF7FEFF 		bl	G28
-  65:Core/Src/Parser.c ****         }
- 324              		.loc 1 65 13
- 325 00e8 00BF     		nop
- 326              	.L14:
- 327              		.loc 1 67 9 discriminator 2
- 328 00ea 00E0     		b	.L6
- 329              	.L16:
+  61:Core/Src/Parser.c ****             G0();
+ 317              		.loc 1 61 23
+ 318 00de 154B     		ldr	r3, .L17+40
+ 319 00e0 0122     		movs	r2, #1
+ 320 00e2 1A80     		strh	r2, [r3]	@ movhi
+  62:Core/Src/Parser.c ****             break;
+ 321              		.loc 1 62 13
+ 322 00e4 FFF7FEFF 		bl	G0
+  63:Core/Src/Parser.c ****         case 28:
+ 323              		.loc 1 63 13
+ 324 00e8 02E0     		b	.L14
+ 325              	.L15:
+  65:Core/Src/Parser.c ****             break;
+ 326              		.loc 1 65 13
+ 327 00ea FFF7FEFF 		bl	G28
+  66:Core/Src/Parser.c ****         }
+ 328              		.loc 1 66 13
+ 329 00ee 00BF     		nop
+ 330              	.L14:
+ 331              		.loc 1 68 9 discriminator 2
+ 332 00f0 00E0     		b	.L6
+ 333              	.L16:
   51:Core/Src/Parser.c ****     case 'G':
- 330              		.loc 1 51 9
- 331 00ec 00BF     		nop
- 332              	.L6:
-  68:Core/Src/Parser.c ****     }
-  69:Core/Src/Parser.c ****     reset_args();
- 333              		.loc 1 69 5
- 334 00ee FFF7FEFF 		bl	reset_args
-  70:Core/Src/Parser.c ****     memset(&command[0], 0, sizeof(command));
- 335              		.loc 1 70 5
- 336 00f2 0422     		movs	r2, #4
- 337 00f4 0021     		movs	r1, #0
- 338 00f6 B868     		ldr	r0, [r7, #8]
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 8
+ 334              		.loc 1 51 9
+ 335 00f2 00BF     		nop
+ 336              	.L6:
+  69:Core/Src/Parser.c ****     }
+  70:Core/Src/Parser.c ****     reset_args();
+ 337              		.loc 1 70 5
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 8
 
 
- 339 00f8 FFF7FEFF 		bl	memset
-  71:Core/Src/Parser.c **** }
- 340              		.loc 1 71 1
- 341 00fc 00BF     		nop
- 342 00fe 1037     		adds	r7, r7, #16
- 343              		.cfi_def_cfa_offset 8
- 344 0100 BD46     		mov	sp, r7
- 345              		.cfi_def_cfa_register 13
- 346              		@ sp needed
- 347 0102 80BD     		pop	{r7, pc}
- 348              	.L18:
- 349              		.align	2
- 350              	.L17:
- 351 0104 00000000 		.word	.LC0
- 352 0108 00000000 		.word	R
- 353 010c 00000000 		.word	T
- 354 0110 00000000 		.word	S
- 355 0114 00000000 		.word	hot_end_temp_goal
- 356 0118 00000000 		.word	hot_bed_temp_goal
- 357 011c 00000000 		.word	interval
- 358 0120 00000000 		.word	CurStepsA
- 359 0124 00000000 		.word	CurStepsB
- 360 0128 00000000 		.word	CurStepsE
- 361              		.cfi_endproc
- 362              	.LFE322:
- 364              		.section	.text.split_gcode,"ax",%progbits
- 365              		.align	1
- 366              		.global	split_gcode
- 367              		.syntax unified
- 368              		.thumb
- 369              		.thumb_func
- 371              	split_gcode:
- 372              	.LFB323:
-  72:Core/Src/Parser.c **** 
-  73:Core/Src/Parser.c **** void split_gcode(uint8_t buf[])
-  74:Core/Src/Parser.c **** {
- 373              		.loc 1 74 1
- 374              		.cfi_startproc
- 375              		@ args = 0, pretend = 0, frame = 16
- 376              		@ frame_needed = 1, uses_anonymous_args = 0
- 377 0000 80B5     		push	{r7, lr}
- 378              		.cfi_def_cfa_offset 8
- 379              		.cfi_offset 7, -8
- 380              		.cfi_offset 14, -4
- 381 0002 84B0     		sub	sp, sp, #16
- 382              		.cfi_def_cfa_offset 24
- 383 0004 00AF     		add	r7, sp, #0
- 384              		.cfi_def_cfa_register 7
- 385 0006 7860     		str	r0, [r7, #4]
-  75:Core/Src/Parser.c ****     char *buf2;
-  76:Core/Src/Parser.c ****     HAL_Delay(1);
- 386              		.loc 1 76 5
- 387 0008 0120     		movs	r0, #1
- 388 000a FFF7FEFF 		bl	HAL_Delay
-  77:Core/Src/Parser.c ****     buf2 = strtok(buf, " ");
- 389              		.loc 1 77 12
- 390 000e 5449     		ldr	r1, .L33
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 9
+ 338 00f4 FFF7FEFF 		bl	reset_args
+  71:Core/Src/Parser.c ****     memset(&command[0], 0, sizeof(command));
+ 339              		.loc 1 71 5
+ 340 00f8 0422     		movs	r2, #4
+ 341 00fa 0021     		movs	r1, #0
+ 342 00fc B868     		ldr	r0, [r7, #8]
+ 343 00fe FFF7FEFF 		bl	memset
+  72:Core/Src/Parser.c **** }
+ 344              		.loc 1 72 1
+ 345 0102 00BF     		nop
+ 346 0104 1037     		adds	r7, r7, #16
+ 347              		.cfi_def_cfa_offset 8
+ 348 0106 BD46     		mov	sp, r7
+ 349              		.cfi_def_cfa_register 13
+ 350              		@ sp needed
+ 351 0108 80BD     		pop	{r7, pc}
+ 352              	.L18:
+ 353 010a 00BF     		.align	2
+ 354              	.L17:
+ 355 010c 00000000 		.word	.LC0
+ 356 0110 00000000 		.word	R
+ 357 0114 00000000 		.word	T
+ 358 0118 00000000 		.word	S
+ 359 011c 00000000 		.word	hot_end_temp_goal
+ 360 0120 00000000 		.word	hot_bed_temp_goal
+ 361 0124 00000000 		.word	interval
+ 362 0128 00000000 		.word	CurStepsA
+ 363 012c 00000000 		.word	CurStepsB
+ 364 0130 00000000 		.word	CurStepsE
+ 365 0134 00000000 		.word	CurStepsZ
+ 366              		.cfi_endproc
+ 367              	.LFE322:
+ 369              		.section	.text.split_gcode,"ax",%progbits
+ 370              		.align	1
+ 371              		.global	split_gcode
+ 372              		.syntax unified
+ 373              		.thumb
+ 374              		.thumb_func
+ 376              	split_gcode:
+ 377              	.LFB323:
+  73:Core/Src/Parser.c **** 
+  74:Core/Src/Parser.c **** void split_gcode(uint8_t buf[])
+  75:Core/Src/Parser.c **** {
+ 378              		.loc 1 75 1
+ 379              		.cfi_startproc
+ 380              		@ args = 0, pretend = 0, frame = 16
+ 381              		@ frame_needed = 1, uses_anonymous_args = 0
+ 382 0000 80B5     		push	{r7, lr}
+ 383              		.cfi_def_cfa_offset 8
+ 384              		.cfi_offset 7, -8
+ 385              		.cfi_offset 14, -4
+ 386 0002 84B0     		sub	sp, sp, #16
+ 387              		.cfi_def_cfa_offset 24
+ 388 0004 00AF     		add	r7, sp, #0
+ 389              		.cfi_def_cfa_register 7
+ 390 0006 7860     		str	r0, [r7, #4]
+  76:Core/Src/Parser.c ****     char *buf2;
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 9
 
 
- 391 0010 7868     		ldr	r0, [r7, #4]
- 392 0012 FFF7FEFF 		bl	strtok
- 393 0016 F860     		str	r0, [r7, #12]
-  78:Core/Src/Parser.c ****     while (buf2 != NULL)
- 394              		.loc 1 78 11
- 395 0018 98E0     		b	.L20
- 396              	.L31:
+  77:Core/Src/Parser.c ****     HAL_Delay(1);
+ 391              		.loc 1 77 5
+ 392 0008 0120     		movs	r0, #1
+ 393 000a FFF7FEFF 		bl	HAL_Delay
+  78:Core/Src/Parser.c ****     buf2 = strtok(buf, " ");
+ 394              		.loc 1 78 12
+ 395 000e 5449     		ldr	r1, .L33
+ 396 0010 7868     		ldr	r0, [r7, #4]
+ 397 0012 FFF7FEFF 		bl	strtok
+ 398 0016 F860     		str	r0, [r7, #12]
+  79:Core/Src/Parser.c ****     while (buf2 != NULL)
+ 399              		.loc 1 79 11
+ 400 0018 98E0     		b	.L20
+ 401              	.L31:
+  80:Core/Src/Parser.c ****     {
+  81:Core/Src/Parser.c ****         switch (buf2[0])
+ 402              		.loc 1 81 21
+ 403 001a FB68     		ldr	r3, [r7, #12]
+ 404 001c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 405              		.loc 1 81 9
+ 406 001e 453B     		subs	r3, r3, #69
+ 407 0020 152B     		cmp	r3, #21
+ 408 0022 00F28B80 		bhi	.L21
+ 409 0026 01A2     		adr	r2, .L23
+ 410 0028 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 411              		.p2align 2
+ 412              	.L23:
+ 413 002c 23010000 		.word	.L30+1
+ 414 0030 C1000000 		.word	.L29+1
+ 415 0034 3D010000 		.word	.L21+1
+ 416 0038 3D010000 		.word	.L21+1
+ 417 003c 3D010000 		.word	.L21+1
+ 418 0040 3D010000 		.word	.L21+1
+ 419 0044 3D010000 		.word	.L21+1
+ 420 0048 3D010000 		.word	.L21+1
+ 421 004c 3D010000 		.word	.L21+1
+ 422 0050 3D010000 		.word	.L21+1
+ 423 0054 3D010000 		.word	.L21+1
+ 424 0058 3D010000 		.word	.L21+1
+ 425 005c 3D010000 		.word	.L21+1
+ 426 0060 85000000 		.word	.L28+1
+ 427 0064 AD000000 		.word	.L27+1
+ 428 0068 99000000 		.word	.L26+1
+ 429 006c 3D010000 		.word	.L21+1
+ 430 0070 3D010000 		.word	.L21+1
+ 431 0074 3D010000 		.word	.L21+1
+ 432 0078 D5000000 		.word	.L25+1
+ 433 007c EF000000 		.word	.L24+1
+ 434 0080 09010000 		.word	.L22+1
+ 435              		.p2align 1
+ 436              	.L28:
+  82:Core/Src/Parser.c ****         {
+  83:Core/Src/Parser.c ****         case 'R':
+  84:Core/Src/Parser.c ****             R = atoi(buf2 + 1);
+ 437              		.loc 1 84 27
+ 438 0084 FB68     		ldr	r3, [r7, #12]
+ 439 0086 0133     		adds	r3, r3, #1
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 10
+
+
+ 440              		.loc 1 84 17
+ 441 0088 1846     		mov	r0, r3
+ 442 008a FFF7FEFF 		bl	atoi
+ 443 008e 0346     		mov	r3, r0
+ 444              		.loc 1 84 15
+ 445 0090 9AB2     		uxth	r2, r3
+ 446 0092 344B     		ldr	r3, .L33+4
+ 447 0094 1A80     		strh	r2, [r3]	@ movhi
+  85:Core/Src/Parser.c ****             break;
+ 448              		.loc 1 85 13
+ 449 0096 51E0     		b	.L21
+ 450              	.L26:
+  86:Core/Src/Parser.c ****         case 'T':
+  87:Core/Src/Parser.c ****             T = atoi(buf2 + 1);
+ 451              		.loc 1 87 27
+ 452 0098 FB68     		ldr	r3, [r7, #12]
+ 453 009a 0133     		adds	r3, r3, #1
+ 454              		.loc 1 87 17
+ 455 009c 1846     		mov	r0, r3
+ 456 009e FFF7FEFF 		bl	atoi
+ 457 00a2 0346     		mov	r3, r0
+ 458              		.loc 1 87 15
+ 459 00a4 9AB2     		uxth	r2, r3
+ 460 00a6 304B     		ldr	r3, .L33+8
+ 461 00a8 1A80     		strh	r2, [r3]	@ movhi
+  88:Core/Src/Parser.c ****             break;
+ 462              		.loc 1 88 13
+ 463 00aa 47E0     		b	.L21
+ 464              	.L27:
+  89:Core/Src/Parser.c ****         case 'S':
+  90:Core/Src/Parser.c ****             S = atoi(buf2 + 1);
+ 465              		.loc 1 90 27
+ 466 00ac FB68     		ldr	r3, [r7, #12]
+ 467 00ae 0133     		adds	r3, r3, #1
+ 468              		.loc 1 90 17
+ 469 00b0 1846     		mov	r0, r3
+ 470 00b2 FFF7FEFF 		bl	atoi
+ 471 00b6 0346     		mov	r3, r0
+ 472              		.loc 1 90 15
+ 473 00b8 9AB2     		uxth	r2, r3
+ 474 00ba 2C4B     		ldr	r3, .L33+12
+ 475 00bc 1A80     		strh	r2, [r3]	@ movhi
+  91:Core/Src/Parser.c ****             break;
+ 476              		.loc 1 91 13
+ 477 00be 3DE0     		b	.L21
+ 478              	.L29:
+  92:Core/Src/Parser.c ****         case 'F':
+  93:Core/Src/Parser.c ****             F = atoi(buf2 + 1);
+ 479              		.loc 1 93 27
+ 480 00c0 FB68     		ldr	r3, [r7, #12]
+ 481 00c2 0133     		adds	r3, r3, #1
+ 482              		.loc 1 93 17
+ 483 00c4 1846     		mov	r0, r3
+ 484 00c6 FFF7FEFF 		bl	atoi
+ 485 00ca 0346     		mov	r3, r0
+ 486              		.loc 1 93 15
+ 487 00cc 9AB2     		uxth	r2, r3
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 11
+
+
+ 488 00ce 284B     		ldr	r3, .L33+16
+ 489 00d0 1A80     		strh	r2, [r3]	@ movhi
+  94:Core/Src/Parser.c ****             break;
+ 490              		.loc 1 94 13
+ 491 00d2 33E0     		b	.L21
+ 492              	.L25:
+  95:Core/Src/Parser.c ****         case 'X':
+  96:Core/Src/Parser.c ****             X = atof(buf2 + 1);
+ 493              		.loc 1 96 27
+ 494 00d4 FB68     		ldr	r3, [r7, #12]
+ 495 00d6 0133     		adds	r3, r3, #1
+ 496              		.loc 1 96 17
+ 497 00d8 1846     		mov	r0, r3
+ 498 00da FFF7FEFF 		bl	atof
+ 499 00de B0EE407A 		vmov.f32	s14, s0
+ 500 00e2 F0EE607A 		vmov.f32	s15, s1
+ 501              		.loc 1 96 15
+ 502 00e6 234B     		ldr	r3, .L33+20
+ 503 00e8 83ED007B 		vstr.64	d7, [r3]
+  97:Core/Src/Parser.c ****             break;
+ 504              		.loc 1 97 13
+ 505 00ec 26E0     		b	.L21
+ 506              	.L24:
+  98:Core/Src/Parser.c ****         case 'Y':
+  99:Core/Src/Parser.c ****             Y = atof(buf2 + 1);
+ 507              		.loc 1 99 27
+ 508 00ee FB68     		ldr	r3, [r7, #12]
+ 509 00f0 0133     		adds	r3, r3, #1
+ 510              		.loc 1 99 17
+ 511 00f2 1846     		mov	r0, r3
+ 512 00f4 FFF7FEFF 		bl	atof
+ 513 00f8 B0EE407A 		vmov.f32	s14, s0
+ 514 00fc F0EE607A 		vmov.f32	s15, s1
+ 515              		.loc 1 99 15
+ 516 0100 1D4B     		ldr	r3, .L33+24
+ 517 0102 83ED007B 		vstr.64	d7, [r3]
+ 100:Core/Src/Parser.c ****             break;
+ 518              		.loc 1 100 13
+ 519 0106 19E0     		b	.L21
+ 520              	.L22:
+ 101:Core/Src/Parser.c ****         case 'Z':
+ 102:Core/Src/Parser.c ****             Z = atof(buf2 + 1);
+ 521              		.loc 1 102 27
+ 522 0108 FB68     		ldr	r3, [r7, #12]
+ 523 010a 0133     		adds	r3, r3, #1
+ 524              		.loc 1 102 17
+ 525 010c 1846     		mov	r0, r3
+ 526 010e FFF7FEFF 		bl	atof
+ 527 0112 B0EE407A 		vmov.f32	s14, s0
+ 528 0116 F0EE607A 		vmov.f32	s15, s1
+ 529              		.loc 1 102 15
+ 530 011a 184B     		ldr	r3, .L33+28
+ 531 011c 83ED007B 		vstr.64	d7, [r3]
+ 103:Core/Src/Parser.c ****             break;
+ 532              		.loc 1 103 13
+ 533 0120 0CE0     		b	.L21
+ 534              	.L30:
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 12
+
+
+ 104:Core/Src/Parser.c ****         case 'E':
+ 105:Core/Src/Parser.c ****             E = atof(buf2 + 1);
+ 535              		.loc 1 105 27
+ 536 0122 FB68     		ldr	r3, [r7, #12]
+ 537 0124 0133     		adds	r3, r3, #1
+ 538              		.loc 1 105 17
+ 539 0126 1846     		mov	r0, r3
+ 540 0128 FFF7FEFF 		bl	atof
+ 541 012c B0EE407A 		vmov.f32	s14, s0
+ 542 0130 F0EE607A 		vmov.f32	s15, s1
+ 543              		.loc 1 105 15
+ 544 0134 124B     		ldr	r3, .L33+32
+ 545 0136 83ED007B 		vstr.64	d7, [r3]
+ 106:Core/Src/Parser.c ****             break;
+ 546              		.loc 1 106 13
+ 547 013a 00BF     		nop
+ 548              	.L21:
+ 107:Core/Src/Parser.c ****         }
+ 108:Core/Src/Parser.c ****         HAL_Delay(1);
+ 549              		.loc 1 108 9
+ 550 013c 0120     		movs	r0, #1
+ 551 013e FFF7FEFF 		bl	HAL_Delay
+ 109:Core/Src/Parser.c ****         buf2 = strtok(NULL, " ");
+ 552              		.loc 1 109 16
+ 553 0142 0749     		ldr	r1, .L33
+ 554 0144 0020     		movs	r0, #0
+ 555 0146 FFF7FEFF 		bl	strtok
+ 556 014a F860     		str	r0, [r7, #12]
+ 557              	.L20:
   79:Core/Src/Parser.c ****     {
-  80:Core/Src/Parser.c ****         switch (buf2[0])
- 397              		.loc 1 80 21
- 398 001a FB68     		ldr	r3, [r7, #12]
- 399 001c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 400              		.loc 1 80 9
- 401 001e 453B     		subs	r3, r3, #69
- 402 0020 152B     		cmp	r3, #21
- 403 0022 00F28B80 		bhi	.L21
- 404 0026 01A2     		adr	r2, .L23
- 405 0028 52F823F0 		ldr	pc, [r2, r3, lsl #2]
- 406              		.p2align 2
- 407              	.L23:
- 408 002c 23010000 		.word	.L30+1
- 409 0030 C1000000 		.word	.L29+1
- 410 0034 3D010000 		.word	.L21+1
- 411 0038 3D010000 		.word	.L21+1
- 412 003c 3D010000 		.word	.L21+1
- 413 0040 3D010000 		.word	.L21+1
- 414 0044 3D010000 		.word	.L21+1
- 415 0048 3D010000 		.word	.L21+1
- 416 004c 3D010000 		.word	.L21+1
- 417 0050 3D010000 		.word	.L21+1
- 418 0054 3D010000 		.word	.L21+1
- 419 0058 3D010000 		.word	.L21+1
- 420 005c 3D010000 		.word	.L21+1
- 421 0060 85000000 		.word	.L28+1
- 422 0064 AD000000 		.word	.L27+1
- 423 0068 99000000 		.word	.L26+1
- 424 006c 3D010000 		.word	.L21+1
- 425 0070 3D010000 		.word	.L21+1
- 426 0074 3D010000 		.word	.L21+1
- 427 0078 D5000000 		.word	.L25+1
- 428 007c EF000000 		.word	.L24+1
- 429 0080 09010000 		.word	.L22+1
- 430              		.p2align 1
- 431              	.L28:
-  81:Core/Src/Parser.c ****         {
-  82:Core/Src/Parser.c ****         case 'R':
-  83:Core/Src/Parser.c ****             R = atoi(buf2 + 1);
- 432              		.loc 1 83 27
- 433 0084 FB68     		ldr	r3, [r7, #12]
- 434 0086 0133     		adds	r3, r3, #1
- 435              		.loc 1 83 17
- 436 0088 1846     		mov	r0, r3
- 437 008a FFF7FEFF 		bl	atoi
- 438 008e 0346     		mov	r3, r0
- 439              		.loc 1 83 15
- 440 0090 9AB2     		uxth	r2, r3
- 441 0092 344B     		ldr	r3, .L33+4
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 10
+ 558              		.loc 1 79 17
+ 559 014c FB68     		ldr	r3, [r7, #12]
+ 560 014e 002B     		cmp	r3, #0
+ 561 0150 7FF463AF 		bne	.L31
+ 110:Core/Src/Parser.c ****     }
+ 111:Core/Src/Parser.c **** }...
+ 562              		.loc 1 111 1
+ 563 0154 00BF     		nop
+ 564 0156 00BF     		nop
+ 565 0158 1037     		adds	r7, r7, #16
+ 566              		.cfi_def_cfa_offset 8
+ 567 015a BD46     		mov	sp, r7
+ 568              		.cfi_def_cfa_register 13
+ 569              		@ sp needed
+ 570 015c 80BD     		pop	{r7, pc}
+ 571              	.L34:
+ 572 015e 00BF     		.align	2
+ 573              	.L33:
+ 574 0160 00000000 		.word	.LC0
+ 575 0164 00000000 		.word	R
+ 576 0168 00000000 		.word	T
+ 577 016c 00000000 		.word	S
+ 578 0170 00000000 		.word	F
+ 579 0174 00000000 		.word	X
+ 580 0178 00000000 		.word	Y
+ 581 017c 00000000 		.word	Z
+ 582 0180 00000000 		.word	E
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 13
 
 
- 442 0094 1A80     		strh	r2, [r3]	@ movhi
-  84:Core/Src/Parser.c ****             break;
- 443              		.loc 1 84 13
- 444 0096 51E0     		b	.L21
- 445              	.L26:
-  85:Core/Src/Parser.c ****         case 'T':
-  86:Core/Src/Parser.c ****             T = atoi(buf2 + 1);
- 446              		.loc 1 86 27
- 447 0098 FB68     		ldr	r3, [r7, #12]
- 448 009a 0133     		adds	r3, r3, #1
- 449              		.loc 1 86 17
- 450 009c 1846     		mov	r0, r3
- 451 009e FFF7FEFF 		bl	atoi
- 452 00a2 0346     		mov	r3, r0
- 453              		.loc 1 86 15
- 454 00a4 9AB2     		uxth	r2, r3
- 455 00a6 304B     		ldr	r3, .L33+8
- 456 00a8 1A80     		strh	r2, [r3]	@ movhi
-  87:Core/Src/Parser.c ****             break;
- 457              		.loc 1 87 13
- 458 00aa 47E0     		b	.L21
- 459              	.L27:
-  88:Core/Src/Parser.c ****         case 'S':
-  89:Core/Src/Parser.c ****             S = atoi(buf2 + 1);
- 460              		.loc 1 89 27
- 461 00ac FB68     		ldr	r3, [r7, #12]
- 462 00ae 0133     		adds	r3, r3, #1
- 463              		.loc 1 89 17
- 464 00b0 1846     		mov	r0, r3
- 465 00b2 FFF7FEFF 		bl	atoi
- 466 00b6 0346     		mov	r3, r0
- 467              		.loc 1 89 15
- 468 00b8 9AB2     		uxth	r2, r3
- 469 00ba 2C4B     		ldr	r3, .L33+12
- 470 00bc 1A80     		strh	r2, [r3]	@ movhi
-  90:Core/Src/Parser.c ****             break;
- 471              		.loc 1 90 13
- 472 00be 3DE0     		b	.L21
- 473              	.L29:
-  91:Core/Src/Parser.c ****         case 'F':
-  92:Core/Src/Parser.c ****             F = atoi(buf2 + 1);
- 474              		.loc 1 92 27
- 475 00c0 FB68     		ldr	r3, [r7, #12]
- 476 00c2 0133     		adds	r3, r3, #1
- 477              		.loc 1 92 17
- 478 00c4 1846     		mov	r0, r3
- 479 00c6 FFF7FEFF 		bl	atoi
- 480 00ca 0346     		mov	r3, r0
- 481              		.loc 1 92 15
- 482 00cc 9AB2     		uxth	r2, r3
- 483 00ce 284B     		ldr	r3, .L33+16
- 484 00d0 1A80     		strh	r2, [r3]	@ movhi
-  93:Core/Src/Parser.c ****             break;
- 485              		.loc 1 93 13
- 486 00d2 33E0     		b	.L21
- 487              	.L25:
-  94:Core/Src/Parser.c ****         case 'X':
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 11
-
-
-  95:Core/Src/Parser.c ****             X = atof(buf2 + 1);
- 488              		.loc 1 95 27
- 489 00d4 FB68     		ldr	r3, [r7, #12]
- 490 00d6 0133     		adds	r3, r3, #1
- 491              		.loc 1 95 17
- 492 00d8 1846     		mov	r0, r3
- 493 00da FFF7FEFF 		bl	atof
- 494 00de B0EE407A 		vmov.f32	s14, s0
- 495 00e2 F0EE607A 		vmov.f32	s15, s1
- 496              		.loc 1 95 15
- 497 00e6 234B     		ldr	r3, .L33+20
- 498 00e8 83ED007B 		vstr.64	d7, [r3]
-  96:Core/Src/Parser.c ****             break;
- 499              		.loc 1 96 13
- 500 00ec 26E0     		b	.L21
- 501              	.L24:
-  97:Core/Src/Parser.c ****         case 'Y':
-  98:Core/Src/Parser.c ****             Y = atof(buf2 + 1);
- 502              		.loc 1 98 27
- 503 00ee FB68     		ldr	r3, [r7, #12]
- 504 00f0 0133     		adds	r3, r3, #1
- 505              		.loc 1 98 17
- 506 00f2 1846     		mov	r0, r3
- 507 00f4 FFF7FEFF 		bl	atof
- 508 00f8 B0EE407A 		vmov.f32	s14, s0
- 509 00fc F0EE607A 		vmov.f32	s15, s1
- 510              		.loc 1 98 15
- 511 0100 1D4B     		ldr	r3, .L33+24
- 512 0102 83ED007B 		vstr.64	d7, [r3]
-  99:Core/Src/Parser.c ****             break;
- 513              		.loc 1 99 13
- 514 0106 19E0     		b	.L21
- 515              	.L22:
- 100:Core/Src/Parser.c ****         case 'Z':
- 101:Core/Src/Parser.c ****             Z = atof(buf2 + 1);
- 516              		.loc 1 101 27
- 517 0108 FB68     		ldr	r3, [r7, #12]
- 518 010a 0133     		adds	r3, r3, #1
- 519              		.loc 1 101 17
- 520 010c 1846     		mov	r0, r3
- 521 010e FFF7FEFF 		bl	atof
- 522 0112 B0EE407A 		vmov.f32	s14, s0
- 523 0116 F0EE607A 		vmov.f32	s15, s1
- 524              		.loc 1 101 15
- 525 011a 184B     		ldr	r3, .L33+28
- 526 011c 83ED007B 		vstr.64	d7, [r3]
- 102:Core/Src/Parser.c ****             break;
- 527              		.loc 1 102 13
- 528 0120 0CE0     		b	.L21
- 529              	.L30:
- 103:Core/Src/Parser.c ****         case 'E':
- 104:Core/Src/Parser.c ****             E = atof(buf2 + 1);
- 530              		.loc 1 104 27
- 531 0122 FB68     		ldr	r3, [r7, #12]
- 532 0124 0133     		adds	r3, r3, #1
- 533              		.loc 1 104 17
- 534 0126 1846     		mov	r0, r3
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 12
-
-
- 535 0128 FFF7FEFF 		bl	atof
- 536 012c B0EE407A 		vmov.f32	s14, s0
- 537 0130 F0EE607A 		vmov.f32	s15, s1
- 538              		.loc 1 104 15
- 539 0134 124B     		ldr	r3, .L33+32
- 540 0136 83ED007B 		vstr.64	d7, [r3]
- 105:Core/Src/Parser.c ****             break;
- 541              		.loc 1 105 13
- 542 013a 00BF     		nop
- 543              	.L21:
- 106:Core/Src/Parser.c ****         }
- 107:Core/Src/Parser.c ****         HAL_Delay(1);
- 544              		.loc 1 107 9
- 545 013c 0120     		movs	r0, #1
- 546 013e FFF7FEFF 		bl	HAL_Delay
- 108:Core/Src/Parser.c ****         buf2 = strtok(NULL, " ");
- 547              		.loc 1 108 16
- 548 0142 0749     		ldr	r1, .L33
- 549 0144 0020     		movs	r0, #0
- 550 0146 FFF7FEFF 		bl	strtok
- 551 014a F860     		str	r0, [r7, #12]
- 552              	.L20:
-  78:Core/Src/Parser.c ****     {
- 553              		.loc 1 78 17
- 554 014c FB68     		ldr	r3, [r7, #12]
- 555 014e 002B     		cmp	r3, #0
- 556 0150 7FF463AF 		bne	.L31
- 109:Core/Src/Parser.c ****     }
- 110:Core/Src/Parser.c **** }...
- 557              		.loc 1 110 1
- 558 0154 00BF     		nop
- 559 0156 00BF     		nop
- 560 0158 1037     		adds	r7, r7, #16
- 561              		.cfi_def_cfa_offset 8
- 562 015a BD46     		mov	sp, r7
- 563              		.cfi_def_cfa_register 13
- 564              		@ sp needed
- 565 015c 80BD     		pop	{r7, pc}
- 566              	.L34:
- 567 015e 00BF     		.align	2
- 568              	.L33:
- 569 0160 00000000 		.word	.LC0
- 570 0164 00000000 		.word	R
- 571 0168 00000000 		.word	T
- 572 016c 00000000 		.word	S
- 573 0170 00000000 		.word	F
- 574 0174 00000000 		.word	X
- 575 0178 00000000 		.word	Y
- 576 017c 00000000 		.word	Z
- 577 0180 00000000 		.word	E
- 578              		.cfi_endproc
- 579              	.LFE323:
- 581              		.text
- 582              	.Letext0:
- 583              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 584              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 585              		.file 4 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 13
-
-
- 586              		.file 5 "Core/Inc/Functions.h"
- 587              		.file 6 "Core/Inc/main.h"
- 588              		.file 7 "Core/Inc/Parser.h"
- 589              		.file 8 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 590              		.file 9 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
- 591              		.file 10 "Core/Inc/GCodes.h"
- 592              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 14
+ 583              		.cfi_endproc
+ 584              	.LFE323:
+ 586              		.text
+ 587              	.Letext0:
+ 588              		.file 2 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 589              		.file 3 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 590              		.file 4 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 591              		.file 5 "Core/Inc/Functions.h"
+ 592              		.file 6 "Core/Inc/main.h"
+ 593              		.file 7 "Core/Inc/Parser.h"
+ 594              		.file 8 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 595              		.file 9 "c:\\users\\morroway\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@
+ 596              		.file 10 "Core/Inc/GCodes.h"
+ 597              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Parser.c
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:20     .bss.msg_buffer:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:26     .bss.RxBuf:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:29     .bss.RxBuf:0000000000000000 RxBuf
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:36     .bss.R:0000000000000000 R
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:33     .bss.R:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:43     .bss.T:0000000000000000 T
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:40     .bss.T:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:50     .bss.S:0000000000000000 S
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:47     .bss.S:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:57     .bss.interval:0000000000000000 interval
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:54     .bss.interval:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:64     .bss.F:0000000000000000 F
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:61     .bss.F:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:71     .bss.E:0000000000000000 E
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:68     .bss.E:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:78     .bss.X:0000000000000000 X
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:75     .bss.X:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:85     .bss.Y:0000000000000000 Y
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:82     .bss.Y:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:92     .bss.Z:0000000000000000 Z
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:89     .bss.Z:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:99     .bss.hot_end_temp_goal:0000000000000000 hot_end_temp_goal
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:96     .bss.hot_end_temp_goal:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:106    .bss.hot_bed_temp_goal:0000000000000000 hot_bed_temp_goal
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:103    .bss.hot_bed_temp_goal:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:109    .text.reset_args:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:115    .text.reset_args:0000000000000000 reset_args
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:152    .text.reset_args:0000000000000024 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:159    .rodata:0000000000000000 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:163    .text.get_command:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:169    .text.get_command:0000000000000000 get_command
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:371    .text.split_gcode:0000000000000000 split_gcode
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:351    .text.get_command:0000000000000104 $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:365    .text.split_gcode:0000000000000000 $t
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:408    .text.split_gcode:000000000000002c $d
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:430    .text.split_gcode:0000000000000084 $t
-C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s:569    .text.split_gcode:0000000000000160 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:20     .bss.msg_buffer:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:23     .bss.msg_buffer:0000000000000000 msg_buffer
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:26     .bss.RxBuf:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:29     .bss.RxBuf:0000000000000000 RxBuf
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:36     .bss.R:0000000000000000 R
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:33     .bss.R:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:43     .bss.T:0000000000000000 T
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:40     .bss.T:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:50     .bss.S:0000000000000000 S
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:47     .bss.S:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:57     .bss.interval:0000000000000000 interval
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:54     .bss.interval:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:64     .bss.F:0000000000000000 F
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:61     .bss.F:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:71     .bss.E:0000000000000000 E
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:68     .bss.E:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:78     .bss.X:0000000000000000 X
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:75     .bss.X:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:85     .bss.Y:0000000000000000 Y
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:82     .bss.Y:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:92     .bss.Z:0000000000000000 Z
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:89     .bss.Z:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:99     .bss.hot_end_temp_goal:0000000000000000 hot_end_temp_goal
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:96     .bss.hot_end_temp_goal:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:106    .bss.hot_bed_temp_goal:0000000000000000 hot_bed_temp_goal
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:103    .bss.hot_bed_temp_goal:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:109    .text.reset_args:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:115    .text.reset_args:0000000000000000 reset_args
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:152    .text.reset_args:0000000000000024 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:159    .rodata:0000000000000000 $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:163    .text.get_command:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:169    .text.get_command:0000000000000000 get_command
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:376    .text.split_gcode:0000000000000000 split_gcode
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:355    .text.get_command:000000000000010c $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:370    .text.split_gcode:0000000000000000 $t
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:413    .text.split_gcode:000000000000002c $d
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:435    .text.split_gcode:0000000000000084 $t
+C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s:574    .text.split_gcode:0000000000000160 $d
 
 UNDEFINED SYMBOLS
 strtok
@@ -787,7 +794,8 @@ memset
 CurStepsA
 CurStepsB
 CurStepsE
+CurStepsZ
+ARM GAS  C:\Users\Morroway\AppData\Local\Temp\ccQdeqrW.s 			page 15
+
+
 atof
-ARM GAS  C:\Users\Morroway\AppData\Local\Temp\cclqN1N9.s 			page 15
-
-

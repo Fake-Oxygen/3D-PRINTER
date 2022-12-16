@@ -58,6 +58,7 @@ void get_command(uint8_t buf[])
             CurStepsA = 1;
             CurStepsB = 1;
             CurStepsE = 1;
+            CurStepsZ = 1;
             G0();
             break;
         case 28:

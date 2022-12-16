@@ -45,8 +45,8 @@ build/main.o: Core/Src/main.c Core/Inc/main.h \
  Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
  Middlewares/Third_Party/FatFs/src/diskio.h \
  Middlewares/Third_Party/FatFs/src/ff.h FATFS/Target/user_diskio.h \
- Core/Inc/Functions.h Core/Inc/ILI9341_STM32_Driver.h \
- Core/Inc/ILI9341_GFX.h Core/Inc/5x5_font.h \
+ Core/Inc/Functions.h Drivers/IL9341/inc/ILI9341_STM32_Driver.h \
+ Drivers/IL9341/inc/ILI9341_GFX.h Drivers/IL9341/inc/5x5_font.h \
  Drivers/VL53L0X/core/inc/vl53l0x_api.h \
  Drivers/VL53L0X/core/inc/vl53l0x_api_strings.h \
  Drivers/VL53L0X/core/inc/vl53l0x_def.h \
@@ -111,9 +111,9 @@ Middlewares/Third_Party/FatFs/src/diskio.h:
 Middlewares/Third_Party/FatFs/src/ff.h:
 FATFS/Target/user_diskio.h:
 Core/Inc/Functions.h:
-Core/Inc/ILI9341_STM32_Driver.h:
-Core/Inc/ILI9341_GFX.h:
-Core/Inc/5x5_font.h:
+Drivers/IL9341/inc/ILI9341_STM32_Driver.h:
+Drivers/IL9341/inc/ILI9341_GFX.h:
+Drivers/IL9341/inc/5x5_font.h:
 Drivers/VL53L0X/core/inc/vl53l0x_api.h:
 Drivers/VL53L0X/core/inc/vl53l0x_api_strings.h:
 Drivers/VL53L0X/core/inc/vl53l0x_def.h:

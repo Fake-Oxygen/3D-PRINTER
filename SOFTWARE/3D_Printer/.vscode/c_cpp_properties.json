@@ -3,24 +3,19 @@
     {
       "name": "STM32",
       "includePath": [
-        "${workspaceFolder}/**",
         "Core/Inc",
-        "Core/Src",
         "Drivers/CMSIS/Device/ST/STM32L4xx/Include",
         "Drivers/CMSIS/Include",
+        "Drivers/IL9341/inc",
         "Drivers/STM32L4xx_HAL_Driver/Inc",
         "Drivers/STM32L4xx_HAL_Driver/Inc/Legacy",
         "Drivers/VL53L0X/core/inc",
         "Drivers/VL53L0X/platform/inc",
-        "Drivers/VL53LL0X/core/inc",
-        "Drivers/VL53LL0X/platform/inc",
         "FATFS/App",
         "FATFS/Target",
         "Middlewares/Third_Party/FatFs/src"
       ],
       "defines": [
-        "DSTM32L4P5xx",
-        "DUSE_HAL_DRIVER",
         "STM32L4P5xx",
         "USE_HAL_DRIVER"
       ],

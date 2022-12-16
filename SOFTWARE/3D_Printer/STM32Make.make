@@ -38,14 +38,14 @@ BUILD_DIR = build
 C_SOURCES =  \
 Core/Src/Functions.c \
 Core/Src/GCodes.c \
-Core/Src/ILI9341_GFX.c \
-Core/Src/ILI9341_STM32_Driver.c \
-Core/Src/ILI9341_Touchscreen.c \
 Core/Src/Parser.c \
 Core/Src/main.c \
 Core/Src/stm32l4xx_hal_msp.c \
 Core/Src/stm32l4xx_it.c \
 Core/Src/system_stm32l4xx.c \
+Drivers/IL9341/src/ILI9341_GFX.c \
+Drivers/IL9341/src/ILI9341_STM32_Driver.c \
+Drivers/IL9341/src/ILI9341_Touchscreen.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc.c \
 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc_ex.c \
@@ -164,6 +164,7 @@ C_INCLUDES =  \
 -ICore/Inc \
 -IDrivers/CMSIS/Device/ST/STM32L4xx/Include \
 -IDrivers/CMSIS/Include \
+-IDrivers/IL9341/inc \
 -IDrivers/STM32L4xx_HAL_Driver/Inc \
 -IDrivers/STM32L4xx_HAL_Driver/Inc/Legacy \
 -IDrivers/VL53L0X/core/inc \
