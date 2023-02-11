@@ -1,0 +1,70 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Morroway\Documents\.A\Projects\3D-PRINTER\MOTHERBOARD V2\Extension_Board\PCB.PcbDoc
+Date     : 2/5/2023
+Time     : 10:02:32 PM
+
+Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
+   Violation between Clearance Constraint: (Collision < 4mil) Between Pad CN8-MH1(4514.661mil,3903mil) on Multi-Layer And Pad CN8-MP1(4514.661mil,3811.661mil) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 4mil) Between Pad CN8-MH2(4514.661mil,4403mil) on Multi-Layer And Pad CN8-MP2(4514.661mil,4494.339mil) on Top Layer 
+Rule Violations :2
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Short-Circuit Constraint: Between Pad CN8-MH1(4514.661mil,3903mil) on Multi-Layer And Pad CN8-MP1(4514.661mil,3811.661mil) on Top Layer Location : [X = 4514.661mil][Y = 3849.11mil]
+   Violation between Short-Circuit Constraint: Between Pad CN8-MH2(4514.661mil,4403mil) on Multi-Layer And Pad CN8-MP2(4514.661mil,4494.339mil) on Top Layer Location : [X = 4514.661mil][Y = 4456.89mil]
+Rule Violations :2
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=4mil) (Max=71497.938mil) (Preferred=4mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (InPadClass('PowerPads'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=11.811mil) (Conductor Width=4mil) (Air Gap=4mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=3mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=7.874mil) (Max=248.031mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=9.842mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=4mil) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (3.937mil < 4mil) Between Arc (2857.354mil,4152.669mil) on Top Overlay And Pad X2-1(2859.323mil,4190.071mil) on Top Layer [Top Overlay] to [Top Solder] clearance [3.937mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.594mil < 4mil) Between Pad C21-1(2779mil,4091mil) on Top Layer And Text "R42" (2800.342mil,4064.003mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.594mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (2.703mil < 4mil) Between Pad C6-2(4168.687mil,2389.128mil) on Top Layer And Text "C7" (4186.339mil,2350.003mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.703mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (2.117mil < 4mil) Between Pad R45-1(2746.492mil,4040mil) on Top Layer And Text "R45" (2671.342mil,4008.003mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.117mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.007mil < 4mil) Between Pad R49-1(2984.254mil,3799.262mil) on Top Layer And Text "R49" (3002.342mil,3820.003mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.007mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (2.993mil < 4mil) Between Pad R50-1(3039mil,3799.262mil) on Top Layer And Text "R49" (3002.342mil,3820.003mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.993mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (3.263mil < 4mil) Between Pad SB2-2(3161.079mil,2429.144mil) on Top Layer And Text "SB2" (3182.342mil,2426.003mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.263mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 4mil) Between Pad U1-39(3538.573mil,2578.084mil) on Top Layer And Text "R7" (3521.339mil,2608.003mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 4mil) Between Pad U1-40(3518.888mil,2578.084mil) on Top Layer And Text "R7" (3521.339mil,2608.003mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]
+Rule Violations :9
+
+Processing Rule : Silk to Silk (Clearance=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=71497.938mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 13
+Waived Violations : 0
+Time Elapsed        : 00:00:02
