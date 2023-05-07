@@ -46,6 +46,10 @@ double GetTemperature(uint16_t adc, uint16_t value)
     case ADC_STM_TEMP:
         return ((V30 - (ADC_VOLTAGE / ADC_SAMPLING * value)) / AVG_SLOPE + 30);
         break;
+    case 6:
+        val = (ADC_VOLTAGE / ADC_SAMPLING) * value;
+        return val / ((ADC_VOLTAGE - val) / HOT_END_RESISTANCE);
+        break;
     }
 }
 

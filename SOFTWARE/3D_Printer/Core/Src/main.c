@@ -276,7 +276,7 @@ int main(void)
   //   fres = f_open(&fil, "AA8_cube.txt", FA_READ);
   // }
   // myprintf("I was able to open 'AA8_cube.txt' for reading!\r\n");
-
+  int t = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -321,7 +321,11 @@ int main(void)
     
     M104();
     M140();
-
+    if(t >= 1000)
+    {
+      myprintf("T: %.2f R: %.2f B: %.2f\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), GetTemperature(6, value[ADC_HOT_END]), GetTemperature(ADC_BED, value[ADC_BED]));
+      t = 0;
+    }else t++;
     if (READ_PIN(USER_BUTTON) == 1)
     {
       started = true;
@@ -443,7 +447,7 @@ static void MX_ADC1_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_1;
   sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_247CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_640CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
