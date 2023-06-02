@@ -1,0 +1,468 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD23\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">5/19/2023</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">4:47:05 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc" class="file"><acronym title="E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc">E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">28</td></tr>
+</table>
+</td>
+</table><a name="ID0WWNZBF2ICZXN2GMQOPFC4V5OH3WFYLUIBIVFDC2E2RMZSIFTVKI"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5GD03QGM1MU4MJNABMKCJEUXFGU5EIINCVL5HOCQIEHA4GBOVQFL">Clearance Constraint (Gap=4mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDR5OIU2PSRVU2OQHP5ACZ0WPMMLUAJ24T0KY2C0LLXQSLPMQUOEJE">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID54ZI1FBZDHK4K5XQULUEYDQEFKZUVE0Y5HUPORIVDZ2HDI0NRICP">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEL1BHUAQNSYOJMFI3DYX1G5DEL5KOP0SUA02OGM4DHPU5GH4VOGM">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGM2UDPKTJUYKNZCWYQXZQRGTOPOESWNVVXHDUON0IBJKXIBHTJRG">Width Constraint (Min=4mil) (Max=71497.938mil) (Preferred=4mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVTE3VB14N4URIQAKWVX5V3MUBHAM0EQL5PPMOHMJWERTXL1KFNXI">Power Plane Connect Rule(Relief Connect )(Expansion=11.811mil) (Conductor Width=4mil) (Air Gap=4mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1LXUDBB5UGEYFIPKN0FFZ5JD1GTVX0F4X2DKPLALSWAYKHIE53D">Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (InPadClass('PowerPads'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3M5Z3V0M2J05NJ1MGJXK4S0PZJOBH40DTMXHKFLEGR11BKF25RGM">Minimum Annular Ring (Minimum=3mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDB4BRJBQ04Y51IFPOIOTS3FMUVNWY43FZD2O3XHPWD3VZCCQDCNGO">Hole Size Constraint (Min=7.874mil) (Max=248.031mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXQWWZDWL3JTTEVQDIWGPWMOIABEP2PH1R45ZSRFNOXXFSZ42XNBO">Hole To Hole Clearance (Gap=9.842mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDMHJW1LUAX2NDCVD3JFYA3MAC5PTWCBY4VXC1MCCKW2EWSANEGGYJ">Minimum Solder Mask Sliver (Gap=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFNVCGNKZNF42IZEF31GLKTQYUGOCHHXM0TCVTDNYFQA12YVLNHYG">Silk To Solder Mask (Clearance=4mil) (IsPad),(All)</a></td>
+<td class="column2">7</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWSJYYSGXGP2LL4BJALOKDTIUSLVVTVMNTTQJRSIFCDFKCC5R3COD">Silk to Silk (Clearance=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLUZ0DJ0PEX2IL52QKG0RWIIBLD1WIOVMNMGIC5GTMW3DJXSYRRXK">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5WGLSBJYUNA1JRS4VXEKMNUCLJK3MZLRKRBUL2OTE303BMYXGSZP">Board Clearance Constraint (Gap=0mil) (All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1B4QZWX5PZBOM2PC5T4LQEEEMYUJ3NWCZDQCBKBA0SW4YO32JPE">Matched Lengths(Tolerance=1000mil) (InNetClass('A'))</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDM3TXC1UHCC1HLX3XDDGVSY5W5K50LHAS3PNRCQOLFB0UOIYGUNWH">Matched Lengths(Tolerance=1000mil) (InNetClass('DQ'))</a></td>
+<td class="column2">8</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDN5CWDDA1H4QGHDCBF3I4PH45BOYURVBPLFJUFJBANBJBVSG2PGXL">Matched Lengths(Tolerance=1000mil) (InNetClass('SIO'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVDBT3A1YTM5OF04PMRRKPMM1EE1U2RVY33TRIZODWIWXOPVZXLFP">Matched Lengths(Tolerance=1000mil) (InNetClass('G'))</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDARIPU10EIQBTGMEHD2A4JZ0YZGVBIQMQOXGRTVK5NLD4CQPZUCNE">Matched Lengths(Tolerance=1000mil) (InNetClass('R'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3IHP2HVHHSZUEXHDB4OYPHDL0BWL0LTTSORHLWGXJDSSYECQBFZ">Matched Lengths(Tolerance=1000mil) (InNetClass('B'))</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDW3DMQ4GZI5W2P04LPLXEMVLXLCQ3ZDWCCUQ3ZLOAM2PDMQQITCDH">Height Constraint (Min=0mil) (Max=71497.938mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">28</td>
+</tr>
+</table><br><a name="IDFNVCGNKZNF42IZEF31GLKTQYUGOCHHXM0TCVTDNYFQA12YVLNHYG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=4mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3405.249mil|Location2.X=3410.499mil|Location1.Y=3234.517mil|Location2.Y=3239.767mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3405.249mil|Location2.X=3410.499mil|Location1.Y=3234.517mil|Location2.Y=3239.767mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.937mil &lt; 4mil) Between Arc (323.779mil,1767.142mil) on Bottom Overlay And Pad CN6-1(290.315mil,1767.142mil) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [3.937mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5230.21mil|Location2.X=5235.46mil|Location1.Y=1627.375mil|Location2.Y=1632.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5230.21mil|Location2.X=5235.46mil|Location1.Y=1627.375mil|Location2.Y=1632.625mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (1.969mil &lt; 4mil) Between Pad CN3-1(2155.63mil,190.512mil) on Top Layer And Track (2096.574mil,160mil)(2139.882mil,160mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [1.968mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5334.54mil|Location2.X=5339.79mil|Location1.Y=1627.375mil|Location2.Y=1632.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5334.54mil|Location2.X=5339.79mil|Location1.Y=1627.375mil|Location2.Y=1632.625mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (1.968mil &lt; 4mil) Between Pad CN3-3(2234.37mil,190.512mil) on Top Layer And Track (2250.118mil,160mil)(2293.426mil,160mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [1.968mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5183.949mil|Location2.X=5189.199mil|Location1.Y=1593.91mil|Location2.Y=1599.16mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5183.949mil|Location2.X=5189.199mil|Location1.Y=1593.91mil|Location2.Y=1599.16mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0mil &lt; 4mil) Between Pad CN3-MP1(2104.448mil,91.102mil) on Top Layer And Track (2096.574mil,128.504mil)(2096.574mil,160mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5216.43mil|Location2.X=5221.68mil|Location1.Y=1528.949mil|Location2.Y=1534.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5216.43mil|Location2.X=5221.68mil|Location1.Y=1528.949mil|Location2.Y=1534.199mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (1.97mil &lt; 4mil) Between Pad CN3-MP1(2104.448mil,91.102mil) on Top Layer And Track (2132.008mil,61.574mil)(2257.992mil,61.574mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [1.97mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5348.32mil|Location2.X=5353.57mil|Location1.Y=1528.949mil|Location2.Y=1534.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5348.32mil|Location2.X=5353.57mil|Location1.Y=1528.949mil|Location2.Y=1534.199mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (1.97mil &lt; 4mil) Between Pad CN3-MP2(2285.552mil,91.102mil) on Top Layer And Track (2132.008mil,61.574mil)(2257.992mil,61.574mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [1.97mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5380.801mil|Location2.X=5386.051mil|Location1.Y=1593.91mil|Location2.Y=1599.16mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5380.801mil|Location2.X=5386.051mil|Location1.Y=1593.91mil|Location2.Y=1599.16mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0mil &lt; 4mil) Between Pad CN3-MP2(2285.552mil,91.102mil) on Top Layer And Track (2293.426mil,128.504mil)(2293.426mil,160mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID5WGLSBJYUNA1JRS4VXEKMNUCLJK3MZLRKRBUL2OTE303BMYXGSZP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Board Clearance Constraint (Gap=0mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5812.919mil|Location2.X=5822.043mil|Location1.Y=3332.368mil|Location2.Y=3341.492mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5812.919mil|Location2.X=5822.043mil|Location1.Y=3332.368mil|Location2.Y=3341.492mil|Absolute=True">Board Outline Clearance(Outline Edge): (5.04mil &lt; 7.874mil) Between Board Edge And Track (2721.024mil,1866.93mil)(2721.024mil,2654.33mil) on Bottom Overlay </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID1B4QZWX5PZBOM2PC5T4LQEEEMYUJ3NWCZDQCBKBA0SW4YO32JPE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Lengths(Tolerance=1000mil) (InNetClass('A'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4067.52mil|Location2.X=4618.7mil|Location1.Y=1661.043mil|Location2.Y=3038.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4067.52mil|Location2.X=4618.7mil|Location1.Y=1661.043mil|Location2.Y=3038.827mil|Absolute=True">Matched Net Lengths: Between Net A0 And Net A11 Length:444.338mil is not within 1000mil tolerance of Length:1530.322mil (85.985mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4067.52mil|Location2.X=4482.827mil|Location1.Y=1661.043mil|Location2.Y=3038.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4067.52mil|Location2.X=4482.827mil|Location1.Y=1661.043mil|Location2.Y=3038.827mil|Absolute=True">Matched Net Lengths: Between Net A0 And Net A6 Length:434.778mil is not within 1000mil tolerance of Length:1530.322mil (95.544mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4067.52mil|Location2.X=4539.96mil|Location1.Y=1661.043mil|Location2.Y=3038.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4067.52mil|Location2.X=4539.96mil|Location1.Y=1661.043mil|Location2.Y=3038.827mil|Absolute=True">Matched Net Lengths: Between Net A0 And Net A7 Length:438.209mil is not within 1000mil tolerance of Length:1530.322mil (92.113mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4067.52mil|Location2.X=4560.827mil|Location1.Y=1661.043mil|Location2.Y=3038.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4067.52mil|Location2.X=4560.827mil|Location1.Y=1661.043mil|Location2.Y=3038.827mil|Absolute=True">Matched Net Lengths: Between Net A0 And Net A8 Length:422.73mil is not within 1000mil tolerance of Length:1530.322mil (107.592mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4067.52mil|Location2.X=4579.33mil|Location1.Y=1661.043mil|Location2.Y=3038.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4067.52mil|Location2.X=4579.33mil|Location1.Y=1661.043mil|Location2.Y=3038.827mil|Absolute=True">Matched Net Lengths: Between Net A0 And Net A9 Length:427.046mil is not within 1000mil tolerance of Length:1530.322mil (103.277mil short) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDM3TXC1UHCC1HLX3XDDGVSY5W5K50LHAS3PNRCQOLFB0UOIYGUNWH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Lengths(Tolerance=1000mil) (InNetClass('DQ'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4706.22mil|Location2.X=4893.228mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4706.22mil|Location2.X=4893.228mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True">Matched Net Lengths: Between Net DQ10 And Net DQ2 Length:346.899mil is not within 1000mil tolerance of Length:1785.686mil (438.787mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4769.212mil|Location2.X=4893.228mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4769.212mil|Location2.X=4893.228mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True">Matched Net Lengths: Between Net DQ11 And Net DQ2 Length:328.336mil is not within 1000mil tolerance of Length:1785.686mil (457.35mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4800.708mil|Location2.X=4893.228mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4800.708mil|Location2.X=4893.228mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True">Matched Net Lengths: Between Net DQ12 And Net DQ2 Length:323.353mil is not within 1000mil tolerance of Length:1785.686mil (462.333mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4837.206mil|Location2.X=5238.5mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4837.206mil|Location2.X=5238.5mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True">Matched Net Lengths: Between Net DQ13 And Net DQ2 Length:762.51mil is not within 1000mil tolerance of Length:1785.686mil (23.176mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4837.206mil|Location2.X=5248.5mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4837.206mil|Location2.X=5248.5mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True">Matched Net Lengths: Between Net DQ14 And Net DQ2 Length:775.216mil is not within 1000mil tolerance of Length:1785.686mil (10.47mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4659.173mil|Location2.X=4893.228mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4659.173mil|Location2.X=4893.228mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True">Matched Net Lengths: Between Net DQ2 And Net DQ6 Length:778.266mil is not within 1000mil tolerance of Length:1785.686mil (7.42mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4611.732mil|Location2.X=4893.228mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4611.732mil|Location2.X=4893.228mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True">Matched Net Lengths: Between Net DQ2 And Net DQ8 Length:408.819mil is not within 1000mil tolerance of Length:1785.686mil (376.867mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4674.724mil|Location2.X=4893.228mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4674.724mil|Location2.X=4893.228mil|Location1.Y=1661.043mil|Location2.Y=3432.48mil|Absolute=True">Matched Net Lengths: Between Net DQ2 And Net DQ9 Length:351.177mil is not within 1000mil tolerance of Length:1785.686mil (434.509mil short) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDVDBT3A1YTM5OF04PMRRKPMM1EE1U2RVY33TRIZODWIWXOPVZXLFP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Lengths(Tolerance=1000mil) (InNetClass('G'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3351.772mil|Location2.X=5029.5mil|Location1.Y=2367.52mil|Location2.Y=3580.646mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3351.772mil|Location2.X=5029.5mil|Location1.Y=2367.52mil|Location2.Y=3580.646mil|Absolute=True">Matched Net Lengths: Between Net G0 And Net G5 Length:866.181mil is not within 1000mil tolerance of Length:2659.626mil (793.444mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3351.772mil|Location2.X=5029.5mil|Location1.Y=2367.52mil|Location2.Y=3580.646mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3351.772mil|Location2.X=5029.5mil|Location1.Y=2367.52mil|Location2.Y=3580.646mil|Absolute=True">Matched Net Lengths: Between Net G1 And Net G5 Length:882.091mil is not within 1000mil tolerance of Length:2659.626mil (777.534mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3351.772mil|Location2.X=5029.5mil|Location1.Y=2367.52mil|Location2.Y=3620.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3351.772mil|Location2.X=5029.5mil|Location1.Y=2367.52mil|Location2.Y=3620.016mil|Absolute=True">Matched Net Lengths: Between Net G5 And Net G7 Length:1601.399mil is not within 1000mil tolerance of Length:2659.626mil (58.227mil short) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID3IHP2HVHHSZUEXHDB4OYPHDL0BWL0LTTSORHLWGXJDSSYECQBFZ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Lengths(Tolerance=1000mil) (InNetClass('B'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3172.5mil|Location2.X=4225mil|Location1.Y=2154.173mil|Location2.Y=3738.126mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3172.5mil|Location2.X=4225mil|Location1.Y=2154.173mil|Location2.Y=3738.126mil|Absolute=True">Matched Net Lengths: Between Net B0 And Net B5 Length:922.689mil is not within 1000mil tolerance of Length:2529.198mil (606.509mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3172.5mil|Location2.X=4599.016mil|Location1.Y=2154.173mil|Location2.Y=3738.126mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3172.5mil|Location2.X=4599.016mil|Location1.Y=2154.173mil|Location2.Y=3738.126mil|Absolute=True">Matched Net Lengths: Between Net B4 And Net B5 Length:1515.74mil is not within 1000mil tolerance of Length:2529.198mil (13.458mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3172.5mil|Location2.X=4225mil|Location1.Y=2154.173mil|Location2.Y=3757.81mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3172.5mil|Location2.X=4225mil|Location1.Y=2154.173mil|Location2.Y=3757.81mil|Absolute=True">Matched Net Lengths: Between Net B5 And Net B6 Length:1161.624mil is not within 1000mil tolerance of Length:2529.198mil (367.574mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3172.5mil|Location2.X=4343.11mil|Location1.Y=2154.173mil|Location2.Y=3777.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\3D-PRINTER\MOTHERBOARD V2\GPU\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3172.5mil|Location2.X=4343.11mil|Location1.Y=2154.173mil|Location2.Y=3777.496mil|Absolute=True">Matched Net Lengths: Between Net B5 And Net B7 Length:1353.385mil is not within 1000mil tolerance of Length:2529.198mil (175.813mil short) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
