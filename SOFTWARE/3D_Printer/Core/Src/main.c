@@ -319,13 +319,20 @@ int main(void)
       G0();
     }
     
-    M104();
-    M140();
-    if(t >= 1000)
-    {
-      myprintf("T: %.2f R: %.2f B: %.2f\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), GetTemperature(6, value[ADC_HOT_END]), GetTemperature(ADC_BED, value[ADC_BED]));
-      t = 0;
-    }else t++;
+    // M104();
+    // M140();
+    // if(t >= 1000)
+    // {
+    //   myprintf("T: %.2f R: %.2f B: %.2f\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), GetTemperature(6, value[ADC_HOT_END]), GetTemperature(ADC_BED, value[ADC_BED]));
+    //   t = 0;
+    // }else t++;
+    // MAKE_MOTOR_STEP(X_AXIS_STEP);
+    // MAKE_MOTOR_STEP(Y_AXIS_STEP);
+    WRITE_PIN(X_AXIS_STEP, 0);
+    WRITE_PIN(Y_AXIS_STEP, 0);
+    WRITE_PIN(X_AXIS_STEP, 1);
+    WRITE_PIN(Y_AXIS_STEP, 1);
+    DelayMicrosecond(500);
     if (READ_PIN(USER_BUTTON) == 1)
     {
       started = true;
@@ -1029,8 +1036,8 @@ static void MX_GPIO_Init(void)
   HAL_PWREx_EnableVddIO2();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOF, X_DIR_Pin|Y_DIR_Pin|E_DIR_Pin|STEPPER_MPLX_A_Pin
-                          |STEPPER_MPLX_B_Pin|Z_DIR_Pin|XSHUT_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOF, Y_DIR_Pin|E_DIR_Pin|X_STEP_Pin|X_DIR_Pin
+                          |STEPPER_MPLX_A_Pin|STEPPER_MPLX_B_Pin|Z_DIR_Pin|XSHUT_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(Y_STEP_GPIO_Port, Y_STEP_Pin, GPIO_PIN_RESET);
@@ -1042,25 +1049,22 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOG, USB_PowerSwitchOn_Pin|SD_CS_Pin|LCD_CS_Pin|LCD_DC_Pin
                           |LCD_RST_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(X_STEP_GPIO_Port, X_STEP_Pin, GPIO_PIN_RESET);
-
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : STEPPER_ENN_Pin X_STOP_Pin Y_STOP_Pin Z_MIN_Pin */
-  GPIO_InitStruct.Pin = STEPPER_ENN_Pin|X_STOP_Pin|Y_STOP_Pin|Z_MIN_Pin;
+  /*Configure GPIO pins : STEPPER_ENN_Pin Z_MIN_Pin */
+  GPIO_InitStruct.Pin = STEPPER_ENN_Pin|Z_MIN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : X_DIR_Pin Y_DIR_Pin E_DIR_Pin STEPPER_MPLX_A_Pin
-                           STEPPER_MPLX_B_Pin Z_DIR_Pin XSHUT_Pin */
-  GPIO_InitStruct.Pin = X_DIR_Pin|Y_DIR_Pin|E_DIR_Pin|STEPPER_MPLX_A_Pin
-                          |STEPPER_MPLX_B_Pin|Z_DIR_Pin|XSHUT_Pin;
+  /*Configure GPIO pins : Y_DIR_Pin E_DIR_Pin X_STEP_Pin X_DIR_Pin
+                           STEPPER_MPLX_A_Pin STEPPER_MPLX_B_Pin Z_DIR_Pin XSHUT_Pin */
+  GPIO_InitStruct.Pin = Y_DIR_Pin|E_DIR_Pin|X_STEP_Pin|X_DIR_Pin
+                          |STEPPER_MPLX_A_Pin|STEPPER_MPLX_B_Pin|Z_DIR_Pin|XSHUT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -1092,13 +1096,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : X_STEP_Pin */
-  GPIO_InitStruct.Pin = X_STEP_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(X_STEP_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LCD_CS_Pin LCD_DC_Pin LCD_RST_Pin */
   GPIO_InitStruct.Pin = LCD_CS_Pin|LCD_DC_Pin|LCD_RST_Pin;
