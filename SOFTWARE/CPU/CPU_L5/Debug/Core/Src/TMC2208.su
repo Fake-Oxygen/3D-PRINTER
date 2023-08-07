@@ -1,0 +1,8 @@
+../Core/Src/TMC2208.cpp:11:6:void SelectAxis(uint16_t)	16	static
+../Core/Src/TMC2208.cpp:23:6:bool TMC2208::DRV_STATUS(uint32_t*)	24	static
+../Core/Src/TMC2208.cpp:29:10:uint32_t TMC2208::DRV_STATUS()	24	static
+../Core/Src/TMC2208.cpp:35:9:uint8_t TMC2208::test_connection()	24	static
+../Core/Src/TMC2208.cpp:45:1:TMC2208::TMC2208(UART_HandleTypeDef*, bool)	24	static
+../Core/Src/TMC2208.cpp:50:6:bool TMC2208::sendDatagram(uint8_t, uint32_t*, uint8_t)	64	static
+../Core/Src/TMC2208.cpp:65:10:uint64_t TMC2208::_sendDatagram(UART_HandleTypeDef&, uint8_t*, uint8_t, uint16_t)	64	static
+../Core/Src/TMC2208.cpp:85:9:uint8_t TMC2208::calcCRC(uint8_t*, uint8_t)	32	static

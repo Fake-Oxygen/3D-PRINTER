@@ -1,0 +1,12 @@
+#ifndef INC_PID_H_
+#define INC_PID_H_
+
+class PID{
+public:
+	PID() = default;
+	PID(float kp, float ki, float kd, float Ts, float f_c = 0, float maxOutput = 255);
+};
+
+
+
+#endif /* INC_PID_H_ */
