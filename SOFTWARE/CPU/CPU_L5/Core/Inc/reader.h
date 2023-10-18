@@ -1,0 +1,40 @@
+#ifndef GC_READER_H
+#define GC_READER_H
+
+#include "types.h"
+#include <stdlib.h>
+#include <stdint.h>
+
+#define SEPARATOR_SYMBOL ' '
+#define CHECKSUM_SYMBOL '*'
+#define END_SYMBOL '\n'
+#define END_SYMBOL2 '\r'
+#define COMMENT_SYMBOL ';'
+#define LINE_NUMBER_SYMBOL 'N'
+#define GCODE_SYMBOL 'G'
+#define MCODE_SYMBOL 'M'
+
+#define GC_READER_STATE_READ_TYPE 0
+#define GC_READER_STATE_READ_CODE 1
+#define GC_READER_STATE_READ_PARAM_TYPE 2
+#define GC_READER_STATE_READ_PARAM 3
+#define GC_READER_STATE_READ_CHECKSUM 4
+#define GC_READER_STATE_READ_LINE_NUMBER 5
+#define GC_READER_STATE_IGNORE_INPUT 6
+
+#define GC_READER_ERROR_NOT_OCCURED 0
+#define GC_READER_ERROR_BUFF_OVERFLOW 1
+#define GC_READER_ERROR_TYPE_READ 2
+#define GC_READER_ERROR_CODE_READ 3
+#define GC_READER_ERROR_PARAM_READ 4
+#define GC_READER_ERROR_CHECKSUM_ERROR 5
+#define GC_READER_ERROR_LINE_NUMBER_READ 6
+
+int is_end_char(char c);
+int is_type_char(char c);
+int read_to_buff(char c, gc_reader *reader);
+void set_param(gc_reader *reader);
+int is_checksum_ok(char *input, gc_reader *reader);
+int read_code(gc_reader *reader, char input, int *is_done);
+
+#endif

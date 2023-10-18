@@ -14,7 +14,7 @@ uint32_t last_time_Z = 0;
 
 void M105(uint16_t R, uint16_t T)
 {
-    myprintf("T: %.2f B: %.2f\r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), GetTemperature(ADC_BED, value[ADC_BED]));
+    myprintf("T: %.2f B: %.2f\  r\n", GetTemperature(ADC_HOT_END, value[ADC_HOT_END]), GetTemperature(ADC_BED, value[ADC_BED]));
 #ifdef REDUNDANT_TEMP_SENSOR
     if (R != -1)
     {

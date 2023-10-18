@@ -1,0 +1,24 @@
+MiniPID.cpp:17:1:MiniPID::MiniPID(double, double, double)	1
+MiniPID.cpp:21:1:MiniPID::MiniPID(double, double, double, double)	1
+MiniPID.cpp:25:6:void MiniPID::init()	1
+MiniPID.cpp:59:6:void MiniPID::setP(double)	1
+MiniPID.cpp:74:6:void MiniPID::setI(double)	3
+MiniPID.cpp:91:6:void MiniPID::setD(double)	1
+MiniPID.cpp:103:6:void MiniPID::setF(double)	1
+MiniPID.cpp:113:6:void MiniPID::setPID(double, double, double)	1
+MiniPID.cpp:118:6:void MiniPID::setPID(double, double, double, double)	1
+MiniPID.cpp:127:6:void MiniPID::setMaxIOutput(double)	2
+MiniPID.cpp:142:6:void MiniPID::setOutputLimits(double)	1
+MiniPID.cpp:149:6:void MiniPID::setOutputLimits(double, double)	4
+MiniPID.cpp:163:6:void MiniPID::setDirection(bool)	1
+MiniPID.cpp:174:6:void MiniPID::setSetpoint(double)	1
+MiniPID.cpp:184:8:double MiniPID::getOutput(double, double)	14
+MiniPID.cpp:277:8:double MiniPID::getOutput()	1
+MiniPID.cpp:286:8:double MiniPID::getOutput(double)	1
+MiniPID.cpp:293:6:void MiniPID::reset()	1
+MiniPID.cpp:301:6:void MiniPID::setOutputRampRate(double)	1
+MiniPID.cpp:311:6:void MiniPID::setSetpointRange(double)	1
+MiniPID.cpp:321:6:void MiniPID::setOutputFilter(double)	4
+MiniPID.cpp:338:8:double MiniPID::clamp(double, double, double)	3
+MiniPID.cpp:351:6:bool MiniPID::bounded(double, double, double)	3
+MiniPID.cpp:359:6:void MiniPID::checkSigns()	10

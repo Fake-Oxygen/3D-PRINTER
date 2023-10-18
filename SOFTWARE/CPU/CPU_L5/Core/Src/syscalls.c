@@ -29,6 +29,7 @@
 #include <time.h>
 #include <sys/time.h>
 #include <sys/times.h>
+#include "main.h"
 
 
 /* Variables */
@@ -43,6 +44,13 @@ char **environ = __env;
 /* Functions */
 void initialise_monitor_handles()
 {
+}
+
+int __io_putchar(int ch)
+{
+ // Write character to ITM ch.0
+ ITM_SendChar(ch);
+ return(ch);
 }
 
 int _getpid(void)
